@@ -38,8 +38,8 @@ private
 
     # Ruby symbols cannot contain dashes
     # So must perform String substitution on generated XML
-    xml.gsub!('<ysc:imdb', '<ysc:imdb-id')
-    xml.gsub!('<ysc:year', '<ysc:year-of-release')
+    xml.gsub!('ysc:imdb', 'ysc:imdb-id')
+    xml.gsub!('ysc:year', 'ysc:year-of-release')
 
     puts xml
   end
