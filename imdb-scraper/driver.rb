@@ -1,5 +1,9 @@
 require 'optparse'
 
+# Add the current directory to the Ruby seach path
+# Without this, the following require statements may fail
+$: << File.expand_path(File.dirname(__FILE__))
+
 require 'imdb_search_engine.rb'
 require 'xml_emitter.rb'
 
@@ -68,51 +72,3 @@ if search_engine.find options[:query]
 else
   emitter.emit_error "01", "The title \'#{options[:query]}\' was not found on IMDB."
 end
-
-exit
-
-if options[:query] == 'tt0348150' or options[:query] == 'Superman Returns'
-  # Unambiguous result
-  puts '<?xml version="1.0" encoding="UTF-8"?>'
-  puts '<ysc:Result xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ysc="http://www.yorkstudentcinema.org/imdb" xsi:schemaLocation="http://www.yorkstudentcinema.org/imdb FilmInformation.xsd ">'
-  puts "  <ysc:film>"
-  puts "    <ysc:imdb-id>tt0348150</ysc:imdb-id>"
-  puts "    <ysc:title>Superman Returns</ysc:title>"
-  puts "    <ysc:year-of-release>2006</ysc:year-of-release>"
-  puts "    <ysc:runtime>154</ysc:runtime>"
-  puts "    <ysc:certificate>12A</ysc:certificate>"
-  puts "    <ysc:country>USA</ysc:country>"
-  puts "    <ysc:director>Bryan Singer</ysc:director>"   
-  puts "    <ysc:starring>"
-  puts "      <ysc:star>Brandon Routh</ysc:star>"
-  puts "      <ysc:star>Kate Bosworth</ysc:star>"
-  puts "      <ysc:star>Kevin Spacey</ysc:star>"
-  puts "    </ysc:starring>"
-  puts "  </ysc:film>"
-  puts "</ysc:Result>"
-
-elsif options[:query] == 'Batman'
-  # Ambiguous result
-  puts '<?xml version="1.0" encoding="UTF-8"?>'
-  puts '<ysc:Result xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ysc="http://www.yorkstudentcinema.org/imdb" xsi:schemaLocation="http://www.yorkstudentcinema.org/imdb FilmInformation.xsd ">'
-  puts "  <ysc:film>"
-  puts "    <ysc:imdb-id>tt0096895</ysc:imdb-id>"
-  puts "    <ysc:title>Batman</ysc:title>"
-  puts "  </ysc:film>"
-  puts "  <ysc:film>"
-  puts "    <ysc:imdb-id>tt0103776</ysc:imdb-id>"
-  puts "    <ysc:title>Batman Returns</ysc:title>"
-  puts "  </ysc:film>"
-  puts "</ysc:Result>"
-
-else
-  # Unrecognised title
-  puts '<?xml version="1.0" encoding="UTF-8"?>'
-  puts '<ysc:Result xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ysc="http://www.yorkstudentcinema.org/imdb" xsi:schemaLocation="http://www.yorkstudentcinema.org/imdb FilmInformation.xsd ">'
-  puts "  <ysc:error>"
-  puts "    <ysc:code>01</ysc:code>"
-  puts "    <ysc:message>The title \'#{options[:query]}\' was not found on IMDB.</ysc:message>"
-  puts "  </ysc:error>"
-  puts "</ysc:Result>"
-end
-
