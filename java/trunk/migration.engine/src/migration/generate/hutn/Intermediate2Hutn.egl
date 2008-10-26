@@ -1,0 +1,71 @@
+[% 
+	var spec := Spec.all.first;
+	
+if (spec.nsUris.notEmpty) { %]
+@Spec {
+	[% for (nsUri in spec.nsUris) { %]
+	metamodel "[%=nsUri.value%]" {
+		nsUri: "[%=nsUri.value%]"
+	}
+	[% } %]
+}
+[% } %]
+
+[% spec.objects.forAll(p|p.generate()); %]
+
+[%
+operation Object generate() { %]
+[%=self.type%][%=self.getIdentifier()%] {
+	[% self.slots.forAll(s|s.generate()); %]
+}
+[% }
+
+operation Object getIdentifier() : String {
+	if (self.identifier.isDefined()) {
+		return ' "' + self.identifier + '"';
+	}
+	
+	return '';
+}
+
+operation Slot getPrefix() : String {
+	if (self.feature.isDefined()) {
+		return self.feature + ': ';
+	}
+	
+	return '';
+}
+
+operation Slot generate() { %]
+	[%=self.getPrefix()%] [% self.generateContents(); %]
+[% }
+
+operation ContainmentSlot generateContents() {
+	self.objects.forAll(o|o.generate());
+}
+
+operation ReferenceSlot generateContents() {
+	for (identifier in self.identifiers) { %]
+[%=getType(identifier)%] "[%=identifier%]"[% if (hasMore) { %], [% } %]
+[%	} %]
+
+[% }
+
+operation StringSlot generateContents() {
+	for (value in self.values) { %]
+"[%=value%]"[% if (hasMore) { %], [% } %]
+[%	} %]
+
+[% }
+
+operation Slot generateContents() {
+	for (value in self.values) { %]
+[%=value%][% if (hasMore) { %], [% } %]
+[%	} %]
+
+[% }
+
+operation getType(identifier : String) : String {
+	return ClassObject.all.selectOne(c|c.identifier = identifier).type;
+}
+%]

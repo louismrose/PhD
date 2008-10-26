@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Engine Plug-in
+Bundle-SymbolicName: migration.engine
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: migration,
+ migration.migrator
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.epsilon.hutn.model;visibility:=reexport,
+ org.eclipse.epsilon.hutn.engine,
+ org.eclipse.epsilon.eol.engine,
+ org.eclipse.epsilon.egl.engine,
+ org.eclipse.epsilon.emc.emf

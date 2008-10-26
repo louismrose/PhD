@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Dependencies Plug-in
+Bundle-SymbolicName: migration.test.dependencies
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.junit4;visibility:=reexport,
+ org.eclipse.epsilon.hutn.engine;visibility:=reexport,
+ org.eclipse.epsilon.eol.engine;visibility:=reexport,
+ migration.engine;visibility:=reexport,
+ org.eclipse.epsilon.test.dependencies;visibility:=reexport
+Export-Package: migration.test.dependencies
