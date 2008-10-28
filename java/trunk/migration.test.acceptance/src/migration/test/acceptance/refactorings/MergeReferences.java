@@ -69,11 +69,11 @@ public class MergeReferences extends AcceptanceTest {
 	
 	@Test
 	public void slotContainsP1() {
-		migratedModel.assertTrue("slot.objects.includes(p1)");
+		migratedModel.assertTrue("slot.classObjects.includes(p1)");
 	}
 	
 	@Test
 	public void slotContainsP2() {
-		migratedModel.assertTrue("slot.objects.includes(p2)");
+		migratedModel.assertTrue("slot.classObjects.includes(p2)");
 	}
 }
