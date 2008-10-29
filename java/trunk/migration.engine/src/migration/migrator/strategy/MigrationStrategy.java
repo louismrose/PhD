@@ -39,19 +39,25 @@ public abstract class MigrationStrategy<T extends ModelElement> {
 	}
 	
 	protected abstract List<T> getMigratableModelElements();
-	protected abstract void migrate(T element);
+	protected abstract void migrate(T element) throws MigrationException;
 	
 	public boolean isApplicable() {
 		return !getMigratableModelElements().isEmpty();
 	}
 	
-	public void execute() {
+	public void execute() throws MigrationException {
+		System.out.println("Executing " + getClass().getSimpleName());
+		initialise();
 		migrate();
 		deleteOrphans();
 	}
 	
-	private void migrate() {
+	// To be overriden
+	protected void initialise() {}
+	
+	private void migrate() throws MigrationException {
 		for (T migratable: getMigratableModelElements()) {
+			System.out.println("\tMigrating " + migratable);
 			migrate(migratable);
 		}
 	}

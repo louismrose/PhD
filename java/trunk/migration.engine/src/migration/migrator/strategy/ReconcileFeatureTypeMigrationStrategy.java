@@ -34,7 +34,7 @@ public class ReconcileFeatureTypeMigrationStrategy extends MigrationStrategy<Slo
 		
 		for (ClassObject classObject : getClassObjects()) {
 			for (Slot slot : classObject.getSlots()) {
-				if (findEClassByName(slot.getFeature()) == null) {
+				if (slot.getEStructuralFeature(getAllEClasses()) == null) {
 					migrateable.add(slot);
 				}
 			}

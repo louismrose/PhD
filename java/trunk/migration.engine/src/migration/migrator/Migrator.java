@@ -16,6 +16,9 @@ package migration.migrator;
 import java.util.LinkedList;
 import java.util.List;
 
+import migration.migrator.strategy.ChangeContainmentToReferenceStrategy;
+import migration.migrator.strategy.ChangeReferenceToContainmentStrategy;
+import migration.migrator.strategy.MigrationException;
 import migration.migrator.strategy.MigrationStrategy;
 import migration.migrator.strategy.ReconcileClassMigrationStrategy;
 import migration.migrator.strategy.ReconcileFeatureTypeMigrationStrategy;
@@ -33,11 +36,19 @@ public class Migrator {
 	}
 	
 	public Spec suggestMigration(EPackage metamodel) {
-		final Spec migratedModel = (Spec)EmfUtil.cloneModel(slotModel);
+		Spec migratedModel = EmfUtil.clone(slotModel);
 		
 		for (MigrationStrategy<?> strategy : getMigrationStrategies(migratedModel, metamodel)) {
 			if (strategy.isApplicable()) {
-				strategy.execute();
+				try {
+					strategy.execute();
+					
+				} catch (MigrationException e) {
+					System.out.println("\tEncountered exception: " + e.getMessage());
+					// FIXME: This will reset model to before ALL strategies, not just the current
+					// Rolling back to the model before the current strategy was executed might be better
+					migratedModel = EmfUtil.clone(slotModel);
+				}
 			}
 		}
 		
@@ -49,6 +60,8 @@ public class Migrator {
 		
 		strategies.add(new ReconcileFeatureTypeMigrationStrategy(migratedModel, metamodel));
 		strategies.add(new ReconcileClassMigrationStrategy(migratedModel, metamodel));
+		strategies.add(new ChangeReferenceToContainmentStrategy(migratedModel, metamodel));
+		strategies.add(new ChangeContainmentToReferenceStrategy(migratedModel, metamodel));
 		
 		return strategies;
 	}

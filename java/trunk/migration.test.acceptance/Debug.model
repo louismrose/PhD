@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hutn:Spec xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:hutn="http://www.eclipse.org/gmt/epsilon/hutn">
+  <objects line="1" type="SlotModel">
+    <classObjects line="1" col="13" type="System" identifier="sys">
+      <slots xsi:type="hutn:ContainmentSlot" line="1" col="31" feature="contents">
+        <classObjects line="1" col="41" type="Signature" identifier="s1">
+          <slots xsi:type="hutn:ReferenceSlot" feature="ports">
+            <identifiers>p1</identifiers>
+          </slots>
+        </classObjects>
+        <classObjects line="1" col="134" type="Signature" identifier="s2">
+          <slots xsi:type="hutn:ReferenceSlot" feature="ports">
+            <identifiers>p2</identifiers>
+          </slots>
+        </classObjects>
+        <classObjects line="1" col="80" type="Port" identifier="p1">
+          <slots xsi:type="hutn:StringSlot" line="1" col="92" feature="name">
+            <values>p1</values>
+          </slots>
+        </classObjects>
+        <classObjects line="1" col="173" type="Port" identifier="p2">
+          <slots xsi:type="hutn:StringSlot" line="1" col="185" feature="name">
+            <values>p2</values>
+          </slots>
+        </classObjects>
+      </slots>
+    </classObjects>
+  </objects>
+</hutn:Spec>

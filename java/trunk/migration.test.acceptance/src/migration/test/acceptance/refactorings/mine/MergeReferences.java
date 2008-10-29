@@ -11,7 +11,7 @@
  *
  * $Id:$
  */
-package migration.test.acceptance.refactorings;
+package migration.test.acceptance.refactorings.mine;
 
 import migration.test.acceptance.AcceptanceTest;
 

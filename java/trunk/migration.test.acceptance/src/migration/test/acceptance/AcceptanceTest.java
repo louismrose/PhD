@@ -28,9 +28,17 @@ public abstract class AcceptanceTest {
 	protected static ModelWithEolAssertions migratedModel;
 
 	public static void acceptanceTest() {
+		acceptanceTest(null);
+	}
+	
+	public static void acceptanceTest(String path) {
 		final Spec migrated = new MigrationModule(slotModel).suggestMigration(ModelConstructor.constructMetaModel(metamodel));
 		
 		migratedModel = new ModelWithEolAssertions(migrated, HutnPackage.eINSTANCE);
+		
+		if (path != null) {
+			migratedModel.store(path);
+		}
 	}
 
 }
