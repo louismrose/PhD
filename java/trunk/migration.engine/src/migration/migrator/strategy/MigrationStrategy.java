@@ -38,7 +38,16 @@ public abstract class MigrationStrategy<T extends ModelElement> {
 		this.metamodel     = metamodel;
 	}
 	
-	protected abstract List<T> getMigratableModelElements();
+	private List<T> getMigratableModelElements() {
+		final List<T> migratable = new LinkedList<T>();
+		
+		getMigratableModelElements(migratable);
+		
+		return migratable;
+	}
+	
+	protected abstract void getMigratableModelElements(List<T> migratable);
+	protected abstract boolean isMigratable(T slot);
 	protected abstract void migrate(T element) throws MigrationException;
 	
 	public boolean isApplicable() {

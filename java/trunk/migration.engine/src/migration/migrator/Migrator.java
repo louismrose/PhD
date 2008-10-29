@@ -16,12 +16,12 @@ package migration.migrator;
 import java.util.LinkedList;
 import java.util.List;
 
-import migration.migrator.strategy.ChangeContainmentToReferenceStrategy;
-import migration.migrator.strategy.ChangeReferenceToContainmentStrategy;
 import migration.migrator.strategy.MigrationException;
 import migration.migrator.strategy.MigrationStrategy;
-import migration.migrator.strategy.ReconcileClassMigrationStrategy;
-import migration.migrator.strategy.ReconcileFeatureTypeMigrationStrategy;
+import migration.migrator.strategy.concrete.ChangeContainmentToReferenceStrategy;
+import migration.migrator.strategy.concrete.ChangeReferenceToContainmentStrategy;
+import migration.migrator.strategy.concrete.ReconcileClassMigrationStrategy;
+import migration.migrator.strategy.concrete.ReconcileFeatureTypeMigrationStrategy;
 
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;

@@ -11,10 +11,12 @@
  *
  * $Id:$
  */
-package migration.migrator.strategy;
+package migration.migrator.strategy.concrete;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import migration.migrator.strategy.EverySlotMigrationStrategy;
 
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -23,14 +25,13 @@ import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
 import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
 import org.eclipse.epsilon.hutn.model.hutn.HutnFactory;
 import org.eclipse.epsilon.hutn.model.hutn.ReferenceSlot;
-import org.eclipse.epsilon.hutn.model.hutn.Slot;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.util.EmfUtil;
 
-public class ChangeReferenceToContainmentStrategy extends MigrationStrategy<ReferenceSlot> {
+public class ChangeReferenceToContainmentStrategy extends EverySlotMigrationStrategy<ReferenceSlot> {
 
 	public ChangeReferenceToContainmentStrategy(Spec migratedModel, EPackage metamodel) {
-		super(migratedModel, metamodel);
+		super(migratedModel, metamodel, ReferenceSlot.class);
 	}
 
 	private List<ClassObject> cloned = new LinkedList<ClassObject>(); 
@@ -40,26 +41,16 @@ public class ChangeReferenceToContainmentStrategy extends MigrationStrategy<Refe
 		cloned.clear();
 	}
 	
-	protected List<ReferenceSlot> getMigratableModelElements() {
-		final List<ReferenceSlot> migrateable = new LinkedList<ReferenceSlot>();
-		
-		for (ClassObject classObject : getClassObjects()) {
-			for (Slot slot : classObject.getSlots()) {
-				if (slot instanceof ReferenceSlot) {
-					if (isContainmentReference(slot.getEStructuralFeature(getAllEClasses()))) {
-						migrateable.add((ReferenceSlot)slot);
-					}
-				}
-			}
-		}
-		
-		return migrateable;
+	@Override
+	protected boolean isMigratable(ReferenceSlot slot) {
+		return isContainmentReference(slot.getEStructuralFeature(getAllEClasses()));
 	}
 	
 	private boolean isContainmentReference(EStructuralFeature feature) {
 		return feature instanceof EReference && ((EReference)feature).isContainment();
 	}
 	
+	@Override
 	protected void migrate(ReferenceSlot slot) {
 		final ContainmentSlot migratedSlot = HutnFactory.eINSTANCE.createContainmentSlot();
 		

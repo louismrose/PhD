@@ -11,38 +11,28 @@
  *
  * $Id:$
  */
-package migration.migrator.strategy;
+package migration.migrator.strategy.concrete;
 
-import java.util.LinkedList;
-import java.util.List;
+import migration.migrator.strategy.EverySlotMigrationStrategy;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
 import org.eclipse.epsilon.hutn.model.hutn.Slot;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 
-public class ReconcileFeatureTypeMigrationStrategy extends MigrationStrategy<Slot> {
+public class ReconcileFeatureTypeMigrationStrategy extends EverySlotMigrationStrategy<Slot> {
 
 	public ReconcileFeatureTypeMigrationStrategy(Spec migratedModel, EPackage metamodel) {
-		super(migratedModel, metamodel);
+		super(migratedModel, metamodel, Slot.class);
 	}
 
-	protected List<Slot> getMigratableModelElements() {
-		final List<Slot> migrateable = new LinkedList<Slot>();
-		
-		for (ClassObject classObject : getClassObjects()) {
-			for (Slot slot : classObject.getSlots()) {
-				if (slot.getEStructuralFeature(getAllEClasses()) == null) {
-					migrateable.add(slot);
-				}
-			}
-		}
-		
-		return migrateable;
+	@Override
+	protected boolean isMigratable(Slot slot) {
+		return slot.getEStructuralFeature(getAllEClasses()) == null;
 	}
 	
+	@Override
 	protected void migrate(Slot slot) {
 		final EClass owner = findEClassByName(slot.getOwner().getType());
 		
