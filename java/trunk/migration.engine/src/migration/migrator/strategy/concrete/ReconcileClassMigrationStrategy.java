@@ -28,7 +28,7 @@ public class ReconcileClassMigrationStrategy extends EveryClassObjectMigrationSt
 	
 	@Override
 	protected boolean isMigratable(ClassObject classObject) {
-		final EClass eClass = classObject.getEClass(getAllEClasses());
+		final EClass eClass = classObject.getEClass();
 		
 		return eClass == null      ||
 		       eClass.isAbstract() ||
@@ -37,7 +37,7 @@ public class ReconcileClassMigrationStrategy extends EveryClassObjectMigrationSt
 	
 	@Override
 	protected void migrate(ClassObject classObject) {	
-		for (EClass eClass : getAllEClasses()) {
+		for (EClass eClass : metamodel.getAllEClasses()) {
 			if (!eClass.isAbstract() && classObject.typeCompatibleWith(eClass)) {
 				classObject.setType(eClass.getName());
 			}

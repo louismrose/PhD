@@ -68,7 +68,7 @@ public class ChangeContainmentToReference extends AcceptanceTest {
 		            "  }"                                                  +
 		            "}";
 		
-		acceptanceTest("Debug.model");
+		acceptanceTest();
 		
 		
 		migratedModel.setVariable("sys",   "ClassObject.all.selectOne(c|c.identifier='sys')");

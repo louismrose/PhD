@@ -29,12 +29,12 @@ public class ReconcileFeatureTypeMigrationStrategy extends EverySlotMigrationStr
 
 	@Override
 	protected boolean isMigratable(Slot slot) {
-		return slot.getEStructuralFeature(getAllEClasses()) == null;
+		return slot.getEStructuralFeature() == null;
 	}
 	
 	@Override
 	protected void migrate(Slot slot) {
-		final EClass owner = findEClassByName(slot.getOwner().getType());
+		final EClass owner = metamodel.findEClassByName(slot.getOwner().getType());
 		
 		for (EStructuralFeature feature : owner.getEStructuralFeatures()) {
 			if (slot.typeCompatibleWith(feature)) {
@@ -44,8 +44,10 @@ public class ReconcileFeatureTypeMigrationStrategy extends EverySlotMigrationStr
 				if (existingSlot == null) {
 					slot.setFeature(feature.getName());
 				} else {
-					existingSlot.append(slot);
-					delete(slot);
+					if (feature.isMany()) {
+						existingSlot.append(slot);
+						delete(slot);
+					}
 				}
 			}
 		}

@@ -43,7 +43,7 @@ public class ChangeReferenceToContainmentStrategy extends EverySlotMigrationStra
 	
 	@Override
 	protected boolean isMigratable(ReferenceSlot slot) {
-		return isContainmentReference(slot.getEStructuralFeature(getAllEClasses()));
+		return isContainmentReference(slot.getEStructuralFeature());
 	}
 	
 	private boolean isContainmentReference(EStructuralFeature feature) {

@@ -20,6 +20,7 @@ import migration.migrator.strategy.MigrationException;
 import migration.migrator.strategy.MigrationStrategy;
 import migration.migrator.strategy.concrete.ChangeContainmentToReferenceStrategy;
 import migration.migrator.strategy.concrete.ChangeReferenceToContainmentStrategy;
+import migration.migrator.strategy.concrete.ExtractClassMigrationStrategy;
 import migration.migrator.strategy.concrete.ReconcileClassMigrationStrategy;
 import migration.migrator.strategy.concrete.ReconcileFeatureTypeMigrationStrategy;
 
@@ -58,10 +59,11 @@ public class Migrator {
 	private List<MigrationStrategy<?>> getMigrationStrategies(Spec migratedModel, EPackage metamodel) {
 		final List<MigrationStrategy<?>> strategies = new LinkedList<MigrationStrategy<?>>();
 		
-		strategies.add(new ReconcileFeatureTypeMigrationStrategy(migratedModel, metamodel));
-		strategies.add(new ReconcileClassMigrationStrategy(migratedModel, metamodel));
+//		strategies.add(new ReconcileFeatureTypeMigrationStrategy(migratedModel, metamodel));
+//		strategies.add(new ReconcileClassMigrationStrategy(migratedModel, metamodel));
 		strategies.add(new ChangeReferenceToContainmentStrategy(migratedModel, metamodel));
 		strategies.add(new ChangeContainmentToReferenceStrategy(migratedModel, metamodel));
+		strategies.add(new ExtractClassMigrationStrategy(migratedModel, metamodel));
 		
 		return strategies;
 	}

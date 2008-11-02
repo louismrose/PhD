@@ -45,7 +45,7 @@ public class ChangeContainmentToReferenceStrategy extends EverySlotMigrationStra
 
 	@Override
 	protected boolean isMigratable(ContainmentSlot slot) {
-		return isNonContainmentReference(slot.getEStructuralFeature(getAllEClasses()));
+		return isNonContainmentReference(slot.getEStructuralFeature());
 	}
 	
 	private boolean isNonContainmentReference(EStructuralFeature feature) {
@@ -109,7 +109,7 @@ public class ChangeContainmentToReferenceStrategy extends EverySlotMigrationStra
 	}
 	
 	private boolean canHouse(Slot candidate, Slot slot) {
-		return slot.typeCompatibleWith(candidate.getEStructuralFeature(getAllEClasses()));
+		return slot.typeCompatibleWith(candidate.getEStructuralFeature());
 	}
 	
 	private boolean containedInSlot(ClassObject host) {

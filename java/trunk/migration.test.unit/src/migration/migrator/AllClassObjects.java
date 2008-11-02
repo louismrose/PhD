@@ -38,7 +38,7 @@ public class AllClassObjects {
 		
 		final Migrator migrator = new Migrator(new HutnModuleFacade().constructSpec(hutn));
 		migrator.initialiseMigratedModel();
-		classObjects = migrator.getClassObjects();
+		classObjects = migrator.getAllClassObjects();
 	}
 	
 	private static boolean hasClassObjectCalled(String s) {

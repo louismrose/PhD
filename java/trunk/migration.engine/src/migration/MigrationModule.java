@@ -20,6 +20,7 @@ import migration.generate.hutn.HutnGenerator;
 import migration.migrator.Migrator;
 
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.epsilon.hutn.model.hutn.PackageObject;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 
 public class MigrationModule {
@@ -53,12 +54,22 @@ public class MigrationModule {
 	}
 	
 	public Spec suggestMigration(EPackage metamodel) {
+		initialseSlotModelWith(metamodel);
 		return new Migrator(slotModel).suggestMigration(metamodel);
 	}
-	
 	
 	// TODO: Refactor to method on Spec?
 	public String toHutn(Spec spec) {
 		return new HutnGenerator(spec).generate();
+	}
+	
+	private void initialseSlotModelWith(EPackage metamodel) {
+		if (!slotModel.getObjects().isEmpty()) {
+			for (PackageObject packageObject : slotModel.getObjects()) {
+				if (packageObject.getMetamodel() == null) {
+					packageObject.setMetamodel(metamodel);
+				}
+			}
+		}
 	}
 }

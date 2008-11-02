@@ -16,26 +16,25 @@ package migration.migrator.strategy;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EClass;
+import migration.models.Metamodel;
+import migration.models.SlotModel;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.epsilon.emc.emf.EmfUtil;
-import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
-import org.eclipse.epsilon.hutn.model.hutn.HutnFactory;
 import org.eclipse.epsilon.hutn.model.hutn.ModelElement;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 
 public abstract class MigrationStrategy<T extends ModelElement> {
 
-	private final Spec migratedModel;
-	private final EPackage metamodel;
+	protected final SlotModel migratedModel;
+	protected final Metamodel metamodel;
 	
 	private final List<EObject> orphans = new LinkedList<EObject>();
 	
 	public MigrationStrategy(Spec migratedModel, EPackage metamodel) {
-		this.migratedModel = migratedModel;
-		this.metamodel     = metamodel;
+		this.migratedModel = new SlotModel(migratedModel);
+		this.metamodel     = new Metamodel(metamodel);
 	}
 	
 	private List<T> getMigratableModelElements() {
@@ -79,25 +78,5 @@ public abstract class MigrationStrategy<T extends ModelElement> {
 	
 	protected void delete(EObject object) {
 		orphans.add(object);
-	}
-	
-	
-	// TODO: Refactor to method on Spec / Model Element??
-	protected List<ClassObject> getClassObjects() {
-		return EmfUtil.getAllModelElementsOfType(migratedModel, HutnFactory.eINSTANCE.createClassObject());
-	}
-	
-	protected List<EClass> getAllEClasses() {
-		return EmfUtil.getAllEClassesFromSameMetamodelAs(metamodel);
-	}
-	
-	protected EClass findEClassByName(String name) {
-		for (EClass eClass : getAllEClasses()) {
-			if (name.equals(eClass.getName())) {
-				return eClass;
-			}
-		}
-		
-		return null;
 	}
 }

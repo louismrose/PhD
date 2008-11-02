@@ -36,7 +36,7 @@ public abstract class EverySlotMigrationStrategy<T extends Slot> extends Migrati
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void getMigratableModelElements(List<T> migratable) {
-		for (ClassObject classObject : getClassObjects()) {
+		for (ClassObject classObject : migratedModel.getAllClassObjects()) {
 			for (Slot slot : classObject.getSlots()) {
 				if (instanceOfT(slot) && isMigratable((T)slot)) {
 					migratable.add((T)slot);

@@ -11,26 +11,33 @@
  *
  * $Id:$
  */
-package migration.migrator.strategy;
+package migration.models;
 
 import java.util.List;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
-import org.eclipse.epsilon.hutn.model.hutn.Spec;
+import org.eclipse.epsilon.emc.emf.EmfUtil;
 
-public abstract class EveryClassObjectMigrationStrategy extends MigrationStrategy<ClassObject> {
+public class Metamodel {
 
-	public EveryClassObjectMigrationStrategy(Spec migratedModel, EPackage metamodel) {
-		super(migratedModel, metamodel);
+	private final EPackage metamodel;
+
+	public Metamodel(EPackage metamodel) {
+		this.metamodel = metamodel;
 	}
-
-	@Override
-	protected void getMigratableModelElements(List<ClassObject> migratable) {
-		for (ClassObject classObject : migratedModel.getAllClassObjects()) {
-			if (isMigratable(classObject)) {
-				migratable.add(classObject);
+	
+	public List<EClass> getAllEClasses() {
+		return EmfUtil.getAllEClassesFromSameMetamodelAs(metamodel);
+	}
+	
+	public EClass findEClassByName(String name) {
+		for (EClass eClass : getAllEClasses()) {
+			if (name.equals(eClass.getName())) {
+				return eClass;
 			}
 		}
+		
+		return null;
 	}
 }
