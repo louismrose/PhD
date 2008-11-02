@@ -21,7 +21,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({SimpleSuite.class, RefactoringsSuite.class})
+@SuiteClasses({SimpleSuite.class, FowlerRefactoringsSuite.class})
 public class AcceptanceTestSuite {
 
 	public static Test suite() {

@@ -19,19 +19,18 @@ import junit.framework.Test;
 
 import migration.test.acceptance.refactorings.fowler.ChangeContainmentToReference;
 import migration.test.acceptance.refactorings.fowler.ChangeReferenceToContainment;
-import migration.test.acceptance.refactorings.mine.MergeReferences;
-import migration.test.acceptance.refactorings.mine.RenameClass;
+import migration.test.acceptance.refactorings.fowler.ExtractClass;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({RenameClass.class,MergeReferences.class,
-               ChangeReferenceToContainment.class, ChangeContainmentToReference.class})
-public class RefactoringsSuite {
+@SuiteClasses({ChangeReferenceToContainment.class, ChangeContainmentToReference.class,
+               ExtractClass.class})
+public class FowlerRefactoringsSuite {
 
 	public static Test suite() {
-		return new JUnit4TestAdapter(RefactoringsSuite.class);
+		return new JUnit4TestAdapter(FowlerRefactoringsSuite.class);
 	}
 }
