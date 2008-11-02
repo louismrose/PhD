@@ -46,7 +46,7 @@ public abstract class MigrationStrategy<T extends ModelElement> {
 	}
 	
 	protected abstract void getMigratableModelElements(List<T> migratable);
-	protected abstract boolean isMigratable(T slot);
+	protected abstract boolean isMigratable(T element);
 	protected abstract void migrate(T element) throws MigrationException;
 	
 	public boolean isApplicable() {

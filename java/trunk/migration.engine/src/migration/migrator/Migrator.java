@@ -21,6 +21,7 @@ import migration.migrator.strategy.MigrationStrategy;
 import migration.migrator.strategy.concrete.ChangeContainmentToReferenceStrategy;
 import migration.migrator.strategy.concrete.ChangeReferenceToContainmentStrategy;
 import migration.migrator.strategy.concrete.ExtractClassMigrationStrategy;
+import migration.migrator.strategy.concrete.ExtractSubclassMigrationStrategy;
 import migration.migrator.strategy.concrete.ReconcileClassMigrationStrategy;
 import migration.migrator.strategy.concrete.ReconcileFeatureTypeMigrationStrategy;
 
@@ -64,6 +65,7 @@ public class Migrator {
 		strategies.add(new ChangeReferenceToContainmentStrategy(migratedModel, metamodel));
 		strategies.add(new ChangeContainmentToReferenceStrategy(migratedModel, metamodel));
 		strategies.add(new ExtractClassMigrationStrategy(migratedModel, metamodel));
+		strategies.add(new ExtractSubclassMigrationStrategy(migratedModel, metamodel));
 		
 		return strategies;
 	}

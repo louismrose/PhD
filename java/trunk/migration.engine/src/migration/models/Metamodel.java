@@ -13,6 +13,7 @@
  */
 package migration.models;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
@@ -39,5 +40,27 @@ public class Metamodel {
 		}
 		
 		return null;
+	}
+	
+	public List<EClass> getEAllSubTypes(EClass eClass) {
+		final List<EClass> subtypes = new LinkedList<EClass>();
+		
+		for (EClass candidate : getAllEClasses()) {
+			if (!equals(eClass, candidate) && eClass.isSuperTypeOf(candidate)) {
+				subtypes.add(candidate);
+			}
+		}
+		
+		return subtypes;
+	}
+
+	public static boolean equals(EClass eClass, EClass other) {
+		return eClass.getEPackage() == null ?
+		       equals(eClass.getName(), other.getName()) :
+		       equals(eClass.getName(), other.getName()) && equals(eClass.getEPackage().getNsURI(), other.getEPackage().getNsURI());
+	}
+	
+	private static boolean equals(String s, String other) {
+		return s == null ? other == null : s.equals(other);
 	}
 }
