@@ -22,6 +22,7 @@ import migration.test.acceptance.refactorings.fowler.ChangeReferenceToContainmen
 import migration.test.acceptance.refactorings.fowler.ExtractClass;
 import migration.test.acceptance.refactorings.fowler.ExtractSubclass;
 import migration.test.acceptance.refactorings.fowler.InlineClass;
+import migration.test.acceptance.refactorings.fowler.MoveFeature;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -29,7 +30,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ChangeReferenceToContainment.class, ChangeContainmentToReference.class,
-               ExtractClass.class, ExtractSubclass.class, InlineClass.class})
+               ExtractClass.class, ExtractSubclass.class, InlineClass.class,
+               MoveFeature.class})
 public class FowlerRefactoringsSuite {
 
 	public static Test suite() {

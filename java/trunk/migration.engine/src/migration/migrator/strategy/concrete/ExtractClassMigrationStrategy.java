@@ -37,11 +37,7 @@ public class ExtractClassMigrationStrategy extends EverySlotMigrationStrategy<Sl
 
 	@Override
 	protected boolean isMigratable(Slot slot) {
-		if (slot.hasEStructuralFeature()) {
-			return false;
-		}
-		
-		return hasExtractedClass(slot);
+		return !slot.hasEStructuralFeature() && hasExtractedClass(slot);
 	}
 	
 	private boolean hasExtractedClass(Slot slot) {
