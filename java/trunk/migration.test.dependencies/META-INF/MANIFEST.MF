@@ -8,5 +8,6 @@ Require-Bundle: org.junit4;visibility:=reexport,
  org.eclipse.epsilon.hutn.engine;visibility:=reexport,
  org.eclipse.epsilon.eol.engine;visibility:=reexport,
  migration.engine;visibility:=reexport,
- org.eclipse.epsilon.test.dependencies;visibility:=reexport
+ org.eclipse.epsilon.test.dependencies;visibility:=reexport,
+ org.eclipse.epsilon.test.fixtures.hutn;visibility:=reexport
 Export-Package: migration.test.dependencies
