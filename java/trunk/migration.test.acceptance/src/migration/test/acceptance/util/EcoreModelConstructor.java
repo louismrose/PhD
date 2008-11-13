@@ -16,28 +16,22 @@ package migration.test.acceptance.util;
 import migration.test.dependencies.EcoreHutnConfigModel;
 
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.epsilon.eol.exceptions.models.EolModelElementTypeNotFoundException;
-import org.eclipse.epsilon.eol.models.IModel;
 import org.eclipse.epsilon.test.fixtures.hutn.AbstractModelConstructor;
 
-public class EcoreModelConstructor extends AbstractModelConstructor {
+public class EcoreModelConstructor extends AbstractModelConstructor<EPackage> {
 
 	@Override
-	public EPackage construct(String hutn) {
-		final IModel model = constructModel(addPreamble(hutn, "http://www.eclipse.org/emf/2002/Ecore",
-				EcoreHutnConfigModel.getModelFile().getAbsolutePath()));
+	protected String getConfigFile() {
+		return EcoreHutnConfigModel.getModelFile().getAbsolutePath();
+	}
 
-		try {
-			for (Object o : model.getAllOfKind("EPackage")) {
-				if (o instanceof EPackage) {
-					return (EPackage)o;
-				}
-			}
-		} catch (EolModelElementTypeNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	@Override
+	protected String getNsUri() {
+		return "http://www.eclipse.org/emf/2002/Ecore";
+	}
 
-		return null;
+	@Override
+	protected Class<EPackage> getRootElementType() {
+		return EPackage.class;
 	}	
 }
