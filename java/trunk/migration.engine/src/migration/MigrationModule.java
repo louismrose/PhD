@@ -66,8 +66,8 @@ public class MigrationModule {
 	private void initialseSlotModelWith(EPackage metamodel) {
 		if (!slotModel.getObjects().isEmpty()) {
 			for (PackageObject packageObject : slotModel.getObjects()) {
-				if (packageObject.getMetamodel() == null) {
-					packageObject.setMetamodel(metamodel);
+				if (packageObject.getMetamodel().isEmpty()) {
+					packageObject.getMetamodel().add(metamodel);
 				}
 			}
 		}
