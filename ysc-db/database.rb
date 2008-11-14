@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'net/ssh/gateway'
+#require 'net/ssh/gateway'
 
 class Database
   
