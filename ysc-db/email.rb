@@ -23,7 +23,7 @@ class WeeklyAnnouncementGenerator
 private
   
   def print_header
-    puts "This week at York Student Cinema"
+    puts "This week at York Student Cinema:"
     puts ""
   
     @films.each {|f| puts f.heading }
@@ -43,9 +43,15 @@ private
     puts ""
     puts "Ticket Prices:"
     puts ""
-    puts "Staff/Students: Â£3.00"
+    puts "Staff/Students: £3.00"
     puts ""
     puts "Published ticket prices may not apply to films not listed in Exposure magazine (special events, preview screenings etc.) Unless stated, screenings begin at 7.30pm prompt in P/X/001 - doors 6.45pm. ROAR."
+    puts ""
+    puts "--------------------------------------------------------------------------"
+    puts "York Student Cinema - The Best Entertainment on Campus"
+    puts "Email:  ysc@yorkstudentcinema.org"
+    puts "Web:    www.yorkstudentcinema.org"
+    puts ""
   end
 end
 
