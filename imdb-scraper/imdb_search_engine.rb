@@ -82,10 +82,13 @@ private
   end
 
   def strip_year(title)
+    # Most films have a title like: The Title (2008)
+    # But some have a suffix in the year, eg: Twilight (2008/I), or Ghost Town (2008/II)
+
     # Define regular expressions
-    four_digits_in_parentheses = '\(\d{4}\)'
+    four_digits_followed_by_optional_slash_and_chars_in_parentheses = '\((\d{4})(/[A-z]*)?\)'
     any_characters = '(.*)'
 
-    title.match(any_characters + ' ' + four_digits_in_parentheses)[1]
+    title.match(any_characters + ' ' + four_digits_followed_by_optional_slash_and_chars_in_parentheses)[1]
   end
 end

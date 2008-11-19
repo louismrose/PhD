@@ -46,11 +46,13 @@ private
   end
 
   def get_year
-    # Define regular expressions
-    four_digits = '(\d{4})'
-    closing_parenthesis_at_end_of_line = '\)$'
+    # Most films have a title like: The Title (2008)
+    # But some have a suffix in the year, eg: Twilight (2008/I), or Ghost Town (2008/II)
 
-    @page.title.match(four_digits + closing_parenthesis_at_end_of_line)[1]
+    # Define regular expressions
+    four_digits_followed_by_optional_slash_and_chars_in_parentheses = '\((\d{4})(/[A-z]*)?\)$'
+
+    @page.title.match(four_digits_followed_by_optional_slash_and_chars_in_parentheses)[1]
   end
 
   def get_value_near(text)
