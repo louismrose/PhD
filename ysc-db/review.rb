@@ -17,7 +17,7 @@ class Review < ActiveRecord::Base
   end
 
   def plain_text
-    Review.strip_html Review.remove_linebreaks(text)
+    Review.to_ascii(Review.strip_html(Review.remove_linebreaks(text)))
   end
 
 private
@@ -30,4 +30,7 @@ private
     str.gsub(/\s*<\/p>\s*<p>\s*/, "\n\n").gsub(/<\/?[^>]*>/, "")
   end
 
+  def self.to_ascii(str)
+    str.gsub(/’/, "'")
+  end
 end
