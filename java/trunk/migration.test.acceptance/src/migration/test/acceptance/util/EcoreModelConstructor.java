@@ -13,21 +13,24 @@
  */
 package migration.test.acceptance.util;
 
+import java.util.Collections;
+import java.util.List;
+
 import migration.test.dependencies.EcoreHutnConfigModel;
 
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.epsilon.test.fixtures.hutn.AbstractModelConstructor;
+import org.eclipse.epsilon.test.fixtures.hutn.AbstractEObjectConstructor;
 
-public class EcoreModelConstructor extends AbstractModelConstructor<EPackage> {
+public class EcoreModelConstructor extends AbstractEObjectConstructor<EPackage> {
 
 	@Override
-	protected String getConfigFile() {
-		return EcoreHutnConfigModel.getModelFile().getAbsolutePath();
+	protected List<String> getConfigFiles() {
+		return Collections.singletonList(EcoreHutnConfigModel.getModelFile().getAbsolutePath());
 	}
-
+	
 	@Override
-	protected String getNsUri() {
-		return "http://www.eclipse.org/emf/2002/Ecore";
+	protected List<String> getNsUris() {
+		return Collections.singletonList("http://www.eclipse.org/emf/2002/Ecore");
 	}
 
 	@Override
