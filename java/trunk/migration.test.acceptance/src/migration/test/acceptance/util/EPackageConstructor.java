@@ -21,7 +21,7 @@ import migration.test.dependencies.EcoreHutnConfigModel;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.epsilon.test.fixtures.hutn.AbstractEObjectConstructor;
 
-public class EcoreModelConstructor extends AbstractEObjectConstructor<EPackage> {
+public class EPackageConstructor extends AbstractEObjectConstructor<EPackage> {
 
 	@Override
 	protected List<String> getConfigFiles() {

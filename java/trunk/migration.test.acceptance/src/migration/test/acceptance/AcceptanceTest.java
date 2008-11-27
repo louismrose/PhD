@@ -14,7 +14,7 @@
 package migration.test.acceptance;
 
 import migration.MigrationModule;
-import migration.test.acceptance.util.EcoreModelConstructor;
+import migration.test.acceptance.util.EPackageConstructor;
 
 import org.eclipse.epsilon.hutn.model.hutn.HutnPackage;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
@@ -32,7 +32,7 @@ public abstract class AcceptanceTest {
 	}
 	
 	public static void acceptanceTest(String path) {
-		final Spec migrated = new MigrationModule(slotModel).suggestMigration(new EcoreModelConstructor().construct(metamodel));
+		final Spec migrated = new MigrationModule(slotModel).suggestMigration(new EPackageConstructor().construct(metamodel));
 		
 		migratedModel = new ModelWithEolAssertions(migrated, HutnPackage.eINSTANCE);
 		
