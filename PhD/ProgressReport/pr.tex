@@ -1,0 +1,69 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{courier}
+\usepackage{longname}
+\usepackage{lscape}
+\usepackage{pdfsync}
+\usepackage{datetime}
+
+\longdate
+
+\lstset{aboveskip=4mm, belowskip=6mm, basicstyle=\ttfamily\footnotesize, flexiblecolumns=true,, numbers=left, nolol=true, tabsize=2, showstringspaces=false, captionpos=b}
+
+\title{Evolution in Model-Driven Engineering}
+\author{Louis Rose}
+
+\setcounter{tocdepth}{2}
+
+\makeatletter
+\renewcommand{\maketitle}{
+  \begin{titlepage}
+    \center
+    \vspace*{\stretch{1}}
+    \textsf{\huge \bfseries\sf \@title}\\
+    \bigskip
+    {\LARGE Progress Report}\\
+    \vspace*{\stretch{1}}
+    {\Large \@author}\\
+    \bigskip
+    {\Large \@date}\\
+    \vspace*{\stretch{2}}
+  \end{titlepage}
+}
+\makeatother
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\maketitle
+
+\begin{abstract}
+To be completed.
+%\textit{Model-Driven Engineering} (MDE) is the term given to development processes that systematically employ models as first-class citizens for constructing and maintaining software systems. Ways in which MDE is reported to improve the development of large-scale software systems are discussed. Realisation of the promised benefits of model-driven engineering can be inhibited by the change (also termed \textit{evolution}) of development artefacts. Identifying, analysing and mitigating the effects of evolution on MDE remain open research challenges. Some of the ways in which evolution may affect a model-driven process are discussed here, along with a review of software evolution research in other domains. A plan for categorising and describing evolution that occurs during MDE is proposed. Using this plan, contributions that seek to minimise the impact of evolution on MDE are identified.
+\end{abstract}
+
+\vspace{2mm}
+
+\begin{center}
+  \small{\textit{This report comprises 2,196 words, as counted by detex $|$ wc -w.}}
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\include{introduction}
+\include{progress}
+\include{plan}
+
+\bibliography{pr}
+\bibliographystyle{longname}
+
+\end{document}
