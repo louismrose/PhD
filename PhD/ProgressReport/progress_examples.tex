@@ -1,74 +1,119 @@
-%!TEX root = /Users/louis/Documents/PhD/Progress Report/pr.tex
+%!TEX root = /Users/louis/Documents/PhD/ProgressReport/pr.tex
 \subsection{Study of Existing Data}
-In my qualifying dissertation, I identified the need for a categorisation of the evolution of MDE artefacts. A study of example data (existing MDE projects containing evolution) was proposed to produce this categorisation. Work commenced by locating appropriate projects for the study. Several were discarded as they contained too few changes, or an inadequate description of the changes made. Further requirements, discussed below, were devised to determine the suitability of candidate projects. The requirements on candidate projects varied for each type of evolution:
+In my qualifying dissertation, I identified the need for categorising the ways in which MDE development artefacts evolve over time. The categorisation will be used to provide requirements for developing structures and processes for evolutionary changes in the context of model-driven engineering.
+
+A study of example data (existing MDE projects containing evolution) was proposed to produce this categorisation. Work commenced by defining requirements for candidates for the study. Next, existing MDE projects were located and analysed against the requirements. Finally, the most suitable candidate projects were selected. As will be discussed in Section \ref{sub:analysis_of_existing_techniques}, the selected projects have been used to analyse existing techniques for managing evolution in MDE.
+
+\subsubsection{Requirements} % (fold)
+\label{ssub:requirements}
+The requirements defined on candidates for the study of evolution are presented below. In Section \ref{sub:elaboration}, two categories of evolutionary change were identified, model and metamodel co-evolution and model synchronisation. I wanted to study both. Consequently, requirements were partitioned into three types: those necessary for studying each of the two categories of evolutionary change, and common requirements (applicable to both categories of evolutionary change).
+
+\paragraph{Common requirements}
+Every candidate project had to use some aspect of MDE, such as metamodelling or model transformation (requirement R1). In addition, each candidate project had to provide historical information, which elucidated the evolution of development artefacts (R2). For example, several versions of the project from the source code management system. Finally, a candidate project had to contain a sizeable number of significant changes\footnote{`Sizeable' and `significant' are deliberately vague. Further details are given in Section \ref{ssub:project_selection}.} (R3).
 
 \paragraph{Model and metamodel co-evolution}
-A candidate project for the study of model and metamodel co-evolution had to define a metamodel and some adaptation of that metamodel (requirement REQ1). In the projects considered, the metamodel adaptation took the form of either (1) another version of the metamodel, or (2) a change history (which recorded each of the steps used to produce the adapted metamodel).
+A candidate project for the study of model and metamodel co-evolution had to define a metamodel and some adaptation of that metamodel (R4). In the projects considered, the metamodel adaptation took the form of either (1) another version of the metamodel, or (2) a change history (which recorded each of the steps used to produce the adapted metamodel).
 
-A candidate project also had to provide example instances of models before and after each migration activity (REQ2).
+A candidate project also had to provide example instances of models before and after each migration activity (R5).
 
-Ideally, a candidate project included more than one consecutive metamodel adaptation, so as to represent the way in which the same development artefacts can continue to evolve over time (optional requirement OPT1).
+Ideally, a candidate project included more than one consecutive metamodel adaptation, so as to represent the way in which the same development artefacts can continue to evolve over time (optional requirement O1).
 
 \paragraph{Model synchronisation}
-A candidate project for the study of model synchronisation had to define a model-to-model transformation (REQ3).
+A candidate project for the study of model synchronisation had to define a model-to-model transformation (R6).
 
-Furthermore, a candidate project had to include many examples of source and target model for that transformation (REQ4).
+Furthermore, a candidate project had to include many examples of source and target model for that transformation (R7).
 
-Crucially, a candidate project had to provide many examples of the kinds of change (to either source or target model) that cause inconsistency between the models (REQ5). 
+Crucially, a candidate project had to provide many examples of the kinds of change (to either source or target model) that cause inconsistency between the models (R8). 
 
-Ideally, a candidate project also included transformation chains (more than one model-to-model transformation, executed sequentially) (OPT2). Chains of transformations are prescribed by the MDA guidelines \cite{kleppe03mda}.
+Ideally, a candidate project also included transformation chains (more than one model-to-model transformation, executed sequentially) (O2). Chains of transformations are prescribed by the MDA guidelines \cite{kleppe03mda}.
 
+% subsubsection requirements (end)
 
-\subsubsection{Candidate} % (fold)
-\label{ssub:candidate}
-In total, XX candidates were considered for the two studies. YY were discarded as they contained too few changes, or an inadequate description of the changes made. Table \ref{tab:candidates} shows which of the requirements (defined above) are fulfilled by each of the remaining candidates.
+\subsubsection{Project Selection} % (fold)
+\label{ssub:project_selection}
+Eight candidates were considered for the study. Table \ref{tab:candidates} shows which of the requirements (defined above) are fulfilled by each of the candidates. Suitable candidates were chosen for further analysis, which will provide requirements for developing structures and processes for evolutionary changes in the context of model-driven engineering. Each candidate is now discussed in turn.
 
 \begin{table}
 	\caption{Candidates for study of evolution in existing MDE projects}
 	\centering
-	\begin{tabular}{|c||c|c|c||c|c|c|c|}
+	\begin{tabular}{|c||c|c|c||c|c|c||c|c|c|c|}
 		\hline
-		Name  & REQ1 & REQ2 & OPT1 & REQ3 & REQ4 & REQ5 & OPT2 \\
+		\multirow{3}{*}{Name} & \multicolumn{10}{|c|}{Requirements} \\
+		\cline{2-11}
+		          & \multicolumn{3}{|c||}{Common} & \multicolumn{3}{|c||}{Co-evolution} & \multicolumn{4}{|c|}{Synchronisation} \\
+		\cline{2-11}
+		          & R1 & R2 & R3 & R4 & R5 & O1 & R6 & R7 & R8 & O2 \\
 		\hline
-		GMF   & x    & x    & x    & x    & x    &      & x    \\
+		GSN       & x  &    &    & x  &    &    &    &    &    &    \\
 		\hline
-		FPTC  & x    & x    &      &      &      &      &      \\
+		OMG       & x  &    &    & x  &    &    & x  &    &    &    \\
 		\hline
-		MDT   & x    &      & x    &      &      &      &      \\
+		Zoos      & x  & x  &    & x  &    &    &    &    &    &    \\
 		\hline
-		GSN   & x    &      & x    &      &      &      &      \\
+		MDT       & x  & x  &    & x  &    & x  &    &    &    &    \\
 		\hline
-		xText & x    & x    & x    & x    & x    &      & x    \\
+		ModelPlex & x  & x  & x  & x  &    & x  & x  & x  &    &    \\
+		\hline
+		FPTC      & x  & x  & x  & x  & x  &    &    &    &    &    \\
+		\hline
+		xText     & x  & x  & x  & x  & x  & x  & x  & x  &    & x  \\
+		\hline
+		GMF       & x  & x  & x  & x  & x  & x  & x  & x  &    & x  \\
 		\hline
 	\end{tabular}
 	\label{tab:candidates}
 \end{table}
 
-% Two candidates contained a rich and complete history of changes:
-% 
-% \subsubsection{GMF}
-% \cite{eclipse} is an open-source community whose projects seek to build an extensible development platform. The Eclipse Modelling Framework (EMF) provides a metamodelling language, and modelling tools. The Graphical Modelling Framework (GMF) \cite{gronback06gmf} allows the definition of graphical concrete syntax for metamodels that have been defined in EMF.
-% 
-% GMF prescribes a model-driven approach: Users of GMF define concrete syntax as a model, which is used to generate a graphical editor. In fact, five models are used together to define a single editor using GMF: a metamodel (.ecore), graphical (.gmfgraph), tooling (.gmftool) and mapping definitions (.gmfmap), and a generator model (.gmfgen). Figure \ref{fig:gmf} depicts an example of generating an editor with GMF.
-% 
-% \begin{figure}[htbp]
-%   \begin{center}
-%     \leavevmode
-%     \includegraphics[scale=0.33]{gmf.png}
-%   \end{center}
-%   \caption{Exemplar usage of the Eclipse Graphical Modelling Framework.}
-%   \label{fig:gmf}
-% \end{figure}
-% 
-% Figure \ref{fig:gmf} illustrates the dependencies between the different types of model used to generate an editor with GMF. Should one model be changed, related models may also require migration to remain consistent.
-% 
-% GMF defines the metamodels for graphical, tooling and mapping definition models; and for generator models. The metamodels have changed considerably during the development of GMF. Some changes have caused a metmodel to become inconsistent with its models. Presently, migration is encoded in Java. Gronback \footnote{Private communication, 2008} has stated that the migration code is difficult to maintain.
-% 
-% \subsubsection{FPTC}
+\paragraph{GSN} % (fold)
+\label{par:gsn}
+Georgios Despotou and Tim Kelly are constructing a metamodel for Goal Structuring Notation (GSN). The metamodel has been developed incrementally. There is no accurate and detailed version history for the GSN metamodel (requirement R2). \textbf{Suitability for study:} Unsuitable.
+% paragraph gsn (end)
+
+\paragraph{OMG} % (fold)
+\label{par:omg}
+The vice-president of the Object Management Group (OMG) \cite{omg}, Andrew Watson references the development of two MDE projects in \cite{watson08mdahistory}. I emailed Watson to ascertain whether the source code for the studies was available. Source code was available for one of the projects, but there is no version history. \textbf{Suitability for study:} Unsuitable.
+% paragraph omg (end)
+
+\paragraph{Zoos} % (fold)
+\label{par:zoos}
+There are several collections of popular metamodels available in \emph{zoos}. Each zoo contains metamodels authored in one metamodelling language (e.g. EMF's Ecore). I considered two zoos for this study, but neither contained any significant metamodel changes. Those changes that were made involved only renaming of meta-classes (trivial to migrate) or additive changes (which do not affect consistency, and therefore require no migration). \textbf{Suitability for study:} Unsuitable.
+% paragraph zoos (end)
+
+\paragraph{MDT} % (fold)
+\label{par:mdt}
+The Eclipse Model Development Tools (MDT) \cite{mdt} provides implementations of industry-standard metamodels, such as UML2 \cite{uml212} and OCL \cite{ocl2}. Like the metamodel zoos, the version history for the MDT metamodels contained no significant changes. \textbf{Suitability for study:} Unsuitable.
+% paragraph mdt (end)
+
+\paragraph{ModelPlex} % (fold)
+\label{par:modelplex}
+Jendrik Johannes has made available to me work from the European project, ModelPlex. Johannes's work involves transforming UML models to Tool Independent Performance Models (TIPM) for simulation. Although the TIPM metamodel and the UML-to-TIPM transformation have been changed significantly, no significant changes have been made to the models. \textbf{Suitability for study:} Unsuitable.
+% paragraph modelplex (end)
+
+\paragraph{FPTC} % (fold)
+\label{par:fptc}
+Failure Propagation and Transformation Calculus (FPTC) provides a means for reasoning about the failure behaviour of complex systems. Before starting my doctorate, I worked with Richard Paige to develop an implementation of FPTC in Eclipse. The implementation includes an FPTC metamodel. Recent work with Philippa Conmy identified a significant flaw in the implementation, leading to changes to the metamodel. These changes caused existing FPTC models to become inconsistent with the metamodel. Conmy has made available to me copies of FPTC models from before and after the changes. \textbf{Suitability for study:} Suitable for model and metamodel co-evolution. Unsuitable for studying model synchronisation.
+% paragraph fptc (end)
+
+\paragraph{xText} % (fold)
+\label{par:xtext}
+xText is an openArchitectureWare (oAW) \cite{oaw} tool for generating parsers, metamodels and editors for performing text-to-model transformation. Internally, xText defines a metamodel, which has changed significantly over the last year. In several cases, changes have caused inconsistenty with existing models (such as the ones used in the FPTC project). xText provides examples of use, which have been updated alongside the metamodel. \textbf{Suitability for study:} Suitable for studying model and metamodel co-evolution. Unsuitable for studying model synchronisation.
+% paragraph xtext (end)
+
+\paragraph{GMF} % (fold)
+\label{par:gmf}
+The Graphical Modelling Framework (GMF) \cite{gronback06gmf} allows the definition of graphical concrete syntax for metamodels that have been defined in EMF. GMF prescribes a model-driven approach: Users of GMF define concrete syntax as a model, which is used to generate a graphical editor. In fact, five models are used together to define a single editor using GMF.
+
+GMF defines the metamodels for graphical, tooling and mapping definition models; and for generator models. The metamodels have changed considerably during the development of GMF. Some changes have caused inconsistency with GMF models. Presently, migration is encoded in Java. Gronback \footnote{Private communication, 2008} has stated that the migration code is being ported to QVT (a model-to-model transformation language) as the Java code is difficult to maintain.
+
+GMF fulfils almost all of the requirements for the study. A large amount of data for the co-evolution of metamodels and models is available, including migration strategies. The GMF source code repository does not contain examples of the kinds of change that cause inconsistency between the models. However, GMF has a large number of users, and it may be possible to gather this information elsewhere. \textbf{Suitability for study:} Suitable for studying both categories of evolutionary change.
+% paragraph gmf (end)
+
+\paragraph{Summary of selection}
+The FPTC and xText projects were selected for a study of model and metamodel co-evolution. No appropriate projects were located for a study of model synchronisation. The GMF project will not be studied now, but reserved as a case study for evaluating my research.
 
 \subsubsection{Other data} % (fold)
 \label{ssub:other_data}
-As only a small number of candidate projects fulfil all of the requirements, I decided to collect additional data from alternative sources. Firstly, examples from related domains (e.g. object-oriented systems) may provide suitable date. Secondly, I have been collaborating with colleagues from two projects, both of which are using iterative and incremental model-driven development. Example data for both types of evolution will be available from these two projects.
+As only a small number of candidate projects fulfilled all of the requirements, I decided to collect additional data from alternative sources. Firstly, I sought examples from related domains (e.g. object-oriented systems) for suitable data. Secondly, I am collaborating with colleagues from two projects, both of which are using iterative and incremental model-driven development. Example data for both categories of evolutionary change will be available from these two projects.
 
 \paragraph{Examples of evolution from object-oriented systems} % (fold)
 \label{par:examples_of_evolution_from_object_oriented_systems}
@@ -126,14 +171,20 @@ Object-oriented refactorings are used to improve the maintainability of existing
 
 \paragraph{Collaborations} % (fold)
 \label{par:collaborations}
-With Adam, Heather.
+As well as locating example data from object-oriented programs, I am currently collaborating with two colleagues who are using MDE. Adam Sampson and I are constructing a metamodel to standardise the way in which his team model process-oriented programs. Heather Barber and I are investigating the feasibility of implementing a tool for generating story-worlds for interactive narratives.
 
+In both cases, the work will involve discussing requirements and constructing a metamodel for describing concepts in the domain. The metamodels will be developed incrementally, and so will change over time. In both cases, the domain is large, so I am hopeful that evolution will involve more than just additive changes. If so, the data will be used for studying model and metamodel co-evolution.
+
+Both parties have expressed an interest in transforming their models to generate code (possibly via an intermediate model). If realised, the data will be used for studying model synchronisation.
 
 % paragraph collaborations (end)
-
-% TODO: Round up by describing why I have elected to focus on model and metamodel co-evolution.
-
 % subsubsection other_data (end)
+
+\subsubsection{Summary}
+To summarise, I have located eight existing MDE projects, three of which contain data that can be analysed to obtain requirements for evolutionary changes in the context of model and metamodel co-evolution occurring during model-driven engineering. One of the three, GMF, will be reserved as a case study for my thesis. Refactorings and other examples from object-oriented programming will supplement the data available from the existing MDE projects. Collaboration with Sampson and Barber will yield further data.
+
+Because I found more examples of model and metamodel co-evolution than model synchronisation, I have decided to proceed by focusing on developing structures and processes for model and metamodel co-evolution. Should I discover further sources of model synchronisation, I will expand my research accordingly.
+
 
 
 
