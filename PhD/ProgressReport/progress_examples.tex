@@ -72,17 +72,17 @@ As only a small number of candidate projects fulfil all of the requirements, I d
 
 \paragraph{Examples of evolution from object-oriented systems} % (fold)
 \label{par:examples_of_evolution_from_object_oriented_systems}
-Object-oriented programs use objects to construct systems. Every object is an instance of (at least) one class. A class is a description of characteristics, which are shared by each of the class's instances (objects).
+In object-oriented programming, software is constructed by developing groups of related objects. Every object is an instance of (at least) one class. A class is a description of characteristics, which are shared by each of the class's instances (objects).
 
-This relationship between classes and objects is used in metamodelling. There, the term model element is used, instead of object, to refer to the individual parts of a model. Together, model elements are used to describe one perspective (model) of a system. Furthermore, metamodels comprises meta-classes, which describe the characteristics shared by each of the meta-class's instances (model elements).
+A similar relationship exists between models and metamodels: metamodels comprises meta-classes, which describe the characteristics shared by each of the meta-class's instances (elements of a model). Together, model elements are used to describe one perspective (model) of a system
 
 Consequently, I believe that studying the evolution of object-oriented systems will yield results that are relevant to the model and metamodel co-evolution occurring in MDE. To support this argument, I have performed a preliminary study of frequently observed changes made to object-oriented systems.
 
 \subparagraph{Preliminary study of object-oriented refactorings} % (fold)
 \label{subp:preliminary_study_of_object_oriented_refactorings}
-\emph{Refactoring} is the process of improving the structure of existing code while maintaining its external behaviour. When used as a noun, a refactoring is one such improvement. \cite{fowler99refactoring} provides a catalogue of \emph{refactorings} for object-oriented systems. For each refactoring, Fowler describes when it should be applied and instructions for applying it. 
+\emph{Refactoring} is the process of improving the structure of existing code while maintaining its external behaviour. When used as a noun, a refactoring is one such improvement. \cite{fowler99refactoring} provides a catalogue of refactorings for object-oriented systems. For each refactoring, Fowler gives advice and instructions for its application.
 
-Fowler's refactorings provide examples of evolutionary changes to object-oriented systems. I found that some of Fowler's refactorings can equally be applied to EMF metamodels, but many cannot. Broadly, those refactorings that do not apply to EMF metamodels belong to one of three categories:
+Fowler's refactorings provide examples of evolutionary changes to object-oriented systems. I attempted to apply each of Fowler's refactorings to EMF metamodels and discovered that some are irrelevant to metamodelling. Those refactorings that do not apply to EMF metamodels belong to one of three categories:
 
 \begin{enumerate}
 	\item \textbf{Operational refactorings} focus on restructuring behaviour (method bodies). EMF does not support the specification of behaviour in models.
@@ -90,7 +90,7 @@ Fowler's refactorings provide examples of evolutionary changes to object-oriente
 	\item \textbf{Domain-specific refactorings} manage issues specific to object-oriented programming, such as casting, defensive return values, and assertions. These issues are not relevant to modelling.
 \end{enumerate}
 
-Those refactorings that can be applied to metamodels provide examples of metamodel evolution. When applied, some of these refactorings can cause inconsistency between a metamodel and its models. I used Fowler's description of the refactoring to deduce a migration strategy for updating (co-evolving) inconsistent models. An example of deducing a migration strategy is now presented.
+Those refactorings that can be applied to metamodels provide examples of metamodel evolution. When applied, some of these refactorings potentially cause inconsistency between a metamodel and its models. I used Fowler's description of each refactoring to deduce a migration strategy for updating (co-evolving) inconsistent models. An example of deducing a migration strategy is now presented.
 
 Figure \ref{fig:refactoring} illustrates a refactoring that changes a reference object to a value. Value objects are immutable, and cannot be shared (i.e. any two objects cannot refer to the same value object). Reference objects are mutable, and can be shared. Figure \ref{fig:refactoring} indicates that applying the refactoring restricts the multiplicity of the association (on the Order end) to 1 (implied by the composition); prior to the refactoring the multiplicity is many.
 
@@ -103,9 +103,9 @@ Figure \ref{fig:refactoring} illustrates a refactoring that changes a reference 
   \label{fig:refactoring}
 \end{figure}
 
-Before applying the refactoring, every customer is associated with many orders. After the refactoring, each customer should be associated with only one order. Fowler indicates that every customer that is associated with more than one order should be replicated by the order. Therefore, the migration strategy in Listing \ref{lst:refactoring} is deduced.
+Before applying the refactoring, every customer is associated with many orders. After the refactoring, each customer should be associated with only one order. Fowler indicates that every customer associated with more than one order should be replicated by the order. Therefore, the migration strategy in Listing \ref{lst:refactoring} is deduced.
 
-\begin{lstlisting}[caption=Migration strategy for the above refactoring in pseudo code., label=lst:refactoring]
+\begin{lstlisting}[caption=Migration strategy for the refactoring in pseudo code., label=lst:refactoring]
 for every customer, c
 	for every order, o, associated with c
 		create a new customer, d
@@ -116,9 +116,9 @@ for every customer, c
 next c
 \end{lstlisting}
 
-Migration strategies were deduced for each of the refactorings that were (1) applicable to metamodels, and (2) caused inconsistencies between a metamodel and its models. Some of the refactorings have been observed in the GMF and FPTC projects (both suitable candidates for the model and metamodel co-evolution study); although a thorough categorisation of the changes occurring in the projects has not been produced.
+Migration strategies were deduced for each of the refactorings that were (1) applicable to EMF metamodels, and (2) caused inconsistencies between a metamodel and its models. Some of the refactorings have been observed in the FPTC project (one of the projects chosen for the model and metamodel co-evolution study); although a thorough categorisation of the changes occurring in the FPTC project has not been produced.
 
-Object-oriented refactorings are used to improve the maintainability of existing systems. Consequently, they represent only one of the reasons for evolutionary change defined by \cite{sjoberg93quantifying}. Other types of changes to object-oriented systems are equally relevant to my research. Consequently, I have obtained further examples of changes made to object-oriented systems from Tim Hoverd, an experienced object-oriented developer. Hoverd's examples include changes made to adapt to new requirements and technologies.
+Object-oriented refactorings are used to improve the maintainability of existing systems. Consequently, they represent only one of the three reasons for evolutionary change defined by \cite{sjoberg93quantifying}. The two other types of changes to object-oriented systems are equally relevant to my research. Consequently, I have obtained further examples of changes made to object-oriented systems from Tim Hoverd, an experienced object-oriented developer. Hoverd's examples include changes made that represent at least one of the other reasons for evolutionary change defined by \cite{sjoberg93quantifying}.
 
 % subparagraph preliminary_study_of_object_oriented_refactorings (end)
 % paragraph examples_of_evolution_from_object_oriented_systems (end)
