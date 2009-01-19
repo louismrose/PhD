@@ -1,4 +1,112 @@
-%!TEX root = /Users/louis/Documents/PhD/ProgressReport/pr.tex
+%!TEX root = /Users/louis/Documents/PhD/Deliverables/ProgressReport/pr.tex
 \section{Plan}
+I have completed several of the activities outlined in the plan presented in my qualifying dissertation. However, I have experienced some difficulties when following that plan. Consequently, a revised plan is presented in Section \ref{sub:revised_plan}. Finally, a discussion of the main goals of my research activities, and their relationship to the revised plan, is presented in Section \ref{sub:goals}.
 
-% Alone the study of existing data, and analysis of existing techniques have not yielded a full set of requirements. It's not clear what metamodel developers want from a tool for co-evo, so need to speak to some.
+
+\subsection{Existing Plan}
+\label{sub:existing_plan}
+Figure \ref{fig:old_plan} shows the research plan presented in my qualifying dissertation. I identified four activities to be completed before submitting my progress report. The status of those activities is as follows:
+
+\begin{itemize}
+	\item \textbf{Locate case studies}: Completed, as discussed in Section \ref{sub:examples}. However, locating example data took approximately two weeks longer than I estimated in Figure \ref{fig:old_plan}. This caused ``Analyse case studies'' to start two weeks later than planned.
+	\item \textbf{Analyse case studies}: Somewhat completed, as discussed in Section \ref{sub:analysis_of_existing_techniques}. In summary, the example data will be used to complete a review of existing metamodel techniques.
+	\item \textbf{Co-evo and runtime evo lit review}: Completed, although I decided to focus more on model synchronisation literature, than runtime evolution literature as I found the former more interesting. The literature review lead to the elaboration of research aims discussed in Section \ref{sub:elaboration}.
+	\item \textbf{Write progress report}: Completed.
+\end{itemize}
+
+\newpage
+\begin{landscape}
+
+\begin{figure}[ht]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.5]{old_plan.png}
+  \end{center}
+  \caption{Plan for my research, from my qualifying dissertation.}
+  \label{fig:old_plan}
+\end{figure}
+
+\end{landscape}
+
+
+\subsection{Revised Plan}
+\label{sub:revised_plan}
+Figure \ref{fig:revised_plan} shows my revised research plan. Originally, I had intended to begin planning a language for performing metamodel and model co-evolution in February 2009. However, I now feel that I am not yet able to identify a reasonable set of requirements for the language. Consequently, I have introduced several new activities (``Analyse COPE'', ``Analyse Cicchetti's work'', ``Collaborate with Barber'', ``Collaborate with Sampson'') that will aid in defining requirements. These new activities are discussed in Section \ref{sub:goals}. Hence, the activities relating to developing the metamodel evolution language have been delayed.
+
+In addition, ``Develop metamodel evolution language'' and ``Evaluate user feedback'' now occupy one month (rather than six weeks), which is reasonable as I have already made some progress as discussed in Section \ref{sub:development}. Also, Q4 2009 has been updated to better reflect the progress made during that period.
+
+% TODO: Evaluate user feedback seems unreasonable. Where will the feedback be obtained from?
+
+\newpage
+\begin{landscape}
+
+\begin{figure}[ht]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.4]{revised_plan.png}
+  \end{center}
+  \caption{Revised plan for my research.}
+  \label{fig:revised_plan}
+\end{figure}
+
+\end{landscape}
+
+When trying to follow the plan in Figure \ref{fig:old_plan}, I encountered some further difficulties. Firstly, some of the activities were too broad (such as ``Analyse case studies'' and ``Co-evo and runtime evo lit review''), making progress hard to measure. Secondly, activities were unrealistically scheduled over the Christmas period.  In my revised plan (Figure \ref{fig:revised_plan}), I have decomposed large activities into several smaller activities. In addition, I have not scheduled any activities in the first two weeks of April to allow for the Easter vacation.
+
+
+\subsection{Goals} % (fold)
+\label{sub:goals}
+Over the next three months, my primary goal is to determine requirements for a (metamodel and model) co-evolution language. The requirements will be identified by using examples of evolution from existing MDE projects to analyse existing co-evolution tools, by collaborating on incremental metamodel development with Barber and with Sampson, and by performing a survey of developers working on existing MDE projects.
+
+I will use these requirements to implement develop structures and processes for evolutionary changes in the context of metamodel and model co-evolution occurring during model-driven engineering projects. These structures and processes will take the form of a language for describing and executing model and metamodel co-evolution. Best practices for using the language will be identified by application to examples of evolution in existing MDE projects.
+
+% Evolution inferrence tool
+
+The structures and processes produced will be evaluated using the Graphical Modelling Framework (GMF) \cite{gronback06gmf} as a case study. I will demonstrate that the problems occurring in GMF, which are caused by evolutionary change, can be managed.
+
+\subsubsection{February to June 2009}
+I have identified several activities to be completed over the next four months. Goals for each of these activities are now described. My thesis outline will contain goals for the activities performed between July 2009 and December 2009.
+
+\paragraph{Plan stake-holder survey} % (fold)
+\label{par:plan_stakeholder_survey}
+No existing work on model and metamodel co-evolution seeks to identify the requirements of developers working on MDE projects. Tools for performing model and metamodel co-evolution (such as \cite{herrmannsdoerfer08cope,cicchetti08automating}) recommend different approaches to co-evolution, which influence the way in which developers work with models. For example, COPE \cite{herrmannsdoerfer08cope} requires that changes made to a metamodel be recorded, but not all metamodel editing tools provide facilities for recording changes.
+
+By surveying developers working on existing MDE projects, I hope to ascertain data which will help to derive requirements for the structures and processes that I will develop for my thesis. The survey will seek to find answers to the following types of questions: Which tools are developers using for editing and versioning their models and metamodels? Are developers encountering inconsistencies between their models and metamodels? Are they performing co-evolution manually or using a tool? Which tools are being used for co-evolution?
+
+I will survey developers working on MDE projects. I will seek participants from ModelPlex, a European project focusing on using MDE to perform complex systems modelling, and conferences that discuss evolution in MDE (such as MCCM 2009). 
+
+Before devising the survey, I will speak to members of the York Human Computer Interaction group, such as Chris Power and Paul Cairns. Both Power and Cairns have had some experience in developing surveys for assessing software, and will likely have advice for me.
+
+% paragraph plan_stakeholder_survey (end)
+
+
+\paragraph{Analyse COPE and Cicchetti's work} % (fold)
+\label{par:analyse_existing_work}
+As discussed in Section \ref{sub:analysis_of_existing_techniques}, \cite{herrmannsdoerfer08cope,cicchetti08automating} both describe tools for performing automated model and metamodel co-evolution. By analysing both tools with data located from existing MDE projects, I will continue to identify areas in which these tools are effective, and ways in which they may be improved. The analysis will provide requirements for the structures and processes that I will develop for my thesis.
+
+% paragraph analyse_existing_work (end)
+
+
+\paragraph{Collaborate with Barber and with Sampson} % (fold)
+\label{par:collaborate_with_barber_and_with_sampson}
+I will continue to collaborate with Barber and Sampson to iteratively and incrementally produce metamodels as discussed in Section \ref{par:collaborations}. Initially, I will collect a record of evolutionary changes made during the development of metamodels. If we encounter any evolutionary changes that inhibit development, I will be able to derive further requirements for the structures and processes that I will develop for my thesis.
+
+% paragraph collaborate_with_barber_and_with_sampson (end)
+
+
+\paragraph{Plan metamodel evolution language} % (fold)
+\label{par:plan_metaamodel_evolution_language}
+
+% paragraph plan_metaamodel_evolution_language (end)
+
+
+\paragraph{Develop metamodel evolution language} % (fold)
+\label{par:develop_metamodel_evolution_language}
+
+% paragraph develop_metamodel_evolution_language (end)
+
+
+\paragraph{Write paper for MoDELS / SLE / MCCM 2009} % (fold)
+\label{par:write_paper_for_models_sle_mccm_2009}
+
+% paragraph write_paper_for_models_sle_mccm_2009 (end)
