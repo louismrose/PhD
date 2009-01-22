@@ -11,8 +11,22 @@
 \usepackage{datetime}
 \usepackage{multirow}
 
-\oddsidemargin 0.125in
-\textwidth 6.125in
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+
+%\oddsidemargin 0.125in
+%\textwidth 6.125in
+
+\lstdefinelanguage{etl}{
+morekeywords={transform,rule,to,for,equivalent,in,var,new},
+sensitive=true,
+morecomment=[l]{--},
+%morecomment=[s]{/*}{*/},
+morestring=[b]',
+showstringspaces=false
+}
 
 \longdate
 
@@ -47,14 +61,15 @@
 \maketitle
 
 \begin{abstract}
-To be completed.
-%\textit{Model-Driven Engineering} (MDE) is the term given to development processes that systematically employ models as first-class citizens for constructing and maintaining software systems. Ways in which MDE is reported to improve the development of large-scale software systems are discussed. Realisation of the promised benefits of model-driven engineering can be inhibited by the change (also termed \textit{evolution}) of development artefacts. Identifying, analysing and mitigating the effects of evolution on MDE remain open research challenges. Some of the ways in which evolution may affect a model-driven process are discussed here, along with a review of software evolution research in other domains. A plan for categorising and describing evolution that occurs during MDE is proposed. Using this plan, contributions that seek to minimise the impact of evolution on MDE are identified.
+\textit{Model-Driven Engineering} (MDE) is the term given to development processes that systematically employ models as first-class citizens for constructing and maintaining software systems. MDE can be inhibited by the change (also termed \textit{evolution}) of development artefacts. Identifying, analysing and mitigating the effects of evolution on MDE remain open research challenges.
+
+In this report, I discuss the progress that I have made in investigating evolution occurring in MDE. I have located examples of evolutionary change, identified and analysed existing tools for managing evolutionary change, and begun to plan a language for specifying and executing evolution. I conclude by presenting a plan, a timetable and goals for developing and completing my research.
 \end{abstract}
 
 \vspace{2mm}
 
 \begin{center}
-  \small{\textit{This report comprises 4,916 words, as counted by detex $|$ wc -w.}}
+  \small{\textit{This report comprises 6,286 words, as counted by detex $|$ wc -w.}}
 \end{center}
 
 \newpage

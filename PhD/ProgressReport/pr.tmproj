@@ -2,66 +2,182 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>currentDocument</key>
+	<string>progress_analysis.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>progress_elaboration.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-07T15:34:08Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>progress_evaluation.tex</string>
-			<key>lastUsed</key>
-			<date>2009-01-09T17:56:53Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-01-21T10:32:40Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>progress_examples.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-07T14:01:43Z</date>
+			<date>2009-01-21T13:18:50Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>progress.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-09T17:56:52Z</date>
+			<date>2009-01-21T09:47:26Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>pr.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-09T17:56:50Z</date>
+			<date>2009-01-21T14:28:09Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>pr.bib</string>
 			<key>lastUsed</key>
-			<date>2009-01-09T17:56:51Z</date>
+			<date>2009-01-21T14:28:07Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>plan.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-09T17:56:52Z</date>
+			<date>2009-01-21T14:13:26Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>progress_analysis.tex</string>
+			<key>lastUsed</key>
+			<date>2009-01-21T14:28:09Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>progress_development.tex</string>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>introduction.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-09T17:56:53Z</date>
+			<date>2009-01-21T10:40:03Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
-	<dict/>
+	<dict>
+		<key>plan.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>122</integer>
+				<key>line</key>
+				<integer>11</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>235</integer>
+			<key>firstVisibleLine</key>
+			<integer>79</integer>
+		</dict>
+		<key>pr.bib</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>pr.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>44</integer>
+				<key>line</key>
+				<integer>56</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>40</integer>
+		</dict>
+		<key>progress_analysis.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>266</integer>
+				<key>line</key>
+				<integer>71</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>64</integer>
+		</dict>
+		<key>progress_elaboration.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>13</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>progress_examples.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>15</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>11</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>19</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>openDocuments</key>
+	<array>
+		<string>pr.tex</string>
+		<string>progress_analysis.tex</string>
+		<string>plan.tex</string>
+		<string>progress_examples.tex</string>
+		<string>pr.bib</string>
+		<string>progress_elaboration.tex</string>
+	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{217, 55}, {1009, 768}}</string>
+	<string>{{226, 167}, {973, 771}}</string>
 </dict>
 </plist>

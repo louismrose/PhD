@@ -1,4 +1,14 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/ProgressReport/pr.tex
 \subsection{Towards a Language for Automating Co-Evolution}
 \label{sub:development}
-Begun cataloguing types of model evolution. Started with Fowler's refactorings, and now expanding to incorporate evolutions seen in real-world systems.
+Section~\ref{subp:preliminary_study_of_object_oriented_refactorings} discussed the relationship between object-oriented refactorings and co-evolution. I have begun identifying constructs for a co-evolution language by codifying migration strategies for the object-oriented refactorings that can be applied to metamodels. Rather than (mis)use a model-to-model transformation language to encode migration strategies, I decided to use a general-purpose programming language.
+
+I have identified several idioms that were difficult to express in a general-purpose programming language. Expressing these idioms succinctly will be a key requirement for the co-evolution language that I will develop.
+
+Firstly, I have discovered that some migration strategies can be used in response to more than one metamodel adaptation. Consequently, rather than associate a migration strategy with a metamodel adaption, I have written guards for each of the migration strategies. When its guard evaluates to true, the migration strategy is applied.
+
+Often, guards contained type-checking of the model element to which the migration strategy was to be applied. For example, some migration strategies might operate only on instances of meta-classes, or only on instances of meta-attributes. In some cases, the strategies were parameterised so as to further constrain the type of model element. For example, when a migration strategy should be applied only to those models elements that instantiate the meta-class called Customer.
+
+I investigated two approaches to constructing a migrated model: starting with an empty model, and starting with a copy of the unmigrated model. The former lead to writing a lot of repetitive code. The latter, also used in the co-evolution tool COPE \cite{herrmannsdoerfer08cope}, greatly reduced the amount of code required, but introduced another problem: when writing some migration strategies, I needed to distinguish model elements that were present in the original model from those that had been created as part of migration. A language construct for representing this distinction would be useful. Other idioms in the migration strategies, such as error reporting, could be better encoded with dedicated language constructs.
+
+These observations result from encoding migration strategies for metamodel refactoring, which is only one type of co-evolution. Further investigation will explore other types of co-evolution, and will produce requirements for a co-evolution language.
