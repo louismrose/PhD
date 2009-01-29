@@ -3,95 +3,143 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>progress_analysis.tex</string>
+	<string>progress_examples.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>progress_elaboration.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-21T10:32:40Z</date>
+			<date>2009-01-22T15:52:53Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>progress_examples.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-21T13:18:50Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>progress.tex</string>
-			<key>lastUsed</key>
-			<date>2009-01-21T09:47:26Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>pr.tex</string>
-			<key>lastUsed</key>
-			<date>2009-01-21T14:28:09Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>pr.bib</string>
-			<key>lastUsed</key>
-			<date>2009-01-21T14:28:07Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>plan.tex</string>
-			<key>lastUsed</key>
-			<date>2009-01-21T14:13:26Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>progress_analysis.tex</string>
-			<key>lastUsed</key>
-			<date>2009-01-21T14:28:09Z</date>
+			<date>2009-01-23T11:08:13Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
+			<string>progress.tex</string>
+			<key>lastUsed</key>
+			<date>2009-01-22T14:54:25Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>pr.tex</string>
+			<key>lastUsed</key>
+			<date>2009-01-22T15:54:15Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>pr.bib</string>
+			<key>lastUsed</key>
+			<date>2009-01-22T15:52:38Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>plan.tex</string>
+			<key>lastUsed</key>
+			<date>2009-01-22T15:46:15Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>progress_analysis.tex</string>
+			<key>lastUsed</key>
+			<date>2009-01-22T15:35:10Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
 			<string>progress_development.tex</string>
+			<key>lastUsed</key>
+			<date>2009-01-22T15:39:03Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>introduction.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-21T10:40:03Z</date>
+			<date>2009-01-22T11:43:07Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
+		<key>introduction.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>267</integer>
+				<key>line</key>
+				<integer>17</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>258</integer>
+				<key>line</key>
+				<integer>17</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>267</integer>
+				<key>line</key>
+				<integer>17</integer>
+			</dict>
+		</dict>
 		<key>plan.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>122</integer>
+				<integer>313</integer>
 				<key>line</key>
-				<integer>11</integer>
+				<integer>16</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>235</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>79</integer>
+			<integer>0</integer>
 		</dict>
 		<key>pr.bib</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>16</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>259</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>253</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>259</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>20</integer>
+				<key>line</key>
+				<integer>259</integer>
+			</dict>
 		</dict>
 		<key>pr.tex</key>
 		<dict>
@@ -100,42 +148,42 @@
 				<key>column</key>
 				<integer>44</integer>
 				<key>line</key>
-				<integer>56</integer>
+				<integer>71</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>40</integer>
+			<integer>51</integer>
+		</dict>
+		<key>progress.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>145</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>progress_analysis.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>266</integer>
+				<integer>166</integer>
 				<key>line</key>
-				<integer>71</integer>
+				<integer>79</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>64</integer>
+			<integer>63</integer>
 		</dict>
-		<key>progress_elaboration.tex</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>13</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>progress_examples.tex</key>
+		<key>progress_development.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -160,24 +208,55 @@
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>19</integer>
+				<integer>22</integer>
 				<key>line</key>
 				<integer>2</integer>
 			</dict>
+		</dict>
+		<key>progress_elaboration.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>518</integer>
+				<key>line</key>
+				<integer>7</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>progress_examples.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>14</integer>
+				<key>line</key>
+				<integer>164</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>142</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>pr.tex</string>
-		<string>progress_analysis.tex</string>
+		<string>progress_development.tex</string>
+		<string>introduction.tex</string>
+		<string>progress.tex</string>
 		<string>plan.tex</string>
-		<string>progress_examples.tex</string>
 		<string>pr.bib</string>
 		<string>progress_elaboration.tex</string>
+		<string>progress_examples.tex</string>
+		<string>progress_analysis.tex</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{226, 167}, {973, 771}}</string>
+	<string>{{248, 51}, {973, 771}}</string>
 </dict>
 </plist>
