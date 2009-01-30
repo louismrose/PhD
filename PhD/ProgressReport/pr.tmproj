@@ -3,46 +3,46 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>progress_examples.tex</string>
+	<string>pr.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>progress_elaboration.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-22T15:52:53Z</date>
+			<date>2009-01-29T17:16:32Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>progress_examples.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-23T11:08:13Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-01-29T17:19:45Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>progress.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-22T14:54:25Z</date>
+			<date>2009-01-29T16:59:37Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>pr.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-22T15:54:15Z</date>
+			<date>2009-01-29T17:22:52Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>pr.bib</string>
 			<key>lastUsed</key>
-			<date>2009-01-22T15:52:38Z</date>
+			<date>2009-01-29T17:11:20Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>plan.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-22T15:46:15Z</date>
+			<date>2009-01-29T17:22:52Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -54,13 +54,13 @@
 			<key>filename</key>
 			<string>progress_development.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-22T15:39:03Z</date>
+			<date>2009-01-29T17:16:35Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>introduction.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-22T11:43:07Z</date>
+			<date>2009-01-29T17:16:28Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -72,73 +72,57 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>267</integer>
+				<integer>353</integer>
 				<key>line</key>
-				<integer>17</integer>
+				<integer>7</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>121</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>258</integer>
-				<key>line</key>
-				<integer>17</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>267</integer>
-				<key>line</key>
-				<integer>17</integer>
-			</dict>
+			<integer>2</integer>
 		</dict>
 		<key>plan.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>313</integer>
+				<integer>195</integer>
 				<key>line</key>
-				<integer>16</integer>
+				<integer>69</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>364</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>65</integer>
 		</dict>
 		<key>pr.bib</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>13</integer>
 				<key>line</key>
-				<integer>259</integer>
+				<integer>289</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>253</integer>
+			<integer>280</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
 				<integer>6</integer>
 				<key>line</key>
-				<integer>259</integer>
+				<integer>289</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>20</integer>
+				<integer>23</integer>
 				<key>line</key>
-				<integer>259</integer>
+				<integer>289</integer>
 			</dict>
 		</dict>
 		<key>pr.tex</key>
@@ -146,9 +130,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>44</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>71</integer>
+				<integer>67</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -218,28 +202,44 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>518</integer>
+				<integer>618</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>16</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>243</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<key>progress_examples.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>243</integer>
 				<key>line</key>
-				<integer>164</integer>
+				<integer>116</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>142</integer>
+			<integer>100</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>358</integer>
+				<key>line</key>
+				<integer>116</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>243</integer>
+				<key>line</key>
+				<integer>116</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
