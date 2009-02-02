@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>pr.tex</string>
+	<string>plan_figures.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -28,9 +28,7 @@
 			<key>filename</key>
 			<string>pr.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-29T17:22:52Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-02-02T08:52:23Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -42,7 +40,7 @@
 			<key>filename</key>
 			<string>plan.tex</string>
 			<key>lastUsed</key>
-			<date>2009-01-29T17:22:52Z</date>
+			<date>2009-02-02T08:51:51Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -61,6 +59,14 @@
 			<string>introduction.tex</string>
 			<key>lastUsed</key>
 			<date>2009-01-29T17:16:28Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>plan_figures.tex</string>
+			<key>lastUsed</key>
+			<date>2009-02-02T08:52:23Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -86,14 +92,44 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>195</integer>
+				<integer>35</integer>
 				<key>line</key>
-				<integer>69</integer>
+				<integer>58</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>22</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>27</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>35</integer>
+				<key>line</key>
+				<integer>58</integer>
+			</dict>
+		</dict>
+		<key>plan_figures.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>20</integer>
+				<key>line</key>
+				<integer>4</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>364</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>65</integer>
+			<integer>0</integer>
 		</dict>
 		<key>pr.bib</key>
 		<dict>
@@ -130,14 +166,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>6</integer>
 				<key>line</key>
-				<integer>67</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>51</integer>
+			<integer>0</integer>
 		</dict>
 		<key>progress.tex</key>
 		<dict>
@@ -245,6 +281,7 @@
 	<key>openDocuments</key>
 	<array>
 		<string>pr.tex</string>
+		<string>plan_figures.tex</string>
 		<string>progress_development.tex</string>
 		<string>introduction.tex</string>
 		<string>progress.tex</string>
@@ -257,6 +294,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{248, 51}, {973, 771}}</string>
+	<string>{{411, 75}, {973, 771}}</string>
 </dict>
 </plist>
