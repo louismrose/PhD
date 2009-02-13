@@ -13,22 +13,12 @@
  */
 package migration.migrator;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import migration.migrator.strategy.MigrationException;
 import migration.migrator.strategy.MigrationStrategy;
-import migration.migrator.strategy.concrete.ChangeContainmentToReferenceStrategy;
-import migration.migrator.strategy.concrete.ChangeReferenceToContainmentStrategy;
-import migration.migrator.strategy.concrete.ExtractClassMigrationStrategy;
-import migration.migrator.strategy.concrete.ExtractSubclassMigrationStrategy;
-import migration.migrator.strategy.concrete.InlineClassMigrationStrategy;
-import migration.migrator.strategy.concrete.ReconcileClassMigrationStrategy;
-import migration.migrator.strategy.concrete.ReconcileFeatureTypeMigrationStrategy;
 
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.epsilon.emc.emf.EmfUtil;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
-import org.eclipse.epsilon.hutn.util.EmfUtil;
 
 public class Migrator {
 	
@@ -41,7 +31,7 @@ public class Migrator {
 	public Spec suggestMigration(EPackage metamodel) {
 		Spec migratedModel = EmfUtil.clone(slotModel);
 		
-		for (MigrationStrategy<?> strategy : getMigrationStrategies(migratedModel, metamodel)) {
+		for (MigrationStrategy<?> strategy : new MigrationStrategyFactory(migratedModel, metamodel).getAllMigrationStrategies()) {
 			if (strategy.isApplicable()) {
 				try {
 					strategy.execute();
@@ -56,19 +46,5 @@ public class Migrator {
 		}
 		
 		return migratedModel;
-	}
-	
-	private List<MigrationStrategy<?>> getMigrationStrategies(Spec migratedModel, EPackage metamodel) {
-		final List<MigrationStrategy<?>> strategies = new LinkedList<MigrationStrategy<?>>();
-		
-//		strategies.add(new ReconcileFeatureTypeMigrationStrategy(migratedModel, metamodel));
-//		strategies.add(new ReconcileClassMigrationStrategy(migratedModel, metamodel));
-		strategies.add(new ChangeReferenceToContainmentStrategy(migratedModel, metamodel));
-		strategies.add(new ChangeContainmentToReferenceStrategy(migratedModel, metamodel));
-		strategies.add(new ExtractClassMigrationStrategy(migratedModel, metamodel));
-		strategies.add(new ExtractSubclassMigrationStrategy(migratedModel, metamodel));
-		strategies.add(new InlineClassMigrationStrategy(migratedModel, metamodel));
-		
-		return strategies;
 	}
 }
