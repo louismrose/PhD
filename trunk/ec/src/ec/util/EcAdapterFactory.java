@@ -72,8 +72,8 @@ public class EcAdapterFactory extends AdapterFactoryImpl {
 	protected EcSwitch<Adapter> modelSwitch =
 		new EcSwitch<Adapter>() {
 			@Override
-			public Adapter casePerson(Person object) {
-				return createPersonAdapter();
+			public Adapter caseEmployee(Employee object) {
+				return createEmployeeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -96,16 +96,16 @@ public class EcAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ec.Person <em>Person</em>}'.
+	 * Creates a new adapter for an object of class '{@link ec.Employee <em>Employee</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ec.Person
+	 * @see ec.Employee
 	 * @generated
 	 */
-	public Adapter createPersonAdapter() {
+	public Adapter createEmployeeAdapter() {
 		return null;
 	}
 

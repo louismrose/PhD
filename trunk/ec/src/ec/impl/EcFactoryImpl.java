@@ -31,7 +31,7 @@ public class EcFactoryImpl extends EFactoryImpl implements EcFactory {
 	 */
 	public static EcFactory init() {
 		try {
-			EcFactory theEcFactory = (EcFactory)EPackage.Registry.INSTANCE.getEFactory("ec"); 
+			EcFactory theEcFactory = (EcFactory)EPackage.Registry.INSTANCE.getEFactory("ec2"); 
 			if (theEcFactory != null) {
 				return theEcFactory;
 			}
@@ -60,7 +60,7 @@ public class EcFactoryImpl extends EFactoryImpl implements EcFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case EcPackage.PERSON: return createPerson();
+			case EcPackage.EMPLOYEE: return createEmployee();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,9 +71,9 @@ public class EcFactoryImpl extends EFactoryImpl implements EcFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Person createPerson() {
-		PersonImpl person = new PersonImpl();
-		return person;
+	public Employee createEmployee() {
+		EmployeeImpl employee = new EmployeeImpl();
+		return employee;
 	}
 
 	/**

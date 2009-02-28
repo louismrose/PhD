@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history">
+  <releases date="2009-02-28T16:33:25.221+0000">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:AddRootPackage" package="EC.ecore#/">
+        <changes xsi:type="history:Set" element="EC.ecore#/" featureName="name" dataValue="ec"/>
+        <changes xsi:type="history:Set" element="EC.ecore#/" featureName="nsURI" dataValue="ec"/>
+        <changes xsi:type="history:Set" element="EC.ecore#/" featureName="nsPrefix"
+            dataValue="ec"/>
+      </changes>
+      <changes xsi:type="history:CreateChild" target="EC.ecore#/" element="EC.ecore#//Employee"
+          referenceName="eClassifiers">
+        <changes xsi:type="history:Set" element="EC.ecore#//Employee" featureName="name"
+            dataValue="Person"/>
+      </changes>
+      <changes xsi:type="history:CreateChild" target="EC.ecore#//Employee" element="EC.ecore#//Employee/name"
+          referenceName="eStructuralFeatures">
+        <changes xsi:type="history:Set" element="EC.ecore#//Employee/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="EC.ecore#//Employee/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:CreateChild" target="EC.ecore#//Employee" element="EC.ecore#//Employee/areaCode"
+          referenceName="eStructuralFeatures">
+        <changes xsi:type="history:Set" element="EC.ecore#//Employee/areaCode" featureName="name"
+            dataValue="areaCode"/>
+        <changes xsi:type="history:Set" element="EC.ecore#//Employee/areaCode" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:CreateChild" target="EC.ecore#//Employee" element="EC.ecore#//Employee/number"
+          referenceName="eStructuralFeatures">
+        <changes xsi:type="history:Set" element="EC.ecore#//Employee/number" featureName="name"
+            dataValue="number"/>
+        <changes xsi:type="history:Set" element="EC.ecore#//Employee/number" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases date="2009-02-28T16:33:48.521+0000" label="ec2">
+    <changes xsi:type="history:OperationChange">
+      <changes xsi:type="history:Set" element="EC.ecore#//Employee" featureName="name"
+          dataValue="Employee"/>
+      <operation name="rename">
+        <parameters name="element">
+          <referenceValue element="EC.ecore#//Employee"/>
+        </parameters>
+        <parameters name="name">
+          <dataValue>Employee</dataValue>
+        </parameters>
+      </operation>
+    </changes>
+    <changes xsi:type="history:Set" element="EC.ecore#/" featureName="nsURI" dataValue="ec2"/>
+  </releases>
+  <releases/>
+</history:History>

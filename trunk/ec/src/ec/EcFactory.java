@@ -26,13 +26,13 @@ public interface EcFactory extends EFactory {
 	EcFactory eINSTANCE = ec.impl.EcFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Person</em>'.
+	 * Returns a new object of class '<em>Employee</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Person</em>'.
+	 * @return a new object of class '<em>Employee</em>'.
 	 * @generated
 	 */
-	Person createPerson();
+	Employee createEmployee();
 
 	/**
 	 * Returns the package supported by this factory.

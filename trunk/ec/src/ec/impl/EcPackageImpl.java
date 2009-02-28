@@ -8,6 +8,7 @@ package ec.impl;
 
 import ec.EcFactory;
 import ec.EcPackage;
+import ec.Employee;
 import ec.Person;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -28,8 +29,7 @@ public class EcPackageImpl extends EPackageImpl implements EcPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass personEClass = null;
-
+	private EClass employeeEClass = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -103,8 +103,8 @@ public class EcPackageImpl extends EPackageImpl implements EcPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPerson() {
-		return personEClass;
+	public EClass getEmployee() {
+		return employeeEClass;
 	}
 
 	/**
@@ -112,8 +112,8 @@ public class EcPackageImpl extends EPackageImpl implements EcPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPerson_Name() {
-		return (EAttribute)personEClass.getEStructuralFeatures().get(0);
+	public EAttribute getEmployee_Name() {
+		return (EAttribute)employeeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -121,8 +121,8 @@ public class EcPackageImpl extends EPackageImpl implements EcPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPerson_AreaCode() {
-		return (EAttribute)personEClass.getEStructuralFeatures().get(1);
+	public EAttribute getEmployee_AreaCode() {
+		return (EAttribute)employeeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -130,8 +130,8 @@ public class EcPackageImpl extends EPackageImpl implements EcPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPerson_Number() {
-		return (EAttribute)personEClass.getEStructuralFeatures().get(2);
+	public EAttribute getEmployee_Number() {
+		return (EAttribute)employeeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -162,10 +162,10 @@ public class EcPackageImpl extends EPackageImpl implements EcPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		personEClass = createEClass(PERSON);
-		createEAttribute(personEClass, PERSON__NAME);
-		createEAttribute(personEClass, PERSON__AREA_CODE);
-		createEAttribute(personEClass, PERSON__NUMBER);
+		employeeEClass = createEClass(EMPLOYEE);
+		createEAttribute(employeeEClass, EMPLOYEE__NAME);
+		createEAttribute(employeeEClass, EMPLOYEE__AREA_CODE);
+		createEAttribute(employeeEClass, EMPLOYEE__NUMBER);
 	}
 
 	/**
@@ -198,10 +198,10 @@ public class EcPackageImpl extends EPackageImpl implements EcPackage {
 		// Add supertypes to classes
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPerson_Name(), ecorePackage.getEString(), "name", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPerson_AreaCode(), ecorePackage.getEString(), "areaCode", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPerson_Number(), ecorePackage.getEString(), "number", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(employeeEClass, Employee.class, "Employee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEmployee_Name(), ecorePackage.getEString(), "name", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEmployee_AreaCode(), ecorePackage.getEString(), "areaCode", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEmployee_Number(), ecorePackage.getEString(), "number", null, 0, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

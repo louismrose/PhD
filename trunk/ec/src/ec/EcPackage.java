@@ -40,7 +40,7 @@ public interface EcPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "ec";
+	String eNS_URI = "ec2";
 
 	/**
 	 * The package namespace name.
@@ -59,14 +59,14 @@ public interface EcPackage extends EPackage {
 	EcPackage eINSTANCE = ec.impl.EcPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link ec.impl.PersonImpl <em>Person</em>}' class.
+	 * The meta object id for the '{@link ec.impl.EmployeeImpl <em>Employee</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ec.impl.PersonImpl
-	 * @see ec.impl.EcPackageImpl#getPerson()
+	 * @see ec.impl.EmployeeImpl
+	 * @see ec.impl.EcPackageImpl#getEmployee()
 	 * @generated
 	 */
-	int PERSON = 0;
+	int EMPLOYEE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -75,7 +75,7 @@ public interface EcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__NAME = 0;
+	int EMPLOYEE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Area Code</b></em>' attribute.
@@ -84,7 +84,7 @@ public interface EcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__AREA_CODE = 1;
+	int EMPLOYEE__AREA_CODE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Number</b></em>' attribute.
@@ -93,60 +93,60 @@ public interface EcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__NUMBER = 2;
+	int EMPLOYEE__NUMBER = 2;
 
 	/**
-	 * The number of structural features of the '<em>Person</em>' class.
+	 * The number of structural features of the '<em>Employee</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = 3;
+	int EMPLOYEE_FEATURE_COUNT = 3;
 
 
 	/**
-	 * Returns the meta object for class '{@link ec.Person <em>Person</em>}'.
+	 * Returns the meta object for class '{@link ec.Employee <em>Employee</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Person</em>'.
-	 * @see ec.Person
+	 * @return the meta object for class '<em>Employee</em>'.
+	 * @see ec.Employee
 	 * @generated
 	 */
-	EClass getPerson();
+	EClass getEmployee();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ec.Person#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link ec.Employee#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see ec.Person#getName()
-	 * @see #getPerson()
+	 * @see ec.Employee#getName()
+	 * @see #getEmployee()
 	 * @generated
 	 */
-	EAttribute getPerson_Name();
+	EAttribute getEmployee_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ec.Person#getAreaCode <em>Area Code</em>}'.
+	 * Returns the meta object for the attribute '{@link ec.Employee#getAreaCode <em>Area Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Area Code</em>'.
-	 * @see ec.Person#getAreaCode()
-	 * @see #getPerson()
+	 * @see ec.Employee#getAreaCode()
+	 * @see #getEmployee()
 	 * @generated
 	 */
-	EAttribute getPerson_AreaCode();
+	EAttribute getEmployee_AreaCode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ec.Person#getNumber <em>Number</em>}'.
+	 * Returns the meta object for the attribute '{@link ec.Employee#getNumber <em>Number</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number</em>'.
-	 * @see ec.Person#getNumber()
-	 * @see #getPerson()
+	 * @see ec.Employee#getNumber()
+	 * @see #getEmployee()
 	 * @generated
 	 */
-	EAttribute getPerson_Number();
+	EAttribute getEmployee_Number();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -171,14 +171,14 @@ public interface EcPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link ec.impl.PersonImpl <em>Person</em>}' class.
+		 * The meta object literal for the '{@link ec.impl.EmployeeImpl <em>Employee</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ec.impl.PersonImpl
-		 * @see ec.impl.EcPackageImpl#getPerson()
+		 * @see ec.impl.EmployeeImpl
+		 * @see ec.impl.EcPackageImpl#getEmployee()
 		 * @generated
 		 */
-		EClass PERSON = eINSTANCE.getPerson();
+		EClass EMPLOYEE = eINSTANCE.getEmployee();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -186,7 +186,7 @@ public interface EcPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PERSON__NAME = eINSTANCE.getPerson_Name();
+		EAttribute EMPLOYEE__NAME = eINSTANCE.getEmployee_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Area Code</b></em>' attribute feature.
@@ -194,7 +194,7 @@ public interface EcPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PERSON__AREA_CODE = eINSTANCE.getPerson_AreaCode();
+		EAttribute EMPLOYEE__AREA_CODE = eINSTANCE.getEmployee_AreaCode();
 
 		/**
 		 * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
@@ -202,7 +202,7 @@ public interface EcPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PERSON__NUMBER = eINSTANCE.getPerson_Number();
+		EAttribute EMPLOYEE__NUMBER = eINSTANCE.getEmployee_Number();
 
 	}
 

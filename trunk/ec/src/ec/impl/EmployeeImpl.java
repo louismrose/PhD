@@ -7,7 +7,7 @@
 package ec.impl;
 
 import ec.EcPackage;
-import ec.Person;
+import ec.Employee;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -18,20 +18,20 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Person</b></em>'.
+ * An implementation of the model object '<em><b>Employee</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link ec.impl.PersonImpl#getName <em>Name</em>}</li>
- *   <li>{@link ec.impl.PersonImpl#getAreaCode <em>Area Code</em>}</li>
- *   <li>{@link ec.impl.PersonImpl#getNumber <em>Number</em>}</li>
+ *   <li>{@link ec.impl.EmployeeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ec.impl.EmployeeImpl#getAreaCode <em>Area Code</em>}</li>
+ *   <li>{@link ec.impl.EmployeeImpl#getNumber <em>Number</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class PersonImpl extends EObjectImpl implements Person {
+public class EmployeeImpl extends EObjectImpl implements Employee {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -97,7 +97,7 @@ public class PersonImpl extends EObjectImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PersonImpl() {
+	protected EmployeeImpl() {
 		super();
 	}
 
@@ -108,7 +108,7 @@ public class PersonImpl extends EObjectImpl implements Person {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EcPackage.Literals.PERSON;
+		return EcPackage.Literals.EMPLOYEE;
 	}
 
 	/**
@@ -129,7 +129,7 @@ public class PersonImpl extends EObjectImpl implements Person {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EcPackage.PERSON__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, EcPackage.EMPLOYEE__NAME, oldName, name));
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class PersonImpl extends EObjectImpl implements Person {
 		String oldAreaCode = areaCode;
 		areaCode = newAreaCode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EcPackage.PERSON__AREA_CODE, oldAreaCode, areaCode));
+			eNotify(new ENotificationImpl(this, Notification.SET, EcPackage.EMPLOYEE__AREA_CODE, oldAreaCode, areaCode));
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class PersonImpl extends EObjectImpl implements Person {
 		String oldNumber = number;
 		number = newNumber;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EcPackage.PERSON__NUMBER, oldNumber, number));
+			eNotify(new ENotificationImpl(this, Notification.SET, EcPackage.EMPLOYEE__NUMBER, oldNumber, number));
 	}
 
 	/**
@@ -182,11 +182,11 @@ public class PersonImpl extends EObjectImpl implements Person {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EcPackage.PERSON__NAME:
+			case EcPackage.EMPLOYEE__NAME:
 				return getName();
-			case EcPackage.PERSON__AREA_CODE:
+			case EcPackage.EMPLOYEE__AREA_CODE:
 				return getAreaCode();
-			case EcPackage.PERSON__NUMBER:
+			case EcPackage.EMPLOYEE__NUMBER:
 				return getNumber();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,13 +200,13 @@ public class PersonImpl extends EObjectImpl implements Person {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EcPackage.PERSON__NAME:
+			case EcPackage.EMPLOYEE__NAME:
 				setName((String)newValue);
 				return;
-			case EcPackage.PERSON__AREA_CODE:
+			case EcPackage.EMPLOYEE__AREA_CODE:
 				setAreaCode((String)newValue);
 				return;
-			case EcPackage.PERSON__NUMBER:
+			case EcPackage.EMPLOYEE__NUMBER:
 				setNumber((String)newValue);
 				return;
 		}
@@ -221,13 +221,13 @@ public class PersonImpl extends EObjectImpl implements Person {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EcPackage.PERSON__NAME:
+			case EcPackage.EMPLOYEE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EcPackage.PERSON__AREA_CODE:
+			case EcPackage.EMPLOYEE__AREA_CODE:
 				setAreaCode(AREA_CODE_EDEFAULT);
 				return;
-			case EcPackage.PERSON__NUMBER:
+			case EcPackage.EMPLOYEE__NUMBER:
 				setNumber(NUMBER_EDEFAULT);
 				return;
 		}
@@ -242,11 +242,11 @@ public class PersonImpl extends EObjectImpl implements Person {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EcPackage.PERSON__NAME:
+			case EcPackage.EMPLOYEE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EcPackage.PERSON__AREA_CODE:
+			case EcPackage.EMPLOYEE__AREA_CODE:
 				return AREA_CODE_EDEFAULT == null ? areaCode != null : !AREA_CODE_EDEFAULT.equals(areaCode);
-			case EcPackage.PERSON__NUMBER:
+			case EcPackage.EMPLOYEE__NUMBER:
 				return NUMBER_EDEFAULT == null ? number != null : !NUMBER_EDEFAULT.equals(number);
 		}
 		return super.eIsSet(featureID);
@@ -272,4 +272,4 @@ public class PersonImpl extends EObjectImpl implements Person {
 		return result.toString();
 	}
 
-} //PersonImpl
+} //EmployeeImpl
