@@ -1,0 +1,189 @@
+\documentclass[a4paper]{article}
+
+\usepackage{listings}
+
+\begin{document}
+%- Use experience on existing projects to derive requirements
+%- Use example data to analyse existing co-evolution tools
+%- Use drawbacks of existing tools to derive requirements
+%- Use interviews to derive requirements
+
+\abstract{I have defined requirements for managing co-evolution in the context of MDE. My requirements definition process involved first defining high-level requirements by reviewing co-evolution literature and from my experiences with metamodelling. Then, I devised six experiments to further investigate these high-level requirements. Each experiment was run using two co-evolution tools. The merits and drawbacks of each tool were noted, and used to derive requirements. I will identify further requirements by interviewing modelling experts at ETAPS.}
+
+
+\section{Metamodelling Experience}
+
+Existing literature focuses on automating the migration of large numbers of models. When collaborating with Conmy on FPTC, we made changes to a metamodel that caused it to become inconsistent with all of its models. We had a large number of inconsistent models that needed to be migrated. Migrating each model by hand would have been time-consuming and error-prone.
+
+\emph{\textbf{R1}: Structures and processes for managing inconsistency must enable the automated migration of (a large number of) inconsistent models.}
+
+Instead of manual migration, I constructed a model-to-model transformation to perform automated migration. I discovered some drawbacks to this approach. Firstly, I had to manually determine the cause of inconsistencies, and then formulate and codify the entire transformation, which was time consuming. Secondly, the language lacked facilities for encoding this kind of transformation: for example, explicit copying of data occurred often and was tedious to write.
+
+To aid the formulation of migration strategies:
+
+\emph{\textbf{R2}: Structures and processes for managing inconsistency must identify and report inconsistencies.}
+
+\emph{\textbf{R3}: Structures and processes for managing inconsistency must provide assistance in formulating migration strategies.}
+
+\emph{\textbf{R4}: The language used for encoding migration strategies must provide task-specific features (e.g. constructs for distinguishing between existing and newly created model elements).}
+
+Not all of the inconsistent models were mine - Conmy and Xiaocheng Ge also had inconsistent models. Migration was not performed by one person for all models; each model owner needed the ability to migrate their own models. Gruschko also notes the need for this kind of separation.
+
+\emph{\textbf{R5}: Migration strategies must be distributable. (E4, E5)}
+
+I have collaborated with Barber and Sampson to produce metamodels of their domains. Metamodel development was iterative and incremental. Each iteration comprised two stages: changing the metamodel and validating the change. The latter involved instantiating the metamodel, producing one or two models, to ensure that the metamodel was representative of the domain. Changing the metamodel often caused the models used in the previous iteration to become inconsistent.
+
+\emph{\textbf{R6}: Structures and processes for managing inconsistency must enable the automated migration of inconsistent models, even when the number of models is small. (E3)}
+
+
+\section{Experimentation}
+
+To further investigate the above requirements, I experimented with two existing tools for managing co-evolution and performing automated model migration, COPE and Cicchetti's (unnamed) tool. I devised six experiments; each related to the high-level requirements defined in the previous section. I used the data identified in my progress report during the experiments. (Namely, the FPTC metamodel, the xText metamodel, metamodels derived from OO refactorings, and the metamodels from collaborations with Sampson and Barber).
+
+\subsection{E1, E2: Producing migration strategies}
+
+Experiments 1 and 2 (E1 and E2) focused on detecting, generating and codifying migration strategies. E1 and E2 related to high-level requirements R2, R3 and R4.
+
+\subsubsection{Identifying and reporting inconsistencies}
+
+\emph{\textbf{R2}: Structures and processes for managing inconsistency must identify and report inconsistencies.}
+
+Cichetti's tool does not identify or report inconsistencies. COPE enforces consistency after migration. Consequently, COPE migration strategies must leave models in a consistent state. This seems to be an unnecessary restriction; a migration strategy might still be useful even if it only reduces inconsistency. If consistency is not achieved, an error is reported. However, the error messages are unclear because they are written in terms of the metamodelling language, rather than in terms of the domain being modelled.
+
+\emph{\textbf{R1.1}: The automated migration of inconsistent models need not leave all models in a consistent state.}
+
+\emph{\textbf{R2.1}: Inconsistencies must be reported in a clear and understandable way, using concepts from the metamodel and model.}
+
+
+\subsubsection{Assistance in formulating migration strategies}
+
+\emph{\textbf{R3}: Structures and processes for managing inconsistency must provide assistance in formulating migration strategies.}
+
+Both tools provided facilities for reducing the effort required to formulate migration strategies. Herrmannsd\"{o}rfer et al. identify two types of migration strategy: metamodel-independent and metamodel-specific.
+
+The former is reusable and can be applied to instances of any metamodel, while the latter is specific to a single metamodel. Both COPE and Cicchetti provide several metamodel-independent migration strategies. When a metamodel change had a corresponding metamodel-independent migration strategy, I found using the metamodel-independent migration strategies greatly reduced the effort needed to migrate models. However, it was often difficult to ascertain the effects of the metamodel-independent migration strategies operators. Often, I had to guess the effects, and frequently, they were not what I expected.
+
+\emph{\textbf{R3.1}: Metamodel-independent migration strategies must be re-usable.}
+
+\emph{\textbf{R3.2}: Metamodel-independent migration strategies must include a clear description of their effects.}
+
+Both tools did not include migration strategies for some of the metamodel-independent changes that were present in my example data. I was able to add migration strategies to both tools by extension. COPE provides an Eclipse extension point for contributing new metamodel-independent co-evolution operators. Creating a plug-in is a non-trivial activity. Authoring metamodel-independent changes necessarily requires some knowledge of the metametamodel (e.g. MOF, Ecore).
+
+\emph{\textbf{R3.3}: Tools for automating migration must allow new metamodel-independent migration strategies to be added.}
+
+\emph{\textbf{R3.3.1}: Adding a new migration strategy must not require knowledge of the underlying platform.}
+
+
+\subsubsection{Task-specific features}
+
+\emph{\textbf{R4}: The language used for encoding migration strategies must provide task-specific features (e.g. homogeneous transformation, constructs for distinguishing between existing and newly created model elements).}
+
+I investigated COPE to determine whether their model migration language offered any advantages over a model-to-model transformation language. (Cicchetti uses ATL, which is a model-to-model transformation language). COPE migration strategies are authored in Groovy (a dynamic object-oriented programming language that compiles to Java Virtual Machine bytecode). COPE migration strategies are executed using a homogenous transformation engine, which reduced the amount of migration strategy code that I needed to write when compared to using a heterogeneous transformation engine (e.g. Epsilon Transformation Language).
+
+Another approach is to automatically generate the boilerplate code seen when using a heterogeneous transformation engine to perform model migration. Cicchetti's tool uses higher-order transformations to this end. I dislike this approach because it ties the co-evolution tool to a specific model-to-model transformation language. Moreover, it requires users of the co-evolution tool to be familiar with the syntax of the underlying model-to-model transformation language.
+
+\emph{\textbf{R4.1}: Migration strategies must be specified for a homogenous transformation engine.}
+
+Homogenous transformations can only be used when transforming between models that have the same metamodel. But during co-evolution, we wish to migrate from one version of a metamodel to another; the original and adapted metamodels are different. As I identified in my presentation at MoDELS 08, the solution is to use a metamodel-independent syntax to represent the models that we wish to migrate. First, we (heterogeneously) transform from an instance of the original metamodel to an instance of the metamodel-independent syntax. Next, we (homogeneously) transform from an inconsistent to a consistent model in the metamodel-independent syntax. Finally, we (heterogeneously) transform from an instance of the metamodel-independent syntax to an instance of the adapted metamodel. COPE uses exactly this approach.
+
+\emph{\textbf{R4.1.1}: Migration strategies must manipulate models represented in a metamodel-independent syntax.}
+
+
+I also considered the readability and conciseness of the migration strategies that I wrote.
+
+get(), set(), unset() in COPE migration strategies are used to manipulate slots (which are used to store values in objects; each object comprises zero or more slots, and each slot is associated with exactly one attribute in the metamodel). Using methods to represent get, set and unset detracts from readability. Worse still, the arguments to these methods are fully qualified metamodel elements. Migration strategies could be more concise if get, set and unset were implemented as primitive (infix) operators and used arguments relative to the current object (e.g. compare Listing \ref{lst:cope} with Listing \ref{lst:cope-alt}).
+
+\begin{lstlisting}[caption=Get and unset in COPE migration strategies., label=lst:cope]
+block.get(fptc.Block.connections)
+  .addAll(anotherBlock.unset(fptc.Block.connections))
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Alternative to COPE get and unset., label=lst:cope-alt]
+// Note the use of ! to denote unsetting a value
+block.connections.addAll(anotherBlock!connections)
+\end{lstlisting}
+
+On two occasions when using COPE, I had to implement a clone method for (metamodel-independent) objects.
+
+\emph{\textbf{R4.2}: A migration strategy language must include operators for manipulating metamodel-independent concepts, e.g. clone for objects, and get/set/unset for slots.}
+
+
+I found that some patterns reoccurred in several COPE migration strategies. I re-used them by creating Groovy operations and using the Groovy import mechanism, reducing duplication. COPE doesn’t support functions as arguments to (or subtyping of) migration strategies. The Split Class change from the PO metamodel could be generalised and re-used if it did.
+
+\emph{\textbf{R4.3}: A migration strategy language must provide constructs that enable re-use of duplicated code.}
+
+
+
+
+Extensibility
+
+ There are no mechanisms for throwing an error or prompting the user for input.  (However, this may conflict with the readability/learnability of the language).
+
+I feel that migration strategies could have more structure than they do in COPE. Consider the following migration strategy for Extract Subclass:
+
+// model migration
+  for(contextInstance in contextClass.allInstances) {
+    for(feature in features) {
+      if (contextInstance.isSet(feature)) {
+        // migrate to subclass
+        contextInstance.migrate(subclass)
+        break;
+      }
+    }
+  }
+In this case, only a subset of all instances (of contextClass) need to be migrated. A guard for the migration might be useful:
+
+
+  migrate each instance i of contextClass
+    when
+      features.exists(feature | i.isSet(feature))
+    do
+      contextInstance.migrate(subclass)
+    when
+      ...
+    do
+      ...
+   end
+It wasn’t possible to implement a metamodel-independent migration strategy for Change Containment to Reference, as COPE does not support metamodel-independent migration strategies that require model elements as arguments. Only metamodel elements may be passed as arguments to metamodel-independent migration strategies.
+
+Debugging metamodel-independent migration strategies was difficult. Firstly, the errors were poorly explained (e.g. ‘The validContainment constraint has been violated for ‘an instance of Port’,’ which meant that a port was contained in more than one parent objects, when it should have been contained in exactly one). Secondly, I had to restart workbenches every time I changed a migration strategy, which greatly increased debugging time.
+
+
+COPE v1.3.5
+Assistance
+For metamodel-specific changes, COPE can only generate the metamodel adaptation. No assistance is given for generating the model migration strategy. COPE provides a means for identifying any inconsistencies introduced by metamodel adaptation, but this didn’t work in the build I tried.
+
+Customisation
+COPE provides excellent support for customising migration strategies. Migration strategies are written in Groovy/Java, and consequently the full power of those languages are available when specifying migration strategies.
+
+Expressiveness
+The use of get(), set(), unset(), etc in COPE migration strategies detracts from readability. Furthermore, the arguments to these methods are fully qualified metamodel elements. This seems unnecessary.
+
+// COPE
+block.get(fptc.Block.connections).
+  addAll(anotherBlock.unset(fptc.Block.connections))
+
+// I'd prefer something like:
+block.connections.addAll(anotherBlock!connections)
+// Note the use of ! to denote unsetting a value
+COPE provides no built-in mechanism for indicating that some instances could not be migrated. Worse still, models must be consistent after migration has executed. Therefore, those instances that cannot be migrated cannot remain inconsistent (i.e. most often they have to be deleted).
+
+I found testing and debugging migration strategies particularly difficult with COPE. The migration strategies are compiled, so they cannot be tweaked and ran again. (The workspace containing models must be restarted). As with metamodel-independent changes, errors could not be reported.
+
+Groovy’s closures provided expressive and concise alternatives for iterating over loops, and for performing existential and universal queries on collections.
+
+Re-use
+COPE does not provide any tool support for promoting a metamodel-specific change to a metamodel-independent change. In COPE, metamodel-independent changes are encoded in a very similar way to metamodel-specific changes, so in some cases code can be copy and pasted. Some variables must then be introduced in place of references to elements of the specific metamodel.
+
+Cicchetti
+Assistance
+Cicchetti provides no help for generating a migration strategy. A metamodel difference model can be produced following metamodel adaptation, which provides a different view of the adaptation.
+
+Re-use
+Writing a M2M transformation for use as a metamodel-specific migration strategy informs the process of writing a M2M transformation that generates a metamodel-specific migration strategy from a metamodel-difference model.
+
+
+
+COPE / Cicchetti's tool only provide assistance for managing consistency once a migration strategy is known. Assuming that a migration strategy can be detected or encoded automatically, either tool can be used to migrate models with little guidance from the user. I found that it was not always possible to automatically detect or encode a migration strategy. In those cases, the effort required to automate migration using COPE / Cicchetti's tool increased dramatically, as discussed below.
+
+\end{document}
