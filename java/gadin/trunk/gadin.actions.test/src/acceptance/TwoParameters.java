@@ -13,8 +13,7 @@ public class TwoParameters extends AcceptanceTest {
 		               "    c - Character"    + '\n' +
 		               "    d - Character"    + '\n' +
 		               "  then "              + '\n' +
-		               "    " +
-		               "c likes d");
+		               "    c likes d");
                                          
 		model.setVariable("doc",    "Document.all.first");
 		model.setVariable("action", "doc.actions.first");
