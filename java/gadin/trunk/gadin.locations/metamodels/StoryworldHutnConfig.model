@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<hutnConfig:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hutnConfig="http://www.eclipse.org/gmt/epsilon/hutnConfig" xmi:id="_u7qxMMeSEd2uVvHi7x7xjw">
+  <rules xsi:type="hutnConfig:IdentifierRule" xmi:id="_wRacIMeSEd2uVvHi7x7xjw" classifier="Skill" attribute="name"/>
+  <rules xsi:type="hutnConfig:IdentifierRule" xmi:id="_xkcKQMeSEd2uVvHi7x7xjw" classifier="Location" attribute="name"/>
+</hutnConfig:Configuration>

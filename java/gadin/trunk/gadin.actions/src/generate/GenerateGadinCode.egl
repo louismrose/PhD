@@ -1,0 +1,5 @@
+[% for (action in Document.all.first.actions) {
+	var t := TemplateFactory.load('Action.egl');
+	t.populate('a', action);%]
+[%=t.process()%]
+[% } %]

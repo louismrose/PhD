@@ -1,0 +1,204 @@
+Examples:
+
+fancy
+	involves
+		c - Character
+		d - Character
+	when
+		d is attractive
+		c is not attractive
+		d fancies c
+	or when
+		c is not attractive
+		c is generous
+	or when
+		d is a bad boy
+	then
+		c fancies d
+		
+mutual fancy
+	involves
+		c - Character
+		d - Character
+	when
+		[c.attractiveness == d.attractiveness]
+		c is flirting with d
+		d is flirting with c
+		c is at p
+		d is at p
+	or when
+		c is drunk
+		d is drunk
+		c is at p
+		d is at p
+	then
+		c fancies d
+		d fancies c
+
+
+flirt
+	involves
+		c - Character
+		d - Character
+	when
+		c is at p
+		d is at p
+	then
+		c is flirting with d
+
+go out
+	involves
+		c - Character
+		d - Character
+	when
+		c is at p
+		d is at p
+		c fancies d
+		d fancies c
+	then
+		c is partners with d
+
+encourage
+	involves
+		c - Character
+		d - Character
+		p - Principle
+	when
+		d likes c
+		c doesn't hold p
+		d holds p
+		c isn't encouraging d p
+		c hasn't dealt with encouraging d p
+	then
+		c encouraging d p
+
+unfancy
+	involves
+		c - Character
+		d - Character
+	then
+		c doesn't fancy d
+
+like
+	involves
+		c - Character
+		d - Character
+	then 
+		c likes d
+
+unlike
+	involves
+		c - Character
+		d - Character
+	then
+		c doesn't like d
+
+dump
+	involves
+		c - Character
+		d - Character
+	when
+		c isn't engaged to d
+		c isn't married to d
+		c doesn't fancy d
+	then
+		c isn't partners with d
+
+pregnant
+	involves
+		c - Character
+		d - Character
+	when
+		c is female
+		d is male
+		c isn't pregnant
+		c is partners with d
+	then
+		c is pregnant with d
+
+disapproves
+	involves
+		c - Character
+		d - Character
+		e - Character
+	then
+		c disapproves of d and e
+
+plan wedding
+	involves
+		c - Character
+		d - Character
+	when
+		c is partners with d
+		c is engaged to d
+		c isn't married to d
+	then
+		c is planning wedding with d
+
+drunk
+	involves
+		c - Character
+	when
+		c is at p
+		p serves drinks
+		c isn't pregnant
+	then
+		c is drunk
+
+tells
+	involves
+		c - Character
+		d - Character
+		e - Character
+	when
+		c knows i e
+		d doesn't know i e
+	then
+		d knows i e
+		
+move
+	involves
+		c - Character
+	when
+		c didn't move last time
+		c isn't at p
+	effects
+		c is at p
+	side effects
+		c isn't flirting with anyone
+		anyone isn't flirting with c	
+ 
+unholds
+	involves	
+		c - Character
+		p - Principle
+	then
+		c doesn't hold p
+
+persuades
+	involves
+		c - Character
+		d - Character
+		e - Character
+		f - Character
+	when
+		d likes c
+		c disapproves of e and f
+		e is partners with f
+	then
+		d disapproves of e and f
+
+make up
+	involves
+		c - Character
+		f - Character
+	when
+		anyone knows affair d
+		anyone knows affair e
+		f is partners d
+		c doesn't know affair d
+	effects
+		c knows affair d
+		 
+		
+		

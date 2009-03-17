@@ -1,0 +1,73 @@
+gunit Actions;
+@header{package parser;}
+
+//document:
+  // Empty document
+  //"" OK
+  
+action:
+   // action can have parameters
+  "flirt involves c - Character d - Character then c flirts d" -> "(flirt (PARAMETERS c d) (EFFECTS (flirts c d)))"
+  
+  // action can have preconditions
+  "flirt when c at p d at p then c flirts d" -> "(flirt (PRECONDITIONS (at c p) (at d p)) (EFFECTS (flirts c d)))"
+  
+  // action can have several precondition blocks
+  "flirt when c at p d at p or when c fancies d d fancies c then c flirts d"
+    -> "(flirt (PRECONDITIONS (at c p) (at d p)) (PRECONDITIONS (fancies c d) (fancies d c)) (EFFECTS (flirts c d)))"
+  
+  
+  // but doesn't have to have parameters or preconditions
+  "flirt then c flirts d" -> "(flirt (EFFECTS (flirts c d)))"
+  
+   // action identifier can contain underscored
+  "mutual_fancy then c flirts d" -> "(mutual_fancy (EFFECTS (flirts c d)))"
+  
+  // must have effects
+  "flirt" FAIL
+
+parameters:
+  // must have at least one parameter
+  "involves" FAIL
+  
+  "involves c - Character" -> "(PARAMETERS c)"
+  
+  // can have many parameters
+  "involves c - Character d - Character" -> "(PARAMETERS c d)"
+
+parameter:
+  // rewrite should remove dash and type
+  "c - Character" -> "c"
+  
+preconditions:
+  // must have at least one proposition
+  "when" FAIL
+  
+  "when c at p" -> "(PRECONDITIONS (at c p))"
+  
+  // can have many propositions
+  "when c at p d at p" -> "(PRECONDITIONS (at c p) (at d p))"
+  
+
+effects:
+  // must have at least one effect
+  "then" FAIL
+  
+  "then c flirts d" -> "(EFFECTS (flirts c d))"
+  
+  // can have many effects
+  "then c flirts d d flirts c" -> "(EFFECTS (flirts c d) (flirts d c))"
+  
+
+proposition:
+  // rewrite should produce prefix notation
+  "c flirts d" -> "(flirts c d)"
+  
+  // rewrite should disregard with
+  "c flirts with d" -> "(flirts c d)"
+  
+  // rewrite should disregard is
+  "c is at d" -> "(at c d)"
+  
+  // can be negative
+  "c doesn't fancy d" -> "(!fancy c d)"

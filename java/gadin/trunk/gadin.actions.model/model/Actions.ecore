@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="actions"
+    nsURI="actions" nsPrefix="actions">
+  <eClassifiers xsi:type="ecore:EClass" name="Document">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
+        eType="#//Action" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterisedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//NamedElement #//ParameterisedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preconditionSets" lowerBound="1"
+        upperBound="-1" eType="#//PreconditionSet" containment="true" eOpposite="#//PreconditionSet/action"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicabilityConditions"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="effects" lowerBound="1"
+        upperBound="-1" eType="#//Proposition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PreconditionSet">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+        eType="#//Action" eOpposite="#//Action/preconditionSets"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preconditions" lowerBound="1"
+        upperBound="-1" eType="#//Proposition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Proposition" eSuperTypes="#//ParameterisedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//PropositionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="positive" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropositionType" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reflexive" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exclusive" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CharacterParameter" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LocationParameter" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrincipleParameter" eSuperTypes="#//Parameter"/>
+</ecore:EPackage>

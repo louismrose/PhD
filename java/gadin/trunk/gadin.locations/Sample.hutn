@@ -1,0 +1,22 @@
+@Spec {
+	metamodel "storyworld" {
+		nsUri: "storyworld"
+		configFile: "metamodels/StoryworldHutnConfig.model"
+	}
+}
+
+storyworld {
+	Skill "swim" {}
+	Skill "fly" {}
+	
+	Location "Island" {
+		entryRequirement: Skill "swim"
+	}
+	
+	Location "Lighthouse" {
+	}
+	
+	Location "House" {
+		entryRequirement: Skill "fly"
+	}
+}

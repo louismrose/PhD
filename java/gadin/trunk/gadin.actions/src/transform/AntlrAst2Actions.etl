@@ -1,0 +1,79 @@
+pre {
+	var doc := Actions!Document.all.first;
+	var propositionTypes := new Set;
+}
+
+rule ActionNode2Action
+	transform n : ActionsAntlrAst!ActionNode
+	to a : Actions!Action {
+	
+	a.name := n.text;
+	
+	doc.actions.add(a);
+
+	for (parameterNode in n.children.select(c:ActionsAntlrAst!ParametersNode|true)) {
+		a.parameters.addAll(parameterNode.children.equivalent());
+	}
+
+	for (propositionNode in n.children.select(c:ActionsAntlrAst!PreconditionsNode|true)) {
+		var preconditionSet := new Actions!PreconditionSet;
+		preconditionSet.preconditions.addAll(propositionNode.children.equivalent());
+		a.preconditionSets.add(preconditionSet);
+	}
+	
+	-- Ensure that action has at least one precondition set
+	if (a.preconditionSets.isEmpty()) {
+		a.preconditionSets.add(new Actions!PreconditionSet);
+	}
+
+	for (propositionNode in n.children.select(c:ActionsAntlrAst!EffectsNode|true)) {
+		a.effects.addAll(propositionNode.children.equivalent());
+	}
+}
+
+@lazy
+rule CharacterParameterNode2CharacterParameter
+	transform n : ActionsAntlrAst!CharacterParameterNode
+	to p : Actions!CharacterParameter {
+	
+	p.name := n.text;
+}
+
+@lazy
+rule PropositionNode2Proposition
+	transform n : ActionsAntlrAst!PropositionNode
+	to p : Actions!Proposition {
+	
+	var type := n.text;
+	
+	if (n.text.startsWith('!')) {
+		p.positive := false;
+		type := type.substring(1);
+	}
+	
+	p.type := getPropositionType(type);
+
+	p.parameters.addAll(n.children.equivalent());
+}
+
+@lazy
+rule NameNode2Parameter
+	transform n : ActionsAntlrAst!NameNode
+	to p : Actions!CharacterParameter {
+	
+	p.name := n.text;
+}
+
+operation getPropositionType(name : String) {
+	if (propositionTypes.exists(p|p.name = name)) {
+		return propositionTypes.selectOne(p|p.name = name);
+	
+	} else {
+		var t := new Actions!PropositionType;
+		t.name := name;
+		
+		propositionTypes.add(t);
+		
+		return t;
+	}
+}

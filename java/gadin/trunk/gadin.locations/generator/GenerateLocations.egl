@@ -1,0 +1,13 @@
+int loccount = 0; 
+
+[% for (location in Location.all) { %]
+	location [%=location.name%] = new location();
+	[%=location.name%].locname = "[%=location.name%]";
+	[% if (location.entryRequirement.isDefined()) { %]
+		[%=location.name%].skill = Skills.instances.get("[%=location.entryRequirement.name%]");
+	[% } %]
+	[%=location.name%].locref = loccount + 1;
+	allLocations[loccount] = [%=location.name%];
+	loccount = loccount + 1; 
+	
+[% } %]

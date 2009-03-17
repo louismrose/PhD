@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="actionsAntlrAst"
+    nsURI="actionsAntlrAst" nsPrefix="actionsAntlrAst">
+  <eClassifiers xsi:type="ecore:EClass" name="ActionNode" eSuperTypes="AntlrAst.ecore#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EffectsNode" eSuperTypes="AntlrAst.ecore#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PropositionNode" eSuperTypes="AntlrAst.ecore#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NameNode" eSuperTypes="AntlrAst.ecore#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParametersNode" eSuperTypes="AntlrAst.ecore#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CharacterParameterNode" eSuperTypes="AntlrAst.ecore#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PreconditionsNode" eSuperTypes="AntlrAst.ecore#//Node"/>
+</ecore:EPackage>

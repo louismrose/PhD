@@ -1,0 +1,19 @@
+@namespace(uri="storyworld", prefix="storyworld")
+package storyworld;
+
+abstract class NamedElement {
+  attr String[1] name;
+}
+
+class Location extends NamedElement {
+  ref Skill entryRequirement;
+}
+
+class Skill extends NamedElement {
+}
+
+class Storyworld {
+  val Location[*] locations;
+  val Skill[*] skills;
+}
+
