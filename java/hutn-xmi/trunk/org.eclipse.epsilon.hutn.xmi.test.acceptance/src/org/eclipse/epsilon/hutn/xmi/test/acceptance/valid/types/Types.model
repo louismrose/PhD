@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<families:Family xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:families="families" xmi:id="_KULQcROwEd6ysY9kXe1lIA" name="The Smiths" numberOfChildren="2" nuclear="true" averageAge="25.6">
+  <address>10 Main Street</address>
+  <address>123 Heslington Road</address>
+</families:Family>
