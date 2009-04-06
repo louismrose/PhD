@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2008 The University of York.
+ * Copyright (c) 2009 The University of York.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -11,16 +11,20 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.transform;
+package org.eclipse.epsilon.hutn.xmi.parser;
 
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.epsilon.hutn.model.hutn.Slot;
+import org.eclipse.emf.ecore.xmi.XMIResource;
+import org.eclipse.epsilon.hutn.model.hutn.Spec;
 
-public class AbstractAttributeValueTest {
+public class XmiParser {
 
-	protected static Slot<?> slot;
-	
-	protected static void attributeValueTest(Object object, EAttribute feature) {
-		slot = new AttributeValue2AttributeSlot(object, feature).transform();
+	public XmiParser(XMIResource resource) {
+		// TODO Auto-generated constructor stub
 	}
+
+	public Spec parse() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

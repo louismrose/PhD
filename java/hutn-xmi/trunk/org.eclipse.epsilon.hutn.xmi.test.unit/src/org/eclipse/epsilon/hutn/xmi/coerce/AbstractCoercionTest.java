@@ -11,14 +11,14 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.transform;
+package org.eclipse.epsilon.hutn.xmi.coerce;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.epsilon.hutn.xmi.coerce.ValueCoercer;
-import org.eclipse.epsilon.hutn.xmi.transform.util.EmfUtil;
+import org.eclipse.epsilon.hutn.xmi.util.EmfUtil;
 
 public abstract class AbstractCoercionTest {
 

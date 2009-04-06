@@ -17,7 +17,6 @@ import java.util.Arrays;
 
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.epsilon.hutn.xmi.transform.AbstractCoercionTest;
 import org.junit.Test;
 
 public class CoerceList extends AbstractCoercionTest {

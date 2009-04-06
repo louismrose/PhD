@@ -10,5 +10,4 @@ Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.epsilon.hutn.unparser
 Export-Package: org.eclipse.epsilon.hutn.xmi,
  org.eclipse.epsilon.hutn.xmi.coerce,
- org.eclipse.epsilon.hutn.xmi.transform,
- org.eclipse.epsilon.hutn.xmi.transform.util
+ org.eclipse.epsilon.hutn.xmi.util

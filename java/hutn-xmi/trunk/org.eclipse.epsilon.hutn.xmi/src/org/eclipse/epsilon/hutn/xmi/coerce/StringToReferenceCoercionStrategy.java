@@ -16,7 +16,7 @@ package org.eclipse.epsilon.hutn.xmi.coerce;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.epsilon.hutn.xmi.transform.util.EListUtil;
+import org.eclipse.epsilon.hutn.xmi.util.EListUtil;
 
 class StringToReferenceCoercionStrategy extends AbstractCoercionStrategy<String> {
 	

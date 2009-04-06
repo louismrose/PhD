@@ -15,7 +15,7 @@ package org.eclipse.epsilon.hutn.xmi.coerce;
 
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.epsilon.hutn.xmi.transform.util.EListUtil;
+import org.eclipse.epsilon.hutn.xmi.util.EListUtil;
 
 @SuppressWarnings("unchecked")
 class EListCoercionStrategy extends AbstractCoercionStrategy<EList> {

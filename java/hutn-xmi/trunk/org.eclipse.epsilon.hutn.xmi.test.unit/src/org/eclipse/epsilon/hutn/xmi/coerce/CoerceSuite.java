@@ -11,26 +11,21 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.transform;
+package org.eclipse.epsilon.hutn.xmi.coerce;
 
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
 
-import org.eclipse.epsilon.hutn.xmi.coerce.TransformCoerceSuite;
-import org.eclipse.epsilon.hutn.xmi.transform.eObject.TransformEObjectSuite;
-import org.eclipse.epsilon.hutn.xmi.transform.resource.TransformResourceSuite;
-import org.eclipse.epsilon.hutn.xmi.transform.value.attribute.TransformAttributeValueSuite;
-import org.eclipse.epsilon.hutn.xmi.transform.value.reference.TransformReferenceValueSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({TransformResourceSuite.class, TransformEObjectSuite.class,
-               TransformAttributeValueSuite.class, TransformReferenceValueSuite.class,
-               TransformCoerceSuite.class})
-public class TransformSuite {
+@SuiteClasses({CoerceStringToInteger.class, CoerceStringToFloat.class,
+               CoerceStringToBoolean.class, CoerceList.class,
+               CoerceStringToEObject.class})
+public class CoerceSuite {
 	public static Test suite() {
-		return new JUnit4TestAdapter(TransformSuite.class);
+		return new JUnit4TestAdapter(CoerceSuite.class);
 	}
 }

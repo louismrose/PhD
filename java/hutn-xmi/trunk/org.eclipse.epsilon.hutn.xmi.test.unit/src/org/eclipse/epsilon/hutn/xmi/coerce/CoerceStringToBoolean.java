@@ -13,7 +13,6 @@
  */
 package org.eclipse.epsilon.hutn.xmi.coerce;
 
-import org.eclipse.epsilon.hutn.xmi.transform.AbstractCoercionTest;
 import org.junit.Test;
 
 public class CoerceStringToBoolean extends AbstractCoercionTest {

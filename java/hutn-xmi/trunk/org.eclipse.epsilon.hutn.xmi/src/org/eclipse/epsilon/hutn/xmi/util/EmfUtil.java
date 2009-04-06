@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.transform.util;
+package org.eclipse.epsilon.hutn.xmi.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

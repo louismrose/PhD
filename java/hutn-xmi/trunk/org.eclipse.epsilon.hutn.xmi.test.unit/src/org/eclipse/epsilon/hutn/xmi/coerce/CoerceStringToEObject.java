@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 import org.eclipse.epsilon.hutn.test.model.families.Family;
 import org.eclipse.epsilon.hutn.test.model.families.impl.FamilyImpl;
-import org.eclipse.epsilon.hutn.xmi.transform.AbstractCoercionTest;
 import org.junit.Test;
 
 public class CoerceStringToEObject extends AbstractCoercionTest {
