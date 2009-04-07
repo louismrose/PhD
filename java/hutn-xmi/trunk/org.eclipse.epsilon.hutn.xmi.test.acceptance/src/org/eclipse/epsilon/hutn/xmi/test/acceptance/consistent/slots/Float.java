@@ -11,18 +11,22 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.types;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.slots;
 
-
-public class Float extends AbstractTypeTest {
+public class Float extends AbstractSlotTest {
 	
 	@Override
-	protected java.lang.String getFeature() {
+	protected java.lang.String getXmi() {
+		return "averageAge=\"26.5\"";
+	}
+
+	@Override
+	protected java.lang.String getExpectedFeatureName() {
 		return "averageAge";
 	}
 	
 	@Override
-	protected Object getContent() {
-		return 25.6f;
+	protected Object getExpectedContent() {
+		return 26.5f;
 	}
 }

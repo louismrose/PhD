@@ -11,16 +11,17 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.packageObjects;
 
 import static org.junit.Assert.assertTrue;
 
 import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
 import org.eclipse.epsilon.hutn.xmi.Xmi2Hutn;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.HutnXmiBridgeAcceptanceTest;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class EmptyModel extends ValidAcceptanceTest {
+public class EmptyModel extends HutnXmiBridgeAcceptanceTest {
 	
 	@BeforeClass
 	public static void setup() throws HutnXmiBridgeException {

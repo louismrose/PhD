@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<families:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:families="families" xmi:id="_MAGl8BPgEd6ysY9kXe1lIA">
-  <contents xsi:type="families:Pet" xmi:id="_OI43YBPgEd6ysY9kXe1lIA" name=""/>
-  <contents xsi:type="families:Family" xmi:id="_Qy0uEBPgEd6ysY9kXe1lIA" pets="_OI43YBPgEd6ysY9kXe1lIA"/>
-</families:Model>

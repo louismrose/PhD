@@ -11,39 +11,30 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.inconsistent.slot.containment.feature.nonEmpty;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.slots;
 
 import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
-
-import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 
 import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
-import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
 import org.eclipse.epsilon.hutn.xmi.test.acceptance.HutnXmiBridgeAcceptanceTest;
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 
-public class MultiTypedWithAttributeValue extends HutnXmiBridgeAcceptanceTest {
+public abstract class AbstractSlotTest extends HutnXmiBridgeAcceptanceTest {
 	
-	@BeforeClass
-	public static void setup() throws IOException {
-		validAcceptanceTest("<elements xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\" name=\"The Smiths\"/>");
+	@Before
+	public void setup() throws IOException {
+		validAcceptanceTest(getXmi(), "");
 	}
 	
 	@Test
-	public void elementsSlot() {
-		slotTest(getFirstSlotOfModel(), ContainmentSlot.class, "elements", "Family");
+	public void testSlot() {
+		slotTest(getFirstSlotOfFamily(), AttributeSlot.class, getExpectedFeatureName(), getExpectedContent());
 	}
 	
-	@Test
-	public void familyHasOneSlot() {
-		assertEquals(1, getFamily().getSlots().size());
-	}
-	
-	@Test
-	public void nameSlot() {
-		slotTest(getFirstSlotOfFamily(), AttributeSlot.class, "name", "The Smiths");
-	}
+	protected abstract java.lang.String getXmi();
+	protected abstract java.lang.String getExpectedFeatureName();
+	protected abstract Object getExpectedContent();
 }

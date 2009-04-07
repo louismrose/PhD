@@ -11,29 +11,26 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.inconsistent.slot.containment.feature;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.slots;
 
 import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
 
-import java.io.IOException;
-
-import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
+import org.eclipse.epsilon.hutn.model.hutn.ReferenceSlot;
 import org.eclipse.epsilon.hutn.xmi.test.acceptance.HutnXmiBridgeAcceptanceTest;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class SingleTyped extends HutnXmiBridgeAcceptanceTest {
+
+public class Reference extends HutnXmiBridgeAcceptanceTest {
 	
 	@BeforeClass
-	public static void setup() throws IOException {
-		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\">" +
-		                    "	<people xmi:id=\"_VyN2UBhsEd6T2uYUGKXrWQ\"/>" +
-		                    "	<people xmi:id=\"_cMvCsBhsEd6T2uYUGKXrWQ\"/>" +
-		                    "</contents>");
+	public static void setup() {
+		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_Qy0uEBPgEd6ysY9kXe1lIA\" pets=\"_OI43YBPgEd6ysY9kXe1lIA\"/>" +
+		                    "<contents xsi:type=\"families:Pet\" xmi:id=\"_OI43YBPgEd6ysY9kXe1lIA\" />");
 	}
 	
 	@Test
-	public void peopleSlot() {
-		slotTest(getFirstSlotOfFamily(), ContainmentSlot.class, "people", "UnknownType", "UnknownType");
+	public void slotIsCorrectType() {
+		slotTest(getFirstSlotOfFamily(), ReferenceSlot.class, "pets", "Pet");
 	}
 }

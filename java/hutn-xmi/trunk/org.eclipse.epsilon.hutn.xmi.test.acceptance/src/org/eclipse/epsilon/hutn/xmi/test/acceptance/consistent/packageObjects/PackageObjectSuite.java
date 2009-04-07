@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.types;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.packageObjects;
 
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
@@ -21,10 +21,9 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({String.class, Integer.class, Float.class, Boolean.class, Enum.class,
-               Containment.class, Reference.class})
-public class TypesSuite {
+@SuiteClasses({EmptyModel.class, SingleObject.class, DifferentNsUri.class})
+public class PackageObjectSuite {
 	public static Test suite() {
-		return new JUnit4TestAdapter(TypesSuite.class);
+		return new JUnit4TestAdapter(PackageObjectSuite.class);
 	}
 }

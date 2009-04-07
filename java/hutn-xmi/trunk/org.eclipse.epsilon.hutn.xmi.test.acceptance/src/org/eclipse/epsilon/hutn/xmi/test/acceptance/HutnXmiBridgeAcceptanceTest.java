@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance;
 
 import static org.junit.Assert.fail;
 
@@ -24,7 +24,7 @@ import org.eclipse.epsilon.hutn.test.model.HutnTestWithFamiliesMetaModel;
 import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
 import org.eclipse.epsilon.hutn.xmi.Xmi2Hutn;
 
-public abstract class ValidAcceptanceTest extends HutnTestWithFamiliesMetaModel {
+public abstract class HutnXmiBridgeAcceptanceTest extends HutnTestWithFamiliesMetaModel {
 	
 	protected static Spec spec;
 	

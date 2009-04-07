@@ -11,18 +11,22 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.types;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.slots;
 
+public class Integer extends AbstractSlotTest {
 
-public class Boolean extends AbstractTypeTest {
-	
 	@Override
-	protected java.lang.String getFeature() {
-		return "nuclear";
+	protected java.lang.String getXmi() {
+		return "numberOfChildren=\"2\"";
+	}
+
+	@Override
+	protected java.lang.String getExpectedFeatureName() {
+		return "numberOfChildren";
 	}
 	
 	@Override
-	protected Object getContent() {
-		return true;
+	protected Object getExpectedContent() {
+		return 2;
 	}
 }

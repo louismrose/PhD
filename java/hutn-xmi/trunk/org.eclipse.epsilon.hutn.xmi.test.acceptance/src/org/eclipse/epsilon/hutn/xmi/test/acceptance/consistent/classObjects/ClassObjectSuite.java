@@ -11,21 +11,20 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.classObjects;
 
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
 
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.ConsistentModelSuite;
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.inconsistent.InconsistentModelSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ConsistentModelSuite.class})//, InconsistentModelSuite.class})
-public class HutnXmiAcceptanceTestSuite {
+@SuiteClasses({TwoObjectsWithDifferentFeatures.class, TwoObjectsWithSameFeature.class,
+               NestedObjects.class})
+public class ClassObjectSuite {
 	public static Test suite() {
-		return new JUnit4TestAdapter(HutnXmiAcceptanceTestSuite.class);
+		return new JUnit4TestAdapter(ClassObjectSuite.class);
 	}
 }

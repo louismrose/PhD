@@ -18,11 +18,11 @@ import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
 import java.io.IOException;
 
 import org.eclipse.epsilon.hutn.model.hutn.ReferenceSlot;
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.ValidAcceptanceTest;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.HutnXmiBridgeAcceptanceTest;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class Reference extends ValidAcceptanceTest {
+public class Reference extends HutnXmiBridgeAcceptanceTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {

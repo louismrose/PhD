@@ -11,30 +11,21 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.packageObjects;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import java.io.IOException;
 
-import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
-import org.eclipse.epsilon.hutn.xmi.Xmi2Hutn;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.HutnXmiBridgeAcceptanceTest;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class DifferentNsUri extends ValidAcceptanceTest {
+public class SingleObject extends HutnXmiBridgeAcceptanceTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		try {
-			spec = new Xmi2Hutn("<?xml version=\"1.0\" encoding=\"ASCII\"?>" +
-			                    "<bankAccounts:Accounts xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bankAccounts=\"bankAccounts\" xmi:id=\"_I6yJURhKEd6d_-caKAfnUw\" />").getSpec();
-		
-		} catch (HutnXmiBridgeException e) {
-			fail("Caught exception: " + e.getMessage());
-			e.printStackTrace();
-		}
+		validAcceptanceTest("");
 	}
 	
 	@Test
@@ -44,7 +35,7 @@ public class DifferentNsUri extends ValidAcceptanceTest {
 	
 	@Test
 	public void hasCorrectNsUriValue() {
-		assertEquals("bankAccounts", spec.getNsUris().get(0).getValue());
+		assertEquals("families", spec.getNsUris().get(0).getValue());
 	}
 	
 	@Test
@@ -58,7 +49,17 @@ public class DifferentNsUri extends ValidAcceptanceTest {
 	}
 	
 	@Test
-	public void linkedToBankAccountsEPackage() {
-		assertEquals("bankAccounts", getPackageObject().getMetamodel().get(0).getName());
+	public void linkedToFamiliesEPackage() {
+		assertEquals("families", getPackageObject().getMetamodel().get(0).getName());
+	}
+	
+	@Test
+	public void hasOneClassObject() {
+		assertEquals(1, getPackageObject().getClassObjects().size());
+	}
+	
+	@Test
+	public void classObjectHasCorrectType() {
+		assertEquals("Model", getModel().getType());
 	}
 }

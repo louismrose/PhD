@@ -11,21 +11,22 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent;
 
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
 
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.ConsistentModelSuite;
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.inconsistent.InconsistentModelSuite;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.classObjects.ClassObjectSuite;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.packageObjects.PackageObjectSuite;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.slots.SlotSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ConsistentModelSuite.class})//, InconsistentModelSuite.class})
-public class HutnXmiAcceptanceTestSuite {
+@SuiteClasses({PackageObjectSuite.class, ClassObjectSuite.class, SlotSuite.class})
+public class ConsistentModelSuite {
 	public static Test suite() {
-		return new JUnit4TestAdapter(HutnXmiAcceptanceTestSuite.class);
+		return new JUnit4TestAdapter(ConsistentModelSuite.class);
 	}
 }

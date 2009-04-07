@@ -11,27 +11,20 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.slots;
 
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
 
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.classObjects.NestedObjects;
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.classObjects.TwoObjectsWithDifferentFeatures;
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.classObjects.TwoObjectsWithSameFeature;
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.types.TypesSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({EmptyModel.class, SingleObject.class, NestedObjects.class,
-               TwoObjectsWithDifferentFeatures.class, TwoObjectsWithSameFeature.class,
-               DifferentNsUri.class
-               //TypesSuite.class})
-})
-public class ValidAcceptanceTestSuite {
+@SuiteClasses({String.class, Integer.class, Float.class, Boolean.class, Enum.class,
+               Reference.class})
+public class SlotSuite {
 	public static Test suite() {
-		return new JUnit4TestAdapter(ValidAcceptanceTestSuite.class);
+		return new JUnit4TestAdapter(SlotSuite.class);
 	}
 }

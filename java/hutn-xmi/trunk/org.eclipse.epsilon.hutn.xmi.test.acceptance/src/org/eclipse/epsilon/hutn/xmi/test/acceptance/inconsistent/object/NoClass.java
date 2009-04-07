@@ -23,11 +23,11 @@ import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
 import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
 import org.eclipse.epsilon.hutn.model.hutn.PackageObject;
 import org.eclipse.epsilon.hutn.test.models.util.FileUtil;
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.ValidAcceptanceTest;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.HutnXmiBridgeAcceptanceTest;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class NoClass extends ValidAcceptanceTest {
+public class NoClass extends HutnXmiBridgeAcceptanceTest {
 	
 	@BeforeClass
 	public static void setup() throws URISyntaxException {
