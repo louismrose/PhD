@@ -13,6 +13,7 @@
  */
 package org.eclipse.epsilon.hutn.xmi.parser.sax;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.xmi.parser.generator.SpecGenerator;
 import org.xml.sax.Attributes;
@@ -46,14 +47,26 @@ public class SpecGeneratingContentHandler extends DefaultHandler {
     		if (atts.getIndex("xsi:type") >= 0) {
     			generator.pushContainedClassObject(getLocalName(atts.getValue("xsi:type")), name);
 			} else {
-				// XMI doesn't include an xmi type
-				// TODO : try to do better by inspecting metamodel
-				generator.pushContainedClassObject("UnknownType", name);
+				// XMI doesn't include an xsi:type
+				final String type = inferTypeFromMetaClassOfParent(name);
+				generator.pushContainedClassObject(type, name);
 			}
     	}
     }
 
-    @Override
+    private String inferTypeFromMetaClassOfParent(String name) {
+    	if (generator.getCurrentClassObject().hasEClass()) {
+    		for (EReference reference : generator.getCurrentClassObject().getEClass().getEAllContainments()) {
+    			if (name.equals(reference.getName())) {
+    				return reference.getEType().getName();
+    			}
+    		}
+    	}
+    	
+    	return "UnknownType";
+	}
+
+	@Override
     public void endElement (String uri, String name, String qName) {
     	generator.popCurrentClassObject();
     }

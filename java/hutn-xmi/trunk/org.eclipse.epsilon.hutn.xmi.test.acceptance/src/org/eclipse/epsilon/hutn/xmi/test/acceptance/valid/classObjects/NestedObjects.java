@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.classObjects;
 
 import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
 
@@ -20,6 +20,7 @@ import static org.junit.Assert.assertEquals;
 import java.io.IOException;
 
 import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.ValidAcceptanceTest;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -69,7 +70,6 @@ public class NestedObjects extends ValidAcceptanceTest {
 	
 	@Test
 	public void familyContainsContainmentSlot() {
-		// TODO : this should check for a Person (but UnknownType is the best we can do for now, without the metamodel)
-		slotTest(getFirstSlotOfFamily(), ContainmentSlot.class, "members", "UnknownType");		
+		slotTest(getFirstSlotOfFamily(), ContainmentSlot.class, "members", "Person");		
 	}
 }

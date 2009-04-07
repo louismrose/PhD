@@ -16,6 +16,9 @@ package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid;
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
 
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.classObjects.NestedObjects;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.classObjects.TwoObjectsWithDifferentFeatures;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.classObjects.TwoObjectsWithSameFeature;
 import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.types.TypesSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

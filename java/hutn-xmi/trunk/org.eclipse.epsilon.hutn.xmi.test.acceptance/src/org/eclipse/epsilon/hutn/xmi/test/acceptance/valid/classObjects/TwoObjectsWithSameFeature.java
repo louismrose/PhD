@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid;
+package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.classObjects;
 
 import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
 
@@ -20,15 +20,16 @@ import static org.junit.Assert.assertEquals;
 import java.io.IOException;
 
 import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
+import org.eclipse.epsilon.hutn.xmi.test.acceptance.valid.ValidAcceptanceTest;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TwoObjectsWithDifferentFeatures extends ValidAcceptanceTest {
+public class TwoObjectsWithSameFeature extends ValidAcceptanceTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
 		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_cpcsYBeGEd6OrYL62CiH8g\"/>" +
-		                    "<contents2 xsi:type=\"families:Family\" xmi:id=\"_dpcsYBeGEd6OrYL62CjK2q\"/>");
+		                    "<contents xsi:type=\"families:Family\" xmi:id=\"_dpcsYBeGEd6OrYL62CjK2q\"/>");
 	}
 	
 	@Test
@@ -52,17 +53,12 @@ public class TwoObjectsWithDifferentFeatures extends ValidAcceptanceTest {
 	}
 	
 	@Test
-	public void modelContainsTwoSlots() {
-		assertEquals(2, getModel().getSlots().size());
+	public void modelContainsOneSlot() {
+		assertEquals(1, getModel().getSlots().size());
 	}
 	
 	@Test
-	public void contentsSlot() {
-		slotTest(getModel().getSlots().get(0), ContainmentSlot.class, "contents", "Family");
-	}
-	
-	@Test
-	public void contents2Slot() {
-		slotTest(getModel().getSlots().get(1), ContainmentSlot.class, "contents2", "Family");
+	public void modelContainsContainmentSlot() {
+		slotTest(getFirstSlotOfModel(), ContainmentSlot.class, "contents", "Family", "Family");
 	}
 }
