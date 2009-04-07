@@ -13,39 +13,31 @@
  */
 package org.eclipse.epsilon.hutn.xmi;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 
-import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.unparser.HutnUnparser;
 import org.eclipse.epsilon.hutn.xmi.parser.XmiParser;
-import org.eclipse.epsilon.hutn.xmi.util.EmfUtil;
+import org.xml.sax.SAXException;
 
 public class Xmi2Hutn {
 
 	private final Spec spec;
 	private final HutnUnparser unparser;
 	
-	// Used by tests
-	public Xmi2Hutn(String xml) throws IOException {
-		this(EmfUtil.loadResource(xml));
+	public Xmi2Hutn(String xmi) throws HutnXmiBridgeException {
+		try {
+			spec     = new XmiParser(xmi).parse();
+			unparser = new HutnUnparser(spec);
+		
+		} catch (SAXException e) {
+			throw new HutnXmiBridgeException(e);
+			
+		} catch (IOException e) {
+			throw new HutnXmiBridgeException(e);
+		}
 	}
 	
-	public Xmi2Hutn(File model) throws URISyntaxException {
-		this(new URI("file://" + model.getAbsolutePath()));
-	}
-	
-	public Xmi2Hutn(URI modelUri) {
-		this(EmfUtil.loadResource(modelUri));
-	}
-	
-	private Xmi2Hutn(XMIResource resource) {
-		spec     = new XmiParser(resource).parse();
-		unparser = new HutnUnparser(spec);
-	}
 
 	public Spec getSpec() {
 		return spec;

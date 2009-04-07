@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<families:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:families="families" xmi:id="_bXq7cReGEd6OrYL62CiH8g">
-  <contents xsi:type="families:Family" xmi:id="_cpcsYBeGEd6OrYL62CiH8g">
-    <members xmi:id="_kbnoMBeGEd6OrYL62CiH8g" name="John"/>
-  </contents>
-</families:Model>

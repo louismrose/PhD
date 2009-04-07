@@ -15,17 +15,16 @@ package org.eclipse.epsilon.hutn.xmi.test.acceptance.valid;
 
 import static org.junit.Assert.assertTrue;
 
-import java.net.URISyntaxException;
-
-import org.eclipse.epsilon.hutn.test.models.util.FileUtil;
+import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
+import org.eclipse.epsilon.hutn.xmi.Xmi2Hutn;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class EmptyModel extends ValidAcceptanceTest {
 	
 	@BeforeClass
-	public static void setup() throws URISyntaxException {
-		validAcceptanceTest(FileUtil.getFile("EmptyFamily.model", EmptyModel.class));
+	public static void setup() throws HutnXmiBridgeException {
+		spec = new Xmi2Hutn("<?xml version=\"1.0\" encoding=\"ASCII\"?>\n").getSpec();
 	}
 	
 	@Test

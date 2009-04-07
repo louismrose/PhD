@@ -22,7 +22,11 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({EmptyModel.class, NestedObjects.class, TypesSuite.class})
+@SuiteClasses({EmptyModel.class, SingleObject.class, NestedObjects.class,
+               TwoObjectsWithDifferentFeatures.class, TwoObjectsWithSameFeature.class,
+               DifferentNsUri.class
+               //TypesSuite.class})
+})
 public class ValidAcceptanceTestSuite {
 	public static Test suite() {
 		return new JUnit4TestAdapter(ValidAcceptanceTestSuite.class);

@@ -15,6 +15,7 @@ package org.eclipse.epsilon.hutn.xmi.test.acceptance.inconsistent.object;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
 
 import java.net.URISyntaxException;
 

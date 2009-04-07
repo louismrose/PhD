@@ -13,6 +13,8 @@
  */
 package org.eclipse.epsilon.hutn.xmi.test.acceptance.inconsistent.slot.containment.feature;
 
+import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
+
 import java.io.IOException;
 
 import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;

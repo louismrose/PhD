@@ -23,13 +23,12 @@ import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class NestedObjects extends ValidAcceptanceTest {
+public class TwoObjectsWithSameFeature extends ValidAcceptanceTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_cpcsYBeGEd6OrYL62CiH8g\">" +
-		                    "	<members xmi:id=\"_kbnoMBeGEd6OrYL62CiH8g\" name=\"John\"/>"             +
-		                    "</contents>");
+		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_cpcsYBeGEd6OrYL62CiH8g\"/>" +
+		                    "<contents xsi:type=\"families:Family\" xmi:id=\"_dpcsYBeGEd6OrYL62CjK2q\"/>");
 	}
 	
 	@Test
@@ -59,17 +58,6 @@ public class NestedObjects extends ValidAcceptanceTest {
 	
 	@Test
 	public void modelContainsContainmentSlot() {
-		slotTest(getFirstSlotOfModel(), ContainmentSlot.class, "contents", "Family");
-	}
-	
-	@Test
-	public void familyContainsOneSlot() {
-		assertEquals(1, getFamily().getSlots().size());
-	}
-	
-	@Test
-	public void familyContainsContainmentSlot() {
-		// TODO : this should check for a Person (but UnknownType is the best we can do for now, without the metamodel)
-		slotTest(getFirstSlotOfFamily(), ContainmentSlot.class, "members", "UnknownType");		
+		slotTest(getFirstSlotOfModel(), ContainmentSlot.class, "contents", "Family", "Family");
 	}
 }

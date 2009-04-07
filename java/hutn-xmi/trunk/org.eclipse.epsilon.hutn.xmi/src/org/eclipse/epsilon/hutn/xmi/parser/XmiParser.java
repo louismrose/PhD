@@ -13,18 +13,51 @@
  */
 package org.eclipse.epsilon.hutn.xmi.parser;
 
-import org.eclipse.emf.ecore.xmi.XMIResource;
+import java.io.IOException;
+import java.io.StringReader;
+
+import org.eclipse.epsilon.hutn.model.hutn.HutnFactory;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
+import org.eclipse.epsilon.hutn.xmi.parser.sax.ContentHandlerMultiplexer;
+import org.eclipse.epsilon.hutn.xmi.parser.sax.DebugContentHandler;
+import org.eclipse.epsilon.hutn.xmi.parser.sax.SpecGeneratingContentHandler;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.XMLReaderFactory;
 
 public class XmiParser {
 
-	public XmiParser(XMIResource resource) {
-		// TODO Auto-generated constructor stub
+	private final String xmi;
+	
+	private XMLReader reader;
+	private SpecGeneratingContentHandler handler;
+	
+	
+	public XmiParser(String xmi) {
+		this.xmi = xmi;
 	}
 
-	public Spec parse() {
-		// TODO Auto-generated method stub
-		return null;
+	public Spec parse() throws SAXException, IOException {
+		initialiseXmlReader();
+		
+		return doParse();
 	}
-
+	
+	private void initialiseXmlReader() throws SAXException {
+		reader  = XMLReaderFactory.createXMLReader();
+		handler = new SpecGeneratingContentHandler();
+		
+		reader.setContentHandler(new ContentHandlerMultiplexer(new DebugContentHandler(), handler));
+	}
+	
+	private Spec doParse() throws IOException {
+		try {
+			reader.parse(new InputSource(new StringReader(xmi)));
+			return handler.getSpec();
+			
+		} catch (SAXException e) {
+			return HutnFactory.eINSTANCE.createSpec();
+		}
+	}
 }

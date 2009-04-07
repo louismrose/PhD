@@ -23,7 +23,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ValidAcceptanceTestSuite.class, InconsistentModelSuite.class})
+@SuiteClasses({ValidAcceptanceTestSuite.class})//, InconsistentModelSuite.class})
 public class HutnXmiAcceptanceTestSuite {
 	public static Test suite() {
 		return new JUnit4TestAdapter(HutnXmiAcceptanceTestSuite.class);

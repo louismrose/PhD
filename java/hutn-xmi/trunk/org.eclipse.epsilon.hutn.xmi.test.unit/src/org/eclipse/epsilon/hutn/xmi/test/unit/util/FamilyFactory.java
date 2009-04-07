@@ -22,8 +22,12 @@ public abstract class FamilyFactory {
 
 	private FamilyFactory() {}
 	
+	public static Family createFamily() {
+		return FamiliesFactory.eINSTANCE.createFamily();
+	}
+	
 	public static Family createFamily(String name) {
-		final Family family = FamiliesFactory.eINSTANCE.createFamily();
+		final Family family = createFamily();
 		
 		family.setName(name);
 		
@@ -31,7 +35,7 @@ public abstract class FamilyFactory {
 	}
 	
 	public static Family createFamily(String... addresses) {
-		final Family family = FamiliesFactory.eINSTANCE.createFamily();
+		final Family family = createFamily();
 		
 		for (String address : addresses) {
 			family.getAddress().add(address);
@@ -41,7 +45,7 @@ public abstract class FamilyFactory {
 	}
 	
 	public static Family createFamily(Pet... pets) {
-		final Family family = FamiliesFactory.eINSTANCE.createFamily();
+		final Family family = createFamily();
 		
 		for (Pet pet : pets) {
 			family.getPets().add(pet);
@@ -51,7 +55,7 @@ public abstract class FamilyFactory {
 	}
 	
 	public static Family createFamily(Person... members) {
-		final Family family = FamiliesFactory.eINSTANCE.createFamily();
+		final Family family = createFamily();
 		
 		for (Person member : members) {
 			family.getMembers().add(member);
