@@ -18,7 +18,7 @@ import junit.framework.Test;
 
 import org.eclipse.epsilon.hutn.xmi.coerce.CoerceSuite;
 import org.eclipse.epsilon.hutn.xmi.parser.ParserSuite;
-import org.eclipse.epsilon.hutn.xmi.util.StackSuite;
+import org.eclipse.epsilon.hutn.xmi.util.stack.StackSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
