@@ -21,8 +21,8 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({PushTopLevelClassObject.class, PushNestedClassObject.class,
-               PopCurrentClassObject.class})
+@SuiteClasses({GenerateTopLevelClassObject.class, GenerateNestedClassObject.class,
+               StopGeneratingCurrentClassObject.class})
 public class GeneratorSuite {
 	public static Test suite() {
 		return new JUnit4TestAdapter(GeneratorSuite.class);
