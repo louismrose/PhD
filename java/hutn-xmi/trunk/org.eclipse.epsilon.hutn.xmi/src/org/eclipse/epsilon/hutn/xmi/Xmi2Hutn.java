@@ -13,12 +13,12 @@
  */
 package org.eclipse.epsilon.hutn.xmi;
 
-import java.io.IOException;
+import javax.xml.stream.FactoryConfigurationError;
+import javax.xml.stream.XMLStreamException;
 
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.unparser.HutnUnparser;
 import org.eclipse.epsilon.hutn.xmi.parser.XmiParser;
-import org.xml.sax.SAXException;
 
 public class Xmi2Hutn {
 
@@ -30,12 +30,12 @@ public class Xmi2Hutn {
 			spec     = new XmiParser(xmi).parse();
 			unparser = new HutnUnparser(spec);
 		
-		} catch (SAXException e) {
+		} catch (XMLStreamException e) {
 			throw new HutnXmiBridgeException(e);
 			
-		} catch (IOException e) {
+		} catch (FactoryConfigurationError e) {
 			throw new HutnXmiBridgeException(e);
-		}
+		} 
 	}
 	
 
