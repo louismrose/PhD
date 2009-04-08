@@ -30,7 +30,7 @@ public class Reference extends HutnXmiBridgeAcceptanceTest {
 	}
 	
 	@Test
-	public void slotIsCorrectType() {
+	public void testSlot() {
 		slotTest(getFirstSlotOfFamily(), ReferenceSlot.class, "pets", "Pet");
 	}
 }

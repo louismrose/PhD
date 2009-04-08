@@ -14,6 +14,7 @@
 package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.slots;
 
 import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
+import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.EnumValue;
 
 import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
 import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
@@ -33,7 +34,7 @@ public class Enum extends HutnXmiBridgeAcceptanceTest {
 	}
 	
 	@Test
-	public void slotIsCorrectType() {
-		slotTest(getFirstSlotOfModel(), AttributeSlot.class, "breed", "labrador");
+	public void testSlot() {
+		slotTest(getModel().getSlots().get(0), AttributeSlot.class, "breed", new EnumValue("labrador"));
 	}
 }

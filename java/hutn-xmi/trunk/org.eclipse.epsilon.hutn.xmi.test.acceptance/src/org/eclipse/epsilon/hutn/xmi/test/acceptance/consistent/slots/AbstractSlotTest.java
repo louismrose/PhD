@@ -15,9 +15,9 @@ package org.eclipse.epsilon.hutn.xmi.test.acceptance.consistent.slots;
 
 import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
 
-import java.io.IOException;
-
 import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
+import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
+import org.eclipse.epsilon.hutn.xmi.Xmi2Hutn;
 import org.eclipse.epsilon.hutn.xmi.test.acceptance.HutnXmiBridgeAcceptanceTest;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,13 +25,15 @@ import org.junit.Test;
 public abstract class AbstractSlotTest extends HutnXmiBridgeAcceptanceTest {
 	
 	@Before
-	public void setup() throws IOException {
-		validAcceptanceTest(getXmi(), "");
+	public void setup() throws HutnXmiBridgeException {
+		spec = new Xmi2Hutn("<?xml version=\"1.0\" encoding=\"ASCII\"?>" +
+		                    "<families:Family xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:families=\"families\" xmi:id=\"_seJr0BPDEd6ysY9kXe1lIA\" " + getXmi() + " />")
+		       .getSpec();
 	}
 	
 	@Test
 	public void testSlot() {
-		slotTest(getFirstSlotOfFamily(), AttributeSlot.class, getExpectedFeatureName(), getExpectedContent());
+		slotTest(getModel().getSlots().get(0), AttributeSlot.class, getExpectedFeatureName(), getExpectedContent());
 	}
 	
 	protected abstract java.lang.String getXmi();

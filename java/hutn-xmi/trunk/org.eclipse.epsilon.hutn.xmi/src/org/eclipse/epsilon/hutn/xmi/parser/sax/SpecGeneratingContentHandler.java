@@ -13,9 +13,10 @@
  */
 package org.eclipse.epsilon.hutn.xmi.parser.sax;
 
-import org.eclipse.emf.ecore.EReference;
+import org.eclipse.epsilon.hutn.model.hutn.Slot;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.xmi.parser.generator.SpecGenerator;
+import org.eclipse.epsilon.hutn.xmi.util.HutnUtil;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -48,23 +49,39 @@ public class SpecGeneratingContentHandler extends DefaultHandler {
     			generator.pushContainedClassObject(getLocalName(atts.getValue("xsi:type")), name);
 			} else {
 				// XMI doesn't include an xsi:type
-				final String type = inferTypeFromMetaClassOfParent(name);
+				final String type = HutnUtil.determineTypeOfFeatureFromMetaClass(generator.getCurrentClassObject(), name, "UnknownType");
 				generator.pushContainedClassObject(type, name);
 			}
     	}
+    	
+    	processAttributes(atts);
     }
 
-    private String inferTypeFromMetaClassOfParent(String name) {
-    	if (generator.getCurrentClassObject().hasEClass()) {
-    		for (EReference reference : generator.getCurrentClassObject().getEClass().getEAllContainments()) {
-    			if (name.equals(reference.getName())) {
-    				return reference.getEType().getName();
-    			}
-    		}
-    	}
-    	
-    	return "UnknownType";
+    private void processAttributes(Attributes atts) {
+		for (int index = 0; index < atts.getLength(); index++) {
+			
+			if (atts.getQName(index).startsWith("xmi") ||
+				atts.getQName(index).startsWith("xsi")) {
+			  	  continue;
+			}
+			
+			Slot<?> slot = null;
+			
+			
+			if (generator.getCurrentClassObject().hasEClass()) {
+				slot = HutnUtil.determineSlotFromTypeOfMetaFeature(generator.getCurrentClassObject(), atts.getLocalName(index), atts.getValue(index));
+				
+			} else {
+				// TODO: use coerce?
+			}
+			
+			if (slot != null) {
+				generator.getCurrentClassObject().getSlots().add(slot);
+			}
+		}
 	}
+
+
 
 	@Override
     public void endElement (String uri, String name, String qName) {
