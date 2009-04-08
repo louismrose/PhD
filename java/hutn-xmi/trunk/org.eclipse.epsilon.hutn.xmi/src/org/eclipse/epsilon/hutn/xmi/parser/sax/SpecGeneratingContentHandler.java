@@ -15,7 +15,6 @@ package org.eclipse.epsilon.hutn.xmi.parser.sax;
 
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.xmi.parser.generator.SpecGenerator;
-import org.eclipse.epsilon.hutn.xmi.util.HutnUtil;
 import org.eclipse.epsilon.hutn.xmi.util.StringUtil;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

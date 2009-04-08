@@ -13,8 +13,6 @@
  */
 package org.eclipse.epsilon.hutn.xmi.parser.sax;
 
-import java.util.Arrays;
-
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
