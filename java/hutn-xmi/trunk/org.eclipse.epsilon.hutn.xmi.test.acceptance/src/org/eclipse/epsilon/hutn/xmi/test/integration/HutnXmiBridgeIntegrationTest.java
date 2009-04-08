@@ -28,13 +28,13 @@ public abstract class HutnXmiBridgeIntegrationTest extends HutnTestWithFamiliesM
 	
 	protected static Spec spec;
 	
-	protected static void validAcceptanceTest(String xml) {
-		validAcceptanceTest("", xml);
+	protected static void integrationTestWithExceptions(String xmi) throws HutnXmiBridgeException {
+		spec = new Xmi2Hutn(xmi).getSpec();
 	}
 	
-	protected static void validAcceptanceTest(String modelXmlAttributes, String xml) {
+	protected static void integrationTest(String xmi) {
 		try {
-			spec = new Xmi2Hutn(wrapXml(modelXmlAttributes, xml)).getSpec();
+			integrationTestWithExceptions(xmi);
 		
 		} catch (HutnXmiBridgeException e) {
 			fail("Caught exception: " + e.getMessage());
@@ -42,7 +42,19 @@ public abstract class HutnXmiBridgeIntegrationTest extends HutnTestWithFamiliesM
 		}
 	}
 	
-	private static String wrapXml(String attributes, String contents) {
+	protected static void integrationTestWithModelAsRoot() {
+		integrationTestWithModelAsRoot("");
+	}
+	
+	protected static void integrationTestWithModelAsRoot(String nestedXmi) {
+		integrationTestWithModelAsRoot("", nestedXmi);
+	}
+	
+	protected static void integrationTestWithModelAsRoot(String xmiAttributesForModel, String nestedXmi) {
+		integrationTest(constructXmiForModel(xmiAttributesForModel, nestedXmi));
+	}
+	
+	private static String constructXmiForModel(String attributes, String contents) {
 		final StringBuilder builder = new StringBuilder();
 		
 		builder.append("<?xml version=\"1.0\" encoding=\"ASCII\"?>");

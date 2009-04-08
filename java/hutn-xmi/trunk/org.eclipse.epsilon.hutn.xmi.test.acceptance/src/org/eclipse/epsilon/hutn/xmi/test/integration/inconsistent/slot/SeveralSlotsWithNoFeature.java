@@ -27,7 +27,7 @@ public class SeveralSlotsWithNoFeature extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("name=\"m\" age=\"12\"",
+		integrationTestWithModelAsRoot("name=\"m\" age=\"12\"",
 				
 		                    "<elements xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\"/>" +
 		                    "<elements xsi:type=\"families:Person\" xmi:id=\"_cMvCsBhsEd6T2uYUGKXrWQ\"/>" +

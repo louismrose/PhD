@@ -11,16 +11,23 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.packageObjects;
+package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots.singleValued;
 
-import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
-import org.eclipse.epsilon.hutn.xmi.test.integration.HutnXmiBridgeIntegrationTest;
-import org.junit.Test;
 
-public class EmptyModel extends HutnXmiBridgeIntegrationTest {
+public class Float extends AbstractSingleValuedSlotTest {
 	
-	@Test(expected=HutnXmiBridgeException.class)
-	public void emptyFileCausesException() throws HutnXmiBridgeException {
-		integrationTestWithExceptions("<?xml version=\"1.0\" encoding=\"ASCII\"?>\n");
+	@Override
+	protected java.lang.String getXmi() {
+		return "averageAge=\"26.5\"";
+	}
+
+	@Override
+	protected java.lang.String getExpectedFeatureName() {
+		return "averageAge";
+	}
+	
+	@Override
+	protected Object getExpectedContent() {
+		return 26.5f;
 	}
 }

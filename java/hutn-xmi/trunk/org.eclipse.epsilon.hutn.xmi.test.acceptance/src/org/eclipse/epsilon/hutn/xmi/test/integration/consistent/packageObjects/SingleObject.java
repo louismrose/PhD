@@ -25,7 +25,7 @@ public class SingleObject extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("");
+		integrationTestWithModelAsRoot();
 	}
 	
 	@Test

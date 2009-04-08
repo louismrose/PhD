@@ -11,22 +11,23 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots;
+package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots.singleValued;
 
-public class Float extends AbstractSlotTest {
-	
+
+public class Integer extends AbstractSingleValuedSlotTest {
+
 	@Override
 	protected java.lang.String getXmi() {
-		return "averageAge=\"26.5\"";
+		return "numberOfChildren=\"2\"";
 	}
 
 	@Override
 	protected java.lang.String getExpectedFeatureName() {
-		return "averageAge";
+		return "numberOfChildren";
 	}
 	
 	@Override
 	protected Object getExpectedContent() {
-		return 26.5f;
+		return 2;
 	}
 }

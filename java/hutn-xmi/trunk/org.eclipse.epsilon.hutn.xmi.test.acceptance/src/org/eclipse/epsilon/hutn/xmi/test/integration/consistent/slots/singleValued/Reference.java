@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots;
+package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots.singleValued;
 
 import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
 
@@ -25,7 +25,7 @@ public class Reference extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() {
-		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_Qy0uEBPgEd6ysY9kXe1lIA\" pets=\"_OI43YBPgEd6ysY9kXe1lIA\"/>" +
+		integrationTestWithModelAsRoot("<contents xsi:type=\"families:Family\" xmi:id=\"_Qy0uEBPgEd6ysY9kXe1lIA\" pets=\"_OI43YBPgEd6ysY9kXe1lIA\"/>" +
 		                    "<contents xsi:type=\"families:Pet\" xmi:id=\"_OI43YBPgEd6ysY9kXe1lIA\" />");
 	}
 	

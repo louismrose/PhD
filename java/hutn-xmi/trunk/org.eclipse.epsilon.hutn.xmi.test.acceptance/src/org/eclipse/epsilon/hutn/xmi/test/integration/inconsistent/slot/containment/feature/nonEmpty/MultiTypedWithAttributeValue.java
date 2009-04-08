@@ -29,7 +29,7 @@ public class MultiTypedWithAttributeValue extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("<elements xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\" name=\"The Smiths\"/>");
+		integrationTestWithModelAsRoot("<elements xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\" name=\"The Smiths\"/>");
 	}
 	
 	@Test

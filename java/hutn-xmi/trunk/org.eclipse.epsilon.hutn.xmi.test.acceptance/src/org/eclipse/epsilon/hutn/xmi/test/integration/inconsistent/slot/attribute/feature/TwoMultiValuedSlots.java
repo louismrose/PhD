@@ -26,7 +26,7 @@ public class TwoMultiValuedSlots extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\">" +
+		integrationTestWithModelAsRoot("<contents xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\">" +
 		                    "	<insurance>665544</insurance>" +
 		                    "	<insurance>889900</insurance>" +
 		                    "	<telNo>01904 440044</telNo>" +

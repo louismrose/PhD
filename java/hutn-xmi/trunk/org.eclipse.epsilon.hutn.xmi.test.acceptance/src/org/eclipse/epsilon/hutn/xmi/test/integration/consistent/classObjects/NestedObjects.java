@@ -28,9 +28,9 @@ public class NestedObjects extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_cpcsYBeGEd6OrYL62CiH8g\">" +
-		                    "	<members xmi:id=\"_kbnoMBeGEd6OrYL62CiH8g\" name=\"John\"/>"             +
-		                    "</contents>");
+		integrationTestWithModelAsRoot("<contents xsi:type=\"families:Family\" xmi:id=\"_cpcsYBeGEd6OrYL62CiH8g\">" +
+		                               "	<members xmi:id=\"_kbnoMBeGEd6OrYL62CiH8g\" name=\"John\"/>"             +
+		                               "</contents>");
 	}
 	
 	@Test

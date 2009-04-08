@@ -16,13 +16,14 @@ package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots;
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
 
+import org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots.multiValued.ManyValuedSlotSuite;
+import org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots.singleValued.SingleValuedSlotSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({String.class, Integer.class, Float.class, Boolean.class, Enum.class,
-               Reference.class})
+@SuiteClasses({SingleValuedSlotSuite.class, ManyValuedSlotSuite.class})
 public class SlotSuite {
 	public static Test suite() {
 		return new JUnit4TestAdapter(SlotSuite.class);

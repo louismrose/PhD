@@ -26,7 +26,7 @@ public class Reference extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_cpcsYBeGEd6OrYL62CiH8g\" animals=\"_4yG-UBiFEd6-Eob-hyWntQ _HiVRYBiGEd6-Eob-hyWntQ\"/>" +
+		integrationTestWithModelAsRoot("<contents xsi:type=\"families:Family\" xmi:id=\"_cpcsYBeGEd6OrYL62CiH8g\" animals=\"_4yG-UBiFEd6-Eob-hyWntQ _HiVRYBiGEd6-Eob-hyWntQ\"/>" +
 		                    "<contents xsi:type=\"families:Pet\" xmi:id=\"_4yG-UBiFEd6-Eob-hyWntQ\"/>" +
 		                    "<contents xsi:type=\"families:Pet\" xmi:id=\"_HiVRYBiGEd6-Eob-hyWntQ\"/>");
 	}

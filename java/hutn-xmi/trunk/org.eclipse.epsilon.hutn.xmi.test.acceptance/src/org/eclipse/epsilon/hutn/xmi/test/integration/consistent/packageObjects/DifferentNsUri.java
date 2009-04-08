@@ -14,12 +14,9 @@
 package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.packageObjects;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import java.io.IOException;
 
-import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
-import org.eclipse.epsilon.hutn.xmi.Xmi2Hutn;
 import org.eclipse.epsilon.hutn.xmi.test.integration.HutnXmiBridgeIntegrationTest;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -28,14 +25,8 @@ public class DifferentNsUri extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		try {
-			spec = new Xmi2Hutn("<?xml version=\"1.0\" encoding=\"ASCII\"?>" +
-			                    "<bankAccounts:Accounts xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bankAccounts=\"bankAccounts\" xmi:id=\"_I6yJURhKEd6d_-caKAfnUw\" />").getSpec();
-		
-		} catch (HutnXmiBridgeException e) {
-			fail("Caught exception: " + e.getMessage());
-			e.printStackTrace();
-		}
+		integrationTest("<?xml version=\"1.0\" encoding=\"ASCII\"?>" +
+			               "<bankAccounts:Accounts xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bankAccounts=\"bankAccounts\" xmi:id=\"_I6yJURhKEd6d_-caKAfnUw\" />");
 	}
 	
 	@Test

@@ -11,23 +11,23 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots;
+package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots.singleValued;
 
 
-public class String extends AbstractSlotTest {
-
+public class Boolean extends AbstractSingleValuedSlotTest {
+	
 	@Override
 	protected java.lang.String getXmi() {
-		return "name=\"The Smiths\"";
+		return "nuclear=\"true\"";
+	}
+
+	@Override
+	protected java.lang.String getExpectedFeatureName() {
+		return "nuclear";
 	}
 	
 	@Override
-	protected java.lang.String getExpectedFeatureName() {
-		return "name";
-	}
-
-	@Override
 	protected Object getExpectedContent() {
-		return "The Smiths";
+		return true;
 	}
 }

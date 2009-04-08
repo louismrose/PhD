@@ -26,7 +26,7 @@ public class SingleTyped extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\">" +
+		integrationTestWithModelAsRoot("<contents xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\">" +
 		                    "	<people xmi:id=\"_VyN2UBhsEd6T2uYUGKXrWQ\"/>" +
 		                    "	<people xmi:id=\"_cMvCsBhsEd6T2uYUGKXrWQ\"/>" +
 		                    "</contents>");

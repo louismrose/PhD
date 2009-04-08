@@ -11,22 +11,19 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots;
+package org.eclipse.epsilon.hutn.xmi.test.integration.consistent.slots.multiValued;
 
-public class Integer extends AbstractSlotTest {
+import junit.framework.JUnit4TestAdapter;
+import junit.framework.Test;
 
-	@Override
-	protected java.lang.String getXmi() {
-		return "numberOfChildren=\"2\"";
-	}
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
-	@Override
-	protected java.lang.String getExpectedFeatureName() {
-		return "numberOfChildren";
-	}
-	
-	@Override
-	protected Object getExpectedContent() {
-		return 2;
+@RunWith(Suite.class)
+@SuiteClasses({ManyValues.class})
+public class ManyValuedSlotSuite {
+	public static Test suite() {
+		return new JUnit4TestAdapter(ManyValuedSlotSuite.class);
 	}
 }

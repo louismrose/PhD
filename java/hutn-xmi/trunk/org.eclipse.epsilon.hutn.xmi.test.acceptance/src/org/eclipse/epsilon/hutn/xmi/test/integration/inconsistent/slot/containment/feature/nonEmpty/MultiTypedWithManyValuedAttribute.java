@@ -29,7 +29,7 @@ public class MultiTypedWithManyValuedAttribute extends HutnXmiBridgeIntegrationT
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("<elements xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\">" +
+		integrationTestWithModelAsRoot("<elements xsi:type=\"families:Family\" xmi:id=\"_Ev2KMBhbEd6T2uYUGKXrWQ\">" +
 		                    "	<address>10 Main Street</address>"                                       +
 		                    "	<address>123 Heslington Road</address>"                                  +
 		                    "</elements>");

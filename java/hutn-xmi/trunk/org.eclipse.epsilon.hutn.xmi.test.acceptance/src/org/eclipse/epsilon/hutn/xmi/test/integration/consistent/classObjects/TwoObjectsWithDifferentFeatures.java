@@ -28,8 +28,8 @@ public class TwoObjectsWithDifferentFeatures extends HutnXmiBridgeIntegrationTes
 	
 	@BeforeClass
 	public static void setup() throws IOException {
-		validAcceptanceTest("<contents xsi:type=\"families:Family\" xmi:id=\"_cpcsYBeGEd6OrYL62CiH8g\"/>" +
-		                    "<contents2 xsi:type=\"families:Family\" xmi:id=\"_dpcsYBeGEd6OrYL62CjK2q\"/>");
+		integrationTestWithModelAsRoot("<contents xsi:type=\"families:Family\" xmi:id=\"_cpcsYBeGEd6OrYL62CiH8g\"/>" +
+		                               "<contents2 xsi:type=\"families:Family\" xmi:id=\"_dpcsYBeGEd6OrYL62CjK2q\"/>");
 	}
 	
 	@Test

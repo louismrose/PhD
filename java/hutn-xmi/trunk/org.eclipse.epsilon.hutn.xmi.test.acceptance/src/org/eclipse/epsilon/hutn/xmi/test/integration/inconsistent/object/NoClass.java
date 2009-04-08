@@ -31,7 +31,7 @@ public class NoClass extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws URISyntaxException {
-		validAcceptanceTest(FileUtil.getFile("ObjectWithNoClass.model", NoClass.class));
+		integrationTestWithModelAsRoot(FileUtil.getFile("ObjectWithNoClass.model", NoClass.class));
 	}
 	
 	@Test

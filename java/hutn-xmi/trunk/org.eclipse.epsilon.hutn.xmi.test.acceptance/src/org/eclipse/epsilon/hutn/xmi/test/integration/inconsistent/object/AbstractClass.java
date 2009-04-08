@@ -32,7 +32,7 @@ public class AbstractClass extends HutnXmiBridgeIntegrationTest {
 	
 	@BeforeClass
 	public static void setup() throws URISyntaxException {
-		validAcceptanceTest(FileUtil.getFile("ObjectWithAbstractClass.model", AbstractClass.class));
+		integrationTestWithModelAsRoot(FileUtil.getFile("ObjectWithAbstractClass.model", AbstractClass.class));
 	}
 	
 	@Test
