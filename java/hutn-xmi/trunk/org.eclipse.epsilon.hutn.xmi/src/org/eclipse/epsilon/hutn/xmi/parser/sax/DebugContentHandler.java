@@ -13,6 +13,8 @@
  */
 package org.eclipse.epsilon.hutn.xmi.parser.sax;
 
+import java.util.Arrays;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -54,6 +56,11 @@ public class DebugContentHandler extends DefaultHandler {
 
     }
 
+    @Override
+	public void characters(char[] ch, int start, int length) throws SAXException {
+    	System.out.println("Characters: " + new String(ch, start, length));
+	}
+    
     
     @Override
 	public void startPrefixMapping(String prefix, String uri) throws SAXException {

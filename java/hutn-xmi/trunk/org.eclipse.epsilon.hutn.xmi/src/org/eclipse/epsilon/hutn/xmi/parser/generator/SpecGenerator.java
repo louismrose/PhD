@@ -14,6 +14,7 @@
 package org.eclipse.epsilon.hutn.xmi.parser.generator;
 
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
 import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
 import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
 import org.eclipse.epsilon.hutn.model.hutn.HutnFactory;
@@ -26,12 +27,52 @@ import org.eclipse.epsilon.hutn.xmi.util.EmfUtil;
 import org.eclipse.epsilon.hutn.xmi.util.HutnUtil;
 import org.eclipse.epsilon.hutn.xmi.util.Stack;
 
+/**
+ * <p>Generates a HUTN spec in a LIFO manner. ClassObjects are generated
+ * using {@link #generateTopLevelClassObject(String)} and 
+ * {@link #generateContainedClassObject(String, String)}.</p>
+ * 
+ * <p>Before generating any ClassObjects, the generator must first be 
+ * initialised using {@link #initialise()} or {@link #initialise(String)}.</p>
+ * 
+ * <p>To nest class objects, first use a call to 
+ * {@link #generateTopLevelClassObject(String)} and then add levels of
+ * nesting with {@link #generateContainedClassObject(String)}.</p>
+ * 
+ * <p>A call to {@link #stopGeneratingCurrentClassObject()} completes the
+ * generation of the current class object. Furthermore, the next class
+ * object to be generated will have the same parent as the last class
+ * object to be generated.</p>
+ * 
+ * <p>Example: To generate the following structure:
+ * <pre>  Family {
+ *    members: Person { dog: Dog {} }, Person {}
+ *  }</pre>
+ * 
+ *  the following calls would be made:
+ *  <pre>  initialise("families");
+ *  generateTopLevelClassObject("Family");
+ *    generateContainedClassObject("Person");
+ *      generateContainedClassObject("Dog");
+ *      stopGeneratingCurrentClassObject(); // Dog
+ *    stopGeneratingCurrentClassObject(); // Person
+ *    generateContainedClassObject("Person");
+ *    stopGeneratingCurrentClassObject();
+ *  stopGeneratingCurrentClassObject(); // Family</pre>
+ * 
+ * The last two lines are optional, if no further ClassObjects are to
+ * be generated.</p>
+ * 
+ * @author lrose
+ */
 public class SpecGenerator {
 
 	private final Spec spec = HutnFactory.eINSTANCE.createSpec();
 	private final Stack<ClassObject> stack = new Stack<ClassObject>();
 	private final ClassObjectCache cache = new ClassObjectCache();
 
+	private ContainmentSlot containingSlot;
+	
 	public SpecGenerator() {
 		EmfUtil.createResource(spec);
 	}
@@ -45,31 +86,57 @@ public class SpecGenerator {
 	}
 	
 	public void initialise(String nsUri) {
-		final PackageObject po = createPackageObject();
-		
-		if (nsUri != null) {
-			final NsUri nsUriObject = HutnFactory.eINSTANCE.createNsUri();
-			nsUriObject.setValue(nsUri);
-			spec.getNsUris().add(nsUriObject);
-
-			if (EPackage.Registry.INSTANCE.getEPackage(nsUri) != null)		
-				po.getMetamodel().add(EPackage.Registry.INSTANCE.getEPackage(nsUri));
-		}
+		addPackageObject(nsUri);
 	}
 
-	public void pushTopLevelClassObject(String type) {
-		if (getCurrentClassObject() != null)
-			throw new IllegalStateException("Cannot create a top-level class object when getCurrentObject is non-null");
+	public void generateTopLevelClassObject(String type) {
+		if (getPackageObject() == null)
+			throw new IllegalStateException("Cannot create a top-level class object until initialise has been called");
 		
-		final PackageObject pkg = spec.getObjects().get(0);
-		pkg.getClassObjects().add(createClassObject(type));
+		if (isGenerating())
+			throw new IllegalStateException("Cannot create a top-level class object when generating another class object");
+		
+		getPackageObject().getClassObjects().add(createClassObject(type));
 	}
-
-	public void pushContainedClassObject(String type, String containingFeature) {
-		if (getCurrentClassObject() == null)
-			throw new IllegalStateException("Cannot create a contained class object when getCurrentObject is null");
+	
+	/**
+	 * Generates a new ClassObject whose type is determined by
+	 * inspecting the class of the parent ClassObject. If no 
+	 * feature with the name specified can be found in the 
+	 * class of the parent ClassObject, the newly generated
+	 * ClassObject will have type "UnknownType".  
+	 *   
+	 * @param containingFeature - the name of the feature in the
+	 * parent ClassObject that will contain the newly generated 
+	 * ClassObject.
+	 */
+	public void generateContainedClassObject(String containingFeature) {
+		generateContainedClassObject(HutnUtil.determineTypeOfFeatureFromMetaClass(getCurrentClassObject(), containingFeature, "UnknownType"),
+		                             containingFeature);
+	}
+	
+	/**
+	 * <p>Generates a new ClassObject with the type specified. The
+	 * newly generated ClassObject will be placed in a 
+	 * ContainmentSlot, with the feature specified, of the 
+	 * parent ClassObject.</p>
+	 * 
+	 * <p>If the parent ClassObject contains an existing ContainmentSlot 
+	 * with the feature specified, the newly generated ClassObject 
+	 * will be added to the values of that slot. Otherwise, a new 
+	 * ContainmentSlot with the feature specified will be created.</p>
+	 *  
+	 * @param type - the type of ClassObject to be generated.
+	 *   
+	 * @param containingFeature - the name of the feature in the
+	 * parent ClassObject that will contain the newly generated 
+	 * ClassObject.
+	 */
+	public void generateContainedClassObject(String type, String containingFeature) {
+		if (!isGenerating())
+			throw new IllegalStateException("Cannot generate a contained class object when not generating any other class objects");
 		
-		final ContainmentSlot containingSlot = findOrCreateContainmentSlotInParent(containingFeature);
+		containingSlot = stack.peek().findOrCreateContainmentSlot(containingFeature);
 		containingSlot.getClassObjects().add(createClassObject(type));
 	}
 	
@@ -77,31 +144,70 @@ public class SpecGenerator {
 		return stack.peek();
 	}
 
-	public void popCurrentClassObject() {
+	public void stopGeneratingCurrentClassObject() {
 		stack.pop();
 	}
 	
-	
-	public void addSlot(String featureName, String value) {
-		Slot<?> slot = null;
+	public void stopGeneratingAndDeleteCurrentClassObject() {
+		stopGeneratingCurrentClassObject();
 		
+		if (containingSlot != null) {
+			stack.peek().getSlots().remove(containingSlot);
+		}
+	}
+	
+	
+	public void addAttributeValue(String featureName, String value) {
+		Slot<?> slot = null;
+			
 		if (getCurrentClassObject().hasEClass()) {
 			slot = HutnUtil.determineSlotFromTypeOfMetaFeature(getCurrentClassObject(), cache, featureName, value);
-
+			
 		} else {
 			// TODO: use coerce?
+			throw new UnsupportedOperationException("Coercion not yet supported");
 		}
 
 		if (slot != null) {
-			getCurrentClassObject().getSlots().add(slot);
+			if (getCurrentClassObject().findSlot(featureName) == null) {
+				getCurrentClassObject().getSlots().add(slot);
+			
+			} else {
+				// TODO : Value needs converting (might not be a string)
+				// TODO : Slot could be a reference slot
+				((AttributeSlot)getCurrentClassObject().findSlot(featureName)).getValues().add(value);
+			}
 		}
 	}
+	
+	
+	private boolean isGenerating() {
+		return getCurrentClassObject() != null;
+	}
+	
+	private PackageObject getPackageObject() {
+		if (spec.getObjects().isEmpty())
+			return null;
+		
+		return spec.getObjects().get(0);
+	}
 
-
-	private PackageObject createPackageObject() {
+	private void addPackageObject(String nsUri) {
 		final PackageObject po = HutnFactory.eINSTANCE.createPackageObject();
 		spec.getObjects().add(po);
-		return po;
+		
+		if (nsUri != null) {
+			addNsUri(nsUri);
+
+			if (EPackage.Registry.INSTANCE.getEPackage(nsUri) != null)		
+				po.getMetamodel().add(EPackage.Registry.INSTANCE.getEPackage(nsUri));
+		}
+	}
+	
+	private void addNsUri(String nsUri) {
+		final NsUri nsUriObject = HutnFactory.eINSTANCE.createNsUri();
+		nsUriObject.setValue(nsUri);
+		spec.getNsUris().add(nsUriObject);
 	}
 	
 	private ClassObject createClassObject(String type) {
@@ -111,22 +217,5 @@ public class SpecGenerator {
 		stack.push(co);
 
 		return co;
-	}
-
-	private ContainmentSlot findOrCreateContainmentSlotInParent(String feature) {
-		return findOrCreateContainmentSlot(stack.peek(), feature);
-	}
-
-	private ContainmentSlot findOrCreateContainmentSlot(ClassObject owner, String feature) {
-		ContainmentSlot slot = (ContainmentSlot)owner.findSlot(feature);
-
-		if (slot == null) {
-			slot = HutnFactory.eINSTANCE.createContainmentSlot();
-			slot.setFeature(feature);
-			owner.getSlots().add(slot);
-
-		}
-
-		return slot;
 	}
 }

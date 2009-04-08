@@ -65,7 +65,7 @@ public abstract class HutnUtil {
     
 	private static AttributeSlot determineSlotFromEAttribute(EClassifier type, String value) {
 		final AttributeSlot slot = HutnFactory.eINSTANCE.createAttributeSlot();
- 
+		
 		final Object convertedValue;
 
 		if (type instanceof EDataType) {

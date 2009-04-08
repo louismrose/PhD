@@ -16,7 +16,9 @@ package org.eclipse.epsilon.hutn.xmi.parser.sax;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.xmi.parser.generator.SpecGenerator;
 import org.eclipse.epsilon.hutn.xmi.util.HutnUtil;
+import org.eclipse.epsilon.hutn.xmi.util.StringUtil;
 import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class SpecGeneratingContentHandler extends DefaultHandler {
@@ -36,44 +38,69 @@ public class SpecGeneratingContentHandler extends DefaultHandler {
 	}
 
 	private boolean firstElement = true;
+	private boolean alreadyPoppedCurrentElement = false;
 	
 	@Override
-    public void startElement (String uri, String name, String qName, Attributes atts) {   	
+    public void startElement (String uri, String name, String qName, Attributes atts) {
+		alreadyPoppedCurrentElement = false;
+		
     	if (firstElement) {
-	    	generator.pushTopLevelClassObject(name);
+	    	generator.generateTopLevelClassObject(name);
 	    	firstElement = false;
     	
     	} else {
+    		
     		if (atts.getIndex("xsi:type") >= 0) {
-    			generator.pushContainedClassObject(getLocalName(atts.getValue("xsi:type")), name);
+    			generator.generateContainedClassObject(getLocalName(atts.getValue("xsi:type")), name);
+    			
 			} else {
 				// XMI doesn't include an xsi:type
-				final String type = HutnUtil.determineTypeOfFeatureFromMetaClass(generator.getCurrentClassObject(), name, "UnknownType");
-				generator.pushContainedClassObject(type, name);
+				generator.generateContainedClassObject(name);
 			}
+    		
+    		
     	}
     	
     	processAttributes(atts);
     }
+	
+    @Override
+	public void characters(char[] ch, int start, int length) throws SAXException {
+    	final String text = new String(ch, start, length);
+    	
+    	if (StringUtil.isNotWhitespace(text)) {
+			processMultiValuedAttribute(text);
+    	}
+	}
+    
+    @Override
+    public void endElement (String uri, String name, String qName) {
+    	if (!alreadyPoppedCurrentElement) {
+    		generator.stopGeneratingCurrentClassObject();
+    	}
+    }
+    
+    private void processMultiValuedAttribute(String value) {
+    	// startElement will have pushed a new class object but
+    	// we now know that this element is for an attribute value
+    	generator.stopGeneratingAndDeleteCurrentClassObject();
+    	alreadyPoppedCurrentElement = true;
+    	
+    	// TODO: This shouldn't be hard-coded
+    	generator.addAttributeValue("address", value);
+    }
+    
 
-    private void processAttributes(Attributes atts) {
+	private void processAttributes(Attributes atts) {
 		for (int index = 0; index < atts.getLength(); index++) {
 			
 			if (atts.getQName(index).startsWith("xmi") || atts.getQName(index).startsWith("xsi")) {
 			  	  continue;
 			}
 			
-			generator.addSlot(atts.getLocalName(index), atts.getValue(index));
+			generator.addAttributeValue(atts.getLocalName(index), atts.getValue(index));
 		}
 	}
-
-
-
-	@Override
-    public void endElement (String uri, String name, String qName) {
-    	generator.popCurrentClassObject();
-    }
-    
     
     
     private static String getLocalName(String qualifiedName) {
