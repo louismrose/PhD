@@ -16,14 +16,14 @@ package org.eclipse.epsilon.hutn.xmi.test;
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
 
-import org.eclipse.epsilon.hutn.xmi.test.acceptance.HutnXmiAcceptanceTestSuite;
+import org.eclipse.epsilon.hutn.xmi.test.integration.HutnXmiIntegrationTestSuite;
 import org.eclipse.epsilon.hutn.xmi.test.unit.HutnXmiUnitTestSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({HutnXmiUnitTestSuite.class, HutnXmiAcceptanceTestSuite.class})
+@SuiteClasses({HutnXmiUnitTestSuite.class, HutnXmiIntegrationTestSuite.class})
 public class HutnXmiTestSuite {
 	public static Test suite() {
 		return new JUnit4TestAdapter(HutnXmiUnitTestSuite.class);
