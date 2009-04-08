@@ -19,31 +19,42 @@ import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
 import org.eclipse.epsilon.hutn.model.hutn.HutnFactory;
 import org.eclipse.epsilon.hutn.model.hutn.NsUri;
 import org.eclipse.epsilon.hutn.model.hutn.PackageObject;
+import org.eclipse.epsilon.hutn.model.hutn.Slot;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
+import org.eclipse.epsilon.hutn.xmi.util.ClassObjectCache;
+import org.eclipse.epsilon.hutn.xmi.util.EmfUtil;
+import org.eclipse.epsilon.hutn.xmi.util.HutnUtil;
 import org.eclipse.epsilon.hutn.xmi.util.Stack;
 
 public class SpecGenerator {
 
 	private final Spec spec = HutnFactory.eINSTANCE.createSpec();
 	private final Stack<ClassObject> stack = new Stack<ClassObject>();
+	private final ClassObjectCache cache = new ClassObjectCache();
 
+	public SpecGenerator() {
+		EmfUtil.createResource(spec);
+	}
+	
 	public Spec getSpec() {
 		return spec;
 	}
 
 	public void initialise() {
-		createPackageObject();
+		initialise(null);
 	}
 	
 	public void initialise(String nsUri) {
-		final NsUri nsUriObject = HutnFactory.eINSTANCE.createNsUri();
-		nsUriObject.setValue(nsUri);
-		spec.getNsUris().add(nsUriObject);
-
 		final PackageObject po = createPackageObject();
 		
-		if (EPackage.Registry.INSTANCE.getEPackage(nsUri) != null)		
-			po.getMetamodel().add(EPackage.Registry.INSTANCE.getEPackage(nsUri));
+		if (nsUri != null) {
+			final NsUri nsUriObject = HutnFactory.eINSTANCE.createNsUri();
+			nsUriObject.setValue(nsUri);
+			spec.getNsUris().add(nsUriObject);
+
+			if (EPackage.Registry.INSTANCE.getEPackage(nsUri) != null)		
+				po.getMetamodel().add(EPackage.Registry.INSTANCE.getEPackage(nsUri));
+		}
 	}
 
 	public void pushTopLevelClassObject(String type) {
@@ -68,6 +79,22 @@ public class SpecGenerator {
 
 	public void popCurrentClassObject() {
 		stack.pop();
+	}
+	
+	
+	public void addSlot(String featureName, String value) {
+		Slot<?> slot = null;
+		
+		if (getCurrentClassObject().hasEClass()) {
+			slot = HutnUtil.determineSlotFromTypeOfMetaFeature(getCurrentClassObject(), cache, featureName, value);
+
+		} else {
+			// TODO: use coerce?
+		}
+
+		if (slot != null) {
+			getCurrentClassObject().getSlots().add(slot);
+		}
 	}
 
 

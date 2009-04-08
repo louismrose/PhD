@@ -15,7 +15,7 @@ package org.eclipse.epsilon.hutn.xmi.util;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClassifier;
-import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
 import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
@@ -40,7 +40,7 @@ public abstract class HutnUtil {
     	return defaultType;
 	}
 	
-	public static Slot<?> determineSlotFromTypeOfMetaFeature(ClassObject classObject, String featureName, String value) {
+	public static Slot<?> determineSlotFromTypeOfMetaFeature(ClassObject classObject, ClassObjectCache cache, String featureName, String value) {
 		if (classObject.hasEClass()) {
 	    	for (EStructuralFeature feature : classObject.getEClass().getEAllStructuralFeatures()) {
 	    		if (featureName.equals(feature.getName())) {
@@ -51,7 +51,7 @@ public abstract class HutnUtil {
 	    				slot = determineSlotFromEAttribute(feature.getEType(), value);
 	    				
 	    			} else {
-	    				slot = determineSlotFromEReference(value);
+	    				slot = determineSlotFromEReference(cache, value);
 	    			}
 	    			
 	    			slot.setFeature(featureName);    			
@@ -65,41 +65,26 @@ public abstract class HutnUtil {
     
 	private static AttributeSlot determineSlotFromEAttribute(EClassifier type, String value) {
 		final AttributeSlot slot = HutnFactory.eINSTANCE.createAttributeSlot();
-
-		final String typeName = type.getInstanceClassName(); 
+ 
 		final Object convertedValue;
 
-		if (type instanceof EEnum) {
-			convertedValue = ((EEnum)type).getEEnumLiteralByLiteral(value);
-
-			if (convertedValue == null)
-				throw new IllegalArgumentException("Expected an enumeration value from " + typeName + "  but received: " + value);
-
-		} else if ("java.lang.Integer".equals(typeName) || "int".equals(typeName)) {
-			convertedValue = Integer.parseInt(value);
-
-		} else if ("java.lang.Float".equals(typeName) || "float".equals(typeName)) {
-			convertedValue = Float.parseFloat(value);
-
-		} else if ("java.lang.Boolean".equals(typeName) || "boolean".equals(typeName)) {
-			if ("true".equals(value))
-				convertedValue = true;
-			else if ("false".equals(value))
-				convertedValue = false;
-			else
-				throw new IllegalArgumentException("Expected a boolean but received: " + value);
-
+		if (type instanceof EDataType) {
+			convertedValue = EmfUtil.createFromString((EDataType)type, value);
+		
 		} else {
 			convertedValue = value;
 		}
-
+		
 		slot.getValues().add(convertedValue);
 		
 		return slot;
 	}
 	
-	private static ReferenceSlot determineSlotFromEReference(String value) {
-		// TODO: will have to use a cache between xmi id and class object
-		return HutnFactory.eINSTANCE.createReferenceSlot();
+	private static ReferenceSlot determineSlotFromEReference(ClassObjectCache cache, String value) {
+		final ReferenceSlot slot = HutnFactory.eINSTANCE.createReferenceSlot();		
+		
+		slot.getValues().add(cache.get(value).getIdentifier());
+		
+		return slot;
 	}
 }

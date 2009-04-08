@@ -13,7 +13,6 @@
  */
 package org.eclipse.epsilon.hutn.xmi.parser.sax;
 
-import org.eclipse.epsilon.hutn.model.hutn.Slot;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.xmi.parser.generator.SpecGenerator;
 import org.eclipse.epsilon.hutn.xmi.util.HutnUtil;
@@ -60,24 +59,11 @@ public class SpecGeneratingContentHandler extends DefaultHandler {
     private void processAttributes(Attributes atts) {
 		for (int index = 0; index < atts.getLength(); index++) {
 			
-			if (atts.getQName(index).startsWith("xmi") ||
-				atts.getQName(index).startsWith("xsi")) {
+			if (atts.getQName(index).startsWith("xmi") || atts.getQName(index).startsWith("xsi")) {
 			  	  continue;
 			}
 			
-			Slot<?> slot = null;
-			
-			
-			if (generator.getCurrentClassObject().hasEClass()) {
-				slot = HutnUtil.determineSlotFromTypeOfMetaFeature(generator.getCurrentClassObject(), atts.getLocalName(index), atts.getValue(index));
-				
-			} else {
-				// TODO: use coerce?
-			}
-			
-			if (slot != null) {
-				generator.getCurrentClassObject().getSlots().add(slot);
-			}
+			generator.addSlot(atts.getLocalName(index), atts.getValue(index));
 		}
 	}
 

@@ -13,63 +13,23 @@
  */
 package org.eclipse.epsilon.hutn.xmi.util;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Collections;
-
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.XMIResource;
-import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 public abstract class EmfUtil {
 
 	private EmfUtil() {}
 	
-	public static XMIResource loadResource(String xml) throws IOException {
-		final InputStream xmlStream = new ByteArrayInputStream(xml.getBytes("UTF-8"));
-		final XMIResource resource  = (XMIResource)createResourceSet().createResource(URI.createURI("foo.model"));
-		
-		resource.load(xmlStream,
-		              Collections.singletonMap(XMLResource.OPTION_RECORD_UNKNOWN_FEATURE, true));
-		
-		return resource;
+	public static Object createFromString(EDataType type, String value) {
+		return type.getEPackage().getEFactoryInstance().createFromString((EDataType)type, value);
 	}
 	
-	public static XMIResource loadResource(java.net.URI uri) {
-		return loadResource(URI.createURI(uri.toString()));
-	}
-	
-	public static XMIResource loadResource(URI uri) {
-		return (XMIResource)createResourceSet().getResource(uri, true);
-	}
-	
-	public static ResourceSet createResourceSet() {
-		final ResourceSet resourceSet = new ResourceSetImpl();
 		
-		// Register the appropriate resource factory to handle all file extensions.
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put
-			(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
-
-		resourceSet.getLoadOptions().put(XMLResource.OPTION_RECORD_UNKNOWN_FEATURE, true);
-		
-//		final XMLOptions xmlOptions = new XMLOptionsImpl();
-//		xmlOptions.setProcessAnyXML(true);
-//		resourceSet.getLoadOptions().put(XMLResource.OPTION_XML_OPTIONS, xmlOptions);
-		
-		
-//		resourceSet.getLoadOptions().put(XMLResource.OPTION_PROCESS_DANGLING_HREF, XMLResource.OPTION_PROCESS_DANGLING_HREF_RECORD);
-
-		return resourceSet;
-	}
-	
-	
 	/* Copied from EMC EmfUtil */
 	private final static URI DEFAULT_URI = URI.createFileURI("foo.ecore");
 	
