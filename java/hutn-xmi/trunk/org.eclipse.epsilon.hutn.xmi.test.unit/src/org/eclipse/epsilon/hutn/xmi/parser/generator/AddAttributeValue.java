@@ -50,4 +50,12 @@ public class AddAttributeValue extends HutnTestWithFamiliesMetaModel {
 	public void unknownAttribute() {
 		generator.addAttributeValue("foo", "bar");
 	}
+	
+	@Test
+	public void addSecondValueToSameAttribute() {
+		generator.addAttributeValue("address", "10 Main Street");
+		generator.addAttributeValue("address", "123 Heslington Road");
+		
+		slotTest(generator.getCurrentClassObject().getSlots().get(0), AttributeSlot.class, "address", "10 Main Street", "123 Heslington Road");
+	}
 }

@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
 import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
-import org.eclipse.epsilon.hutn.model.hutn.HutnFactory;
 import org.eclipse.epsilon.hutn.model.hutn.ReferenceSlot;
 import org.eclipse.epsilon.hutn.model.hutn.Slot;
 
@@ -50,14 +49,14 @@ public abstract class HutnUtil {
 		
 		if (feature instanceof EReference) {
 			if (((EReference)feature).isContainment()) {
-				slot = HutnFactory.eINSTANCE.createContainmentSlot();
+				slot = classObject.findOrCreateContainmentSlot(featureName);
 			
 			} else {
-				slot = HutnFactory.eINSTANCE.createReferenceSlot();
+				slot = classObject.findOrCreateReferenceSlot(featureName);
 			}
 			
 		} else {
-			slot = HutnFactory.eINSTANCE.createAttributeSlot();
+			slot = classObject.findOrCreateAttributeSlot(featureName);
 		}
 		
 		slot.setFeature(featureName);    			
