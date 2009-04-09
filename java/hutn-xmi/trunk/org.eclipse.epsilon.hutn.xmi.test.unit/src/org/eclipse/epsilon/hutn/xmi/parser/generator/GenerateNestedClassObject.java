@@ -35,11 +35,13 @@ public class GenerateNestedClassObject extends HutnTestWithFamiliesMetaModel {
 	
 	@Test
 	public void generatesNestedClassObject() {
-		generator.generateTopLevelClassObject("Family");
-		generator.generateContainedClassObject("members", "Person");
+		generator.generateTopLevelClassObject("f", "Family");
+		generator.generateContainedClassObject("members", "p", "Person");
 		
 		assertEquals(1, getFirstPackage().getClassObjects().size());
 		assertEquals(1, getFirstClassObject().getSlots().size());
+		
+		assertEquals("p", getNestedClassObject().getIdentifier());
 		
 		slotTest(getFirstClassObject().getSlots().get(0), ContainmentSlot.class, "members", "Person");
 		
@@ -48,29 +50,29 @@ public class GenerateNestedClassObject extends HutnTestWithFamiliesMetaModel {
 	
 	@Test(expected=IllegalStateException.class)
 	public void cannotCreateUnnestedContainedClassObject() {
-		generator.generateContainedClassObject("members", "Person");
+		generator.generateContainedClassObject("members", "p", "Person");
 	}
 	
 	@Test
 	public void canInferTypeFromMetamodel() {
-		generator.generateTopLevelClassObject("Family");
-		generator.generateContainedClassObject("members");
+		generator.generateTopLevelClassObject("f", "Family");
+		generator.generateContainedClassObject("members", "p");
 		
 		slotTest(getFirstClassObject().getSlots().get(0), ContainmentSlot.class, "members", "Person");
 	}
 	
 	@Test
 	public void inferTypeForNonContainment() {
-		generator.generateTopLevelClassObject("Family");
-		generator.generateContainedClassObject("name");
+		generator.generateTopLevelClassObject("f", "Family");
+		generator.generateContainedClassObject("name", "n");
 		
 		slotTest(getFirstClassObject().getSlots().get(0), ContainmentSlot.class, "name", "UnknownType");
 	}
 	
 	@Test
 	public void cannotInferTypeForUnknownMetamodelFeature() {
-		generator.generateTopLevelClassObject("Family");
-		generator.generateContainedClassObject("foobars");
+		generator.generateTopLevelClassObject("f", "Family");
+		generator.generateContainedClassObject("foobars", "x");
 		
 		slotTest(getFirstClassObject().getSlots().get(0), ContainmentSlot.class, "foobars", "UnknownType");
 	}

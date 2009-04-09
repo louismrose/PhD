@@ -22,7 +22,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-public class ManyValues extends HutnXmiBridgeIntegrationTest {
+public class ManyStringValues extends HutnXmiBridgeIntegrationTest {
 
 	@BeforeClass
 	public static void setup() throws HutnXmiBridgeException {

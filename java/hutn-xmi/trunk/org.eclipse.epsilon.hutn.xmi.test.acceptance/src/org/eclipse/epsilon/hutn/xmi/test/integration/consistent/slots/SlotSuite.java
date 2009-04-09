@@ -23,7 +23,8 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({SingleValuedSlotSuite.class, ManyValuedSlotSuite.class})
+@SuiteClasses({SingleValuedSlotSuite.class, ManyValuedSlotSuite.class,
+               SeveralSlots.class})
 public class SlotSuite {
 	public static Test suite() {
 		return new JUnit4TestAdapter(SlotSuite.class);

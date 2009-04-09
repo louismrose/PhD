@@ -22,7 +22,6 @@ import org.eclipse.epsilon.hutn.model.hutn.NsUri;
 import org.eclipse.epsilon.hutn.model.hutn.PackageObject;
 import org.eclipse.epsilon.hutn.model.hutn.Slot;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
-import org.eclipse.epsilon.hutn.xmi.util.ClassObjectCache;
 import org.eclipse.epsilon.hutn.xmi.util.EmfUtil;
 import org.eclipse.epsilon.hutn.xmi.util.HutnUtil;
 import org.eclipse.epsilon.hutn.xmi.util.Stack;
@@ -69,7 +68,6 @@ public class SpecGenerator {
 
 	private final Spec spec = HutnFactory.eINSTANCE.createSpec();
 	private final Stack<ClassObject> stack = new Stack<ClassObject>();
-	private final ClassObjectCache cache = new ClassObjectCache();
 
 	private ContainmentSlot containingSlot;
 	
@@ -89,14 +87,14 @@ public class SpecGenerator {
 		addPackageObject(nsUri);
 	}
 
-	public void generateTopLevelClassObject(String type) {
+	public void generateTopLevelClassObject(String identifier, String type) {
 		if (getPackageObject() == null)
 			throw new IllegalStateException("Cannot create a top-level class object until initialise has been called");
 		
 		if (isGenerating())
 			throw new IllegalStateException("Cannot create a top-level class object when generating another class object");
 		
-		getPackageObject().getClassObjects().add(createClassObject(type));
+		getPackageObject().getClassObjects().add(createClassObject(identifier, type));
 	}
 	
 	/**
@@ -107,17 +105,23 @@ public class SpecGenerator {
 	 * ClassObject will have type "UnknownType".  
 	 *   
 	 * @param containingFeature - the name of the feature in the
-	 * parent ClassObject that will contain the newly generated 
+	 * parent ClassObject that will contain the newly generated
+	 * 
+	 * @param identifier - the identifier for the ClassObject to
+	 * be created. Identifiers are used when adding values to 
+	 * reference slots. null is allowed, but this will create a
+	 * ClassObject that cannot be referenced.
+	 * 
 	 * ClassObject.
 	 */
-	public void generateContainedClassObject(String containingFeature) {
+	public void generateContainedClassObject(String containingFeature, String identifier) {
 		EStructuralFeature feature = HutnUtil.determineFeatureFromMetaClass(getCurrentClassObject(), containingFeature);
 		
 		if (EmfUtil.isContainmentReference(feature)) {
-			generateContainedClassObject(containingFeature, feature.getEType().getName());
+			generateContainedClassObject(containingFeature, identifier, feature.getEType().getName());
 			
 		} else {
-			generateContainedClassObject(containingFeature, "UnknownType");
+			generateContainedClassObject(containingFeature, identifier, "UnknownType");
 		}
 	}
 	
@@ -137,13 +141,18 @@ public class SpecGenerator {
 	 * @param containingFeature - the name of the feature in the
 	 * parent ClassObject that will contain the newly generated 
 	 * ClassObject.
+	 * 
+	 * @param identifier - the identifier for the ClassObject to
+	 * be created. Identifiers are used when adding values to 
+	 * reference slots. null is allowed, but this will create a
+	 * ClassObject that cannot be referenced.
 	 */
-	public void generateContainedClassObject(String containingFeature, String type) {
+	public void generateContainedClassObject(String containingFeature, String identifier, String type) {
 		if (!isGenerating())
 			throw new IllegalStateException("Cannot generate a contained class object when not generating any other class objects");
 		
 		containingSlot = stack.peek().findOrCreateContainmentSlot(containingFeature);
-		containingSlot.getClassObjects().add(createClassObject(type));
+		containingSlot.getClassObjects().add(createClassObject(identifier, type));
 	}
 	
 	public ClassObject getCurrentClassObject() {
@@ -213,9 +222,13 @@ public class SpecGenerator {
 		spec.getNsUris().add(nsUriObject);
 	}
 	
-	private ClassObject createClassObject(String type) {
+	private ClassObject createClassObject(String identifier, String type) {
 		final ClassObject co = HutnFactory.eINSTANCE.createClassObject();
 		co.setType(type);
+		
+		if (identifier != null) {
+			co.setIdentifier(identifier);
+		}
 
 		stack.push(co);
 

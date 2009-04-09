@@ -30,7 +30,21 @@ public class AddValueToReferenceSlot {
 		
 		HutnUtil.addValueToSlot(slot, "fido");
 		
+		assertEquals(1, slot.getValues().size());
 		assertEquals("fido", slot.getValues().get(0));
+	}
+	
+	@Test
+	public void addMultipleValuesToReferenceSlot() {
+		final ReferenceSlot slot = new ReferenceSlotStub(FamiliesPackage.eINSTANCE.getFamily_Pets());
+		
+		HutnUtil.addValueToSlot(slot, "fido lassie goldy");
+		
+		assertEquals(3, slot.getValues().size());
+		
+		assertEquals("fido",   slot.getValues().get(0));
+		assertEquals("lassie", slot.getValues().get(1));
+		assertEquals("goldy",  slot.getValues().get(2));
 	}
 
 	

@@ -33,8 +33,10 @@ public abstract class HutnTestUtil {
 		
 		
 		if (slot instanceof ClassObjectSlot<?>) {
+			assertEquals(expectedValues.length, ((ClassObjectSlot<?>)slot).getClassObjects().size());
+			
 			// compare types of class objects
-			for (int index = 0; index < ((ClassObjectSlot<?>)slot).getClassObjects().size(); index++) {
+			for (int index = 0; index < expectedValues.length; index++) {
 				final ClassObject value     = ((ClassObjectSlot<?>)slot).getClassObjects().get(index);
 				final Object expectedValue = expectedValues[index];
 				

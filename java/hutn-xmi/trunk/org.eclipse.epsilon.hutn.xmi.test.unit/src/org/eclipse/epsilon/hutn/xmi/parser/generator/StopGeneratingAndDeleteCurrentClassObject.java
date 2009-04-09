@@ -28,14 +28,14 @@ public class StopGeneratingAndDeleteCurrentClassObject {
 	public void setup() {
 		generator = new SpecGenerator();
 		generator.initialise();
-		generator.generateTopLevelClassObject("parent");
+		generator.generateTopLevelClassObject("p", "parent");
 	}
 	
 	@Test
 	public void parentShouldNoLongerContainSlot() {
 		final ClassObject parent = generator.getCurrentClassObject();
 		
-		generator.generateContainedClassObject("foos", "foo");
+		generator.generateContainedClassObject("f", "foos", "foo");
 		generator.stopGeneratingAndDeleteCurrentClassObject();
 		
 		assertEquals(parent, generator.getCurrentClassObject());

@@ -21,7 +21,8 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ManyValues.class})
+@SuiteClasses({ManyStringValues.class, ManyIntegerValues.class,
+               ManyReferenceValues.class})
 public class ManyValuedSlotSuite {
 	public static Test suite() {
 		return new JUnit4TestAdapter(ManyValuedSlotSuite.class);

@@ -27,7 +27,7 @@ public class StopGeneratingCurrentClassObject {
 	public void setup() {
 		generator = new SpecGenerator();
 		generator.initialise();
-		generator.generateTopLevelClassObject("parent");
+		generator.generateTopLevelClassObject("p", "parent");
 	}
 	
 	@Test
@@ -41,7 +41,7 @@ public class StopGeneratingCurrentClassObject {
 	public void parentAfterSimpleNesting() {
 		final ClassObject parent = generator.getCurrentClassObject();
 		
-		generator.generateContainedClassObject("foos", "foo");
+		generator.generateContainedClassObject("foos", "f", "foo");
 		generator.stopGeneratingCurrentClassObject();
 		
 		assertEquals(parent, generator.getCurrentClassObject());
@@ -51,10 +51,10 @@ public class StopGeneratingCurrentClassObject {
 	public void parentAfterTwoSimpleNestings() {
 		final ClassObject parent = generator.getCurrentClassObject();
 		
-		generator.generateContainedClassObject("foos", "foo");
+		generator.generateContainedClassObject("foos", "f", "foo");
 		generator.stopGeneratingCurrentClassObject();
 		
-		generator.generateContainedClassObject("bars", "bar");
+		generator.generateContainedClassObject("bars", "b", "bar");
 		generator.stopGeneratingCurrentClassObject();
 		
 		assertEquals(parent, generator.getCurrentClassObject());
@@ -64,10 +64,10 @@ public class StopGeneratingCurrentClassObject {
 	public void secondLevelAfterThirdLevelNesting() {
 		final ClassObject foo;
 		
-		generator.generateContainedClassObject("foos", "foo");
+		generator.generateContainedClassObject("foos", "f", "foo");
 		foo = generator.getCurrentClassObject();
 		
-		generator.generateContainedClassObject("bars", "bar");
+		generator.generateContainedClassObject("bars", "b", "bar");
 		generator.stopGeneratingCurrentClassObject();
 		
 		assertEquals(foo, generator.getCurrentClassObject());

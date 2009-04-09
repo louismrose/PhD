@@ -38,23 +38,24 @@ public class SpecGeneratingContentHandler extends DefaultHandler {
 
 	private boolean firstElement = true;
 	private boolean alreadyPoppedCurrentElement = false;
+	private String currentElementName;
 	
 	@Override
     public void startElement (String uri, String name, String qName, Attributes atts) {
-		alreadyPoppedCurrentElement = false;
+		currentElementName = name;
 		
     	if (firstElement) {
-	    	generator.generateTopLevelClassObject(name);
+	    	generator.generateTopLevelClassObject(atts.getValue("xmi:id"), name);
 	    	firstElement = false;
     	
     	} else {
     		
     		if (atts.getIndex("xsi:type") >= 0) {
-    			generator.generateContainedClassObject(name, getLocalName(atts.getValue("xsi:type")));
+    			generator.generateContainedClassObject(name, atts.getValue("xmi:id"), getLocalName(atts.getValue("xsi:type")));
     			
 			} else {
 				// XMI doesn't include an xsi:type
-				generator.generateContainedClassObject(name);
+				generator.generateContainedClassObject(name, atts.getValue("xmi:id"));
 			}
     		
     		
@@ -77,16 +78,19 @@ public class SpecGeneratingContentHandler extends DefaultHandler {
     	if (!alreadyPoppedCurrentElement) {
     		generator.stopGeneratingCurrentClassObject();
     	}
+    	
+    	alreadyPoppedCurrentElement = false;
     }
     
     private void processMultiValuedAttribute(String value) {
-    	// startElement will have pushed a new class object but
-    	// we now know that this element is for an attribute value
+    	// At this point, startElement will have pushed a new class object
+  
+    	// remove the pushed class object
     	generator.stopGeneratingAndDeleteCurrentClassObject();
     	alreadyPoppedCurrentElement = true;
     	
-    	// TODO: This shouldn't be hard-coded
-    	generator.addAttributeValue("address", value);
+    	// and replace with an attribute value
+    	generator.addAttributeValue(currentElementName, value);
     }
     
 

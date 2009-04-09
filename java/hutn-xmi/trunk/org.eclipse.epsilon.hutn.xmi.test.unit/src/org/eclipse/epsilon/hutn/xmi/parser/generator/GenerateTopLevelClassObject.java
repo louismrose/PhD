@@ -27,12 +27,17 @@ public class GenerateTopLevelClassObject {
 	@BeforeClass
 	public static void setup() {
 		generator.initialise();
-		generator.generateTopLevelClassObject("foo");
+		generator.generateTopLevelClassObject("f", "foo");
 	}
 	
 	@Test
 	public void packageShouldContainOneClassObject() {
 		assertEquals(1, getFirstPackage().getClassObjects().size());
+	}
+	
+	@Test
+	public void classObjectShouldHaveCorrectIdentifier() {
+		assertEquals("f", getFirstClassObject().getIdentifier());
 	}
 	
 	@Test
@@ -47,7 +52,7 @@ public class GenerateTopLevelClassObject {
 	
 	@Test(expected=IllegalStateException.class)
 	public void cannotCreateNestedTopLevelClassObject() {
-		generator.generateTopLevelClassObject("bar");
+		generator.generateTopLevelClassObject("b", "bar");
 	}
 	
 	

@@ -28,7 +28,7 @@ public class AddAttributeValue extends HutnTestWithFamiliesMetaModel {
 	public void setup() {
 		generator = new SpecGenerator();
 		generator.initialise("families");
-		generator.generateTopLevelClassObject("Family");
+		generator.generateTopLevelClassObject("f", "Family");
 	}
 	
 	@Test
@@ -40,7 +40,7 @@ public class AddAttributeValue extends HutnTestWithFamiliesMetaModel {
 	
 	@Test
 	public void addsSlotToNestedClassObject() {
-		generator.generateContainedClassObject("members", "Person");
+		generator.generateContainedClassObject("p", "members", "Person");
 		generator.addAttributeValue("name", "John");
 		
 		slotTest(generator.getCurrentClassObject().getSlots().get(0), AttributeSlot.class, "name", "John");

@@ -13,6 +13,8 @@
  */
 package org.eclipse.epsilon.hutn.xmi.util;
 
+import java.util.Arrays;
+
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -85,6 +87,6 @@ public abstract class HutnUtil {
 	}
 	
 	public static void addValueToSlot(ReferenceSlot slot, String value) {
-		slot.getValues().add(value);
+		slot.getValues().addAll(Arrays.asList(value.split(" ")));
 	}
 }
