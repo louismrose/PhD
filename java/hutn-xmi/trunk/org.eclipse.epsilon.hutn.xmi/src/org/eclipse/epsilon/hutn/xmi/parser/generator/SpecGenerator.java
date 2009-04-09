@@ -14,6 +14,7 @@
 package org.eclipse.epsilon.hutn.xmi.parser.generator;
 
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
 import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
 import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
@@ -111,8 +112,14 @@ public class SpecGenerator {
 	 * ClassObject.
 	 */
 	public void generateContainedClassObject(String containingFeature) {
-		generateContainedClassObject(HutnUtil.determineTypeOfFeatureFromMetaClass(getCurrentClassObject(), containingFeature, "UnknownType"),
-		                             containingFeature);
+		EStructuralFeature feature = HutnUtil.determineFeatureFromMetaClass(getCurrentClassObject(), containingFeature);
+		
+		if (EmfUtil.isContainmentReference(feature)) {
+			generateContainedClassObject(containingFeature, feature.getEType().getName());
+			
+		} else {
+			generateContainedClassObject(containingFeature, "UnknownType");
+		}
 	}
 	
 	/**
@@ -132,7 +139,7 @@ public class SpecGenerator {
 	 * parent ClassObject that will contain the newly generated 
 	 * ClassObject.
 	 */
-	public void generateContainedClassObject(String type, String containingFeature) {
+	public void generateContainedClassObject(String containingFeature, String type) {
 		if (!isGenerating())
 			throw new IllegalStateException("Cannot generate a contained class object when not generating any other class objects");
 		
@@ -158,26 +165,23 @@ public class SpecGenerator {
 	
 	
 	public void addAttributeValue(String featureName, String value) {
-		Slot<?> slot = null;
-			
-		if (getCurrentClassObject().hasEClass()) {
-			slot = HutnUtil.determineSlotFromTypeOfMetaFeature(getCurrentClassObject(), cache, featureName, value);
-			
-		} else {
+		final Slot<?> slot = determineSlot(featureName);
+		
+		getCurrentClassObject().getSlots().add(slot);
+		
+		HutnUtil.addValueToSlot(slot, value);
+	}
+	
+	
+	private Slot<?> determineSlot(String featureName) {
+		Slot<?> slot = HutnUtil.determineSlotFromMetaFeature(getCurrentClassObject(), featureName);
+		
+		if (slot == null) {
 			// TODO: use coerce?
 			throw new UnsupportedOperationException("Coercion not yet supported");
 		}
-
-		if (slot != null) {
-			if (getCurrentClassObject().findSlot(featureName) == null) {
-				getCurrentClassObject().getSlots().add(slot);
-			
-			} else {
-				// TODO : Value needs converting (might not be a string)
-				// TODO : Slot could be a reference slot
-				((AttributeSlot)getCurrentClassObject().findSlot(featureName)).getValues().add(value);
-			}
-		}
+		
+		return slot;
 	}
 	
 	

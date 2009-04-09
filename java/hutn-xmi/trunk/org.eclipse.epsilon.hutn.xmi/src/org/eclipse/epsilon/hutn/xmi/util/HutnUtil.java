@@ -13,9 +13,8 @@
  */
 package org.eclipse.epsilon.hutn.xmi.util;
 
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
 import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
@@ -28,63 +27,65 @@ public abstract class HutnUtil {
 
 	private HutnUtil() {}
 	
-	public static String determineTypeOfFeatureFromMetaClass(ClassObject classObject, String featureName, String defaultType) {
+	public static EStructuralFeature determineFeatureFromMetaClass(ClassObject classObject, String featureName) {
     	if (classObject.hasEClass()) {
     		for (EStructuralFeature feature : classObject.getEClass().getEAllStructuralFeatures()) {
     			if (featureName.equals(feature.getName())) {
-    				return feature.getEType().getName();
+    				return feature;
     			}
     		}
     	}
     	
-    	return defaultType;
+    	return null;
 	}
 	
-	public static Slot<?> determineSlotFromTypeOfMetaFeature(ClassObject classObject, ClassObjectCache cache, String featureName, String value) {
-		if (classObject.hasEClass()) {
-	    	for (EStructuralFeature feature : classObject.getEClass().getEAllStructuralFeatures()) {
-	    		if (featureName.equals(feature.getName())) {
-	    			
-	    			final Slot<?> slot;
-	    			
-	    			if (feature instanceof EAttribute) {
-	    				slot = determineSlotFromEAttribute(feature.getEType(), value);
-	    				
-	    			} else {
-	    				slot = determineSlotFromEReference(cache, value);
-	    			}
-	    			
-	    			slot.setFeature(featureName);    			
-	    			return slot;
-	    		}
-	    	}
-		}
-    	
-    	return null;
-    }
-    
-	private static AttributeSlot determineSlotFromEAttribute(EClassifier type, String value) {
-		final AttributeSlot slot = HutnFactory.eINSTANCE.createAttributeSlot();
+	public static Slot<?> determineSlotFromMetaFeature(ClassObject classObject, String featureName) {
+		final EStructuralFeature feature = determineFeatureFromMetaClass(classObject, featureName); 
 		
-		final Object convertedValue;
-
-		if (type instanceof EDataType) {
-			convertedValue = EmfUtil.createFromString((EDataType)type, value);
+		if (feature == null)
+			return null;
+		
+		
+		final Slot<?> slot;
+		
+		if (feature instanceof EReference) {
+			if (((EReference)feature).isContainment()) {
+				slot = HutnFactory.eINSTANCE.createContainmentSlot();
+			
+			} else {
+				slot = HutnFactory.eINSTANCE.createReferenceSlot();
+			}
+			
+		} else {
+			slot = HutnFactory.eINSTANCE.createAttributeSlot();
+		}
+		
+		slot.setFeature(featureName);    			
+	    return slot;
+    }
+	
+	public static void addValueToSlot(Slot<?> slot, String value) {
+		if (slot instanceof AttributeSlot) {
+			addValueToSlot((AttributeSlot)slot, value);
+		
+		} else if (slot instanceof ReferenceSlot) {
+			addValueToSlot((ReferenceSlot)slot, value);
 		
 		} else {
-			convertedValue = value;
+			throw new IllegalArgumentException("slot must be of type AttributeSlot or ReferenceSlot, but was: " + slot.getClass().getCanonicalName());
 		}
-		
-		slot.getValues().add(convertedValue);
-		
-		return slot;
 	}
 	
-	private static ReferenceSlot determineSlotFromEReference(ClassObjectCache cache, String value) {
-		final ReferenceSlot slot = HutnFactory.eINSTANCE.createReferenceSlot();		
+	public static void addValueToSlot(AttributeSlot slot, String value) {
+		if (slot.hasEStructuralFeature()) {
+			slot.getValues().add(EmfUtil.createFromString((EDataType)slot.getEStructuralFeature().getEType(), value));
 		
-		slot.getValues().add(cache.get(value).getIdentifier());
-		
-		return slot;
+		} else {
+			slot.getValues().add(value);
+		}
+	}
+	
+	public static void addValueToSlot(ReferenceSlot slot, String value) {
+		slot.getValues().add(value);
 	}
 }

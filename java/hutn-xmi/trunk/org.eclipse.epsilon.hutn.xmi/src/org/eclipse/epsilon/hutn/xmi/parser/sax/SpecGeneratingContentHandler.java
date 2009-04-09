@@ -50,7 +50,7 @@ public class SpecGeneratingContentHandler extends DefaultHandler {
     	} else {
     		
     		if (atts.getIndex("xsi:type") >= 0) {
-    			generator.generateContainedClassObject(getLocalName(atts.getValue("xsi:type")), name);
+    			generator.generateContainedClassObject(name, getLocalName(atts.getValue("xsi:type")));
     			
 			} else {
 				// XMI doesn't include an xsi:type

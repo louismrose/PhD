@@ -13,63 +13,78 @@
  */
 package org.eclipse.epsilon.hutn.xmi.parser.generator;
 
-import static org.junit.Assert.assertEquals;
 import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
+import static org.junit.Assert.assertEquals;
 
 import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
 import org.eclipse.epsilon.hutn.model.hutn.ContainmentSlot;
 import org.eclipse.epsilon.hutn.model.hutn.PackageObject;
-import org.junit.BeforeClass;
+import org.eclipse.epsilon.hutn.test.model.HutnTestWithFamiliesMetaModel;
+import org.junit.Before;
 import org.junit.Test;
 
-public class GenerateNestedClassObject {
+public class GenerateNestedClassObject extends HutnTestWithFamiliesMetaModel {
 
-	private static final SpecGenerator generator = new SpecGenerator();
+	private SpecGenerator generator;
 	
-	@BeforeClass
-	public static void setup() {
-		generator.initialise();
-		generator.generateTopLevelClassObject("foo");
-		generator.generateContainedClassObject("bar", "bars");
+	@Before
+	public void setup() {
+		generator = new SpecGenerator();
+		generator.initialise("families");
 	}
 	
 	@Test
-	public void packageShouldContainOneClassObject() {
+	public void generatesNestedClassObject() {
+		generator.generateTopLevelClassObject("Family");
+		generator.generateContainedClassObject("members", "Person");
+		
 		assertEquals(1, getFirstPackage().getClassObjects().size());
-	}
-	
-	@Test
-	public void firstClassObjectShouldHaveOneSlot() {
 		assertEquals(1, getFirstClassObject().getSlots().size());
-	}
-	
-	@Test
-	public void barsSlot() {
-		slotTest(getFirstClassObject().getSlots().get(0), ContainmentSlot.class, "bars", "bar");
-	}
-	
-	@Test
-	public void nestedClassObjectShouldBeTheNewClassObject() {
+		
+		slotTest(getFirstClassObject().getSlots().get(0), ContainmentSlot.class, "members", "Person");
+		
 		assertEquals(getNestedClassObject(), generator.getCurrentClassObject());
 	}
 	
 	@Test(expected=IllegalStateException.class)
 	public void cannotCreateUnnestedContainedClassObject() {
-		final SpecGenerator generator = new SpecGenerator();
-		generator.initialise();
-		generator.generateContainedClassObject("bar", "bars");
+		generator.generateContainedClassObject("members", "Person");
+	}
+	
+	@Test
+	public void canInferTypeFromMetamodel() {
+		generator.generateTopLevelClassObject("Family");
+		generator.generateContainedClassObject("members");
+		
+		slotTest(getFirstClassObject().getSlots().get(0), ContainmentSlot.class, "members", "Person");
+	}
+	
+	@Test
+	public void inferTypeForNonContainment() {
+		generator.generateTopLevelClassObject("Family");
+		generator.generateContainedClassObject("name");
+		
+		slotTest(getFirstClassObject().getSlots().get(0), ContainmentSlot.class, "name", "UnknownType");
+	}
+	
+	@Test
+	public void cannotInferTypeForUnknownMetamodelFeature() {
+		generator.generateTopLevelClassObject("Family");
+		generator.generateContainedClassObject("foobars");
+		
+		slotTest(getFirstClassObject().getSlots().get(0), ContainmentSlot.class, "foobars", "UnknownType");
 	}
 	
 	
-	private static PackageObject getFirstPackage() {
+	private PackageObject getFirstPackage() {
 		return generator.getSpec().getObjects().get(0);
 	}
 	
-	private static ClassObject getFirstClassObject() {
+	private ClassObject getFirstClassObject() {
 		return getFirstPackage().getClassObjects().get(0);
 	}
 	
-	private static ClassObject getNestedClassObject() {
+	private ClassObject getNestedClassObject() {
 		return (ClassObject)getFirstClassObject().getSlots().get(0).getValues().get(0);
 	}
 }

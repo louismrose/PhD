@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.xmi.parser.generator;
+package org.eclipse.epsilon.hutn.xmi.util.hutn;
 
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
@@ -21,11 +21,11 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({GenerateTopLevelClassObject.class, GenerateNestedClassObject.class,
-               StopGeneratingCurrentClassObject.class, StopGeneratingAndDeleteCurrentClassObject.class,
-               AddAttributeValue.class})
-public class GeneratorSuite {
+@SuiteClasses({DetermineTypeFromMetaFeature.class,
+               DetermineSlotFromMetaFeature.class,
+               AddValueToAttributeSlot.class, AddValueToReferenceSlot.class})
+public class HutnUtilSuite {
 	public static Test suite() {
-		return new JUnit4TestAdapter(GeneratorSuite.class);
+		return new JUnit4TestAdapter(HutnUtilSuite.class);
 	}
 }

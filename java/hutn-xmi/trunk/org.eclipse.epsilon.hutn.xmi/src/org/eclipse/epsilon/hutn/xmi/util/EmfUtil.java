@@ -16,6 +16,8 @@ package org.eclipse.epsilon.hutn.xmi.util;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -27,6 +29,10 @@ public abstract class EmfUtil {
 	
 	public static Object createFromString(EDataType type, String value) {
 		return type.getEPackage().getEFactoryInstance().createFromString((EDataType)type, value);
+	}
+	
+	public static boolean isContainmentReference(EStructuralFeature feature) {
+		return feature != null && feature instanceof EReference && ((EReference)feature).isContainment();
 	}
 	
 		

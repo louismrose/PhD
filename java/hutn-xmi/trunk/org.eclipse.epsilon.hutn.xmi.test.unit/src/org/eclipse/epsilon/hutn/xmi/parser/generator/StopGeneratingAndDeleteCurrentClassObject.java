@@ -14,12 +14,13 @@
 package org.eclipse.epsilon.hutn.xmi.parser.generator;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
 import org.junit.Before;
 import org.junit.Test;
 
-public class StopGeneratingCurrentClassObject {
+public class StopGeneratingAndDeleteCurrentClassObject {
 
 	private SpecGenerator generator;
 	
@@ -31,51 +32,20 @@ public class StopGeneratingCurrentClassObject {
 	}
 	
 	@Test
-	public void nullAfterDoneWithLast() {
+	public void parentShouldNoLongerContainSlot() {
+		final ClassObject parent = generator.getCurrentClassObject();
+		
+		generator.generateContainedClassObject("foos", "foo");
+		generator.stopGeneratingAndDeleteCurrentClassObject();
+		
+		assertEquals(parent, generator.getCurrentClassObject());
+		assertNull(generator.getCurrentClassObject().findSlot("foos"));
+	}
+	
+	@Test
+	public void shouldWorkForTopLevelClassObject() {
 		generator.stopGeneratingCurrentClassObject();
 		
 		assertEquals(null, generator.getCurrentClassObject());
-	}
-	
-	@Test
-	public void parentAfterSimpleNesting() {
-		final ClassObject parent = generator.getCurrentClassObject();
-		
-		generator.generateContainedClassObject("foos", "foo");
-		generator.stopGeneratingCurrentClassObject();
-		
-		assertEquals(parent, generator.getCurrentClassObject());
-	}
-	
-	@Test
-	public void parentAfterTwoSimpleNestings() {
-		final ClassObject parent = generator.getCurrentClassObject();
-		
-		generator.generateContainedClassObject("foos", "foo");
-		generator.stopGeneratingCurrentClassObject();
-		
-		generator.generateContainedClassObject("bars", "bar");
-		generator.stopGeneratingCurrentClassObject();
-		
-		assertEquals(parent, generator.getCurrentClassObject());
-	}
-	
-	@Test
-	public void secondLevelAfterThirdLevelNesting() {
-		final ClassObject foo;
-		
-		generator.generateContainedClassObject("foos", "foo");
-		foo = generator.getCurrentClassObject();
-		
-		generator.generateContainedClassObject("bars", "bar");
-		generator.stopGeneratingCurrentClassObject();
-		
-		assertEquals(foo, generator.getCurrentClassObject());
-	}
-	
-	@Test(expected=IllegalStateException.class)
-	public void throwsExceptionWhenEmpty() {
-		generator.stopGeneratingCurrentClassObject();
-		generator.stopGeneratingCurrentClassObject();
 	}
 }
