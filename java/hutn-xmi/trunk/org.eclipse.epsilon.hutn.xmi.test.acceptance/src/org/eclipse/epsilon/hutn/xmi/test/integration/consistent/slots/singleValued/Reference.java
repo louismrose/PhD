@@ -26,7 +26,7 @@ public class Reference extends HutnXmiBridgeIntegrationTest {
 	@BeforeClass
 	public static void setup() {
 		integrationTestWithModelAsRoot("<contents xsi:type=\"families:Family\" xmi:id=\"_Qy0uEBPgEd6ysY9kXe1lIA\" pets=\"_OI43YBPgEd6ysY9kXe1lIA\"/>" +
-		                    "<contents xsi:type=\"families:Pet\" xmi:id=\"_OI43YBPgEd6ysY9kXe1lIA\" />");
+		                               "<contents xsi:type=\"families:Pet\" xmi:id=\"_OI43YBPgEd6ysY9kXe1lIA\" />");
 	}
 	
 	@Test

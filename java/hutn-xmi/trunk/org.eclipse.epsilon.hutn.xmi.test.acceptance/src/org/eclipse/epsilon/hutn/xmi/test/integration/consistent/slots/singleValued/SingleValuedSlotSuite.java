@@ -28,7 +28,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({String.class, Integer.class, Float.class, Boolean.class, Enum.class,
-               Reference.class})
+               Reference.class,
+               SeveralSlots.class})
 public class SingleValuedSlotSuite {
 	public static Test suite() {
 		return new JUnit4TestAdapter(SingleValuedSlotSuite.class);
