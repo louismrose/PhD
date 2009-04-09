@@ -32,10 +32,7 @@ public class AddValueToReferenceSlot {
 		
 		assertEquals("fido", slot.getValues().get(0));
 	}
-	
-	
-	// Add numeric values to reference slot
-	// Add non-reference string value to reference slot
+
 	
 	private static class ReferenceSlotStub extends ReferenceSlotImpl {
 
