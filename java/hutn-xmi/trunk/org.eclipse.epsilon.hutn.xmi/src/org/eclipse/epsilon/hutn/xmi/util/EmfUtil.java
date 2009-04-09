@@ -28,7 +28,12 @@ public abstract class EmfUtil {
 	private EmfUtil() {}
 	
 	public static Object createFromString(EDataType type, String value) {
-		return type.getEPackage().getEFactoryInstance().createFromString((EDataType)type, value);
+		try {
+			return type.getEPackage().getEFactoryInstance().createFromString((EDataType)type, value);
+		
+		} catch (NumberFormatException e) {
+			return value;
+		}
 	}
 	
 	public static boolean isContainmentReference(EStructuralFeature feature) {

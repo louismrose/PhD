@@ -61,6 +61,23 @@ public class AddValueToAttributeSlot {
 		assertEquals("23.6", slot.getValues().get(0));
 	}
 	
+	@Test
+	public void addStringValueToFloatTypedFeature() {
+		final AttributeSlot slot = new AttributeSlotStub(FamiliesPackage.eINSTANCE.getFamily_AverageAge());
+		
+		HutnUtil.addValueToSlot(slot, "twenty-three point six");
+		
+		assertEquals("twenty-three point six", slot.getValues().get(0));
+	}
+	
+	@Test
+	public void addStringValueToIntegerTypedFeature() {
+		final AttributeSlot slot = new AttributeSlotStub(FamiliesPackage.eINSTANCE.getFamily_NumberOfChildren());
+		
+		HutnUtil.addValueToSlot(slot, "four");
+		
+		assertEquals("four", slot.getValues().get(0));
+	}
 	
 	private static class AttributeSlotStub extends AttributeSlotImpl {
 
