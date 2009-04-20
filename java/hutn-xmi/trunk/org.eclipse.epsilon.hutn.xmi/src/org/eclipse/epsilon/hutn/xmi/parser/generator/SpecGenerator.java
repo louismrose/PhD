@@ -205,6 +205,8 @@ public class SpecGenerator {
 
 	private void addPackageObject(String nsUri) {
 		final PackageObject po = HutnFactory.eINSTANCE.createPackageObject();
+		po.setType("package");
+		
 		spec.getObjects().add(po);
 		
 		if (nsUri != null) {

@@ -33,7 +33,7 @@ public class SpecGeneratingContentHandler extends DefaultHandler {
 		if ("xmi".equals(prefix) || "xsi".equals(prefix))
 			return;
 		
-		generator.initialise(prefix);		
+		generator.initialise(uri);
 	}
 
 	private boolean firstElement = true;
