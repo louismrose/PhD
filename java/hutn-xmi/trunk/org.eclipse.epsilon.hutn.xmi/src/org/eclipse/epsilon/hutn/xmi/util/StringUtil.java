@@ -19,7 +19,7 @@ public abstract class StringUtil {
 	private StringUtil() {}
 	
 	public static boolean isWhitespace(String s) {
-    	return s.trim().isEmpty();
+    	return s.trim().length() == 0;
     }
 	
 	public static boolean isNotWhitespace(String s) {
