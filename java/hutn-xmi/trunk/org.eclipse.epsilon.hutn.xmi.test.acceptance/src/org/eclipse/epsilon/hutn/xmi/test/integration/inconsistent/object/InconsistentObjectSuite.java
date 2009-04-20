@@ -17,13 +17,13 @@ import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
 
 import org.eclipse.epsilon.hutn.xmi.test.integration.inconsistent.object.AbstractClass;
-import org.eclipse.epsilon.hutn.xmi.test.integration.inconsistent.object.NoClass;
+import org.eclipse.epsilon.hutn.xmi.test.integration.inconsistent.object.UnknownXsiType;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({NoClass.class, AbstractClass.class})
+@SuiteClasses({UnknownXsiType.class, UnknownStartTag.class, AbstractClass.class})
 public class InconsistentObjectSuite {
 	public static Test suite() {
 		return new JUnit4TestAdapter(InconsistentObjectSuite.class);
