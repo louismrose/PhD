@@ -33,6 +33,8 @@ public class XmiParser {
 	private XMLReader reader;
 	private SpecGeneratingContentHandler handler;
 	
+	private static final boolean DEBUG = false;
+	
 	
 	public XmiParser(String xmi) {
 		this.xmi = xmi;
@@ -48,7 +50,12 @@ public class XmiParser {
 		reader  = XMLReaderFactory.createXMLReader();
 		handler = new SpecGeneratingContentHandler();
 		
-		reader.setContentHandler(new ContentHandlerMultiplexer(new DebugContentHandler(), handler));
+		if (DEBUG) {
+			reader.setContentHandler(new ContentHandlerMultiplexer(new DebugContentHandler(), handler));
+		} else {
+			reader.setContentHandler(handler);
+
+		}
 	}
 	
 	private Spec doParse() throws IOException {
