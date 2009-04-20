@@ -33,6 +33,9 @@ public abstract class EmfUtil {
 		
 		} catch (NumberFormatException e) {
 			return value;
+		
+		} catch (IllegalArgumentException e) {
+			return value;
 		}
 	}
 	
