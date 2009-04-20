@@ -185,8 +185,7 @@ public class SpecGenerator {
 		Slot<?> slot = HutnUtil.determineSlotFromMetaFeature(getCurrentClassObject(), featureName);
 		
 		if (slot == null) {
-			// TODO: use coerce?
-			throw new UnsupportedOperationException("Coercion not yet supported");
+			slot = getCurrentClassObject().findOrCreateAttributeSlot(featureName);
 		}
 		
 		return slot;

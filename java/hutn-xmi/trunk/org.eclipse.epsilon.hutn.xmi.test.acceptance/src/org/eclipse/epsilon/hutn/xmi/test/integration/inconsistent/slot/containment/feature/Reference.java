@@ -17,7 +17,7 @@ import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
 
 import java.io.IOException;
 
-import org.eclipse.epsilon.hutn.model.hutn.ReferenceSlot;
+import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
 import org.eclipse.epsilon.hutn.xmi.test.integration.HutnXmiBridgeIntegrationTest;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -33,6 +33,6 @@ public class Reference extends HutnXmiBridgeIntegrationTest {
 	
 	@Test
 	public void animalsSlot() {
-		slotTest(getFirstSlotOfFamily(), ReferenceSlot.class, "animals", "Pet", "Pet");
+		slotTest(getFirstSlotOfFamily(), AttributeSlot.class, "animals", "_4yG-UBiFEd6-Eob-hyWntQ _HiVRYBiGEd6-Eob-hyWntQ");
 	}
 }

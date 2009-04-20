@@ -53,7 +53,7 @@ public class AddValueToAttributeSlot {
 	}
 	
 	@Test
-	public void addValueToSlotWithUndefinedFeature() {
+	public void addFloatValueToSlotWithUndefinedFeature() {
 		final AttributeSlot slot = HutnFactory.eINSTANCE.createAttributeSlot();
 		
 		HutnUtil.addValueToSlot(slot, "23.6");
