@@ -13,7 +13,12 @@
  */
 package org.eclipse.epsilon.hutn.xmi;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URI;
 
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.unparser.HutnUnparser;
@@ -38,6 +43,45 @@ public class Xmi2Hutn {
 		}
 	}
 	
+
+	public Xmi2Hutn(URI uri) throws HutnXmiBridgeException {
+		this(readXmiFromUri(uri));		
+	}
+	
+	private static String readXmiFromUri(URI uri) throws HutnXmiBridgeException {
+		BufferedReader reader = null;
+		
+		try {
+			final InputStream stream = uri.toURL().openStream();
+			reader = new BufferedReader(new InputStreamReader(stream));
+			
+			final StringBuilder xmi = new StringBuilder();
+			
+			String line = null;
+			while ((line = reader.readLine()) != null) {
+				xmi.append(line);
+			}
+			
+			return xmi.toString();
+			
+		} catch (MalformedURLException e) {
+			throw new HutnXmiBridgeException(e);
+
+		} catch (IOException e) {
+			throw new HutnXmiBridgeException(e);
+		
+		} finally {
+			try {
+				if (reader != null) {
+					reader.close();
+				}
+				
+			} catch (IOException e) {
+				throw new HutnXmiBridgeException(e);
+			}
+		}
+	}
+
 
 	public Spec getSpec() {
 		return spec;

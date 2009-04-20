@@ -22,6 +22,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.epsilon.common.dt.actions.AbstractObjectActionDelegate;
 import org.eclipse.epsilon.common.dt.console.EpsilonConsole;
+import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
 import org.eclipse.epsilon.hutn.xmi.Xmi2Hutn;
 import org.eclipse.jface.action.IAction;
 
@@ -53,7 +54,12 @@ public class GenerateHutn extends AbstractObjectActionDelegate {
 	}
 	
 	private void generateHutn() {
-		hutn = new Xmi2Hutn(file.getRawLocationURI()).getHutn();
+		try {
+			hutn = new Xmi2Hutn(file.getRawLocationURI()).getHutn();
+		
+		} catch (HutnXmiBridgeException e) {
+			EpsilonConsole.getInstance().getErrorStream().append(e.toString());
+		}
 	}
 	
 	
