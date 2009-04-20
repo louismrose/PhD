@@ -79,6 +79,22 @@ public class AddValueToAttributeSlot {
 		assertEquals("four", slot.getValues().get(0));
 	}
 	
+	@Test
+	public void addStringValueToBooleanTypedFeature() {
+		final AttributeSlot slot = new AttributeSlotStub(FamiliesPackage.eINSTANCE.getFamily_Nuclear());
+		
+		HutnUtil.addValueToSlot(slot, "true");
+		HutnUtil.addValueToSlot(slot, "false");
+		HutnUtil.addValueToSlot(slot, "neither");
+		HutnUtil.addValueToSlot(slot, "another");
+
+		
+		assertEquals(true, slot.getValues().get(0));
+		assertEquals(false, slot.getValues().get(1));
+		assertEquals("neither", slot.getValues().get(2));
+		assertEquals("another", slot.getValues().get(3));
+	}
+	
 	private static class AttributeSlotStub extends AttributeSlotImpl {
 
 		private final EStructuralFeature feature;
