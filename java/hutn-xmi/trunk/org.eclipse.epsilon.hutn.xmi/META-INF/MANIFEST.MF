@@ -12,4 +12,5 @@ Export-Package: org.eclipse.epsilon.hutn.xmi,
  org.eclipse.epsilon.hutn.xmi.coerce,
  org.eclipse.epsilon.hutn.xmi.parser,
  org.eclipse.epsilon.hutn.xmi.parser.generator,
+ org.eclipse.epsilon.hutn.xmi.postprocessor,
  org.eclipse.epsilon.hutn.xmi.util

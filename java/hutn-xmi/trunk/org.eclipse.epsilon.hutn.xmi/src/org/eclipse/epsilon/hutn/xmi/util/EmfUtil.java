@@ -13,8 +13,15 @@
  */
 package org.eclipse.epsilon.hutn.xmi.util;
 
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -45,6 +52,28 @@ public abstract class EmfUtil {
 	
 		
 	/* Copied from EMC EmfUtil */
+	public static List<EClass> getAllEClassesFromSameMetamodelAs(EModelElement metamodelElement) {
+		return getAllModelElementsOfType(metamodelElement, EClass.class);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static <T extends EObject> List<T> getAllModelElementsOfType(EObject modelElement, Class<T> type) {		
+		final List<T> results = new LinkedList<T>();
+		
+		if (modelElement.eResource() != null) {
+			final TreeIterator<EObject> iterator = modelElement.eResource().getAllContents();
+			
+			while (iterator.hasNext()) {
+				final EObject object = iterator.next();
+				
+				if (type.isInstance(object))
+					results.add((T)object);
+			}
+		}
+		
+		return Collections.unmodifiableList(results);
+	}
+	
 	private final static URI DEFAULT_URI = URI.createFileURI("foo.ecore");
 	
 	public static Resource createResource() {

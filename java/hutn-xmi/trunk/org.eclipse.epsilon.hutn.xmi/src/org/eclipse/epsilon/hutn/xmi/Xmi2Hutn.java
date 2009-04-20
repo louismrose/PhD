@@ -23,6 +23,7 @@ import java.net.URI;
 import org.eclipse.epsilon.hutn.model.hutn.Spec;
 import org.eclipse.epsilon.hutn.unparser.HutnUnparser;
 import org.eclipse.epsilon.hutn.xmi.parser.XmiParser;
+import org.eclipse.epsilon.hutn.xmi.postprocessor.IdentifierPostProcessor;
 import org.xml.sax.SAXException;
 
 public class Xmi2Hutn {
@@ -33,6 +34,9 @@ public class Xmi2Hutn {
 	public Xmi2Hutn(String xmi) throws HutnXmiBridgeException {
 		try {
 			spec     = new XmiParser(xmi).parse();
+			
+			new IdentifierPostProcessor(spec).process();
+			
 			unparser = new HutnUnparser(spec);
 		
 		} catch (SAXException e) {
