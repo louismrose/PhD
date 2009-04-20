@@ -45,7 +45,7 @@ public class SingleObject extends HutnXmiBridgeIntegrationTest {
 	
 	@Test
 	public void hasCorrectType() {
-		assertEquals("families", getPackageObject().getType());
+		assertEquals("package", getPackageObject().getType());
 	}
 	
 	@Test
