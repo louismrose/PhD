@@ -1,0 +1,16 @@
+@namespace(uri="refactorings_extractClass", prefix="refactorings_extractClass")
+package refactorings_extractClass;
+
+class System {
+   val Person[*] people;
+}
+
+class Person {
+	attr String name;
+ 	val TelephoneNumber[1] telephoneNumber;
+}
+
+class TelephoneNumber {
+ 	attr String areaCode;
+ 	attr String number;
+}
