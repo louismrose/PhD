@@ -1,0 +1,12 @@
+@namespace(uri="refactorings_extractSubclass", prefix="refactorings_extractSubclass")
+package refactorings_extractSubclass;
+
+class System {
+   val JobItem[*] items;
+}
+
+class JobItem {
+ 	attr float jobPrice;
+ 	attr float totalPrice;
+ 	attr String employee;
+}
