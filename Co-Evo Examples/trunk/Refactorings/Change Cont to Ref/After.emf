@@ -1,0 +1,15 @@
+@namespace(uri="refactorings_changeContToRef", prefix="refactorings_changeContToRef")
+package refactorings_changeContToRef;
+
+class System {
+   val Signature[*] signatures;
+   val Port[*] ports;
+}
+
+class Signature {
+ 	ref Port[*] ports;
+}
+
+class Port {
+ 	attr String name;
+}

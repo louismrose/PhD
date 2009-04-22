@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactorings_changeContToRef:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactorings_changeContToRef="refactorings_changeContToRef" xmi:id="_XO5l8S9FEd6Ofdv2Qia5qg">
+  <signatures xmi:id="_UoS6oC9GEd6Ofdv2Qia5qg">
+    <ports xmi:id="_VQ4koC9GEd6Ofdv2Qia5qg" name="One"/>
+    <ports xmi:id="_ZmkLcC9GEd6Ofdv2Qia5qg" name="Two"/>
+  </signatures>
+  <signatures xmi:id="_U_suAC9GEd6Ofdv2Qia5qg">
+    <ports xmi:id="_VjkQEC9GEd6Ofdv2Qia5qg" name="Duplicate"/>
+  </signatures>
+  <signatures xmi:id="_YHSxEC9GEd6Ofdv2Qia5qg">
+    <ports xmi:id="_YHSxES9GEd6Ofdv2Qia5qg" name="Duplicate"/>
+    <ports xmi:id="_agZWcC9GEd6Ofdv2Qia5qg" name="Three"/>
+  </signatures>
+  <signatures xmi:id="_bcvp8C9GEd6Ofdv2Qia5qg"/>
+</refactorings_changeContToRef:System>
