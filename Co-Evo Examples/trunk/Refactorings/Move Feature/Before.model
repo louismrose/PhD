@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactorings_moveFeature:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactorings_moveFeature="refactorings_moveFeature" xmi:id="_76KGkC89Ed6lp8B6HTzpjw">
+  <accounts xmi:id="_FeqisC8-Ed6lp8B6HTzpjw" code="current1" interestRate="2.0" type="_KxnDAC8-Ed6lp8B6HTzpjw"/>
+  <accounts xmi:id="_JXEXoC8-Ed6lp8B6HTzpjw" code="current2" interestRate="2.5" type="_KxnDAC8-Ed6lp8B6HTzpjw"/>
+  <accounts xmi:id="_NDeX8C8-Ed6lp8B6HTzpjw" code="savings1" interestRate="6.0" type="_OYxW8C8-Ed6lp8B6HTzpjw"/>
+  <accounts xmi:id="_SIUK0C8-Ed6lp8B6HTzpjw" code="savings2" interestRate="6.0" type="_OYxW8C8-Ed6lp8B6HTzpjw"/>
+  <accounts xmi:id="_TW9IMC8-Ed6lp8B6HTzpjw" code="isa" interestRate="7.0" type="_U9Q-sC8-Ed6lp8B6HTzpjw"/>
+  <accountTypes xmi:id="_KxnDAC8-Ed6lp8B6HTzpjw" name="current"/>
+  <accountTypes xmi:id="_OYxW8C8-Ed6lp8B6HTzpjw" name="savings"/>
+  <accountTypes xmi:id="_U9Q-sC8-Ed6lp8B6HTzpjw" name="isa"/>
+</refactorings_moveFeature:System>

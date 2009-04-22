@@ -1,0 +1,17 @@
+@namespace(uri="refactorings_moveFeature", prefix="refactorings_moveFeature")
+package refactorings_moveFeature;
+
+class System {
+   val Account[*] accounts;
+   val AccountType[*] accountTypes;
+}
+
+class Account {
+ 	attr String code;
+ 	attr float interestRate;
+ 	ref AccountType[1] type;
+}
+
+class AccountType {
+	attr String name;  
+}
