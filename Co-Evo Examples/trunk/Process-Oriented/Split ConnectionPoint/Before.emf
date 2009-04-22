@@ -1,0 +1,17 @@
+@namespace(uri="po_split", prefix="po_split")
+package po_split;
+
+class System {
+   val ConnectionPoint[*] connectionPoints;
+   val Channel[*] channels;
+}
+
+class ConnectionPoint {
+ 	attr String name;
+}
+
+class Channel {
+	attr String name;
+	ref ConnectionPoint[1] reader;
+	ref ConnectionPoint[1] writer;
+}

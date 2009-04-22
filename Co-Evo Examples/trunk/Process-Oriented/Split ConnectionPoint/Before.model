@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<po_split:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:po_split="po_split" xmi:id="_BRX9gS8rEd69s-McmXQlqQ">
+  <connectionPoints xmi:id="_MeFREC8sEd69s-McmXQlqQ" name="a_reader?"/>
+  <connectionPoints xmi:id="_M7EvEC8sEd69s-McmXQlqQ" name="a_writer!"/>
+  <connectionPoints xmi:id="_XLxi0C8sEd69s-McmXQlqQ" name="both?!"/>
+  <connectionPoints xmi:id="_bYnWsC8sEd69s-McmXQlqQ" name="unused"/>
+  <channels xmi:id="_JnJgMC8sEd69s-McmXQlqQ" name="a" reader="_MeFREC8sEd69s-McmXQlqQ" writer="_M7EvEC8sEd69s-McmXQlqQ"/>
+  <channels xmi:id="_VvdV0C8sEd69s-McmXQlqQ" name="b" reader="_XLxi0C8sEd69s-McmXQlqQ" writer="_XLxi0C8sEd69s-McmXQlqQ"/>
+</po_split:System>
