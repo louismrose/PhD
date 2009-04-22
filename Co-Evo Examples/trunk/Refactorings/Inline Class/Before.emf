@@ -1,0 +1,16 @@
+@namespace(uri="refactorings_inlineClass", prefix="refactorings_inlineClass")
+package refactorings_inlineClass;
+
+class System {
+   val Person[*] people;
+}
+
+class Person {
+	attr String name;
+ 	val TelephoneNumber[1] telephoneNumber;
+}
+
+class TelephoneNumber {
+ 	attr String areaCode;
+ 	attr String number;
+}
