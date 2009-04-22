@@ -1,0 +1,13 @@
+@namespace(uri="refactorings_pushDownFeature", prefix="refactorings_pushDownFeature")
+package refactorings_pushDownFeature;
+
+class System {
+   val Employee[*] employees;
+}
+
+class Employee {
+ 	attr String name;
+ 	attr int quota;
+}
+
+class Salesperson extends Employee {}
