@@ -1,0 +1,14 @@
+@namespace(uri="fptc_connections", prefix="fptc_connections")
+package fptc_connections;
+
+class System {
+   val Block[*] blocks;
+}
+
+class Block {
+	attr String name;
+	derived attr String inSetText;
+	derived attr String outSetText;
+	ref Block[*]#predecessors successors;
+	ref Block[*]#successors predecessors;
+}
