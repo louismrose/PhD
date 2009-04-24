@@ -177,9 +177,7 @@ public class SpecGenerator {
 		
 		getCurrentClassObject().getSlots().add(slot);
 		
-		System.out.println(slot.getValues());
 		HutnUtil.addValueToSlot(slot, value);
-		System.out.println(slot.getValues());
 	}
 	
 	
