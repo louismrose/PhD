@@ -15,10 +15,10 @@ import org.eclipse.epsilon.common.dt.actions.AbstractObjectActionDelegate;
 import org.eclipse.epsilon.common.dt.console.EpsilonConsole;
 import org.eclipse.epsilon.commons.parse.problem.ParseProblem;
 import org.eclipse.epsilon.hutn.IHutnModule;
-import org.eclipse.epsilon.hutn.dt.util.HutnUtil;
+import org.eclipse.epsilon.hutn.dt.markers.MarkerManager;
+import org.eclipse.epsilon.hutn.dt.util.HutnBuilderHelper;
 import org.eclipse.epsilon.hutn.xmi.HutnXmiBridgeException;
 import org.eclipse.epsilon.hutn.xmi.Xmi2Hutn;
-import org.eclipse.epsilon.hutn.xmi.dt.markers.MarkerManager;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.ui.IObjectActionDelegate;
 
@@ -50,7 +50,7 @@ public class CheckModelAction extends AbstractObjectActionDelegate implements IO
 	
 	private void checkHutn() throws Exception {
 		if (hutn != null) {
-			final IHutnModule hutnModule = HutnUtil.initialiseHutnModule(file);
+			final IHutnModule hutnModule = HutnBuilderHelper.initialiseHutnModule(file);
 			
 			if (hutnModule.parse(hutn)) {
 				EpsilonConsole.getInstance().getInfoStream().println(file.getName() + " is consistent with its metamodel.");
