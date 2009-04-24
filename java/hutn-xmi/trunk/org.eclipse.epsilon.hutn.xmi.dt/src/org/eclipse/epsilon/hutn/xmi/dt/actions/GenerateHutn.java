@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package org.eclipse.epsilon.hutn.dt.actions;
+package org.eclipse.epsilon.hutn.xmi.dt.actions;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -43,23 +43,14 @@ public class GenerateHutn extends AbstractObjectActionDelegate {
 				refreshProject();
 			}
 			
-		} catch (CoreException e) {
-			EpsilonConsole.getInstance().getErrorStream().println(e.getLocalizedMessage());
-			e.printStackTrace();
-			
-		} catch (UnsupportedEncodingException e) {
+		} catch (Exception e) {
 			EpsilonConsole.getInstance().getErrorStream().println(e.getLocalizedMessage());
 			e.printStackTrace();
 		}
 	}
 	
-	private void generateHutn() {
-		try {
-			hutn = new Xmi2Hutn(file.getRawLocationURI()).getHutn();
-		
-		} catch (HutnXmiBridgeException e) {
-			EpsilonConsole.getInstance().getErrorStream().append(e.toString());
-		}
+	private void generateHutn() throws HutnXmiBridgeException {
+		hutn = new Xmi2Hutn(file.getRawLocationURI()).getHutn();
 	}
 	
 	

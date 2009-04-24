@@ -8,11 +8,33 @@
             nameFilter="*.model"
             objectClass="org.eclipse.core.resources.IFile">
          <action
-               class="org.eclipse.epsilon.hutn.dt.actions.GenerateHutn"
+               class="org.eclipse.epsilon.hutn.xmi.dt.actions.GenerateHutn"
                icon="icons/hutn.png"
                id="org.eclipse.epsilon.dt.actions.GenerateHutn"
                label="Generate HUTN">
          </action>
       </objectContribution>
+      <objectContribution
+            id="org.eclipse.epsilon.hutn.xmi.dt.CheckModel"
+            nameFilter="*.model"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="org.eclipse.epsilon.hutn.xmi.dt.actions.CheckModelAction"
+               icon="icons/check.gif"
+               id="org.eclipse.epsilon.dt.actions.CheckModel"
+               label="Check Consistency">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         id="inconsistency"
+         name="Model/Metamodel Inconsistency"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
    </extension>
 </plugin>
