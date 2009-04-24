@@ -177,14 +177,24 @@ public class SpecGenerator {
 		
 		getCurrentClassObject().getSlots().add(slot);
 		
+		System.out.println(slot.getValues());
 		HutnUtil.addValueToSlot(slot, value);
+		System.out.println(slot.getValues());
 	}
 	
 	
 	private Slot<?> determineSlot(String featureName) {
 		Slot<?> slot = HutnUtil.determineSlotFromMetaFeature(getCurrentClassObject(), featureName);
 		
-		if (slot == null) {
+		if (slot instanceof ContainmentSlot) {
+			// Model must be inconsistent with metamodel
+			// probably want a reference slot instead
+			getCurrentClassObject().getSlots().remove(getCurrentClassObject().findSlot(featureName));
+			
+			slot = getCurrentClassObject().findOrCreateReferenceSlot(featureName);
+		
+		} else 
+			if (slot == null) {
 			slot = getCurrentClassObject().findOrCreateAttributeSlot(featureName);
 		}
 		

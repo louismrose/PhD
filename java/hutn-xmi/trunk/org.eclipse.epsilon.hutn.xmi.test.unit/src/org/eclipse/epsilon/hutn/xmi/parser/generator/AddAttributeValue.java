@@ -16,6 +16,8 @@ package org.eclipse.epsilon.hutn.xmi.parser.generator;
 import static org.eclipse.epsilon.hutn.xmi.test.util.HutnTestUtil.slotTest;
 
 import org.eclipse.epsilon.hutn.model.hutn.AttributeSlot;
+import org.eclipse.epsilon.hutn.model.hutn.ClassObject;
+import org.eclipse.epsilon.hutn.model.hutn.ReferenceSlot;
 import org.eclipse.epsilon.hutn.test.model.HutnTestWithFamiliesMetaModel;
 import org.junit.Before;
 import org.junit.Test;
@@ -59,5 +61,16 @@ public class AddAttributeValue extends HutnTestWithFamiliesMetaModel {
 		generator.addAttributeValue("numberOfCars", "2");
 		
 		slotTest(generator.getCurrentClassObject().getSlots().get(0), AttributeSlot.class, "numberOfCars", "2");
+	}
+	
+	@Test
+	public void addsReferenceSlotForContainmentFeature() {
+		final ClassObject family = generator.getCurrentClassObject();
+		generator.addAttributeValue("members", "_HigxkCT9Ed6m9JDbGM4gGg");
+		generator.stopGeneratingCurrentClassObject();
+		
+		generator.generateTopLevelClassObject("_HigxkCT9Ed6m9JDbGM4gGg", "Person");
+		
+		slotTest(family.getSlots().get(0), ReferenceSlot.class, "members", "Person");
 	}
 }
