@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fptc_faultSets:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fptc_faultSets="fptc_faultSets" xmi:id="_aEKU0DCjEd63LN-700-Liw">
+  <tuples xmi:id="_nKeDwDCjEd63LN-700-Liw" name="Empty"/>
+  <tuples xmi:id="_DD5owDCkEd63LN-700-Liw" name="SingletonFault">
+    <contents xmi:id="_EuBoQDCkEd63LN-700-Liw">
+      <contents xsi:type="fptc_faultSets:Fault" xmi:id="_FMJHoDCkEd63LN-700-Liw" type="late"/>
+    </contents>
+  </tuples>
+  <tuples xmi:id="_GmXp8DCkEd63LN-700-Liw" name="SeveralFaults">
+    <contents xmi:id="_JxzrMDCkEd63LN-700-Liw">
+      <contents xsi:type="fptc_faultSets:Fault" xmi:id="_K7vuwDCkEd63LN-700-Liw" type="late"/>
+      <contents xsi:type="fptc_faultSets:Fault" xmi:id="_L9dqcDCkEd63LN-700-Liw" type="early"/>
+      <contents xsi:type="fptc_faultSets:Fault" xmi:id="_NNZoUDCkEd63LN-700-Liw" type="value"/>
+    </contents>
+  </tuples>
+  <tuples xmi:id="_OjR2IDCkEd63LN-700-Liw" name="SeveralMixed">
+    <contents xmi:id="_Qh2boDCkEd63LN-700-Liw">
+      <contents xsi:type="fptc_faultSets:Fault" xmi:id="_Q8qvYDCkEd63LN-700-Liw" type="late"/>
+      <contents xsi:type="fptc_faultSets:Variable" xmi:id="_R4h6sDCkEd63LN-700-Liw" name="v"/>
+      <contents xsi:type="fptc_faultSets:Wildcard" xmi:id="_S71KwDCkEd63LN-700-Liw"/>
+    </contents>
+  </tuples>
+  <tuples xmi:id="_UH-NwDCkEd63LN-700-Liw" name="SingletonNoFault">
+    <contents xmi:id="_WOlU8DCkEd63LN-700-Liw">
+      <contents xsi:type="fptc_faultSets:NoFault" xmi:id="_WyHf0DCkEd63LN-700-Liw"/>
+    </contents>
+  </tuples>
+  <tuples xmi:id="_XW62ADCkEd63LN-700-Liw" name="SingletonVariable">
+    <contents xmi:id="_ZGvN0DCkEd63LN-700-Liw">
+      <contents xsi:type="fptc_faultSets:Variable" xmi:id="_ZllF8DCkEd63LN-700-Liw" name="v"/>
+    </contents>
+  </tuples>
+  <tuples xmi:id="_azXHsDCkEd63LN-700-Liw" name="SingletonWildcard">
+    <contents xmi:id="_clXQ0DCkEd63LN-700-Liw">
+      <contents xsi:type="fptc_faultSets:Wildcard" xmi:id="_ddytoDCkEd63LN-700-Liw"/>
+    </contents>
+  </tuples>
+  <tuples xmi:id="_j1mkQDCkEd63LN-700-Liw" name="Pair">
+    <contents xmi:id="_lDWw0DCkEd63LN-700-Liw">
+      <contents xsi:type="fptc_faultSets:Fault" xmi:id="_nSpS4DCkEd63LN-700-Liw" type="late"/>
+    </contents>
+    <contents xmi:id="_oZVOIDCkEd63LN-700-Liw">
+      <contents xsi:type="fptc_faultSets:NoFault" xmi:id="_pQPoADCkEd63LN-700-Liw"/>
+    </contents>
+  </tuples>
+</fptc_faultSets:System>

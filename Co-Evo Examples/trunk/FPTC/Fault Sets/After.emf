@@ -1,0 +1,36 @@
+@namespace(uri="fptc_faultSets", prefix="fptc_faultSets")
+package fptc_faultSets;
+
+class System {
+   val Tuple[*] tuples;
+}
+
+class Tuple {
+	attr String name;
+	val Atom[*] contents;
+}
+
+abstract class Atom {}
+
+class Wildcard extends Atom {}
+
+abstract class ConcreteAtom extends Atom {}
+abstract class Literal extends ConcreteAtom {}
+
+class FaultSet extends ConcreteAtom {
+   val Fault[*] contents;
+}
+
+class Fault extends Literal {
+   attr String type;
+}
+
+class NoFault extends Literal {
+   
+}
+
+
+class Variable extends Atom {
+   attr String name;
+   ref Literal[0..1] value;
+} 
