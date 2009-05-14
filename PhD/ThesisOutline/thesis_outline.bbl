@@ -1,0 +1,76 @@
+\begin{thebibliography}{99}
+
+\bibitem[Brooks 1986]{brooks86nosilverbullet}{$~$}
+Frederick~P. Brooks.
+\newblock No silver bullet -- essence and accident in software engineering
+  (invited paper).
+\newblock In {\em Proc. International Federation for Information Processing},
+  pages 1069--1076, 1986.
+
+\bibitem[Deursen {\it et al.}\  2007]{deursen07mdse}{$~$}
+Arie van Deursen, Eelco Visser, and Jos Warmer.
+\newblock Model-driven software evolution: A research agenda.
+\newblock In {\em Proc. Workshop on Model-Driven Software Evolution}, pages
+  41--49, 2007.
+
+\bibitem[Erlikh 2000]{erlikh00leveraging}{$~$}
+Len Erlikh.
+\newblock Leveraging legacy system dollars for e-business.
+\newblock {\em IT Professional}, 2(3):17--23, 2000.
+
+\bibitem[Greenfield {\it et al.}\  2004]{greenfield04software}{$~$}
+Jack Greenfield, Keith Short, Steve Cook, and Stuart Kent.
+\newblock {\em Software Factories: Assembling Applications with Patterns,
+  Models, Frameworks, and Tools}.
+\newblock Wiley, 2004.
+
+\bibitem[Jackson 1996]{jackson96software}{$~$}
+Michael Jackson.
+\newblock {\em Software Requirements and Specifications}.
+\newblock Addison-Wesley and {ACM} Press, 1996.
+
+\bibitem[Kelly \& Tolvanen 2008]{kelly08dsm}{$~$}
+Steven Kelly and Juha-Pekka Tolvanen.
+\newblock {\em Domain-Specific Modelling}.
+\newblock Wiley, 2008.
+
+\bibitem[Kleppe {\it et al.}\  2003]{kleppe03mda}{$~$}
+Anneke~G. Kleppe, Jos Warmer, and Wim Bast.
+\newblock {\em MDA Explained: The Model Driven Architecture: Practice and
+  Promise}.
+\newblock Addison-Wesley, 2003.
+
+\bibitem[Kolovos {\it et al.}\  2006]{kolovos06eol}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock {The Epsilon Object Language (EOL)}.
+\newblock In {\em Proc. European Conference on Model Driven Architecture --
+  Foundations and Application}, volume 4066 of {\em LNCS}, pages 128--142.
+  Springer, 2006.
+
+\bibitem[Moad 1990]{moad90maintaining}{$~$}
+J~Moad.
+\newblock Maintaining the competitive edge.
+\newblock {\em Datamation}, 36(4):61--66, 1990.
+
+\bibitem[OMG 2008]{omg}{$~$}
+OMG.
+\newblock {Object Management Group} home page [online].
+\newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org}, 2008.
+
+\bibitem[Sj{\o}berg 1993]{sjoberg93quantifying}{$~$}
+Dag~I.K. Sj{\o}berg.
+\newblock Quantifying schema evolution.
+\newblock {\em Information \& Software Technology}, 35(1):35--44, 1993.
+
+\bibitem[Stahl {\it et al.}\  2006]{stahl06mdsd}{$~$}
+Thomas Stahl, Markus Voelter, and Krzysztof Czarnecki.
+\newblock {\em Model-Driven Software Development: Technology, Engineering,
+  Management}.
+\newblock Wiley, 2006.
+
+\bibitem[Watson 2008]{watson08mdahistory}{$~$}
+Andrew Watson.
+\newblock A brief history of {MDA}.
+\newblock {\em Upgrade}, 9(2), 2008.
+
+\end{thebibliography}
