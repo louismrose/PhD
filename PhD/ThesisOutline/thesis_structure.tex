@@ -3,35 +3,81 @@
 % Give a detailed chapter-by-chapter plan of the thesis. Include a description of the contents of each chapter. Explain where you have completed the work and give references to any papers orr reports which will contribute to the thesis; where the work has not been completed, explain how much progress has been made.
 
 \section{Proposed Thesis Structure}
+We now discuss the structure of the proposed thesis, highlighting completed and remaining work.
+
 
 \subsection{Introduction}
-\subsubsection{Motivation}
-\subsubsection{Definitions}
-\subsubsection{Research Aims}
-\subsubsection{Research Method}
-
-\subsection{Background}
-\subsubsection{Metamodelling}
+The introduction will be based on the introduction and literature review chapters of my qualifying dissertation. However, Model-Driven Engineering (MDE) is an emerging discipline, and so any content taken from my dissertation will require updating.
 
 \subsubsection{Model-Driven Engineering}
-Automated relationships between models.
+The proposed thesis will begin by introducing the challenges that MDE addresses. Subsequently, terminology relevant to MDE will be introduced (including terms such as \emph{model}, \emph{metamodel} and \emph{model transformation}). The benefits of MDE will be discussed, along with the main threats to its adoption. These threats include the additional challenges for controlling and managing software evolution with MDE \cite{Mens07}.
 
-\subsubsection{Model and Metamodel Consistency}
+\subsubsection{Software Evolution}
+The introduction will then discuss software evolution, and its causes. The challenges presented by software evolution will be highlighted, particularly in the context of MDE, and used to motivate the proposed thesis.
+
+\subsubsection{Research Aim}
+The high-level aim of the research will be stated, providing a context for the background and literature review chapters. 
+
+\subsubsection{Research Method}
+This section will discuss the way in which the research was conducted, including a discussion of the evaluation strategy.
+
+
+\subsection{Background}
+The background chapter will serve two purposes: Firstly, to introduce areas of computer science that are related to our research, and secondly to introduce two categories of evolution observed in model-driven engineering. These two categories were described in my progress report.
+
+Again, the background section will be based partly on the literature review sections of my qualifying dissertation.
+
+\subsubsection{Related Areas}
+Several subsections will be used, one per related area. Topics are likely to include domain-specific languages and language-oriented programming; refactoring and design patterns; and iterative and incremental approaches to software engineering.
+
+\subsubsection{Categories of Evolution in MDE}
+This section will discuss model and metamodel co-evolution and model synchronisation, two categories of evolution observed in MDE. These categories were introduced in Section~\ref{sec:introduction} of this thesis outline.
+
 
 \subsection{Literature Review}
-\subsubsection{Conclusion}
-High-level objectives and summary of methodology
+The literature review chapter will provide a thorough review and critical analysis of software evolution research. We will compare and contrast existing techniques for managing and automating activities relating to software evolution. As well as reviewing techniques that apply to the specific challenges caused by software evolution in the context of MDE, we will also critique literature from related areas, such as database and XML schema evolution; and program and modelling language evolution. This chapter will conclude by providing high-level research objectives in the context of the reviewed literature.
+
+
 
 \subsection{Analysis}
+The literature review will motivate a deeper analysis of existing techniques for managing evolution in the context of MDE. The benefits and drawbacks of existing techniques will be highlighted by applying them to data from projects using MDE. The analysis will be used to identify requirements for our research.
+
 \subsubsection{Locating Data}
-\subsubsection{Existing Approaches}
-Experiments
+The first section of the analysis chapter will be based on a section of my progress report, which discusses the data (existing MDE projects) used to analysis existing techniques for managing evolution in the context of MDE. We will introduce and explain the requirements on the data to be used for analysis, identify candidate MDE projects, describe the selection process, and provide reasons for our choices.
+
+\subsubsection{Analysing Existing Techniques}
+Having described the selection of suitable data for the analysis, we will then outline the way in which we have applied existing techniques to the data, and introduce criteria against which the effectiveness of existing techniques will be measured. This work has now been completed, and is discussed in Section \ref{sec:Progress} of this thesis outline.
+
 \subsubsection{Requirements Identification}
+The analysis of existing techniques will lead to requirements for our research. We will conclude the chapter by enumerating these requirements, refining the high-level research objectives from the literature review chapter into lower-level research objectives.
+
 
 \subsection{Implementation}
-\subsubsection{Deferred Model to Metamodel Binding}
-\subsubsection{Metamodel-Independent Syntax (HUTN)}
-\subsubsection{DSL for Automated Co-evolution}
+The implementation chapter will describe the way in which we have approached the requirements presented in the analysis chapter. The requirements will be fulfilled by implementing several related solutions. The solutions will take different forms, including domain-specific languages, automation, and extensions to existing modelling technologies.
+
+\subsubsection{Metamodel-Independent Syntax}
+XMI, an OMG standard for metamodel interchange, and EMF, arguably the most widely used modelling framework, serialises models in a metamodel-specific manner. Consequently, information from the metamodel is required during deserialisation. If the metamodel has evolved since the model was last serialised, deserialisation may fail. This limitation has a major impact on existing techniques for performing co-evolution, forcing them to store old and new copies of the metamodel. 
+
+In a submission to ASE 2009, we have highlighted the problems that a metamodel-specific syntax poses for managing and automating co-evolution, and described our solutions. We prescribe the use of a metamodel-independent syntax for storing models. We also show other ways in which a metamodel-independent representation can be useful for managing and automating co-evolution: checking consistency with any metamodel, and performing automatic consistency checking when a new metamodel version is encountered.
+
+\subsubsection{Human-Usable Textual Notation}
+The Human-Usable Textual Notation is an OMG standard textual concrete syntax for the MOF metamodelling architecture. The notation is metamodel-independent -- it can be used with any model that conforms to any MOF-based metamodel. HUTN provides a human-usable means for visualising and specifying models, which may not be consistent with their metamodel. HUTN is well-suited to semi-automated migration of inconsistent models.
+
+We have developed the only implementation of OMG HUTN, publishing our work at MoDELS 2008 (\cite{rose08hutn}). We have discussed the way in which HUTN may be used during semi-automated migration of inconsistent models in our submission to ASE 2009.
+
+\subsubsection{DSL for Migration Strategies}
+Some of the requirements presented in the analysis chapter can be addressed with a domain-specific language for specifying migration strategies. Migration strategies will be specified as a model transformation on inconsistent models, which will be expressed in a metamodel-independent representation. Using a metamodel-independent representation affords us some advantages over existing techniques (such as being able to store partially consistent models). A domain-specific language, rather than an existing model-to-model transformation language, is required to address the specific requirements of model migration, as discussed in my progress report.
+
+
+\subsubsection{Further solutions}
+Further solutions will be required to meet all of the requirements outlined in the analysis chapter. These solutions are likely to include:
+
+\begin{itemize}
+	\item A metamodel refactoring browser for EMF: inspired by the Smalltalk refactoring browser, this tool will provide common refactorings made to improve the design of existing metamodels. Refactorings will preserve model and metamodel consistency.
+	\item Syntax-free modelling:
+	\item Model-driven migration:
+\end{itemize}
+
 
 \subsection{Evaluation}
 \subsubsection{Case Study}

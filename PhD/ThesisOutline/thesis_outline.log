@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  14 MAY 2009 13:53
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  20 MAY 2009 16:02
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -66,15 +66,32 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/usr/local/texlive/2008/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./intr
 oduction.tex
-Overfull \hbox (45.95313pt too wide) in paragraph at lines 8--10
+Overfull \hbox (45.95313pt too wide) in paragraph at lines 10--12
 \OT1/cmr/m/n/10 lent to-day, such as [[]], [[]] and [[]].
  []
 
 
-LaTeX Warning: Citation `Mens07' on page 2 undefined on input line 19.
+LaTeX Warning: Citation `Mens07' on page 2 undefined on input line 21.
 
-[2]) (./thesis_structure.tex [3]) (./progress.tex) (./thesis_outline.bbl
-[4]
+[2]) (./thesis_structure.tex
+
+LaTeX Warning: Citation `Mens07' on page 3 undefined on input line 13.
+
+[3] [4]
+
+LaTeX Warning: Reference `sec:Progress' on page 5 undefined on input line 49.
+
+[5]
+
+LaTeX Warning: Citation `rose08hutn' on page 6 undefined on input line 66.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 76.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
+) (./progress.tex) (./thesis_outline.bbl [6]
 ./thesis_outline.bbl:58: Undefined control sequence.
 l.58 ...[Accessed 30 June 2008] Available at: \url
                                                   {http://www.omg.org}, 2008.
@@ -84,31 +101,32 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) [5] (./thesis_outline.aux)
+) [7] (./thesis_outline.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 275 strings out of 493886
- 3160 string characters out of 1151098
+ 295 strings out of 493886
+ 3506 string characters out of 1151098
  53889 words of memory out of 3000000
- 3602 multiletter control sequences out of 10000+50000
+ 3619 multiletter control sequences out of 10000+50000
  9806 words of font info for 34 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 23i,6n,19p,663b,195s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,6n,19p,699b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/l
 ocal/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texl
 ive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx9.pfb></usr/local/texlive/2008/t
 exmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/
 fonts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type
 1/bluesky/cm/cmr17.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/
-cm/cmr9.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy9.pf
-b></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/l
-ocal/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti9.pfb>
-Output written on thesis_outline.pdf (5 pages, 87676 bytes).
+cm/cmr9.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy10.p
+fb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy9.pfb></usr/l
+ocal/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texl
+ive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti9.pfb>
+Output written on thesis_outline.pdf (7 pages, 95746 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

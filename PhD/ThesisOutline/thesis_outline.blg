@@ -3,45 +3,45 @@ The top-level auxiliary file: thesis_outline.aux
 The style file: longname.bst
 Database file #1: thesis_outline.bib
 Warning--I didn't find a database entry for "Mens07"
-You've used 13 entries,
+You've used 14 entries,
             2472 wiz_defined-function locations,
-            629 strings with 6139 characters,
-and the built_in function-call counts, 4824 in all, are:
-= -- 476
-> -- 169
-< -- 4
-+ -- 51
-- -- 50
-* -- 337
-:= -- 770
-add.period$ -- 40
-call.type$ -- 13
-change.case$ -- 72
-chr.to.int$ -- 13
-cite$ -- 13
-duplicate$ -- 232
-empty$ -- 402
-format.name$ -- 65
-if$ -- 1015
+            635 strings with 6394 characters,
+and the built_in function-call counts, 5431 in all, are:
+= -- 540
+> -- 193
+< -- 6
++ -- 59
+- -- 58
+* -- 386
+:= -- 855
+add.period$ -- 44
+call.type$ -- 14
+change.case$ -- 80
+chr.to.int$ -- 14
+cite$ -- 14
+duplicate$ -- 260
+empty$ -- 448
+format.name$ -- 74
+if$ -- 1151
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 17
-newline$ -- 68
-num.names$ -- 39
-pop$ -- 87
+missing$ -- 18
+newline$ -- 73
+num.names$ -- 42
+pop$ -- 95
 preamble$ -- 1
-purify$ -- 90
+purify$ -- 99
 quote$ -- 0
-skip$ -- 183
+skip$ -- 206
 stack$ -- 0
-substring$ -- 245
-swap$ -- 58
-text.length$ -- 4
+substring$ -- 284
+swap$ -- 72
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
+type$ -- 92
 warning$ -- 0
-while$ -- 41
-width$ -- 17
-write$ -- 167
+while$ -- 46
+width$ -- 18
+write$ -- 182
 (There was 1 warning)

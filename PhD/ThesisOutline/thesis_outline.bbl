@@ -57,6 +57,14 @@ OMG.
 \newblock {Object Management Group} home page [online].
 \newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org}, 2008.
 
+\bibitem[Rose {\it et al.}\  2008]{rose08hutn}{$~$}
+Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
+\newblock Constructing models with the {Human-Usable Textual Notation} [to
+  appear].
+\newblock In {\em Proc. International Conference on Model Driven Engineering
+  Languages and Systems}, volume 5301 of {\em LNCS}, pages 249--263. Springer,
+  2008.
+
 \bibitem[Sj{\o}berg 1993]{sjoberg93quantifying}{$~$}
 Dag~I.K. Sj{\o}berg.
 \newblock Quantifying schema evolution.
