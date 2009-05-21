@@ -28,4 +28,19 @@
 \contentsline {subsection}{\numberline {2.7}Conclusion}{8}
 \contentsline {section}{\numberline {3}Progress}{8}
 \contentsline {subsection}{\numberline {3.1}Achievements}{8}
-\contentsline {subsection}{\numberline {3.2}Plan}{8}
+\contentsline {paragraph}{Plan stake-holder survey}{8}
+\contentsline {subparagraph}{Goals:}{8}
+\contentsline {subparagraph}{Progress:}{8}
+\contentsline {paragraph}{Analyse COPE and Cicchetti's work}{9}
+\contentsline {subparagraph}{Goals:}{9}
+\contentsline {subparagraph}{Progress:}{9}
+\contentsline {paragraph}{Collaborate with Barber and with Sampson}{9}
+\contentsline {subparagraph}{Goals:}{9}
+\contentsline {subparagraph}{Progress:}{9}
+\contentsline {paragraph}{Plan metamodel evolution language}{10}
+\contentsline {subparagraph}{Goals:}{10}
+\contentsline {subparagraph}{Progress:}{10}
+\contentsline {paragraph}{Write paper for MoDELS / SLE / MCCM 2009}{10}
+\contentsline {subparagraph}{Goals:}{10}
+\contentsline {subparagraph}{Progress:}{10}
+\contentsline {subsection}{\numberline {3.2}Plan}{10}

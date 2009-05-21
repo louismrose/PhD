@@ -2,47 +2,51 @@ This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: thesis_outline.aux
 The style file: longname.bst
 Database file #1: thesis_outline.bib
+Repeated entry---line 816 of file thesis_outline.bib
+ : @inproceedings{cicchetti08automating
+ :                                     ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "rose09patterns"
 Warning--I didn't find a database entry for "kolovosthesis"
-You've used 18 entries,
+You've used 20 entries,
             2472 wiz_defined-function locations,
-            653 strings with 6926 characters,
-and the built_in function-call counts, 7153 in all, are:
-= -- 712
-> -- 257
-< -- 10
-+ -- 80
-- -- 78
-* -- 514
-:= -- 1119
-add.period$ -- 58
-call.type$ -- 18
-change.case$ -- 105
-chr.to.int$ -- 17
-cite$ -- 18
-duplicate$ -- 346
-empty$ -- 591
-format.name$ -- 100
-if$ -- 1528
-int.to.chr$ -- 2
+            662 strings with 7335 characters,
+and the built_in function-call counts, 8107 in all, are:
+= -- 807
+> -- 300
+< -- 11
++ -- 95
+- -- 92
+* -- 582
+:= -- 1262
+add.period$ -- 65
+call.type$ -- 20
+change.case$ -- 120
+chr.to.int$ -- 18
+cite$ -- 20
+duplicate$ -- 391
+empty$ -- 668
+format.name$ -- 116
+if$ -- 1737
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 93
-num.names$ -- 54
-pop$ -- 127
+missing$ -- 25
+newline$ -- 103
+num.names$ -- 60
+pop$ -- 146
 preamble$ -- 1
-purify$ -- 129
+purify$ -- 146
 quote$ -- 0
-skip$ -- 264
+skip$ -- 297
 stack$ -- 0
-substring$ -- 359
-swap$ -- 100
-text.length$ -- 10
+substring$ -- 405
+swap$ -- 115
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 120
+type$ -- 136
 warning$ -- 0
-while$ -- 59
-width$ -- 24
-write$ -- 237
-(There were 2 warnings)
+while$ -- 66
+width$ -- 26
+write$ -- 263
+(There was 1 error message)

@@ -7,6 +7,12 @@ Frederick~P. Brooks.
 \newblock In {\em Proc. International Federation for Information Processing},
   pages 1069--1076, 1986.
 
+\bibitem[Cicchetti {\it et al.}\  2008]{cicchetti08automating}{$~$}
+Antonio Cicchetti, Davide~Di Ruscio, Romina Eramo, and Alfonso Pierantonio.
+\newblock Automating co-evolution in model-driven engineering.
+\newblock In {\em Proc. International IEEE Enterprise Distributed Object
+  Computing Conference}, pages 222--231. IEEE Computer Society, 2008.
+
 \bibitem[Deursen {\it et al.}\  2007]{deursen07mdse}{$~$}
 Arie van Deursen, Eelco Visser, and Jos Warmer.
 \newblock Model-driven software evolution: A research agenda.
@@ -30,13 +36,20 @@ Richard Gronback.
 \newblock In {\em Proc. EclipseCon}, Santa Clara, California, 2006.
 
 \bibitem[Herrmannsdoerfer {\it et al.}\
-  2008]{herrmannsdoerfer08automatability}{$~$}
+  2008a]{herrmannsdoerfer08automatability}{$~$}
 Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
 \newblock Automatability of coupled evolution of metamodels and models in
   practice.
 \newblock In {\em Proc. International Conference on Model Driven Engineering
   Languages and Systems}, volume 5301 of {\em LNCS}, pages 645--659. Springer,
   2008.
+
+\bibitem[Herrmannsdoerfer {\it et al.}\  2008b]{herrmannsdoerfer08cope}{$~$}
+Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
+\newblock {COPE}: A language for the coupled evolution of metamodels and
+  models.
+\newblock In {\em Proc. Workshop on Model Co-Evolution and Consistency
+  Management}, 2008.
 
 \bibitem[Jackson 1996]{jackson96software}{$~$}
 Michael Jackson.
