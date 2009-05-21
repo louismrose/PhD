@@ -24,6 +24,20 @@ Jack Greenfield, Keith Short, Steve Cook, and Stuart Kent.
   Models, Frameworks, and Tools}.
 \newblock Wiley, 2004.
 
+\bibitem[Gronback 2006]{gronback06gmf}{$~$}
+Richard Gronback.
+\newblock Introduction to the {Eclipse Graphical Modeling Framework}.
+\newblock In {\em Proc. EclipseCon}, Santa Clara, California, 2006.
+
+\bibitem[Herrmannsdoerfer {\it et al.}\
+  2008]{herrmannsdoerfer08automatability}{$~$}
+Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
+\newblock Automatability of coupled evolution of metamodels and models in
+  practice.
+\newblock In {\em Proc. International Conference on Model Driven Engineering
+  Languages and Systems}, volume 5301 of {\em LNCS}, pages 645--659. Springer,
+  2008.
+
 \bibitem[Jackson 1996]{jackson96software}{$~$}
 Michael Jackson.
 \newblock {\em Software Requirements and Specifications}.
@@ -47,6 +61,11 @@ Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
   Foundations and Application}, volume 4066 of {\em LNCS}, pages 128--142.
   Springer, 2006.
 
+\bibitem[Mens \& Demeyer 2007]{mens07softwareevolution}{$~$}
+Tom Mens and Serge Demeyer.
+\newblock {\em Software Evolution}.
+\newblock Springer-Verlag, 2007.
+
 \bibitem[Moad 1990]{moad90maintaining}{$~$}
 J~Moad.
 \newblock Maintaining the competitive edge.
@@ -57,13 +76,20 @@ OMG.
 \newblock {Object Management Group} home page [online].
 \newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org}, 2008.
 
-\bibitem[Rose {\it et al.}\  2008]{rose08hutn}{$~$}
+\bibitem[Rose {\it et al.}\  2008a]{rose08hutn}{$~$}
 Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
 \newblock Constructing models with the {Human-Usable Textual Notation} [to
   appear].
 \newblock In {\em Proc. International Conference on Model Driven Engineering
   Languages and Systems}, volume 5301 of {\em LNCS}, pages 249--263. Springer,
   2008.
+
+\bibitem[Rose {\it et al.}\  2008b]{rose08egl}{$~$}
+Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
+\newblock {The Epsilon Generation Language}.
+\newblock In {\em Proc. European Conference on Model Driven Architecture --
+  Foundations and Applications}, volume 5095 of {\em LNCS}, pages 1--16.
+  Springer, 2008.
 
 \bibitem[Sj{\o}berg 1993]{sjoberg93quantifying}{$~$}
 Dag~I.K. Sj{\o}berg.

@@ -20,13 +20,12 @@
 \contentsline {subsubsection}{\numberline {2.5.2}Human-Usable Textual Notation}{6}
 \contentsline {subsubsection}{\numberline {2.5.3}DSL for Migration Strategies}{6}
 \contentsline {subsubsection}{\numberline {2.5.4}Further solutions}{6}
-\contentsline {subsection}{\numberline {2.6}Evaluation}{6}
-\contentsline {subsubsection}{\numberline {2.6.1}Case Study}{6}
-\contentsline {subsubsection}{\numberline {2.6.2}Publications}{6}
-\contentsline {subsubsection}{\numberline {2.6.3}Delivery through Eclipse}{6}
-\contentsline {subsection}{\numberline {2.7}Conclusion}{6}
-\contentsline {subsubsection}{\numberline {2.7.1}Achievement}{7}
-\contentsline {subsubsection}{\numberline {2.7.2}Future work}{7}
-\contentsline {section}{\numberline {3}Progress}{7}
-\contentsline {subsection}{\numberline {3.1}Achievements}{7}
-\contentsline {subsection}{\numberline {3.2}Plan}{7}
+\contentsline {subsection}{\numberline {2.6}Evaluation}{7}
+\contentsline {subsubsection}{\numberline {2.6.1}Case Study}{7}
+\contentsline {subsubsection}{\numberline {2.6.2}Publications}{7}
+\contentsline {subsubsection}{\numberline {2.6.3}Delivery through Eclipse}{8}
+\contentsline {subsubsection}{\numberline {2.6.4}Limitations}{8}
+\contentsline {subsection}{\numberline {2.7}Conclusion}{8}
+\contentsline {section}{\numberline {3}Progress}{8}
+\contentsline {subsection}{\numberline {3.1}Achievements}{8}
+\contentsline {subsection}{\numberline {3.2}Plan}{8}

@@ -7,10 +7,10 @@ We now discuss the structure of the proposed thesis, highlighting completed and 
 
 
 \subsection{Introduction}
-The introduction will be based on the introduction and literature review chapters of my qualifying dissertation. However, Model-Driven Engineering (MDE) is an emerging discipline, and so any content taken from my dissertation will require updating.
+The introduction will be based on the introduction and literature review chapters of my qualifying dissertation. However, as Model-Driven Engineering (MDE) is an emerging discipline, ßany content taken from my dissertation will be updated.
 
 \subsubsection{Model-Driven Engineering}
-The proposed thesis will begin by introducing the challenges that MDE addresses. Subsequently, terminology relevant to MDE will be introduced (including terms such as \emph{model}, \emph{metamodel} and \emph{model transformation}). The benefits of MDE will be discussed, along with the main threats to its adoption. These threats include the additional challenges for controlling and managing software evolution with MDE \cite{Mens07}.
+The proposed thesis will begin by discussing the challenges that MDE addresses. Subsequently, terminology relevant to MDE will be introduced (including terms such as \emph{model}, \emph{metamodel} and \emph{model transformation}). The benefits of MDE will be discussed, along with the main threats to its adoption. These threats include the additional challenges for controlling and managing software evolution with MDE \cite{mens07softwareevolution}.
 
 \subsubsection{Software Evolution}
 The introduction will then discuss software evolution, and its causes. The challenges presented by software evolution will be highlighted, particularly in the context of MDE, and used to motivate the proposed thesis.
@@ -25,10 +25,10 @@ This section will discuss the way in which the research was conducted, including
 \subsection{Background}
 The background chapter will serve two purposes: Firstly, to introduce areas of computer science that are related to our research, and secondly to introduce two categories of evolution observed in model-driven engineering. These two categories were described in my progress report.
 
-Again, the background section will be based partly on the literature review sections of my qualifying dissertation.
+Again, the background section will be based partly on the literature review section of my qualifying dissertation.
 
 \subsubsection{Related Areas}
-Several subsections will be used, one per related area. Topics are likely to include domain-specific languages and language-oriented programming; refactoring and design patterns; and iterative and incremental approaches to software engineering.
+Several subsections will be used, one per related area. Topics are likely to include domain-specific languages and language-oriented programming; refactoring and design patterns; and iterative and incremental approaches to software engineering. We will discuss the applicability and relationship of each area to software evolution in the context of model-driven engineering.
 
 \subsubsection{Categories of Evolution in MDE}
 This section will discuss model and metamodel co-evolution and model synchronisation, two categories of evolution observed in MDE. These categories were introduced in Section~\ref{sec:introduction} of this thesis outline.
@@ -56,36 +56,61 @@ The analysis of existing techniques will lead to requirements for our research. 
 The implementation chapter will describe the way in which we have approached the requirements presented in the analysis chapter. The requirements will be fulfilled by implementing several related solutions. The solutions will take different forms, including domain-specific languages, automation, and extensions to existing modelling technologies.
 
 \subsubsection{Metamodel-Independent Syntax}
-XMI, an OMG standard for metamodel interchange, and EMF, arguably the most widely used modelling framework, serialises models in a metamodel-specific manner. Consequently, information from the metamodel is required during deserialisation. If the metamodel has evolved since the model was last serialised, deserialisation may fail. This limitation has a major impact on existing techniques for performing co-evolution, forcing them to store old and new copies of the metamodel. 
+XMI, an OMG standard for metamodel interchange, and EMF, arguably the most widely used modelling framework, serialise models in a metamodel-specific manner. Consequently, information from the metamodel is required during deserialisation. If the metamodel has evolved since the model was last serialised, deserialisation may fail. This limitation has a major impact on existing techniques for performing co-evolution, forcing them to store original and evolved copies of metamodels. 
 
-In a submission to ASE 2009, we have highlighted the problems that a metamodel-specific syntax poses for managing and automating co-evolution, and described our solutions. We prescribe the use of a metamodel-independent syntax for storing models. We also show other ways in which a metamodel-independent representation can be useful for managing and automating co-evolution: checking consistency with any metamodel, and performing automatic consistency checking when a new metamodel version is encountered.
+In a submission to ASE 2009, we have highlighted the problems that a metamodel-specific syntax poses for managing and automating co-evolution, and described our solutions. We prescribe the use of a metamodel-independent syntax for storing models. We also show other ways in which a metamodel-independent representation can be useful for managing and automating co-evolution: Specifically, checking consistency with any metamodel, and performing automatic consistency checking when a new metamodel version is encountered.
 
 \subsubsection{Human-Usable Textual Notation}
-The Human-Usable Textual Notation is an OMG standard textual concrete syntax for the MOF metamodelling architecture. The notation is metamodel-independent -- it can be used with any model that conforms to any MOF-based metamodel. HUTN provides a human-usable means for visualising and specifying models, which may not be consistent with their metamodel. HUTN is well-suited to semi-automated migration of inconsistent models.
+The Human-Usable Textual Notation is an OMG standard textual concrete syntax for the MOF metamodelling architecture. The notation is metamodel-independent -- it can be used with any model that conforms to any MOF-based metamodel. HUTN provides a human-usable means for visualising and specifying models, even when those models are inconsistent with their metamodel.
 
 We have developed the only implementation of OMG HUTN, publishing our work at MoDELS 2008 (\cite{rose08hutn}). We have discussed the way in which HUTN may be used during semi-automated migration of inconsistent models in our submission to ASE 2009.
 
 \subsubsection{DSL for Migration Strategies}
-Some of the requirements presented in the analysis chapter can be addressed with a domain-specific language for specifying migration strategies. Migration strategies will be specified as a model transformation on inconsistent models, which will be expressed in a metamodel-independent representation. Using a metamodel-independent representation affords us some advantages over existing techniques (such as being able to store partially consistent models). A domain-specific language, rather than an existing model-to-model transformation language, is required to address the specific requirements of model migration, as discussed in my progress report.
+Some of the requirements presented in the analysis chapter can be addressed with a domain-specific language for specifying migration strategies. Migration strategies will be specified as a model transformation on inconsistent models expressed in a metamodel-independent representation. Using a metamodel-independent representation affords us some advantages over existing techniques (such as being able to store partially consistent models). A domain-specific language, rather than an existing model-to-model transformation language, is required to address the specific requirements of model migration, as discussed in my progress report.
 
 
 \subsubsection{Further solutions}
 Further solutions will be required to meet all of the requirements outlined in the analysis chapter. These solutions are likely to include:
 
 \begin{itemize}
+	\item Extending the DSL for migration strategies: \cite{herrmannsdoerfer08automatability} identify the need for re-usable migration strategies, encoded independently of the evolving metamodel. Supporting re-usable migration strategies will likely involve extending the DSL discussed above. 
 	\item A metamodel refactoring browser for EMF: inspired by the Smalltalk refactoring browser, this tool will provide common refactorings made to improve the design of existing metamodels. Refactorings will preserve model and metamodel consistency.
-	\item Syntax-free modelling:
-	\item Model-driven migration:
+	\item Model-driven migration: As discussed in our ASE 2009 submission, a metamodel-independent syntax enables new approaches to co-evolution. For instance, co-evolution can be driven from models, rather than their metamodel:
+	\begin{enumerate}
+		\item Discover a new concept to be modelled.
+		\item Represent an existing model that lacks this concept using a metamodel-independent syntax, and generate corresponding HUTN.
+		\item Evolve the model in HUTN to express the new concept.
+		\item Check consistency with the existing metamodel. Reconcile any inconsistencies by evolving the metamodel.
+		\item Use the model evolution from step 3 to guide migration of other models.
+	\end{enumerate}
+	We will explore and implement new approaches for automated management of co-evolution, such as the one outlined above.
 \end{itemize}
 
 
 \subsection{Evaluation}
+The evaluation chapter will outline our evaluation method and results, including the impact and limitations our our research; and discuss the extent to which the requirements identified in the analysis chapter have been fulfilled. Evaluation will be conducted in three ways: application of our structures and processes to a sizeable MDE project; publication of our research in academic journals, international conferences and workshops; and assessing the contribution made when delivering our work through an Eclipse research incubation project.
+
 \subsubsection{Case Study}
+We will apply our structures and processes to the Eclipse Generative Modelling Framework (GMF) project \cite{gronback06gmf}. GMF allows the definition of graphical concrete syntax for metamodels. GMF prescribes a model-driven approach: Users of GMF define concrete syntax as a model, which is used to generate a graphical editor. In fact, five models are used together to define a single editor using GMF.
+
+GMF defines the metamodels for graphical, tooling and mapping definition models; and for generator models. The metamodels have changed considerably during the development of GMF. Some changes have caused inconsistency with GMF models. Presently, migration is encoded in Java. Gronback has stated\footnote{Private communication, 2008.} that the migration code is being ported to QVT (a model-to-model transformation language) as the Java code is difficult to maintain.
+
+We identified GMF as the most appropriate candidate for the analysis phase of our research. Consequently, we decided to reserve GMF for the evaluation of our work.
+
 \subsubsection{Publications}
+Publication in academic journals, and at international conferences and workshops ensure that our work is reviewed by experts, and is well-established and communicated in our field of research. So far, I have been the primary author for publications at one international conference (\cite{rose08hutn}), one European conference (\cite{rose08egl}), and one workshop (\cite{rose09patterns}). The former was published at MoDELS, which has a typical acceptance rate of 20\% out of 250-300 papers, and has been nominated by HISE for the departmental best research student paper award.
+
+Where appropriate, we will aim to publish our work at software evolution conferences, as well as at model-driven engineering conferences. Doing so will allow us to assess the impact of our research in a broader sense.
+
 \subsubsection{Delivery through Eclipse}
+The tools produced as part of our research have been and will continue to be released as part of the Epsilon project, a member of the research incubator for the Eclipse Modeling Project (EMP), arguably the most active MDE community at present. EMP's research incubator hosts a limited number of participants, selected through a rigorous process. Contributions made to the incubator undergo regular technical review.
+
+Contributing to Epsilon allows us to deliver our research to the growing community \cite{kolovosthesis} of Epsilon users.
+
+\subsubsection{Limitations}
+We will discuss the limitations of our work, using where appropriate feedback from users, reviews of publications and scenarios from the case study for context.
+
+
 
 \subsection{Conclusion}
-High-level. Summary of research objectives.
-
-\subsubsection{Achievement}
-\subsubsection{Future work}
+The conclusion will provide a summary of the challenges addressed by and the objectives of our research. We will summarise the way in which we have approached the challenges and met the objectives, concluding with a summary of the evaluation and discussion of future work. 

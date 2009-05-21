@@ -2,46 +2,47 @@ This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: thesis_outline.aux
 The style file: longname.bst
 Database file #1: thesis_outline.bib
-Warning--I didn't find a database entry for "Mens07"
-You've used 14 entries,
+Warning--I didn't find a database entry for "rose09patterns"
+Warning--I didn't find a database entry for "kolovosthesis"
+You've used 18 entries,
             2472 wiz_defined-function locations,
-            635 strings with 6394 characters,
-and the built_in function-call counts, 5431 in all, are:
-= -- 540
-> -- 193
-< -- 6
-+ -- 59
-- -- 58
-* -- 386
-:= -- 855
-add.period$ -- 44
-call.type$ -- 14
-change.case$ -- 80
-chr.to.int$ -- 14
-cite$ -- 14
-duplicate$ -- 260
-empty$ -- 448
-format.name$ -- 74
-if$ -- 1151
-int.to.chr$ -- 1
+            653 strings with 6926 characters,
+and the built_in function-call counts, 7153 in all, are:
+= -- 712
+> -- 257
+< -- 10
++ -- 80
+- -- 78
+* -- 514
+:= -- 1119
+add.period$ -- 58
+call.type$ -- 18
+change.case$ -- 105
+chr.to.int$ -- 17
+cite$ -- 18
+duplicate$ -- 346
+empty$ -- 591
+format.name$ -- 100
+if$ -- 1528
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 73
-num.names$ -- 42
-pop$ -- 95
+missing$ -- 23
+newline$ -- 93
+num.names$ -- 54
+pop$ -- 127
 preamble$ -- 1
-purify$ -- 99
+purify$ -- 129
 quote$ -- 0
-skip$ -- 206
+skip$ -- 264
 stack$ -- 0
-substring$ -- 284
-swap$ -- 72
-text.length$ -- 6
+substring$ -- 359
+swap$ -- 100
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 92
+type$ -- 120
 warning$ -- 0
-while$ -- 46
-width$ -- 18
-write$ -- 182
-(There was 1 warning)
+while$ -- 59
+width$ -- 24
+write$ -- 237
+(There were 2 warnings)
