@@ -1,0 +1,64 @@
+%!TEX root = /Users/louis/Documents/PhD/Deliverables/ThesisOutline/thesis_outline.tex
+
+\subsection{Achievements}
+We now reproduce the goals described in the progress report, and discuss the achievements made since submission of that report.
+
+\paragraph{Plan stake-holder survey}
+No existing co-evolution research identifies requirements from developers working on MDE projects. By surveying developers working on existing MDE projects, we planned to ascertain data which would be used to derive requirements for our research. The survey would find answers to the following types of questions: Which tools are developers using for editing and versioning their models and metamodels? Are developers regularly introducing inconsistencies between their models and metamodels? Are developers performing co-evolution manually or using a tool? Which tools are being used for co-evolution?
+
+\subparagraph{Goals:} Devise and conduct a survey of developers working on existing MDE projects. Identify a process for devising an effective survey. Determine suitable questions, and use the answers to derive requirements for the proposed thesis.
+
+\subparagraph{Progress:} To discuss conducting a survey of developers, I met with Chris Power and Paul Cairns (members of the York Human Computer Interaction group, who both have experience in developing surveys). Power and Cairns advised against conducting a survey, because producing a concise survey containing clear, unambiguous language would be very difficult. Instead, Power and Cairns suggested we interview experts in the field to ascertain the most widely used and unambiguous terms, and then conduct a survey.
+
+Because we have only a limited amount of time to dedicate to requirements analysis, we have decided not to pursue surveying developers. Instead, we will focus on analysing existing techniques and collaborating with colleagues working with evolving metamodels to derive requirements. Furthermore, feedback from users will be used to further guide development of our structures and processes.
+
+
+\paragraph{Analyse COPE and Cicchetti's work} % (fold)
+\label{par:analyse_existing_work}
+Both \cite{herrmannsdoerfer08cope} and \cite{cicchetti08automating} describe tools for performing co-evolution. By analysing both tools with data located from existing MDE projects, we have continued to identify areas in which these tools are effective, and ways in which they may be improved. The analysis has provided requirements for our research.
+
+\subparagraph{Goals:} Use the example data discussed in the progress report to determine the effectiveness and shortcomings of existing tools for performing automated co-evolution. Use the findings to derive requirements for our research.
+
+\subparagraph{Progress:} We have devised six experiments for the co-evolution tools identified above. Each experiment explored different capabilities of the tools. We have used the findings to identify and motivate requirements. For example, one of the experiments assessed the effectiveness of the tools when managing the migration of a small number of inconsistent models. Considerable effort was required to use either of the tools for any amount of automated migration. Consequently, we felt that the tools provided diminishing returns when used to manage co-evolution in the face of a small number of inconsistent models. In our submission to ASE 2009, we discuss this situation in more detail, describe a semi-automated solution, and provide a concrete example.
+
+% paragraph analyse_existing_work (end)
+
+
+\paragraph{Collaborate with Barber and with Sampson} % (fold)
+\label{par:collaborate_with_barber_and_with_sampson}
+We have continued to collaborate with Barber and with Sampson to iteratively and incrementally produce metamodels as discussed in the progress report. Initially, we wished to collect a record of evolutionary changes made during the development of metamodels. Were we to encounter any evolutionary changes that inhibited development, we would use them to derive further requirements for our research.
+
+\subparagraph{Goals:} Determine the extent to which the development of Barber's and Sampson's metamodels will aid our research. Observe and record any evolutionary changes made during the development. Obtain requirements from the data, and from Barber's and Sampson's experiences with MDE.
+
+\subparagraph{Progress:} Collaboration with Sampson and Barber has allowed us to observe several evolutionary changes, three of which we had not previously observed for any other metamodel. Work with Sampson is ongoing. One of Sampson's colleagues, Jon Simpson, a research student, will be further developing Sampson's metamodel, and developing model management operations for that metamodel. I am optimistic that Simpson's work will produce data for an initial study of model synchronisation, a category of evolutionary change in MDE for which we presently have no data.
+
+% paragraph collaborate_with_barber_and_with_sampson (end)
+
+
+\paragraph{Plan model migration language} % (fold)
+\label{par:plan_metamodel_evolution_language}
+We have consolidated the results of previous activities to produce requirements for a language for specifying and executing model migration strategies. In addition, we have begun to prototype the language. The primary aim of the prototype was for me to gain experience with unfamiliar technologies.
+
+\subparagraph{Goals:} Produce a list of requirements for a co-evolution language. Investigate any unfamiliar technologies that may aid in the development of the language.
+
+\subparagraph{Progress:} We have produced the following list of requirements for the language:
+
+\begin{enumerate}
+	\item TODO
+\end{enumerate}
+
+Presently, we are investigating implementation strategies. We will likely implement the language as an internal extension to an existing language, such as Ruby or Scala. Another option is to contribute a new language to Epsilon, a model management framework providing a re-usable architecture for specifying DSLs that manipulate EMF-based models.
+% paragraph plan_metamodel_evolution_language (end)
+
+
+\paragraph{Write paper for MoDELS / SLE / MCCM 2009} % (fold)
+\label{par:write_paper_for_models_sle_mccm_2009}
+The research conducted before July 2009 has yielded publishable results. The progress report stated that the collaboration with Barber would be used to generate a report describing our experiences with current MDE tools. We would be able to highlight the need for automated co-evolution tools and discuss why this need is not yet being fulfilled.
+
+\subparagraph{Goals:} Publish a paper at MoDELS 2009 (or co-located conferences).
+
+\subparagraph{Progress:} The work with Barber (and with Sampson) highlighted deficiencies with existing modelling technologies. In particular, we found several issues that inhibited our ability to develop a metamodel iteratively and incrementally in a collaborative environment. These issues motivated requirements on our research. We have submitted a paper to ASE 2009 that discusses this issues and describes our solutions. We chose ASE rather than MoDELS to assess the contribution in the context of a wider audience (ASE is an software engineering conference, rather than a model-driven engineering conference), and because the deadline for ASE was later than for MoDELS. If the submission is not accepted at ASE, we will revise and send it to another conference.
+
+
+
+\paragraph{Other achievements} Analysing tools and collaborating Sampson took less time than planned - MOTIP paper. Took a shorter Easter break than expected, so worked on HUTN / XMI and submitted to ASE.
