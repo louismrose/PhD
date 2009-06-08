@@ -1,5 +1,10 @@
 \begin{thebibliography}{99}
 
+\bibitem[Beck 2002]{beck02tdd}{$~$}
+Kent Beck.
+\newblock {\em Test Driven Development: By Example}.
+\newblock Addison-Wesley Professional, 2002.
+
 \bibitem[Brooks 1986]{brooks86nosilverbullet}{$~$}
 Frederick~P. Brooks.
 \newblock No silver bullet -- essence and accident in software engineering
@@ -23,6 +28,11 @@ Arie van Deursen, Eelco Visser, and Jos Warmer.
 Len Erlikh.
 \newblock Leveraging legacy system dollars for e-business.
 \newblock {\em IT Professional}, 2(3):17--23, 2000.
+
+\bibitem[Fowler 1999]{fowler99refactoring}{$~$}
+Martin Fowler.
+\newblock {\em Refactoring: improving the design of existing code}.
+\newblock Addison-Wesley, 1999.
 
 \bibitem[Greenfield {\it et al.}\  2004]{greenfield04software}{$~$}
 Jack Greenfield, Keith Short, Steve Cook, and Stuart Kent.
@@ -74,6 +84,17 @@ Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
   Foundations and Application}, volume 4066 of {\em LNCS}, pages 128--142.
   Springer, 2006.
 
+\bibitem[Kolovos 2008]{kolovos08thesis}{$~$}
+Dimitrios~S. Kolovos.
+\newblock {\em An Extensible Platform for Specification of Integrated Languages
+  for Model Management}.
+\newblock PhD thesis, University of York, United Kingdom, 2008.
+
+\bibitem[Lerner 2000]{lerner00model}{$~$}
+Barbara~Staudt Lerner.
+\newblock A model for compound type changes encountered in schema evolution.
+\newblock {\em ACM Transactions on Database Systems}, 25(1):83--127, 2000.
+
 \bibitem[Mens \& Demeyer 2007]{mens07softwareevolution}{$~$}
 Tom Mens and Serge Demeyer.
 \newblock {\em Software Evolution}.
@@ -88,6 +109,11 @@ J~Moad.
 OMG.
 \newblock {Object Management Group} home page [online].
 \newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org}, 2008.
+
+\bibitem[Roberts {\it et al.}\  1997]{roberts97refactoring}{$~$}
+Don Roberts, John Brant, and Ralph~E. Johnson.
+\newblock A refactoring tool for smalltalk.
+\newblock {\em TAPOS}, 3(4):253--263, 1997.
 
 \bibitem[Rose {\it et al.}\  2008a]{rose08hutn}{$~$}
 Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
@@ -104,10 +130,22 @@ Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
   Foundations and Applications}, volume 5095 of {\em LNCS}, pages 1--16.
   Springer, 2008.
 
+\bibitem[Rose {\it et al.}\  2009]{rose09patterns}{$~$}
+Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, Tara Gilliam, and
+  Fiona~A.C. Polack.
+\newblock Emerging patterns for testing model management tools.
+\newblock In {\em {Proc. Workshop on Model-based Testing in Practice (MoTiP)
+  [to appear]}}, 2009.
+
 \bibitem[Sj{\o}berg 1993]{sjoberg93quantifying}{$~$}
 Dag~I.K. Sj{\o}berg.
 \newblock Quantifying schema evolution.
 \newblock {\em Information \& Software Technology}, 35(1):35--44, 1993.
+
+\bibitem[Sprinkle 2003]{sprinkle03thesis}{$~$}
+Jonathan Sprinkle.
+\newblock {\em Metamodel Driven Model Migration}.
+\newblock PhD thesis, Vanderbilt University, TN, USA, 2003.
 
 \bibitem[Stahl {\it et al.}\  2006]{stahl06mdsd}{$~$}
 Thomas Stahl, Markus Voelter, and Krzysztof Czarnecki.

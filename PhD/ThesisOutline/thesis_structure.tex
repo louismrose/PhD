@@ -3,11 +3,11 @@
 % Give a detailed chapter-by-chapter plan of the thesis. Include a description of the contents of each chapter. Explain where you have completed the work and give references to any papers orr reports which will contribute to the thesis; where the work has not been completed, explain how much progress has been made.
 
 \section{Proposed Thesis Structure}
-We now discuss the structure of the proposed thesis, highlighting completed and remaining work. Each subsection proposes a chapter for the thesis, describing content and briefly explaining how much progress has been made. Section \ref{sec:progress} contains a more detailed discussion of progress made since submission of the progress report.
+We now describe the anticipated structure for the proposed thesis. Chapter-by-chapter, we describe content and briefly explain how much progress has been made since the progress report. (Section \ref{sec:progress} contains a more detailed discussion of progress).
 
 
 \subsection{Introduction}
-The introduction will motivate the proposed thesis, introducing the areas of model-driven engineering and software evolution.
+The introduction will motivate the proposed thesis, introducing model-driven engineering and software evolution.
 
 \subsubsection{Model-Driven Engineering}
 The proposed thesis will begin by discussing the challenges that MDE addresses. Terminology relevant to MDE will be introduced (including terms such as \emph{model}, \emph{metamodel} and \emph{model transformation}). The benefits of MDE will be discussed along with the main threats to its adoption, which include challenges for controlling and managing software evolution with MDE \cite{mens07softwareevolution}.
@@ -21,7 +21,8 @@ The high-level aim of the research will be stated, providing a context for the b
 \subsubsection{Research Method}
 This section will discuss the way in which the research was conducted, including a description of the evaluation strategy.
 
-\textbf{Status}: The introduction will be based on the introduction and literature review chapters of the qualifying dissertation, and introductory material from our publications. However, as Model-Driven Engineering (MDE) is an emerging discipline, any content taken from previous reports and publications will need updating.
+\subsubsection{Status of the chapter}
+The introduction will be based on the introduction and literature review chapters of the qualifying dissertation, and introductory material from our publications (discussed in Section~\ref{subsubsec:publications}). However, as MDE is an emerging discipline, any content taken from previous reports and publications will need to be updated.
 
 
 \subsection{Background}
@@ -33,7 +34,8 @@ Several subsections will be used, one per related area. Topics are likely to inc
 \subsubsection{Categories of Evolution in MDE}
 This section will discuss model and metamodel co-evolution and model synchronisation, two categories of evolution observed in MDE. These categories were introduced in Section~\ref{sec:introduction} of this thesis outline.
 
-\textbf{Status}: The background chapter will be based partly on the literature review section of the qualifying dissertation, and partly on a section from the progress report. Again, any content from previous reports will likely need updating.
+\subsubsection{Status of the chapter}
+The background chapter will be based partly on the literature review section of the qualifying dissertation, and partly on a section from the progress report. Again, any content from previous reports will likely need to be updated.
 
 
 \subsection{Literature Review}
@@ -53,25 +55,25 @@ The first section of the analysis chapter will be based on a section of the prog
 \subsubsection{Analysing Existing Techniques}
 Having described the selection of suitable data for the analysis, we will then outline the way in which we have applied existing techniques to the data, and introduce criteria against which the effectiveness of existing techniques will be measured. 
 
-\textbf{Status}: Completed. Discussed in Section \ref{sec:Progress}.
+\textbf{Status}: Completed. Discussed in Section \ref{sec:progress}.
 
 
 \subsubsection{Requirements Identification}
-The analysis of existing techniques will lead to requirements for our research. We will conclude the chapter by enumerating these requirements, refining the high-level research objectives from the literature review chapter into l
-ower-level research objectives.
+The analysis of existing techniques will lead to requirements for our research. We will conclude the chapter by enumerating these requirements, refining the high-level research objectives from the literature review chapter into lower-level research objectives.
 
-\textbf{Status}: Completed. Discussed in Section \ref{sec:Progress}.
+\textbf{Status}: Completed. Discussed in Section \ref{sec:progress}.
 
 
 \subsection{Implementation}
 The implementation chapter will describe the way in which we have approached the requirements presented in the analysis chapter. The requirements will be fulfilled by implementing several related solutions. The solutions will take different forms, including domain-specific languages, automation, and extensions to existing modelling technologies.
 
 \subsubsection{Metamodel-Independent Syntax}
+\label{subsubsec:mmi}
 XMI, an OMG standard for metamodel interchange, and EMF, arguably the most widely used modelling framework, serialise models in a metamodel-specific manner. Consequently, information from the metamodel is required during deserialisation. If the metamodel has evolved since the model was last serialised, deserialisation may fail. This limitation has a major impact on existing techniques for performing co-evolution, forcing them to store original and evolved copies of metamodels. 
 
 In a submission to ASE 2009, we have highlighted the problems that a metamodel-specific syntax poses for managing and automating co-evolution, and described our solutions. We prescribe the use of a metamodel-independent syntax for storing models. We also show other ways in which a metamodel-independent representation can be useful for managing and automating co-evolution: Specifically, checking consistency with any metamodel, and performing automatic consistency checking when a new metamodel version is encountered.
 
-\textbf{Status}: Completed. Discussed in Section \ref{sec:Progress}. The work has been submitted to ASE 2009.
+\textbf{Status}: Completed. Discussed in Section \ref{sec:progress}. The work has been submitted to ASE 2009.
 
 
 \subsubsection{Human-Usable Textual Notation}
@@ -81,9 +83,9 @@ The Human-Usable Textual Notation is an OMG standard textual concrete syntax for
 
 
 \subsubsection{DSL for Migration Strategies}
-Some of the requirements presented in the analysis chapter can be addressed with a domain-specific language for specifying migration strategies. Migration strategies will be specified as a model transformation on inconsistent models expressed in a metamodel-independent representation. Transforming a metamodel-independent representation affords us some advantages (such as being able to store partially consistent models) over existing techniques (which transform metamodel-specific representations). A domain-specific language, rather than an existing model-to-model transformation language, is required to address the specific requirements of model migration, as discussed in the progress report.
+Some of the requirements presented in the analysis chapter can be addressed by a domain-specific language for specifying migration strategies. Migration strategies will be specified as a model transformation on inconsistent models expressed in a metamodel-independent representation. Transforming a metamodel-independent representation affords us some advantages (such as being able to store partially consistent models) over existing techniques (which transform metamodel-specific representations). As discussed in the progress report, a domain-specific language, rather than an existing model-to-model transformation language, is required to address the specific requirements of model migration.
 
-\textbf{Status}: Ongoing. A plan for completion is discussed in Section \ref{sec:Plan}.
+\textbf{Status}: Ongoing. A plan for completion is discussed in Section \ref{subsec:plan}.
 
 
 \subsubsection{Further solutions}
@@ -92,7 +94,8 @@ Further solutions will be required to meet all of the requirements outlined in t
 
 \begin{itemize}
 	\item Extending the DSL for migration strategies: \cite{herrmannsdoerfer08automatability} identify the need for re-usable migration strategies, encoded independently of the evolving metamodel. Supporting re-usable migration strategies will likely involve extending the DSL discussed above. 
-	\item A metamodel refactoring browser for EMF: inspired by the Smalltalk refactoring browser, this tool will provide descriptions and allow execution of refactorings for improving the design of existing metamodels. Refactorings will preserve model and metamodel consistency. A refactoring browser for EMF would increase developer productivity by automating common metamodel evolutions.
+	\item Inference of migration strategies: \cite{lerner00model} motivates an alternative to a migration strategy language in which migration strategies are inferred by comparing old and new metamodels. Cicchetti has explored this idea, providing a prototypical implementation in \cite{cicchetti08automating}. We will investigate the benefits and drawbacks of inferring migration strategies compared to using a migration strategy language. We may choose to develop a new (or extend an existing) inference algorithm, and analyse to what extent it complements a migration strategy language for managing co-evolutionary change in the context of MDE.
+	\item A metamodel refactoring browser for EMF: inspired by the Smalltalk refactoring browser \cite{roberts97refactoring}, this tool will provide descriptions and allow execution of refactorings for improving the design of existing metamodels. Refactorings will preserve model and metamodel consistency. A refactoring browser for EMF would increase developer productivity by automating common metamodel evolutions.
 	\item Model-driven migration: As discussed in our ASE 2009 submission, a metamodel-independent syntax enables new approaches to co-evolution. For instance, co-evolution can be driven from models, rather than their metamodel:
 	\begin{enumerate}
 		\item Discover a new concept to be modelled.
@@ -104,11 +107,11 @@ Further solutions will be required to meet all of the requirements outlined in t
 	We will explore and implement a new approach for automated management of co-evolution, such as the one outlined above.
 \end{itemize}
 
-\textbf{Status}: Ongoing. A plan for decided between these options, and for their completion, is discussed in Section \ref{sec:Plan}.
+\textbf{Status}: Ongoing. A plan for deciding between these options, and for their completion, is discussed in Section \ref{subsec:plan}.
 
 
 \subsection{Evaluation}
-The evaluation chapter will outline our evaluation method and results, including the impact and limitations our our research; and discuss the extent to which the requirements identified in the analysis chapter have been fulfilled. Evaluation will be conducted in three ways: application of our structures and processes to a sizeable MDE project; publication of our research in academic journals, international conferences and workshops; and assessing the contribution made when delivering our work through an Eclipse research incubation project.
+The evaluation chapter will outline our evaluation method and results, including the impact and limitations of our research; and discuss the extent to which the requirements identified in the analysis chapter have been fulfilled. Evaluation will be conducted in three ways: application of our structures and processes in a case study; publication of our research in academic journals, international conferences and workshops; and assessing the contribution made when delivering our work through an Eclipse research incubation project.
 
 \subsubsection{Case Study}
 \label{subsubsec:case_study}
@@ -118,21 +121,22 @@ GMF defines the metamodels for graphical, tooling and mapping definition models;
 
 We identified GMF as the most appropriate candidate for the analysis phase of our research. Consequently, we decided to reserve GMF for the evaluation of our work.
 
-\textbf{Status}: Not yet started. The case study will not begin until we have developed all of the proposed structures and processes, as discussed in Section \ref{sec:Plan}.
+\textbf{Status}: Scheduled to begin in February 2010, as discussed in Section \ref{subsec:plan}.
 
 
 \subsubsection{Publications}
-Publication in academic journals, and at international conferences and workshops ensure that our work is reviewed by experts, and is well-established and communicated in our field of research. So far, I have been the primary author for publications at one international conference (\cite{rose08hutn}), one European conference (\cite{rose08egl}), and one workshop (\cite{rose09patterns}). The former was published at MoDELS/UML, the leading international conference on model-driven engineering, in a year when it had a record number of submissions (274, 20\% acceptance), and has been nominated by HISE for the annual departmental award for best paper by a research student.
+\label{subsubsec:publications}
+Publication in academic journals, and at international conferences and workshops ensure that our work is reviewed by experts, and is well-established and communicated in our field of research. So far, I have been the primary author for publications at one international conference (\cite{rose08hutn}), one European conference (\cite{rose08egl}), and one workshop (\cite{rose09patterns}). The first was published at MoDELS/UML, the leading international conference on model-driven engineering, in a year when it had a record number of submissions (274, 20\% acceptance), and has been nominated by HISE for the annual departmental award for best paper by a research student.
 
 We will submit our work to software evolution conferences, as well as at model-driven engineering conferences. Doing so will allow us to assess the impact of our research for a broader audience.
 
-\textbf{Status}: Ongoing. We plan to submit to at least ECMDA 2010 and MoDELS/UML 2010, as discussed in Section \ref{sec:Plan}.
+\textbf{Status}: Ongoing. We plan to submit to at least ECMDA 2010 and MoDELS/UML 2010, as discussed in Section \ref{subsec:plan}.
 
 
 \subsubsection{Delivery through Eclipse}
 The tools produced as part of our research have been and will continue to be released as part of the Epsilon project, a member of the research incubator for the Eclipse Modeling Project (EMP), arguably the most active MDE community at present. EMP's research incubator hosts a limited number of participants, selected through a rigorous process. Contributions made to the incubator undergo regular technical review.
 
-Contributing to Epsilon allows us to deliver our research to the growing community \cite{kolovosthesis} of Epsilon users.
+Contributing to Epsilon allows us to deliver our research to the growing community \cite{kolovos08thesis} of Epsilon users.
 
 \textbf{Status}: Ongoing. Bugs and requests for feature enhancements are being tracked via Epsilon's newsgroup and bug tracking software.
 
@@ -146,4 +150,4 @@ We will discuss the limitations of our work, using for context the feedback of u
 \subsection{Conclusion}
 The conclusion will provide a summary of the challenges addressed by, and the objectives of, our research. We will summarise the way in which we have approached the challenges and met the objectives, concluding with a summary of the evaluation and discussion of future work. 
 
-\textbf{Status}: Not yet started.
+\textbf{Status of the chapter}: Not yet started.

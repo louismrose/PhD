@@ -26,11 +26,11 @@ Both \cite{herrmannsdoerfer08cope} and \cite{cicchetti08automating} describe too
 
 \paragraph{Collaborate with Barber and with Sampson} % (fold)
 \label{par:collaborate_with_barber_and_with_sampson}
-We have continued to collaborate with Barber and with Sampson to iteratively and incrementally produce metamodels as discussed in the progress report. Initially, we wished to collect a record of evolutionary changes made during the development of metamodels. Were we to encounter any evolutionary changes that inhibited development, we would use them to derive further requirements for our research.
+We have continued to collaborate with Barber (University of York) and with Sampson (University of Kent) to iteratively and incrementally produce metamodels as discussed in the progress report. Initially, we wished to collect a record of evolutionary changes made during the development of metamodels. Were we to encounter any evolutionary changes that inhibited development, we would use them to derive further requirements for our research.
 
 \subparagraph{Goals:} Determine the extent to which the development of Barber's and Sampson's metamodels will aid our research. Observe and record any evolutionary changes made during the development. Obtain requirements from the data, and from Barber's and Sampson's experiences with MDE.
 
-\subparagraph{Progress:} Collaboration with Sampson and Barber has allowed us to observe several evolutionary changes, three of which we had not previously observed for any other metamodel. Work with Sampson is ongoing. One of Sampson's colleagues, Jon Simpson, a research student, will be further developing Sampson's metamodel, and developing model management operations for that metamodel. I am optimistic that Simpson's work will produce data for an initial study of model synchronisation, a category of evolutionary change in MDE for which we presently have no data.
+\subparagraph{Progress:} Collaboration with Sampson and Barber has allowed us to observe several evolutionary changes, three of which we had not previously observed for any other metamodel. Work with Sampson is ongoing. One of Sampson's colleagues, Jon Simpson, a research student at the University of Kent, will be further developing Sampson's metamodel, and developing model management operations for that metamodel. I am optimistic that Simpson's work will produce data for an initial study of model synchronisation, a category of evolutionary change in MDE for which we presently have no data.
 
 % paragraph collaborate_with_barber_and_with_sampson (end)
 
@@ -41,11 +41,7 @@ We have consolidated the results of previous activities to produce requirements 
 
 \subparagraph{Goals:} Produce a list of requirements for a co-evolution language. Investigate any unfamiliar technologies that may aid in the development of the language.
 
-\subparagraph{Progress:} We have produced the following list of requirements for the language:
-
-\begin{enumerate}
-	\item TODO
-\end{enumerate}
+\subparagraph{Progress:} We have produced a list of requirements for the language. Briefly, the requirements are the need for: concise and expressive language constructs for manipulating metamodel-independent representations of a model, constructs that provide re-use between migration strategies, a homogenous transformation engine\footnote{Homogenous transformations were compared to heterogeneous transformations in the progress report. Homogenous transformations are well-suited to model migration, as migration typically requires a small amount of changes to the source model \cite{sprinkle03thesis}.}, and development tools that provide assistance in formulating and executing migration strategies.
 
 Presently, we are investigating implementation strategies. We will likely implement the language as an internal extension to an existing language, such as Ruby or Scala. Another option is to contribute a new language to Epsilon, a model management framework providing a re-usable architecture for specifying DSLs that manipulate EMF-based models.
 % paragraph plan_metamodel_evolution_language (end)
@@ -57,8 +53,11 @@ The research conducted before July 2009 has yielded publishable results. The pro
 
 \subparagraph{Goals:} Publish a paper at MoDELS 2009 (or co-located conferences).
 
-\subparagraph{Progress:} The work with Barber (and with Sampson) highlighted deficiencies with existing modelling technologies. In particular, we found several issues that inhibited our ability to develop a metamodel iteratively and incrementally in a collaborative environment. These issues motivated requirements on our research. We have submitted a paper to ASE 2009 that discusses this issues and describes our solutions. We chose ASE rather than MoDELS to assess the contribution in the context of a wider audience (ASE is an software engineering conference, rather than a model-driven engineering conference), and because the deadline for ASE was later than for MoDELS. If the submission is not accepted at ASE, we will revise and send it to another conference.
+\subparagraph{Progress:} The work with Barber (and with Sampson) highlighted deficiencies with existing modelling technologies. In particular, we found several issues that inhibited our ability to develop a metamodel iteratively and incrementally in a collaborative environment. These issues motivated requirements for our research. We have submitted a paper to ASE 2009 that discusses this issues and describes our solutions. We chose ASE rather than MoDELS to assess the contribution in the context of a wider audience (ASE is a software engineering conference, rather than a model-driven software engineering conference), and because the deadline for ASE was later than for MoDELS. If the submission is not accepted at ASE, we will revise and send it to another conference.
 
 
 
-\paragraph{Other achievements} Analysing tools and collaborating Sampson took less time than planned - MOTIP paper. Took a shorter Easter break than expected, so worked on HUTN / XMI and submitted to ASE.
+\paragraph{Other achievements}
+Deciding not to conduct the developer survey permitted us some time for other research activities. In \cite{rose09patterns}, we have documented our experiences in testing model management languages and tools, providing a small catalogue of emerging patterns for specifying automated unit tests. Automated unit tests can increase the maintainability of a system by decreasing its resistance to evolution \cite{fowler99refactoring}.
+
+As discussed in Section \ref{subsubsec:mmi}, we also worked on providing metamodel-independent representation of EMF models, submitting our work to ASE 2009.

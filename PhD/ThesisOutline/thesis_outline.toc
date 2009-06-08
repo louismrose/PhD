@@ -5,51 +5,53 @@
 \contentsline {subsection}{\numberline {2.1}Introduction}{3}
 \contentsline {subsubsection}{\numberline {2.1.1}Model-Driven Engineering}{3}
 \contentsline {subsubsection}{\numberline {2.1.2}Software Evolution}{3}
-\contentsline {subsubsection}{\numberline {2.1.3}Research Aim}{4}
+\contentsline {subsubsection}{\numberline {2.1.3}Research Aim}{3}
 \contentsline {subsubsection}{\numberline {2.1.4}Research Method}{4}
+\contentsline {subsubsection}{\numberline {2.1.5}Status of the chapter}{4}
 \contentsline {subsection}{\numberline {2.2}Background}{4}
 \contentsline {subsubsection}{\numberline {2.2.1}Related Areas}{4}
 \contentsline {subsubsection}{\numberline {2.2.2}Categories of Evolution in MDE}{4}
+\contentsline {subsubsection}{\numberline {2.2.3}Status of the chapter}{4}
 \contentsline {subsection}{\numberline {2.3}Literature Review}{4}
 \contentsline {subsection}{\numberline {2.4}Analysis}{5}
 \contentsline {subsubsection}{\numberline {2.4.1}Locating Data}{5}
 \contentsline {subsubsection}{\numberline {2.4.2}Analysing Existing Techniques}{5}
 \contentsline {subsubsection}{\numberline {2.4.3}Requirements Identification}{5}
 \contentsline {subsection}{\numberline {2.5}Implementation}{5}
-\contentsline {subsubsection}{\numberline {2.5.1}Metamodel-Independent Syntax}{6}
+\contentsline {subsubsection}{\numberline {2.5.1}Metamodel-Independent Syntax}{5}
 \contentsline {subsubsection}{\numberline {2.5.2}Human-Usable Textual Notation}{6}
 \contentsline {subsubsection}{\numberline {2.5.3}DSL for Migration Strategies}{6}
 \contentsline {subsubsection}{\numberline {2.5.4}Further solutions}{6}
 \contentsline {subsection}{\numberline {2.6}Evaluation}{7}
-\contentsline {subsubsection}{\numberline {2.6.1}Case Study}{7}
+\contentsline {subsubsection}{\numberline {2.6.1}Case Study}{8}
 \contentsline {subsubsection}{\numberline {2.6.2}Publications}{8}
 \contentsline {subsubsection}{\numberline {2.6.3}Delivery through Eclipse}{8}
-\contentsline {subsubsection}{\numberline {2.6.4}Limitations}{8}
+\contentsline {subsubsection}{\numberline {2.6.4}Limitations}{9}
 \contentsline {subsection}{\numberline {2.7}Conclusion}{9}
 \contentsline {section}{\numberline {3}Progress}{9}
 \contentsline {subsection}{\numberline {3.1}Achievements}{9}
 \contentsline {paragraph}{Plan stake-holder survey}{9}
 \contentsline {subparagraph}{Goals:}{9}
 \contentsline {subparagraph}{Progress:}{9}
-\contentsline {paragraph}{Analyse COPE and Cicchetti's work}{9}
+\contentsline {paragraph}{Analyse COPE and Cicchetti's work}{10}
 \contentsline {subparagraph}{Goals:}{10}
 \contentsline {subparagraph}{Progress:}{10}
 \contentsline {paragraph}{Collaborate with Barber and with Sampson}{10}
 \contentsline {subparagraph}{Goals:}{10}
 \contentsline {subparagraph}{Progress:}{10}
 \contentsline {paragraph}{Plan model migration language}{10}
-\contentsline {subparagraph}{Goals:}{10}
-\contentsline {subparagraph}{Progress:}{10}
+\contentsline {subparagraph}{Goals:}{11}
+\contentsline {subparagraph}{Progress:}{11}
 \contentsline {paragraph}{Write paper for MoDELS / SLE / MCCM 2009}{11}
 \contentsline {subparagraph}{Goals:}{11}
 \contentsline {subparagraph}{Progress:}{11}
 \contentsline {paragraph}{Other achievements}{11}
-\contentsline {subsection}{\numberline {3.2}Revised Plan}{11}
-\contentsline {subsection}{\numberline {3.3}Goals}{13}
-\contentsline {paragraph}{Develop model migration language}{13}
-\contentsline {subparagraph}{Goals:}{13}
-\contentsline {paragraph}{Evaluate user feedback}{13}
-\contentsline {subparagraph}{Goals:}{13}
-\contentsline {paragraph}{Prototyping and further development}{13}
-\contentsline {subparagraph}{Goals:}{13}
-\contentsline {subsection}{\numberline {3.4}Summary}{14}
+\contentsline {subsection}{\numberline {3.2}Revised Plan}{12}
+\contentsline {subsection}{\numberline {3.3}Goals}{14}
+\contentsline {paragraph}{Develop model migration language}{14}
+\contentsline {subparagraph}{Goals:}{14}
+\contentsline {paragraph}{Evaluate user feedback}{14}
+\contentsline {subparagraph}{Goals:}{14}
+\contentsline {paragraph}{Prototyping and further development}{14}
+\contentsline {subparagraph}{Goals:}{14}
+\contentsline {subsection}{\numberline {3.4}Summary}{15}
