@@ -1,0 +1,5 @@
+-- Not sure how to deal with duplicates yet
+
+migrate Port {
+	Migrated!System.all.first.ports.add(migrated);
+}
