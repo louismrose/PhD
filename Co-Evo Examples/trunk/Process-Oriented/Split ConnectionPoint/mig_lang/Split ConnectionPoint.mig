@@ -1,0 +1,18 @@
+-- TODO: This currently fails because engine tries to instantiate Migrated!ConnectionPoint
+--       Perhaps need a keyword ignore or delete, rather than migrate?
+--migrate ConnectionPoint when: not (original.isReading() xor original.isWriting()) {
+--	('Could not migrate: ' + original).println();
+--}
+
+migrate ConnectionPoint to ReadingConnectionPoint when: original.isReading()
+
+migrate ConnectionPoint to WritingConnectionPoint when: original.isWriting()
+
+
+operation Original!ConnectionPoint isReading() : Boolean {
+	return Original!Channel.all.exists(c|c.reader == self);
+}
+
+operation Original!ConnectionPoint isWriting() : Boolean {
+	return Original!Channel.all.exists(c|c.writer == self);
+}
