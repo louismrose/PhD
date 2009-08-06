@@ -1,0 +1,10 @@
+migrate Signature {
+	for (port in original.ports) {
+		if (migrated.ports.excludes(port.equivalent())) {
+			-- TODO clone?
+			var clone := new Migrated!Port;
+			clone.name := port.name;
+			migrated.ports.add(clone);
+		}
+	}
+}

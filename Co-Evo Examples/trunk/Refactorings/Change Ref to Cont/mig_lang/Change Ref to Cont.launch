@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
+<stringAttribute key="bad_container_name" value="/Co-Evo Examples/Refactorings/Change Ref to Con/mig_lang"/>
+<listAttribute key="models">
+<listEntry value="#&#10;#Thu Aug 06 20:10:11 BST 2009&#10;isMetamodelFileBased=true&#10;name=Migrated&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Refactorings/Change Ref to Cont/mig_lang/After.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/Refactorings/Change Ref to Cont/After.ecore&#10;"/>
+<listEntry value="#&#10;#Thu Aug 06 20:10:22 BST 2009&#10;isMetamodelFileBased=true&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Refactorings/Change Ref to Cont/Before.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/Refactorings/Change Ref to Cont/Before.ecore&#10;"/>
+</listAttribute>
+<stringAttribute key="source" value="/Co-Evo Examples/Refactorings/Change Ref to Cont/mig_lang/Change Ref to Cont.mig"/>
+</launchConfiguration>
