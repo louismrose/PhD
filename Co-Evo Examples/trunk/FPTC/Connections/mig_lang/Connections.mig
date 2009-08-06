@@ -1,0 +1,13 @@
+migrate Block {
+	for (successor in original.successors) {
+		var connection := new Migrated!Connection;
+		connection.source := migrated;
+		connection.target := successor.equivalent();
+
+		migrated.findSystem().connections.add(connection);
+	}
+}
+
+operation Migrated!Block findSystem() : Migrated!System {
+	return Migrated!System.all.selectOne(s|s.blocks.includes(self));
+}

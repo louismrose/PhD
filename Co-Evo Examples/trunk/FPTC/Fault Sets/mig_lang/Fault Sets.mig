@@ -1,0 +1,19 @@
+migrate Tuple {
+
+	for (is in original.contents) {
+		if (is.contents.size() = 1) {
+			migrated.contents.add(is.contents.first.equivalent());
+		
+		} else if (is.contents.size() > 1 and is.contents.forAll(identifier|identifier.isTypeOf(Original!Fault))) {
+			var faultSet := new Migrated!FaultSet;
+			faultSet.contents := is.contents.equivalent();
+			migrated.contents.add(faultSet);
+		
+		} else {
+			-- Could use interactive: System.user....
+			-- Ask Dimitris how to access System whe a metamodel defines a type called System
+			('Cannot migrate: ' + original).println();
+		}
+	}	
+}
+
