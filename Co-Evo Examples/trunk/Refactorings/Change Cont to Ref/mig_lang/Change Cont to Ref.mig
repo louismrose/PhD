@@ -1,5 +1,32 @@
--- Not sure how to deal with duplicates yet
-
 migrate Port {
-	Migrated!System.all.first.ports.add(migrated);
+	var system := original.getSystem().equivalent();
+
+	if (system.ports.exists(p|p.name = migrated.name)) {
+		var duplicate := system.ports.selectOne(p|p.name = migrated.name);
+	
+		original.getContainingSignature().equivalent().ports.remove(migrated);
+		original.getContainingSignature().equivalent().ports.add(duplicate);
+		delete migrated;
+		
+	} else {
+		system.ports.add(migrated);
+	}
+}
+
+@cached
+operation Original!Port getContainingSignature() : Original!Signature {
+	for (signature in Original!Signature.all) {
+		if (signature.ports.includes(self)) {
+			return signature;
+		}
+	}
+}
+
+@cached
+operation Original!Port getSystem() : Original!System {
+	for (system in Original!System.all) {
+		if (system.signatures.includes(self.getContainingSignature())) {
+			return system;
+		}
+	}
 }
