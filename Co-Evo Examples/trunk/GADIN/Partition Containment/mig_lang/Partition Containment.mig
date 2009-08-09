@@ -1,0 +1,4 @@
+migrate Action {
+	migrated.preconditionSets.add(new Migrated!PropositionSet);
+	migrated.preconditionSets.first.preconditions := original.preconditions.equivalent();
+}

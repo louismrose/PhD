@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gadin_partitionContainment:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gadin_partitionContainment="gadin_partitionContainment" xmi:id="_uv6HoIUEEd6XI4H4exffQw">
+  <actions xmi:id="_vrMEIIUEEd6XI4H4exffQw" name="Empty">
+    <preconditionSets xmi:id="_0T0cIIUEEd6XI4H4exffQw"/>
+  </actions>
+  <actions xmi:id="_wBwKAIUEEd6XI4H4exffQw" name="Singleton">
+    <preconditionSets xmi:id="_0rswoIUEEd6XI4H4exffQw">
+      <preconditions xmi:id="_1yW2sIUEEd6XI4H4exffQw" name="not a"/>
+    </preconditionSets>
+  </actions>
+  <actions xmi:id="_wY8iAIUEEd6XI4H4exffQw" name="Several">
+    <preconditionSets xmi:id="_1FAogIUEEd6XI4H4exffQw">
+      <preconditions xmi:id="_2kCyUIUEEd6XI4H4exffQw" name="a"/>
+      <preconditions xmi:id="_2tu50IUEEd6XI4H4exffQw" name="not b"/>
+      <preconditions xmi:id="_2yxK0IUEEd6XI4H4exffQw" name="not c"/>
+    </preconditionSets>
+  </actions>
+</gadin_partitionContainment:World>

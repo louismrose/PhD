@@ -1,0 +1,5 @@
+migrate Parameter to CharacterParameter when: original.type = Original!Type#character
+
+migrate Parameter to PrincipleParameter when: original.type = Original!Type#principle
+
+migrate Parameter to LocationParameter when: original.type = Original!Type#location

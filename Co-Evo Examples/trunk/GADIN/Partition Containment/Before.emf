@@ -1,0 +1,16 @@
+@namespace(uri="gadin_partitionContainment", prefix="gadin_partitionContainment")
+package gadin_partitionContainment;
+
+class World {
+  val Action[*] actions;
+}
+
+class Action {
+  attr String name;
+  val Proposition[*] preconditions;
+}
+
+class Proposition {
+  attr String name;
+}
+

@@ -1,0 +1,17 @@
+@namespace(uri="gadin_enumToClasses", prefix="gadin_enumToClasses")
+package gadin_enumToClasses;
+
+class World {
+  val Parameter[*] parameters;
+}
+
+abstract class Parameter {
+  attr String name;
+}
+
+class CharacterParameter extends Parameter {}
+
+class LocationParameter extends Parameter {}
+
+class PrincipleParameter extends Parameter {}
+
