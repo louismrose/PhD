@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fptc_connections:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fptc_connections="fptc_connections" xmi:id="_Z6RTIYTQEd6Bt_jCXRkQog">
+  <blocks xmi:id="_cvRKUITQEd6Bt_jCXRkQog" name="Source 1" outgoingConnections="_nEi8EITQEd6Bt_jCXRkQog"/>
+  <blocks xmi:id="_dA_McITQEd6Bt_jCXRkQog" name="Source 2" outgoingConnections="_p6Qk8ITQEd6Bt_jCXRkQog"/>
+  <blocks xmi:id="_dxGawITQEd6Bt_jCXRkQog" name="Source 3" outgoingConnections="_qGsecITQEd6Bt_jCXRkQog"/>
+  <blocks xmi:id="_eAb3QITQEd6Bt_jCXRkQog" name="Plex" incomingConnections="_nEi8EITQEd6Bt_jCXRkQog _qGsecITQEd6Bt_jCXRkQog _p6Qk8ITQEd6Bt_jCXRkQog _5IgQwITQEd6Bt_jCXRkQog" outgoingConnections="_1otwIITQEd6Bt_jCXRkQog _19BMMITQEd6Bt_jCXRkQog _5IgQwITQEd6Bt_jCXRkQog"/>
+  <blocks xmi:id="_eVL_QITQEd6Bt_jCXRkQog" name="Sink 1" incomingConnections="_1otwIITQEd6Bt_jCXRkQog"/>
+  <blocks xmi:id="_f7ywsITQEd6Bt_jCXRkQog" name="Sink 2" incomingConnections="_19BMMITQEd6Bt_jCXRkQog"/>
+  <blocks xmi:id="_gMbNsITQEd6Bt_jCXRkQog" name="Loner"/>
+  <connections xmi:id="_nEi8EITQEd6Bt_jCXRkQog" source="_cvRKUITQEd6Bt_jCXRkQog" target="_eAb3QITQEd6Bt_jCXRkQog"/>
+  <connections xmi:id="_p6Qk8ITQEd6Bt_jCXRkQog" source="_dA_McITQEd6Bt_jCXRkQog" target="_eAb3QITQEd6Bt_jCXRkQog"/>
+  <connections xmi:id="_qGsecITQEd6Bt_jCXRkQog" source="_dxGawITQEd6Bt_jCXRkQog" target="_eAb3QITQEd6Bt_jCXRkQog"/>
+  <connections xmi:id="_1otwIITQEd6Bt_jCXRkQog" source="_eAb3QITQEd6Bt_jCXRkQog" target="_eVL_QITQEd6Bt_jCXRkQog"/>
+  <connections xmi:id="_19BMMITQEd6Bt_jCXRkQog" source="_eAb3QITQEd6Bt_jCXRkQog" target="_f7ywsITQEd6Bt_jCXRkQog"/>
+  <connections xmi:id="_5IgQwITQEd6Bt_jCXRkQog" source="_eAb3QITQEd6Bt_jCXRkQog" target="_eAb3QITQEd6Bt_jCXRkQog"/>
+</fptc_connections:System>
