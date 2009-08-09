@@ -1,0 +1,8 @@
+migrate Account {
+	if (migrated.type.interestRate <> 0.0 and migrated.type.interestRate <> original.interestRate) {
+		('Conflicting interest rates for ' + migrated.type.name + ' AccountType').println();
+	
+	} else {
+		migrated.type.interestRate = original.interestRate;
+	}
+}

@@ -1,0 +1,4 @@
+migrate Person {
+	migrated.areaCode := original.telephoneNumber.areaCode;
+	migrated.number   := original.telephoneNumber.number;
+}

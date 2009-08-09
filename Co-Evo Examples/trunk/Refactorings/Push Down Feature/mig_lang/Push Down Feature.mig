@@ -1,0 +1,1 @@
+migrate Employee to Salesperson when: original.quota <> 0
