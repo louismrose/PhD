@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/petrinets/src"
+    modelPluginID="petrinets" modelName="After" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>After.ecore</foreignModel>
+  <genPackages prefix="Lit_petriNets" disposableProviderFactory="true" ecorePackage="After.ecore#/">
+    <genClasses ecoreClass="After.ecore#//Net">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference After.ecore#//Net/places"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference After.ecore#//Net/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference After.ecore#//Net/arcs"/>
+    </genClasses>
+    <genClasses ecoreClass="After.ecore#//Place">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference After.ecore#//Place/net"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute After.ecore#//Place/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference After.ecore#//Place/in"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference After.ecore#//Place/out"/>
+    </genClasses>
+    <genClasses ecoreClass="After.ecore#//Transition">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference After.ecore#//Transition/net"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute After.ecore#//Transition/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference After.ecore#//Transition/in"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference After.ecore#//Transition/out"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="After.ecore#//Arc">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference After.ecore#//Arc/net"/>
+    </genClasses>
+    <genClasses ecoreClass="After.ecore#//PTArc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference After.ecore#//PTArc/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference After.ecore#//PTArc/dst"/>
+    </genClasses>
+    <genClasses ecoreClass="After.ecore#//TPArc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference After.ecore#//TPArc/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference After.ecore#//TPArc/dst"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

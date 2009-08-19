@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore2xml:XMLMap xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ecore2xml="http://www.eclipse.org/emf/2005/Ecore2XML">
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EPackage" href="After.ecore#/"/>
+    <value name="lit_petriNets" targetNamespace="lit_petriNets"/>
+  </ecoreToXMLInfo>
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EClass" href="After.ecore#//Net"/>
+    <value name="Net" targetNamespace="lit_petriNets"/>
+  </ecoreToXMLInfo>
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EReference" href="After.ecore#//Net/places"/>
+    <value name="places"/>
+  </ecoreToXMLInfo>
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EReference" href="After.ecore#//Net/transitions"/>
+    <value name="transitions"/>
+  </ecoreToXMLInfo>
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EClass" href="After.ecore#//Place"/>
+    <value name="Place" targetNamespace="lit_petriNets"/>
+  </ecoreToXMLInfo>
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EReference" href="After.ecore#//Place/net"/>
+    <value name="net"/>
+  </ecoreToXMLInfo>
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EAttribute" href="After.ecore#//Place/name"/>
+    <value name="name"/>
+  </ecoreToXMLInfo>
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EClass" href="After.ecore#//Transition"/>
+    <value name="Transition" targetNamespace="lit_petriNets"/>
+  </ecoreToXMLInfo>
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EReference" href="After.ecore#//Transition/net"/>
+    <value name="net"/>
+  </ecoreToXMLInfo>
+  <ecoreToXMLInfo>
+    <key xsi:type="ecore:EAttribute" href="After.ecore#//Transition/name"/>
+    <value name="name"/>
+  </ecoreToXMLInfo>
+</ecore2xml:XMLMap>

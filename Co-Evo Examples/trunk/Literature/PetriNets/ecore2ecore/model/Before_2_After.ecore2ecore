@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore2ecore:Ecore2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore2ecore="http://www.eclipse.org/emf/2004/Ecore2Ecore" topToBottom="true">
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Net/places/@eGenericType"/>
+        <outputs href="After.ecore#//Net/places/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Net/places"/>
+      <outputs href="After.ecore#//Net/places"/>
+    </nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Net/transitions/@eGenericType"/>
+        <outputs href="After.ecore#//Net/transitions/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Net/transitions"/>
+      <outputs href="After.ecore#//Net/transitions"/>
+    </nested>
+    <inputs href="Before.ecore#//Net"/>
+    <outputs href="After.ecore#//Net"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Place/net/@eGenericType"/>
+        <outputs href="After.ecore#//Place/net/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Place/net"/>
+      <outputs href="After.ecore#//Place/net"/>
+    </nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Place/name/@eGenericType"/>
+        <outputs href="After.ecore#//Place/name/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Place/name"/>
+      <outputs href="After.ecore#//Place/name"/>
+    </nested>
+    <inputs href="Before.ecore#//Place"/>
+    <outputs href="After.ecore#//Place"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Transition/net/@eGenericType"/>
+        <outputs href="After.ecore#//Transition/net/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Transition/net"/>
+      <outputs href="After.ecore#//Transition/net"/>
+    </nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Transition/name/@eGenericType"/>
+        <outputs href="After.ecore#//Transition/name/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Transition/name"/>
+      <outputs href="After.ecore#//Transition/name"/>
+    </nested>
+    <inputs href="Before.ecore#//Transition"/>
+    <outputs href="After.ecore#//Transition"/>
+  </nested>
+  <inputs href="Before.ecore#/"/>
+  <outputs href="After.ecore#/"/>
+</ecore2ecore:Ecore2EcoreMappingRoot>
