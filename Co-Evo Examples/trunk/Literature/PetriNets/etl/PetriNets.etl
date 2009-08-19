@@ -1,0 +1,37 @@
+-- Rule only copies (redundant)
+rule Net2Net
+	transform o : Original!Net
+	to        m : Migrated!Net {
+
+	m.places      := o.places.equivalent();
+	m.transitions := o.transitions.equivalent();
+}
+
+-- Rule only copies (redundant)
+rule Place2Place
+	transform o : Original!Place
+	to        m : Migrated!Place {
+	
+	m.name := o.name;
+}
+
+rule Transition2Transition
+	transform o : Original!Transition   -- have to fully qualify source and target types, and bind them to variables (known and unnecessary in mig lang)
+	to        m : Migrated!Transition {
+	
+	m.name := o.name; -- Copying (redundant)
+	
+	for (source in o.src) {
+		var arc := new Migrated!PTArc;
+		arc.src := source.equivalent();
+		arc.dst := m;
+		arc.net := o.net.equivalent();  -- have to use equivalent as m.net might not be populated yet (guaranteed to be populated with mig lang)
+	}
+	
+	for (destination in o.dst) {
+		var arc := new Migrated!TPArc;
+		arc.src := m;
+		arc.dst := destination.equivalent();
+		arc.net := o.net.equivalent();
+	}
+}

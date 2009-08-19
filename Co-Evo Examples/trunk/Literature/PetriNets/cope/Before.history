@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-08-18T15:34:05.773+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="lit_petriNets"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="lit_petriNets"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="lit_petriNets"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Net">
+        <changes xsi:type="history:Set" element="Before.ecore#//Net" featureName="name"
+            dataValue="Net"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Place">
+        <changes xsi:type="history:Set" element="Before.ecore#//Place" featureName="name"
+            dataValue="Place"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Net" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Net/places">
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/places" featureName="name"
+            dataValue="places"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/places" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/places" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/places" featureName="eType"
+            referenceValue="Before.ecore#//Place"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Place" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Place/net">
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/net" featureName="name"
+            dataValue="net"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/net" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/net" featureName="eType"
+            referenceValue="Before.ecore#//Net"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/net" featureName="eOpposite"
+            referenceValue="Before.ecore#//Net/places"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/places" featureName="eOpposite"
+            referenceValue="Before.ecore#//Place/net"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Place" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Place/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Transition">
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition" featureName="name"
+            dataValue="Transition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Net" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Net/transitions">
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/transitions" featureName="name"
+            dataValue="transitions"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/transitions" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/transitions" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/transitions" featureName="eType"
+            referenceValue="Before.ecore#//Transition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Place" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Place/out">
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/out" featureName="name"
+            dataValue="dst"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/out" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/out" featureName="eType"
+            referenceValue="Before.ecore#//Transition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Transition" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Transition/net">
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/net" featureName="name"
+            dataValue="net"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/net" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/net" featureName="eType"
+            referenceValue="Before.ecore#//Net"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/net" featureName="eOpposite"
+            referenceValue="Before.ecore#//Net/transitions"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/transitions" featureName="eOpposite"
+            referenceValue="Before.ecore#//Transition/net"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Transition" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Transition/in">
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/in" featureName="name"
+            dataValue="src"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/in" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/in" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/in" featureName="eType"
+            referenceValue="Before.ecore#//Place"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/in" featureName="eOpposite"
+            referenceValue="Before.ecore#//Place/out"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/out" featureName="eOpposite"
+            referenceValue="Before.ecore#//Transition/in"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Transition" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Transition/out">
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/out" featureName="name"
+            dataValue="dst"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/out" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/out" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/out" featureName="eType"
+            referenceValue="Before.ecore#//Place"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Place" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Place/in">
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/in" featureName="name"
+            dataValue="src"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/in" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/in" featureName="eType"
+            referenceValue="Before.ecore#//Transition"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/in" featureName="eOpposite"
+            referenceValue="Before.ecore#//Transition/out"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/out" featureName="eOpposite"
+            referenceValue="Before.ecore#//Place/in"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Transition" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Transition/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="lit_petriNetsPackage = lit_petriNets&#xA;arcClass = lit_petriNetsPackage.newEClass()&#xA;arcClass.name = &quot;Arc&quot;&#xA;netReference = arcClass.newEReference()&#xA;netReference.name = &quot;net&quot;&#xA;netClass = lit_petriNets.Net&#xA;netReference.eType = netClass&#xA;arcsReference = netClass.newEReference()&#xA;arcsReference.containment = true&#xA;arcsReference.eType = arcClass&#xA;arcsReference.name = &quot;arcs&quot;&#xA;arcsReference.upperBound = -1&#xA;arcClass.'abstract' = true&#xA;pTArcClass = lit_petriNetsPackage.newEClass()&#xA;pTArcClass.name = &quot;PTArc&quot;&#xA;pTArcClass.eSuperTypes.add(arcClass)&#xA;tPArcClass = lit_petriNetsPackage.newEClass()&#xA;tPArcClass.name = &quot;TPArc&quot;&#xA;tPArcClass.eSuperTypes.add(arcClass)&#xA;srcReference = pTArcClass.newEReference()&#xA;srcReference.name = &quot;src&quot;&#xA;netReference.lowerBound = 1&#xA;srcReference.lowerBound = 1&#xA;srcReference2 = tPArcClass.newEReference()&#xA;srcReference2.name = &quot;src&quot;&#xA;srcReference2.lowerBound = 1&#xA;srcReference3 = pTArcClass.newEReference()&#xA;srcReference3.name = &quot;src&quot;&#xA;srcReference3.lowerBound = 1&#xA;srcReference3.name = &quot;dst&quot;&#xA;dstReference = tPArcClass.newEReference()&#xA;dstReference.name = &quot;dst&quot;&#xA;dstReference.lowerBound = 1&#xA;placeClass = lit_petriNets.Place&#xA;srcReference.eType = placeClass&#xA;transitionClass = lit_petriNets.Transition&#xA;srcReference3.eType = transitionClass&#xA;srcReference2.eType = transitionClass&#xA;dstReference.eType = placeClass&#xA;srcReference4 = lit_petriNets.Place.src&#xA;srcReference4.name = &quot;in&quot;&#xA;dstReference2 = lit_petriNets.Place.dst&#xA;dstReference2.name = &quot;out&quot;&#xA;dstReference2.eType = pTArcClass&#xA;srcReference4.eType = tPArcClass&#xA;srcReference5 = lit_petriNets.Transition.src&#xA;srcReference5.name = &quot;in&quot;&#xA;dstReference3 = lit_petriNets.Transition.dst&#xA;dstReference3.name = &quot;out&quot;&#xA;dstReference3.eType = tPArcClass&#xA;srcReference5.eType = pTArcClass&#xA;dstReference3.eOpposite = null&#xA;dstReference.eOpposite = srcReference4&#xA;srcReference4.eOpposite = dstReference&#xA;srcReference5.eOpposite = null&#xA;srcReference.eOpposite = dstReference2&#xA;dstReference2.eOpposite = srcReference&#xA;srcReference3.eOpposite = srcReference5&#xA;srcReference5.eOpposite = srcReference3&#xA;srcReference2.eOpposite = dstReference3&#xA;dstReference3.eOpposite = srcReference2&#xA;&#xA;&#xA;for (transition in petrinets.Transition.allInstances) {&#xA;  for (source in transition.unset('src')) {&#xA;&#x9;var arc = petrinets.PTArc.newInstance()&#xA;&#x9;arc.src = source&#xA;&#x9;arc.dst = transition&#xA;&#x9;arc.net = transition.net;&#xA;  }&#xA;  &#xA;  for (destination in transition.unset('dst')) {&#xA;&#x9;var arc = petrinets.TPArc.newInstance() &#xA;&#x9;arc.src = transition&#xA;&#x9;arc.dst = destination&#xA;&#x9;arc.net = transition.net;&#xA;  }&#xA;}&#xA;&#xA;for (place in petrinets.Place.allInstances) {&#xA;&#x9;place.unset('src')&#xA;&#x9;place.unset('dst')&#xA;}&#xA;">
+      <changes xsi:type="history:CompositeChange">
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//Arc"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Arc" featureName="name"
+            dataValue="Arc"/>
+        <changes xsi:type="history:Create" target="Before.ecore#//Arc" referenceName="eStructuralFeatures"
+            element="Before.ecore#//Arc/net"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Arc/net" featureName="name"
+            dataValue="net"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Arc/net" featureName="eType"
+            referenceValue="Before.ecore#//Net"/>
+        <changes xsi:type="history:Create" target="Before.ecore#//Net" referenceName="eStructuralFeatures"
+            element="Before.ecore#//Net/arcs"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/arcs" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/arcs" featureName="eType"
+            referenceValue="Before.ecore#//Arc"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/arcs" featureName="name"
+            dataValue="arcs"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Net/arcs" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Arc" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//PTArc"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PTArc" featureName="name"
+            dataValue="PTArc"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//PTArc" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Arc"/>
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//TPArc"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//TPArc" featureName="name"
+            dataValue="TPArc"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//TPArc" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Arc"/>
+        <changes xsi:type="history:Create" target="Before.ecore#//PTArc" referenceName="eStructuralFeatures"
+            element="Before.ecore#//PTArc/src"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PTArc/src" featureName="name"
+            dataValue="src"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Arc/net" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PTArc/src" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Create" target="Before.ecore#//TPArc" referenceName="eStructuralFeatures"
+            element="Before.ecore#//TPArc/src">
+          <changes xsi:type="history:Set" element="Before.ecore#//TPArc/src" featureName="name"
+              dataValue="src"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//TPArc/src" featureName="lowerBound"
+              dataValue="1" oldDataValue="0"/>
+        </changes>
+        <changes xsi:type="history:Create" target="Before.ecore#//PTArc" referenceName="eStructuralFeatures"
+            element="Before.ecore#//PTArc/dst">
+          <changes xsi:type="history:Set" element="Before.ecore#//PTArc/dst" featureName="name"
+              dataValue="src"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//PTArc/dst" featureName="lowerBound"
+              dataValue="1" oldDataValue="0"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//PTArc/dst" featureName="name"
+            dataValue="dst" oldDataValue="src"/>
+        <changes xsi:type="history:Create" target="Before.ecore#//TPArc" referenceName="eStructuralFeatures"
+            element="Before.ecore#//TPArc/dst">
+          <changes xsi:type="history:Set" element="Before.ecore#//TPArc/dst" featureName="name"
+              dataValue="dst"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//TPArc/dst" featureName="lowerBound"
+              dataValue="1" oldDataValue="0"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//PTArc/src" featureName="eType"
+            referenceValue="Before.ecore#//Place"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PTArc/dst" featureName="eType"
+            referenceValue="Before.ecore#//Transition"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//TPArc/src" featureName="eType"
+            referenceValue="Before.ecore#//Transition"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//TPArc/dst" featureName="eType"
+            referenceValue="Before.ecore#//Place"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/in" featureName="name"
+            dataValue="in" oldDataValue="src"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/out" featureName="name"
+            dataValue="out" oldDataValue="dst"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/out" featureName="eType"
+            referenceValue="Before.ecore#//PTArc" oldReferenceValue="Before.ecore#//Transition"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/in" featureName="eType"
+            referenceValue="Before.ecore#//TPArc" oldReferenceValue="Before.ecore#//Transition"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/in" featureName="name"
+            dataValue="in" oldDataValue="src"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/out" featureName="name"
+            dataValue="out" oldDataValue="dst"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/out" featureName="eType"
+            referenceValue="Before.ecore#//TPArc" oldReferenceValue="Before.ecore#//Place"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/in" featureName="eType"
+            referenceValue="Before.ecore#//PTArc" oldReferenceValue="Before.ecore#//Place"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/out" featureName="eOpposite"
+            oldReferenceValue="Before.ecore#//Place/in"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//TPArc/dst" featureName="eOpposite"
+            referenceValue="Before.ecore#//Place/in"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/in" featureName="eOpposite"
+            referenceValue="Before.ecore#//TPArc/dst" oldReferenceValue="Before.ecore#//Transition/out"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/in" featureName="eOpposite"
+            oldReferenceValue="Before.ecore#//Place/out"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PTArc/src" featureName="eOpposite"
+            referenceValue="Before.ecore#//Place/out"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Place/out" featureName="eOpposite"
+            referenceValue="Before.ecore#//PTArc/src" oldReferenceValue="Before.ecore#//Transition/in"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PTArc/dst" featureName="eOpposite"
+            referenceValue="Before.ecore#//Transition/in"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/in" featureName="eOpposite"
+            referenceValue="Before.ecore#//PTArc/dst"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//TPArc/src" featureName="eOpposite"
+            referenceValue="Before.ecore#//Transition/out"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/out" featureName="eOpposite"
+            referenceValue="Before.ecore#//TPArc/src"/>
+      </changes>
+    </changes>
+  </releases>
+</history:History>

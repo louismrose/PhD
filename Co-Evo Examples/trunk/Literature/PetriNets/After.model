@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<lit_petriNets:Net xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lit_petriNets="lit_petriNets" xmi:id="_OOsXQIvrEd6BVtJzMeIVYw">
+  <places xmi:id="_PLgk0IvrEd6BVtJzMeIVYw" name="Start" out="_lyVnwIvrEd6BVtJzMeIVYw"/>
+  <places xmi:id="_PbaCAIvrEd6BVtJzMeIVYw" name="Mid 1" in="_5HllMIvrEd6BVtJzMeIVYw" out="_nO8vsIvrEd6BVtJzMeIVYw"/>
+  <places xmi:id="_Pn_sgIvrEd6BVtJzMeIVYw" name="Mid 2" in="_5ej6wIvrEd6BVtJzMeIVYw" out="_pv1_IIvrEd6BVtJzMeIVYw"/>
+  <places xmi:id="_PuLNAIvrEd6BVtJzMeIVYw" name="End" in="_CWwqgIvsEd6BVtJzMeIVYw"/>
+  <transitions xmi:id="_UAGVMIvrEd6BVtJzMeIVYw" name="Split" in="_lyVnwIvrEd6BVtJzMeIVYw" out="_5HllMIvrEd6BVtJzMeIVYw _5ej6wIvrEd6BVtJzMeIVYw"/>
+  <transitions xmi:id="_iDO4wIvrEd6BVtJzMeIVYw" name="Join" in="_nO8vsIvrEd6BVtJzMeIVYw _pv1_IIvrEd6BVtJzMeIVYw" out="_CWwqgIvsEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:PTArc" xmi:id="_lyVnwIvrEd6BVtJzMeIVYw" src="_PLgk0IvrEd6BVtJzMeIVYw" dst="_UAGVMIvrEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:PTArc" xmi:id="_nO8vsIvrEd6BVtJzMeIVYw" src="_PbaCAIvrEd6BVtJzMeIVYw" dst="_iDO4wIvrEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:PTArc" xmi:id="_pv1_IIvrEd6BVtJzMeIVYw" src="_Pn_sgIvrEd6BVtJzMeIVYw" dst="_iDO4wIvrEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:TPArc" xmi:id="_5HllMIvrEd6BVtJzMeIVYw" src="_UAGVMIvrEd6BVtJzMeIVYw" dst="_PbaCAIvrEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:TPArc" xmi:id="_5ej6wIvrEd6BVtJzMeIVYw" src="_UAGVMIvrEd6BVtJzMeIVYw" dst="_Pn_sgIvrEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:TPArc" xmi:id="_CWwqgIvsEd6BVtJzMeIVYw" src="_iDO4wIvrEd6BVtJzMeIVYw" dst="_PuLNAIvrEd6BVtJzMeIVYw"/>
+</lit_petriNets:Net>
