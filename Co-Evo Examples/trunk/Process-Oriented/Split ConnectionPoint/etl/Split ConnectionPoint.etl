@@ -1,0 +1,55 @@
+pre {
+  for (cp in Old!ConnectionPoint.all) {
+    if ((cp.isReading() and cp.isWriting()) or (not cp.isReading() and not cp.isWriting())) {
+
+      ('Cannot determine whether "' + cp.name + '"' +
+            'should be a ReadingConnectionPoint or a' +
+            'WritingConnectionPoint').println(); 
+
+    } 
+  }
+}
+
+rule System2System
+  transform old : Old!System
+  to        s   : New!System {
+
+	s.channels         := old.channels.equivalent();
+	s.connectionPoints := old.connectionPoints.equivalent();  
+}
+
+rule Channel2Channel
+  transform old : Old!Channel
+  to        c : New!Channel {
+
+    c.name   := old.name;
+    c.reader := old.reader.equivalent();
+    c.writer := old.writer.equivalent();
+}
+
+rule ConnectionPoint2ReadingConnectionPoint
+  transform old : Old!ConnectionPoint
+  to        rcp : New!ReadingConnectionPoint {
+
+    guard: old.isReading()
+
+    rcp.name := old.name;
+}
+
+rule ConnectionPoint2WritingConnectionPoint
+  transform old : Old!ConnectionPoint
+  to        wcp : New!WritingConnectionPoint {
+
+    guard: old.isWriting()
+
+    wcp.name := old.name;
+}
+
+
+operation Old!ConnectionPoint isReading() : Boolean {
+	return Old!Channel.all.exists(c|c.reader == self);
+}
+
+operation Old!ConnectionPoint isWriting() : Boolean {
+	return Old!Channel.all.exists(c|c.writer == self);
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-15T15:39:48.798+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="po_split"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="po_split"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="po_split"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//System">
+        <changes xsi:type="history:Set" element="Before.ecore#//System" featureName="name"
+            dataValue="System"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//ConnectionPoint">
+        <changes xsi:type="history:Set" element="Before.ecore#//ConnectionPoint" featureName="name"
+            dataValue="ConnectionPoint"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/connectionPoints">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/connectionPoints"
+            featureName="name" dataValue="connectionPoints"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/connectionPoints"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/connectionPoints"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/connectionPoints"
+            featureName="eType" referenceValue="Before.ecore#//ConnectionPoint"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ConnectionPoint" referenceName="eStructuralFeatures"
+          element="Before.ecore#//ConnectionPoint/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//ConnectionPoint/name"
+            featureName="name" dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ConnectionPoint/name"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Channel">
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel" featureName="name"
+            dataValue="Channel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/channels">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/channels" featureName="name"
+            dataValue="channels"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/channels" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/channels" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/channels" featureName="eType"
+            referenceValue="Before.ecore#//Channel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Channel" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Channel/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Channel" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Channel/reader">
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/reader" featureName="name"
+            dataValue="reader"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/reader" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/reader" featureName="eType"
+            referenceValue="Before.ecore#//ConnectionPoint"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Channel" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Channel/writer">
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/writer" featureName="name"
+            dataValue="writer"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/writer" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/writer" featureName="eType"
+            referenceValue="Before.ecore#//ConnectionPoint"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases date="2009-09-15T15:42:15.998+0100">
+    <changes xsi:type="history:MigrationChange" migration="po_splitPackage = po_split&#xA;readingConnectionPointClass = po_splitPackage.newEClass()&#xA;readingConnectionPointClass.name = &quot;ReadingConnectionPoint&quot;&#xA;connectionPointClass = po_split.ConnectionPoint&#xA;readingConnectionPointClass.eSuperTypes.add(connectionPointClass)&#xA;writingConnectionPointClass = po_splitPackage.newEClass()&#xA;writingConnectionPointClass.name = &quot;ReadingConnectionPoint&quot;&#xA;writingConnectionPointClass.eSuperTypes.add(connectionPointClass)&#xA;writingConnectionPointClass.name = &quot;WritingConnectionPoint&quot;&#xA;connectionPointClass.'abstract' = true&#xA;readerReference = po_split.Channel.reader&#xA;readerReference.eType = readingConnectionPointClass&#xA;writerReference = po_split.Channel.writer&#xA;writerReference.eType = writingConnectionPointClass&#xA;&#xA;&#xA;isReading = { cp ->&#xA;&#x9;return connectionpoint.Channel.allInstances.any { it.reader == cp}&#xA;}&#xA;&#xA;isWriting = { cp ->&#xA;&#x9;return connectionpoint.Channel.allInstances.any { it.writer == cp}&#xA;}&#xA;&#xA;for (cp in connectionPointClass.allInstances) {&#xA;&#x9;if ((isReading(cp) &amp;&amp; isWriting(cp)) || (!isReading(cp) &amp;&amp; !isWriting(cp))) {&#xA;&#x9;&#x9;cp.delete()&#xA;&#xA;&#x9;} else if (isReading(cp)) {&#xA;&#x9;&#x9;cp.migrate(readingConnectionPointClass)&#xA;&#xA;&#x9;} else if (isWriting(cp)) {&#xA;&#x9;&#x9;cp.migrate(writingConnectionPointClass)&#xA;&#x9;}&#xA;}">
+      <changes xsi:type="history:CompositeChange">
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//ReadingConnectionPoint"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ReadingConnectionPoint"
+            featureName="name" dataValue="ReadingConnectionPoint"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//ReadingConnectionPoint"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//ConnectionPoint"/>
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//WritingConnectionPoint">
+          <changes xsi:type="history:Set" element="Before.ecore#//WritingConnectionPoint"
+              featureName="name" dataValue="ReadingConnectionPoint"/>
+          <changes xsi:type="history:Add" element="Before.ecore#//WritingConnectionPoint"
+              featureName="eSuperTypes" referenceValue="Before.ecore#//ConnectionPoint"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//WritingConnectionPoint"
+            featureName="name" dataValue="WritingConnectionPoint" oldDataValue="ReadingConnectionPoint"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ConnectionPoint" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/reader" featureName="eType"
+            referenceValue="Before.ecore#//ReadingConnectionPoint" oldReferenceValue="Before.ecore#//ConnectionPoint"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Channel/writer" featureName="eType"
+            referenceValue="Before.ecore#//WritingConnectionPoint" oldReferenceValue="Before.ecore#//ConnectionPoint"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases/>
+</history:History>
