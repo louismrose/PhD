@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-15T15:11:17.468+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="gadin_partitionContainment"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="gadin_partitionContainment"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="gadin_partitionContainment"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//World">
+        <changes xsi:type="history:Set" element="Before.ecore#//World" featureName="name"
+            dataValue="World"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Action">
+        <changes xsi:type="history:Set" element="Before.ecore#//Action" featureName="name"
+            dataValue="Action"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//World" referenceName="eStructuralFeatures"
+          element="Before.ecore#//World/actions">
+        <changes xsi:type="history:Set" element="Before.ecore#//World/actions" featureName="name"
+            dataValue="actions"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//World/actions" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//World/actions" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//World/actions" featureName="eType"
+            referenceValue="Before.ecore#//Action"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Action" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Action/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Proposition">
+        <changes xsi:type="history:Set" element="Before.ecore#//Proposition" featureName="name"
+            dataValue="Proposition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Action" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Action/preconditionSets">
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/preconditionSets"
+            featureName="name" dataValue="preconditions"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/preconditionSets"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/preconditionSets"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/preconditionSets"
+            featureName="eType" referenceValue="Before.ecore#//Proposition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Proposition" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Proposition/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Proposition/name"
+            featureName="name" dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Proposition/name"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases date="2009-09-15T15:17:23.593+0100">
+    <changes xsi:type="history:MigrationChange" migration="gadin_partitionContainmentPackage = gadin_partitionContainment&#xA;actionClass = gadin_partitionContainmentPackage.newEClass()&#xA;actionClass.name = &quot;Action&quot;&#xA;nameAttribute = actionClass.newEAttribute()&#xA;nameAttribute.name = &quot;name&quot;&#xA;eStringDataType = emf.EString&#xA;nameAttribute.eType = eStringDataType&#xA;preconditionsReference = actionClass.newEReference()&#xA;preconditionsReference.name = &quot;preconditions&quot;&#xA;preconditionsReference.upperBound = -1&#xA;preconditionsReference.containment = true&#xA;propositionClass = gadin_partitionContainment.Proposition&#xA;preconditionsReference.eType = propositionClass&#xA;actionClass.name = &quot;PropositionSet&quot;&#xA;preconditionsReference2 = gadin_partitionContainment.Action.preconditions&#xA;preconditionsReference2.name = &quot;propositionSets&quot;&#xA;preconditionsReference2.name = &quot;preconditionSets&quot;&#xA;preconditionsReference2.lowerBound = 1&#xA;preconditionsReference2.eType = actionClass&#xA;&#xA;&#xA;for (action in gadin_partitionContainment.Action.allInstances) {&#xA;&#x9;a.preconditionSets.add(actionClass.createInstance())&#xA;&#x9;a.preconditionSets.first.preconditions = a.unset(gadin_partitionContainment.Action.preconditions);&#xA;}">
+      <changes xsi:type="history:CompositeChange">
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//PropositionSet">
+          <changes xsi:type="history:Set" element="Before.ecore#//PropositionSet"
+              featureName="name" dataValue="Action"/>
+        </changes>
+        <changes xsi:type="history:Create" target="Before.ecore#//PropositionSet"
+            referenceName="eStructuralFeatures" element="Before.ecore#//PropositionSet/name">
+          <changes xsi:type="history:Set" element="Before.ecore#//PropositionSet/name"
+              featureName="name" dataValue="name"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//PropositionSet/name"
+              featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </changes>
+        <changes xsi:type="history:Create" target="Before.ecore#//PropositionSet"
+            referenceName="eStructuralFeatures" element="Before.ecore#//PropositionSet/preconditions">
+          <changes xsi:type="history:Set" element="Before.ecore#//PropositionSet/preconditions"
+              featureName="name" dataValue="preconditions"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//PropositionSet/preconditions"
+              featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//PropositionSet/preconditions"
+              featureName="containment" dataValue="true" oldDataValue="false"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//PropositionSet/preconditions"
+              featureName="eType" referenceValue="Before.ecore#//Proposition"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//PropositionSet" featureName="name"
+            dataValue="PropositionSet" oldDataValue="Action"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/preconditionSets"
+            featureName="name" dataValue="propositionSets" oldDataValue="preconditions"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/preconditionSets"
+            featureName="name" dataValue="preconditionSets" oldDataValue="propositionSets"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/preconditionSets"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Action/preconditionSets"
+            featureName="eType" referenceValue="Before.ecore#//PropositionSet" oldReferenceValue="Before.ecore#//Proposition"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases/>
+</history:History>

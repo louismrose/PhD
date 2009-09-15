@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gadin_enumToClasses:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gadin_enumToClasses="gadin_enumToClasses">
+  <parameters xsi:type="gadin_enumToClasses:CharacterParameter" name="Default"/>
+  <parameters xsi:type="gadin_enumToClasses:CharacterParameter" name="Little Red Riding Hood"/>
+  <parameters xsi:type="gadin_enumToClasses:LocationParameter" name="Woods"/>
+  <parameters xsi:type="gadin_enumToClasses:PrincipleParameter" name="Wolves are bad"/>
+</gadin_enumToClasses:World>

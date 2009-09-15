@@ -1,0 +1,33 @@
+rule World2World
+  transform old : Old!World
+  to        w : New!World {
+
+    w.parameters := old.parameters.equivalent();
+}
+
+rule Parameter2CharacterParameter
+  transform old : Old!Parameter
+  to        c : New!CharacterParameter {
+
+    guard: old.type = Old!Type#character
+
+    c.name := old.name;
+}
+
+rule Parameter2PrincipleParameter
+  transform old : Old!Parameter
+  to        p : New!PrincipleParameter {
+
+    guard: old.type = Old!Type#principle
+
+    p.name := old.name;
+}
+
+rule Parameter2LocationParameter
+  transform old : Old!Parameter
+  to        l : New!LocationParameter {
+
+    guard: old.type = Old!Type#location
+
+    l.name := old.name;
+}

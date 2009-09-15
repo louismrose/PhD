@@ -1,0 +1,13 @@
+rule Action2Action
+  transform old : Old!Action
+  to        a : New!Action {
+
+    a.name := old.name;
+
+    a.preconditionSets.add(new New!PropositionSet);
+    a.preconditionSets.first.preconditions := old.preconditions.equivalent();
+}
+
+rule Proposition2Proposition
+  transform old : Old!Proposition
+  to        p : New!Proposition {}

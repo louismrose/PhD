@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gadin_partitionContainment="gadin_partitionContainment">
+  <gadin_partitionContainment:Action name="Empty">
+    <preconditionSets/>
+  </gadin_partitionContainment:Action>
+  <gadin_partitionContainment:Action name="Singleton">
+    <preconditionSets>
+      <preconditions/>
+    </preconditionSets>
+  </gadin_partitionContainment:Action>
+  <gadin_partitionContainment:Action name="Several">
+    <preconditionSets>
+      <preconditions/>
+      <preconditions/>
+      <preconditions/>
+    </preconditionSets>
+  </gadin_partitionContainment:Action>
+</xmi:XMI>

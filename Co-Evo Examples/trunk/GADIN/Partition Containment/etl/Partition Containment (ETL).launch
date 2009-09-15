@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.epsilon.etl.eclipse.dt.launching.EtlLaunchConfigurationDelegate">
+<listAttribute key="models">
+<listEntry value="#&#10;#Tue Sep 15 15:09:44 BST 2009&#10;isMetamodelFileBased=true&#10;name=New&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/GADIN/Partition Containment/etl/After.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/GADIN/Partition Containment/After.ecore&#10;"/>
+<listEntry value="#&#10;#Tue Sep 15 15:09:30 BST 2009&#10;isMetamodelFileBased=true&#10;name=Old&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/GADIN/Partition Containment/Before.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/GADIN/Partition Containment/Before.ecore&#10;"/>
+</listAttribute>
+<stringAttribute key="source" value="/Co-Evo Examples/GADIN/Partition Containment/etl/Partition Containment.etl"/>
+</launchConfiguration>

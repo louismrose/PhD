@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-15T14:58:25.813+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="gadin_enumToClasses"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="gadin_enumToClasses"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="gadin_enumToClasses"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//World">
+        <changes xsi:type="history:Set" element="Before.ecore#//World" featureName="name"
+            dataValue="World"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Parameter">
+        <changes xsi:type="history:Set" element="Before.ecore#//Parameter" featureName="name"
+            dataValue="Parameter"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//World" referenceName="eStructuralFeatures"
+          element="Before.ecore#//World/parameters">
+        <changes xsi:type="history:Set" element="Before.ecore#//World/parameters"
+            featureName="name" dataValue="parameters"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//World/parameters"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//World/parameters"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//World/parameters"
+            featureName="eType" referenceValue="Before.ecore#//Parameter"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Parameter" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Parameter/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Parameter/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Parameter/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element"
+            featureName="name" dataValue="Type"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Parameter" referenceName="eStructuralFeatures"
+          element="#//@releases.1/@changes.0/@changes.0/@changes.10/@element">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.10/@element"
+            featureName="name" dataValue="type"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.10/@element"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.10/@element"
+            featureName="eType" referenceValue="#//@releases.1/@changes.0/@changes.0/@changes.9/@element"/>
+      </changes>
+      <changes xsi:type="history:Create" target="#//@releases.1/@changes.0/@changes.0/@changes.9/@element"
+          referenceName="eLiterals" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/character">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/character"
+            featureName="name" dataValue="character"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/character"
+            featureName="value" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/character"
+            featureName="literal" dataValue="character"/>
+      </changes>
+      <changes xsi:type="history:Create" target="#//@releases.1/@changes.0/@changes.0/@changes.9/@element"
+          referenceName="eLiterals" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/location">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/location"
+            featureName="name" dataValue="location"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/location"
+            featureName="value" dataValue="2" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/location"
+            featureName="literal" dataValue="location"/>
+      </changes>
+      <changes xsi:type="history:Create" target="#//@releases.1/@changes.0/@changes.0/@changes.9/@element"
+          referenceName="eLiterals" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/principle">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/principle"
+            featureName="name" dataValue="principle"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/principle"
+            featureName="value" dataValue="3" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.9/@element/principle"
+            featureName="literal" dataValue="principle"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="gadin_enumToClassesPackage = gadin_enumToClasses&#xA;characterParameterClass = gadin_enumToClassesPackage.newEClass()&#xA;characterParameterClass.name = &quot;CharacterParameter&quot;&#xA;characterParameterClass2 = gadin_enumToClassesPackage.newEClass()&#xA;characterParameterClass2.name = &quot;CharacterParameter&quot;&#xA;characterParameterClass3 = gadin_enumToClassesPackage.newEClass()&#xA;characterParameterClass3.name = &quot;CharacterParameter&quot;&#xA;characterParameterClass2.name = &quot;LocationParameter&quot;&#xA;characterParameterClass3.name = &quot;PrincipleParameter&quot;&#xA;parameterClass = gadin_enumToClasses.Parameter&#xA;characterParameterClass.eSuperTypes.add(parameterClass)&#xA;characterParameterClass3.eSuperTypes.add(parameterClass)&#xA;characterParameterClass2.eSuperTypes.add(parameterClass)&#xA;typeEnum = gadin_enumToClasses.Type&#xA;typeEnum.delete()&#xA;typeAttribute = gadin_enumToClasses.Parameter.type&#xA;typeAttribute.delete()&#xA;parameterClass.'abstract' = true&#xA;&#xA;&#xA;for (parameter in gadin_enumToClasses.Parameter.allInstances) {&#xA;&#x9;if (parameter.type == gadin_enumToClasses.Type.character) {&#xA;&#x9;&#x9;parameter.migrate(characterParameterClass)&#xA;&#x9;&#xA;&#x9;} else if (parameter.type == gadin_enumToClasses.Type.location) {&#xA;&#x9;&#x9;parameter.migrate(characterParameterClass2)&#xA;&#x9;&#xA;&#x9;} else if (parameter.type == gadin_enumToClasses.Type.principle) {&#xA;&#x9;&#x9;parameter.migrate(characterParameterClass3)&#xA;&#x9;}&#xA;&#xA;&#x9;parameter.unset(gadin_enumToClasses.Parameter.type)&#xA;}">
+      <changes xsi:type="history:CompositeChange">
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//CharacterParameter"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CharacterParameter"
+            featureName="name" dataValue="CharacterParameter"/>
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//LocationParameter">
+          <changes xsi:type="history:Set" element="Before.ecore#//LocationParameter"
+              featureName="name" dataValue="CharacterParameter"/>
+        </changes>
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//PrincipleParameter">
+          <changes xsi:type="history:Set" element="Before.ecore#//PrincipleParameter"
+              featureName="name" dataValue="CharacterParameter"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//LocationParameter"
+            featureName="name" dataValue="LocationParameter" oldDataValue="CharacterParameter"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PrincipleParameter"
+            featureName="name" dataValue="PrincipleParameter" oldDataValue="CharacterParameter"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CharacterParameter"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Parameter"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//PrincipleParameter"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Parameter"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//LocationParameter"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Parameter"/>
+        <changes xsi:type="history:Delete" target="Before.ecore#/" referenceName="eClassifiers">
+          <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.10/@element"
+              featureName="eType" oldReferenceValue="#//@releases.1/@changes.0/@changes.0/@changes.9/@element"/>
+          <element xsi:type="ecore:EEnum" name="Type">
+            <eLiterals name="character" value="1"/>
+            <eLiterals name="location" value="2"/>
+            <eLiterals name="principle" value="3"/>
+          </element>
+        </changes>
+        <changes xsi:type="history:Delete" target="Before.ecore#//Parameter" referenceName="eStructuralFeatures">
+          <element xsi:type="ecore:EAttribute" name="type" lowerBound="1"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//Parameter" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+    </changes>
+  </releases>
+</history:History>
