@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fptc_connections:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fptc_connections="fptc_connections">
+  <blocks name="Source 1" outgoingConnections="//@connections.3"/>
+  <blocks name="Source 2" outgoingConnections="//@connections.4"/>
+  <blocks name="Source 3" outgoingConnections="//@connections.5"/>
+  <blocks name="Plex" incomingConnections="//@connections.2 //@connections.3 //@connections.4 //@connections.5" outgoingConnections="//@connections.0 //@connections.1 //@connections.2"/>
+  <blocks name="Sink 1" incomingConnections="//@connections.0"/>
+  <blocks name="Sink 2" incomingConnections="//@connections.1"/>
+  <blocks name="Loner"/>
+  <connections source="//@blocks.3" target="//@blocks.4"/>
+  <connections source="//@blocks.3" target="//@blocks.5"/>
+  <connections source="//@blocks.3" target="//@blocks.3"/>
+  <connections source="//@blocks.0" target="//@blocks.3"/>
+  <connections source="//@blocks.1" target="//@blocks.3"/>
+  <connections source="//@blocks.2" target="//@blocks.3"/>
+</fptc_connections:System>

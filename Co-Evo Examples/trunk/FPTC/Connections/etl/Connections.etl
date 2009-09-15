@@ -1,0 +1,21 @@
+rule System2System
+  transform old : Old!System
+  to        s   : New!System {
+  
+  s.blocks := old.blocks.equivalent();
+}
+
+rule Block2Block
+  transform old : Old!Block
+  to        b   : New!Block  {
+
+    b.name := old.name;
+    	
+    -- Create Connections
+    for (successor in old.successors) {
+      var connection := new New!Connection;
+      connection.source := b;
+      connection.target := successor.equivalent();
+      System.all.first.connections.add(connection);
+    }
+}

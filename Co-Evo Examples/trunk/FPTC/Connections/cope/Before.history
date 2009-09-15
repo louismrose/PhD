@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-15T14:26:14.779+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="fptc_connections"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="fptc_connections"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="fptc_connections"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//System">
+        <changes xsi:type="history:Set" element="Before.ecore#//System" featureName="name"
+            dataValue="System"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Block">
+        <changes xsi:type="history:Set" element="Before.ecore#//Block" featureName="name"
+            dataValue="Block"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/blocks">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/blocks" featureName="name"
+            dataValue="blocks"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/blocks" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/blocks" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/blocks" featureName="eType"
+            referenceValue="Before.ecore#//Block"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Block" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Block/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Block" referenceName="eStructuralFeatures"
+          element="#//@releases.1/@changes.0/@changes.0/@changes.18/@element">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.18/@element"
+            featureName="name" dataValue="inSetText"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.18/@element"
+            featureName="derived" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.18/@element"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Block" referenceName="eStructuralFeatures"
+          element="#//@releases.1/@changes.0/@changes.0/@changes.17/@element">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.17/@element"
+            featureName="name" dataValue="outSetText"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.17/@element"
+            featureName="derived" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.17/@element"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Block" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Block/incomingConnections">
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/incomingConnections"
+            featureName="name" dataValue="predecessors"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/incomingConnections"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/incomingConnections"
+            featureName="eType" referenceValue="Before.ecore#//Block"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Block" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Block/outgoingConnections">
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/outgoingConnections"
+            featureName="name" dataValue="successors"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/outgoingConnections"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/outgoingConnections"
+            featureName="eType" referenceValue="Before.ecore#//Block"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/outgoingConnections"
+            featureName="eOpposite" referenceValue="Before.ecore#//Block/incomingConnections"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/incomingConnections"
+            featureName="eOpposite" referenceValue="Before.ecore#//Block/outgoingConnections"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases date="2009-09-15T14:31:33.238+0100">
+    <changes xsi:type="history:MigrationChange" migration="fptc_connectionsPackage = fptc_connections&#xA;connectionClass = fptc_connectionsPackage.newEClass()&#xA;connectionClass.name = &quot;Connection&quot;&#xA;sourceReference = connectionClass.newEReference()&#xA;sourceReference.name = &quot;source&quot;&#xA;sourceReference.lowerBound = 1&#xA;blockClass = fptc_connections.Block&#xA;sourceReference.eType = blockClass&#xA;sourceReference2 = connectionClass.newEReference()&#xA;sourceReference2.name = &quot;source&quot;&#xA;sourceReference2.lowerBound = 1&#xA;sourceReference2.eType = blockClass&#xA;sourceReference2.name = &quot;target&quot;&#xA;successorsReference = fptc_connections.Block.successors&#xA;successorsReference.eType = connectionClass&#xA;successorsReference.name = &quot;outgoingConnections&quot;&#xA;predecessorsReference = fptc_connections.Block.predecessors&#xA;predecessorsReference.eOpposite = null&#xA;sourceReference.eOpposite = successorsReference&#xA;successorsReference.eOpposite = sourceReference&#xA;predecessorsReference.name = &quot;incomingConnections&quot;&#xA;predecessorsReference.eType = connectionClass&#xA;sourceReference2.eOpposite = predecessorsReference&#xA;predecessorsReference.eOpposite = sourceReference2&#xA;outSetTextAttribute = fptc_connections.Block.outSetText&#xA;outSetTextAttribute.delete()&#xA;inSetTextAttribute = fptc_connections.Block.inSetText&#xA;inSetTextAttribute.delete()&#xA;systemClass = fptc_connections.System&#xA;blocksReference = systemClass.newEReference()&#xA;blocksReference.name = &quot;blocks&quot;&#xA;blocksReference.upperBound = -1&#xA;blocksReference.containment = true&#xA;blocksReference.eType = blockClass&#xA;blocksReference.name = &quot;connecctions&quot;&#xA;blocksReference.eType = connectionClass&#xA;blocksReference.name = &quot;connections&quot;&#xA;&#xA;&#xA;for (block in connections.Block.allInstances) {&#xA;&#x9;for (successor in block.unset(successorsReference)) {&#xA;&#x9;&#x9;def connection = connections.Connection.newInstance()&#xA;&#x9;&#x9;connection.source = block&#xA;&#x9;&#x9;connection.target = successor&#xA;&#x9;&#x9;connections.System.allInstances.get(0).connections.add(connection)&#xA;&#x9;}&#xA;&#xA;&#x9;block.unset(connections.Block.outSetText)&#xA;&#x9;block.unset(connections.Block.inSetText)&#xA;}">
+      <changes xsi:type="history:CompositeChange">
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//Connection"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection" featureName="name"
+            dataValue="Connection"/>
+        <changes xsi:type="history:Create" target="Before.ecore#//Connection" referenceName="eStructuralFeatures"
+            element="Before.ecore#//Connection/source"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/source"
+            featureName="name" dataValue="source"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/source"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/source"
+            featureName="eType" referenceValue="Before.ecore#//Block"/>
+        <changes xsi:type="history:Create" target="Before.ecore#//Connection" referenceName="eStructuralFeatures"
+            element="Before.ecore#//Connection/target">
+          <changes xsi:type="history:Set" element="Before.ecore#//Connection/target"
+              featureName="name" dataValue="source"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//Connection/target"
+              featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//Connection/target"
+              featureName="eType" referenceValue="Before.ecore#//Block"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/target"
+            featureName="name" dataValue="target" oldDataValue="source"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/outgoingConnections"
+            featureName="eType" referenceValue="Before.ecore#//Connection" oldReferenceValue="Before.ecore#//Block"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/outgoingConnections"
+            featureName="name" dataValue="outgoingConnections" oldDataValue="successors"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/incomingConnections"
+            featureName="eOpposite" oldReferenceValue="Before.ecore#//Block/outgoingConnections"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/source"
+            featureName="eOpposite" referenceValue="Before.ecore#//Block/outgoingConnections"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/outgoingConnections"
+            featureName="eOpposite" referenceValue="Before.ecore#//Connection/source"
+            oldReferenceValue="Before.ecore#//Block/incomingConnections"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/incomingConnections"
+            featureName="name" dataValue="incomingConnections" oldDataValue="predecessors"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/incomingConnections"
+            featureName="eType" referenceValue="Before.ecore#//Connection" oldReferenceValue="Before.ecore#//Block"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/target"
+            featureName="eOpposite" referenceValue="Before.ecore#//Block/incomingConnections"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Block/incomingConnections"
+            featureName="eOpposite" referenceValue="Before.ecore#//Connection/target"/>
+        <changes xsi:type="history:Delete" target="Before.ecore#//Block" referenceName="eStructuralFeatures">
+          <element xsi:type="ecore:EAttribute" name="outSetText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+              derived="true"/>
+        </changes>
+        <changes xsi:type="history:Delete" target="Before.ecore#//Block" referenceName="eStructuralFeatures">
+          <element xsi:type="ecore:EAttribute" name="inSetText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+              derived="true"/>
+        </changes>
+        <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+            element="Before.ecore#//System/connections">
+          <changes xsi:type="history:Set" element="Before.ecore#//System/connections"
+              featureName="name" dataValue="blocks"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//System/connections"
+              featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//System/connections"
+              featureName="containment" dataValue="true" oldDataValue="false"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//System/connections"
+              featureName="eType" referenceValue="Before.ecore#//Block"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/connections"
+            featureName="name" dataValue="connecctions" oldDataValue="blocks"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/connections"
+            featureName="eType" referenceValue="Before.ecore#//Connection" oldReferenceValue="Before.ecore#//Block"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/connections"
+            featureName="name" dataValue="connections" oldDataValue="connecctions"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases/>
+</history:History>

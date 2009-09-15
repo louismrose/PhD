@@ -1,0 +1,110 @@
+pre {
+  var warnings := new Sequence(String);
+}
+
+rule System2System
+  transform old : Old!System
+  to        s   : New!System {
+
+  s.tuples := old.tuples.equivalent();
+}
+
+operation Old!System canBeMigrated() : Boolean {
+  var result := self.tuples.isUndefined() or self.tuples.forAll(t|t.canBeMigrated());
+
+  if (not result) {
+    warnings.add('Cannot migrate: ' + self.toString());
+  }
+	
+  return result;
+}
+
+@lazy
+rule Tuple2Tuple
+  transform old : Old!Tuple
+  to        t   : New!Tuple {
+
+  guard: old.canBeMigrated()
+
+  t.name := old.name;
+  t.contents := old.contents.equivalent();
+}
+
+operation Old!Tuple canBeMigrated() : Boolean {
+  return self.contents.forAll(is|is.canBeMigrated());
+}
+
+@lazy
+rule IdentifierSet2FaultSet
+  transform old : Old!IdentifierSet
+  to        fs  : New!FaultSet {
+
+  guard: old.contents.size() > 1 and old.containsOnlyFaults()
+
+  fs.contents := old.contents.equivalent();
+}
+
+operation Old!IdentifierSet canBeMigrated() : Boolean {
+  return self.contents.size() <= 1 or self.containsOnlyFaults();
+}
+
+operation Old!IdentifierSet containsOnlyFaults() : Boolean {
+  return self.contents.forAll(a|Old!Fault.isKind(a));
+}
+
+@lazy
+rule Fault2Fault
+  transform old : Old!Fault
+  to        f   : New!Fault {
+
+  f.type := old.type;
+}
+
+@abstract
+rule IdentifierSet2Atom
+  transform old : Old!IdentifierSet
+  to        a   : New!Atom {
+
+  guard: old.contents.size() = 1
+
+}
+
+@lazy
+rule Singleton2Fault
+  transform old : Old!IdentifierSet
+  to        f   : New!Fault
+  extends IdentifierSet2Atom {
+
+  guard: Old!Fault.isKind(old.contents.first)
+
+  f.type := old.contents.first.type;
+}
+
+@lazy
+rule Singleton2NoFault
+  transform old : Old!IdentifierSet
+  to        f   : New!NoFault
+  extends IdentifierSet2Atom {
+
+  guard: Old!NoFault.isKind(old.contents.first)
+}
+
+@lazy
+rule Singleton2Wildcard
+  transform old : Old!IdentifierSet
+  to        w   : New!Wildcard
+  extends IdentifierSet2Atom {
+
+  guard: Old!Wildcard.isKind(old.contents.first)
+}
+
+@lazy
+rule Singleton2Variable
+  transform old : Old!IdentifierSet
+  to        v   : New!Variable
+  extends IdentifierSet2Atom {
+
+  guard: Old!Variable.isKind(old.contents.first)
+
+  v.name := old.contents.first.name;
+}

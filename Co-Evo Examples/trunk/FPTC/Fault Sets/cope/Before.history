@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-15T14:42:32.948+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="fptc_faultSets"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="fptc_faultSets"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="fptc_faultSets"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//System">
+        <changes xsi:type="history:Set" element="Before.ecore#//System" featureName="name"
+            dataValue="System"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Tuple">
+        <changes xsi:type="history:Set" element="Before.ecore#//Tuple" featureName="name"
+            dataValue="Tuple"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/tuples">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/tuples" featureName="name"
+            dataValue="tuples"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/tuples" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/tuples" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/tuples" featureName="eType"
+            referenceValue="Before.ecore#//Tuple"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Tuple" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Tuple/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Tuple/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Tuple/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="#//@releases.1/@changes.0/@changes.0/@changes.1/@element">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.1/@element"
+            featureName="name" dataValue="IdentifierSet"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Tuple" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Tuple/contents">
+        <changes xsi:type="history:Set" element="Before.ecore#//Tuple/contents" featureName="name"
+            dataValue="contents"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Tuple/contents" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Tuple/contents" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Tuple/contents" featureName="eType"
+            referenceValue="#//@releases.1/@changes.0/@changes.0/@changes.1/@element"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Atom">
+        <changes xsi:type="history:Set" element="Before.ecore#//Atom" featureName="name"
+            dataValue="Identifier"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Atom" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="#//@releases.1/@changes.0/@changes.0/@changes.1/@element"
+          referenceName="eStructuralFeatures" element="#//@releases.1/@changes.0/@changes.0/@changes.1/@element/contents">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.1/@element/contents"
+            featureName="name" dataValue="contents"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.1/@element/contents"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.1/@element/contents"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.1/@element/contents"
+            featureName="eType" referenceValue="Before.ecore#//Atom"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Wildcard">
+        <changes xsi:type="history:Set" element="Before.ecore#//Wildcard" featureName="name"
+            dataValue="Wildcard"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Wildcard" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Atom"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Literal">
+        <changes xsi:type="history:Set" element="Before.ecore#//Literal" featureName="name"
+            dataValue="Literal"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Literal" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Literal" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Atom"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Fault">
+        <changes xsi:type="history:Set" element="Before.ecore#//Fault" featureName="name"
+            dataValue="Fault"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Fault" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Literal"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Fault" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Fault/type">
+        <changes xsi:type="history:Set" element="Before.ecore#//Fault/type" featureName="name"
+            dataValue="type"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Fault/type" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//NoFault">
+        <changes xsi:type="history:Set" element="Before.ecore#//NoFault" featureName="name"
+            dataValue="NoFault"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//NoFault" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Literal"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Variable">
+        <changes xsi:type="history:Set" element="Before.ecore#//Variable" featureName="name"
+            dataValue="Variable"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Variable" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Atom"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Variable" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Variable/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Variable/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Variable/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Variable" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Variable/value">
+        <changes xsi:type="history:Set" element="Before.ecore#//Variable/value" featureName="name"
+            dataValue="value"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Variable/value" featureName="eType"
+            referenceValue="Before.ecore#//Literal"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="identifierClass = fptc_faultSets.Identifier&#xA;identifierClass.name = &quot;Atom&quot;&#xA;identifierSetClass = fptc_faultSets.IdentifierSet&#xA;identifierSetClass.delete()&#xA;contentsReference = fptc_faultSets.Tuple.contents&#xA;contentsReference.eType = identifierClass&#xA;fptc_faultSetsPackage = fptc_faultSets&#xA;atomClass = fptc_faultSetsPackage.newEClass()&#xA;atomClass.name = &quot;Atom&quot;&#xA;atomClass.'abstract' = true&#xA;atomClass.name = &quot;ConcreteAtom&quot;&#xA;literalClass = fptc_faultSets.Literal&#xA;literalClass.eSuperTypes.remove(identifierClass)&#xA;literalClass.eSuperTypes.add(atomClass)&#xA;tupleClass = fptc_faultSetsPackage.newEClass()&#xA;tupleClass.name = &quot;Tuple&quot;&#xA;nameAttribute = tupleClass.newEAttribute()&#xA;nameAttribute.name = &quot;name&quot;&#xA;eStringDataType = emf.EString&#xA;nameAttribute.eType = eStringDataType&#xA;contentsReference2 = tupleClass.newEReference()&#xA;contentsReference2.name = &quot;contents&quot;&#xA;contentsReference2.upperBound = -1&#xA;contentsReference2.containment = true&#xA;contentsReference2.eType = identifierClass&#xA;tupleClass.name = &quot;FaultSet&quot;&#xA;nameAttribute.delete()&#xA;faultClass = fptc_faultSets.Fault&#xA;contentsReference2.eType = faultClass&#xA;tupleClass.eSuperTypes.add(atomClass)&#xA;atomClass.eSuperTypes.add(identifierClass)&#xA;&#xA;&#xA;for (tuple in faultsets.Tuple.allInstances) {&#xA;  for (is in tuple.unset(contentsReference)) {&#xA;&#xA;    if (is.contents.size() == 1) {&#xA;      // tuple.contents.add(is.contents.first()) doesn't work :(&#xA;      tuple.get(contentsReference).add(is.unset(identifierSetContentsReference).first())&#xA;&#xA;    } else if (is.contents.size() > 1 &amp;&amp;&#xA;               is.contents.every { it.eClass.name == 'Fault' }) {&#xA;&#xA;      def fs = faultSetClass.newInstance()&#xA;&#xA;      fs.get(contentsReference2).addAll(is.unset(identifierSetContentsReference))&#xA;      tuple.get(contentsReference).add(fs)    &#xA;    }&#xA;&#xA;    is.delete()&#xA;  }&#xA;}">
+      <changes xsi:type="history:CompositeChange">
+        <changes xsi:type="history:Set" element="Before.ecore#//Atom" featureName="name"
+            dataValue="Atom" oldDataValue="Identifier"/>
+        <changes xsi:type="history:Delete" target="Before.ecore#/" referenceName="eClassifiers">
+          <changes xsi:type="history:Set" element="Before.ecore#//Tuple/contents"
+              featureName="eType" oldReferenceValue="#//@releases.1/@changes.0/@changes.0/@changes.1/@element"/>
+          <element xsi:type="ecore:EClass" name="IdentifierSet">
+            <eStructuralFeatures xsi:type="ecore:EReference" name="contents" upperBound="-1"
+                eType="ecore:EClass Before.ecore#//Atom" containment="true"/>
+          </element>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//Tuple/contents" featureName="eType"
+            referenceValue="Before.ecore#//Atom"/>
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//ConcreteAtom">
+          <changes xsi:type="history:Set" element="Before.ecore#//ConcreteAtom" featureName="name"
+              dataValue="Atom"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//ConcreteAtom" featureName="abstract"
+              dataValue="true" oldDataValue="false"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//ConcreteAtom" featureName="name"
+            dataValue="ConcreteAtom" oldDataValue="Atom"/>
+        <changes xsi:type="history:Remove" element="Before.ecore#//Literal" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Atom"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Literal" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//ConcreteAtom"/>
+        <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+            element="Before.ecore#//FaultSet">
+          <changes xsi:type="history:Set" element="Before.ecore#//FaultSet" featureName="name"
+              dataValue="Tuple"/>
+        </changes>
+        <changes xsi:type="history:Create" target="Before.ecore#//FaultSet" referenceName="eStructuralFeatures"
+            element="#//@releases.1/@changes.0/@changes.0/@changes.11/@element">
+          <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.11/@element"
+              featureName="name" dataValue="name"/>
+          <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@changes.11/@element"
+              featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </changes>
+        <changes xsi:type="history:Create" target="Before.ecore#//FaultSet" referenceName="eStructuralFeatures"
+            element="Before.ecore#//FaultSet/contents">
+          <changes xsi:type="history:Set" element="Before.ecore#//FaultSet/contents"
+              featureName="name" dataValue="contents"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//FaultSet/contents"
+              featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//FaultSet/contents"
+              featureName="containment" dataValue="true" oldDataValue="false"/>
+          <changes xsi:type="history:Set" element="Before.ecore#//FaultSet/contents"
+              featureName="eType" referenceValue="Before.ecore#//Atom"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//FaultSet" featureName="name"
+            dataValue="FaultSet" oldDataValue="Tuple"/>
+        <changes xsi:type="history:Delete" target="Before.ecore#//FaultSet" referenceName="eStructuralFeatures">
+          <element xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </changes>
+        <changes xsi:type="history:Set" element="Before.ecore#//FaultSet/contents"
+            featureName="eType" referenceValue="Before.ecore#//Fault" oldReferenceValue="Before.ecore#//Atom"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//FaultSet" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//ConcreteAtom"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//ConcreteAtom" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Atom"/>
+      </changes>
+    </changes>
+  </releases>
+</history:History>
