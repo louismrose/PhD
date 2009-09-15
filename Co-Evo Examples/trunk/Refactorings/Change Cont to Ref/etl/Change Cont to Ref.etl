@@ -1,0 +1,36 @@
+rule System2System
+  transform old : Old!System
+  to        s   : New!System  {
+  
+  s.signatures := old.signatures.equivalent();
+}
+
+rule Signature2Signature
+  transform old : Old!Signature
+  to        s   : New!Signature  {
+
+	var system := old.getSystem().equivalent();
+ 
+    for (port in old.ports) {
+	    if (system.ports.exists(p|p.name = port.name)) {
+			s.ports.add(system.ports.selectOne(p|p.name = port.name));
+			
+		} else {
+			s.ports.add(port.equivalent());
+			system.ports.add(port.equivalent());
+		}
+    }
+}
+
+@lazy
+rule Port2Port
+  transform old : Old!Port
+  to        p   : New!Port {
+  
+  p.name := old.name;
+}
+
+@cached
+operation Old!Signature getSystem() : Old!System {
+	return Old!System.all.selectOne(sys|sys.signatures.includes(self));
+}

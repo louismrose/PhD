@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactorings_changeContToRef:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactorings_changeContToRef="refactorings_changeContToRef">
+  <signatures ports="//@ports.0 //@ports.1"/>
+  <signatures ports="//@ports.2"/>
+  <signatures ports="//@ports.2 //@ports.3"/>
+  <signatures/>
+  <ports name="One"/>
+  <ports name="Two"/>
+  <ports name="Duplicate"/>
+  <ports name="Three"/>
+</refactorings_changeContToRef:System>
