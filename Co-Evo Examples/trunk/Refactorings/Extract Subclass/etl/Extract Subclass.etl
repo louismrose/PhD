@@ -1,0 +1,28 @@
+rule System2System
+	transform old : Old!System
+	to        s   : New!System {
+
+	s.items := old.items.equivalent();
+}
+
+rule JobItem2JobItem
+  transform old : Old!JobItem
+  to        ji  : New!JobItem  {
+
+    guard: old.employee.length = 0
+
+    ji.jobPrice   := old.jobPrice;
+    ji.totalPrice := old.totalPrice;
+}
+
+rule JobItem2LabourItem
+  transform old : Old!JobItem
+  to        li  : New!LabourItem {
+
+    guard: old.employee.isDefined()
+
+    li.jobPrice   := old.jobPrice;
+    li.totalPrice := old.totalPrice;
+    li.employee   := old.employee;
+
+}

@@ -1,0 +1,15 @@
+rule System2System
+	transform old : Old!System
+	to        s   : New!System {
+	
+	s.people := old.people.equivalent();
+}
+
+rule Person2Person
+	transform old : Old!Person
+	to        p   : New!Person {
+	
+	p.name     := old.name;
+	p.areaCode := old.telephoneNumber.areaCode;
+	p.number   := old.telephoneNumber.number;
+}

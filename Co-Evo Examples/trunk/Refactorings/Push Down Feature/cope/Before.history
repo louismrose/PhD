@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-16T14:09:21.349+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="refactorings_pushDownFeature"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="refactorings_pushDownFeature"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="refactorings_pushDownFeature"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//System">
+        <changes xsi:type="history:Set" element="Before.ecore#//System" featureName="name"
+            dataValue="System"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Employee">
+        <changes xsi:type="history:Set" element="Before.ecore#//Employee" featureName="name"
+            dataValue="Employee"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/employees">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/employees"
+            featureName="name" dataValue="employees"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/employees"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/employees"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/employees"
+            featureName="eType" referenceValue="Before.ecore#//Employee"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Employee" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Employee/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Employee/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Employee/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Employee" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Salesperson/quota">
+        <changes xsi:type="history:Set" element="Before.ecore#//Salesperson/quota"
+            featureName="name" dataValue="quota"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Salesperson/quota"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Salesperson">
+        <changes xsi:type="history:Set" element="Before.ecore#//Salesperson" featureName="name"
+            dataValue="Salesperson"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Salesperson" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Employee"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="salespersonClass = refactorings_pushDownFeature.Salesperson&#xA;quotaAttribute = refactorings_pushDownFeature.Employee.quota&#xA;salespersonClass.eStructuralFeatures.add(quotaAttribute)&#xA;&#xA;for(employee in refactorings_pushDownFeature.Employee.allInstances) {&#xA;&#x9;if (employee.isSet(refactorings_pushDownFeature.Employee.quota)) {&#xA;    &#x9;employee.migrate(salespersonClass)&#xA;&#x9;}&#xA;}">
+      <changes xsi:type="history:Move" target="Before.ecore#//Salesperson" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Salesperson/quota" source="Before.ecore#//Employee"/>
+    </changes>
+  </releases>
+</history:History>

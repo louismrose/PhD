@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactorings_pushDownFeature:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactorings_pushDownFeature="refactorings_pushDownFeature">
+  <employees name="NoQuota"/>
+  <employees xsi:type="refactorings_pushDownFeature:Salesperson" name="Quota" quota="10"/>
+  <employees xsi:type="refactorings_pushDownFeature:Salesperson" name="SalesWithQuota" quota="20"/>
+  <employees xsi:type="refactorings_pushDownFeature:Salesperson" name="SalesWithNoQuota"/>
+</refactorings_pushDownFeature:System>

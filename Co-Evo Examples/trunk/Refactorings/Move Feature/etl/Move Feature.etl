@@ -1,0 +1,33 @@
+rule System2System
+	transform old : Old!System
+	to        s   : New!System {
+	
+	s.accounts     := old.accounts.equivalent();
+	s.accountTypes := old.accountTypes.equivalent();
+}
+
+
+rule Account2Account
+  transform old : Old!Account
+  to        a  : New!Account  {
+
+    a.code := old.code;
+    a.type := old.type.equivalent();
+
+    if (a.type.~rateUpdated.isUndefined()) {
+      a.type.interestRate := old.interestRate;
+      a.type.~rateUpdated := true; 
+
+    } else {
+		if (a.type.interestRate <> old.interestRate) {
+        	('Conflicting interest rates for AccountType "' + a.type.name + ': ' + a.type.interestRate + ' and ' + old.interestRate + ' are possible.').println();
+		}
+    }
+}
+
+rule AccountType2AccountType
+  transform old : Old!AccountType
+  to        at  : New!AccountType {
+
+    at.name := old.name;
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-16T13:12:02.498+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="refactorings_extractClass"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="refactorings_extractClass"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="refactorings_extractClass"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//System">
+        <changes xsi:type="history:Set" element="Before.ecore#//System" featureName="name"
+            dataValue="System"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Person">
+        <changes xsi:type="history:Set" element="Before.ecore#//Person" featureName="name"
+            dataValue="Person"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/people">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/people" featureName="name"
+            dataValue="people"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/people" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/people" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/people" featureName="eType"
+            referenceValue="Before.ecore#//Person"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Person" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Person/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Person/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Person/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Person" referenceName="eStructuralFeatures"
+          element="Before.ecore#//TelephoneNumber/areaCode">
+        <changes xsi:type="history:Set" element="Before.ecore#//TelephoneNumber/areaCode"
+            featureName="name" dataValue="areaCode"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//TelephoneNumber/areaCode"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Person" referenceName="eStructuralFeatures"
+          element="Before.ecore#//TelephoneNumber/number">
+        <changes xsi:type="history:Set" element="Before.ecore#//TelephoneNumber/number"
+            featureName="name" dataValue="number"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//TelephoneNumber/number"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases date="2009-09-16T13:16:42.346+0100">
+    <changes xsi:type="history:MigrationChange" migration="refactorings_extractClassPackage = refactorings_extractClass&#xA;telephoneNumberClass = refactorings_extractClassPackage.newEClass()&#xA;telephoneNumberClass.name = &quot;TelephoneNumber&quot;&#xA;numberAttribute = refactorings_extractClass.Person.number&#xA;telephoneNumberClass.eStructuralFeatures.add(numberAttribute)&#xA;areaCodeAttribute = refactorings_extractClass.Person.areaCode&#xA;telephoneNumberClass.eStructuralFeatures.add(areaCodeAttribute)&#xA;personClass = refactorings_extractClass.Person&#xA;telephoneNumberReference = personClass.newEReference()&#xA;telephoneNumberReference.lowerBound = 1&#xA;telephoneNumberReference.name = &quot;telephoneNumber&quot;&#xA;telephoneNumberReference.eType = telephoneNumberClass&#xA;telephoneNumberReference.containment = true&#xA;&#xA;for(person in refactorings_extractClass.Person.allInstances) {&#xA;    def telephoneNumber = refactorings_extractClass.TelephoneNumber.newInstance()&#xA;    person.telephoneNumber = telephoneNumber&#xA;    telephoneNumber.areaCode = person.unset(refactorings_extractClass.Person.areaCode);&#xA;    telephoneNumber.number = person.unset(refactorings_extractClass.Person.number);&#xA;}">
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//TelephoneNumber"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//TelephoneNumber" featureName="name"
+          dataValue="TelephoneNumber"/>
+      <changes xsi:type="history:Move" target="Before.ecore#//TelephoneNumber" referenceName="eStructuralFeatures"
+          element="Before.ecore#//TelephoneNumber/number" source="Before.ecore#//Person"/>
+      <changes xsi:type="history:Move" target="Before.ecore#//TelephoneNumber" referenceName="eStructuralFeatures"
+          element="Before.ecore#//TelephoneNumber/areaCode" source="Before.ecore#//Person"/>
+      <changes xsi:type="history:Create" target="Before.ecore#//Person" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Person/telephoneNumber"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Person/telephoneNumber"
+          featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Person/telephoneNumber"
+          featureName="name" dataValue="telephoneNumber"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Person/telephoneNumber"
+          featureName="eType" referenceValue="Before.ecore#//TelephoneNumber"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Person/telephoneNumber"
+          featureName="containment" dataValue="true" oldDataValue="false"/>
+    </changes>
+  </releases>
+  <releases/>
+</history:History>

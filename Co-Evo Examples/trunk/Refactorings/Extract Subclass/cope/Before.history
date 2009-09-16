@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-16T13:31:51.480+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="refactorings_extractSubclass"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="refactorings_extractSubclass"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="refactorings_extractSubclass"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//System">
+        <changes xsi:type="history:Set" element="Before.ecore#//System" featureName="name"
+            dataValue="System"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//JobItem">
+        <changes xsi:type="history:Set" element="Before.ecore#//JobItem" featureName="name"
+            dataValue="JobItem"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/items">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/items" featureName="name"
+            dataValue="items"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/items" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/items" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/items" featureName="eType"
+            referenceValue="Before.ecore#//JobItem"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//JobItem" referenceName="eStructuralFeatures"
+          element="Before.ecore#//JobItem/jobPrice">
+        <changes xsi:type="history:Set" element="Before.ecore#//JobItem/jobPrice"
+            featureName="name" dataValue="jobPrice"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//JobItem/jobPrice"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//JobItem" referenceName="eStructuralFeatures"
+          element="Before.ecore#//JobItem/totalPrice">
+        <changes xsi:type="history:Set" element="Before.ecore#//JobItem/totalPrice"
+            featureName="name" dataValue="totalPrice"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//JobItem/totalPrice"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//JobItem" referenceName="eStructuralFeatures"
+          element="Before.ecore#//LabourItem/employee">
+        <changes xsi:type="history:Set" element="Before.ecore#//LabourItem/employee"
+            featureName="name" dataValue="employee"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LabourItem/employee"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="refactorings_extractSubclassPackage = refactorings_extractSubclass&#xA;labourItemClass = refactorings_extractSubclassPackage.newEClass()&#xA;labourItemClass.name = &quot;LabourItem&quot;&#xA;jobItemClass = refactorings_extractSubclass.JobItem&#xA;labourItemClass.eSuperTypes.add(jobItemClass)&#xA;employeeAttribute = refactorings_extractSubclass.JobItem.employee&#xA;labourItemClass.eStructuralFeatures.add(employeeAttribute)&#xA;&#xA;for(jobItem in refactorings_extractSubclassPackage.JobItem.allInstances) {&#xA;&#x9;if (jobItem.isSet(refactorings_extractSubclassPackage.JobItem.employee)) {&#xA;&#x9;&#x9;jobItem.migrate(labourItemClass)&#xA;&#x9;}&#xA;}">
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//LabourItem"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//LabourItem" featureName="name"
+          dataValue="LabourItem"/>
+      <changes xsi:type="history:Add" element="Before.ecore#//LabourItem" featureName="eSuperTypes"
+          referenceValue="Before.ecore#//JobItem"/>
+      <changes xsi:type="history:Move" target="Before.ecore#//LabourItem" referenceName="eStructuralFeatures"
+          element="Before.ecore#//LabourItem/employee" source="Before.ecore#//JobItem"/>
+    </changes>
+  </releases>
+</history:History>

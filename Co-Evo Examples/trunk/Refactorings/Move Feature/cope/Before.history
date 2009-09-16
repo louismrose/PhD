@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-16T13:55:56.011+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="refactorings_moveFeature"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="refactorings_moveFeature"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="refactorings_moveFeature"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//System">
+        <changes xsi:type="history:Set" element="Before.ecore#//System" featureName="name"
+            dataValue="System"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Account">
+        <changes xsi:type="history:Set" element="Before.ecore#//Account" featureName="name"
+            dataValue="Account"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/accounts">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/accounts" featureName="name"
+            dataValue="accounts"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/accounts" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/accounts" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/accounts" featureName="eType"
+            referenceValue="Before.ecore#//Account"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Account" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Account/code">
+        <changes xsi:type="history:Set" element="Before.ecore#//Account/code" featureName="name"
+            dataValue="code"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Account/code" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Account" referenceName="eStructuralFeatures"
+          element="Before.ecore#//AccountType/interestRate">
+        <changes xsi:type="history:Set" element="Before.ecore#//AccountType/interestRate"
+            featureName="name" dataValue="interestRate"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//AccountType/interestRate"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//AccountType">
+        <changes xsi:type="history:Set" element="Before.ecore#//AccountType" featureName="name"
+            dataValue="AccountType"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/accountTypes">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/accountTypes"
+            featureName="name" dataValue="accountTypes"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/accountTypes"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/accountTypes"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/accountTypes"
+            featureName="eType" referenceValue="Before.ecore#//AccountType"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Account" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Account/type">
+        <changes xsi:type="history:Set" element="Before.ecore#//Account/type" featureName="name"
+            dataValue="type"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Account/type" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Account/type" featureName="eType"
+            referenceValue="Before.ecore#//AccountType"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//AccountType" referenceName="eStructuralFeatures"
+          element="Before.ecore#//AccountType/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//AccountType/name"
+            featureName="name" dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//AccountType/name"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="accountTypeClass = refactorings_moveFeature.AccountType&#xA;interestRateAttribute = refactorings_moveFeature.Account.interestRate&#xA;accountTypeClass.eStructuralFeatures.add(interestRateAttribute)&#xA;&#xA;for(account in refactorings_moveFeature.Account.allInstances) {&#xA;&#x9;if (account.type.isSet(interestRateAttribute) and account.type.interestRate != account.interestRate) {&#xA;&#x9;&#x9;System.err.println('Conflicting interest rates for ' + account.type.name + ' AccountType')&#xA;&#x9;} else {&#xA;&#x9;&#x9;account.type.interestRate = account.unset(refactorings_moveFeature.AccountType.interestRate)&#xA;&#x9;}&#xA;}">
+      <changes xsi:type="history:Move" target="Before.ecore#//AccountType" referenceName="eStructuralFeatures"
+          element="Before.ecore#//AccountType/interestRate" source="Before.ecore#//Account"/>
+    </changes>
+  </releases>
+</history:History>

@@ -1,0 +1,34 @@
+rule System2System
+	transform old : Old!System
+	to        s   : New!System {
+	
+	s.employees := old.employees.equivalent();
+}
+
+rule Employee2Employee
+	transform old : Old!Employee
+	to        e   : New!Employee {
+	
+	guard: old.quota = 0
+	
+	e.name := old.name;
+}
+
+rule Employee2Salesperson
+	transform old : Old!Employee
+	to        p   : New!Salesperson {
+	
+	guard: old.quota <> 0
+	
+	p.name  := old.name;
+	p.quota := old.quota;
+}
+
+
+rule Salesperson2Salesperson
+	transform old : Old!Salesperson
+	to        p   : New!Salesperson {
+	
+	p.name  := old.name;
+	p.quota := old.quota;
+}

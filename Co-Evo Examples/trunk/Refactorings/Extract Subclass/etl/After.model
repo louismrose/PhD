@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactorings_extractSubclass:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactorings_extractSubclass="refactorings_extractSubclass">
+  <items jobPrice="10.0" totalPrice="20.0"/>
+  <items xsi:type="refactorings_extractSubclass:LabourItem" jobPrice="15.0" totalPrice="25.0" employee="With Employee"/>
+</refactorings_extractSubclass:System>
