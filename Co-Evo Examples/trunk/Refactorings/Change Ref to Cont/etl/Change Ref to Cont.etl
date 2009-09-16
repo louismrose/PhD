@@ -1,3 +1,10 @@
+rule System2System
+	transform old : Old!System
+	to        s   : New!System {
+	
+	s.signatures := old.signatures.equivalent();
+}
+
 rule Signature2Signature
 	transform old : Old!Signature
 	to        s   : New!Signature {

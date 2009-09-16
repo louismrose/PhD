@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactorings_changeRefToCont="refactorings_changeRefToCont">
-  <refactorings_changeRefToCont:Signature>
+<refactorings_changeRefToCont:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactorings_changeRefToCont="refactorings_changeRefToCont">
+  <signatures>
     <ports name="referencedOnce"/>
     <ports name="referencedTwice"/>
-  </refactorings_changeRefToCont:Signature>
-  <refactorings_changeRefToCont:Signature>
+  </signatures>
+  <signatures>
     <ports name="referencedTwice"/>
-  </refactorings_changeRefToCont:Signature>
-</xmi:XMI>
+  </signatures>
+</refactorings_changeRefToCont:System>
