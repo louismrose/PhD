@@ -3,7 +3,6 @@ package refactorings_changeRefToCont;
 
 class System {
    val Signature[*] signatures;
-   val Port[*] ports;
 }
 
 class Signature {
