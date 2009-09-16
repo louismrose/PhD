@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-16T12:02:15.587+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="refactorings_changeRefToCont"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="refactorings_changeRefToCont"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="refactorings_changeRefToCont"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//System">
+        <changes xsi:type="history:Set" element="Before.ecore#//System" featureName="name"
+            dataValue="System"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Signature">
+        <changes xsi:type="history:Set" element="Before.ecore#//Signature" featureName="name"
+            dataValue="Signature"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="Before.ecore#//System/signatures">
+        <changes xsi:type="history:Set" element="Before.ecore#//System/signatures"
+            featureName="name" dataValue="signatures"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/signatures"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/signatures"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//System/signatures"
+            featureName="eType" referenceValue="Before.ecore#//Signature"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Port">
+        <changes xsi:type="history:Set" element="Before.ecore#//Port" featureName="name"
+            dataValue="Port"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//System" referenceName="eStructuralFeatures"
+          element="#//@releases.1/@changes.0/@changes.0/@element">
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@element"
+            featureName="name" dataValue="ports"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@element"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@element"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="#//@releases.1/@changes.0/@changes.0/@element"
+            featureName="eType" referenceValue="Before.ecore#//Port"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Signature" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Signature/ports">
+        <changes xsi:type="history:Set" element="Before.ecore#//Signature/ports" featureName="name"
+            dataValue="ports"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Signature/ports" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Signature/ports" featureName="eType"
+            referenceValue="Before.ecore#//Port"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Port" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Port/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Port/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Port/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases date="2009-09-16T12:04:31.114+0100">
+    <changes xsi:type="history:MigrationChange" migration="portsReference = refactorings_changeRefToCont.System.ports&#xA;portsReference.delete()&#xA;portsReference2 = refactorings_changeRefToCont.Signature.ports&#xA;portsReference2.containment = true&#xA;&#xA;def orphans = []&#xA;for(signature in refactorings_changeRefToCont.Signature.allInstances) {&#xA;  for(port in object.unset(refactorings_changeRefToCont.Signature.ports)) {&#xA;    // clone&#xA;    def clone = Port.newInstance()&#xA;    clone.name = port.name&#xA;    signature.ports.add(clone)&#xA;&#x9;&#x9;&#x9;&#xA;    // mark original copy of referenced object for deletion&#xA;    if (!orphans.contains(port)) {&#xA;      orphans.add(port)&#xA;    }&#xA;  }&#xA;}&#xA;&#x9;&#xA;for (orphan in orphans) {&#xA;  orphan.delete()&#xA;}">
+      <changes xsi:type="history:Delete" target="Before.ecore#//System" referenceName="eStructuralFeatures">
+        <element xsi:type="ecore:EReference" name="ports" upperBound="-1" eType="ecore:EClass Before.ecore#//Port"
+            containment="true"/>
+      </changes>
+      <changes xsi:type="history:Set" element="Before.ecore#//Signature/ports" featureName="containment"
+          dataValue="true" oldDataValue="false"/>
+    </changes>
+  </releases>
+  <releases/>
+</history:History>

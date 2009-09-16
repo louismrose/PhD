@@ -1,0 +1,10 @@
+rule Signature2Signature
+	transform old : Old!Signature
+	to        s   : New!Signature {
+	
+	for (port in old.ports) {
+		var clone := new New!Port;
+		clone.name := port.name;
+		s.ports.add(clone);
+	}
+}
