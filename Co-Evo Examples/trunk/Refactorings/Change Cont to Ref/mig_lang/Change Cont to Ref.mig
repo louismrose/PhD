@@ -2,10 +2,8 @@ migrate Port {
 	var system := original.getSystem().equivalent();
 
 	if (system.ports.exists(p|p.name = migrated.name)) {
-		var duplicate := system.ports.selectOne(p|p.name = migrated.name);
-	
 		original.getContainingSignature().equivalent().ports.remove(migrated);
-		original.getContainingSignature().equivalent().ports.add(duplicate);
+		original.getContainingSignature().equivalent().ports.add(system.ports.selectOne(p|p.name = migrated.name));
 		delete migrated;
 		
 	} else {
