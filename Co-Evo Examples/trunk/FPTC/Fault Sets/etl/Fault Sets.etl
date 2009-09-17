@@ -1,22 +1,10 @@
-pre {
-  var warnings := new Sequence(String);
-}
+import 'Checking.etl';
 
 rule System2System
   transform old : Old!System
   to        s   : New!System {
 
   s.tuples := old.tuples.equivalent();
-}
-
-operation Old!System canBeMigrated() : Boolean {
-  var result := self.tuples.isUndefined() or self.tuples.forAll(t|t.canBeMigrated());
-
-  if (not result) {
-    warnings.add('Cannot migrate: ' + self.toString());
-  }
-	
-  return result;
 }
 
 @lazy
@@ -30,10 +18,6 @@ rule Tuple2Tuple
   t.contents := old.contents.equivalent();
 }
 
-operation Old!Tuple canBeMigrated() : Boolean {
-  return self.contents.forAll(is|is.canBeMigrated());
-}
-
 @lazy
 rule IdentifierSet2FaultSet
   transform old : Old!IdentifierSet
@@ -42,14 +26,6 @@ rule IdentifierSet2FaultSet
   guard: old.contents.size() > 1 and old.containsOnlyFaults()
 
   fs.contents := old.contents.equivalent();
-}
-
-operation Old!IdentifierSet canBeMigrated() : Boolean {
-  return self.contents.size() <= 1 or self.containsOnlyFaults();
-}
-
-operation Old!IdentifierSet containsOnlyFaults() : Boolean {
-  return self.contents.forAll(a|Old!Fault.isKind(a));
 }
 
 @lazy

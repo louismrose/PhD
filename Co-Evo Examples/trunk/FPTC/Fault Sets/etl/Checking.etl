@@ -1,0 +1,25 @@
+pre {
+  var warnings := new Sequence(String);
+}
+
+operation Old!Tuple canBeMigrated() : Boolean {
+  var result := self.contents.forAll(is|is.canBeMigrated());
+  
+  if (not result) {
+    warnings.add('Cannot migrate: Tuple ' + self.name);
+  }
+  
+  return result;
+}
+
+operation Old!IdentifierSet canBeMigrated() : Boolean {
+  return self.contents.size() <= 1 or self.containsOnlyFaults();
+}
+
+operation Old!IdentifierSet containsOnlyFaults() : Boolean {
+  return self.contents.forAll(a|Old!Fault.isKind(a));
+}
+
+post {
+	warnings.forAll(w|w.println());
+}
