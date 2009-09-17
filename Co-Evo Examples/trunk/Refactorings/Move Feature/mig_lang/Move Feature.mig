@@ -3,6 +3,6 @@ migrate Account {
 		('Conflicting interest rates for ' + migrated.type.name + ' AccountType').println();
 	
 	} else {
-		migrated.type.interestRate = original.interestRate;
+		migrated.type.interestRate := original.interestRate;
 	}
 }
