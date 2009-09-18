@@ -89,11 +89,7 @@ public class ConnectionsResourceHandler extends BasicResourceHandler {
 	private boolean isOutsetText(EStructuralFeature feature) {
 		return "outSetText".equals(feature.getName());
 	}
-//	
-//	private boolean isDst(EStructuralFeature feature) {
-//		return "dst".equals(feature.getName());
-//	}
-//	
+
 	private boolean isCollectionOfBlocks(Object value, Resource resource) {
 		final String[] uriFragments = ((String)value).split(" ");
 		
