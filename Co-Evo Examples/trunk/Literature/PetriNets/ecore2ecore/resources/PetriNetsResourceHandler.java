@@ -15,6 +15,7 @@ package lit_petriNets.resources;
 
 import java.io.InputStream;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -51,7 +52,9 @@ public class PetriNetsResourceHandler extends BasicResourceHandler {
 	}
 
 	private void handleUnknownFeatures(EObject owner, FeatureMap featureMap) {
-		for (FeatureMap.Entry entry : featureMap) {
+		for (Iterator<FeatureMap.Entry> iter = featureMap.iterator(); iter.hasNext();) {
+			final FeatureMap.Entry entry = iter.next();
+			
 			if (isTransition(owner)) {
 				if (isCollectionOfPlaces(entry.getValue(), owner.eResource())) {
 					final Transition transition    = (Transition)owner;
@@ -63,6 +66,8 @@ public class PetriNetsResourceHandler extends BasicResourceHandler {
 					} else if (isDst(entry.getEStructuralFeature())) {
 						migrateDest(transition, places);
 					}
+					
+					iter.remove();
 				
 				} else {
 					System.err.println("Not a collection of places: " + entry.getValue());
@@ -116,8 +121,6 @@ public class PetriNetsResourceHandler extends BasicResourceHandler {
 			arc.setSrc(source);
 			arc.setDst(owner);
 			arc.setNet(owner.getNet());
-			
-			owner.getIn().add(arc);
 		}
 	}
 	
@@ -127,8 +130,6 @@ public class PetriNetsResourceHandler extends BasicResourceHandler {
 			arc.setSrc(owner);
 			arc.setDst(destination);
 			arc.setNet(owner.getNet());
-			
-			owner.getOut().add(arc);
 		}
 	}
 }
