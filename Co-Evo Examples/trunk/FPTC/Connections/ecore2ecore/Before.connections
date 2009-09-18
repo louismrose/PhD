@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connections="connections">
+  <blocks xmi:id="_0jmgsDCmEd6Dgtx8TEyzXg" name="Source 1" outSetText="(foo)" successors="_6RuhIDCmEd6Dgtx8TEyzXg"/>
+  <blocks xmi:id="_3lY2sDCmEd6Dgtx8TEyzXg" name="Source 2" inSetText="" outSetText="(bar)" successors="_6RuhIDCmEd6Dgtx8TEyzXg"/>
+  <blocks xmi:id="_3w0qoDCmEd6Dgtx8TEyzXg" name="Source 3" outSetText="(baz)" successors="_6RuhIDCmEd6Dgtx8TEyzXg"/>
+  <blocks xmi:id="_6RuhIDCmEd6Dgtx8TEyzXg" name="Plex" inSetText="(foo, bar, baz)" outSetText="(baz, foobar)" successors="_8kCiADCmEd6Dgtx8TEyzXg _8kDJEDCmEd6Dgtx8TEyzXg _6RuhIDCmEd6Dgtx8TEyzXg" predecessors="_6RuhIDCmEd6Dgtx8TEyzXg _0jmgsDCmEd6Dgtx8TEyzXg _3lY2sDCmEd6Dgtx8TEyzXg _3w0qoDCmEd6Dgtx8TEyzXg"/>
+  <blocks xmi:id="_8kCiADCmEd6Dgtx8TEyzXg" name="Sink 1" inSetText="(baz)" predecessors="_6RuhIDCmEd6Dgtx8TEyzXg"/>
+  <blocks xmi:id="_8kDJEDCmEd6Dgtx8TEyzXg" name="Sink 2" inSetText="(foobar)" predecessors="_6RuhIDCmEd6Dgtx8TEyzXg"/>
+  <blocks xmi:id="_AJwrgDCnEd6Dgtx8TEyzXg" name="Loner"/>
+</connections:System>
