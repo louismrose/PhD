@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore2ecore:Ecore2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore2ecore="http://www.eclipse.org/emf/2004/Ecore2Ecore" topToBottom="true">
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//System/blocks/@eGenericType"/>
+        <outputs href="After.ecore#//System/blocks/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//System/blocks"/>
+      <outputs href="After.ecore#//System/blocks"/>
+    </nested>
+    <inputs href="Before.ecore#//System"/>
+    <outputs href="After.ecore#//System"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Block/name/@eGenericType"/>
+        <outputs href="After.ecore#//Block/name/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Block/name"/>
+      <outputs href="After.ecore#//Block/name"/>
+    </nested>
+    <inputs href="Before.ecore#//Block"/>
+    <outputs href="After.ecore#//Block"/>
+  </nested>
+  <inputs href="Before.ecore#/"/>
+  <outputs href="After.ecore#/"/>
+</ecore2ecore:Ecore2EcoreMappingRoot>
