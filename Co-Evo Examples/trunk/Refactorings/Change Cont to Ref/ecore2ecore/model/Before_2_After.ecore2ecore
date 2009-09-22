@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore2ecore:Ecore2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore2ecore="http://www.eclipse.org/emf/2004/Ecore2Ecore" topToBottom="true">
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//System/signatures/@eGenericType"/>
+        <outputs href="After.ecore#//System/signatures/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//System/signatures"/>
+      <outputs href="After.ecore#//System/signatures"/>
+    </nested>
+    <inputs href="Before.ecore#//System"/>
+    <outputs href="After.ecore#//System"/>
+  </nested>
+  <nested>
+    <nested>
+      <inputs href="Before.ecore#//Signature/ports/@eGenericType"/>
+      <outputs href="After.ecore#//Signature/ports/@eGenericType"/>
+    </nested>
+    <inputs href="Before.ecore#//Signature"/>
+    <outputs href="After.ecore#//Signature"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Port/name/@eGenericType"/>
+        <outputs href="After.ecore#//Port/name/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Port/name"/>
+      <outputs href="After.ecore#//Port/name"/>
+    </nested>
+    <inputs href="Before.ecore#//Port"/>
+    <outputs href="After.ecore#//Port"/>
+  </nested>
+  <inputs href="Before.ecore#/"/>
+  <outputs href="After.ecore#/"/>
+</ecore2ecore:Ecore2EcoreMappingRoot>
