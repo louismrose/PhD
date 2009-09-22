@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extractclass:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:extractclass="extractclass">
+  <people xmi:id="_zhHzgC9HEd6Ofdv2Qia5qg" name="John" areaCode="01904" number="444444"/>
+</extractclass:System>
