@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pushdownfeature:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:pushdownfeature="pushdownfeature">
+  <employees xmi:id="__1gDIC8vEd6lp8B6HTzpjw" name="NoQuota"/>
+  <employees xmi:id="_AKLSoC8wEd6lp8B6HTzpjw" name="Quota" quota="10"/>
+  <employees xsi:type="pushdownfeature:Salesperson" xmi:id="_AdZJkC8wEd6lp8B6HTzpjw" name="SalesWithQuota" quota="20"/>
+  <employees xsi:type="pushdownfeature:Salesperson" xmi:id="_Gfw7sC8wEd6lp8B6HTzpjw" name="SalesWithNoQuota"/>
+</pushdownfeature:System>
