@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore2ecore:Ecore2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore2ecore="http://www.eclipse.org/emf/2004/Ecore2Ecore" topToBottom="true">
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//System/people/@eGenericType"/>
+        <outputs href="After.ecore#//System/people/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//System/people"/>
+      <outputs href="After.ecore#//System/people"/>
+    </nested>
+    <inputs href="Before.ecore#//System"/>
+    <outputs href="After.ecore#//System"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Person/name/@eGenericType"/>
+        <outputs href="After.ecore#//Person/name/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Person/name"/>
+      <outputs href="After.ecore#//Person/name"/>
+    </nested>
+    <inputs href="Before.ecore#//Person"/>
+    <outputs href="After.ecore#//Person"/>
+  </nested>
+  <inputs href="Before.ecore#/"/>
+  <outputs href="After.ecore#/"/>
+</ecore2ecore:Ecore2EcoreMappingRoot>
