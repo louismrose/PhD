@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore2ecore:Ecore2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore2ecore="http://www.eclipse.org/emf/2004/Ecore2Ecore" topToBottom="true">
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//World/actions/@eGenericType"/>
+        <outputs href="After.ecore#//World/actions/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//World/actions"/>
+      <outputs href="After.ecore#//World/actions"/>
+    </nested>
+    <inputs href="Before.ecore#//World"/>
+    <outputs href="After.ecore#//World"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Action/name/@eGenericType"/>
+        <outputs href="After.ecore#//Action/name/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Action/name"/>
+      <outputs href="After.ecore#//Action/name"/>
+    </nested>
+    <inputs href="Before.ecore#//Action"/>
+    <outputs href="After.ecore#//Action"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Proposition/name/@eGenericType"/>
+        <outputs href="After.ecore#//Proposition/name/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Proposition/name"/>
+      <outputs href="After.ecore#//Proposition/name"/>
+    </nested>
+    <inputs href="Before.ecore#//Proposition"/>
+    <outputs href="After.ecore#//Proposition"/>
+  </nested>
+  <inputs href="Before.ecore#/"/>
+  <outputs href="After.ecore#/"/>
+</ecore2ecore:Ecore2EcoreMappingRoot>

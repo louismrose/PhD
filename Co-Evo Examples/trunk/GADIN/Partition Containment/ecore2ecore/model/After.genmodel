@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/gadin.partitioncontainment/src"
+    modelPluginID="gadin.partitioncontainment" modelName="After" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>After.ecore</foreignModel>
+  <genPackages prefix="Partitioncontainment" disposableProviderFactory="true" ecorePackage="After.ecore#/">
+    <genClasses ecoreClass="After.ecore#//World">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference After.ecore#//World/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="After.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute After.ecore#//Action/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference After.ecore#//Action/preconditionSets"/>
+    </genClasses>
+    <genClasses ecoreClass="After.ecore#//PropositionSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute After.ecore#//PropositionSet/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference After.ecore#//PropositionSet/preconditions"/>
+    </genClasses>
+    <genClasses ecoreClass="After.ecore#//Proposition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute After.ecore#//Proposition/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/gadin.partitioncontainment/src"
+    modelPluginID="gadin.partitioncontainment" modelName="Before" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>Before.ecore</foreignModel>
+  <genPackages prefix="Partitioncontainment" disposableProviderFactory="true" ecorePackage="Before.ecore#/">
+    <genClasses ecoreClass="Before.ecore#//World">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Before.ecore#//World/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="Before.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Before.ecore#//Action/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Before.ecore#//Action/preconditions"/>
+    </genClasses>
+    <genClasses ecoreClass="Before.ecore#//Proposition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Before.ecore#//Proposition/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
