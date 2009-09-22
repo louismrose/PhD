@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inlineclass:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:inlineclass="inlineclass">
+  <people xmi:id="_U7K94C9HEd6Ofdv2Qia5qg" name="John">
+    <telephoneNumber xmi:id="_WQS9wC9HEd6Ofdv2Qia5qg" areaCode="01904" number="444444"/>
+  </people>
+ </inlineclass:System>
