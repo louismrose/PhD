@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/refactorings.inlineclass/src"
+    modelPluginID="refactorings.inlineclass" modelName="After" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>After.ecore</foreignModel>
+  <genPackages prefix="Inlineclass" disposableProviderFactory="true" ecorePackage="After.ecore#/">
+    <genClasses ecoreClass="After.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference After.ecore#//System/people"/>
+    </genClasses>
+    <genClasses ecoreClass="After.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute After.ecore#//Person/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute After.ecore#//Person/areaCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute After.ecore#//Person/number"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
