@@ -1,0 +1,198 @@
+Path: build.eclipse.org!not-for-mail
+From: Louis Rose <louis@cs.york.ac.uk>
+Newsgroups: eclipse.tools.emf
+Subject: Re: Ecore2Ecore data migration when reference's type is removed
+Date: Sun, 20 Sep 2009 12:27:46 +0100
+Organization: EclipseCorner
+Lines: 178
+Message-ID: <h953ji$582$1@build.eclipse.org>
+References: <h908be$mpd$1@build.eclipse.org> <h90ac8$g26$2@build.eclipse.org> <h92hkh$pm8$1@build.eclipse.org> <h936qo$nod$2@build.eclipse.org>
+NNTP-Posting-Host: user-514d2b77.l1.c2.dsl.pol.co.uk
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Trace: build.eclipse.org 1253446067 5378 81.77.43.119 (20 Sep 2009 11:27:47 GMT)
+X-Complaints-To: news@build.eclipse.org
+NNTP-Posting-Date: Sun, 20 Sep 2009 11:27:47 +0000 (UTC)
+User-Agent: Thunderbird 2.0.0.23 (Macintosh/20090812)
+In-Reply-To: <h936qo$nod$2@build.eclipse.org>
+Xref: build.eclipse.org eclipse.tools.emf:44255
+
+Ed,
+
+Thanks for the help.
+
+Best,
+Louis.
+
+Ed Merks wrote:
+> Louis,
+> 
+> Comments below.
+> 
+> Louis Rose wrote:
+>> Hi Ed,
+>>
+>> Many thanks for the reply. The rest of my response is hidden below :-)
+>>
+>> Ed Merks wrote:
+>>> Louis,
+>>>
+>>> Comments below.
+>>>
+>>> Louis Rose wrote:
+>>>> Hi all,
+>>>>
+>>>> I'm trying to use an Ecore2Ecore mapping to perform data migration 
+>>>> as per the EMF Recipe here:
+>>>>
+>>>> http://wiki.eclipse.org/EMF/Recipes#Recipe:_Data_Migration
+>>>>
+>>>>
+>>>> I have the following Ecore model:
+>>>>
+>>>> @namespace(uri="faultsets", prefix="faultsets")
+>>>> package faultsets;
+>>>>
+>>>> class System {
+>>>>    val Tuple[*] tuples;
+>>>> }
+>>>>
+>>>> class Tuple {
+>>>>   attr String name;
+>>>>   val IdentifierSet[*] contents;
+>>>> }
+>>>>
+>>>> class IdentiferSet
+>>>>  val Identifier[*] contents;
+>>>> }
+>>>>
+>>>> abstract class Identifier {}
+>>>>
+>>>> class Wildcard extends Identifier {}
+>>>> class NoFault extends Identifier {}
+>>>> ...
+>>>>
+>>>>
+>>>> Which has evolved to this Ecore model:
+>>>>
+>>>> @namespace(uri="faultsets", prefix="faultsets")
+>>>> package faultsets;
+>>>>
+>>>> class System {
+>>>>   val Tuple[*] tuples;
+>>>> }
+>>>>
+>>>> class Tuple {
+>>>>   attr String name;
+>>>>   val Atom[*] contents;
+>>>> }
+>>>>
+>>>> abstract class Atom {}
+>>>>
+>>>> class Wildcard extends Atom {}
+>>>> class NoFault extends Atom {}
+>>>> ...
+>>>>
+>>>>
+>>>> The contents of a tuple have been simplified. A tuple no longer 
+>>>> contains a set of sets, just a set. 
+>>> That sounds like the remove of levels of nesting in the XML.  I don't 
+>>> think the mapping can handle that...
+>>
+>> Yes, that's right. I thought that the mapping might not be able to 
+>> handle this.
+>>
+>>>> In addition, the Identifier class has been renamed to Atom.
+>>>>
+>>>> The recipe described on the EMF wiki suggests constructing an 
+>>>> Ecore2Ecore mapping (and corresponding Ecore2Xml mapping) and then 
+>>>> processing the getEObjectToExtensionMap() in the postLoad() method 
+>>>> of a custom ResourceHandler.
+>>>>
+>>>> I'm not sure how to define the Ecore2Ecore mapping such that I can 
+>>>> process the IdentifierSets for instances of the original Ecore 
+>>>> model. When I define a mapping between Identifier and Atom, the 
+>>>> getEObjectToExtensionMap() contains an entry for each Tuple for the 
+>>>> contents feature, but the value is null. (I was expecting the value 
+>>>> to contain data representing an instance of the now absent 
+>>>> IdentifierSet EClass).
+>>> It would be easier to comment if you showed the XML...
+>>
+>> Apologies, here's XML for an instance of the original Ecore model:
+>>
+>> <?xml version="1.0" encoding="UTF-8"?>
+>> <faultsets:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" 
+>> xmlns:faultsets="faultsets">
+>>   <tuples xmi:id="_nKeDwDCjEd63LN-700-Liw" name="Empty"/>
+>>   <tuples xmi:id="_DD5owDCkEd63LN-700-Liw" name="SingletonFault">
+>>     <contents xmi:id="_EuBoQDCkEd63LN-700-Liw"> <!-- this is an 
+>> IdentifierSet -->
+>>       <contents xsi:type="faultsets:Fault" 
+>> xmi:id="_FMJHoDCkEd63LN-700-Liw" type="late"/>
+>>     </contents>
+>>   </tuples>
+>> ...
+>> </faultsets:System>
+>>
+>> I'd like to migrate the SingletonFault tuple to this XML:
+>>
+>> <tuples xmi:id="_DD5owDCkEd63LN-700-Liw" name="SingletonFault">
+>>   <contents xsi:type="faultsets:Fault" 
+>> xmi:id="_FMJHoDCkEd63LN-700-Liw" type="late"/>
+>> </tuples>
+> Yes, that's too much structural change I think.
+>>
+>>>>
+>>>> When I don't define a mapping between Identifier and Atom, I receive 
+>>>> the following exception when trying to load the model:
+>>>>
+>>>> org.eclipse.emf.ecore.xmi.IllegalValueException: Value 
+>>>> 'org.eclipse.emf.ecore.xml.type.impl.AnyTypeImpl@945ff9 (eClass: 
+>>>> org.eclipse.emf.ecore.impl.EClassImpl@3d648c (name: Atom) 
+>>>> (instanceClassName: null) (abstract: false, interface: false)) 
+>>>> (mixed: null, anyAttribute: null)' is not legal. (Before.faultsets, 
+>>>> 5, 48)
+>>>>     at 
+>>>> org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2662) 
+>>>>
+>>>>     at 
+>>>> org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2647) 
+>>>>
+>>>>     at 
+>>>> org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2166) 
+>>>>
+>>>>     at 
+>>>> org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2034) 
+>>>>
+>>>>     at 
+>>>> org.eclipse.emf.ecore.xmi.impl.XMIHandler.createObject(XMIHandler.java:134) 
+>>>>
+>>>>     at 
+>>>> org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1813) 
+>>>>
+>>>>     at 
+>>>> org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1023) 
+>>>>
+>>>>     at 
+>>>> org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:87) 
+>>>>
+>>>>     at 
+>>>> org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1001) 
+>>>>
+>>>>
+>>>>
+>>>> I don't fully understand the way in which the Ecore2Ecore and 
+>>>> Ecore2Xml mappings interact with EMF to load instances of the 
+>>>> original Ecore model, so I'm sure I'm doing something silly because 
+>>>> of my ignorance. If anybody could shed any light on how I can 
+>>>> proceed, I'd be very grateful.
+>>> It sounds likely that your changes are more complex than what the 
+>>> mapping approach can handle...
+>>
+>> Sounds like it. Would I have to implement a custom handler that 
+>> doesn't use the mapping to perform this migration?
+> Yes, I think so.  A specialized XMLHandler...
+>>
+>> Cheers,
+>> Louis.
