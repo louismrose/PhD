@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ref2cont:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ref2cont="ref2cont">
+  <signatures xmi:id="_XfRWgC9AEd6-Rt6Q1fcTQQ" ports="_ZF9AcC9AEd6-Rt6Q1fcTQQ _ZdiaAC9AEd6-Rt6Q1fcTQQ"/>
+  <signatures xmi:id="_YwhjAC9AEd6-Rt6Q1fcTQQ" ports="_ZdiaAC9AEd6-Rt6Q1fcTQQ"/>
+  <ports xmi:id="_ZF9AcC9AEd6-Rt6Q1fcTQQ" name="referencedOnce"/>
+  <ports xmi:id="_ZdiaAC9AEd6-Rt6Q1fcTQQ" name="referencedTwice"/>
+  <ports xmi:id="_eXoVcC9AEd6-Rt6Q1fcTQQ" name="unreferenced"/>
+ </ref2cont:System>
