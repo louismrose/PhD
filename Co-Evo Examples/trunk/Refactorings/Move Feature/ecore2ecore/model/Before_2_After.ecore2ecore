@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore2ecore:Ecore2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore2ecore="http://www.eclipse.org/emf/2004/Ecore2Ecore" topToBottom="true">
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//System/accounts/@eGenericType"/>
+        <outputs href="After.ecore#//System/accounts/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//System/accounts"/>
+      <outputs href="After.ecore#//System/accounts"/>
+    </nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//System/accountTypes/@eGenericType"/>
+        <outputs href="After.ecore#//System/accountTypes/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//System/accountTypes"/>
+      <outputs href="After.ecore#//System/accountTypes"/>
+    </nested>
+    <inputs href="Before.ecore#//System"/>
+    <outputs href="After.ecore#//System"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Account/code/@eGenericType"/>
+        <outputs href="After.ecore#//Account/code/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Account/code"/>
+      <outputs href="After.ecore#//Account/code"/>
+    </nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Account/type/@eGenericType"/>
+        <outputs href="After.ecore#//Account/type/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Account/type"/>
+      <outputs href="After.ecore#//Account/type"/>
+    </nested>
+    <inputs href="Before.ecore#//Account"/>
+    <outputs href="After.ecore#//Account"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//AccountType/name/@eGenericType"/>
+        <outputs href="After.ecore#//AccountType/name/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//AccountType/name"/>
+      <outputs href="After.ecore#//AccountType/name"/>
+    </nested>
+    <inputs href="Before.ecore#//AccountType"/>
+    <outputs href="After.ecore#//AccountType"/>
+  </nested>
+  <inputs href="Before.ecore#/"/>
+  <outputs href="After.ecore#/"/>
+</ecore2ecore:Ecore2EcoreMappingRoot>
