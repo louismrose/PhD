@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<partitioncontainment:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:partitioncontainment="partitioncontainment">
+  <actions xmi:id="_i6FJIIUEEd6XI4H4exffQw" name="Empty"/>
+  <actions xmi:id="_kkOWwIUEEd6XI4H4exffQw" name="Singleton">
+    <preconditions xmi:id="_mDUK8IUEEd6XI4H4exffQw" name="not a"/>
+  </actions>
+  <actions xmi:id="_oCsowIUEEd6XI4H4exffQw" name="Several">
+    <preconditions xmi:id="_pE5FkIUEEd6XI4H4exffQw" name="a"/>
+    <preconditions xmi:id="_p0MbkIUEEd6XI4H4exffQw" name="not b"/>
+    <preconditions xmi:id="_rNWm4IUEEd6XI4H4exffQw" name="not c"/>
+  </actions>
+</partitioncontainment:World>
