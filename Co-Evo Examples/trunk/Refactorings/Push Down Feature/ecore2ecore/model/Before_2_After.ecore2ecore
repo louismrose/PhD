@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore2ecore:Ecore2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore2ecore="http://www.eclipse.org/emf/2004/Ecore2Ecore" topToBottom="true">
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//System/employees/@eGenericType"/>
+        <outputs href="After.ecore#//System/employees/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//System/employees"/>
+      <outputs href="After.ecore#//System/employees"/>
+    </nested>
+    <inputs href="Before.ecore#//System"/>
+    <outputs href="After.ecore#//System"/>
+  </nested>
+  <nested>
+    <nested>
+      <nested>
+        <inputs href="Before.ecore#//Employee/name/@eGenericType"/>
+        <outputs href="After.ecore#//Employee/name/@eGenericType"/>
+      </nested>
+      <inputs href="Before.ecore#//Employee/name"/>
+      <outputs href="After.ecore#//Employee/name"/>
+    </nested>
+    <inputs href="Before.ecore#//Employee"/>
+    <outputs href="After.ecore#//Employee"/>
+  </nested>
+  <nested>
+    <nested>
+      <inputs href="Before.ecore#//Salesperson/@eGenericSuperTypes.0"/>
+      <outputs href="After.ecore#//Salesperson/@eGenericSuperTypes.0"/>
+    </nested>
+    <inputs href="Before.ecore#//Salesperson"/>
+    <outputs href="After.ecore#//Salesperson"/>
+  </nested>
+  <inputs href="Before.ecore#/"/>
+  <outputs href="After.ecore#/"/>
+</ecore2ecore:Ecore2EcoreMappingRoot>
