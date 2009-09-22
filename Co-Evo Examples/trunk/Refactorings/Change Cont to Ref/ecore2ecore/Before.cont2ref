@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cont2ref:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cont2ref="cont2ref">
+  <signatures xmi:id="_UoS6oC9GEd6Ofdv2Qia5qg">
+    <ports xmi:id="_VQ4koC9GEd6Ofdv2Qia5qg" name="One"/>
+    <ports xmi:id="_ZmkLcC9GEd6Ofdv2Qia5qg" name="Two"/>
+  </signatures>
+  <signatures xmi:id="_U_suAC9GEd6Ofdv2Qia5qg">
+    <ports xmi:id="_VjkQEC9GEd6Ofdv2Qia5qg" name="Duplicate"/>
+  </signatures>
+  <signatures xmi:id="_YHSxEC9GEd6Ofdv2Qia5qg">
+    <ports xmi:id="_YHSxES9GEd6Ofdv2Qia5qg" name="Duplicate"/>
+    <ports xmi:id="_agZWcC9GEd6Ofdv2Qia5qg" name="Three"/>
+  </signatures>
+  <signatures xmi:id="_bcvp8C9GEd6Ofdv2Qia5qg"/>
+ </cont2ref:System>
