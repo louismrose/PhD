@@ -1,5 +1,5 @@
 -- TODO: use a to part because Migrated!ConnectionPoint is abstract.
---       perhaps this would be better served by a delete / ignore / warn rule
+--       perhaps this would be better served by a del / ignore / warn rule
 migrate ConnectionPoint to ReadingConnectionPoint when: not (original.isReading() xor original.isWriting()) {
 	('Could not migrate: ' + original).println();
 	delete migrated;
