@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Newsgroup xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="extractperson" xmi:id="_zJ3AAagaEd6KaYKEnXtaIA">
+  <articles xmi:id="_zJ3nEKgaEd6KaYKEnXtaIA" articleId="1" subject="Foo" date="01/01/09">
+    <sender xmi:id="_zJ3nEagaEd6KaYKEnXtaIA" name="Joe Bloggs" email="joe.blogs@example.com"/>
+    <newsgroups>org.foo</newsgroups>
+  </articles>
+  <articles xmi:id="_zJ3nEqgaEd6KaYKEnXtaIA" articleId="2" subject="Bar" date="01/01/09">
+    <sender xmi:id="_zJ3nE6gaEd6KaYKEnXtaIA" name="" email="john.doe@example.com"/>
+    <newsgroups>org.foo</newsgroups>
+    <newsgroups>org.bar</newsgroups>
+  </articles>
+  <articles xmi:id="_zJ3nFKgaEd6KaYKEnXtaIA" articleId="3" subject="Baz" date="01/01/09">
+    <sender xmi:id="_zJ3nFagaEd6KaYKEnXtaIA" name="Jane Doe" email="jane.doe@example.com"/>
+    <newsgroups>org.foo</newsgroups>
+    <newsgroups>org.bar</newsgroups>
+  </articles>
+</Newsgroup>

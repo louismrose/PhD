@@ -1,5 +1,5 @@
-@namespace(uri="newsgroupstats", prefix="")
-package newsgroupstats;
+@namespace(uri="extractperson", prefix="")
+package extractperson;
 
 class Newsgroup {
    val Article[*] articles;
