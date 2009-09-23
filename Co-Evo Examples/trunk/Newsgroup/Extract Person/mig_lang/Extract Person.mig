@@ -1,3 +1,5 @@
+import 'trim.eol';
+
 migrate Article {
 	migrated.sender := original.sender.toPerson();
 }
@@ -15,18 +17,4 @@ operation String toPerson() : Migrated!Person {
 	}
 		
 	return person;
-}
-
-operation String trim(start : String, end : String) : String {
-	var result := self.trim();
-	
-	if (result.startsWith(start)) {
-		result := result.substring(1);
-	}
-	
-	if (result.endsWith(end)) {
-		result := result.substring(0, result.length()-1);
-	}
-	
-	return result;
 }
