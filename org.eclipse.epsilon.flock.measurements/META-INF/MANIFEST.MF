@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: measure
+Bundle-SymbolicName: org.eclipse.epsilon.flock.measurements
+Bundle-Version: 1.0.0.qualifier
+Export-Package: grammar,
+ project,
+ reader,
+ suite
+Require-Bundle: org.eclipse.epsilon.eol.engine;bundle-version="0.8.7",
+ org.eclipse.epsilon.emc.emf;bundle-version="0.8.7",
+ edu.tum.cs.cope.history;bundle-version="0.1.41"
