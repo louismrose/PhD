@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2009-09-23T13:41:43.808+0100">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="extractreplies"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="extractreplies"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue=""/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Newsgroup">
+        <changes xsi:type="history:Set" element="Before.ecore#//Newsgroup" featureName="name"
+            dataValue="Newsgroup"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Article">
+        <changes xsi:type="history:Set" element="Before.ecore#//Article" featureName="name"
+            dataValue="Article"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Newsgroup" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Newsgroup/articles">
+        <changes xsi:type="history:Set" element="Before.ecore#//Newsgroup/articles"
+            featureName="name" dataValue="articles"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Newsgroup/articles"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Newsgroup/articles"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Newsgroup/articles"
+            featureName="eType" referenceValue="Before.ecore#//Article"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Article" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Article/articleId">
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/articleId"
+            featureName="name" dataValue="articleId"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/articleId"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Article" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Article/subject">
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/subject" featureName="name"
+            dataValue="subject"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/subject" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Article" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Article/newsgroups">
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/newsgroups"
+            featureName="name" dataValue="newsgroups"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/newsgroups"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/newsgroups"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Article" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Article/inReplyToId">
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/inReplyToId"
+            featureName="name" dataValue="inReplyTo"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/inReplyToId"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Article" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Article/date">
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/date" featureName="name"
+            dataValue="date"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/date" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Person">
+        <changes xsi:type="history:Set" element="Before.ecore#//Person" featureName="name"
+            dataValue="Person"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Article" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Article/sender">
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/sender" featureName="name"
+            dataValue="sender"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/sender" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Article/sender" featureName="eType"
+            referenceValue="Before.ecore#//Person"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Person" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Person/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Person/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Person/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Person" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Person/email">
+        <changes xsi:type="history:Set" element="Before.ecore#//Person/email" featureName="name"
+            dataValue="email"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Person/email" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="inReplyToAttribute = extractreplies.Article.inReplyTo&#xA;inReplyToAttribute.name = &quot;inReplyToId&quot;&#xA;articleClass = extractreplies.Article&#xA;inReplyToReference = articleClass.newEReference()&#xA;inReplyToReference.name = &quot;inReplyTo&quot;&#xA;inReplyToReference.eType = articleClass&#xA;repliesReference = articleClass.newEReference()&#xA;repliesReference.eType = articleClass&#xA;repliesReference.name = &quot;replies&quot;&#xA;repliesReference.containment = true&#xA;inReplyToReference.eOpposite = repliesReference&#xA;repliesReference.eOpposite = inReplyToReference&#xA;&#xA;for (article in extractperson.Article.allInstances) {&#xA;&#x9;article.replyToId = article.unset(replyTo)&#xA;&#x9;article.replyTo = Article.allInstances.find { it.articledId = article.replyToId } &#xA;}">
+      <changes xsi:type="history:Set" element="Before.ecore#//Article/inReplyToId"
+          featureName="name" dataValue="inReplyToId" oldDataValue="inReplyTo"/>
+      <changes xsi:type="history:Create" target="Before.ecore#//Article" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Article/inReplyTo"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Article/inReplyTo" featureName="name"
+          dataValue="inReplyTo"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Article/inReplyTo" featureName="eType"
+          referenceValue="Before.ecore#//Article"/>
+      <changes xsi:type="history:Create" target="Before.ecore#//Article" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Article/replies"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Article/replies" featureName="eType"
+          referenceValue="Before.ecore#//Article"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Article/replies" featureName="name"
+          dataValue="replies"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Article/replies" featureName="containment"
+          dataValue="true" oldDataValue="false"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Article/inReplyTo" featureName="eOpposite"
+          referenceValue="Before.ecore#//Article/replies"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//Article/replies" featureName="eOpposite"
+          referenceValue="Before.ecore#//Article/inReplyTo"/>
+    </changes>
+  </releases>
+</history:History>
