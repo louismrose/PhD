@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Newsgroup xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="extractreplies" xmi:id="_LL8GsKggEd63Ds3GzT5Xmw">
+  <articles xmi:id="_L_HQEKggEd63Ds3GzT5Xmw" articleId="1" subject="Root 1"/>
+  <articles xmi:id="_N5n08KggEd63Ds3GzT5Xmw" articleId="1.1" subject="Reply 1.1"/>
+  <articles xmi:id="_OFOA8KggEd63Ds3GzT5Xmw" articleId="1.2" subject="Reply 1.2"/>
+  <articles xmi:id="_SbDYwKggEd63Ds3GzT5Xmw" articleId="2" subject="Root 2"/>
+  <articles xmi:id="_SbDYwaggEd63Ds3GzT5Xmw" articleId="2.1" subject="Reply 2.1"/>
+  <articles xmi:id="_Xy0HoKggEd63Ds3GzT5Xmw" articleId="3" subject="Root 3"/>
+</Newsgroup>
