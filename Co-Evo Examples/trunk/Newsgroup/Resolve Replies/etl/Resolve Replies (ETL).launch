@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.etl.eclipse.dt.launching.EtlLaunchConfigurationDelegate">
+<listAttribute key="models">
+<listEntry value="#&#10;#Wed Sep 23 10:39:15 BST 2009&#10;isMetamodelFileBased=true&#10;name=Migrated&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Newsgroup/Resolve Replies/etl/After.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/Newsgroup/Resolve Replies/After.ecore&#10;"/>
+<listEntry value="#&#10;#Wed Sep 23 10:38:56 BST 2009&#10;isMetamodelFileBased=true&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Newsgroup/Resolve Replies/Before.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/Newsgroup/Resolve Replies/Before.ecore&#10;"/>
+</listAttribute>
+<stringAttribute key="source" value="/Co-Evo Examples/Newsgroup/Resolve Replies/etl/Resolve Replies.etl"/>
+</launchConfiguration>

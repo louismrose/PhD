@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Newsgroup xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="extractperson" xmi:id="_Yosq8agZEd6ETPSeFGa3CA">
+  <articles xmi:id="_aJz4YKgZEd6ETPSeFGa3CA" articleId="1" sender="joe.blogs@example.com (Joe Bloggs)" subject="Foo" inReplyTo="" date="01/01/09">
+    <newsgroups>org.foo</newsgroups>
+  </articles>
+  <articles xmi:id="_m5-YMKgZEd6ETPSeFGa3CA" articleId="2" sender="John Doe &lt;john.doe@example.com>" subject="Bar" inReplyTo="" date="01/01/09">
+    <newsgroups>org.foo</newsgroups>
+    <newsgroups>org.bar</newsgroups>
+  </articles>
+  <articles xmi:id="_vihiYKgZEd6ETPSeFGa3CA" articleId="3" sender="&quot;Jane Doe&quot; &lt;jane.doe@example.com>" subject="Baz" inReplyTo="" date="01/01/09">
+    <newsgroups>org.foo</newsgroups>
+    <newsgroups>org.bar</newsgroups>
+  </articles>
+</Newsgroup>

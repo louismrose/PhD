@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Newsgroup xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns="extractreplies">
+  <articles articleId="1" subject="Root 1">
+  	<replies articleId="1.1" subject="Reply 1.1"/>
+  	<replies articleId="1.2" subject="Reply 1.2"/>
+  </articles>
+  <articles articleId="2" subject="Root 2">
+  	<replies articleId="2.1" subject="Reply 2.1"/>
+  </articles>
+  <articles articleId="3" subject="Root 3"/>
+</Newsgroup>
