@@ -5,7 +5,7 @@
     <newsgroups>org.foo</newsgroups>
   </articles>
   <articles xmi:id="_zJ3nEqgaEd6KaYKEnXtaIA" articleId="2" subject="Bar" date="01/01/09">
-    <sender xmi:id="_zJ3nE6gaEd6KaYKEnXtaIA" name="" email="john.doe@example.com"/>
+    <sender xmi:id="_zJ3nE6gaEd6KaYKEnXtaIA" name="John Doe" email="john.doe@example.com"/>
     <newsgroups>org.foo</newsgroups>
     <newsgroups>org.bar</newsgroups>
   </articles>
