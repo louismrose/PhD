@@ -1,0 +1,24 @@
+rule Newsgroup2Newsgroup
+	transform o : Original!Newsgroup
+	to        m : Migrated!Newsgroup {
+
+	for (migrated in o.articles.equivalent()) {
+		if (migrated.inReplyTo.isUndefined()) {
+			m.articles.add(migrated);
+		}
+	}
+}
+
+rule Article2Article
+	transform o : Original!Article
+	to        m : Migrated!Article {
+	
+	m.articleId   := o.articleId;
+	m.subject     := o.subject;
+	m.newsgroups  := o.newsgroups;
+	m.inReplyToId := o.inReplyTo;
+	m.date        := o.date;
+	m.sender      := o.sender;
+	
+	m.inReplyTo := Migrated!Article.all.selectOne(a|a.articleId = m.inReplyToId);
+}
