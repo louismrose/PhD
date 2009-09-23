@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
+<stringAttribute key="bad_container_name" value="/Co-Evo Examples/Newsgroup/Enum to Classe/mig_lang"/>
+<intAttribute key="migratedModel" value="0"/>
+<listAttribute key="models">
+<listEntry value="#&#10;#Sun Aug 09 18:42:36 BST 2009&#10;isMetamodelFileBased=true&#10;name=Migrated&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Newsgroup/2 Extract Replies/mig_lang/After.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/Newsgroup/2 Extract Replies/After.ecore&#10;"/>
+<listEntry value="#&#10;#Sun Aug 09 18:42:10 BST 2009&#10;isMetamodelFileBased=true&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Newsgroup/2 Extract Replies/Before.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/Newsgroup/2 Extract Replies/Before.ecore&#10;"/>
+</listAttribute>
+<intAttribute key="originalModel" value="1"/>
+<stringAttribute key="source" value="/Co-Evo Examples/Newsgroup/2 Extract Replies/mig_lang/2 Extract Replies.mig"/>
+</launchConfiguration>

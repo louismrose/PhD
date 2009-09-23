@@ -1,0 +1,4 @@
+migrate Article {
+	migrated.inReplyToId := original.inReplyTo;
+	migrated.inReplyTo := Migrated!Article.all.selectOne(a|a.articleId = migrated.inReplyToId);
+}
