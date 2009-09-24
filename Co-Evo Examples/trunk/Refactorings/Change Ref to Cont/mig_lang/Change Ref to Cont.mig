@@ -9,6 +9,4 @@ migrate Signature {
 	}
 }
 
-migrate Port when: not Original!Signature.all.exists(s|s.ports.includes(original)) {
-	delete migrated;
-}
+delete Port when: not Original!Signature.all.exists(s|s.ports.includes(original))
