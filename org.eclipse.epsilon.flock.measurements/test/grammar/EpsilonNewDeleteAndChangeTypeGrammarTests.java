@@ -30,6 +30,11 @@ public class EpsilonNewDeleteAndChangeTypeGrammarTests {
 	}
 	
 	@Test
+	public void newInVariableName() {
+		assertEquals(0, countEpsilonStyleAssignmentsIn("newsgroup := 'org.bar';"));
+	}
+	
+	@Test
 	public void deleteModelElement() {
 		assertEquals(1, countEpsilonStyleAssignmentsIn("delete Element;"));
 	}

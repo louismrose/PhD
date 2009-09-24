@@ -47,6 +47,6 @@ public class EpsilonGrammar implements Grammar {
 	}
 
 	public int countNewDeleteAndChangeTypeOperationsIn(String text) {
-		return new KeywordBasedMatcher("new", "delete", "migrate \\w* to \\w*").countMatchesIn(text);
+		return new KeywordBasedMatcher("new ", "delete", "migrate \\w* to \\w*").countMatchesIn(text);
 	}
 }
