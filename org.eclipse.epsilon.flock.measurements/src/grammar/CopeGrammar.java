@@ -24,7 +24,7 @@ public class CopeGrammar implements Grammar {
 		return instance;
 	}
 	
-	private final KeywordBasedMatcher assignmentMatcher = new KeywordBasedMatcher("=", "\\.(un)?set", "\\.add");
+	private final PatternCounter assignmentMatcher = new PatternCounter("=", "\\.(un)?set", "\\.add");
 	
 	private int numberOfAssignments;
 	
@@ -60,6 +60,6 @@ public class CopeGrammar implements Grammar {
 	}
 
 	public int countNewDeleteAndChangeTypeOperationsIn(String text) {
-		return new KeywordBasedMatcher("\\.newInstance", "\\.delete", "\\.migrate").countMatchesIn(text);
+		return new PatternCounter("\\.newInstance", "\\.delete", "\\.migrate").countMatchesIn(text);
 	}
 }

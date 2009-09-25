@@ -38,6 +38,6 @@ public class RuleWithDifferentSourceAndTargetTypeCounter {
 	}
 	
 	private int countMatchesInTransformation(String regex) {
-		return new KeywordBasedMatcher(regex).countMatchesIn(transformation);
+		return new PatternCounter(regex).countMatchesIn(transformation);
 	}
 }

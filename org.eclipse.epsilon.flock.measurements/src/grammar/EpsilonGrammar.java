@@ -26,7 +26,7 @@ public class EpsilonGrammar implements Grammar {
 	}
 	
 	
-	private final KeywordBasedMatcher grammar = new KeywordBasedMatcher(":=", "\\.add");
+	private final PatternCounter grammar = new PatternCounter(":=", "\\.add");
 
 	private int numberOfAssignments;
 	
@@ -47,7 +47,7 @@ public class EpsilonGrammar implements Grammar {
 	}
 
 	public int countNewDeleteAndChangeTypeOperationsIn(String text) {
-		return new KeywordBasedMatcher("new ", "delete", "migrate \\w* to \\w*").countMatchesIn(text) +
+		return new PatternCounter("new ", "delete", "migrate \\w* to \\w*").countMatchesIn(text) +
 		       new RuleWithDifferentSourceAndTargetTypeCounter(text).count();
 	}
 }

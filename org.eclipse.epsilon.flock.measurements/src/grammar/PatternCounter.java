@@ -18,15 +18,15 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.regex.Pattern;
 
-public class KeywordBasedMatcher {
+public class PatternCounter {
 
 	private final Collection<Pattern> keywords;
 	
-	public KeywordBasedMatcher(Pattern... keywords) {
+	public PatternCounter(Pattern... keywords) {
 		this.keywords = Arrays.asList(keywords);
 	}
 
-	public KeywordBasedMatcher(String... keywords) {
+	public PatternCounter(String... keywords) {
 		this.keywords = compilePatterns(keywords);
 	}
 
