@@ -1,4 +1,4 @@
-#Wed Sep 23 14:05:15 BST 2009
+#Mon Sep 28 14:17:19 BST 2009
 eclipse.preferences.version=1
 encoding//FPTC/Connections/After.ecorediag=UTF-8
 encoding//FPTC/Connections/Before.ecorediag=UTF-8
@@ -8,3 +8,5 @@ encoding//Newsgroup/Extract\ Person/After.ecorediag=UTF-8
 encoding//Newsgroup/Extract\ Person/Before.ecorediag=UTF-8
 encoding//Newsgroup/Resolve\ Replies/After.ecorediag=UTF-8
 encoding//Newsgroup/Resolve\ Replies/Before.ecorediag=UTF-8
+encoding//Process-Oriented/Split\ ConnectionPoint/After.ecorediag=UTF-8
+encoding//Process-Oriented/Split\ ConnectionPoint/Before.ecorediag=UTF-8
