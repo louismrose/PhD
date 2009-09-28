@@ -14,14 +14,11 @@ rule Account2Account
     a.code := old.code;
     a.type := old.type.equivalent();
 
-    if (a.type.~rateUpdated.isUndefined()) {
-      a.type.interestRate := old.interestRate;
-      a.type.~rateUpdated := true; 
-
+    if (a.type.interestRate <> 0.0 and a.type.interestRate <> old.interestRate) {
+    	('Conflicting interest rates for AccountType "' + a.type.name + '": ' + a.type.interestRate + ' and ' + old.interestRate + ' are possible.').println();
     } else {
-		if (a.type.interestRate <> old.interestRate) {
-        	('Conflicting interest rates for AccountType "' + a.type.name + ': ' + a.type.interestRate + ' and ' + old.interestRate + ' are possible.').println();
-		}
+		a.type.interestRate := old.interestRate;
+		a.type.~rateUpdated := true; 
     }
 }
 
