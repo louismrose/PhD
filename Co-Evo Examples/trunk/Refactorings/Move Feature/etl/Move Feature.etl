@@ -18,7 +18,6 @@ rule Account2Account
     	('Conflicting interest rates for AccountType "' + a.type.name + '": ' + a.type.interestRate + ' and ' + old.interestRate + ' are possible.').println();
     } else {
 		a.type.interestRate := old.interestRate;
-		a.type.~rateUpdated := true; 
     }
 }
 
