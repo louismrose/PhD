@@ -1,3 +1,53 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{mdt}
+Eclipse.
+\newblock {Model Development Tools} project [online].
+\newblock [Accessed 6 January 2008] Available at:
+  \url{http://www.eclipse.org/modeling/mdt/}, 2009.
+
+\bibitem{fowler99refactoring}
+Martin Fowler.
+\newblock {\em Refactoring: improving the design of existing code}.
+\newblock Addison-Wesley, 1999.
+
+\bibitem{gronback06gmf}
+Richard Gronback.
+\newblock Introduction to the {Eclipse Graphical Modeling Framework}.
+\newblock In {\em Proc. EclipseCon}, Santa Clara, California, 2006.
+
+\bibitem{kleppe03mda}
+Anneke~G. Kleppe, Jos Warmer, and Wim Bast.
+\newblock {\em MDA Explained: The Model Driven Architecture: Practice and
+  Promise}.
+\newblock Addison-Wesley, 2003.
+
+\bibitem{ocl2}
+OMG.
+\newblock {Object Constraint Language 2.0 Specification} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.omg.org/technology/documents/formal/ocl.htm}, 2006.
+
+\bibitem{uml212}
+OMG.
+\newblock {Unified Modelling Language 2.1.2 Specification} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.omg.org/spec/UML/2.1.2/}, 2007.
+
+\bibitem{omg}
+OMG.
+\newblock {Object Management Group} home page [online].
+\newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org}, 2008.
+
+\bibitem{oaw}
+openArchitectureWare.
+\newblock {openArchitectureWare Project Website} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.eclipse.org/gmt/oaw/}, 2007.
+
+\bibitem{watson08mdahistory}
+Andrew Watson.
+\newblock A brief history of {MDA}.
+\newblock {\em Upgrade}, 9(2), 2008.
 
 \end{thebibliography}
