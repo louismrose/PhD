@@ -21,7 +21,8 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({PetriNetsExampleTests.class, EnumToClassesExampleTests.class, ExamplesNavigatorTest.class})
+@SuiteClasses({PetriNetsExampleTests.class, EnumToClassesExampleTests.class, ExamplesNavigatorTest.class,
+               MetamodelLoaderTests.class, MetamodelTerminologyGathererTests.class})
 public class ProjectTestSuite {
 
 	public static Test suite() {
