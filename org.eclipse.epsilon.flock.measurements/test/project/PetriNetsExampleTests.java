@@ -50,4 +50,13 @@ public class PetriNetsExampleTests {
 		assertEquals(expected, actual);
 		assertTrue(actual.exists());
 	}
+	
+	@Test
+	public void ecore2ecoreFile() {
+		final File expected = new File("../Co-Evo Examples/Literature/PetriNets/ecore2ecore/resources/PetrinetsResourceHandler.java");
+		final File actual = example.getEcore2EcoreFile();
+		
+		assertEquals(expected, actual);
+		assertTrue(actual.exists());
+	}
 }

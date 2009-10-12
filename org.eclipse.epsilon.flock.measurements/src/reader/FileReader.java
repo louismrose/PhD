@@ -27,7 +27,7 @@ public class FileReader implements IMigrationStrategyReader {
 	private final BufferedReader reader;
 	
 	public FileReader(File file) throws FileNotFoundException {
-		reader = new BufferedReader(new java.io.FileReader(file));
+		reader = (file == null || !file.exists()) ? null : new BufferedReader(new java.io.FileReader(file));
 	}
 	
 	public String readMigrationStrategy() throws IOException {
@@ -46,11 +46,11 @@ public class FileReader implements IMigrationStrategyReader {
 	
 	
 	private String readLine() throws IOException {
-		return reader.readLine();
+		return reader == null ? "" : reader.readLine();
 	}
 	
 	private boolean linesLeft() throws IOException {
-		return reader.ready();
+		return reader != null && reader.ready();
 	}
 
 }

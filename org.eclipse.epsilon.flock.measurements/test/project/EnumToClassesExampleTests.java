@@ -14,6 +14,7 @@
 package project;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -49,5 +50,10 @@ public class EnumToClassesExampleTests {
 		
 		assertEquals(expected, actual);
 		assertTrue(actual.exists());
+	}
+	
+	@Test
+	public void ecore2ecoreFile() {
+		assertNull(example.getEcore2EcoreFile());
 	}
 }

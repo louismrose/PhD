@@ -19,6 +19,8 @@ import grammar.EpsilonGrammar;
 import java.io.File;
 import java.io.IOException;
 
+import measure.MetamodelTerminologyCounter;
+
 import reader.CopeModelFileReader;
 import reader.FileReader;
 
@@ -62,10 +64,27 @@ public class Example {
 	}
 	
 	
+	File getEcore2EcoreFile() {
+		final File ecore2ecoreFile = getFileFromExample("ecore2ecore/resources/" + getJavaName() + "ResourceHandler.java");
+		return ecore2ecoreFile.exists() ? ecore2ecoreFile : null;
+	}
+
+	public MigrationStrategy getEcore2EcoreMigrationStrategy() throws Exception {
+		return new MigrationStrategy(new FileReader(getEcore2EcoreFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
+	}
+
+	public MetamodelTerminologyCounter getMetamodelTerminologyCounter() {
+		return new MetamodelTerminologyCounter(new MetamodelTerminologyGatherer(getFileFromExample("Before.ecore")).getTerms());
+	}
+	
+	private String getJavaName() {
+		return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase().replaceAll(" ", "");
+	}
+	
+	
 	private File getFileFromExample(String path) {
 		return new File(base, category + "/" + name + "/" + path);
 	}
-	
 	
 
 	@Override
