@@ -15,14 +15,12 @@ package project;
 
 import grammar.Grammar;
 
-import java.io.IOException;
-
 public class MigrationStrategy {
 
 	public final Grammar grammar;
 	public final String code;
 	
-	public MigrationStrategy(String code, Grammar grammar) throws IOException {
+	public MigrationStrategy(String code, Grammar grammar) {
 		this.code    = code;
 		this.grammar = grammar;
 	}
