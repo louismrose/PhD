@@ -17,8 +17,6 @@ import grammar.Grammar;
 
 import java.io.IOException;
 
-import measure.MigrationStrategyMeasure;
-
 public class MigrationStrategy {
 
 	public final Grammar grammar;
@@ -32,10 +30,5 @@ public class MigrationStrategy {
 	@Override
 	public String toString() {
 		return code;
-	}
-
-	
-	public void accept(MigrationStrategyMeasure visitor) {
-		visitor.measure(this);
 	}
 }
