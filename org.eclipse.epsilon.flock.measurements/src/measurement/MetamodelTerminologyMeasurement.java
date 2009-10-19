@@ -48,11 +48,17 @@ public class MetamodelTerminologyMeasurement implements Measurement {
 		printer.print(numberOfWords);
 		printer.print(" words, ");
 		
-		printer.printf("%.2f", numberOfMetamodelSpecificWords / numberOfWords * 100);
-		printer.print("% metamodel-specific,  ");
+		printer.print(numberOfMetamodelSpecificWords);
+		printer.print(" metamodel-specific, ");
 		
-		printer.printf("%.2f", numberOfLanguageSpecificWords / numberOfWords * 100);
-		printer.println("% language-specific.");
+		printer.print(numberOfLanguageSpecificWords);
+		printer.println(" language-specific");
+		
+//		printer.printf("%.2f", numberOfMetamodelSpecificWords / numberOfWords * 100);
+//		printer.print("% metamodel-specific, ");
+		
+//		printer.printf("%.2f", numberOfLanguageSpecificWords / numberOfWords * 100);
+//		printer.println("% language-specific.");
 	}
 
 	

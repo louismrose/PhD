@@ -18,7 +18,7 @@ import project.MigrationStrategy;
 
 public class WordCounter {
 
-	private final String[] wordDelimiters             = new String[] {"\\s+", "\\."};
+	private final String[] wordDelimiters             = new String[] {"\\s+", "\\.", "!"};
 	private final PatternCounter wordDelimiterCounter = new PatternCounter(wordDelimiters);
 	
 	

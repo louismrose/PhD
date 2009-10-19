@@ -30,7 +30,8 @@ public class JavaGrammar implements Grammar {
 		return Arrays.asList("public", "private", "protected",
 		                     "abstract", "final",
 		                     "class", "interface", "implements", "extends",
-		                     "new");
+		                     "new", "null", "return",
+		                     "||", "&&", "|", "&", "!", "==", "=", "false", "true");
 	}
 
 }

@@ -55,6 +55,14 @@ public class EpsilonGrammar implements Grammar {
 	}
 
 	public Collection<String> getWords() {
-		return Arrays.asList("migrate", "to", "original", "migrated", "delete", ":=", "<>", ">=", "<=", "<", ">", "and", "or", "not", "xor", "if", "else", "{", "}");
+		return Arrays.asList("migrate", "to", "original", "migrated", "delete", "equivalent()", "equivalents()",
+		                     "{", "}",
+		                     ":=", "<>", ">=", "<=", "<", ">",
+		                     "and", "or", "not", "xor", "true", "false",
+		                     "if", "else", "for", "in",
+		                     "var", "new",
+		                     "operation", "return", "self",
+		                     "allInstances",
+		                     "add", "selectOne", "select", "collect", "includes", "excludes");
 	}
 }
