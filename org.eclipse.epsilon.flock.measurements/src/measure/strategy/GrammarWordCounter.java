@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package measure;
+package measure.strategy;
 
 import java.util.regex.Pattern;
 
@@ -20,7 +20,7 @@ import grammar.PatternCounter;
 import grammar.RegexUtil;
 import project.MigrationStrategy;
 
-public class GrammarWordCounter implements MigrationStrategyMeasure {
+public class GrammarWordCounter {
 
 	public int measure(MigrationStrategy strategy) {
 		return new PatternCounter(buildPattern(strategy.grammar)).countMatchesIn(strategy.code);

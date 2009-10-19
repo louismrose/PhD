@@ -11,12 +11,38 @@
  *
  * $Id$
  */
-package measure;
+package measurement;
 
-import project.Example;
+import java.io.PrintStream;
 
-public interface MigrationStrategyMeasureFactory {
 
-	public MigrationStrategyMeasure createCounterFor(Example example);
+public class NullMeasurement implements Measurement {
+
+	public Measurement add(Measurement addend) {
+		return addend;
+	}
+
+	public void printTo(PrintStream printer) {
+		// do nothing
+	}
 	
+	public Measurement divideBy(int divisor) {
+		return this;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "NullMeasurement";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof NullMeasurement;
+	}
+	
+	@Override
+	public int hashCode() {
+		return 0;
+	}
 }

@@ -11,26 +11,20 @@
  *
  * $Id$
  */
-package suite;
+package measure.strategy;
 
-import grammar.GrammarTestSuite;
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
-
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import project.ProjectTestSuite;
-import reader.ReaderTestSuite;
-
 @RunWith(Suite.class)
-@SuiteClasses({GrammarTestSuite.class, ReaderTestSuite.class,
-               ProjectTestSuite.class})
-public class MeasureTestSuite {
+@SuiteClasses({GrammarWordCounterTests.class, WordCounterTests.class})
+public class MeasureStrategyTestSuite {
 
 	public static Test suite() {
-		return new JUnit4TestAdapter(MeasureTestSuite.class);
+		return new JUnit4TestAdapter(MeasureStrategyTestSuite.class);
 	}
 }

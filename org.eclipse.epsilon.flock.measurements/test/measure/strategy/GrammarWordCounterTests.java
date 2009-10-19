@@ -11,13 +11,15 @@
  *
  * $Id$
  */
-package measure;
+package measure.strategy;
 
 import static org.junit.Assert.assertEquals;
 import grammar.Grammar;
 
 import java.util.Arrays;
 import java.util.Collection;
+
+import measure.strategy.GrammarWordCounter;
 
 import org.junit.Test;
 
@@ -54,7 +56,7 @@ public class GrammarWordCounterTests {
 	
 	
 	private static MigrationStrategy createMigrationStrategy(String code) {
-		return new MigrationStrategy(code, new TestGrammar());
+		return new MigrationStrategy("TestMigrationStrategy", code, new TestGrammar());
 	}
 	
 	private static class TestGrammar implements Grammar {

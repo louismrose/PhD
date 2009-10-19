@@ -11,13 +11,15 @@
  *
  * $Id$
  */
-package measure;
+package measure.strategy;
 
+import measurement.Count;
+import measurement.Measurement;
 import project.MigrationStrategy;
 
 public class SimpleModelOperationsCounter implements MigrationStrategyMeasure {
 
-	public int measure(MigrationStrategy strategy) {
-		return strategy.grammar.countSimpleModelOperationsIn(strategy.code);		
+	public Measurement measure(MigrationStrategy strategy) {
+		return new Count(strategy.grammar.countSimpleModelOperationsIn(strategy.code));		
 	}
 }

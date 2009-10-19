@@ -17,10 +17,12 @@ import grammar.Grammar;
 
 public class MigrationStrategy {
 
+	public final String name;
 	public final Grammar grammar;
 	public final String code;
 	
-	public MigrationStrategy(String code, Grammar grammar) {
+	public MigrationStrategy(String name, String code, Grammar grammar) {
+		this.name    = name;
 		this.code    = code;
 		this.grammar = grammar;
 	}

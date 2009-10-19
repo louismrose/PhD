@@ -18,6 +18,7 @@ import grammar.EpsilonGrammar;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -37,13 +38,17 @@ public class Example {
 		this.name     = example.getName();
 	}
 
+	public Collection<MigrationStrategy> getMigrationStrategies() throws Exception {
+		return Arrays.asList(getFlockMigrationStrategy(), getEtlMigrationStrategy(), getCopeMigrationStrategy(), getEcore2EcoreMigrationStrategy());
+	}
+	
 
 	File getFlockFile() {
 		return getFileFromExample("mig_lang/" + name + ".mig");
 	}
 	
 	public MigrationStrategy getFlockMigrationStrategy() throws IOException {
-		return new MigrationStrategy(new FileReader(getFlockFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
+		return new MigrationStrategy("Flock", new FileReader(getFlockFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
 	}
 
 	
@@ -52,7 +57,7 @@ public class Example {
 	}
 	
 	public MigrationStrategy getEtlMigrationStrategy() throws IOException {
-		return new MigrationStrategy(new FileReader(getEtlFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
+		return new MigrationStrategy("ETL", new FileReader(getEtlFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
 	}
 	
 	
@@ -61,7 +66,7 @@ public class Example {
 	}
 	
 	public MigrationStrategy getCopeMigrationStrategy() throws Exception {
-		return new MigrationStrategy(new CopeModelFileReader(getCopeFile()).readMigrationStrategy(), CopeGrammar.getInstance());
+		return new MigrationStrategy("COPE", new CopeModelFileReader(getCopeFile()).readMigrationStrategy(), CopeGrammar.getInstance());
 	}
 	
 	
@@ -71,7 +76,7 @@ public class Example {
 	}
 
 	public MigrationStrategy getEcore2EcoreMigrationStrategy() throws Exception {
-		return new MigrationStrategy(new FileReader(getEcore2EcoreFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
+		return new MigrationStrategy("Ecore2Ecore", new FileReader(getEcore2EcoreFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
 	}
 
 	

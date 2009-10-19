@@ -11,11 +11,28 @@
  *
  * $Id$
  */
-package driver;
+/**
+ * 
+ */
+package measurement;
 
-public class CountMetamodelTerminology {
+import java.io.PrintStream;
 
-	public static void main(String[] args) throws Exception {
-		MeasurementPrinter.createMetamodelTerminologyCountPrinter().printMeasurement();
-	}
+public interface Measurement {
+
+	public Measurement add(Measurement addend);
+
+	public Measurement divideBy(int divisor);
+
+	public void printTo(PrintStream printer);
+	
+	@Override
+	public String toString();
+	
+	@Override
+	public boolean equals(Object obj);
+	
+	@Override
+	public int hashCode();
+
 }

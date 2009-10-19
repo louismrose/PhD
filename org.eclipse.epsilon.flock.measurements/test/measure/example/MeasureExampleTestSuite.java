@@ -11,13 +11,20 @@
  *
  * $Id$
  */
-package measure;
+package measure.example;
 
-import project.MigrationStrategy;
+import junit.framework.JUnit4TestAdapter;
+import junit.framework.Test;
 
-public class CreateDeleteAndChangeTypeModelOperationCounter implements MigrationStrategyMeasure {
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
-	public int measure(MigrationStrategy strategy) {
-		return strategy.grammar.countNewDeleteAndChangeTypeOperationsIn(strategy.code);		
+@RunWith(Suite.class)
+@SuiteClasses({MeasurementGroupTests.class})
+public class MeasureExampleTestSuite {
+
+	public static Test suite() {
+		return new JUnit4TestAdapter(MeasureExampleTestSuite.class);
 	}
 }

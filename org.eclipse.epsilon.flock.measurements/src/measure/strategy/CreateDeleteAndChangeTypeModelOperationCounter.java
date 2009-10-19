@@ -11,22 +11,15 @@
  *
  * $Id$
  */
-package measure;
+package measure.strategy;
 
-import grammar.PatternCounter;
+import measurement.Count;
+import measurement.Measurement;
 import project.MigrationStrategy;
 
-public class WordCounter implements MigrationStrategyMeasure {
+public class CreateDeleteAndChangeTypeModelOperationCounter implements MigrationStrategyMeasure {
 
-	private final String[] wordDelimiters             = new String[] {"\\s+", "\\."};
-	private final PatternCounter wordDelimiterCounter = new PatternCounter(wordDelimiters);
-	
-	
-	public int measure(MigrationStrategy strategy) {
-		if (strategy.code.length() == 0)
-			return 0;
-		
-		return wordDelimiterCounter.countMatchesIn(strategy.code.trim()) + 1;
+	public Measurement measure(MigrationStrategy strategy) {
+		return new Count(strategy.grammar.countNewDeleteAndChangeTypeOperationsIn(strategy.code));		
 	}
-
 }

@@ -11,13 +11,22 @@
  *
  * $Id$
  */
-package measure;
+package measure.strategy;
 
-import project.Example;
+import grammar.PatternCounter;
+import project.MigrationStrategy;
 
-public class MetamodelTerminologyCounterFactory implements MigrationStrategyMeasureFactory {
+public class WordCounter {
 
-	public MetamodelTerminologyCounter createCounterFor(Example example) {
-		return new MetamodelTerminologyCounter(example.getMetamodelTerminology());
+	private final String[] wordDelimiters             = new String[] {"\\s+", "\\."};
+	private final PatternCounter wordDelimiterCounter = new PatternCounter(wordDelimiters);
+	
+	
+	public int measure(MigrationStrategy strategy) {
+		if (strategy.code.length() == 0)
+			return 0;
+		
+		return wordDelimiterCounter.countMatchesIn(strategy.code.trim()) + 1;
 	}
+
 }

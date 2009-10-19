@@ -11,9 +11,11 @@
  *
  * $Id$
  */
-package measure;
+package measure.strategy;
 
 import static org.junit.Assert.assertEquals;
+
+import measure.strategy.WordCounter;
 
 import org.junit.Test;
 
@@ -66,6 +68,6 @@ public class WordCounterTests {
 	
 	
 	private static MigrationStrategy createMigrationStrategy(String code) {
-		return new MigrationStrategy(code, EpsilonGrammar.getInstance());
+		return new MigrationStrategy("TestMigrationStrategy", code, EpsilonGrammar.getInstance());
 	}
 }

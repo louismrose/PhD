@@ -14,22 +14,18 @@
 package driver;
 
 import static org.junit.Assert.assertEquals;
+import grammar.EpsilonGrammar;
 
-import java.io.File;
 import java.util.Arrays;
 import java.util.Collection;
 
-import grammar.EpsilonGrammar;
-
-import measure.GrammarWordCounter;
-import measure.MetamodelTerminologyCounter;
-import measure.WordCounter;
+import measure.strategy.MetamodelTerminologyCounter;
+import measurement.MetamodelTerminologyMeasurement;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcoreFactory;
 import org.junit.Test;
@@ -48,22 +44,17 @@ public class MetamodelTerminologyCounterTests {
 	
 	private static Collection<String> MM_TERMS = new MetamodelTerminologyGatherer(buildMetamodels()).getTerms();
 	
+	private static final MigrationStrategy strategy = new MigrationStrategy("Flock", FLOCK, EpsilonGrammar.getInstance());
+	
+	
+	private static final MetamodelTerminologyMeasurement measurement = new MetamodelTerminologyCounter(MM_TERMS).measure(strategy);
+	
 	
 	@Test
-	public void migrationStrategyHasSeventeenWords() {
-		assertEquals(17, new WordCounter().measure(new MigrationStrategy(FLOCK, EpsilonGrammar.getInstance())));
+	public void migrationStrategyHasCorrectMeasurement() {
+		assertEquals(measurement, new MetamodelTerminologyMeasurement(17, 4, 11));
 	}
 
-	@Test
-	public void migrationStrategyHasElevenFlockWords() {
-		assertEquals(11, new GrammarWordCounter().measure(new MigrationStrategy(FLOCK, EpsilonGrammar.getInstance())));
-	}
-	
-	@Test
-	public void migrationStrategyHasFourMetamodelSpecificWords() {
-		assertEquals(4, new MetamodelTerminologyCounter(MM_TERMS).measure(new MigrationStrategy(FLOCK, EpsilonGrammar.getInstance())));
-	}
-	
 	
 	private static Collection<EPackage> buildMetamodels() {
 		final EPackage originalMetamodel = createEPackage(createEClass("Person",   createEAttribute("age")));
@@ -89,11 +80,5 @@ public class MetamodelTerminologyCounterTests {
 		final EAttribute attribute = EcoreFactory.eINSTANCE.createEAttribute();
 		attribute.setName(name);
 		return attribute;
-	}
-
-	private static EReference createEReference(String name) {
-		final EReference reference = EcoreFactory.eINSTANCE.createEReference();
-		reference.setName(name);
-		return reference;
 	}
 }

@@ -11,11 +11,12 @@
  *
  * $Id$
  */
-package driver;
+package measure.strategy;
 
-public class CountMetamodelTerminology {
+import project.Example;
 
-	public static void main(String[] args) throws Exception {
-		MeasurementPrinter.createMetamodelTerminologyCountPrinter().printMeasurement();
-	}
+public interface MigrationStrategyMeasureFactory {
+
+	public MigrationStrategyMeasure createMeasureFor(Example example);
+	
 }

@@ -11,11 +11,20 @@
  *
  * $Id$
  */
-package measure;
+package driver;
 
-import project.MigrationStrategy;
+import junit.framework.JUnit4TestAdapter;
+import junit.framework.Test;
 
-public interface MigrationStrategyMeasure {
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
-	public int measure(MigrationStrategy strategy);
+@RunWith(Suite.class)
+@SuiteClasses({MetamodelTerminologyCounterTests.class})
+public class IntegrationTestSuite {
+
+	public static Test suite() {
+		return new JUnit4TestAdapter(IntegrationTestSuite.class);
+	}
 }

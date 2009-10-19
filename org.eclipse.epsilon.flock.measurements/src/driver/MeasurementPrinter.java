@@ -13,27 +13,28 @@
  */
 package driver;
 
-import measure.CreateDeleteAndChangeTypeModelOperationCounter;
-import measure.MetamodelTerminologyCounterFactory;
-import measure.MigrationStrategyMeasure;
-import measure.MigrationStrategyMeasureFactory;
-import measure.SimpleModelOperationsCounter;
+import measure.example.ExampleMeasurer;
+import measure.example.MeasurementGroup;
+import measure.strategy.CreateDeleteAndChangeTypeModelOperationCounter;
+import measure.strategy.MetamodelTerminologyCounterFactory;
+import measure.strategy.MigrationStrategyMeasure;
+import measure.strategy.MigrationStrategyMeasureFactory;
+import measure.strategy.SimpleModelOperationsCounter;
 import project.Example;
 import project.ExamplesNavigator;
-import driver.ExampleCounter.CounterResult;
 
 public class MeasurementPrinter {
 
 	private static final ExamplesNavigator navigator = new ExamplesNavigator("../Co-Evo Examples");
 	
-	private final ExampleCounter counter;
+	private final ExampleMeasurer counter;
 	
 	public MeasurementPrinter(MigrationStrategyMeasure measure) {
-		this.counter = new ExampleCounter(measure);
+		this.counter = new ExampleMeasurer(measure);
 	}
 
 	public MeasurementPrinter(MigrationStrategyMeasureFactory measureFactory) {
-		this.counter = new ExampleCounter(measureFactory);
+		this.counter = new ExampleMeasurer(measureFactory);
 	}
 
 	public static MeasurementPrinter createSimpleModelOperationsCountPrinter() {
@@ -49,7 +50,7 @@ public class MeasurementPrinter {
 	}
 	
 	
-	private float etlCount, copeCount, flockCount, ecoreCount;
+	private MeasurementGroup total = new MeasurementGroup();
 	
 	public void printMeasurement() throws Exception {
 		for (Example example : navigator.getExamples()) {
@@ -64,37 +65,23 @@ public class MeasurementPrinter {
 	private void printExample(Example example) throws Exception {
 		System.out.println(example);
 		
-		final CounterResult result = counter.count(example);
-		
-		System.out.print("ETL: "     + result.etlCount   + "  ");
-		System.out.print("COPE: "    + result.copeCount  + "  ");
-		System.out.print("Flock: " + result.flockCount + "  ");
-		System.out.println("Ecore: " + result.ecoreCount);
+		counter.count(example).printTo(System.out);
 
 		System.out.println();
 	}
 	
 	private void countExample(Example example) throws Exception {
-		final CounterResult result = counter.count(example);
+		final MeasurementGroup result = counter.count(example);
 		
-		etlCount   += result.etlCount;
-		copeCount  += result.copeCount;
-		flockCount += result.flockCount;
-		ecoreCount += result.ecoreCount;
+		total = total.add(result);
 	}
 	
 	private void printTotals() {
 		System.out.println("Totals");
-		System.out.print("ETL: "     + etlCount   + "  ");
-		System.out.print("COPE: "    + copeCount  + "  ");
-		System.out.print("Flock: "   + flockCount + "  ");
-		System.out.println("Ecore: " + ecoreCount);
+		total.printTo(System.out);
+		System.out.println();
 		
 		System.out.println("Averages");
-		System.out.print("ETL: "     + (etlCount   / navigator.getExamples().size()) + "  ");
-		System.out.print("COPE: "    + (copeCount  / navigator.getExamples().size()) + "  ");
-		System.out.print("Flock: "   + (flockCount / navigator.getExamples().size()) + "  ");	
-		System.out.println("Ecore: " + (ecoreCount / navigator.getExamples().size()));	
-
+		total.divideAllBy(navigator.getExamples().size()).printTo(System.out);
 	}
 }

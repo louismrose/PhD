@@ -11,27 +11,12 @@
  *
  * $Id$
  */
-package measure;
+package measure.strategy;
 
-import java.util.Collection;
-
-import grammar.PatternCounter;
+import measurement.Measurement;
 import project.MigrationStrategy;
 
-public class MetamodelTerminologyCounter implements MigrationStrategyMeasure {
+public interface MigrationStrategyMeasure {
 
-	private final PatternCounter counter;
-	
-	public MetamodelTerminologyCounter(Collection<String> metamodelTerms) {
-		this(metamodelTerms.toArray(new String[] {}));
-	}
-	
-	public MetamodelTerminologyCounter(String... metamodelTerms) {
-		counter = new PatternCounter(metamodelTerms);
-	}
-
-	public int measure(MigrationStrategy strategy) {
-		return counter.countMatchesIn(strategy.code);
-	}
-
+	public Measurement measure(MigrationStrategy strategy);
 }
