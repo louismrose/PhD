@@ -11,13 +11,15 @@
  *
  * $Id$
  */
-package project;
+package project.navigator;
 
 import java.io.File;
 import java.util.Collection;
 import java.util.LinkedList;
 
-public class ExamplesNavigator {
+import project.Example;
+
+public abstract class ExamplesNavigator {
 
 	private final File base;
 	
@@ -37,12 +39,15 @@ public class ExamplesNavigator {
 		
 		for (File category : subdirectoriesOf(base)) {
 			for (File example : subdirectoriesOf(category)) {
-				examples.add(new Example(example));
+				if (include(new Example(example)))
+					examples.add(new Example(example));
 			}
 		}
 		
 		return examples;
 	}
+	
+	protected abstract boolean include(Example example);
 	
 	
 	private static Iterable<File> subdirectoriesOf(File directory) {

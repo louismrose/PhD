@@ -21,33 +21,52 @@ import measure.strategy.MigrationStrategyMeasure;
 import measure.strategy.MigrationStrategyMeasureFactory;
 import measure.strategy.SimpleModelOperationsCounter;
 import project.Example;
-import project.ExamplesNavigator;
+import project.navigator.AllExamplesNavigator;
+import project.navigator.Ecore2EcoreExamplesNavigator;
+import project.navigator.ExamplesNavigator;
 
 public class MeasurementPrinter {
 
-	private static final ExamplesNavigator navigator = new ExamplesNavigator("../Co-Evo Examples");
+	private static final String BASE_PATH                    = "../Co-Evo Examples";
+	private static final ExamplesNavigator DEFAULT_NAVIGATOR = new AllExamplesNavigator(BASE_PATH);
 	
 	private final ExampleMeasurer counter;
+	private final ExamplesNavigator navigator;
 	
-	public MeasurementPrinter(MigrationStrategyMeasure measure) {
-		this.counter = new ExampleMeasurer(measure);
+	private MeasurementPrinter(MigrationStrategyMeasure measure, ExamplesNavigator navigator) {
+		this(new ConstantMigrationStrategyMeasureFactory(measure), navigator);
 	}
 
-	public MeasurementPrinter(MigrationStrategyMeasureFactory measureFactory) {
-		this.counter = new ExampleMeasurer(measureFactory);
+	private MeasurementPrinter(MigrationStrategyMeasureFactory measureFactory, ExamplesNavigator navigator) {
+		this.counter   = new ExampleMeasurer(measureFactory);
+		this.navigator = navigator;
 	}
 
 	public static MeasurementPrinter createSimpleModelOperationsCountPrinter() {
-		return new MeasurementPrinter(new SimpleModelOperationsCounter());
+		return new MeasurementPrinter(new SimpleModelOperationsCounter(), DEFAULT_NAVIGATOR);
 	}
 	
 	public static MeasurementPrinter createCreateDeleteAndChangeTypeModelOperationCountPrinter() {
-		return new MeasurementPrinter(new CreateDeleteAndChangeTypeModelOperationCounter());
+		return new MeasurementPrinter(new CreateDeleteAndChangeTypeModelOperationCounter(), DEFAULT_NAVIGATOR);
 	}
 	
 	public static MeasurementPrinter createMetamodelTerminologyCountPrinter() {
-		return new MeasurementPrinter(new MetamodelTerminologyCounterFactory());
+		return new MeasurementPrinter(new MetamodelTerminologyCounterFactory(), new Ecore2EcoreExamplesNavigator(BASE_PATH));
 	}
+	
+	private static class ConstantMigrationStrategyMeasureFactory implements MigrationStrategyMeasureFactory {
+
+		private final MigrationStrategyMeasure measure;
+		
+		public ConstantMigrationStrategyMeasureFactory(MigrationStrategyMeasure measure) {
+			this.measure = measure;
+		}
+		
+		public MigrationStrategyMeasure createMeasureFor(Example example) {
+			return measure;
+		}
+	}
+	
 	
 	
 	private MeasurementGroup total = new MeasurementGroup();

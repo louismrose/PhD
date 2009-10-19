@@ -23,10 +23,6 @@ public class ExampleMeasurer {
 
 	private final MigrationStrategyMeasureFactory factory;
 	
-	public ExampleMeasurer(MigrationStrategyMeasure measure) {
-		this(new ConstantMigrationStrategyMeasureFactory(measure));
-	}
-	
 	public ExampleMeasurer(MigrationStrategyMeasureFactory factory) {
 		this.factory = factory;
 	}
@@ -41,19 +37,5 @@ public class ExampleMeasurer {
 		}
 
 		return result;
-	}
-	
-	
-	private static class ConstantMigrationStrategyMeasureFactory implements MigrationStrategyMeasureFactory {
-
-		private final MigrationStrategyMeasure measure;
-		
-		public ConstantMigrationStrategyMeasureFactory(MigrationStrategyMeasure measure) {
-			this.measure = measure;
-		}
-		
-		public MigrationStrategyMeasure createMeasureFor(Example example) {
-			return measure;
-		}
 	}
 }

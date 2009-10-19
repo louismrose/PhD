@@ -11,7 +11,7 @@
  *
  * $Id$
  */
-package project;
+package project.navigator;
 
 import java.io.File;
 import java.util.Arrays;
@@ -22,7 +22,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ExamplesNavigatorTest {
+import project.Example;
+import project.navigator.AllExamplesNavigator;
+
+public class AllExamplesNavigatorTest {
 
 	private static final File BASE = createDirectory("test-examples");
 	
@@ -37,7 +40,7 @@ public class ExamplesNavigatorTest {
 		final File category = createDirectory(BASE, "GADIN");
 		final File example  = createDirectory(category, "Convert Enum to Classes");
 		
-		assertEquals(Collections.singleton(new Example(example)), new ExamplesNavigator(BASE).getExamples());
+		assertEquals(Collections.singleton(new Example(example)), new AllExamplesNavigator(BASE).getExamples());
 	}
 	
 	@Test
@@ -47,7 +50,7 @@ public class ExamplesNavigatorTest {
 		final File example2 = createDirectory(category, "Partition Containment");
 		
 		assertEquals(Arrays.asList(new Example(example1), new Example(example2)),
-		             new ExamplesNavigator(BASE).getExamples());
+		             new AllExamplesNavigator(BASE).getExamples());
 	}
 	
 	@Test
@@ -64,7 +67,7 @@ public class ExamplesNavigatorTest {
 		             	new Example(example2),
 		             	new Example(example3)
 		             ),
-		             new ExamplesNavigator(BASE).getExamples());
+		             new AllExamplesNavigator(BASE).getExamples());
 	}
 	
 	

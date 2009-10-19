@@ -74,6 +74,10 @@ public class Example {
 		final File ecore2ecoreFile = getFileFromExample("ecore2ecore/resources/" + getJavaName() + "ResourceHandler.java");
 		return ecore2ecoreFile.exists() ? ecore2ecoreFile : null;
 	}
+	
+	public boolean hasEcore2EcoreMigrationStrategy() {
+		return getEcore2EcoreFile() != null;
+	}
 
 	public MigrationStrategy getEcore2EcoreMigrationStrategy() throws Exception {
 		return new MigrationStrategy("Ecore2Ecore", new FileReader(getEcore2EcoreFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());

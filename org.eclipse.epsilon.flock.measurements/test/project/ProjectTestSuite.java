@@ -20,8 +20,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+import project.navigator.AllExamplesNavigatorTest;
+
 @RunWith(Suite.class)
-@SuiteClasses({PetriNetsExampleTests.class, EnumToClassesExampleTests.class, ExamplesNavigatorTest.class,
+@SuiteClasses({PetriNetsExampleTests.class, EnumToClassesExampleTests.class, AllExamplesNavigatorTest.class,
                MetamodelLoaderTests.class, MetamodelTerminologyGathererTests.class})
 public class ProjectTestSuite {
 
