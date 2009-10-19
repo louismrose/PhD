@@ -11,16 +11,11 @@
  *
  * $Id$
  */
-package grammar;
+package driver;
 
-import java.util.Collection;
+public class CountMetamodelTerminology {
 
-
-public interface Grammar {
-	
-	public int countSimpleModelOperationsIn(String text);
-
-	public int countNewDeleteAndChangeTypeOperationsIn(String text);
-
-	public Collection<String> getWords();
+	public static void main(String[] args) throws Exception {
+		MeasurementPrinter.createCreateDeleteAndChangeTypeModelOperationCountPrinter().printMeasurement();
+	}
 }

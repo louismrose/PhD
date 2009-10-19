@@ -31,11 +31,15 @@ public class MetamodelTerminologyGatherer {
 	private final List<String>   terms    = new LinkedList<String>();
 	
 	public MetamodelTerminologyGatherer(File metamodel) {
-		packages.addAll(new MetamodelLoader(metamodel).load());
+		this(new MetamodelLoader(metamodel).load());
 	}
 
 	public MetamodelTerminologyGatherer(EPackage... metamodel) {
-		packages.addAll(Arrays.asList(metamodel));
+		this(Arrays.asList(metamodel));
+	}
+	
+	public MetamodelTerminologyGatherer(Collection<EPackage> metamodel) {
+		packages.addAll(metamodel);
 	}
 
 	public Collection<String> getTerms() {

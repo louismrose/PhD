@@ -13,6 +13,9 @@
  */
 package grammar;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 
 public class CopeGrammar implements Grammar {
 
@@ -61,5 +64,9 @@ public class CopeGrammar implements Grammar {
 
 	public int countNewDeleteAndChangeTypeOperationsIn(String text) {
 		return new PatternCounter("\\.newInstance", "\\.delete", "\\.migrate").countMatchesIn(text);
+	}
+
+	public Collection<String> getWords() {
+		return Arrays.asList("if", "and", "or", "not", "{", "}", "in", "for", "=");
 	}
 }

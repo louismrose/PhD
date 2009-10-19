@@ -18,8 +18,9 @@ import grammar.EpsilonGrammar;
 
 import java.io.File;
 import java.io.IOException;
-
-import measure.MetamodelTerminologyCounter;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import reader.CopeModelFileReader;
 import reader.FileReader;
@@ -73,8 +74,27 @@ public class Example {
 		return new MigrationStrategy(new FileReader(getEcore2EcoreFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
 	}
 
-	public MetamodelTerminologyCounter getMetamodelTerminologyCounter() {
-		return new MetamodelTerminologyCounter(new MetamodelTerminologyGatherer(getFileFromExample("Before.ecore")).getTerms());
+	
+	File getOriginalMetamodel() {
+		return getFileFromExample("Before.ecore");
+	}
+	
+	File getEvolvedMetamodel() {
+		return getFileFromExample("After.ecore");
+	}
+	
+	public Collection<String> getMetamodelTerminology() {
+		final Set<String> metamodelTerminology = new HashSet<String>();
+		
+		metamodelTerminology.addAll(getMetamodelTerminologyFrom(getOriginalMetamodel()));
+		metamodelTerminology.addAll(getMetamodelTerminologyFrom(getEvolvedMetamodel()));
+		
+		return metamodelTerminology;
+	}
+
+	
+	private Collection<String> getMetamodelTerminologyFrom(File metamodel) {
+		return new MetamodelTerminologyGatherer(metamodel).getTerms();
 	}
 	
 	private String getJavaName() {

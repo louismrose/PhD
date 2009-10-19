@@ -11,16 +11,13 @@
  *
  * $Id$
  */
-package grammar;
+package measure;
 
-import java.util.Collection;
+import project.Example;
 
+public class MetamodelTerminologyCounterFactory implements MigrationStrategyMeasureFactory {
 
-public interface Grammar {
-	
-	public int countSimpleModelOperationsIn(String text);
-
-	public int countNewDeleteAndChangeTypeOperationsIn(String text);
-
-	public Collection<String> getWords();
+	public MetamodelTerminologyCounter createCounterFor(Example example) {
+		return new MetamodelTerminologyCounter(example.getMetamodelTerminology());
+	}
 }

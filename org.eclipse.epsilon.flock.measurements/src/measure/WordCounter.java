@@ -11,16 +11,22 @@
  *
  * $Id$
  */
-package grammar;
+package measure;
 
-import java.util.Collection;
+import grammar.PatternCounter;
+import project.MigrationStrategy;
 
+public class WordCounter implements MigrationStrategyMeasure {
 
-public interface Grammar {
+	private final String[] wordDelimiters             = new String[] {"\\s+", "\\."};
+	private final PatternCounter wordDelimiterCounter = new PatternCounter(wordDelimiters);
 	
-	public int countSimpleModelOperationsIn(String text);
+	
+	public int measure(MigrationStrategy strategy) {
+		if (strategy.code.length() == 0)
+			return 0;
+		
+		return wordDelimiterCounter.countMatchesIn(strategy.code.trim()) + 1;
+	}
 
-	public int countNewDeleteAndChangeTypeOperationsIn(String text);
-
-	public Collection<String> getWords();
 }

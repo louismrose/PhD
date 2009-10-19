@@ -11,16 +11,27 @@
  *
  * $Id$
  */
-package grammar;
+package measure;
 
 import java.util.Collection;
 
+import grammar.PatternCounter;
+import project.MigrationStrategy;
 
-public interface Grammar {
+public class MetamodelTerminologyCounter implements MigrationStrategyMeasure {
+
+	private final PatternCounter counter;
 	
-	public int countSimpleModelOperationsIn(String text);
+	public MetamodelTerminologyCounter(Collection<String> metamodelTerms) {
+		this(metamodelTerms.toArray(new String[] {}));
+	}
+	
+	public MetamodelTerminologyCounter(String... metamodelTerms) {
+		counter = new PatternCounter(metamodelTerms);
+	}
 
-	public int countNewDeleteAndChangeTypeOperationsIn(String text);
+	public int measure(MigrationStrategy strategy) {
+		return counter.countMatchesIn(strategy.code);
+	}
 
-	public Collection<String> getWords();
 }

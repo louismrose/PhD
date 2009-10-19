@@ -14,7 +14,9 @@
 package driver;
 
 import measure.CreateDeleteAndChangeTypeModelOperationCounter;
+import measure.MetamodelTerminologyCounterFactory;
 import measure.MigrationStrategyMeasure;
+import measure.MigrationStrategyMeasureFactory;
 import measure.SimpleModelOperationsCounter;
 import project.Example;
 import project.ExamplesNavigator;
@@ -30,6 +32,10 @@ public class MeasurementPrinter {
 		this.counter = new ExampleCounter(measure);
 	}
 
+	public MeasurementPrinter(MigrationStrategyMeasureFactory measureFactory) {
+		this.counter = new ExampleCounter(measureFactory);
+	}
+
 	public static MeasurementPrinter createSimpleModelOperationsCountPrinter() {
 		return new MeasurementPrinter(new SimpleModelOperationsCounter());
 	}
@@ -38,8 +44,12 @@ public class MeasurementPrinter {
 		return new MeasurementPrinter(new CreateDeleteAndChangeTypeModelOperationCounter());
 	}
 	
+	public static MeasurementPrinter createMetamodelTerminologyCountPrinter() {
+		return new MeasurementPrinter(new MetamodelTerminologyCounterFactory());
+	}
 	
-	private float etlCount, copeCount, flockCount;
+	
+	private float etlCount, copeCount, flockCount, ecoreCount;
 	
 	public void printMeasurement() throws Exception {
 		for (Example example : navigator.getExamples()) {
@@ -56,9 +66,11 @@ public class MeasurementPrinter {
 		
 		final CounterResult result = counter.count(example);
 		
-		System.out.print("ETL: "     + result.etlCount  + "  ");
-		System.out.print("COPE: "    + result.copeCount + "  ");
-		System.out.println("Flock: " + result.flockCount);
+		System.out.print("ETL: "     + result.etlCount   + "  ");
+		System.out.print("COPE: "    + result.copeCount  + "  ");
+		System.out.print("Flock: " + result.flockCount + "  ");
+		System.out.println("Ecore: " + result.ecoreCount);
+
 		System.out.println();
 	}
 	
@@ -68,17 +80,21 @@ public class MeasurementPrinter {
 		etlCount   += result.etlCount;
 		copeCount  += result.copeCount;
 		flockCount += result.flockCount;
+		ecoreCount += result.ecoreCount;
 	}
 	
 	private void printTotals() {
 		System.out.println("Totals");
-		System.out.print("ETL: "     + etlCount  + "  ");
-		System.out.print("COPE: "    + copeCount + "  ");
-		System.out.println("Flock: " + flockCount);
+		System.out.print("ETL: "     + etlCount   + "  ");
+		System.out.print("COPE: "    + copeCount  + "  ");
+		System.out.print("Flock: "   + flockCount + "  ");
+		System.out.println("Ecore: " + ecoreCount);
 		
 		System.out.println("Averages");
 		System.out.print("ETL: "     + (etlCount   / navigator.getExamples().size()) + "  ");
 		System.out.print("COPE: "    + (copeCount  / navigator.getExamples().size()) + "  ");
-		System.out.println("Flock: " + (flockCount / navigator.getExamples().size()));	
+		System.out.print("Flock: "   + (flockCount / navigator.getExamples().size()) + "  ");	
+		System.out.println("Ecore: " + (ecoreCount / navigator.getExamples().size()));	
+
 	}
 }

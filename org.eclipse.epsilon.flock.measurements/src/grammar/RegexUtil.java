@@ -21,7 +21,7 @@ public abstract class RegexUtil {
 	private RegexUtil() {}
 
 	public static String escape(String regex) {
-		return regex.replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)").replaceAll("\\.", "\\\\.");
+		return regex.replaceAll("\\{", "\\\\{").replaceAll("\\}", "\\\\}").replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)").replaceAll("\\.", "\\\\.");
 	}
 	
 	public static String anything() {

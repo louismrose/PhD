@@ -23,14 +23,19 @@ public class PatternCounter {
 	private final Collection<Pattern> keywords;
 	
 	public PatternCounter(Pattern... keywords) {
-		this.keywords = Arrays.asList(keywords);
+		this(Arrays.asList(keywords));
 	}
 
+	public PatternCounter(Collection<Pattern> keywords) {
+		this.keywords = new LinkedList<Pattern>(keywords);
+	
+	}
 	public PatternCounter(String... keywords) {
-		this.keywords = compilePatterns(keywords);
+		this(compilePatterns(Arrays.asList(keywords)));
 	}
+	
 
-	private static Collection<Pattern> compilePatterns(String... keywords) {
+	private static Collection<Pattern> compilePatterns(Collection<String> keywords) {
 		final Collection<Pattern> patterns = new LinkedList<Pattern>();
 		
 		for (String keyword : keywords) {

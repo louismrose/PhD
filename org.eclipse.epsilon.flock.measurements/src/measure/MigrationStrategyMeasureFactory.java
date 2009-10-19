@@ -11,16 +11,12 @@
  *
  * $Id$
  */
-package grammar;
+package measure;
 
-import java.util.Collection;
+import project.Example;
 
+public interface MigrationStrategyMeasureFactory {
 
-public interface Grammar {
+	public MigrationStrategyMeasure createCounterFor(Example example);
 	
-	public int countSimpleModelOperationsIn(String text);
-
-	public int countNewDeleteAndChangeTypeOperationsIn(String text);
-
-	public Collection<String> getWords();
 }
