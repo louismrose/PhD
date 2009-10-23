@@ -20,6 +20,7 @@ import measure.strategy.MetamodelTerminologyCounterFactory;
 import measure.strategy.MigrationStrategyMeasure;
 import measure.strategy.MigrationStrategyMeasureFactory;
 import measure.strategy.SimpleModelOperationsCounter;
+import measure.strategy.SumOf;
 import project.Example;
 import project.navigator.AllExamplesNavigator;
 import project.navigator.Ecore2EcoreExamplesNavigator;
@@ -50,9 +51,14 @@ public class MeasurementPrinter {
 		return new MeasurementPrinter(new CreateDeleteAndChangeTypeModelOperationCounter(), DEFAULT_NAVIGATOR);
 	}
 	
+	public static MeasurementPrinter createAllOperationsCountPrinter() {
+		return new MeasurementPrinter(new SumOf(new SimpleModelOperationsCounter(), new CreateDeleteAndChangeTypeModelOperationCounter()), DEFAULT_NAVIGATOR);
+	}
+	
 	public static MeasurementPrinter createMetamodelTerminologyCountPrinter() {
 		return new MeasurementPrinter(new MetamodelTerminologyCounterFactory(), new Ecore2EcoreExamplesNavigator(BASE_PATH));
 	}
+	
 	
 	private static class ConstantMigrationStrategyMeasureFactory implements MigrationStrategyMeasureFactory {
 
