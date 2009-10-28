@@ -82,7 +82,7 @@
     </changes>
   </releases>
   <releases>
-    <changes xsi:type="history:MigrationChange" migration="accountTypeClass = refactorings_moveFeature.AccountType&#xA;interestRateAttribute = refactorings_moveFeature.Account.interestRate&#xA;accountTypeClass.eStructuralFeatures.add(interestRateAttribute)&#xA;&#xA;for(account in refactorings_moveFeature.Account.allInstances) {&#xA;&#x9;if (account.type.isSet(interestRateAttribute) and account.type.interestRate != account.interestRate) {&#xA;&#x9;&#x9;System.err.println('Conflicting interest rates for ' + account.type.name + ' AccountType')&#xA;&#x9;} else {&#xA;&#x9;&#x9;account.type.interestRate = account.unset(refactorings_moveFeature.AccountType.interestRate)&#xA;&#x9;}&#xA;}">
+    <changes xsi:type="history:MigrationChange" migration="accountTypeClass = refactorings_moveFeature.AccountType&#xA;interestRateAttribute = refactorings_moveFeature.Account.interestRate&#xA;accountTypeClass.eStructuralFeatures.add(interestRateAttribute)&#xA;&#xA;for(account in refactorings_moveFeature.Account.allInstances) {&#xA;&#x9;if (account.type.isSet(interestRateAttribute) and account.type.interestRate != account.interestRate) {&#xA;&#x9;&#x9;System.err.println('Conflicting interest rates on ' + account.type.name + ' AccountType')&#xA;&#x9;} else {&#xA;&#x9;&#x9;account.type.interestRate = account.unset(refactorings_moveFeature.AccountType.interestRate)&#xA;&#x9;}&#xA;}">
       <changes xsi:type="history:Move" target="Before.ecore#//AccountType" referenceName="eStructuralFeatures"
           element="Before.ecore#//AccountType/interestRate" source="Before.ecore#//Account"/>
     </changes>
