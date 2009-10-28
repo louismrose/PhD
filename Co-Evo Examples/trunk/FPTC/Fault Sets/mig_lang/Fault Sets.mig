@@ -10,8 +10,8 @@ migrate Tuple {
 			migrated.contents.add(faultSet);
 		
 		} else {
-			-- Could use interactive: System.user....
-			-- Ask Dimitris how to access System whe a metamodel defines a type called System
+			-- Could use interactive:System.user....
+			-- Ask Dimitris how to access system when a metamodel defines a class called system
 			('Cannot migrate: ' + original).println();
 		}
 	}	
