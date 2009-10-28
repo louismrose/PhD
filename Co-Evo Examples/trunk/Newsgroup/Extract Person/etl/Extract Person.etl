@@ -23,11 +23,11 @@ rule Article2Article
 operation String toPerson() : Migrated!Person {
 	var person := new Migrated!Person;
 
-	if ('('.isSubstringOf(self)) { -- format is xy@z.com (name)
+	if ('('.isSubstringOf(self)) {
 		person.email := self.split('\\(').first.trim();
 		person.name  := self.split('\\(').last.trim('(', ')');
 	
-	} else if ('<'.isSubstringOf(self)){ -- format is name <xy@z.com> or "name" <xy@z.com>
+	} else if ('<'.isSubstringOf(self)){
 		person.name  := self.split('<').first.trim('"', '"');
 		person.email := self.split('<').last.trim('<', '>');
 	}
