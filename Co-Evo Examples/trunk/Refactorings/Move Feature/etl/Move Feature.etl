@@ -15,7 +15,7 @@ rule Account2Account
     a.type := old.type.equivalent();
 
     if (a.type.interestRate <> 0.0 and a.type.interestRate <> old.interestRate) {
-    	('Conflicting interest rates for AccountType "' + a.type.name + '": ' + a.type.interestRate + ' and ' + old.interestRate + ' are possible.').println();
+    	('Conflicting interest rates on AccountType "' + a.type.name + '": ' + a.type.interestRate + ' and ' + old.interestRate + ' are possible.').println();
     } else {
 		a.type.interestRate := old.interestRate;
     }
