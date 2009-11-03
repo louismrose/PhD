@@ -22,6 +22,12 @@ Anneke~G. Kleppe, Jos Warmer, and Wim Bast.
   Promise}.
 \newblock Addison-Wesley, 2003.
 
+\bibitem{hutn}
+OMG.
+\newblock {Human-Usable Textual Notation 1.0 Specification} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.omg.org/technology/documents/formal/hutn.htm}, 2004.
+
 \bibitem{ocl2}
 OMG.
 \newblock {Object Constraint Language 2.0 Specification} [online].
@@ -44,6 +50,16 @@ openArchitectureWare.
 \newblock {openArchitectureWare Project Website} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/gmt/oaw/}, 2007.
+
+\bibitem{rose09flock}
+Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock Model migration with flock.
+\newblock In {\em Proc. Fundamental Approaches to Software Engineering}, 2010.
+
+\bibitem{rose09analysis}
+Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
+\newblock An analysis of approaches to model migration.
+\newblock In {\em Proc. Joint {MoDSE-MCCM} Workshop}, 2009.
 
 \bibitem{sjoberg93quantifying}
 Dag~I.K. Sj{\o}berg.

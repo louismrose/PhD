@@ -28,7 +28,13 @@
 \contentsline {subsubsection}{Research collaborations}{16}
 \contentsline {subsection}{\numberline {4.1.4}Summary}{17}
 \contentsline {section}{\numberline {4.2}Analysing Existing Techniques}{17}
-\contentsline {section}{\numberline {4.3}Requirements Identification}{17}
+\contentsline {subsection}{\numberline {4.2.1}Modelling Framework Characteristics Relevant to Co-Evolution}{17}
+\contentsline {subsection}{\numberline {4.2.2}Categorisation of Co-Evolution Techniques}{18}
+\contentsline {subsubsection}{User-Driven Co-Evolution Techniques}{18}
+\contentsline {paragraph}{Scenario}{19}
+\contentsline {paragraph}{Challenges}{19}
+\contentsline {subsubsection}{Developer-Driven Co-Evolution Techniques}{19}
+\contentsline {section}{\numberline {4.3}Requirements Identification}{20}
 \contentsline {chapter}{\numberline {5}Implementation}{19}
 \contentsline {section}{\numberline {5.1}Metamodel-Independent Syntax}{19}
 \contentsline {section}{\numberline {5.2}Human-Usable Textual Notation}{19}

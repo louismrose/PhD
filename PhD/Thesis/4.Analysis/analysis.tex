@@ -158,8 +158,54 @@ Due to the lack of examples of model synchronisation, this thesis now focuses on
 
 \section{Analysing Existing Techniques}
 % Having described the selection of suitable data for the analysis, we will then outline the way in which we have applied existing techniques to the data, and introduce criteria against which the effectiveness of existing techniques will be measured. 
+The examples of co-evolution identified in the previous section were analysed to discover and compare existing techniques for managing co-evolution. This section discusses the results of analysing the examples; namely a deeper understanding of modelling framework characteristics that affect the management of co-evolution and a categorisation of existing techniques for managing co-evolution. These results were published in \cite{rose09analysis,rose09flock}.
+
+
+\subsection{Modelling Framework Characteristics Relevant to Co-Evolution}
+Analysis of the co-evolution examples identified in the previous section highlighted characteristics of modern MDE modelling development environments that impact on the way in which co-evolution can be managed.
+
+Firstly, in modern MDE development environments, \emph{models and metamodels are separated}. Metamodels are developed and distributed to users. Metamodels are installed, configured and combined to form a customised MDE development environment. Metamodel developers have no programmatic access to downstream instance models. Consequently, metamodel evolution occurs independently to model migration. First, the metamodel is evolved. Subsequently, the users of the metamodel find that their models are out-of-date and migrate their models.
+
+Because of model and metamodel separation, existing techniques for managing co-evolution are either \emph{developer-driven} (the metamodel developer devises an executable migration strategy, which is distributed to the metamodel user with the evolved metamodel) or \emph{user-driven} (the metamodel user devises the migration strategy). In either case, it is always the metamodel user who performs migration on models that no longer conform to the metamodel.
+
+Secondly, modern MDE development environments \emph{implicitly enforce conformance}. A model is \emph{bound} to its metamodel, typically by constructing a representation in the underlying programming language for each model element and data value. Frequently, binding is strongly-typed: each metamodel type is mapped to a corresponding type in the underlying programming language using mappings defined by the metamodel. Consequently, MDE modelling frameworks do not permit changes to a model that would cause it to no longer conform to its metamodel. Loading a model that does not conforms to its metamodel causes an error. In short, MDE modelling frameworks cannot be used to manage any model that does not conform to its metamodel.
+
+Consequently, user-driven migration is always a manual process, in which models are migrated without using the modelling framework (which is unable to load non-conformant models). Executable migration strategies can only be used if they are specified with a tool that does not depend on the modelling framework to load the non-conformant models (and, at present, no such tool exists). Typically then, the metamodel user can only perform migration by editing the model directly, normally manipulating its underlying representation (e.g. XMI).
+
+Furthermore, model migration must produce a model that conforms to the evolved metamodel because MDE modelling frameworks do not permit changes to a model that cause non-conformance. Therefore, model migration cannot be specified as a combination of co-evolution techniques with each performing some part of the migration.
+
+Finally, a further consequence of implicitly enforced conformance is that models cannot be checked for conformance against any metamodel other than their own. Because conformance is always assumed, modern MDE development environment provide limited mechanisms for checking conformance, and typically provide no support for checking conformance to a metamodel other than the one used to construct the model. As will be discussed in Chapter~\ref{Implementation}, conformance checking can be used during metamodel installation to highlight potential conformance problems, and to determine whether migration is necessary for a model, permitting improved scalability for automatic model migration techniques.
+
+
+\subsection{Categorisation of Co-Evolution Techniques}
+Examples of co-evolution were analysed to discover and compare existing techniques for managing co-evolution. As discussed above, the separation of models and metamodels leads to two processes for co-evolution: \emph{developer-driven} and \emph{user-driven}. In this section, each process is described in more detail using a scenario. The challenges faced when using each process to perform co-evolution are discussed.
+
+
+\subsubsection{User-Driven Co-Evolution Techniques}
+In user-driven co-evolution, the metamodel user performs migration by locating non-conformant models and updating them to conform to the evolved metamodel. The metamodel developer might guide migration by providing a migration strategy to the metamodel user. Crucially, however, the migration strategy is not executable (e.g. it is written in prose). This is the key distinction between user-driven and developer-driven co-evolution. Only in the latter has the metamodel developer provided an executable model migration strategy.  
+
+In some cases, the metamodel user will not be provided with any migration strategy (executable or otherwise) from the metamodel developer. To perform migration, the metamodel user must determine which (if any) model elements no longer conform to the evolved metamodel, and then decide how best to change non-conformant elements to re-establish conformance. This situation can be thought of as analogous to developing a legacy system\footnote{A system for which one has no documentation and whose authors have left the owning organisation.}. Several examples of co-evolution required migration when no migration strategy had been provided by the metamodel developer.
+
+\paragraph{Scenario} The following scenario demonstrates user-driven co-evolution. Mark is developing an EMF metamodel. Members of his team, including Heather, will be using the metamodel to construct models. Heather installs the plug-in for Mark's metamodel and begins constructing models. Mark later identifies new requirements, changes the metamodel, builds a new version of the metamodel plug-in, and distributes it to Heather.
+
+After several iterations of metamodel updates, Heather tries to load one of her older models, constructed using an earlier metamodel. When loading the older model, EMF reports an error indicating that the model no longer conforms to its metamodel. To load the older model, Heather must reinstall an old version of the metamodel plug-in that contains the metamodel to which the older model conforms. But even then, EMF will bind the older model to the old version of the metamodel, and not to the evolved metamodel. Worse still, Eclipse does not allow two versions of the same plug-in to co-exist in the same workspace, so the evolved metamodel cannot be used.
+
+To avoid the loading errors in Heather's workspace, Mark could use an existing tool for managing co-evolution. However, all existing tools require extra effort from Mark. Operator-based approaches require him to evolve his metamodel using a specialised tool that records changes and applies co-evolutionary operators. Although metamodel matching approaches can automatically infer a migration strategy, they cannot be guaranteed to produce a migration strategy that capture the semantics that Mark intended.
+
+Employing user-driven migration, Heather must trace and repair the loading error directly in XMI, the underlying format of the model. Human usability was not a key requirement for XMI \cite{hutn} and, consequently, using XMI for migration is an unproductive and tedious task. Worse still, as EMF only reports the first problem encountered when deserialising an inconsistent model, re-establishing consistency in XMI is a slow, iterative process.
+
+
+\paragraph{Challenges} The above scenario highlights two of the major challenges faced when performing user-driven migration. Firstly, the underlying model representation is unlikely to be optimised for human usability. Together with limited support for conformance checking, migration by editing the underlying model representation is error prone and tedious. Secondly, installing a new version of a metamodel plug-in can affect the conformance of models and conformance problems are not reported to the user as part of the installation process. These challenges are elaborated on further in the final section of this chapter, which identifies research requirements.
+
+
+
+\subsubsection{Developer-Driven Co-Evolution Techniques}
+further categorisation
 
 
 \section{Requirements Identification}
 % The analysis of existing techniques will lead to requirements for our research. We will conclude the chapter by enumerating these requirements, refining the high-level research objectives from the literature review chapter into lower-level research objectives.
+
+
+When a metamodel change will affect conformance in only a small number of models, a metamodel developer may decide that the extra effort required to specify an executable migration strategy is too great, and prefer a user-driven co-evolution approach. Because no existing work has explored user-driven co-evolution and several of the co-evolution examples identified in Section X used a user-driven co-evolution approach, part of this thesis concentrated on exploring user-driven co-evolution.
 
