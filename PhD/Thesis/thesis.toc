@@ -25,8 +25,17 @@
 \contentsline {subsubsection}{Summary of selection}{14}
 \contentsline {subsection}{\numberline {4.1.3}Other examples}{14}
 \contentsline {subsubsection}{Examples of evolution from object-oriented systems}{14}
-\contentsline {paragraph}{Preliminary study of object-oriented refactorings}{15}
 \contentsline {subsubsection}{Research collaborations}{16}
-\contentsline {subsection}{\numberline {4.1.4}Summary}{16}
-\contentsline {section}{\numberline {4.2}Analysing Existing Techniques}{16}
-\contentsline {section}{\numberline {4.3}Requirements Identification}{16}
+\contentsline {subsection}{\numberline {4.1.4}Summary}{17}
+\contentsline {section}{\numberline {4.2}Analysing Existing Techniques}{17}
+\contentsline {section}{\numberline {4.3}Requirements Identification}{17}
+\contentsline {chapter}{\numberline {5}Implementation}{19}
+\contentsline {section}{\numberline {5.1}Metamodel-Independent Syntax}{19}
+\contentsline {section}{\numberline {5.2}Human-Usable Textual Notation}{19}
+\contentsline {section}{\numberline {5.3}DSL for Migration Strategies}{19}
+\contentsline {chapter}{\numberline {6}Evaluation}{21}
+\contentsline {section}{\numberline {6.1}Case Study}{21}
+\contentsline {section}{\numberline {6.2}Publications}{21}
+\contentsline {section}{\numberline {6.3}Delivery through Eclipse}{21}
+\contentsline {section}{\numberline {6.4}Limitations}{21}
+\contentsline {chapter}{\numberline {7}Conclusion}{23}

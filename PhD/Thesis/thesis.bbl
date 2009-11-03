@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{mdt}
 Eclipse.
@@ -44,6 +44,11 @@ openArchitectureWare.
 \newblock {openArchitectureWare Project Website} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/gmt/oaw/}, 2007.
+
+\bibitem{sjoberg93quantifying}
+Dag~I.K. Sj{\o}berg.
+\newblock Quantifying schema evolution.
+\newblock {\em Information \& Software Technology}, 35(1):35--44, 1993.
 
 \bibitem{watson08mdahistory}
 Andrew Watson.
