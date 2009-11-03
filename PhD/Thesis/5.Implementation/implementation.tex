@@ -1,0 +1,17 @@
+%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+
+\chapter{Implementation}
+%The implementation chapter will describe the way in which we have approached the requirements presented in the analysis chapter. The requirements will be fulfilled by implementing several related solutions. The solutions will take different forms, including domain-specific languages, automation, and extensions to existing modelling technologies.
+
+\section{Metamodel-Independent Syntax}
+% XMI, an OMG standard for metamodel interchange, and EMF, arguably the most widely used modelling framework, serialise models in a metamodel-specific manner. Consequently, information from the metamodel is required during deserialisation. If the metamodel has evolved since the model was last serialised, deserialisation may fail. This limitation has a major impact on existing techniques for performing co-evolution, forcing them to store original and evolved copies of metamodels. 
+
+% In a submission to ASE 2009, we have highlighted the problems that a metamodel-specific syntax poses for managing and automating co-evolution, and described our solutions. We prescribe the use of a metamodel-independent syntax for storing models. We also show other ways in which a metamodel-independent representation can be useful for managing and automating co-evolution: Specifically, checking consistency with any metamodel, and performing automatic consistency checking when a new metamodel version is encountered.
+
+
+\section{Human-Usable Textual Notation}
+% The Human-Usable Textual Notation is an OMG standard textual concrete syntax for the MOF metamodelling architecture. The notation is metamodel-independent -- it can be used with any model that conforms to any MOF-based metamodel. HUTN provides a human-usable means for visualising and specifying models, even when those models are inconsistent with their metamodel.
+
+
+\section{DSL for Migration Strategies}
+% Some of the requirements presented in the analysis chapter can be addressed by a domain-specific language for specifying migration strategies. Migration strategies will be specified as a model transformation on inconsistent models expressed in a metamodel-independent representation. Transforming a metamodel-independent representation affords us some advantages (such as being able to store partially consistent models) over existing techniques (which transform metamodel-specific representations). As discussed in the progress report, a domain-specific language, rather than an existing model-to-model transformation language, is required to address the specific requirements of model migration.
