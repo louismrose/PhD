@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  9 OCT 2009 12:26
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  3 NOV 2009 10:08
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -111,21 +111,24 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@top=\skip47
 \subfig@bottom=\skip48
 )
-(./thesis.aux)
+(./thesis.aux (./1.Introduction/introduction.aux)
+(./2.Background/background.aux) (./3.LiteratureReview/literature_review.aux)
+(./4.Analysis/analysis.aux) (./5.Implementation/implementation.tex.aux)
+(./6.Evaluation/evaluation.tex.aux) (./7.Conclusion/conclusion.tex.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 \c@lstlisting=\count101
 
 (/usr/local/texlive/2008/texmf-dist/tex/context/base/supp-pdf.tex
@@ -142,11 +145,11 @@ LaTeX Font Info:    ... okay on input line 14.
 \everyMPtoPDFconversion=\toks17
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 16.
+(Font)              <12> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 16.
+(Font)              <8> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 16.
+(Font)              <6> on input line 18.
  [1
 
 
@@ -162,26 +165,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- (./1 - Introduction/introduction.tex [3] [4
+ [3]
+\openout2 = `4.Analysis/analysis.aux'.
 
-]
-Chapter 1.
-) (./2 - Background/background.tex [5] [6
+ (./4.Analysis/analysis.tex [10
 
-]
-Chapter 2.
-) (./3 - Literature Review/literature_review.tex [7] [8
 
-]
-Chapter 3.
-) (./4 - Analysis/analysis.tex [9] [10
+
+
 
 ]
 Chapter 4.
 [11] [12] [13] [14]
 
-./4 - Analysis/analysis.tex:124: LaTeX Error: Unknown graphics extension: .png"
-.
+LaTeX Warning: File `"4 - Analysis/exemplar_refactoring.png"' not found on inpu
+t line 124.
+
+
+./4.Analysis/analysis.tex:124: LaTeX Error: Unknown graphics extension: .png".
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -192,49 +193,52 @@ l.124 ...{"4 - Analysis/exemplar_refactoring.png"}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[15]) (./5 - Implementation/implementation.tex [16]
-Chapter 5.
-) (./6 - Evaluation/evaluation.tex [17
+[15]
 
-] [18
+LaTeX Warning: Reference `Evaluation' on page 16 undefined on input line 155.
 
-]
-Chapter 6.
-) (./7 - Conclusion/conclusion.tex [19] [20
-
-]
-Chapter 7.
-) (./thesis.bbl [21] [22
-
-]
+) [16] (./thesis.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)) [23]
-(./thesis.aux) ) 
+)) [17
+
+
+
+
+
+]
+(./thesis.aux (./1.Introduction/introduction.aux)
+(./2.Background/background.aux) (./3.LiteratureReview/literature_review.aux)
+(./4.Analysis/analysis.aux) (./5.Implementation/implementation.tex.aux)
+(./6.Evaluation/evaluation.tex.aux) (./7.Conclusion/conclusion.tex.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2462 strings out of 493886
- 34458 string characters out of 1151098
- 93666 words of memory out of 3000000
- 5712 multiletter control sequences out of 10000+50000
+ 2486 strings out of 493886
+ 35171 string characters out of 1151098
+ 96084 words of memory out of 3000000
+ 5719 multiletter control sequences out of 10000+50000
  10321 words of font info for 36 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 26i,9n,32p,845b,1436s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/lo
-cal/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texli
-ve/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/te
-xmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2008/texmf-dist/f
-onts/type1/bluesky/cm/cmr17.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1
-/bluesky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm
-/cmr7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb><
-/usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/loca
-l/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive
-/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on thesis.pdf (23 pages, 117921 bytes).
+ 26i,9n,32p,839b,1436s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
+08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
+dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts
+/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blu
+esky/cm/cmr17.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
+r6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></us
+r/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/tex
+live/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008
+/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008/texmf-di
+st/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on thesis.pdf (11 pages, 107535 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

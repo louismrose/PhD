@@ -30,13 +30,3 @@
 \contentsline {subsection}{\numberline {4.1.4}Summary}{16}
 \contentsline {section}{\numberline {4.2}Analysing Existing Techniques}{16}
 \contentsline {section}{\numberline {4.3}Requirements Identification}{16}
-\contentsline {chapter}{\numberline {5}Implementation}{17}
-\contentsline {section}{\numberline {5.1}Metamodel-Independent Syntax}{17}
-\contentsline {section}{\numberline {5.2}Human-Usable Textual Notation}{17}
-\contentsline {section}{\numberline {5.3}DSL for Migration Strategies}{17}
-\contentsline {chapter}{\numberline {6}Evaluation}{19}
-\contentsline {section}{\numberline {6.1}Case Study}{19}
-\contentsline {section}{\numberline {6.2}Publications}{19}
-\contentsline {section}{\numberline {6.3}Delivery through Eclipse}{19}
-\contentsline {section}{\numberline {6.4}Limitations}{19}
-\contentsline {chapter}{\numberline {7}Conclusion}{21}
