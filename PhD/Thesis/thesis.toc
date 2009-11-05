@@ -9,39 +9,45 @@
 \contentsline {chapter}{\numberline {3}Literature Review}{9}
 \contentsline {chapter}{\numberline {4}Analysis}{11}
 \contentsline {section}{\numberline {4.1}Locating Data}{11}
-\contentsline {subsection}{\numberline {4.1.1}Requirements}{11}
-\contentsline {subsubsection}{Common requirements}{11}
-\contentsline {subsubsection}{Co-evolution requirements}{11}
+\contentsline {subsection}{\numberline {4.1.1}Requirements}{12}
+\contentsline {subsubsection}{Common requirements}{12}
+\contentsline {subsubsection}{Co-evolution requirements}{12}
 \contentsline {subsubsection}{Synchronisation requirements}{12}
 \contentsline {subsection}{\numberline {4.1.2}Project Selection}{12}
-\contentsline {subsubsection}{GSN}{12}
-\contentsline {subsubsection}{OMG}{12}
+\contentsline {subsubsection}{GSN}{13}
+\contentsline {subsubsection}{OMG}{13}
 \contentsline {subsubsection}{Zoos}{13}
 \contentsline {subsubsection}{MDT}{13}
 \contentsline {subsubsection}{MODELPLEX}{13}
-\contentsline {subsubsection}{FPTC}{13}
-\contentsline {subsubsection}{xText}{13}
+\contentsline {subsubsection}{FPTC}{14}
+\contentsline {subsubsection}{xText}{14}
 \contentsline {subsubsection}{GMF}{14}
-\contentsline {subsubsection}{Summary of selection}{14}
-\contentsline {subsection}{\numberline {4.1.3}Other examples}{14}
-\contentsline {subsubsection}{Examples of evolution from object-oriented systems}{14}
-\contentsline {subsubsection}{Research collaborations}{16}
+\contentsline {subsubsection}{Summary of selection}{15}
+\contentsline {subsection}{\numberline {4.1.3}Other examples}{15}
+\contentsline {subsubsection}{Examples of evolution from object-oriented systems}{15}
+\contentsline {subsubsection}{Research collaborations}{17}
 \contentsline {subsection}{\numberline {4.1.4}Summary}{17}
 \contentsline {section}{\numberline {4.2}Analysing Existing Techniques}{17}
-\contentsline {subsection}{\numberline {4.2.1}Modelling Framework Characteristics Relevant to Co-Evolution}{17}
-\contentsline {subsection}{\numberline {4.2.2}Categorisation of Co-Evolution Techniques}{18}
-\contentsline {subsubsection}{User-Driven Co-Evolution Techniques}{18}
-\contentsline {paragraph}{Scenario}{19}
-\contentsline {paragraph}{Challenges}{19}
-\contentsline {subsubsection}{Developer-Driven Co-Evolution Techniques}{19}
-\contentsline {section}{\numberline {4.3}Requirements Identification}{20}
-\contentsline {chapter}{\numberline {5}Implementation}{19}
-\contentsline {section}{\numberline {5.1}Metamodel-Independent Syntax}{19}
-\contentsline {section}{\numberline {5.2}Human-Usable Textual Notation}{19}
-\contentsline {section}{\numberline {5.3}DSL for Migration Strategies}{19}
-\contentsline {chapter}{\numberline {6}Evaluation}{21}
-\contentsline {section}{\numberline {6.1}Case Study}{21}
-\contentsline {section}{\numberline {6.2}Publications}{21}
-\contentsline {section}{\numberline {6.3}Delivery through Eclipse}{21}
-\contentsline {section}{\numberline {6.4}Limitations}{21}
-\contentsline {chapter}{\numberline {7}Conclusion}{23}
+\contentsline {subsection}{\numberline {4.2.1}Modelling Framework Characteristics Relevant to Co-Evolution}{18}
+\contentsline {subsection}{\numberline {4.2.2}User-Driven Co-Evolution}{19}
+\contentsline {subsubsection}{Scenario}{19}
+\contentsline {subsubsection}{Challenges}{20}
+\contentsline {subsection}{\numberline {4.2.3}Categorisation of Developer-Driven Co-Evolution Techniques}{20}
+\contentsline {subsubsection}{Manual Specification}{20}
+\contentsline {subsubsection}{Operator-based Co-evolution}{21}
+\contentsline {subsubsection}{Metamodel Matching}{22}
+\contentsline {paragraph}{Example}{23}
+\contentsline {paragraph}{Change recording}{24}
+\contentsline {paragraph}{Differencing}{25}
+\contentsline {subsection}{\numberline {4.2.4}Summary}{25}
+\contentsline {section}{\numberline {4.3}Requirements Identification}{25}
+\contentsline {chapter}{\numberline {5}Implementation}{27}
+\contentsline {section}{\numberline {5.1}Metamodel-Independent Syntax}{27}
+\contentsline {section}{\numberline {5.2}Human-Usable Textual Notation}{27}
+\contentsline {section}{\numberline {5.3}DSL for Migration Strategies}{27}
+\contentsline {chapter}{\numberline {6}Evaluation}{29}
+\contentsline {section}{\numberline {6.1}Case Study}{29}
+\contentsline {section}{\numberline {6.2}Publications}{29}
+\contentsline {section}{\numberline {6.3}Delivery through Eclipse}{29}
+\contentsline {section}{\numberline {6.4}Limitations}{29}
+\contentsline {chapter}{\numberline {7}Conclusion}{31}

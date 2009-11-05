@@ -1,5 +1,17 @@
 \begin{thebibliography}{10}
 
+\bibitem{bloch05apis}
+Joshua Bloch.
+\newblock How to design a good {API} and why it matters [online].
+\newblock Keynote address to the LCSD Workshop at OOPSLA, October 2005, San
+  Diego, United States of America. [Accessed 23 July 2009] Available at:
+  \url{http://lcsd05.cs.tamu.edu/slides/keynote.pdf}, 2005.
+
+\bibitem{cicchetti08automating}
+Antonio Cicchetti, Davide~Di Ruscio, Romina Eramo, and Alfonso Pierantonio.
+\newblock Automating co-evolution in model-driven engineering.
+\newblock In {\em Proc. {EDOC}}, pages 222--231. IEEE Computer Society, 2008.
+
 \bibitem{mdt}
 Eclipse.
 \newblock {Model Development Tools} project [online].
@@ -11,10 +23,36 @@ Martin Fowler.
 \newblock {\em Refactoring: improving the design of existing code}.
 \newblock Addison-Wesley, 1999.
 
+\bibitem{garces09managing}
+Kelly Garc{\'e}s, Fr{\'e}d{\'e}ric Jouault, Pierre Cointe, and Jean
+  B{\'e}zivin.
+\newblock Managing model adaptation by precise detection of metamodel changes.
+\newblock In {\em Proc. ECMDA-FA}, volume 5562 of {\em LNCS}, pages 34--49.
+  Springer, 2009.
+
 \bibitem{gronback06gmf}
 Richard Gronback.
 \newblock Introduction to the {Eclipse Graphical Modeling Framework}.
 \newblock In {\em Proc. EclipseCon}, Santa Clara, California, 2006.
+
+\bibitem{herrmannsdoerfer09cope}
+Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
+\newblock {COPE} - automating coupled evolution of metamodels and models.
+\newblock In {\em Proc. {ECOOP}}, volume 5653 of {\em LNCS}, pages 52--76.
+  Springer, 2009.
+
+\bibitem{emfatic}
+IBM.
+\newblock {Emfatic Language for EMF Development} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.alphaworks.ibm.com/tech/emfatic}, 2005.
+
+\bibitem{jouault05transforming}
+Fr{\'e}d{\'e}ric Jouault and Ivan Kurtev.
+\newblock Transforming models with {ATL}.
+\newblock In {\em Proc. Satellite Events at the International Conference on
+  Model Driven Engineering Languages and Systems}, volume 3844 of {\em LNCS},
+  pages 128--138. Springer, 2005.
 
 \bibitem{kleppe03mda}
 Anneke~G. Kleppe, Jos Warmer, and Wim Bast.
@@ -22,11 +60,22 @@ Anneke~G. Kleppe, Jos Warmer, and Wim Bast.
   Promise}.
 \newblock Addison-Wesley, 2003.
 
+\bibitem{lerner00model}
+Barbara~Staudt Lerner.
+\newblock A model for compound type changes encountered in schema evolution.
+\newblock {\em ACM Transactions on Database Systems}, 25(1):83--127, 2000.
+
 \bibitem{hutn}
 OMG.
 \newblock {Human-Usable Textual Notation 1.0 Specification} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.omg.org/technology/documents/formal/hutn.htm}, 2004.
+
+\bibitem{qvt}
+OMG.
+\newblock {MOF QVT Final Adopted Speciﬁcation} [online].
+\newblock [Accessed 22 July 2009] Available at:
+  \url{www.omg.org/docs/ptc/05-11-01.pdf}, 2005.
 
 \bibitem{ocl2}
 OMG.
@@ -51,6 +100,13 @@ openArchitectureWare.
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/gmt/oaw/}, 2007.
 
+\bibitem{paige08fptc}
+Richard~F. Paige, Louis~M. Rose, Xiaocheng Ge, Dimitrios~S. Kolovos, and
+  Phillip~J. Brooke.
+\newblock {FPTC}: Automated safety analysis for domain-specific languages.
+\newblock In {\em {MoDELS} Workshops and Symposia}, volume 5421 of {\em Lecture
+  Notes in Computer Science}, pages 229--242. Springer, 2009.
+
 \bibitem{rose09flock}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model migration with flock.
@@ -65,6 +121,12 @@ Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
 Dag~I.K. Sj{\o}berg.
 \newblock Quantifying schema evolution.
 \newblock {\em Information \& Software Technology}, 35(1):35--44, 1993.
+
+\bibitem{wachsmuth07metamodel}
+Guido Wachsmuth.
+\newblock Metamodel adaptation and model co-adaptation.
+\newblock In {\em Proc. {ECOOP}}, volume 4609 of {\em LNCS}, pages 600--624.
+  Springer, 2007.
 
 \bibitem{watson08mdahistory}
 Andrew Watson.
