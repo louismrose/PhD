@@ -2,10 +2,17 @@ require 'rubygems'
 require 'mechanize'
 require 'cgi'
 
-# Add methods to the Hpricot Elem class
-class Hpricot::Elem
+class Nokogiri::XML::Element
   def next_siblings
-    siblings_at(1, 1..parent.containers.size)
+    next_siblings = []
+    current = self.next_sibling
+    
+    while (current)
+      next_siblings << current
+      current = current.next_sibling
+    end
+    
+    return next_siblings
   end
 end
 
@@ -14,10 +21,10 @@ class ImdbScraper
   def scrape(page, film)
     @page = page
 
-    film.director    = get_value_near('Director:')
+    film.director    = get_director
     film.starring    = get_cast.first(3)
     film.runtime     = get_runtime
-    film.country     = get_value_near('Country:')
+    film.country     = scrape_first_link('Country:')
     film.certificate = get_certificate
     film.year        = get_year
 
@@ -26,23 +33,25 @@ class ImdbScraper
 
 private
 
+  def get_director
+    director_key = has_key('Director:') ? 'Director:' : 'Directors:'
+    
+    scrape_first_link(director_key) 
+  end
+
   def get_cast
-    @page.search("//table.cast//td.nm/a").collect{|a| CGI.unescapeHTML a.inner_html}
+    @page.search("table.cast td.nm a").collect{|a| CGI.unescapeHTML a.content}
   end
 
   def get_runtime
-    value = get_value_near('Runtime:')
+    value = scrape_text('Runtime:')
     
     value ? value.sub('min', '').strip : nil
   end
-
+  
   def get_certificate
-    value = get_value_near('Certification:')
-
-    return nil unless value
-
-    uk_certification = value.select{|c| c.include? 'UK:'}.first
-    uk_certification ? uk_certification.sub('UK:', '') : nil
+    uk_certification_link = scrape_links('Certification:').select{|c| c.content.include? 'UK:'}.first
+    uk_certification_link ? uk_certification_link.content.sub('UK:', '').strip : nil
   end
 
   def get_year
@@ -54,21 +63,39 @@ private
 
     @page.title.match(four_digits_followed_by_optional_slash_and_chars_in_parentheses)[1]
   end
-
-  def get_value_near(text)
-    element = @page.search("//h5").select{|tags| tags.inner_html == text}.first
-
-    return nil unless element
-
-    if (element.next_sibling)
-      values = element.next_siblings.collect{|s| CGI.unescapeHTML s.inner_html.strip}
-      values = values.compact.select{|s| s.size > 0}
-      values.size == 1 ? values.first : values
-
-    else
-      # Remove this element from the inner text of the parent
-      CGI.unescapeHTML element.parent.inner_text.sub(element.inner_text, '').strip
-    end
+  
+  def scrape_first_link(imdb_key)
+    scrape_links(imdb_key).first.content.strip
+  end
+  
+  def scrape_links(imdb_key)
+    scrape_value(imdb_key).search('a')
+  end
+  
+  def scrape_text(imdb_key)
+    scrape_value(imdb_key).content.strip
+  end
+  
+  def scrape_value(imdb_key)
+    # Presently, much of a film's details are presented as key-value pairs on IMDB
+    # For example:
+    #   Runtime:  94 min
+    #   Certification: USA:R | UK:15
+    #
+    # This method returns the HTML element containing the value for the key, imdb_key
+    
+    key = keys.find{|tags| tags.content == imdb_key}
+    
+    # Presently on IMDB, there is a whitespace element between a key and its value
+    key.next_sibling.next_sibling
+  end
+  
+  def has_key(imdb_key)
+    keys.any?{|key| key.content == imdb_key}
+  end
+  
+  def keys
+    @page.search("h5")
   end
 end
 

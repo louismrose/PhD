@@ -33,7 +33,7 @@ private
     page = @agent.get('http://www.imdb.com')
     
     # Populate and submit the search form
-    search_form = page.form('find')
+    search_form = page.form_with(:action => '/find')
     search_form.q = title
     
     interpret_result(title, @agent.submit(search_form))
@@ -54,12 +54,13 @@ private
       paras = page.search("//p")
       
       titles_para = paras.select{|p| p.inner_html.downcase.include? 'popular titles'}.first
-      
+            
       if titles_para
-        title_links = titles_para.search("//a").select {|link| link.search("//img").empty? }
+        title_links = titles_para.next_sibling.search("a")
+        text_links  = title_links.select {|link| link.search("img").empty? }
         
-        identifiers = title_links.collect {|l| l['href'].chop.split('/').last }
-        titles      = title_links.collect {|l| CGI.unescapeHTML(l.inner_html + l.next.to_s).strip}
+        identifiers = text_links.collect {|l| l['href'].chop.split('/').last }
+        titles      = text_links.collect {|l| CGI.unescapeHTML(l.content + l.next.to_s).strip}
         
         if identifiers.size == 1
           # Multiple results, but only one film so scrape data for that film
