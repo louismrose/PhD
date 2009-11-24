@@ -12,7 +12,7 @@ class Options
     options = {}
   
     OptionParser.new do |opts|
-      opts.banner = "Usage: example.rb [options]"
+      opts.banner = "Usage: driver.rb [options]"
     
       opts.on("-i", "--[no-]interactive", "Run interactively") do |i|
         options[:interactive] = i
