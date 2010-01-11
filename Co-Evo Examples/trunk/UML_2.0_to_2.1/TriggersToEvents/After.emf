@@ -1,0 +1,23 @@
+@namespace(uri="uml_20_to_21_triggersToEvents", prefix="uml_20_to_21_triggersToEvents")
+package uml_20_to_21_triggersToEvents;
+
+class System {
+   val Transition[*] transitions;
+   val Event[*] events;
+}
+
+class Transition {
+ 	val Trigger[*] triggers;
+}
+
+class Trigger {
+	ref Event[1] event;
+}
+
+abstract class Event {}
+
+class CallEvent extends Event {}
+class SignalEvent extends Event {}
+class TimeEvent extends Event {}
+class ChangeEvent extends Event {}
+class AnyRecieveEvent extends Event {}
