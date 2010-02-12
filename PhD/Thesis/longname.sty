@@ -1,0 +1,26 @@
+% new bib defn for article.sty
+% comment out if using in a book!
+% \def\thebibliography#1{
+%  \section*{References\@mkboth{REFERENCES}{REFERENCES}}
+%  \list{[\arabic{enumi}]}{%
+%    \setlength\labelwidth{0pt}
+%    \parsep 1pt
+%    \itemsep \parskip
+%    \labelsep 3em
+%    \leftmargin\labelwidth\advance\leftmargin\labelsep
+%    \usecounter{enumi}
+%  }
+% \def\newblock{\hskip .11em plus .33em minus .07em}
+% \sloppy\clubpenalty4000\widowpenalty4000
+% \sfcode`\.=1000\relax}
+%\let\endthebibliography=\endlist
+
+% allow refs like [X and Y, 1984] to split across lines
+%
+\def\@citex[#1]#2{\if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi
+  \def\@citea{}\@cite{\@for\@citeb:=#2\do
+    {\@citea\def\@citea{,\penalty\@m\ }\@ifundefined
+       {b@\@citeb}{{\bf ?}\@warning
+       {Citation `\@citeb' on page \thepage \space undefined}}%
+       {\csname b@\@citeb\endcsname}}}{#1}}   % hbox removed from original 
+                                              % definition (WS)

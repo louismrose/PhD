@@ -1,134 +1,229 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{99}
 
-\bibitem{bloch05apis}
+\bibitem[ATLAS 2007]{atl}{$~$}
+ATLAS.
+\newblock {Atlas Transformation Language Project Website} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.eclipse.org/m2m/atl/}, 2007.
+
+\bibitem[Bloch 2005]{bloch05apis}{$~$}
 Joshua Bloch.
 \newblock How to design a good {API} and why it matters [online].
 \newblock Keynote address to the LCSD Workshop at OOPSLA, October 2005, San
   Diego, United States of America. [Accessed 23 July 2009] Available at:
   \url{http://lcsd05.cs.tamu.edu/slides/keynote.pdf}, 2005.
 
-\bibitem{cicchetti08automating}
+\bibitem[Cicchetti {\it et al.}\  2008]{cicchetti08automating}{$~$}
 Antonio Cicchetti, Davide~Di Ruscio, Romina Eramo, and Alfonso Pierantonio.
 \newblock Automating co-evolution in model-driven engineering.
 \newblock In {\em Proc. {EDOC}}, pages 222--231. IEEE Computer Society, 2008.
 
-\bibitem{mdt}
+\bibitem[Czarnecki \& Helsen 2006]{czarnecki06survey}{$~$}
+Krzysztof Czarnecki and Simon Helsen.
+\newblock Feature-based survey of model transformation approaches.
+\newblock {\em IBM Systems Journal}, 45(3):621--646, 2006.
+
+\bibitem[Eclipse 2008]{gmt}{$~$}
+Eclipse.
+\newblock {Generative Modelling Technologies} project [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.eclipse.org/gmt}, 2008.
+
+\bibitem[Eclipse 2009a]{mdt}{$~$}
 Eclipse.
 \newblock {Model Development Tools} project [online].
 \newblock [Accessed 6 January 2008] Available at:
   \url{http://www.eclipse.org/modeling/mdt/}, 2009.
 
-\bibitem{fowler99refactoring}
+\bibitem[Eclipse 2009b]{mdt_uml2}{$~$}
+Eclipse.
+\newblock {UML2} {Model Development Tools} project [online].
+\newblock [Accessed 7 September 2009] Available at:
+  \url{http://www.eclipse.org/modeling/mdt/uml2}, 2009.
+
+\bibitem[Fowler 1999]{fowler99refactoring}{$~$}
 Martin Fowler.
 \newblock {\em Refactoring: improving the design of existing code}.
 \newblock Addison-Wesley, 1999.
 
-\bibitem{garces09managing}
+\bibitem[Gamma {\it et al.}\  1995]{gamma95patterns}{$~$}
+Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+\newblock {\em Design patterns: elements of reusable object-oriented software}.
+\newblock Addison-Wesley, 1995.
+
+\bibitem[Garc{\'e}s {\it et al.}\  2009]{garces09managing}{$~$}
 Kelly Garc{\'e}s, Fr{\'e}d{\'e}ric Jouault, Pierre Cointe, and Jean
   B{\'e}zivin.
 \newblock Managing model adaptation by precise detection of metamodel changes.
 \newblock In {\em Proc. ECMDA-FA}, volume 5562 of {\em LNCS}, pages 34--49.
   Springer, 2009.
 
-\bibitem{gronback06gmf}
+\bibitem[Gronback 2006]{gronback06gmf}{$~$}
 Richard Gronback.
 \newblock Introduction to the {Eclipse Graphical Modeling Framework}.
 \newblock In {\em Proc. EclipseCon}, Santa Clara, California, 2006.
 
-\bibitem{herrmannsdoerfer09cope}
+\bibitem[Herrmannsdoerfer {\it et al.}\  2009]{herrmannsdoerfer09cope}{$~$}
 Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
 \newblock {COPE} - automating coupled evolution of metamodels and models.
 \newblock In {\em Proc. {ECOOP}}, volume 5653 of {\em LNCS}, pages 52--76.
   Springer, 2009.
 
-\bibitem{emfatic}
+\bibitem[Hussey \& Paternostro 2006]{hussey06advanced}{$~$}
+Kenn Hussey and Marcelo Paternostro.
+\newblock Advanced features of {EMF}.
+\newblock Tutorial at EclipseCon 2006, California, USA. [Accessed 07 September
+  2009] Available at: \url{http://www.eclipsecon.org/2006/Sub.do?id=171}, 2006.
+
+\bibitem[IBM 2005]{emfatic}{$~$}
 IBM.
 \newblock {Emfatic Language for EMF Development} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.alphaworks.ibm.com/tech/emfatic}, 2005.
 
-\bibitem{jouault05transforming}
+\bibitem[Jouault \& Kurtev 2005]{jouault05transforming}{$~$}
 Fr{\'e}d{\'e}ric Jouault and Ivan Kurtev.
 \newblock Transforming models with {ATL}.
 \newblock In {\em Proc. Satellite Events at the International Conference on
   Model Driven Engineering Languages and Systems}, volume 3844 of {\em LNCS},
   pages 128--138. Springer, 2005.
 
-\bibitem{kleppe03mda}
+\bibitem[Kleppe {\it et al.}\  2003]{kleppe03mda}{$~$}
 Anneke~G. Kleppe, Jos Warmer, and Wim Bast.
 \newblock {\em MDA Explained: The Model Driven Architecture: Practice and
   Promise}.
 \newblock Addison-Wesley, 2003.
 
-\bibitem{lerner00model}
+\bibitem[Kolovos {\it et al.}\  2006]{kolovos06eol}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock {The Epsilon Object Language (EOL)}.
+\newblock In {\em Proc. {ECMDA-FA}}, volume 4066 of {\em LNCS}, pages 128--142.
+  Springer, 2006.
+
+\bibitem[Kolovos {\it et al.}\  2008]{kolovos08etl}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona Polack.
+\newblock {The Epsilon Transformation Language}.
+\newblock In {\em Proc. {ICMT}}, volume 5063 of {\em LNCS}, pages 46--60.
+  Springer, 2008.
+
+\bibitem[Kolovos {\it et al.}\  2009]{kolovos09concordance}{$~$}
+Dimitrios~S. Kolovos, Nicholas Drivalos, Louis~M. Rose, Richard~F. Paige,
+  Fiona~A.C. Polack, and Kiran~J. Fernandes.
+\newblock Efficient maintenance and reconciliation of cross-model references
+  [submitted to].
+\newblock In {\em Proc. International Conference on Model Driven Engineering
+  Languages and Systems}, 2009.
+
+\bibitem[Kolovos 2009]{kolovos09thesis}{$~$}
+Dimitrios~S. Kolovos.
+\newblock {\em An Extensible Platform for Specification of Integrated Languages
+  for Model Management}.
+\newblock PhD thesis, University of York, United Kingdom, 2009.
+
+\bibitem[Lerner 2000]{lerner00model}{$~$}
 Barbara~Staudt Lerner.
 \newblock A model for compound type changes encountered in schema evolution.
 \newblock {\em ACM Transactions on Database Systems}, 25(1):83--127, 2000.
 
-\bibitem{hutn}
+\bibitem[Oldevik {\it et al.}\  2005]{oldevik05toward}{$~$}
+Jon Oldevik, Tor Neple, Roy Gr{\o}nmo, Jan~{\O}yvind Aagedal, and
+  Arne-J{\o}rgen Berre.
+\newblock Toward standardised model to text transformations.
+\newblock In {\em Proc. {ECMDA-FA}}, volume 3748 of {\em LNCS}, pages 239--253.
+  Springer, 2005.
+
+\bibitem[OMG 2004]{hutn}{$~$}
 OMG.
 \newblock {Human-Usable Textual Notation 1.0 Specification} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.omg.org/technology/documents/formal/hutn.htm}, 2004.
 
-\bibitem{qvt}
+\bibitem[OMG 2005]{qvt}{$~$}
 OMG.
 \newblock {MOF QVT Final Adopted Speciﬁcation} [online].
 \newblock [Accessed 22 July 2009] Available at:
   \url{www.omg.org/docs/ptc/05-11-01.pdf}, 2005.
 
-\bibitem{ocl2}
+\bibitem[OMG 2006]{ocl2}{$~$}
 OMG.
 \newblock {Object Constraint Language 2.0 Specification} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.omg.org/technology/documents/formal/ocl.htm}, 2006.
 
-\bibitem{uml212}
+\bibitem[OMG 2007a]{uml212}{$~$}
 OMG.
 \newblock {Unified Modelling Language 2.1.2 Specification} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.omg.org/spec/UML/2.1.2/}, 2007.
 
-\bibitem{omg}
+\bibitem[OMG 2007b]{xmi}{$~$}
+OMG.
+\newblock {XML Metadata Interchange 2.1.1 Specification} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.omg.org/technology/documents/formal/xmi.htm}, 2007.
+
+\bibitem[OMG 2008]{omg}{$~$}
 OMG.
 \newblock {Object Management Group} home page [online].
 \newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org}, 2008.
 
-\bibitem{oaw}
+\bibitem[openArchitectureWare 2007]{oaw}{$~$}
 openArchitectureWare.
 \newblock {openArchitectureWare Project Website} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/gmt/oaw/}, 2007.
 
-\bibitem{paige08fptc}
+\bibitem[Paige {\it et al.}\  2009]{paige08fptc}{$~$}
 Richard~F. Paige, Louis~M. Rose, Xiaocheng Ge, Dimitrios~S. Kolovos, and
   Phillip~J. Brooke.
 \newblock {FPTC}: Automated safety analysis for domain-specific languages.
 \newblock In {\em {MoDELS} Workshops and Symposia}, volume 5421 of {\em Lecture
   Notes in Computer Science}, pages 229--242. Springer, 2009.
 
-\bibitem{rose09flock}
+\bibitem[Rose {\it et al.}\  2009a]{rose09enhanced}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
-\newblock Model migration with flock.
-\newblock In {\em Proc. Fundamental Approaches to Software Engineering}, 2010.
+\newblock Enhanced automation for managing model and metamodel inconsistency.
+\newblock In {\em Proc. {ASE}}. ACM Press, 2009.
 
-\bibitem{rose09analysis}
+\bibitem[Rose {\it et al.}\  2009b]{rose09analysis}{$~$}
 Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
 \newblock An analysis of approaches to model migration.
 \newblock In {\em Proc. Joint {MoDSE-MCCM} Workshop}, 2009.
 
-\bibitem{sjoberg93quantifying}
+\bibitem[Rose {\it et al.}\  2010]{rose10flock}{$~$}
+Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock Model migration with flock.
+\newblock In {\em In preparation}, 2010.
+
+\bibitem[Sj{\o}berg 1993]{sjoberg93quantifying}{$~$}
 Dag~I.K. Sj{\o}berg.
 \newblock Quantifying schema evolution.
 \newblock {\em Information \& Software Technology}, 35(1):35--44, 1993.
 
-\bibitem{wachsmuth07metamodel}
+\bibitem[Steinberg {\it et al.}\  2008]{steinberg09emf}{$~$}
+Dave Steinberg, Frank Budinsky, Marcelo Paternostro, and Ed~Merks.
+\newblock {\em {EMF}: {E}clipse {M}odeling {F}ramework}.
+\newblock Addison-Wesley Professional, 2008.
+
+\bibitem[Varr\'{o} \& Balogh 2007]{VIATRA}{$~$}
+D\'{a}niel Varr\'{o} and Andr\'{a}s Balogh.
+\newblock The model transformation language of the {VIATRA2} framework.
+\newblock {\em Science of Computer Programming}, 68(3):187--207, 2007.
+
+\bibitem[Wachsmuth 2007]{wachsmuth07metamodel}{$~$}
 Guido Wachsmuth.
 \newblock Metamodel adaptation and model co-adaptation.
 \newblock In {\em Proc. {ECOOP}}, volume 4609 of {\em LNCS}, pages 600--624.
   Springer, 2007.
 
-\bibitem{watson08mdahistory}
+\bibitem[Wallace 2005]{wallace05modular}{$~$}
+Malcolm Wallace.
+\newblock Modular architectural representation and analysis of fault
+  propagation and transformation.
+\newblock {\em Electronic Notes in Theoretical Computer Science},
+  141(3):53--71, 2005.
+
+\bibitem[Watson 2008]{watson08mdahistory}{$~$}
 Andrew Watson.
 \newblock A brief history of {MDA}.
 \newblock {\em Upgrade}, 9(2), 2008.

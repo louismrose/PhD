@@ -7,46 +7,50 @@ A level-1 auxiliary file: 4.Analysis/analysis.aux
 A level-1 auxiliary file: 5.Implementation/implementation.aux
 A level-1 auxiliary file: 6.Evaluation/evaluation.aux
 A level-1 auxiliary file: 7.Conclusion/conclusion.aux
-The style file: plain.bst
+The style file: longname.bst
 Database file #1: thesis.bib
-You've used 23 entries,
-            2118 wiz_defined-function locations,
-            620 strings with 7694 characters,
-and the built_in function-call counts, 7070 in all, are:
-= -- 693
-> -- 274
-< -- 11
-+ -- 114
-- -- 88
-* -- 398
-:= -- 1126
-add.period$ -- 75
-call.type$ -- 23
-change.case$ -- 111
-chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 300
-empty$ -- 639
-format.name$ -- 88
-if$ -- 1563
-int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 16
-newline$ -- 118
-num.names$ -- 46
-pop$ -- 170
+Warning--I didn't find a database entry for "muller05hutn"
+Warning--I didn't find a database entry for "sintaks"
+Warning--I didn't find a database entry for "nucleardef"
+You've used 39 entries,
+            2472 wiz_defined-function locations,
+            753 strings with 10618 characters,
+and the built_in function-call counts, 14632 in all, are:
+= -- 1459
+> -- 556
+< -- 17
++ -- 178
+- -- 170
+* -- 1016
+:= -- 2294
+add.period$ -- 127
+call.type$ -- 39
+change.case$ -- 236
+chr.to.int$ -- 36
+cite$ -- 39
+duplicate$ -- 655
+empty$ -- 1221
+format.name$ -- 217
+if$ -- 3128
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 28
+newline$ -- 198
+num.names$ -- 117
+pop$ -- 290
 preamble$ -- 1
-purify$ -- 90
+purify$ -- 280
 quote$ -- 0
-skip$ -- 224
+skip$ -- 538
 stack$ -- 0
-substring$ -- 323
-swap$ -- 91
-text.length$ -- 11
+substring$ -- 632
+swap$ -- 182
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
+type$ -- 296
 warning$ -- 0
-while$ -- 65
-width$ -- 25
-write$ -- 253
+while$ -- 110
+width$ -- 46
+write$ -- 505
+(There were 3 warnings)
