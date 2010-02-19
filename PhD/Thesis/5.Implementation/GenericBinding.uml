@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_1zcG0RrYEd-sz5pUyCBepA" name="GenericBinding">
+  <elementImport xmi:id="_136XIBrYEd-sz5pUyCBepA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_14KOwBrYEd-sz5pUyCBepA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_14K10BrYEd-sz5pUyCBepA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_14K10RrYEd-sz5pUyCBepA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_4w3hQBrYEd-sz5pUyCBepA" name="h : Object">
+    <ownedAttribute xmi:id="_Nqie0BrZEd-sz5pUyCBepA" name="type" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_OaGTgBrZEd-sz5pUyCBepA" value="Person"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BO75wBrZEd-sz5pUyCBepA" name="hn : Slot">
+    <ownedAttribute xmi:id="_F5PswBrZEd-sz5pUyCBepA" name="feature" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_HYmmsBrZEd-sz5pUyCBepA" value="name"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Hzyt4BrZEd-sz5pUyCBepA" name="value" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_MXOc0BrZEd-sz5pUyCBepA" value="Hermann"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bX0HIBrZEd-sz5pUyCBepA" name="slots" memberEnd="_bX18UBrZEd-sz5pUyCBepA _bX2jYhrZEd-sz5pUyCBepA">
+    <ownedEnd xmi:id="_bX18UBrZEd-sz5pUyCBepA" name="src" type="_4w3hQBrYEd-sz5pUyCBepA" association="_bX0HIBrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bX2jYRrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bX2jYBrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_bX2jYhrZEd-sz5pUyCBepA" name="dst" type="_BO75wBrZEd-sz5pUyCBepA" aggregation="composite" association="_bX0HIBrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bX3KcRrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bX3KcBrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dyn8sBrZEd-sz5pUyCBepA" name="j : Object">
+    <ownedAttribute xmi:id="_dyn8sRrZEd-sz5pUyCBepA" name="type" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_dyn8shrZEd-sz5pUyCBepA" value="Person"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dyojwBrZEd-sz5pUyCBepA" name="jn : Slot">
+    <ownedAttribute xmi:id="_dyojwRrZEd-sz5pUyCBepA" name="feature" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_dyojwhrZEd-sz5pUyCBepA" value="name"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_dyojwxrZEd-sz5pUyCBepA" name="value" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_jfHlcBrZEd-sz5pUyCBepA" value="Julie"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dypx4BrZEd-sz5pUyCBepA" name="slots" memberEnd="_dypx4RrZEd-sz5pUyCBepA _dypx5BrZEd-sz5pUyCBepA">
+    <ownedEnd xmi:id="_dypx4RrZEd-sz5pUyCBepA" name="src" type="_dyn8sBrZEd-sz5pUyCBepA" association="_dypx4BrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dypx4hrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dypx4xrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_dypx5BrZEd-sz5pUyCBepA" name="dst" type="_dyojwBrZEd-sz5pUyCBepA" aggregation="composite" association="_dypx4BrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dypx5RrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dypx5hrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_oNtbhRrZEd-sz5pUyCBepA" name="f : Object">
+    <ownedAttribute xmi:id="_oNtbhhrZEd-sz5pUyCBepA" name="type" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_oNtbhxrZEd-sz5pUyCBepA" value="Person"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_oNuCkBrZEd-sz5pUyCBepA" name="fn : Slot">
+    <ownedAttribute xmi:id="_oNuCkRrZEd-sz5pUyCBepA" name="feature" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_oNuCkhrZEd-sz5pUyCBepA" value="name"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_oNuCkxrZEd-sz5pUyCBepA" name="value" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_rF1fMBrZEd-sz5pUyCBepA" value="Franz"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_soxRkBrZEd-sz5pUyCBepA" name="slots" memberEnd="_soxRkRrZEd-sz5pUyCBepA _sox4ohrZEd-sz5pUyCBepA">
+    <ownedEnd xmi:id="_soxRkRrZEd-sz5pUyCBepA" name="src" type="_oNtbhRrZEd-sz5pUyCBepA" association="_soxRkBrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sox4oRrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sox4oBrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_sox4ohrZEd-sz5pUyCBepA" name="dst" type="_oNuCkBrZEd-sz5pUyCBepA" aggregation="composite" association="_soxRkBrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_soyfsBrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sox4oxrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vtHzYBrZEd-sz5pUyCBepA" name="slots" memberEnd="_vtHzYRrZEd-sz5pUyCBepA _vtIacRrZEd-sz5pUyCBepA">
+    <ownedEnd xmi:id="_vtHzYRrZEd-sz5pUyCBepA" name="src" type="_oNtbhRrZEd-sz5pUyCBepA" association="_vtHzYBrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vtIacBrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vtHzYhrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_vtIacRrZEd-sz5pUyCBepA" name="dst" type="_yPBviRrZEd-sz5pUyCBepA" aggregation="composite" association="_vtHzYBrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vtIacxrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vtIachrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_yPBviRrZEd-sz5pUyCBepA" name="fm : Slot">
+    <ownedAttribute xmi:id="_yPBvihrZEd-sz5pUyCBepA" name="feature" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_2KKvUBrZEd-sz5pUyCBepA" value="mother"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5rAY0BrZEd-sz5pUyCBepA" name="value" memberEnd="_5rA_4BrZEd-sz5pUyCBepA _5rBm8RrZEd-sz5pUyCBepA _gW_hcBraEd-sz5pUyCBepA _hZcc8BraEd-sz5pUyCBepA">
+    <ownedEnd xmi:id="_5rA_4BrZEd-sz5pUyCBepA" name="src" type="_yPBviRrZEd-sz5pUyCBepA" association="_5rAY0BrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5rBm8BrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5rA_4RrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5rBm8RrZEd-sz5pUyCBepA" name="dst" type="_dyn8sBrZEd-sz5pUyCBepA" association="_5rAY0BrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5rBm8xrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5rBm8hrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_gW_hcBraEd-sz5pUyCBepA" type="_5rAY0BrZEd-sz5pUyCBepA" association="_5rAY0BrZEd-sz5pUyCBepA"/>
+    <ownedEnd xmi:id="_hZcc8BraEd-sz5pUyCBepA" type="_dyn8sBrZEd-sz5pUyCBepA" association="_5rAY0BrZEd-sz5pUyCBepA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6wezNxrZEd-sz5pUyCBepA" name="ff : Slot">
+    <ownedAttribute xmi:id="_6wezOBrZEd-sz5pUyCBepA" name="feature" aggregation="composite">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_91YukBrZEd-sz5pUyCBepA" value="father"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-qfKkBrZEd-sz5pUyCBepA" name="value" memberEnd="_-qfKkRrZEd-sz5pUyCBepA _-qfxohrZEd-sz5pUyCBepA">
+    <ownedEnd xmi:id="_-qfKkRrZEd-sz5pUyCBepA" name="src" type="_6wezNxrZEd-sz5pUyCBepA" association="_-qfKkBrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-qfxoRrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-qfxoBrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_-qfxohrZEd-sz5pUyCBepA" name="dst" type="_4w3hQBrYEd-sz5pUyCBepA" association="_-qfKkBrZEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-qgYsBrZEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-qfxoxrZEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VenNMBrbEd-sz5pUyCBepA" name="slots" memberEnd="_VenNMRrbEd-sz5pUyCBepA _Ven0QRrbEd-sz5pUyCBepA">
+    <ownedEnd xmi:id="_VenNMRrbEd-sz5pUyCBepA" name="src" type="_oNtbhRrZEd-sz5pUyCBepA" association="_VenNMBrbEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ven0QBrbEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VenNMhrbEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Ven0QRrbEd-sz5pUyCBepA" name="dst" type="_6wezNxrZEd-sz5pUyCBepA" aggregation="composite" association="_VenNMBrbEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ven0QxrbEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ven0QhrbEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iWEn0BrbEd-sz5pUyCBepA" name="value" memberEnd="_iWEn0RrbEd-sz5pUyCBepA _iWFO4hrbEd-sz5pUyCBepA">
+    <ownedEnd xmi:id="_iWEn0RrbEd-sz5pUyCBepA" name="src" type="_yPBviRrZEd-sz5pUyCBepA" association="_iWEn0BrbEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iWFO4RrbEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iWFO4BrbEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_iWFO4hrbEd-sz5pUyCBepA" name="dst" type="_dyn8sBrZEd-sz5pUyCBepA" association="_iWEn0BrbEd-sz5pUyCBepA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iWFO5BrbEd-sz5pUyCBepA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iWFO4xrbEd-sz5pUyCBepA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Package>

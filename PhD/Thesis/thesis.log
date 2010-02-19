@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  8 FEB 2010 14:11
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  19 FEB 2010 10:31
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -115,7 +115,9 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \openout2 = `Listings/listings.aux'.
 
 (./Listings/listings.tex (./Listings/common.tex) (./Listings/atl.tex)
-(./Listings/cope.tex) (./Listings/flock.tex))
+(./Listings/cope.tex) (./Listings/flock.tex) (./Listings/hutn_families.tex)
+(./Listings/fptc.tex) (./Listings/eol.tex) (./Listings/etl.tex)
+(./Listings/evl.tex) (./Listings/egl.tex))
 \@input{symbols.aux}
 \openout2 = `symbols.aux'.
 
@@ -134,7 +136,7 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 (./1.Introduction/introduction.aux) (./2.Background/background.aux)
 (./3.LiteratureReview/literature_review.aux) (./4.Analysis/analysis.aux)
 (./5.Implementation/implementation.aux) (./6.Evaluation/evaluation.aux)
-(./7.Conclusion/conclusion.aux))
+(./7.Conclusion/conclusion.aux) (./A.1.Experiments/experiments.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -192,19 +194,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [3]
 \openout2 = `5.Implementation/implementation.aux'.
 
- (./5.Implementation/implementation.tex [30
-
-
-
-
-
-
-]
+ (./5.Implementation/implementation.tex
 Chapter 5.
-
-LaTeX Warning: Reference `sec:hutn' on page 31 undefined on input line 5.
-
-<5.Implementation/overview.pdf, id=20, 673.51625pt x 160.6pt>
+<5.Implementation/overview.pdf, id=16, 673.51625pt x 160.6pt>
 File: 5.Implementation/overview.pdf Graphic file (type pdf)
 
 <use 5.Implementation/overview.pdf>
@@ -212,14 +204,18 @@ Overfull \hbox (99.5221pt too wide) in paragraph at lines 9--11
  [] 
  []
 
-[31 <./5.Implementation/overview.pdf>]
+[31
+
+
+
+
+
+
+ <./5.Implementation/overview.pdf>]
 Overfull \hbox (2.00308pt too wide) in paragraph at lines 25--26
 \OT1/cmr/m/n/10 used to load and store mod-els. XML Meta-data In-ter-change (XM
 I) [[]],
  []
-
-
-LaTeX Warning: Reference `lst:xmi' on page 32 undefined on input line 31.
 
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
 (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -233,499 +229,179 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <7> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 34.
-
-
-LaTeX Warning: Reference `lst:xmi' on page 32 undefined on input line 41.
-
-
-Overfull \hbox (28.83408pt too wide) in paragraph at lines 41--42
-\OT1/cmr/m/n/10 types de-fined by the meta-model with the iden-ti-fier: http://
-www.cs.york.ac.uk/families.
- []
-
-[32] <5.Implementation/slot_model.pdf, id=43, 320.19624pt x 71.26625pt>
+ [32]
+<5.Implementation/slot_model.pdf, id=40, 320.19624pt x 71.26625pt>
 File: 5.Implementation/slot_model.pdf Graphic file (type pdf)
 
 <use 5.Implementation/slot_model.pdf>
-<5.Implementation/mof.pdf, id=44, 338.26375pt x 74.2775pt>
+<5.Implementation/mof.pdf, id=41, 338.26375pt x 74.2775pt>
 File: 5.Implementation/mof.pdf Graphic file (type pdf)
 
 <use 5.Implementation/mof.pdf> [33 <./5.Implementation/slot_model.pdf> <./5.Imp
 lementation/mof.pdf>]
-Overfull \hbox (0.18585pt too wide) in paragraph at lines 78--79
+Overfull \hbox (0.18585pt too wide) in paragraph at lines 80--81
 []\OT1/cmr/m/n/10 Conformance con-straints vary over mod-elling lan-guages. For
  ex-am-ple, Ecore,
  []
 
+<5.Implementation/GenericBinding.pdf, id=67, 454.69875pt x 276.03125pt>
+File: 5.Implementation/GenericBinding.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `lst:xmi' on page 34 undefined on input line 82.
+<use 5.Implementation/GenericBinding.pdf> [34] [35 <./5.Implementation/GenericB
+inding.pdf>]
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no † in font cmr10!
+ [36]
+<5.Implementation/families.pdf, id=91, 272.01625pt x 152.57pt>
+File: 5.Implementation/families.pdf Graphic file (type pdf)
 
-
-LaTeX Warning: Citation `gamma95patterns' on page 34 undefined on input line 82
-.
-
-
-LaTeX Warning: Reference `subsec:co-evolution' on page 34 undefined on input li
-ne 93.
-
-[34]
-
-LaTeX Warning: Reference `Analysis' on page 35 undefined on input line 103.
-
-
-LaTeX Warning: Citation `muller05hutn' on page 35 undefined on input line 113.
-
-
-LaTeX Warning: Citation `sintaks' on page 35 undefined on input line 113.
-
-[35]
-
-LaTeX Warning: Citation `nucleardef' on page 36 undefined on input line 124.
-
-
-LaTeX Warning: File `Family.png' not found on input line 129.
-
-
-./5.Implementation/implementation.tex:129: Package graphics Error: File `Family
-.png' not found.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.129     \includegraphics[scale=0.75]{Family.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2004/09/05 1.3 listings language file
-)
-
-./5.Implementation/implementation.tex:157: Package Listings Error: Couldn't loa
-d requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.157 ... label=lst:attributes, language=Families]
-                                                  
-The following languages weren't loadable:
-    ,families$
-This may cause errors in the sequel.
-
-
-./5.Implementation/implementation.tex:157: Package Listings Error: language fam
-ilies undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.157 ... label=lst:attributes, language=Families]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2004/09/05 1.3 listings language file
-)
-
-./5.Implementation/implementation.tex:169: Package Listings Error: Couldn't loa
-d requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169 ...label=lst:containment, language=Families]
-                                                  
-The following languages weren't loadable:
-    ,families$
-This may cause errors in the sequel.
-
-
-./5.Implementation/implementation.tex:169: Package Listings Error: language fam
-ilies undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169 ...label=lst:containment, language=Families]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[36] (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2004/09/05 1.3 listings language file
-)
-
-./5.Implementation/implementation.tex:179: Package Listings Error: Couldn't loa
-d requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.179 ...bel=lst:non-contained, language=Families]
-                                                  
-The following languages weren't loadable:
-    ,families$
-This may cause errors in the sequel.
-
-
-./5.Implementation/implementation.tex:179: Package Listings Error: language fam
-ilies undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.179 ...bel=lst:non-contained, language=Families]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `sec:motivation' on page 37 undefined on input line 19
-8.
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2004/09/05 1.3 listings language file
-)
-
-./5.Implementation/implementation.tex:210: Package Listings Error: Couldn't loa
-d requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.210 ...N., label=lst:boolean, language=Families]
-                                                  
-The following languages weren't loadable:
-    ,families$
-This may cause errors in the sequel.
-
-
-./5.Implementation/implementation.tex:210: Package Listings Error: language fam
-ilies undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.210 ...N., label=lst:boolean, language=Families]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2004/09/05 1.3 listings language file
-)
-
-./5.Implementation/implementation.tex:234: Package Listings Error: Couldn't loa
-d requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.234 ...el=lst:fullyqualified, language=Families]
-                                                  
-The following languages weren't loadable:
-    ,families$
-This may cause errors in the sequel.
-
-
-./5.Implementation/implementation.tex:234: Package Listings Error: language fam
-ilies undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.234 ...el=lst:fullyqualified, language=Families]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[37] (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2004/09/05 1.3 listings language file
-)
-
-./5.Implementation/implementation.tex:269: Package Listings Error: Couldn't loa
-d requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.269 ... label=lst:assocblock, language=Families]
-                                                  
-The following languages weren't loadable:
-    ,families$
-This may cause errors in the sequel.
-
-
-./5.Implementation/implementation.tex:269: Package Listings Error: language fam
-ilies undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.269 ... label=lst:assocblock, language=Families]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2004/09/05 1.3 listings language file
-)
-
-./5.Implementation/implementation.tex:285: Package Listings Error: Couldn't loa
-d requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.285 ... label=lst:associnfix, language=Families]
-                                                  
-The following languages weren't loadable:
-    ,families$
-This may cause errors in the sequel.
-
-
-./5.Implementation/implementation.tex:285: Package Listings Error: language fam
-ilies undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.285 ... label=lst:associnfix, language=Families]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[38]
-Overfull \hbox (1.36166pt too wide) in paragraph at lines 317--323
-[]\OT1/cmr/m/n/10 Notwithstanding the power of gener-ic-ity, there are sit-u-a-
-tions where a domain-
+<use 5.Implementation/families.pdf> [37 <./5.Implementation/families.pdf>]
+[38] [39]
+Overfull \hbox (33.56604pt too wide) in paragraph at lines 254--255
+[]\OT1/cmr/m/n/10 The core of the plat-form is the Ep-silon Ob-ject Lan-guage (
+EOL) [[]],
  []
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2004/09/05 1.3 listings language file
-)
+<5.Implementation/hutn_workflow.png, id=154, 760.8425pt x 195.73125pt>
+File: 5.Implementation/hutn_workflow.png Graphic file (type png)
 
-./5.Implementation/implementation.tex:345: Package Listings Error: Couldn't loa
-d requested language.
+<use 5.Implementation/hutn_workflow.png> [40 <./5.Implementation/hutn_workflow.
+png (PNG copy)>] [41] [42]
 
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.345 ...UTN., label=lst:fptc-hutn, language=FPTC]
-                                                  
-The following languages weren't loadable:
-    ,fptc$
-This may cause errors in the sequel.
+LaTeX Warning: Reference `fig:hutn_conformance_reporting' on page 43 undefined 
+on input line 357.
 
+[43]
+Overfull \hbox (17.19502pt too wide) in paragraph at lines 377--378
+[]\OT1/cmr/m/n/10 Notwithstanding the power of gener-ic-ity, there are sit-u-a-
+tions where a metamodel-
+ []
 
-./5.Implementation/implementation.tex:345: Package Listings Error: language fpt
-c undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.345 ...UTN., label=lst:fptc-hutn, language=FPTC]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (5.78pt too wide) in paragraph at lines 372--373
+[44]
+Overfull \hbox (11.33557pt too wide) in paragraph at lines 409--410
 \OT1/cmr/m/n/10 tion 5.3.4[]). This work de-scribed in this sec-tion was pub-li
 shed in [[]]. 
  []
 
-[39] <5.Implementation/petri_nets_step0.pdf, id=92, 254.9525pt x 153.57375pt>
+<5.Implementation/petri_nets_step0.pdf, id=173, 254.9525pt x 153.57375pt>
 File: 5.Implementation/petri_nets_step0.pdf Graphic file (type pdf)
 
 <use 5.Implementation/petri_nets_step0.pdf>
-<5.Implementation/petri_nets_step1.pdf, id=93, 336.25626pt x 234.8775pt>
+<5.Implementation/petri_nets_step1.pdf, id=174, 336.25626pt x 234.8775pt>
 File: 5.Implementation/petri_nets_step1.pdf Graphic file (type pdf)
 
 <use 5.Implementation/petri_nets_step1.pdf>
-Overfull \hbox (1.2688pt too wide) in paragraph at lines 395--396
+Overfull \hbox (1.2688pt too wide) in paragraph at lines 432--433
 \OT1/pcr/m/n/10 Place \OT1/cmr/m/n/10 has any num-ber of \OT1/pcr/m/n/10 src \O
 T1/cmr/m/n/10 or \OT1/pcr/m/n/10 dst Transition\OT1/cmr/m/n/10 s. Sim-i-larly, 
 a \OT1/pcr/m/n/10 Transition
  []
 
-[40 <./5.Implementation/petri_nets_step0.pdf> <./5.Implementation/petri_nets_st
-ep1.pdf>] [41]
-Overfull \hbox (16.99106pt too wide) in paragraph at lines 467--468
+[45 <./5.Implementation/petri_nets_step0.pdf> <./5.Implementation/petri_nets_st
+ep1.pdf>] [46]
+Overfull \hbox (16.99106pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 of \OT1/pcr/m/n/10 Place\OT1/cmr/m/n/10 s. The method is used t
 o ac-cess the \OT1/pcr/m/n/10 src \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 dst \OT1/
 cmr/m/n/10 fea-tures of \OT1/pcr/m/n/10 Transition\OT1/cmr/m/n/10 ,
  []
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
+[47] (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 470.
- [42]
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 507.
 Missing character: There is no ¬ in font pcrr7t!
 Missing character: There is no † in font pcrr7t!
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 481.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 518.
 Missing character: There is no ¬ in font pcrr7t!
 Missing character: There is no † in font pcrr7t!
 
-Overfull \hbox (88.20508pt too wide) in paragraph at lines 493--494
+Overfull \hbox (88.20508pt too wide) in paragraph at lines 530--531
 \OT1/cmr/m/n/10 Operator-based ap-proaches to man-ag-ing co-evolution, such as 
 COPE [[]],
  []
 
-
-Overfull \hbox (27.1412pt too wide) in paragraph at lines 499--500
+[48]
+Overfull \hbox (27.1412pt too wide) in paragraph at lines 536--537
 \OT1/cmr/m/n/10 sen-ta-tion. Fur-ther de-tails of this tech-nique are given in 
 [[]]. 
  []
 
-<5.Implementation/cope_mm.pdf, id=216, 363.3575pt x 144.54pt>
+<5.Implementation/cope_mm.pdf, id=301, 363.3575pt x 144.54pt>
 File: 5.Implementation/cope_mm.pdf Graphic file (type pdf)
 
-<use 5.Implementation/cope_mm.pdf> [43] [44 <./5.Implementation/cope_mm.pdf>]
-Underfull \vbox (badness 3428) has occurred while \output is active []
+<use 5.Implementation/cope_mm.pdf>
+Underfull \vbox (badness 1622) has occurred while \output is active []
 
- [45]
-Overfull \hbox (33.56604pt too wide) in paragraph at lines 567--568
+ [49 <./5.Implementation/cope_mm.pdf>] [50]
+Overfull \hbox (33.56604pt too wide) in paragraph at lines 604--605
 []\OT1/cmr/m/n/10 The core of the plat-form is the Ep-silon Ob-ject Lan-guage (
 EOL) [[]],
  []
 
 
-<5.Implementation/flock_abstract_syntax.pdf, id=244, 462.72874pt x 142.5325pt>
+<5.Implementation/flock_abstract_syntax.pdf, id=322, 462.72874pt x 142.5325pt>
 File: 5.Implementation/flock_abstract_syntax.pdf Graphic file (type pdf)
 
 <use 5.Implementation/flock_abstract_syntax.pdf>
-Overfull \hbox (2.0457pt too wide) in paragraph at lines 578--579
+Overfull \hbox (2.0457pt too wide) in paragraph at lines 615--616
  [][] 
  []
 
-[46 <./5.Implementation/flock_abstract_syntax.pdf>]
-Overfull \hbox (19.36142pt too wide) in paragraph at lines 612--613
+[51]
+Overfull \hbox (19.36142pt too wide) in paragraph at lines 649--650
 \OT1/cmr/m/n/10 meta-class of \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 is de-ter-mine
 d from the \OT1/pcr/m/n/10 evolvedType \OT1/cmr/m/n/10 (or the \OT1/pcr/m/n/10 
 originalType
  []
 
-
-Overfull \hbox (3.13936pt too wide) in paragraph at lines 616--617
+[52 <./5.Implementation/flock_abstract_syntax.pdf>]
+Overfull \hbox (3.13936pt too wide) in paragraph at lines 653--654
 []| \OT1/cmr/m/n/10 Ex-e-cute the body of \OT1/pcr/m/n/10 r \OT1/cmr/m/n/10 bin
 d-ing \OT1/pcr/m/n/10 e \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 
 to vari-ables named \OT1/pcr/m/n/10 original
  []
 
-[47]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 627.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 664.
 
- (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 627.
- [48]
-Overfull \hbox (44.95235pt too wide) in paragraph at lines 677--691
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 664.
+ [53] [54]
+Overfull \hbox (44.95235pt too wide) in paragraph at lines 714--728
  [][] 
  []
 
-) [49] [50] (./thesis.bbl [46
+) [55] (./thesis.bbl [58
 
 
 
 
-] [47]
+
+] [59] [60]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
- [48] [49]) [50] (./thesis.aux
+ [61]) [62] (./thesis.aux
 (./1.Introduction/introduction.aux) (./2.Background/background.aux)
 (./3.LiteratureReview/literature_review.aux) (./4.Analysis/analysis.aux)
 (./5.Implementation/implementation.aux) (./6.Evaluation/evaluation.aux)
-(./7.Conclusion/conclusion.aux))
+(./7.Conclusion/conclusion.aux) (./A.1.Experiments/experiments.aux))
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3129 strings out of 493886
- 47466 string characters out of 1151098
- 166573 words of memory out of 3000000
- 6258 multiletter control sequences out of 10000+50000
- 14047 words of font info for 49 fonts, out of 3000000 for 5000
+ 3143 strings out of 493886
+ 45300 string characters out of 1151098
+ 165339 words of memory out of 3000000
+ 6295 multiletter control sequences out of 10000+50000
+ 14399 words of font info for 50 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 30i,8n,53p,1353b,1615s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,8n,53p,1403b,1548s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
 08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
@@ -739,13 +415,14 @@ al/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/
 dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/
 type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blu
 esky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/c
-mti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pf
-b></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/
-local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/t
-exlive/2008/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on thesis.pdf (29 pages, 377064 bytes).
+mti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.pfb>
+</usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/lo
+cal/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texl
+ive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/200
+8/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on thesis.pdf (33 pages, 497730 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
+ 501 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

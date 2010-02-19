@@ -41,6 +41,12 @@ Eclipse.
 \newblock [Accessed 7 September 2009] Available at:
   \url{http://www.eclipse.org/modeling/mdt/uml2}, 2009.
 
+\bibitem[Eclipse 2010]{cdo}{$~$}
+Eclipse.
+\newblock {Connected Data Objects Model Repository Project Website} [online].
+\newblock [Accessed 15 February 2010] Available at:
+  \url{http://www.eclipse.org/modeling/emf/?project=cdo#cdo}, 2010.
+
 \bibitem[Fowler 1999]{fowler99refactoring}{$~$}
 Martin Fowler.
 \newblock {\em Refactoring: improving the design of existing code}.
@@ -81,6 +87,11 @@ IBM.
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.alphaworks.ibm.com/tech/emfatic}, 2005.
 
+\bibitem[IRISA 2007]{sintaks}{$~$}
+IRISA.
+\newblock {Sintaks}.
+\newblock \url{http://www.kermeta.org/sintaks/}, 2007.
+
 \bibitem[Jouault \& Kurtev 2005]{jouault05transforming}{$~$}
 Fr{\'e}d{\'e}ric Jouault and Ivan Kurtev.
 \newblock Transforming models with {ATL}.
@@ -100,19 +111,18 @@ Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock In {\em Proc. {ECMDA-FA}}, volume 4066 of {\em LNCS}, pages 128--142.
   Springer, 2006.
 
-\bibitem[Kolovos {\it et al.}\  2008]{kolovos08etl}{$~$}
+\bibitem[Kolovos {\it et al.}\  2008a]{kolovos08etl}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona Polack.
 \newblock {The Epsilon Transformation Language}.
 \newblock In {\em Proc. {ICMT}}, volume 5063 of {\em LNCS}, pages 46--60.
   Springer, 2008.
 
-\bibitem[Kolovos {\it et al.}\  2009]{kolovos09concordance}{$~$}
-Dimitrios~S. Kolovos, Nicholas Drivalos, Louis~M. Rose, Richard~F. Paige,
-  Fiona~A.C. Polack, and Kiran~J. Fernandes.
-\newblock Efficient maintenance and reconciliation of cross-model references
-  [submitted to].
-\newblock In {\em Proc. International Conference on Model Driven Engineering
-  Languages and Systems}, 2009.
+\bibitem[Kolovos {\it et al.}\  2008b]{kolovos08evl}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock On the evolution of {OCL} for capturing structural constraints in
+  modelling languages.
+\newblock In {\em Proc. Workshop on Rigorous Methods for Software Construction
+  and Analysis}, 2008.
 
 \bibitem[Kolovos 2009]{kolovos09thesis}{$~$}
 Dimitrios~S. Kolovos.
@@ -124,6 +134,17 @@ Dimitrios~S. Kolovos.
 Barbara~Staudt Lerner.
 \newblock A model for compound type changes encountered in schema evolution.
 \newblock {\em ACM Transactions on Database Systems}, 25(1):83--127, 2000.
+
+\bibitem[Merriam-Webster 2010]{nucleardef}{$~$}
+Merriam-Webster.
+\newblock {Definition of Nuclear Family}.
+\newblock \url{http://www.merriam-webster.com/dictionary/nuclear%20family},
+  2010.
+
+\bibitem[Muller \& Hassenforder 2005]{muller05hutn}{$~$}
+Pierre-Alain Muller and Michel Hassenforder.
+\newblock {HUTN as a Bridge between ModelWare and GrammarWare}.
+\newblock In {\em Proc. Workshop in Software Modelling Engineering}, 2005.
 
 \bibitem[Oldevik {\it et al.}\  2005]{oldevik05toward}{$~$}
 Jon Oldevik, Tor Neple, Roy Gr{\o}nmo, Jan~{\O}yvind Aagedal, and
@@ -180,6 +201,19 @@ Richard~F. Paige, Louis~M. Rose, Xiaocheng Ge, Dimitrios~S. Kolovos, and
 \newblock In {\em {MoDELS} Workshops and Symposia}, volume 5421 of {\em Lecture
   Notes in Computer Science}, pages 229--242. Springer, 2009.
 
+\bibitem[Parr 2007]{parr07antlr}{$~$}
+Terence Parr.
+\newblock {\em The Definitive {ANTLR} Reference: Building Domain-Specific
+  Languages}.
+\newblock Pragmatic Programmers, 2007.
+
+\bibitem[Rose {\it et al.}\  2008]{rose08egl}{$~$}
+Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
+\newblock {The Epsilon Generation Language}.
+\newblock In {\em Proc. European Conference on Model Driven Architecture --
+  Foundations and Applications}, volume 5095 of {\em LNCS}, pages 1--16.
+  Springer, 2008.
+
 \bibitem[Rose {\it et al.}\  2009a]{rose09enhanced}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Enhanced automation for managing model and metamodel inconsistency.
@@ -190,7 +224,15 @@ Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
 \newblock An analysis of approaches to model migration.
 \newblock In {\em Proc. Joint {MoDSE-MCCM} Workshop}, 2009.
 
-\bibitem[Rose {\it et al.}\  2010]{rose10flock}{$~$}
+\bibitem[Rose {\it et al.}\  2010a]{rose10concordance}{$~$}
+Louis~M. Rose, Dimitrios~S. Kolovos, Nicholas Drivalos, James.~R. Williams,
+  Richard~F. Paige, Fiona~A.C. Polack, and Kiran~J. Fernandes.
+\newblock Concordance: An efficient framework for managing model integrity
+  [submitted to].
+\newblock In {\em Proc. European Conference on Modelling Foundations and
+  Applications}, 2010.
+
+\bibitem[Rose {\it et al.}\  2010b]{rose10flock}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model migration with flock.
 \newblock In {\em In preparation}, 2010.
@@ -199,6 +241,13 @@ Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 Dag~I.K. Sj{\o}berg.
 \newblock Quantifying schema evolution.
 \newblock {\em Information \& Software Technology}, 35(1):35--44, 1993.
+
+\bibitem[Sprinkle 2008]{cicchetti08thesis}{$~$}
+Jonathan Sprinkle.
+\newblock {\em Difference Representation and Conflict Management in
+  {Model-Driven Engineering}}.
+\newblock PhD thesis, Universita' degli Studi dell'Aquila, L'Aquila, Italy,
+  2008.
 
 \bibitem[Steinberg {\it et al.}\  2008]{steinberg09emf}{$~$}
 Dave Steinberg, Frank Budinsky, Marcelo Paternostro, and Ed~Merks.
