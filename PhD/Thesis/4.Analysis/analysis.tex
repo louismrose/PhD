@@ -33,7 +33,7 @@ A candidate project for the study of co-evolution needs to define a metamodel an
 Ideally, a candidate project should include more than one metamodel adaptation in sequence, so as to represent the way in which the same development artefacts continue to evolve over time (optional requirement O1).
 
 \subsubsection{Synchronisation requirements}
-A candidate project for the study of synchronisation needs to define a model-to-model transformation (R6). Furthermore, a candidate project has to include many examples of source and target models for that transformation (R7). Crucially, a candidate project needs to provide many examples of the kinds of change (to either source or target model) that cause inconsistency between the models (R8). 
+A candidate project for the study of synchronisation needs to define a model-to-model transformation (R6). Furthermore, a candidate project has to include many examples of source and target models for that transformation (R7). A candidate project needs to provide many examples of the kinds of change (to either source or target model) that cause inconsistency between the models (R8). 
 
 Ideally, a candidate project should also include transformation chains (more than one model-to-model transformation, executed sequentially) (O2). Chains of transformations are prescribed by the MDA guidelines \cite{kleppe03mda}.
 
@@ -102,7 +102,7 @@ The Graphical Modelling Framework (GMF) \cite{gronback06gmf} allows the definiti
 
 GMF defines the metamodels for graphical, tooling and mapping definition models; and for generator models. The metamodels have changed considerably during the development of GMF. Some changes have caused inconsistency with GMF models. Presently, migration is encoded in Java. Gronback has stated\footnote{Private communication, 2008.} that the migration code is being ported to QVT (a model-to-model transformation language) as the Java code is difficult to maintain.
 
-GMF fulfils almost all of the requirements for the study. A large amount of the co-evolution data is available, including migration strategies. The GMF source code repository does not contain examples of the kinds of change that cause inconsistency between the models. However, GMF has a large number of users, and it was possible to gather this information elsewhere, as discussed in Chapter~\ref{Evaluation}. \textbf{Suitability for study:} Suitable for studying both categories of evolutionary change.
+GMF fulfils almost all of the requirements for the study. Co-evolution data is available, including migration strategies. The GMF source code repository does not contain examples of the kinds of change that cause inconsistency between the models (R8). GMF does, however, have a large number of users, and it might be possible to gather this information from those users. However, contacting GMF users and analysing any data they might supply was not possible in this thesis, due to time constraints.  \textbf{Suitability for study:} Suitable for studying co-evolution. Unsuitable for studying synchronisation, unless extra data is obtained from GMF users.
 
 \subsubsection{Summary of selection}
 The FPTC and xText projects were selected for a study of co-evolution. No appropriate projects were located for a study of synchronisation. The GMF project will not be studied immediately, but reserved for evaluation (Chapter~\ref{Evaluation}).

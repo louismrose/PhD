@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  19 FEB 2010 10:31
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  5 MAR 2010 12:39
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -266,19 +266,25 @@ EOL) [[]],
 File: 5.Implementation/hutn_workflow.png Graphic file (type png)
 
 <use 5.Implementation/hutn_workflow.png> [40 <./5.Implementation/hutn_workflow.
-png (PNG copy)>] [41] [42]
+png (PNG copy)>]
+Overfull \hbox (18.93442pt too wide) in paragraph at lines 272--273
+\OT1/cmr/m/n/10 e-ment, \OT1/pcr/m/n/10 PackageObject\OT1/cmr/m/n/10 , was adde
+d to the generic meta-model. A \OT1/pcr/m/n/10 PackageObject
+ []
+
+[41] [42]
 
 LaTeX Warning: Reference `fig:hutn_conformance_reporting' on page 43 undefined 
-on input line 357.
+on input line 360.
 
 [43]
-Overfull \hbox (17.19502pt too wide) in paragraph at lines 377--378
+Overfull \hbox (17.19502pt too wide) in paragraph at lines 380--381
 []\OT1/cmr/m/n/10 Notwithstanding the power of gener-ic-ity, there are sit-u-a-
 tions where a metamodel-
  []
 
 [44]
-Overfull \hbox (11.33557pt too wide) in paragraph at lines 409--410
+Overfull \hbox (11.33557pt too wide) in paragraph at lines 412--413
 \OT1/cmr/m/n/10 tion 5.3.4[]). This work de-scribed in this sec-tion was pub-li
 shed in [[]]. 
  []
@@ -291,7 +297,7 @@ File: 5.Implementation/petri_nets_step0.pdf Graphic file (type pdf)
 File: 5.Implementation/petri_nets_step1.pdf Graphic file (type pdf)
 
 <use 5.Implementation/petri_nets_step1.pdf>
-Overfull \hbox (1.2688pt too wide) in paragraph at lines 432--433
+Overfull \hbox (1.2688pt too wide) in paragraph at lines 435--436
 \OT1/pcr/m/n/10 Place \OT1/cmr/m/n/10 has any num-ber of \OT1/pcr/m/n/10 src \O
 T1/cmr/m/n/10 or \OT1/pcr/m/n/10 dst Transition\OT1/cmr/m/n/10 s. Sim-i-larly, 
 a \OT1/pcr/m/n/10 Transition
@@ -299,7 +305,7 @@ a \OT1/pcr/m/n/10 Transition
 
 [45 <./5.Implementation/petri_nets_step0.pdf> <./5.Implementation/petri_nets_st
 ep1.pdf>] [46]
-Overfull \hbox (16.99106pt too wide) in paragraph at lines 504--505
+Overfull \hbox (16.99106pt too wide) in paragraph at lines 507--508
 \OT1/cmr/m/n/10 of \OT1/pcr/m/n/10 Place\OT1/cmr/m/n/10 s. The method is used t
 o ac-cess the \OT1/pcr/m/n/10 src \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 dst \OT1/
 cmr/m/n/10 fea-tures of \OT1/pcr/m/n/10 Transition\OT1/cmr/m/n/10 ,
@@ -309,21 +315,21 @@ cmr/m/n/10 fea-tures of \OT1/pcr/m/n/10 Transition\OT1/cmr/m/n/10 ,
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 507.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 510.
 Missing character: There is no Â in font pcrr7t!
 Missing character: There is no   in font pcrr7t!
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 518.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 521.
 Missing character: There is no Â in font pcrr7t!
 Missing character: There is no   in font pcrr7t!
 
-Overfull \hbox (88.20508pt too wide) in paragraph at lines 530--531
+Overfull \hbox (88.20508pt too wide) in paragraph at lines 533--534
 \OT1/cmr/m/n/10 Operator-based ap-proaches to man-ag-ing co-evolution, such as 
 COPE [[]],
  []
 
 [48]
-Overfull \hbox (27.1412pt too wide) in paragraph at lines 536--537
+Overfull \hbox (27.1412pt too wide) in paragraph at lines 539--540
 \OT1/cmr/m/n/10 sen-ta-tion. Fur-ther de-tails of this tech-nique are given in 
 [[]]. 
  []
@@ -331,11 +337,9 @@ Overfull \hbox (27.1412pt too wide) in paragraph at lines 536--537
 <5.Implementation/cope_mm.pdf, id=301, 363.3575pt x 144.54pt>
 File: 5.Implementation/cope_mm.pdf Graphic file (type pdf)
 
-<use 5.Implementation/cope_mm.pdf>
-Underfull \vbox (badness 1622) has occurred while \output is active []
-
- [49 <./5.Implementation/cope_mm.pdf>] [50]
-Overfull \hbox (33.56604pt too wide) in paragraph at lines 604--605
+<use 5.Implementation/cope_mm.pdf> [49 <./5.Implementation/cope_mm.pdf>]
+[50]
+Overfull \hbox (33.56604pt too wide) in paragraph at lines 607--608
 []\OT1/cmr/m/n/10 The core of the plat-form is the Ep-silon Ob-ject Lan-guage (
 EOL) [[]],
  []
@@ -345,33 +349,33 @@ EOL) [[]],
 File: 5.Implementation/flock_abstract_syntax.pdf Graphic file (type pdf)
 
 <use 5.Implementation/flock_abstract_syntax.pdf>
-Overfull \hbox (2.0457pt too wide) in paragraph at lines 615--616
+Overfull \hbox (2.0457pt too wide) in paragraph at lines 618--619
  [][] 
  []
 
 [51]
-Overfull \hbox (19.36142pt too wide) in paragraph at lines 649--650
+Overfull \hbox (19.36142pt too wide) in paragraph at lines 652--653
 \OT1/cmr/m/n/10 meta-class of \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 is de-ter-mine
 d from the \OT1/pcr/m/n/10 evolvedType \OT1/cmr/m/n/10 (or the \OT1/pcr/m/n/10 
 originalType
  []
 
 [52 <./5.Implementation/flock_abstract_syntax.pdf>]
-Overfull \hbox (3.13936pt too wide) in paragraph at lines 653--654
+Overfull \hbox (3.13936pt too wide) in paragraph at lines 656--657
 []| \OT1/cmr/m/n/10 Ex-e-cute the body of \OT1/pcr/m/n/10 r \OT1/cmr/m/n/10 bin
 d-ing \OT1/pcr/m/n/10 e \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 
 to vari-ables named \OT1/pcr/m/n/10 original
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 664.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 667.
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 664.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 667.
  [53] [54]
-Overfull \hbox (44.95235pt too wide) in paragraph at lines 714--728
+Overfull \hbox (44.95235pt too wide) in paragraph at lines 717--731
  [][] 
  []
 
@@ -395,13 +399,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3143 strings out of 493886
- 45300 string characters out of 1151098
- 165339 words of memory out of 3000000
- 6295 multiletter control sequences out of 10000+50000
+ 3144 strings out of 493886
+ 45328 string characters out of 1151098
+ 166566 words of memory out of 3000000
+ 6296 multiletter control sequences out of 10000+50000
  14399 words of font info for 50 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 30i,8n,53p,1403b,1548s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,8n,53p,1403b,1551s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
 08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
@@ -420,7 +424,7 @@ mti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.pfb>
 cal/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texl
 ive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/200
 8/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on thesis.pdf (33 pages, 497730 bytes).
+Output written on thesis.pdf (33 pages, 497745 bytes).
 PDF statistics:
  501 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
