@@ -1,0 +1,60 @@
+@namespace(uri="minuml1", prefix="minuml1")
+package minuml1;
+
+class ModelElement {
+   
+}
+
+class StateMachine extends ModelElement {
+	val State[1] top;
+	val Transition[*] transitions;
+}
+
+class ActivityGraph extends StateMachine {
+   val Partition[*] parition;
+}
+
+class Partition extends ModelElement {
+   val ModelElement[*] contents;
+}
+
+abstract class StateVertex extends ModelElement {}
+
+class State extends StateVertex {
+   
+}
+
+class ActionState extends State {
+   attr boolean isDynamic;
+}
+
+class Pseudostate extends StateVertex {
+   attr PseudostateKind[1] kind;
+}
+
+class FinalState extends State {
+   
+}
+
+class Transition extends ModelElement {
+	ref StateVertex[1] source;
+	ref StateVertex[1] target;
+	val Guard[0..1] guard;
+}
+
+class Guard extends ModelElement {
+   val BooleanExpression[1] expression;
+}
+
+class BooleanExpression {
+   attr String language;
+   attr String body;
+}
+
+
+enum PseudostateKind {
+   inital   = 0;
+   join     = 1;
+   fork     = 2;
+   junction = 3;
+}

@@ -1,0 +1,95 @@
+pre {
+	var pkg := new Target!Package;
+}
+
+rule Activity
+	transform o : Source!ActivityGraph
+	to        m : Target!Activity {
+	
+	m.name    = o.name;
+	m.node    = o.top.subvertex.equivalent();
+	m.edge    = o.transitions.equivalent();
+	m.`group` = o.partition.equivalent();
+	
+	pkg.packagedElement.add(m);
+}
+
+rule Partitions
+	transform o : Source!Partition
+	to        m : Target!ActivityPartition {
+	
+	m.name := o.name;
+	
+	m.edges := o.contents.collect(e : Source!Transition | e.equivalent());
+	m.nodes := o.contents.reject(n : Source!ObjectFlowState | true).collect(n : Source!StateVertex | n.equivalent());	
+}
+
+rule ActionState2OpaqueAction
+	transform o : Source!ActionState
+	to        m : Target!OpaqueAction {
+
+	m.name := o.name;
+}
+
+rule Initials
+	transform o : Source!Pseudostate
+	to        m : Target!InitialNode {
+
+	guard: o.kind.toString() = 'pk_initial'
+}
+
+rule Decisions
+	transform o : Source!Pseudostate
+	to        m : Target!DecisionNode {
+
+	guard: o.kind.toString() = 'pk_junction'
+}
+
+rule Forks
+	transform o : Source!Pseudostate
+	to        m : Target!ForkNode {
+
+	guard: o.kind.toString() = 'pk_fork'
+}
+
+rule Merges
+	transform o : Source!Pseudostate
+	to        m : Target!MergeNode {
+
+	guard: o.kind.toString() = 'pk_join'
+}
+
+rule Finals
+	transform o : Source!FinalState
+	to        m : Target!ActivityFinalNode {
+}
+
+rule ObjectFlows
+	transform o : Source!Transition
+	to        m : Target!ObjectFlow {
+	
+	guard: o.target.isTypeOf(Source!ObjectFlowState)
+	
+	m.source := o.source.equivalent();
+	m.target := o.target.outgoing.first.target.equivalent();
+}
+
+rule ControlFlows
+	transform o : Source!Transition
+	to        m : Target!ControlFlow {
+	
+	guard: not o.source.isTypeOf(Source!ObjectFlowState) and
+	       not o.target.isTypeOf(Source!ObjectFlowState)
+	
+	m.`guard` := o.`guard`.equivalent(); 
+	
+	m.source := o.source.equivalent();
+	m.target := o.target.equivalent();
+}
+
+rule Guards
+	transform o : Source!Guard
+	to        m : Target!OpaqueExpression {
+	
+	m.body.add(o.expression.body);
+}

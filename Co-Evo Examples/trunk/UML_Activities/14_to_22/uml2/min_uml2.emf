@@ -1,0 +1,62 @@
+@namespace(uri="minuml2", prefix="minuml2")
+package minuml2;
+
+class Activity {
+	val ActivityNode[*] nodes;
+	val ActivityEdge[*] edges;
+	val ActivityGroup[*] groups;
+}
+
+class ActivityNode {
+	
+}
+
+abstract class ActivityGroup {
+   
+}
+
+class ActivityPartition extends ActivityGroup {
+   
+}
+
+class OpaqueAction extends ActivityNode {
+   
+}
+
+class ForkNode extends ActivityNode {
+   
+}
+
+class JoinNode extends ActivityNode {
+   
+}
+
+class DecisionNode extends ActivityNode {
+   
+}
+
+class ActivityFinalNode extends ActivityNode {
+   
+}
+
+class ActivityEdge {
+	ref ActivityNode[1] source;
+	ref ActivityNode[1] target;
+	val ValueSpecification[0..1] guard;
+}
+
+class ControlFlow extends ActivityEdge {
+   
+}
+
+class ObjectFlow extends ActivityEdge {
+   
+}
+
+class ValueSpecification {
+}
+
+class OpaqueExpression extends ValueSpecification {
+   attr String language;
+   attr String body;
+}
