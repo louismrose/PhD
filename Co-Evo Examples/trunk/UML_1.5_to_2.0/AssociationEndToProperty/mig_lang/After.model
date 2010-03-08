@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uml_15_to_20_associationEndToProperty:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml_15_to_20_associationEndToProperty="uml_15_to_20_associationEndToProperty">
+  <classes>
+    <ownedAttributes isStatic="true"/>
+    <ownedAttributes association="//@associations.0"/>
+    <ownedOperations/>
+  </classes>
+  <classes>
+    <ownedAttributes association="//@associations.0"/>
+    <ownedOperations/>
+  </classes>
+  <classes/>
+  <associations memberEnds="//@classes.0/@ownedAttributes.1 //@classes.1/@ownedAttributes.0" navigableEnds="//@classes.1/@ownedAttributes.0"/>
+</uml_15_to_20_associationEndToProperty:Model>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uml_15_to_20_associationEndToProperty:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml_15_to_20_associationEndToProperty="uml_15_to_20_associationEndToProperty" xmi:id="_X5rh8P7CEd6uDZMXsgfb_A">
+  <classes xmi:id="_ZUZzgP7CEd6uDZMXsgfb_A" associations="_bhk1sP7CEd6uDZMXsgfb_A">
+    <features xsi:type="uml_15_to_20_associationEndToProperty:Attribute" xmi:id="_Tj_pMP7EEd6uDZMXsgfb_A" ownerScope="classifier"/>
+    <features xsi:type="uml_15_to_20_associationEndToProperty:Operation" xmi:id="_T_6wMP7EEd6uDZMXsgfb_A"/>
+  </classes>
+  <classes xmi:id="_abW0gP7CEd6uDZMXsgfb_A" associations="_b6GqcP7CEd6uDZMXsgfb_A">
+    <features xsi:type="uml_15_to_20_associationEndToProperty:Operation" xmi:id="_Uh74IP7EEd6uDZMXsgfb_A"/>
+  </classes>
+  <classes xmi:id="_-ScOgP9wEd61--vHHW-Waw">
+    <features xsi:type="uml_15_to_20_associationEndToProperty:Operation" xmi:id="__Fxv8P9wEd61--vHHW-Waw" targetScope="classifier"/>
+  </classes>
+  <associations xmi:id="_a-dhkP7CEd6uDZMXsgfb_A">
+    <connections xmi:id="_bhk1sP7CEd6uDZMXsgfb_A" participant="_ZUZzgP7CEd6uDZMXsgfb_A"/>
+    <connections xmi:id="_b6GqcP7CEd6uDZMXsgfb_A" isNavigable="true" participant="_abW0gP7CEd6uDZMXsgfb_A"/>
+  </associations>
+</uml_15_to_20_associationEndToProperty:Model>

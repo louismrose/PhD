@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uml:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" name="untitledModel">
+  <packagedElement xsi:type="uml:Class" name="Foo"/>
+  <packagedElement xsi:type="uml:Class" name="Bar"/>
+  <packagedElement xsi:type="uml:Association" name="foo"/>
+</uml:Package>

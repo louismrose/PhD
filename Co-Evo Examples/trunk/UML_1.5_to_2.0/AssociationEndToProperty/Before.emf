@@ -1,0 +1,39 @@
+@namespace(uri="uml_15_to_20_associationEndToProperty", prefix="uml_15_to_20_associationEndToProperty")
+package uml_15_to_20_associationEndToProperty;
+
+class Model {
+  val Class[*] classes;
+  val Association[*] associations;
+}
+
+class Class {
+  val StructuralFeature[*] features;
+  ref AssociationEnd[*]#participant associations;
+}
+
+class Association {
+  val AssociationEnd[2..*]#association connections;
+}
+
+class AssociationEnd {
+  attr boolean isNavigable;
+  ref Class[1]#associations participant;
+  ref Association[1]#connections association;
+}
+
+abstract class StructuralFeature {
+  attr ScopeKind ownerScope;
+  attr ScopeKind targetScope;
+}
+
+class Attribute extends StructuralFeature {
+}
+
+class Operation extends StructuralFeature {
+}
+
+enum ScopeKind {
+  instance = 0;
+  classifier = 1;
+}
+

@@ -1,0 +1,19 @@
+for (p in UML14!Package.allInstances) {
+	p.println();
+	
+	var pt := new UML2!Package;
+	pt.name := p.name;
+	
+	for (o in p.ownedElement) {		
+		if (o.isTypeOf(UML14!Class)) {
+			var ct := new UML2!Class;
+			ct.name := o.name;
+			pt.packagedElement.add(ct);
+		
+		} else if (o.isTypeOf(UML14!Association)) {
+			var at := new UML2!Association;
+			at.name := o.name;
+			pt.packagedElement.add(at);
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uml_15_to_20_associationEndToProperty:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml_15_to_20_associationEndToProperty="uml_15_to_20_associationEndToProperty" xmi:id="_a7NuYP7EEd6uDZMXsgfb_A">
+  <classes xmi:id="_b6KC4P7EEd6uDZMXsgfb_A">
+    <ownedAttributes xmi:id="_dJN3AP7EEd6uDZMXsgfb_A" association="_chr88P7EEd6uDZMXsgfb_A"/>
+    <ownedAttributes xmi:id="_lNOwwP7EEd6uDZMXsgfb_A"/>
+    <ownedOperations xmi:id="_eBbRYP7EEd6uDZMXsgfb_A"/>
+  </classes>
+  <classes xmi:id="_cOJ88P7EEd6uDZMXsgfb_A">
+    <ownedAttributes xmi:id="_l6nbMP7EEd6uDZMXsgfb_A" aggregation="composite" association="_chr88P7EEd6uDZMXsgfb_A"/>
+    <ownedOperations xmi:id="_eXfA8P7EEd6uDZMXsgfb_A"/>
+  </classes>
+  <associations xmi:id="_chr88P7EEd6uDZMXsgfb_A" memberEnds="_dJN3AP7EEd6uDZMXsgfb_A _l6nbMP7EEd6uDZMXsgfb_A" navigableEnds="_l6nbMP7EEd6uDZMXsgfb_A"/>
+</uml_15_to_20_associationEndToProperty:Model>

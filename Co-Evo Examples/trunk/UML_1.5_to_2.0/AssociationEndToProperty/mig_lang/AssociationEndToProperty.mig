@@ -1,0 +1,32 @@
+migrate Association {
+	migrated.memberEnds := original.connections.equivalent();
+}
+
+migrate Class {
+	var features := original.features.equivalent();
+
+	migrated.operations := features.select(f|f.isKindOf(Migrated!Operation));
+
+	migrated.attributes := features.select(f|f.isKindOf(Migrated!Property));
+	migrated.attributes.addAll(original.associations.equivalent());
+}
+
+delete StructuralFeature when: original.targetScope = ScopeKind#classifier
+
+migrate Attribute to Property {
+	if (original.ownerScope = ScopeKind#classifier) {
+		migrated.isStatic = true;		
+	}
+}
+
+migrate Operation {
+	if (original.ownerScope = ScopeKind#classifier) {
+		migrated.isStatic = true;
+	}
+}
+
+migrate AssociationEnd to Property {
+	if (original.isNavigable) {
+		original.association.equivalent().navigableEnds.add(migrated);
+	}
+}

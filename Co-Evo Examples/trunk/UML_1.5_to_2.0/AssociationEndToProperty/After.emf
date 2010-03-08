@@ -1,0 +1,41 @@
+@namespace(uri="uml_15_to_20_associationEndToProperty", prefix="uml_15_to_20_associationEndToProperty")
+package uml_15_to_20_associationEndToProperty;
+
+class Model {
+  val Class[*] classes;
+  val Association[*] associations;
+}
+
+class Class {
+  val Property[*]#~class attributes;
+  val Operation[*] operations;
+}
+
+class Association {
+  ref Property[2..*]#association memberEnds;
+  ref Property[*] navigableEnds;
+}
+
+abstract class StructuralFeature {
+  attr boolean isStatic;
+}
+
+class Property extends StructuralFeature {
+  ref Class[1]#attributes ~class;
+  ref Association[1]#memberEnds association;
+}
+
+class Operation extends StructuralFeature {
+}
+
+enum AggregationKind {
+  none = 0;
+  shared = 1;
+  composite = 2;
+}
+
+enum ScopeKind {
+  instance = 0;
+  classifier = 1;
+}
+
