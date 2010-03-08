@@ -1,0 +1,49 @@
+migrate FigureGallery {
+	while (not migrated.figures.isEmpty()) {
+		migrated.descriptors.add(migrated.figures.first.createDescriptor());
+	}
+}
+
+migrate FigureAccessor {
+	original.println();
+}
+
+-- TODO : extend Flock to reduce this duplication. The following elements all descend from DiagramElement
+migrate Compartment {
+	migrated.figure := original.figure.equivalent().~descriptor;
+}
+
+migrate Connection {
+	migrated.figure := original.figure.equivalent().~descriptor;
+}
+
+migrate DiagramLabel {
+	migrated.figure   := original.figure.equivalent().~descriptor;
+	migrated.accessor := original.figure.equivalent().~accessor;
+}
+
+migrate Node {
+	migrated.figure := original.figure.equivalent().~descriptor;
+}
+
+operation Migrated!Figure createDescriptor() : Migrated!FigureDescriptor {
+	var descriptor := new Migrated!FigureDescriptor;
+	
+	descriptor.name := self.name;
+	descriptor.actualFigure := self;
+	
+	self.~descriptor := descriptor;
+	
+	self.children.forAll(l : Migrated!Label | l.addAccessor(descriptor));
+	
+	return descriptor;
+}
+
+operation Migrated!Label addAccessor(descriptor : Migrated!FigureDescriptor) {
+	var accessor := new Migrated!ChildAccess;
+	
+	accessor.figure := self;
+	self.~descriptor := descriptor;
+	self.~accessor   := accessor;
+	descriptor.accessors.add(accessor);
+}
