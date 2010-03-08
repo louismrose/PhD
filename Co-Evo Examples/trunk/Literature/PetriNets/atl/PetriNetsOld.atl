@@ -1,4 +1,4 @@
-module PetriNets;
+module PetriNetsOld;
 
 create Migrated : After from Original : Before;
 
@@ -7,51 +7,53 @@ rule Nets {
 		o : Before!Net
 	to
 		m : After!Net (
-			places <- o.places,
-			transitions <- o.transitions
+			places <- o.places->collect(p | thisModule.Places(p)),
+			transitions <- o.transitions->collect(t | thisModule.Transitions(t))
 		)
 }
 
-rule Places {
+unique lazy rule Places {
 	from
 		o : Before!Place
 	to
 		m : After!Place (
+			net  <- o.net,
 			name <- o.name
 		)
 }
 
-rule Transitions {
+unique lazy rule Transitions {
 	from
-		o : Before!Transition
+		o : Before!Transition  
 	to
 		m : After!Transition (
+			net  <- o.net,
 			name <- o.name,
 			"in" <- o.src->collect(p | thisModule.PTArcs(p,o)),
 			out  <- o.dst->collect(p | thisModule.TPArcs(o,p))
 		)
 }
 
-lazy rule PTArcs {
+unique lazy rule PTArcs {
 	from
 		place       : Before!Place,
 		destination : Before!Transition
 	to
 		ptarcs : After!PTArc (
-			src <- place,
+			src <- thisModule.Places(place),
 			dst <- destination,
 			net <- destination.net
 		)
 }
 
-lazy rule TPArcs {
+unique lazy rule TPArcs {
 	from
 		transition  : Before!Transition,
 		destination : Before!Place
 	to
 		tparcs : After!TPArc (
 			src <- transition,
-			dst <- destination,
+			dst <- thisModule.Places(destination),
 			net <- transition.net
 		)
 }
