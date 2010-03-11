@@ -2,7 +2,7 @@
 <launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
 <intAttribute key="migratedModel" value="1"/>
 <listAttribute key="models">
-<listEntry value="#&#10;#Thu Mar 11 09:44:55 GMT 2010&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;isMetamodel=false&#10;type=MDR&#10;modelFile=/Co-Evo Examples/UML_Activities/14_to_22/uml1/OrderProduct.xmi&#10;isMetamodelFileRelative=true&#10;metamodelFile=/Co-Evo Examples/UML_Activities/14_to_22/uml1/UML14.xml&#10;extent=UML&#10;isModelFileRelative=true&#10;"/>
+<listEntry value="#&#10;#Thu Mar 11 09:59:00 GMT 2010&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;isMetamodel=false&#10;type=MDR&#10;modelFile=/Co-Evo Examples/UML_Activities/14_to_22/Before.xmi&#10;isMetamodelFileRelative=true&#10;metamodelFile=/Co-Evo Examples/UML_Activities/14_to_22/Before.xml&#10;extent=UML&#10;isModelFileRelative=true&#10;"/>
 <listEntry value="#&#10;#Thu Mar 11 09:45:01 GMT 2010&#10;isMetamodelFileBased=false&#10;name=Migrated&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=http\://www.eclipse.org/uml2/3.0.0/UML&#10;type=EMF&#10;modelFile=/Co-Evo Examples/UML_Activities/14_to_22/flock/Migrated.uml&#10;expand=true&#10;metamodelFile=&#10;"/>
 </listAttribute>
 <intAttribute key="originalModel" value="0"/>

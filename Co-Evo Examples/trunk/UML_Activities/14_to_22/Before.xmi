@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8' ?>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Thu Mar 11 09:28:40 GMT 2010'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Thu Mar 11 10:03:41 GMT 2010'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.28.1(6) revised on $Date: 2007-05-12 08:08:08 +0200 (Sat, 12 May 2007) $ </XMI.exporterVersion>
@@ -26,7 +26,7 @@
                   </UML:StateVertex.outgoing>
                 </UML:Pseudostate>
                 <UML:ActionState xmi.id = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000CE2'
-                  name = 'Request Service' isSpecification = 'false' isDynamic = 'false'>
+                  name = 'Request service' isSpecification = 'false' isDynamic = 'false'>
                   <UML:StateVertex.outgoing>
                     <UML:Transition xmi.idref = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000CE7'/>
                   </UML:StateVertex.outgoing>
@@ -84,7 +84,7 @@
                   </UML:ObjectFlowState.type>
                 </UML:ObjectFlowState>
                 <UML:ActionState xmi.id = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000CFA'
-                  name = 'Fill Order' isSpecification = 'false' isDynamic = 'false'>
+                  name = 'Fill order' isSpecification = 'false' isDynamic = 'false'>
                   <UML:StateVertex.outgoing>
                     <UML:Transition xmi.idref = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000D06'/>
                   </UML:StateVertex.outgoing>
@@ -136,7 +136,7 @@
                   </UML:ObjectFlowState.type>
                 </UML:ObjectFlowState>
                 <UML:ActionState xmi.id = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000D08'
-                  isSpecification = 'false' isDynamic = 'false'>
+                  name = 'Pay' isSpecification = 'false' isDynamic = 'false'>
                   <UML:StateVertex.outgoing>
                     <UML:Transition xmi.idref = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000D0C'/>
                   </UML:StateVertex.outgoing>
@@ -154,7 +154,7 @@
                   </UML:State.entry>
                 </UML:ActionState>
                 <UML:ActionState xmi.id = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000D0D'
-                  isSpecification = 'false' isDynamic = 'false'>
+                  name = 'Deliver order' isSpecification = 'false' isDynamic = 'false'>
                   <UML:StateVertex.outgoing>
                     <UML:Transition xmi.idref = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000D15'/>
                   </UML:StateVertex.outgoing>
@@ -172,7 +172,7 @@
                   </UML:State.entry>
                 </UML:ActionState>
                 <UML:ActionState xmi.id = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000D11'
-                  isSpecification = 'false' isDynamic = 'false'>
+                  name = 'Collect order' isSpecification = 'false' isDynamic = 'false'>
                   <UML:StateVertex.outgoing>
                     <UML:Transition xmi.idref = '-112-32--95--40--1503c852:12723e4f7ad:-8000:00000000000011AB'/>
                   </UML:StateVertex.outgoing>
@@ -212,7 +212,7 @@
                   </UML:StateVertex.incoming>
                 </UML:Pseudostate>
                 <UML:ActionState xmi.id = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000D24'
-                  isSpecification = 'false' isDynamic = 'false'>
+                  name = 'Restock' isSpecification = 'false' isDynamic = 'false'>
                   <UML:StateVertex.outgoing>
                     <UML:Transition xmi.idref = '-112-32--95--40--1503c852:12723e4f7ad:-8000:0000000000000D40'/>
                   </UML:StateVertex.outgoing>

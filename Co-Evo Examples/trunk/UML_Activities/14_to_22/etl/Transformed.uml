@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_OeOkICUiEd-w7uFuGwQ4tQ">
-  <packagedElement xmi:type="uml:Activity" xmi:id="_OeRAYCUiEd-w7uFuGwQ4tQ">
-    <node xmi:type="uml:OpaqueAction" xmi:id="_OeS1kCUiEd-w7uFuGwQ4tQ" name="Order Product" outgoing="_Oe1BECUiEd-w7uFuGwQ4tQ _OehfECUiEd-w7uFuGwQ4tQ" incoming="_OekiYCUiEd-w7uFuGwQ4tQ _OemXkCUiEd-w7uFuGwQ4tQ" inPartition="_OeRncCUiEd-w7uFuGwQ4tQ"/>
-    <node xmi:type="uml:InitialNode" xmi:id="_OeUDsCUiEd-w7uFuGwQ4tQ" outgoing="_OekiYCUiEd-w7uFuGwQ4tQ" inPartition="_OeRncCUiEd-w7uFuGwQ4tQ"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="_OeVR0CUiEd-w7uFuGwQ4tQ" outgoing="_OemXkCUiEd-w7uFuGwQ4tQ _Oe22QCUiEd-w7uFuGwQ4tQ" incoming="_Oe1BECUiEd-w7uFuGwQ4tQ" inPartition="_OeRncCUiEd-w7uFuGwQ4tQ"/>
-    <node xmi:type="uml:ForkNode" xmi:id="_OeV44CUiEd-w7uFuGwQ4tQ" incoming="_Oe22QCUiEd-w7uFuGwQ4tQ" inPartition="_OeRncCUiEd-w7uFuGwQ4tQ"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_OeS1kSUiEd-w7uFuGwQ4tQ" name="Pay with PayPal" outgoing="_Oe55kCUiEd-w7uFuGwQ4tQ" incoming="_OehfECUiEd-w7uFuGwQ4tQ" inPartition="_OeSOgCUiEd-w7uFuGwQ4tQ"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_OeS1kiUiEd-w7uFuGwQ4tQ" name="Collect bank details" outgoing="_Oe4EYCUiEd-w7uFuGwQ4tQ" inPartition="_OeSOgCUiEd-w7uFuGwQ4tQ"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_OeS1kyUiEd-w7uFuGwQ4tQ" name="Charge bank" outgoing="_Oe7uwCUiEd-w7uFuGwQ4tQ" incoming="_Oe4EYCUiEd-w7uFuGwQ4tQ" inPartition="_OeSOgCUiEd-w7uFuGwQ4tQ"/>
-    <node xmi:type="uml:MergeNode" xmi:id="_OeXHACUiEd-w7uFuGwQ4tQ" outgoing="_Oe884CUiEd-w7uFuGwQ4tQ" incoming="_Oe55kCUiEd-w7uFuGwQ4tQ _Oe7uwCUiEd-w7uFuGwQ4tQ" inPartition="_OeSOgCUiEd-w7uFuGwQ4tQ"/>
-    <node xmi:type="uml:ActivityFinalNode" xmi:id="_OeYVICUiEd-w7uFuGwQ4tQ" incoming="_Oe884CUiEd-w7uFuGwQ4tQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_OekiYCUiEd-w7uFuGwQ4tQ" source="_OeUDsCUiEd-w7uFuGwQ4tQ" target="_OeS1kCUiEd-w7uFuGwQ4tQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_OemXkCUiEd-w7uFuGwQ4tQ" source="_OeVR0CUiEd-w7uFuGwQ4tQ" target="_OeS1kCUiEd-w7uFuGwQ4tQ">
-      <guard xmi:type="uml:OpaqueExpression" xmi:id="_OfBOUCUiEd-w7uFuGwQ4tQ">
-        <body>more products</body>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_b_BhICztEd--ifnHk8Skpw">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_b_EkcCztEd--ifnHk8Skpw" name="graph">
+    <node xmi:type="uml:InitialNode" xmi:id="_b_HnwCztEd--ifnHk8Skpw" outgoing="_b_e0ICztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_b_GZoCztEd--ifnHk8Skpw" name="Request service" outgoing="_b_gCQCztEd--ifnHk8Skpw" incoming="_b_e0ICztEd--ifnHk8Skpw" inPartition="_b_FykCztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:ForkNode" xmi:id="_b_KEACztEd--ifnHk8Skpw" outgoing="_b_QKoCztEd--ifnHk8Skpw _b_s2kCztEd--ifnHk8Skpw" incoming="_b_gCQCztEd--ifnHk8Skpw" inPartition="_b_FykCztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_b_GZoSztEd--ifnHk8Skpw" name="Take order" outgoing="_b_R_0CztEd--ifnHk8Skpw" incoming="_b_QKoCztEd--ifnHk8Skpw" inPartition="_b_FykSztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_b_GZoiztEd--ifnHk8Skpw" name="Fill order" outgoing="_b_Sm4CztEd--ifnHk8Skpw" incoming="_b_4cwCztEd--ifnHk8Skpw" inPartition="_b_FykiztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_b_LSICztEd--ifnHk8Skpw" outgoing="_b_wg8CztEd--ifnHk8Skpw" incoming="_b_Sm4CztEd--ifnHk8Skpw _b_urwCztEd--ifnHk8Skpw" inPartition="_b_FykSztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_b_GZoyztEd--ifnHk8Skpw" name="Pay" outgoing="_b_urwCztEd--ifnHk8Skpw" incoming="_b_s2kCztEd--ifnHk8Skpw" inPartition="_b_FykCztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_b_GZpCztEd--ifnHk8Skpw" name="Deliver order" outgoing="_b_W4UCztEd--ifnHk8Skpw" incoming="_b_wg8CztEd--ifnHk8Skpw" inPartition="_b_FykSztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_b_GZpSztEd--ifnHk8Skpw" name="Collect order" outgoing="_b_8HICztEd--ifnHk8Skpw" incoming="_b_W4UCztEd--ifnHk8Skpw" inPartition="_b_FykCztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_b_I14CztEd--ifnHk8Skpw" outgoing="_b_1ZcCztEd--ifnHk8Skpw _b_3OoCztEd--ifnHk8Skpw" incoming="_b_R_0CztEd--ifnHk8Skpw" inPartition="_b_FykiztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_b_GZpiztEd--ifnHk8Skpw" name="Restock" outgoing="_b_6R8CztEd--ifnHk8Skpw" incoming="_b_3OoCztEd--ifnHk8Skpw" inPartition="_b_FykiztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_b_I14SztEd--ifnHk8Skpw" outgoing="_b_4cwCztEd--ifnHk8Skpw" incoming="_b_1ZcCztEd--ifnHk8Skpw _b_6R8CztEd--ifnHk8Skpw" inPartition="_b_FykiztEd--ifnHk8Skpw"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_b_MgQCztEd--ifnHk8Skpw" incoming="_b_8HICztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_e0ICztEd--ifnHk8Skpw" source="_b_HnwCztEd--ifnHk8Skpw" target="_b_GZoCztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_gCQCztEd--ifnHk8Skpw" source="_b_GZoCztEd--ifnHk8Skpw" target="_b_KEACztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_b_QKoCztEd--ifnHk8Skpw" source="_b_KEACztEd--ifnHk8Skpw" target="_b_GZoSztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_b_R_0CztEd--ifnHk8Skpw" source="_b_GZoSztEd--ifnHk8Skpw" target="_b_I14CztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_b_Sm4CztEd--ifnHk8Skpw" source="_b_GZoiztEd--ifnHk8Skpw" target="_b_LSICztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_s2kCztEd--ifnHk8Skpw" source="_b_KEACztEd--ifnHk8Skpw" target="_b_GZoyztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_urwCztEd--ifnHk8Skpw" source="_b_GZoyztEd--ifnHk8Skpw" target="_b_LSICztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_wg8CztEd--ifnHk8Skpw" source="_b_LSICztEd--ifnHk8Skpw" target="_b_GZpCztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_b_W4UCztEd--ifnHk8Skpw" source="_b_GZpCztEd--ifnHk8Skpw" target="_b_GZpSztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_1ZcCztEd--ifnHk8Skpw" source="_b_I14CztEd--ifnHk8Skpw" target="_b_I14SztEd--ifnHk8Skpw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_b_8uMCztEd--ifnHk8Skpw">
+        <body>in stock</body>
       </guard>
     </edge>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_Oe1BECUiEd-w7uFuGwQ4tQ" source="_OeS1kCUiEd-w7uFuGwQ4tQ" target="_OeVR0CUiEd-w7uFuGwQ4tQ">
-      <guard xmi:type="uml:OpaqueExpression" xmi:id="_OfBOUSUiEd-w7uFuGwQ4tQ">
-        <body>no more products</body>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_3OoCztEd--ifnHk8Skpw" source="_b_I14CztEd--ifnHk8Skpw" target="_b_GZpiztEd--ifnHk8Skpw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_b_8uMSztEd--ifnHk8Skpw">
+        <body>not in stock</body>
       </guard>
     </edge>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_Oe22QCUiEd-w7uFuGwQ4tQ" source="_OeVR0CUiEd-w7uFuGwQ4tQ" target="_OeV44CUiEd-w7uFuGwQ4tQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_Oe4EYCUiEd-w7uFuGwQ4tQ" source="_OeS1kiUiEd-w7uFuGwQ4tQ" target="_OeS1kyUiEd-w7uFuGwQ4tQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_Oe55kCUiEd-w7uFuGwQ4tQ" source="_OeS1kSUiEd-w7uFuGwQ4tQ" target="_OeXHACUiEd-w7uFuGwQ4tQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_Oe7uwCUiEd-w7uFuGwQ4tQ" source="_OeS1kyUiEd-w7uFuGwQ4tQ" target="_OeXHACUiEd-w7uFuGwQ4tQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_Oe884CUiEd-w7uFuGwQ4tQ" source="_OeXHACUiEd-w7uFuGwQ4tQ" target="_OeYVICUiEd-w7uFuGwQ4tQ"/>
-    <edge xmi:type="uml:ObjectFlow" xmi:id="_OehfECUiEd-w7uFuGwQ4tQ" name="" source="_OeS1kCUiEd-w7uFuGwQ4tQ" target="_OeS1kSUiEd-w7uFuGwQ4tQ"/>
-    <group xmi:type="uml:ActivityPartition" xmi:id="_OeRncCUiEd-w7uFuGwQ4tQ" name="Customer" node="_OeV44CUiEd-w7uFuGwQ4tQ _OeVR0CUiEd-w7uFuGwQ4tQ _OeUDsCUiEd-w7uFuGwQ4tQ _OeS1kCUiEd-w7uFuGwQ4tQ"/>
-    <group xmi:type="uml:ActivityPartition" xmi:id="_OeSOgCUiEd-w7uFuGwQ4tQ" name="Sales" node="_OeXHACUiEd-w7uFuGwQ4tQ _OeS1kyUiEd-w7uFuGwQ4tQ _OeS1kiUiEd-w7uFuGwQ4tQ _OeS1kSUiEd-w7uFuGwQ4tQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_4cwCztEd--ifnHk8Skpw" source="_b_I14SztEd--ifnHk8Skpw" target="_b_GZoiztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_6R8CztEd--ifnHk8Skpw" source="_b_GZpiztEd--ifnHk8Skpw" target="_b_I14SztEd--ifnHk8Skpw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b_8HICztEd--ifnHk8Skpw" source="_b_GZpSztEd--ifnHk8Skpw" target="_b_MgQCztEd--ifnHk8Skpw"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_b_FykCztEd--ifnHk8Skpw" name="Customer" node="_b_GZoyztEd--ifnHk8Skpw _b_GZpSztEd--ifnHk8Skpw _b_KEACztEd--ifnHk8Skpw _b_GZoCztEd--ifnHk8Skpw"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_b_FykSztEd--ifnHk8Skpw" name="Sales" node="_b_LSICztEd--ifnHk8Skpw _b_GZoSztEd--ifnHk8Skpw _b_GZpCztEd--ifnHk8Skpw"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_b_FykiztEd--ifnHk8Skpw" name="Stockroom" node="_b_GZpiztEd--ifnHk8Skpw _b_GZoiztEd--ifnHk8Skpw _b_I14SztEd--ifnHk8Skpw _b_I14CztEd--ifnHk8Skpw"/>
   </packagedElement>
 </uml:Package>
