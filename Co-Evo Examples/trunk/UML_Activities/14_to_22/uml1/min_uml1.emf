@@ -2,7 +2,8 @@
 package minuml1;
 
 class ModelElement {
-   
+   attr String name;
+   ref Partition[1]#contents partition;
 }
 
 class StateMachine extends ModelElement {
@@ -15,13 +16,18 @@ class ActivityGraph extends StateMachine {
 }
 
 class Partition extends ModelElement {
-   val ModelElement[*] contents;
+   ref ModelElement[*]#partition contents;
 }
 
-abstract class StateVertex extends ModelElement {}
+abstract class StateVertex extends ModelElement {
+	ref Transition[*]#source outgoing;
+	ref Transition[*]#target incoming;
+}
 
-class State extends StateVertex {
-   
+class State extends StateVertex {}
+
+class CompositeState extends State {
+   val StateVertex[*] subvertex;
 }
 
 class ActionState extends State {
@@ -32,13 +38,17 @@ class Pseudostate extends StateVertex {
    attr PseudostateKind[1] kind;
 }
 
+class ObjectFlowState extends State {
+   val ModelElement[1] type;
+}
+
 class FinalState extends State {
    
 }
 
 class Transition extends ModelElement {
-	ref StateVertex[1] source;
-	ref StateVertex[1] target;
+	ref StateVertex[1]#outgoing source;
+	ref StateVertex[1]#incoming target;
 	val Guard[0..1] guard;
 }
 

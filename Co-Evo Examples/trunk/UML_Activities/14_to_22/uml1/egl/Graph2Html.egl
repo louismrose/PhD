@@ -1,0 +1,13 @@
+[%
+	for (state in State.all) {
+		var template := TemplateFactory.load("State2Page.egl");
+		template.populate("state", state);
+		template.generate(state.name + ".html");
+	}
+	
+	for (state in Pseudostate.all) {
+		var template := TemplateFactory.load("State2Page.egl");
+		template.populate("state", state);
+		template.generate(state.name + ".html");
+	}
+%]

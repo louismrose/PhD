@@ -1,0 +1,24 @@
+migrate FinalState {
+	migrated.name := 'Finished';
+}
+
+migrate Pseudostate {
+	if (migrated.name.isUndefined()) {
+		migrated.name := original.kind.toString().toName();	
+	}
+}
+
+operation String toName() {
+	if (not getMap().containsKey(self)) {
+		getMap().put(self, 0);
+	}
+	
+	getMap().put(self, getMap().get(self) + 1);
+	
+	return self + getMap().get(self);
+}
+
+@cached
+operation getMap() {
+	return new Map;
+}

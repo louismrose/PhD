@@ -3,7 +3,11 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="minuml1"
     nsURI="minuml1" nsPrefix="minuml1">
-  <eClassifiers xsi:type="ecore:EClass" name="ModelElement" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partition" lowerBound="1"
+        eType="#//Partition" eOpposite="#//Partition/contents"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StateMachine" eSuperTypes="#//ModelElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="top" lowerBound="1" eType="#//State"
         containment="true"/>
@@ -16,22 +20,35 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Partition" eSuperTypes="#//ModelElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="contents" upperBound="-1"
-        eType="#//ModelElement" containment="true"/>
+        eType="#//ModelElement" eOpposite="#//ModelElement/partition"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StateVertex" abstract="true" eSuperTypes="#//ModelElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StateVertex" abstract="true" eSuperTypes="#//ModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
+        eType="#//Transition" eOpposite="#//Transition/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
+        eType="#//Transition" eOpposite="#//Transition/target"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//StateVertex"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeState" eSuperTypes="#//State">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subvertex" upperBound="-1"
+        eType="#//StateVertex" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActionState" eSuperTypes="#//State">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDynamic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pseudostate" eSuperTypes="#//StateVertex">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" lowerBound="1" eType="#//PseudostateKind"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectFlowState" eSuperTypes="#//State">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//ModelElement"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FinalState" eSuperTypes="#//State"/>
   <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//ModelElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//StateVertex"/>
+        eType="#//StateVertex" eOpposite="#//StateVertex/outgoing"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//StateVertex"/>
+        eType="#//StateVertex" eOpposite="#//StateVertex/incoming"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="guard" eType="#//Guard"
         containment="true"/>
   </eClassifiers>

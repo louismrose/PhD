@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
+<intAttribute key="migratedModel" value="1"/>
+<listAttribute key="models">
+<listEntry value="#&#10;#Thu Mar 11 14:46:13 GMT 2010&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;isMetamodel=false&#10;type=MDR&#10;modelFile=/Co-Evo Examples/UML_Activities/14_to_22/Before.xmi&#10;isMetamodelFileRelative=true&#10;metamodelFile=/Co-Evo Examples/UML_Activities/14_to_22/Before.xml&#10;extent=UML&#10;isModelFileRelative=true&#10;"/>
+<listEntry value="#&#10;#Thu Mar 11 14:45:38 GMT 2010&#10;isMetamodelFileBased=false&#10;name=Migrated&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=minuml1&#10;type=EMF&#10;modelFile=/Co-Evo Examples/UML_Activities/14_to_22/uml1/Before2.model&#10;expand=true&#10;metamodelFile=&#10;"/>
+</listAttribute>
+<intAttribute key="originalModel" value="0"/>
+<stringAttribute key="source" value="/Co-Evo Examples/UML_Activities/14_to_22/uml1/Xmi2Ecore.mig"/>
+</launchConfiguration>

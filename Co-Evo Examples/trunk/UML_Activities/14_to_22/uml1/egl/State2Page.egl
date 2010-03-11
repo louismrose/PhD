@@ -1,0 +1,19 @@
+<h1>[%=state.toString()%]</h1>
+
+[% for (outgoing in state.outgoing) { %]
+	<a href="[%=outgoing.target.name%].html">[%=outgoing.target.name%]</a>
+[% } %]
+
+[%
+	operation ModelElement toString() {
+		var result := '';
+		
+		if (self.partition.isDefined()) {
+			result := result + self.partition.name + '::';
+		}
+		
+		result := result + self.name;
+		
+		return result; 
+	}
+%]

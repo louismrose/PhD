@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:minuml1="minuml1">
+  <minuml1:ActivityGraph name="graph">
+    <top xsi:type="minuml1:CompositeState" name="top">
+      <subvertex xsi:type="minuml1:Pseudostate" name="pk_initial1" outgoing="/0/@transitions.0"/>
+      <subvertex xsi:type="minuml1:ActionState" name="Request service" partition="/1" outgoing="/0/@transitions.1" incoming="/0/@transitions.0"/>
+      <subvertex xsi:type="minuml1:Pseudostate" name="pk_fork1" partition="/1" outgoing="/0/@transitions.2 /0/@transitions.7" incoming="/0/@transitions.1"/>
+      <subvertex xsi:type="minuml1:ActionState" name="Take order" partition="/2" outgoing="/0/@transitions.4" incoming="/0/@transitions.3"/>
+      <subvertex xsi:type="minuml1:ObjectFlowState" name="Placed Order" partition="/2" outgoing="/0/@transitions.3" incoming="/0/@transitions.2"/>
+      <subvertex xsi:type="minuml1:ActionState" name="Fill order" partition="/3" outgoing="/0/@transitions.5" incoming="/0/@transitions.15"/>
+      <subvertex xsi:type="minuml1:ObjectFlowState" name="Entered Order" partition="/3" outgoing="/0/@transitions.12" incoming="/0/@transitions.4"/>
+      <subvertex xsi:type="minuml1:Pseudostate" name="pk_join1" partition="/2" outgoing="/0/@transitions.9" incoming="/0/@transitions.6 /0/@transitions.8"/>
+      <subvertex xsi:type="minuml1:ObjectFlowState" name="Filled Order" partition="/3" outgoing="/0/@transitions.6" incoming="/0/@transitions.5"/>
+      <subvertex xsi:type="minuml1:ActionState" name="Pay" partition="/1" outgoing="/0/@transitions.8" incoming="/0/@transitions.7"/>
+      <subvertex xsi:type="minuml1:ActionState" name="Deliver order" partition="/2" outgoing="/0/@transitions.10" incoming="/0/@transitions.9"/>
+      <subvertex xsi:type="minuml1:ActionState" name="Collect order" partition="/1" outgoing="/0/@transitions.17" incoming="/0/@transitions.11"/>
+      <subvertex xsi:type="minuml1:ObjectFlowState" name="Delivered Order" partition="/2" outgoing="/0/@transitions.11" incoming="/0/@transitions.10"/>
+      <subvertex xsi:type="minuml1:Pseudostate" name="pk_junction1" partition="/3" outgoing="/0/@transitions.13 /0/@transitions.14" incoming="/0/@transitions.12"/>
+      <subvertex xsi:type="minuml1:ActionState" name="Restock" partition="/3" outgoing="/0/@transitions.16" incoming="/0/@transitions.14"/>
+      <subvertex xsi:type="minuml1:Pseudostate" name="pk_junction2" partition="/3" outgoing="/0/@transitions.15" incoming="/0/@transitions.13 /0/@transitions.16"/>
+      <subvertex xsi:type="minuml1:FinalState" name="Finished" incoming="/0/@transitions.17"/>
+    </top>
+    <transitions source="/0/@top/@subvertex.0" target="/0/@top/@subvertex.1"/>
+    <transitions source="/0/@top/@subvertex.1" target="/0/@top/@subvertex.2"/>
+    <transitions source="/0/@top/@subvertex.2" target="/0/@top/@subvertex.4"/>
+    <transitions source="/0/@top/@subvertex.4" target="/0/@top/@subvertex.3"/>
+    <transitions source="/0/@top/@subvertex.3" target="/0/@top/@subvertex.6"/>
+    <transitions source="/0/@top/@subvertex.5" target="/0/@top/@subvertex.8"/>
+    <transitions source="/0/@top/@subvertex.8" target="/0/@top/@subvertex.7"/>
+    <transitions source="/0/@top/@subvertex.2" target="/0/@top/@subvertex.9"/>
+    <transitions source="/0/@top/@subvertex.9" target="/0/@top/@subvertex.7"/>
+    <transitions source="/0/@top/@subvertex.7" target="/0/@top/@subvertex.10"/>
+    <transitions source="/0/@top/@subvertex.10" target="/0/@top/@subvertex.12"/>
+    <transitions source="/0/@top/@subvertex.12" target="/0/@top/@subvertex.11"/>
+    <transitions source="/0/@top/@subvertex.6" target="/0/@top/@subvertex.13"/>
+    <transitions source="/0/@top/@subvertex.13" target="/0/@top/@subvertex.15">
+      <guard name="in stock">
+        <expression language="" body="in stock"/>
+      </guard>
+    </transitions>
+    <transitions source="/0/@top/@subvertex.13" target="/0/@top/@subvertex.14">
+      <guard name="not in stock">
+        <expression language="" body="not in stock"/>
+      </guard>
+    </transitions>
+    <transitions source="/0/@top/@subvertex.15" target="/0/@top/@subvertex.5"/>
+    <transitions source="/0/@top/@subvertex.14" target="/0/@top/@subvertex.15"/>
+    <transitions source="/0/@top/@subvertex.11" target="/0/@top/@subvertex.16"/>
+  </minuml1:ActivityGraph>
+  <minuml1:Partition name="Customer" contents="/0/@top/@subvertex.1 /0/@top/@subvertex.2 /0/@top/@subvertex.9 /0/@top/@subvertex.11"/>
+  <minuml1:Partition name="Sales" contents="/0/@top/@subvertex.3 /0/@top/@subvertex.4 /0/@top/@subvertex.7 /0/@top/@subvertex.10 /0/@top/@subvertex.12"/>
+  <minuml1:Partition name="Stockroom" contents="/0/@top/@subvertex.5 /0/@top/@subvertex.6 /0/@top/@subvertex.14 /0/@top/@subvertex.15 /0/@top/@subvertex.13 /0/@top/@subvertex.8"/>
+</xmi:XMI>
