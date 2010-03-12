@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
+<stringAttribute key="bad_container_name" value="/Co-Evo Examples/GMF/Graph/minmap/flock"/>
 <intAttribute key="migratedModel" value="1"/>
 <listAttribute key="models">
 <listEntry value="#&#10;#Fri Mar 12 11:53:05 GMT 2010&#10;isMetamodelFileBased=false&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;metamodelUri=http\://www.eclipse.org/gmf/2005/GraphicalDefinition&#10;type=EMF&#10;modelFile=/Co-Evo Examples/GMF/Graph/mindmap/Before.model&#10;expand=false&#10;metamodelFile=/GmfMig/metamodels/gmfgraph_2006.ecore&#10;"/>
