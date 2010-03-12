@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
+<intAttribute key="migratedModel" value="1"/>
+<listAttribute key="models">
+<listEntry value="#&#10;#Fri Mar 12 11:53:05 GMT 2010&#10;isMetamodelFileBased=false&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;metamodelUri=http\://www.eclipse.org/gmf/2005/GraphicalDefinition&#10;type=EMF&#10;modelFile=/Co-Evo Examples/GMF/Graph/mindmap/Before.model&#10;expand=false&#10;metamodelFile=/GmfMig/metamodels/gmfgraph_2006.ecore&#10;"/>
+<listEntry value="#&#10;#Fri Mar 12 11:53:31 GMT 2010&#10;isMetamodelFileBased=false&#10;name=Migrated&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=http\://www.eclipse.org/gmf/2006/GraphicalDefinition&#10;type=EMF&#10;modelFile=/Co-Evo Examples/GMF/Graph/mindmap/flock/After.gmfgraph&#10;expand=true&#10;metamodelFile=/GmfMig/metamodels/gmfgraph.ecore&#10;"/>
+</listAttribute>
+<intAttribute key="originalModel" value="0"/>
+<stringAttribute key="source" value="/Co-Evo Examples/GMF/Graph/flock/Migrate GMF Graph.mig"/>
+</launchConfiguration>
