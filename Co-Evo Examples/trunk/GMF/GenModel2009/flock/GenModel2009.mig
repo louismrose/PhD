@@ -1,0 +1,35 @@
+migrate GenLink { // TODO: migrate GenLink ignoring notationViewFactoryClassName
+	migrated.notationViewFactoryClassName := null;
+}
+
+migrate GenEditorGenerator {
+	migrated.labelParsers := new Migrated!GenParsers;
+	migrated.labelParsers.extensibleViaService = true;
+	migrated.labelParsers.implementations.add(new Migrated!PredefinedParser);
+	
+	migrated.contextMenus.add(new Migrated!GenContextMenu);
+	migrated.contextMenus.first.context.add(migrated.diagram);
+	
+	migrated.contextMenus.first.items.add(new Migrated!LoadResourceAction);
+	
+	for (shortcutName in original.diagram.containsShortcutsTo) {
+		migrated.contextMenus.first.items.add(new Migrated!CreateShortcutAction);
+	}
+}
+
+
+migrate GenDiagram {
+	migrated.validationProviderPriority := Migrated!ProviderPriority#Lowest;
+}
+
+migrate FeatureLabelModelFacet {
+	migrated.parser := getParser();
+}
+
+migrate LabelModelFacet {
+	migrated.parser := getParser();
+}
+
+operation getParser() : Migrated!GenParserImplementation {
+	return Migrated!GenParsers.all.first.implementations.first;
+}
