@@ -32,10 +32,6 @@ migrate DesignLabelModelFacet {
 	migrated.parser := createOrRetrieveExternalParser();
 }
 
-migrate LabelModelFacet {
-	migrated.parser := createOrRetrievePredefinedParser();
-}
-
 operation createOrRetrievePredefinedParser(viewMethod : Any, editMethod : Any) : Migrated!PredefinedParser {
 	if (getPredefinedParser(viewMethod, editMethod).isUndefined()) {
 		createOrRetrieveGenParsers().implementations.add(createPredefinedParser(viewMethod, editMethod));
