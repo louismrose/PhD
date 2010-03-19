@@ -1,0 +1,7 @@
+migrate GenConstraint {
+	addExpressionToInterpreter(migrated);
+}
+
+operation addExpressionToInterpreter(expression : Any) {
+	Migrated!GenExpressionInterpreter.all.first.expressions.add(expression);
+}
