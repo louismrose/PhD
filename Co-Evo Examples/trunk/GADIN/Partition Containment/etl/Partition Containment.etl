@@ -1,3 +1,10 @@
+rule Worlds2World 
+	transform old : Old!World
+	to        w : New!World {
+	
+	w.actions := old.actions.equivalent();
+}
+
 rule Action2Action
   transform old : Old!Action
   to        a : New!Action {
