@@ -1,0 +1,31 @@
+module ResolveReplies;
+
+create Migrated : After from Original : Before;
+
+rule Newsgroups {
+	from
+		o : Before!Newsgroup
+	to
+		m : After!Newsgroup (
+			articles <- o.articles
+		)
+}
+
+rule Articles {
+	from
+		o : Before!Article
+	to
+		m : After!Article (
+			articleId   <- o.articleId,
+			subject     <- o.subject,
+			newsgroups  <- o.newsgroups,
+			inReplyToId <- o.inReplyTo,
+			date        <- o.date,
+			sender      <- o.sender
+		)
+	do {
+		if (not o.inReplyTo.oclIsUndefined() and After!Article.allInstances()->exists(a|a.articleId = o.inReplyTo)) {
+			After!Article.allInstances()->select(a|a.articleId = o.inReplyTo)->first().replies <- m;
+		}
+	}
+}
