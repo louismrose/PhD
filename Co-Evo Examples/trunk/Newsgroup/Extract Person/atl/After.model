@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Newsgroup xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="extractperson">
+  <articles articleId="1" subject="Foo" inReplyTo="" date="01/01/09">
+    <sender name="TODO" email="TODO"/>
+    <newsgroups>org.foo</newsgroups>
+  </articles>
+  <articles articleId="2" subject="Bar" inReplyTo="" date="01/01/09">
+    <sender name="TODO" email="TODO"/>
+    <newsgroups>org.foo</newsgroups>
+    <newsgroups>org.bar</newsgroups>
+  </articles>
+  <articles articleId="3" subject="Baz" inReplyTo="" date="01/01/09">
+    <sender name="TODO" email="TODO"/>
+    <newsgroups>org.foo</newsgroups>
+    <newsgroups>org.bar</newsgroups>
+  </articles>
+</Newsgroup>

@@ -1,0 +1,30 @@
+module PetriNets;
+
+create Migrated : After from Original : Before;
+
+rule Newsgroups {
+	from
+		o : Before!Newsgroup
+	to
+		m : After!Newsgroup (
+			articles <- o.articles
+		)
+}
+
+rule Articles {
+	from
+		o : Before!Article
+	to
+		m : After!Article (
+			articleId  <- o.articleId,
+			subject    <- o.subject,
+			newsgroups <- o.newsgroups,
+			inReplyTo  <- o.inReplyTo,
+			date       <- o.date,
+			sender     <- p
+		),
+		p : After!Person (
+			name  <- 'TODO',
+			email <- 'TODO'
+		)
+}
