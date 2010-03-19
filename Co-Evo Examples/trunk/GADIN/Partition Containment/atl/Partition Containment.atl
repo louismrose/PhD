@@ -1,0 +1,31 @@
+module EnumToClasses;
+
+create Migrated : After from Original : Before;
+
+rule Worlds {
+	from
+		o : Before!World
+	to
+		m : After!World (
+			actions <- o.actions
+		)
+}
+
+rule Actions {
+	from
+		o : Before!Action
+	to
+		m : After!Action (
+			preconditionSets <- ps
+		),
+	    ps : After!PropositionSet (
+	    	preconditions <- o.preconditions
+	    )
+}
+
+rule Propositions {
+	from
+		o : Before!Proposition
+	to
+		m : After!Proposition
+}
