@@ -1,4 +1,4 @@
-module PetriNets;
+module ExtractPerson;
 
 create Migrated : After from Original : Before;
 
