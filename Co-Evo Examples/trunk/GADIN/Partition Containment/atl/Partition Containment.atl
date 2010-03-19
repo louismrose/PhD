@@ -16,6 +16,7 @@ rule Actions {
 		o : Before!Action
 	to
 		m : After!Action (
+			name <- o.name,
 			preconditionSets <- ps
 		),
 	    ps : After!PropositionSet (
@@ -27,5 +28,7 @@ rule Propositions {
 	from
 		o : Before!Proposition
 	to
-		m : After!Proposition
+		m : After!Proposition (
+			name <- o.name
+		)
 }

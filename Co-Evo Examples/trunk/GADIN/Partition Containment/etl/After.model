@@ -5,14 +5,14 @@
   </actions>
   <actions name="Singleton">
     <preconditionSets>
-      <preconditions/>
+      <preconditions name="not a"/>
     </preconditionSets>
   </actions>
   <actions name="Several">
     <preconditionSets>
-      <preconditions/>
-      <preconditions/>
-      <preconditions/>
+      <preconditions name="a"/>
+      <preconditions name="not b"/>
+      <preconditions name="not c"/>
     </preconditionSets>
   </actions>
 </gadin_partitionContainment:World>

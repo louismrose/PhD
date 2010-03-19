@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <gadin_partitionContainment:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gadin_partitionContainment="gadin_partitionContainment">
-  <actions>
+  <actions name="Empty">
     <preconditionSets/>
   </actions>
-  <actions>
+  <actions name="Singleton">
     <preconditionSets>
-      <preconditions/>
+      <preconditions name="not a"/>
     </preconditionSets>
   </actions>
-  <actions>
+  <actions name="Several">
     <preconditionSets>
-      <preconditions/>
-      <preconditions/>
-      <preconditions/>
+      <preconditions name="a"/>
+      <preconditions name="not b"/>
+      <preconditions name="not c"/>
     </preconditionSets>
   </actions>
 </gadin_partitionContainment:World>

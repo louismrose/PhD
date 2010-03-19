@@ -17,4 +17,7 @@ rule Action2Action
 
 rule Proposition2Proposition
   transform old : Old!Proposition
-  to        p : New!Proposition {}
+  to        p : New!Proposition {
+
+	p.name := old.name;  
+}
