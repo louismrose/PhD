@@ -1,0 +1,68 @@
+module SplitConnectionPoint;
+
+create Migrated : After from Original : Before;
+
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System (
+			channels         <- o.channels,
+			connectionPoints <- o.connectionPoints
+		)
+}
+
+rule Channels {
+	from
+		o : Before!Channel
+	to
+		m : After!Channel (
+			name   <- o.name,
+			reader <- o.reader,
+			writer <- o.writer
+		)
+}
+
+rule UnknownConnectionPoint {
+	from
+		o : Before!ConnectionPoint (
+			not (o.isReading() xor o.isWriting())
+		)
+	to
+		r : After!ReadingConnectionPoint(
+			name <- o.name
+		)
+	do {
+		('Cannot determine whether "' + o.name + '"' +
+         'should be a ReadingConnectionPoint or a ' +
+         'WritingConnectionPoint. Defaulting to Reading.').println(); 
+	}
+}
+
+rule ReadingConnectionPoint {
+	from
+		o : Before!ConnectionPoint (
+			o.isReading() and not o.isWriting()
+		)
+	to
+		m : After!ReadingConnectionPoint (
+			name <- o.name
+		)
+}
+
+rule WritingConnectionPoint {
+	from
+		o : Before!ConnectionPoint (
+			o.isWriting() and not o.isReading()
+		)
+	to
+		m : After!WritingConnectionPoint (
+			name <- o.name
+		)
+}
+
+helper context Before!ConnectionPoint def : isReading() : Boolean =
+	Before!Channel.allInstances()->exists(c|c.reader = self);
+
+helper context Before!ConnectionPoint def : isWriting() : Boolean =
+	Before!Channel.allInstances()->exists(c|c.writer = self);
