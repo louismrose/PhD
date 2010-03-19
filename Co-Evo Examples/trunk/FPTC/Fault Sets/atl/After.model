@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fptc_faultSets:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fptc_faultSets="fptc_faultSets">
+  <tuples name="Empty"/>
+  <tuples name="SingletonFault">
+    <contents xsi:type="fptc_faultSets:Fault" type="late"/>
+  </tuples>
+  <tuples name="SeveralFaults">
+    <contents xsi:type="fptc_faultSets:FaultSet">
+      <contents type="late"/>
+      <contents type="early"/>
+      <contents type="value"/>
+    </contents>
+  </tuples>
+  <tuples name="SingletonNoFault">
+    <contents xsi:type="fptc_faultSets:NoFault"/>
+  </tuples>
+  <tuples name="SingletonVariable">
+    <contents xsi:type="fptc_faultSets:Variable" name="v"/>
+  </tuples>
+  <tuples name="SingletonWildcard">
+    <contents xsi:type="fptc_faultSets:Wildcard"/>
+  </tuples>
+  <tuples name="Pair">
+    <contents xsi:type="fptc_faultSets:Fault" type="late"/>
+    <contents xsi:type="fptc_faultSets:NoFault"/>
+  </tuples>
+</fptc_faultSets:System>

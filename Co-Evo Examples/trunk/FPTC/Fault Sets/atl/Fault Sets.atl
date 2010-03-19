@@ -1,0 +1,93 @@
+module FaultSets;
+
+create Migrated : After from Original : Before;
+
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System (
+			tuples <- o.tuples
+		)
+}
+
+rule Tuples {
+	from
+		o : Before!"Tuple" (
+			o.canBeMigrated()
+		)
+	to
+		m : After!"Tuple" (
+			name <- o.name,
+			contents <- o.contents
+		)
+}
+
+rule IdentifierSets2FaultSets {
+	from
+		o : Before!IdentifierSet (
+			o.contents->size() > 1 and o.containsOnlyFaults()
+		)
+	to
+		m : After!FaultSet (
+			contents <- o.contents->collect(f | thisModule.Faults(f))
+		)
+}
+
+lazy rule Faults {
+	from
+		o : Before!Fault
+	to
+		m : After!Fault (
+			type <- o.type	
+		)
+}
+
+rule Singleton2Fault {
+	from
+		o : Before!IdentifierSet (
+			o.contents->size() = 1 and o.contents->first().oclIsTypeOf(Before!Fault)
+		)
+	to
+		m : After!Fault (
+			type <- o.contents->first().type
+		)
+}
+
+rule Singleton2NoFault {
+	from
+		o : Before!IdentifierSet (
+			o.contents->size() = 1 and o.contents->first().oclIsTypeOf(Before!NoFault)
+		)
+	to
+		m : After!NoFault
+}
+
+rule Singleton2Wildcard {
+	from
+		o : Before!IdentifierSet (
+			o.contents->size() = 1 and o.contents->first().oclIsTypeOf(Before!Wildcard)
+		)
+	to
+		m : After!Wildcard
+}
+
+rule Singleton2Variable {
+	from
+		o : Before!IdentifierSet (
+			o.contents->size() = 1 and o.contents->first().oclIsTypeOf(Before!Variable)
+		)
+	to
+		m : After!Variable (
+			name <- o.contents->first().name
+		)
+}
+
+helper context Before!"Tuple" def : canBeMigrated() : Boolean =
+	self.contents->forAll(is | is.canBeMigrated());
+
+helper context Before!IdentifierSet def : canBeMigrated() : Boolean =
+	self.contents->size() <= 1 or self.containsOnlyFaults();
+
+helper context Before!IdentifierSet def : containsOnlyFaults() : Boolean =
+	self.contents->forAll(a | a.oclIsTypeOf(Before!Fault));
