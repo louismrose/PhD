@@ -1,0 +1,45 @@
+module EnumToClasses;
+
+create Migrated : After from Original : Before;
+
+rule Worlds {
+	from
+		o : Before!World
+	to
+		m : After!World (
+			parameters <- o.parameters
+		)
+}
+
+rule CharacterParameters {
+	from
+		o : Before!Parameter (
+			o.type = #character
+		)
+	to
+		m : After!CharacterParameter (
+			name <- o.name
+		)
+}
+
+rule PrincipleParameters {
+	from
+		o : Before!Parameter (
+			o.type = #principle
+		)
+	to
+		m : After!PrincipleParameter (
+			name <- o.name
+		)
+}
+
+rule LocationParameters {
+	from
+		o : Before!Parameter (
+			o.type = #location
+		)
+	to
+		m : After!LocationParameter (
+			name <- o.name
+		)
+}
