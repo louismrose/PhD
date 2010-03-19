@@ -1,0 +1,36 @@
+module Connections;
+
+create Migrated : After from Original : Before;
+
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System (
+			blocks <- o.blocks
+		)
+}
+
+rule Blocks {
+	from
+		o : Before!Block
+	to
+		m : After!Block (
+			name <- o.name,
+			outgoingConnections <- o.successors->collect(s | thisModule.Connections(o,s))
+		)
+}
+
+lazy rule Connections {
+	from
+		s : Before!Block,
+		t : Before!Block
+	to
+		c : After!Connection (
+			source <- s,
+			target <- t
+		)
+	do {
+		After!System.allInstances()->first().connections <- c;
+	}
+}
