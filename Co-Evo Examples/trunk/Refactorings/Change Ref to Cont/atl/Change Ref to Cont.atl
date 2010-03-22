@@ -1,0 +1,30 @@
+module ChangeRefToCont;
+
+create Migrated : After from Original : Before;
+
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System (
+			signatures <- o.signatures
+		)
+}
+
+rule Signature {
+	from
+		o : Before!Signature
+	to
+		m : After!Signature (
+			ports <- o.ports->collect(p | thisModule.Port(p))
+		)
+}
+
+lazy rule Port {
+	from
+		o : Before!Port
+	to
+		m : After!Port (
+			name <- o.name
+		)
+}
