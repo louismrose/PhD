@@ -8,7 +8,7 @@ class System {
 
 class Account {
  	attr String code;
- 	attr float interestRate;
+ 	attr double interestRate;
  	ref AccountType[1] type;
 }
 

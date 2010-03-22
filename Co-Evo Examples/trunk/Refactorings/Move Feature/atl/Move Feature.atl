@@ -1,0 +1,39 @@
+module ExtractClass;
+
+create Migrated : After from Original : Before;
+
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System (
+			accounts <- o.accounts,
+			accountTypes <- o.accountTypes
+		)
+}
+
+rule AccountTypes {
+	from
+		o : Before!AccountType
+	to
+		m : After!AccountType (
+			name <- o.name
+		)
+}
+
+rule Accounts {
+	from
+		o : Before!Account
+	to
+		m : After!Account (
+			code <- o.code,
+			type <- o.type
+		)
+	do {
+		if (m.type.interestRate <> 0.0 and m.type.interestRate <> o.interestRate) {
+			('Conflicting interest rates on AccountType "' + m.type.name + '": ' + m.type.interestRate + ', ' + o.interestRate + ' are possible.').println();
+		} else {
+			m.type.interestRate <- o.interestRate;
+		}
+	}
+}

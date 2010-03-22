@@ -13,5 +13,5 @@ class Account {
 
 class AccountType {
 	attr String name;
-	attr float interestRate;
+	attr double interestRate;
 }

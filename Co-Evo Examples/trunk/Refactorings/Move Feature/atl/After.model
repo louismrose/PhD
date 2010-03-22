@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<refactorings_moveFeature:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactorings_moveFeature="refactorings_moveFeature">
+  <accounts code="current1" type="//@accountTypes.0"/>
+  <accounts code="current2" type="//@accountTypes.0"/>
+  <accounts code="savings1" type="//@accountTypes.1"/>
+  <accounts code="savings2" type="//@accountTypes.1"/>
+  <accounts code="isa" type="//@accountTypes.2"/>
+  <accountTypes name="current" interestRate="2.0"/>
+  <accountTypes name="savings" interestRate="6.0"/>
+  <accountTypes name="isa" interestRate="7.0"/>
+</refactorings_moveFeature:System>
