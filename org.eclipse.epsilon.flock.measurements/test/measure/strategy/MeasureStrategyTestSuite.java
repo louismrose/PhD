@@ -21,7 +21,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({GrammarWordCounterTests.class, WordCounterTests.class})
+@SuiteClasses({WordCounterCountWordsTests.class, WordCounterCountOccurencesOfTests.class})
 public class MeasureStrategyTestSuite {
 
 	public static Test suite() {
