@@ -22,7 +22,7 @@ This section describes the way in which existing modelling frameworks load and s
 
 
 \subsection{Model Storage Representation}
-Throughout a model-driven development process, modelling frameworks are used to load and store models. XML Metadata Interchange (XMI) \cite{xmi}, the OMG standard for exchanging MOF-based models, is typically the canonical model representation used by contemporary modelling frameworks. XMI specifies the way in which models should be represented in XML.
+Throughout a model-driven development process, modelling frameworks are used to load and store models. XML Metadata Interchange (XMI) \cite{xmi}, the OMG standard for exchanging MOF-based models, is the canonical model representation used by many contemporary modelling frameworks. XMI specifies the way in which models should be represented in XML.
 
 An XMI document defines one or more namespaces from which type information is drawn. For example, XMI itself provides a namespace for specifying the version of XMI being used. Metamodels are referenced via namespaces, allowing the specification of elements that instantiate metamodel types.
 
@@ -67,11 +67,10 @@ Using the metamodel in Figure~\ref{fig:slot_model} in conjunction with MOF, conf
 The following constraints between metamodels (e.g. instances of MOF, Figure~\ref{fig:mof}) and models represented with a generic metamodel (e.g. instances of Figure~\ref{fig:slot_model}) can be used to express conformance:
 
 \begin{enumerate}
-	\item Each object's type must be the name of some metamodel class.
 	\item Each object's type must be the name of some non-abstract metamodel class.
 	\item Each object must specify a slot for each mandatory feature of its type.
 	\item Each slot's feature must be the name of a metamodel feature. That metamodel feature must belong to the slot's owning object's type.
-	\item Each slot must be multiplicity-compatible with its feature. More specifically, each slot must contain at least as many values as its feature's lowerbound, and at most as many values as its feature's upperbound.
+	\item Each slot must be multiplicity-compatible with its feature. More specifically, each slot must contain at least as many values as its feature's lower bound, and at most as many values as its feature's upper bound.
   \item Each slot must be type-compatible with its feature.
 \end{enumerate}
 
@@ -101,11 +100,11 @@ In Section~\ref{sec:notation}, a textual modelling notation is integrated with t
 \label{subsec:automatic_checking}
 In addition to the applications outlined above, a metamodel independent syntax is particularly useful during metamodel installation. As discussed in Section~\ref{subsec:modelling_framework_characteristics}, metamodel developers do not have access to downstream models. Consequently, instances of a metamodel may become non-conformant after a new version of a metamodel plug-in is installed. By default, an EMF metamodel plug-in does not check conformance during plug-in installation and non-conformant models are only detected when the user attempts to load them.
 
-To enable conformance checking as part of metamodel installation in EMF, the binding to a generic metamodel discussed above has been integrated with Concordance \cite{rose10concordance} in joint work with Dimitrios S. Kolovos, a lecturer in this department, Nicholas Drivalos, a research associate in this department and James R. Williams, a research student in this department\footnote{TODO: Ask R+F: do I need to say something like ``No credit is claimed for this joint work.''}.   
+To enable conformance checking as part of metamodel installation in EMF, the binding to a generic metamodel discussed above has been integrated with Concordance \cite{rose10concordance} in joint work with Dimitrios S. Kolovos, a lecturer in this department, Nicholas Drivalos, a research associate in this department and James R. Williams, a research student in this department.
 
 Concordance provides a light-weight and efficient mechanism for resolving inter-model references, including the references between models and their metamodels. Concordance can be used to efficiently determine the instances of a metamodel, which is otherwise only possible with a brute force search of a development workspace.
 
-The integration work involved extending Concordance such that, after the installation of a metamodel plug-in, models that conform to any previous version of the installed metamodel are identified. Those models are checked for conformance with the new metamodel. As such, conformance checking occurs automatically and during metamodel installation. Conformance problems are detected and reported immediately, rather than when the user next attempts to load an affected model. By integrating conformance checking with Concordance, increased scalability is achieved, as demonstrated in \cite{rose10concordance}. 
+The integration work involved extending Concordance such that, after the installation of a metamodel plug-in, models that conform to any previous version of the metamodel are identified. Those models are checked for conformance with the new metamodel. As such, conformance checking occurs automatically and during metamodel installation. Conformance problems are detected and reported immediately, rather than when the user next attempts to load an affected model. By integrating conformance checking with Concordance, improved scalability is achieved, as demonstrated in \cite{rose10concordance}. 
 
 
 \section{Textual Modelling Notation}
@@ -113,12 +112,12 @@ The integration work involved extending Concordance such that, after the install
 % The Human-Usable Textual Notation is an OMG standard textual concrete syntax for the MOF metamodelling architecture. The notation is metamodel-independent -- it can be used with any model that conforms to any MOF-based metamodel. HUTN provides a human-usable means for visualising and specifying models, even when those models are inconsistent with their metamodel.
 The analysis of co-evolution examples in Chapter~\ref{Analysis} highlighted two categories of process for managing co-evolution, developer-driven and user-driven. In the former, migration strategies are executable, while in the latter they are not. Performing user-driven co-evolution with modelling frameworks presents two key challenges that have not been explored by existing research. Firstly, user-driven co-evolution frequently involves editing the storage representation of the model, such as XMI. Model storage representations are typically not optimised for human use and hence user-driven co-evolution can be error-prone. Secondly, non-conformant model elements must be identified during user-driven co-evolution. When a multi-pass parser is used to load models, as is the case with EMF, not all conformance problems are reported at once, and user-driven co-evolution is an iterative process. In Section~\ref{sec:requirements_identification}, these challenges lead to the identification of the following requirement: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a sound and complete conformance report for the original model and evolved metamodel.}
 
-The remainder of this section describes a textual notation for models, which has been implemented for EMF, and discusses the way in which the notation has been integrated with the metamodel independent syntax described in Section~\ref{sec:mmi_syntax} to produce conformance reports. 
+The remainder of this section describes a textual notation for models, which has been implemented for EMF, and discusses the way in which the notation has been integrated with the metamodel independent syntax described in Section~\ref{sec:mmi_syntax} to produce conformance reports. 
 
 
 \subsection{Human-Usable Textual Notation}
 \label{subsec:hutn}
-The OMG's Human-Usable Textual Notation (HUTN) \cite{hutn} defines a textual modelling notation, which aims to conform to human-usability criteria \cite{hutn}. There is no current reference implementation of HUTN: the Distributed Systems Technology Centre's TokTok project (an implementation of the HUTN specification) is inactive (and the source code can no longer be found), whilst work on implementing the HUTN specification by Muller and Hassenforder \cite{muller05hutn} has been abandoned in favour of Sintaks \cite{sintaks}, which operates upon domain-specific concrete syntax.
+The OMG's Human-Usable Textual Notation (HUTN) \cite{hutn} defines a textual modelling notation, which aims to conform to human-usability criteria \cite{hutn}. There is no current reference implementation of HUTN: the Distributed Systems Technology Centre's TokTok project (an implementation of the HUTN specification) is inactive (and the source code can no longer be found), whilst work on implementing the HUTN specification by Muller and Hassenforder \cite{muller05hutn} has been abandoned in favour of Sintaks \cite{sintaks}, which operates on domain-specific concrete syntax.
 
 Model storage representations are often optimised to reduce storage space or to increase the speed of random access, rather than for human usability. By contrast, the HUTN specification states its primary design goal as human-usability and ``this is achieved through consideration of the successes and failures of common programming languages'' \cite[Section 2.2]{hutn}. The HUTN specification refers to two studies of programming language usability to justify design decisions. Because no reference implementation exists, the specification does not evaluate the human-usability of the notation. This thesis proposes that HUTN be used instead of XMI for user-driven co-evolution. Further discussion of the human-usability of HUTN is deferred to Chapter~\ref{Evaluation}.
 
@@ -240,13 +239,15 @@ FamilyPackage "families" {
 }
 \end{lstlisting}
 
+The reference block (Listing~\ref{lst:assocblock}) and infix (Listing~\ref{lst:associnfix}) notations are syntactic variations on -- and have identical semantics to -- the reference notation shown in Listings \ref{lst:containment} and \ref{lst:non-contained}.
+
 
 \subsubsection{Customisation via Configuration}
 Some limited customisation of HUTN for particular metamodels can be achieved using \emph{configuration files}. Customisations permitted include a parametric form of object instantiation (not yet implemented); renaming of metamodel elements; giving default values for attributes; and stating an attribute whose values are used to infer a default identifier.
 
 
 \subsection{Epsilon HUTN}
-To investigate the extent to which it can be used during user-driven co-evolution, an implementation of HUTN was constructed. The implementation, Epsilon HUTN, makes extensive use of the Epsilon model management platform. Before presenting HUTN, it is necessary to revisit some details of the Epsilon \cite{kolovos09thesis} platform, which was introduced in Section~\ref{subsubsec:epsilon}.
+To investigate the extent to which HUTN can be used during user-driven co-evolution, an implementation was constructed. The implementation, Epsilon HUTN, makes extensive use of the Epsilon model management platform. Before presenting HUTN, it is necessary to revisit some details of the Epsilon \cite{kolovos09thesis} platform, which was introduced in Section~\ref{subsubsec:epsilon}.
 
 \subsubsection{The Epsilon Platform}
 Epsilon, a component of the Eclipse GMT project \cite{gmt}, provides infrastructure for implementing uniform and interoperable model management languages, for performing tasks such as model merging, model transformation and inter-model consistency checking. 
@@ -320,7 +321,7 @@ In addition to the syntactic constraints defined in the HUTN specification, the 
 \paragraph{Intermediate Model to Target Model}
 Because the contextual analysis is performed on the intermediate model, models conform to the target metamodel. In generating the target model from the intermediate model (Figure \ref{fig:architecture}), the transformation uses information from the target metamodel, such as the names of classes and features. A typical approach to this category of problem is to use a higher-order transformation on the target metamodel to generate the desired transformation. Epsilon HUTN uses a different approach: the transformation to the target model is produced by executing an EGL template on the target metamodel. EGL is a template-based text generation language. \verb|[% %]| tag pairs are used to denote dynamic sections, which may produce text when executed. Any code not enclosed in a \verb|[% %]| tag pair is included verbatim in the generated text.
 
-Listing \ref{lst:generate} is the EGL template for a M2T transformation on the target metamodel; it generates the M2M transformation used for generating the target model. The loop beginning on line 1 iterates over each meta-class in the metamodel, producing a transformation rule to generate target model instances of that meta-class from class objects in the intermediate model. The template guard (line 6) specifies that only class objects of the same type as the meta-class be transformed by the current rule. The template body is omitted from Listing \ref{lst:generate} -- it iterates over each structural feature of the current meta-class, and generates appropriate transformation code for populating the values of each structural feature from the slots on the class object in the intermediate model.
+Listing \ref{lst:generate} is the EGL template for a M2T transformation on the target metamodel; it generates the M2M transformation used for generating the target model. The loop beginning on line 1 iterates over each meta-class in the metamodel, producing a transformation rule to generate target model instances of that meta-class from class objects in the intermediate model. The template guard (line 6) specifies that only class objects of the same type as the meta-class be transformed by the current rule. For the body of the rule the template iterates over each structural feature of the current meta-class, and generates appropriate transformation code for populating the values of each structural feature from the slots on the class object in the intermediate model. The template body is omitted in Listing~\ref{lst:generate} because it contains a large amount of code for interacting with EMF, which is not relevant to this discussion.
 
 \begin{lstlisting}[caption= Initial sections of the template (in EGL) for generating  rules (in ETL) to instantiate classes of the target metamodel., label=lst:generate, language=EOL]
 [% for (class in EClass.allInstances()) { %]
@@ -330,7 +331,7 @@ rule Object2[%=class.name%]
 
     guard: o.type = `[%=class.name%]'
 
-    -- body omitted for brevity
+    -- body omitted
   }
 [% } %]
 \end{lstlisting}
@@ -340,7 +341,7 @@ Presently, Epsilon HUTN can be used only to generate EMF models. Support for oth
 
 \subsection{Migration with HUTN}
 \label{subsec:migration_with_hutn}
-Epsilon HUTN uses the generic metamodel (from Section~\ref{sec:mmi_syntax}) as an intermediary, facilitating transformation from XMI to HUTN (i.e. the inverse of the transformation discussed above): XMI is parsed to produce an instance of the generic metamodel, and an unparser (implemented using the visitor design pattern) generates HUTN source. In this manner, HUTN can be generated for any XMI document, regardless of whether the model described by the XMI conforms to its metamodel.\footnote{TODO: Somewhere, I need to discuss loss of information. (e.g. model element type information when a metaclass is removed)}
+Epsilon HUTN uses the generic metamodel (from Section~\ref{sec:mmi_syntax}) as an intermediary, facilitating transformation from XMI to HUTN (i.e. the inverse of the transformation discussed above): XMI is parsed to produce an instance of the generic metamodel, and an unparser (implemented using the visitor design pattern \cite{gamma95patterns}) generates HUTN source. In this manner, HUTN can be generated for any XMI document, regardless of whether the model described by the XMI conforms to its metamodel.\footnote{TODO: Somewhere, I need to discuss loss of information. (e.g. model element type information when a metaclass is removed)}
 
 To demonstrate the way in which HUTN can be used to perform migration, the exemplar XMI shown in Listing~\ref{lst:xmi} is represented using HUTN in Listing~\ref{lst:non-conformant_hutn}. Recall that the XMI describes three Persons, Franz, Julie and Hermann. Julie and Hermann are the mother and father of Franz.
 
@@ -375,8 +376,6 @@ Persons "kafkas" {
 
 
 \subsection{Limitations}
-\emph{TODO: Ask Richard and Fiona whether the following discussion of HUTN's limitations might be better placed in the Evaluation chapter.}
-
 Notwithstanding the power of genericity, there are situations where a metamodel-specific concrete syntax is preferable. An example of where HUTN is unhelpful arose when developing a metamodel for the recording of failure behaviour of components in complex systems, based on the work of \cite{wallace05modular}.
 
 Failure behaviours comprise a number of expressions that specify how each component reacts to system faults, and there is an established concrete syntax for expressing failure behaviours. The failure syntax allows various shortcuts, such as the use of underscore to denote a wildcard. For example, the syntax for a possible failure behaviour of a component that receives input from two other components (on the left-hand side of the expression), and produces output for a single component is denoted:
@@ -545,7 +544,7 @@ As discussed above, existing target transformations cannot be used for specifyin
   \label{fig:cope_mmi}
 \end{figure}
 
-Listing~\ref{lst:cope} shows the COPE model migration strategy for the Petri net example given above\footnote{In Listing~\ref{lst:cope}, some of the concrete syntax has been changed in the interest of brevity.}. Most notably, slots for features that no longer exist must be explicitly \texttt{unset}. In Listing~\ref{lst:cope}, slots are \texttt{unset} on four occasions, once for each feature that exists in the original metamodel but not the evolved metamodel. Namely, these features are: \texttt{src} and \texttt{dst} of \texttt{Transition} and of \texttt{Place}. Failing to \texttt{unset} slots that do not conform with the evolved metamodel causes migration to fail with an error.
+Listing~\ref{lst:cope} shows the COPE model migration strategy for the Petri net example given above\footnote{In Listing~\ref{lst:cope}, some of the concrete syntax has been changed in the interest of readability.}. Most notably, slots for features that no longer exist must be explicitly \texttt{unset}. In Listing~\ref{lst:cope}, slots are \texttt{unset} on four occasions, once for each feature that exists in the original metamodel but not the evolved metamodel. Namely, these features are: \texttt{src} and \texttt{dst} of \texttt{Transition} and of \texttt{Place}. Failing to \texttt{unset} slots that do not conform with the evolved metamodel causes migration to fail with an error.
 
 \begin{lstlisting}[caption=Petri nets model migration in COPE, label=lst:cope, language=COPE]
 for (transition in Transition.allInstances) {
