@@ -28,6 +28,10 @@ rule UnknownConnectionPoint {
 		o : Before!ConnectionPoint (
 			o.isUnknown()
 		)
+	to
+		r : After!ReadingConnectionPoint(
+			name <- o.name
+		)
 	do {
 		('Cannot determine whether "' + o.name + '"' +
          'should be a ReadingConnectionPoint or a ' +
@@ -63,5 +67,5 @@ helper context Before!ConnectionPoint def : isReading() : Boolean =
 helper context Before!ConnectionPoint def : isWriting() : Boolean =
 	Before!Channel.allInstances()->exists(c|c.writer = self);
 
-helper context Before!ConnectionPoint def : isKnown() : Boolean =
+helper context Before!ConnectionPoint def : isUnknown() : Boolean =
 	not (self.isReading() xor self.isWriting());
