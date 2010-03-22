@@ -1,0 +1,48 @@
+module SplitConnectionPoint;
+
+create Migrated : After from Original : Before;
+
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System (
+			signatures <- o.signatures,
+			ports <- o.getUniquePorts()->collect(p|thisModule.Ports(p))
+		)
+}
+
+rule Signatures {
+	from
+		o : Before!Signature
+	to
+		m : After!Signature (
+			ports <- o.getUniquePorts(o.ports->collect(p|p.name)->asOrderedSet())->collect(p|thisModule.Ports(p))
+		)
+}
+
+unique lazy rule Ports {
+	from
+		o : Before!Port
+	to
+		m : After!Port (
+			name <- o.name
+		)
+}
+
+
+helper context Before!System def : getUniquePorts() : Bag(Before!Port) =
+	self.getNamesOfPorts()->collect(n|self.getPorts()->select(p|p.name = n)->first());
+
+helper context Before!System def : getNamesOfPorts() : OrderedSet(String) =
+	self.getPorts()->collect(p|p.name)->asOrderedSet();
+
+helper context Before!System def : getPorts() : Bag(Before!Port) =
+	self.signatures->collect(s|s.ports)->flatten();
+
+
+helper context Before!Signature def : getUniquePorts(named : Set(String)) : Bag(Before!Port) =
+	self.getSystem().getUniquePorts()->select(p|named.includes(p.name));
+
+helper context Before!Signature def : getSystem() : Before!System =
+	Before!System.allInstances()->select(s|s.signatures.includes(self))->first();
