@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<refactorings_extractClass:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactorings_extractClass="refactorings_extractClass">
+  <people name="John">
+    <telephoneNumber areaCode="01904" number="444444"/>
+  </people>
+</refactorings_extractClass:System>

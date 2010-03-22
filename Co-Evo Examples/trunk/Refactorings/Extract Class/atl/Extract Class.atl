@@ -1,0 +1,26 @@
+module ExtractClass;
+
+create Migrated : After from Original : Before;
+
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System (
+			people <- o.people
+		)
+}
+
+rule Persons {
+	from
+		o : Before!Person
+	to
+		m : After!Person (
+			name <- o.name,
+			telephoneNumber <- t
+		),
+		t : After!TelephoneNumber (
+			areaCode <- o.areaCode,
+			number <- o.number
+		)
+}
