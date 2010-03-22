@@ -1,0 +1,37 @@
+module ExtractClass;
+
+create Migrated : After from Original : Before;
+
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System (
+			items <- o.items
+		)
+}
+
+rule JobItems {
+	from
+		o : Before!JobItem (
+			o.employee.size() = 0
+		)
+	to
+		m : After!JobItem (
+			jobPrice <- o.jobPrice,
+			totalPrice <- o.totalPrice
+		)
+}
+
+rule LabourItems {
+	from
+		o : Before!JobItem (
+			o.employee.size() > 0
+		)
+	to
+		m : After!LabourItem (
+			jobPrice <- o.jobPrice,
+			totalPrice <- o.totalPrice,
+			employee <- o.employee
+		)
+}
