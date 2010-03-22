@@ -21,6 +21,8 @@ import java.util.Arrays;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -44,6 +46,14 @@ public class MetamodelTerminologyGathererTests {
 		assertThat(new MetamodelTerminologyGatherer(metamodel).getTerms(), hasItems("friends", "name", "address"));
 		
 	}
+	
+	@Test
+	public void termsIncludeEnumLiteralNames() {
+		final EPackage metamodel = createEPackage(createEEnum("DogBreed", createEEnumLiteral("labrador", 1), createEEnumLiteral("collie", 2)));
+		
+		assertThat(new MetamodelTerminologyGatherer(metamodel).getTerms(), hasItems("DogBreed", "labrador", "collie"));
+		
+	}
 
 	private EPackage createEPackage(EClassifier... classifiers) {
 		final EPackage ePackage = EcoreFactory.eINSTANCE.createEPackage();
@@ -56,6 +66,20 @@ public class MetamodelTerminologyGathererTests {
 		eClass.setName(name);
 		eClass.getEStructuralFeatures().addAll(Arrays.asList(features));
 		return eClass;
+	}
+	
+	private EEnum createEEnum(String name, EEnumLiteral... literals) {
+		final EEnum eEnum = EcoreFactory.eINSTANCE.createEEnum();
+		eEnum.setName(name);
+		eEnum.getELiterals().addAll(Arrays.asList(literals));
+		return eEnum;
+	}
+	
+	private EEnumLiteral createEEnumLiteral(String name, int value) {
+		final EEnumLiteral eEnumLiteral = EcoreFactory.eINSTANCE.createEEnumLiteral();
+		eEnumLiteral.setName(name);
+		eEnumLiteral.setValue(value);
+		return eEnumLiteral;
 	}
 
 	private EAttribute createEAttribute(String name) {
