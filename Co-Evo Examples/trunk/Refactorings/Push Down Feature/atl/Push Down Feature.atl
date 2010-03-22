@@ -1,0 +1,45 @@
+module ExtractClass;
+
+create Migrated : After from Original : Before;
+
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System (
+			employees <- o.employees
+		)
+}
+
+rule Employees {
+	from
+		o : Before!Employee (
+			o.quota = 0 and o.oclIsTypeOf(Before!Employee)
+		)
+	to
+		m : After!Employee (
+			name <- o.name
+		)
+}
+
+rule Employee2Salesperson {
+	from
+		o : Before!Employee (
+			o.quota <> 0 and o.oclIsTypeOf(Before!Employee)
+		)
+	to
+		m : After!Salesperson (
+			name <- o.name,
+			quota <- o.quota
+		)
+}
+
+rule Salespeople {
+	from
+		o : Before!Salesperson
+	to
+		m : After!Salesperson (
+			name <- o.name,
+			quota <- o.quota
+		)
+}
