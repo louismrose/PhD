@@ -13,33 +13,33 @@
  */
 package measure.strategy;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.LinkedList;
 
 import measurement.MetamodelTerminologyMeasurement;
 
-import grammar.PatternCounter;
 import project.MigrationStrategy;
 
 public class MetamodelTerminologyCounter implements MigrationStrategyMeasure {
 
-	private final WordCounter        wordCounter        = new WordCounter();
-	private final GrammarWordCounter grammarWordCounter = new GrammarWordCounter();
-	
-	private final PatternCounter     metamodelTerminologyCounter;
+	private final Collection<String> metamodelTerms  = new LinkedList<String>();
 	
 	
 	public MetamodelTerminologyCounter(Collection<String> metamodelTerms) {
-		this(metamodelTerms.toArray(new String[] {}));
+		this.metamodelTerms.addAll(metamodelTerms);
 	}
 	
 	public MetamodelTerminologyCounter(String... metamodelTerms) {
-		metamodelTerminologyCounter = new PatternCounter(metamodelTerms);
+		this(Arrays.asList(metamodelTerms));
 	}
 
 	public MetamodelTerminologyMeasurement measure(MigrationStrategy strategy) {
-		return new MetamodelTerminologyMeasurement(wordCounter.measure(strategy),
-		                                           metamodelTerminologyCounter.countMatchesIn(strategy.code),
-		                                           grammarWordCounter.measure(strategy));
+		final WordCounter counter = new WordCounter(strategy);
+		
+		return new MetamodelTerminologyMeasurement(counter.countWords(),
+		                                           counter.countOccurencesOf(metamodelTerms),
+		                                           counter.countOccurencesOf(strategy.grammar.getWords()));
 	}
 
 }

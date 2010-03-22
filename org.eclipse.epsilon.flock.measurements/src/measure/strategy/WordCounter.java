@@ -13,20 +13,64 @@
  */
 package measure.strategy;
 
-import grammar.PatternCounter;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 import project.MigrationStrategy;
 
 public class WordCounter {
 
-	private final String[] wordDelimiters             = new String[] {"\\s+", "\\.", "!"};
-	private final PatternCounter wordDelimiterCounter = new PatternCounter(wordDelimiters);
+	private final Collection<String> wordsInCode;
 	
-	
-	public int measure(MigrationStrategy strategy) {
-		if (strategy.code.length() == 0)
-			return 0;
-		
-		return wordDelimiterCounter.countMatchesIn(strategy.code.trim()) + 1;
+	public WordCounter(MigrationStrategy strategy) {
+		this.wordsInCode = getWordsIn(strategy.code);
 	}
 
+	private static List<String> getWordsIn(String text) {
+		if (text.trim().length() == 0)
+			return Collections.emptyList();
+		
+		return Arrays.asList(text.trim().split(atLeastOneWhitespaceChar() + or() +
+		                                      fullstop()                  + or() + 
+		                                      "!"                         + or() + 
+		                                      parenthesisChars()          + or() +
+		                                      ","                         + or() +
+		                                      "#"                         + or() +
+		                                      ";"));
+	}
+
+	private static String atLeastOneWhitespaceChar() {
+		return "\\s+";
+	}
+	
+	private static String fullstop() {
+		return "\\.";
+	}
+
+	private static String parenthesisChars() {
+		return "\\(" + or() + "\\)";
+	}
+
+	private static String or() {
+		return "|";
+	}
+	
+	
+	public int countWords() {
+		return wordsInCode.size();
+	}
+
+	public int countOccurencesOf(Collection<String> words) {
+		int occurences = 0;
+		
+		for (String wordInCode : wordsInCode) {
+			if (words.contains(wordInCode)) {
+				occurences++;
+			}
+		}
+		
+		return occurences;
+	}
 }
