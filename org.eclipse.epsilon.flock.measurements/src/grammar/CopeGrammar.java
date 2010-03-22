@@ -27,7 +27,7 @@ public class CopeGrammar implements Grammar {
 		return instance;
 	}
 	
-	private final PatternCounter assignmentMatcher = new PatternCounter("=", "\\.(un)?set", "\\.add");
+	private final PatternCounter assignmentMatcher = new PatternCounter("=", "\\.(un)?set", "\\.add", "\\.remove");
 	
 	private int numberOfAssignments;
 	
@@ -67,6 +67,16 @@ public class CopeGrammar implements Grammar {
 	}
 
 	public Collection<String> getWords() {
-		return Arrays.asList("if", "and", "or", "not", "{", "}", "in", "for", "=");
+		return Arrays.asList("set", "isSet", "unset", "get", "migrate", "delete",
+		                     "{", "}", "->",
+		                     "=", "<>", ">=", "<=", "<", ">", "==", "&&", "||",
+		                     "+", "-", "*", "/",
+		                     "equals", "and", "or", "not", "xor", "true", "false",
+		                     "if", "else", "for", "in",
+		                     "def", "newInstance",
+		                     "return", "it",
+		                     "allInstances",
+		                     "get", "add", "remove", "addAll", "first", "last", "size",
+		                     "findAll", "find", "collect", "contains", "every", "any");
 	}
 }
