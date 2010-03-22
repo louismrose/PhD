@@ -29,7 +29,7 @@ public class EpsilonGrammar implements Grammar {
 	}
 	
 	
-	private final PatternCounter grammar = new PatternCounter(":=", "\\.add");
+	private final PatternCounter grammar = new PatternCounter(":=", "\\.add", "\\.remove");
 
 	private int numberOfAssignments;
 	
@@ -53,16 +53,19 @@ public class EpsilonGrammar implements Grammar {
 		return new PatternCounter("new ", "delete", "migrate \\w* to \\w*").countMatchesIn(text) +
 		       new RuleWithDifferentSourceAndTargetTypeCounter(text).count();
 	}
-
+ 
 	public Collection<String> getWords() {
-		return Arrays.asList("migrate", "to", "original", "migrated", "delete", "equivalent()", "equivalents()",
-		                     "{", "}",
-		                     ":=", "<>", ">=", "<=", "<", ">",
+		return Arrays.asList("import", 
+		                     "migrate", "to", "when:", "original", "migrated", "delete", "equivalent", "equivalents",
+		                     "{", "}", ":",
+		                     ":=", "<>", ">=", "<=", "<", ">", "=", "==",
 		                     "and", "or", "not", "xor", "true", "false",
+		                     "+", "-", "*", "/",
 		                     "if", "else", "for", "in",
-		                     "var", "new",
+		                     "var", "new", "isTypeOf", "isKindOf",
 		                     "operation", "return", "self",
-		                     "allInstances",
-		                     "add", "selectOne", "select", "collect", "includes", "excludes");
+		                     "allInstances", "all",
+		                     "add", "addAll", "remove", "size", "first", "last",
+		                     "selectOne", "select", "collect", "includes", "excludes", "forAll", "exists");
 	}
 }
