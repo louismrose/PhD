@@ -22,6 +22,8 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
@@ -50,6 +52,10 @@ public class MetamodelTerminologyGatherer {
 				if (classifier instanceof EClass) {
 					for (final EStructuralFeature feature : ((EClass)classifier).getEStructuralFeatures()) {
 						terms.add(feature.getName());
+					}
+				} else if (classifier instanceof EEnum) {
+					for (final EEnumLiteral literal : ((EEnum)classifier).getELiterals()) {
+						terms.add(literal.getName());
 					}
 				}
 			}
