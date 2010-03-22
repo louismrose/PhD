@@ -14,6 +14,7 @@
 package project.navigator;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
@@ -70,6 +71,23 @@ public class AllExamplesNavigatorTest {
 		             new AllExamplesNavigator(BASE).getExamples());
 	}
 	
+	@Test
+	public void ignoredCategory() throws IOException {
+		final File category = createDirectory(BASE, "GADIN");
+		final File example1 = createDirectory(category, "Convert Enum to Classes");
+		final File example2 = createDirectory(category, "Partition Containment");
+		
+		final File category2 = createDirectory(BASE, "Ignored");
+		createDirectory(category2, "Split Connection Point");
+		createFile(category2, "measure.ignore");
+		
+		assertEquals(Arrays.asList(
+		             	new Example(example1),
+		             	new Example(example2)
+		             ),
+		             new AllExamplesNavigator(BASE).getExamples());
+	}
+	
 	
 	private static <T> void assertEquals(Iterable<T> expected, Iterable<T> actual) {
 		final Iterator<T> expectedIterator = expected.iterator();
@@ -97,6 +115,12 @@ public class AllExamplesNavigatorTest {
 		final File directory = new File(path);
 		directory.mkdir();
 		return directory;
+	}
+	
+	private static File createFile(File parent, String path) throws IOException {
+		final File file = new File(parent, path);
+		file.createNewFile();
+		return file;
 	}
 	
 	private static void delete(File file) {

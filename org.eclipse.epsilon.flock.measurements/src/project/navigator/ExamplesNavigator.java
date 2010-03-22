@@ -14,6 +14,7 @@
 package project.navigator;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedList;
 
@@ -37,8 +38,8 @@ public abstract class ExamplesNavigator {
 	public Collection<Example> getExamples() {
 		final Collection<Example> examples = new LinkedList<Example>();
 		
-		for (File category : subdirectoriesOf(base)) {
-			for (File example : subdirectoriesOf(category)) {
+		for (File category : unignoredSubdirectoriesOf(base)) {
+			for (File example : unignoredSubdirectoriesOf(category)) {
 				if (include(new Example(example)))
 					examples.add(new Example(example));
 			}
@@ -50,15 +51,14 @@ public abstract class ExamplesNavigator {
 	protected abstract boolean include(Example example);
 	
 	
-	private static Iterable<File> subdirectoriesOf(File directory) {
+	private static Iterable<File> unignoredSubdirectoriesOf(File directory) {
 		final Collection<File> subdirectories = new LinkedList<File>();
 		
-		if (directory.list() == null)
-			return subdirectories;
-		
-		for (String subdirectoryName : directory.list()) {
-			if (!isHiddenFile(subdirectoryName)) {
-				subdirectories.add(new File(directory, subdirectoryName));
+		if (directory.list() != null) {
+			for (String subdirectoryName : directory.list()) {
+				if (!isHiddenFile(subdirectoryName) && !containsIgnoreFile(new File(directory, subdirectoryName))) {
+					subdirectories.add(new File(directory, subdirectoryName));
+				}
 			}
 		}
 		
@@ -67,5 +67,13 @@ public abstract class ExamplesNavigator {
 
 	private static boolean isHiddenFile(String filename) {
 		return filename.startsWith(".");
+	}
+	
+
+	private static boolean containsIgnoreFile(File directory) {
+		if (!directory.isDirectory())
+			return false;
+		
+		return Arrays.asList(directory.list()).contains("measure.ignore");
 	}
 }
