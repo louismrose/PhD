@@ -28,10 +28,6 @@ rule UnknownConnectionPoint {
 		o : Before!ConnectionPoint (
 			o.isUnknown()
 		)
-	to
-		r : After!ReadingConnectionPoint(
-			name <- o.name
-		)
 	do {
 		('Cannot determine whether "' + o.name + '"' +
          'should be a ReadingConnectionPoint or a ' +
