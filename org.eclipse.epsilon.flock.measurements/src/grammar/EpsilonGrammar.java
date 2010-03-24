@@ -51,7 +51,7 @@ public class EpsilonGrammar implements Grammar {
 
 	public int countNewDeleteAndChangeTypeOperationsIn(String text) {
 		return new PatternCounter("new ", "delete", "migrate \\w* to \\w*").countMatchesIn(text) +
-		       new RuleWithDifferentSourceAndTargetTypeCounter(text).count();
+		       new EtlRuleWithDifferentSourceAndTargetTypeCounter(text).count();
 	}
  
 	public Collection<String> getWords() {

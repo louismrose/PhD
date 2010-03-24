@@ -56,7 +56,7 @@ public class MeasurementPrinter {
 	}
 	
 	public static MeasurementPrinter createMetamodelTerminologyCountPrinter() {
-		return new MeasurementPrinter(new MetamodelTerminologyCounterFactory(), new Ecore2EcoreExamplesNavigator(BASE_PATH));
+		return new MeasurementPrinter(new MetamodelTerminologyCounterFactory(), DEFAULT_NAVIGATOR);
 	}
 	
 	

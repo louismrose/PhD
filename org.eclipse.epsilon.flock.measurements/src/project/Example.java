@@ -13,10 +13,13 @@
  */
 package project;
 
+import grammar.AtlGrammar;
 import grammar.CopeGrammar;
 import grammar.EpsilonGrammar;
 
 import java.io.File;
+import java.io.FileFilter;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
@@ -39,25 +42,52 @@ public class Example {
 	}
 
 	public Collection<MigrationStrategy> getMigrationStrategies() throws Exception {
-		return Arrays.asList(getFlockMigrationStrategy(), getEtlMigrationStrategy(), getCopeMigrationStrategy(), getEcore2EcoreMigrationStrategy());
+		return Arrays.asList(getAtlMigrationStrategy(), getFlockMigrationStrategy(), getEtlMigrationStrategy(), getCopeMigrationStrategy(), getEcore2EcoreMigrationStrategy());
 	}
 	
 
-	File getFlockFile() {
-		return getFileFromExample("mig_lang/" + name + ".mig");
+	File getFlockFile() throws FileNotFoundException {
+		try {
+			final File fileFromMigDir = getFileFromExample("mig_lang/", ".mig");
+			return fileFromMigDir == null ? getFileFromExample("flock/", ".mig") : fileFromMigDir;
+		
+		} catch (FileNotFoundException e) {
+			return getFileFromExample("flock/", ".mig");
+		}
 	}
 	
 	public MigrationStrategy getFlockMigrationStrategy() throws IOException {
-		return new MigrationStrategy("Flock", new FileReader(getFlockFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
+		final String code = getFlockFile() != null && getFlockFile().exists() ?
+		                    new FileReader(getFlockFile()).readMigrationStrategy() :
+		                    "";
+                
+		return new MigrationStrategy("Flock", code, EpsilonGrammar.getInstance());
 	}
 
 	
-	File getEtlFile() {
-		return getFileFromExample("etl/" + name + ".etl");
+	File getEtlFile() throws FileNotFoundException {
+		return getFileFromExample("etl/", ".etl");
 	}
 	
 	public MigrationStrategy getEtlMigrationStrategy() throws IOException {
-		return new MigrationStrategy("ETL", new FileReader(getEtlFile()).readMigrationStrategy(), EpsilonGrammar.getInstance());
+		final String code = getEtlFile() != null && getEtlFile().exists() ?
+		                    new FileReader(getEtlFile()).readMigrationStrategy() :
+		                    "";
+                
+		return new MigrationStrategy("ETL", code, EpsilonGrammar.getInstance());
+	}
+	
+	
+	File getAtlFile() throws FileNotFoundException {
+		return getFileFromExample("atl/", ".atl");
+	}
+	
+	public MigrationStrategy getAtlMigrationStrategy() throws IOException {
+		final String code = getAtlFile() != null && getAtlFile().exists() ?
+		                    new FileReader(getAtlFile()).readMigrationStrategy() :
+		                    "";
+                
+		return new MigrationStrategy("ATL", code, AtlGrammar.getInstance());
 	}
 	
 	
@@ -66,7 +96,11 @@ public class Example {
 	}
 	
 	public MigrationStrategy getCopeMigrationStrategy() throws Exception {
-		return new MigrationStrategy("COPE", new CopeModelFileReader(getCopeFile()).readMigrationStrategy(), CopeGrammar.getInstance());
+		final String code = getCopeFile() != null && getCopeFile().exists() ?
+		                    new CopeModelFileReader(getCopeFile()).readMigrationStrategy() :
+		                    "";
+		
+		return new MigrationStrategy("COPE", code, CopeGrammar.getInstance());
 	}
 	
 	
@@ -113,6 +147,25 @@ public class Example {
 	
 	private File getFileFromExample(String path) {
 		return new File(base, category + "/" + name + "/" + path);
+	}
+	
+	private File getFileFromExample(String containerPath, final String suffix) throws FileNotFoundException {
+		final File dir = new File(base, category + "/" + name + "/" + containerPath);
+		
+		final File[] matchingFiles = dir.listFiles(new FileFilter() {
+			
+			public boolean accept(File pathname) {
+				return pathname.getName().endsWith(suffix);
+			}
+		});
+		
+		if (matchingFiles == null)
+			return null;
+		
+		if (matchingFiles.length == 0)
+			throw new FileNotFoundException("No file found in " + containerPath + " with extension " + suffix);
+		
+		return matchingFiles[0];
 	}
 	
 

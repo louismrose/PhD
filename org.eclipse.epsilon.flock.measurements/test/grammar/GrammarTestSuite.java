@@ -22,7 +22,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({CopeGrammarTests.class, EpsilonGrammarTests.class,
-               CopeNewDeleteAndChangeTypeGrammarTests.class, EpsilonNewDeleteAndChangeTypeGrammarTests.class, RuleWithDifferentSourceAndTargetTypeCounterTests.class})
+               CopeNewDeleteAndChangeTypeGrammarTests.class, EpsilonNewDeleteAndChangeTypeGrammarTests.class, EtlRuleWithDifferentSourceAndTargetTypeCounterTests.class})
 public class GrammarTestSuite {
 
 	public static Test suite() {

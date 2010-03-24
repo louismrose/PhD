@@ -19,7 +19,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class RuleWithDifferentSourceAndTargetTypeCounterTests {
+public class EtlRuleWithDifferentSourceAndTargetTypeCounterTests {
 
 	@Test
 	public void matchesRuleWithDifferentSourceAndTargetType() {
@@ -84,11 +84,11 @@ public class RuleWithDifferentSourceAndTargetTypeCounterTests {
                                       "rule Foo2Foo transform f1 : Foo to f2 : Foo {}" +
 		                              "rule Bar2Baz transform r  : Bar to z  : Baz {}";
 		
-		assertEquals(2, new RuleWithDifferentSourceAndTargetTypeCounter(transformation).count());
+		assertEquals(2, new EtlRuleWithDifferentSourceAndTargetTypeCounter(transformation).count());
 	}
 	
 	
 	public boolean isARuleWithDifferentSourceAndTarget(String rule) {
-		return new RuleWithDifferentSourceAndTargetTypeCounter(rule).count() > 0;
+		return new EtlRuleWithDifferentSourceAndTargetTypeCounter(rule).count() > 0;
 	}
 }

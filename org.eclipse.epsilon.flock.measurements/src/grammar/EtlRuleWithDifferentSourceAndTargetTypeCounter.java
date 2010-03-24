@@ -13,7 +13,7 @@
  */
 package grammar;
 
-public class RuleWithDifferentSourceAndTargetTypeCounter {
+public class EtlRuleWithDifferentSourceAndTargetTypeCounter {
 
 	private static final String WS = "\\s+";
 	private static final String WORD = "\\w*";
@@ -29,7 +29,7 @@ public class RuleWithDifferentSourceAndTargetTypeCounter {
 	
 	private final String transformation;
 	
-	public RuleWithDifferentSourceAndTargetTypeCounter(String transformation) {
+	public EtlRuleWithDifferentSourceAndTargetTypeCounter(String transformation) {
 		this.transformation = transformation;
 	}
 	

@@ -46,7 +46,7 @@ public class PatternCounter {
 	}
 	
 	
-	public int countMatchesIn(String text) {
+	public int countMatchesIn(String text) {		
 		int matches = 0;
 		
 		for (Pattern keyword : keywords) {
