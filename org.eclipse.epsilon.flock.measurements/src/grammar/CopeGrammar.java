@@ -63,7 +63,8 @@ public class CopeGrammar implements Grammar {
 	}
 
 	public int countNewDeleteAndChangeTypeOperationsIn(String text) {
-		return new PatternCounter("\\.newInstance", "\\.delete", "\\.migrate").countMatchesIn(text);
+//		return new PatternCounter("\\.newInstance", "\\.delete", "\\.migrate").countMatchesIn(text);
+		return new PatternCounter("\\.delete").countMatchesIn(text);
 	}
 
 	public Collection<String> getWords() {

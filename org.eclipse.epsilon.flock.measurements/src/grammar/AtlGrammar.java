@@ -31,7 +31,8 @@ public class AtlGrammar implements Grammar {
 	}
 	
 	public int countNewDeleteAndChangeTypeOperationsIn(String text) {
-		return new AtlRuleWithDifferentSourceAndTargetTypeCounter(text).count();
+		return 0;
+//		return new AtlRuleWithDifferentSourceAndTargetTypeCounter(text).count();
 	}
 
 	public Collection<String> getWords() {
