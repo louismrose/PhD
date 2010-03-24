@@ -2,7 +2,7 @@
 
 \chapter{Implementation}
 \label{Implementation}
-Section~\ref{sec:requirements_identification} identified requirements for structures and processes for managing co-evolution. In this chapter, the way in which this thesis approaches those requirements is described. Several related solutions were implemented, using domain-specific languages, automation and extensions to existing modelling technologies. Figure~\ref{fig:implementation_overview} summarises the structure of this chapter. To better support co-evolution and to overcome restrictions with existing modelling frameworks, a metamodel-independent syntax was devised and implemented, enabling model and metamodel decoupling and consistency checking (Section~\ref{sec:mmi_syntax}). To address some of the challenges faced in user-driven co-evolution, an OMG specification for an alternative, textual modelling notation was implemented (Section~\ref{sec:notation}). Model migration languages were identified, analysed and compared, leading to the derivation and implementation of a new model transformation language tailored for model migration and centred around a novel approach to relating source and target model elements (Section~\ref{sec:flock}). 
+Section~\ref{sec:requirements_identification} identified requirements for structures and processes for managing co-evolution. In this chapter, the way in which this thesis approaches those requirements is described. Several related solutions were implemented, using domain-specific languages, automation and extensions to existing modelling technologies. Figure~\ref{fig:implementation_overview} summarises the structure of the chapter. To better support co-evolution and to overcome restrictions with existing modelling frameworks, a metamodel-independent syntax was devised and implemented, enabling model and metamodel decoupling and consistency checking (Section~\ref{sec:mmi_syntax}). To address some of the challenges faced in user-driven co-evolution, an OMG specification for an alternative, textual modelling notation was implemented (Section~\ref{sec:notation}). Model migration languages were identified, analysed and compared, leading to the derivation and implementation of a new model transformation language tailored for model migration and centred around a novel approach to relating source and target model elements (Section~\ref{sec:flock}). 
 
 \begin{figure}[htbp]
   \begin{center}
@@ -26,7 +26,7 @@ Throughout a model-driven development process, modelling frameworks are used to 
 
 An XMI document defines one or more namespaces from which type information is drawn. For example, XMI itself provides a namespace for specifying the version of XMI being used. Metamodels are referenced via namespaces, allowing the specification of elements that instantiate metamodel types.
 
-As discussed in Section~\ref{subsec:modelling_framework_characteristics}, modelling frameworks bind a model to its metamodel using the underlying programming language. The metamodel defines the way in which model elements will be bound, and frequently, binding is strongly-typed: each metamodel type is mapped to a corresponding type in the underlying programming language. When a metamodel changes, binding may fail when a model no longer conforms to its metamodel, as the following example demonstrates. 
+As discussed in Section~\ref{subsec:modelling_framework_characteristics}, modelling frameworks bind a model to its metamodel using the underlying programming language. The metamodel defines the way in which model elements will be bound, and frequently, binding is strongly-typed: each metamodel type is mapped to a corresponding type in the underlying programming language.
 
 Listing~\ref{lst:xmi} shows XMI for an exemplar model conforming to a metamodel that defines \texttt{Person} as a metaclass with three features: a string-valued \texttt{name}, an optional reference to a \texttt{Person}, \texttt{mother}, and another optional reference to a \texttt{Person}, \texttt{father}.
 
@@ -234,8 +234,8 @@ FamilyPackage "families" {
     Family "The Does" {}
     Family "The Bloggs" {}
     
-    Family "The Smiths" familyFriends Family "The Does"
-    Family "The Smiths" familyFriends Family "The Bloggs"
+    Family "The Smiths" familyFriends Family "The Does";
+    Family "The Smiths" familyFriends Family "The Bloggs";
 }
 \end{lstlisting}
 
@@ -345,14 +345,14 @@ Epsilon HUTN uses the generic metamodel (from Section~\ref{sec:mmi_syntax}) as a
 
 To demonstrate the way in which HUTN can be used to perform migration, the exemplar XMI shown in Listing~\ref{lst:xmi} is represented using HUTN in Listing~\ref{lst:non-conformant_hutn}. Recall that the XMI describes three Persons, Franz, Julie and Hermann. Julie and Hermann are the mother and father of Franz.
 
-\begin{lstlisting}[caption=Exemplar HUTN document., label=lst:non-conformant_hutn, language=HutnFamilies]
+\begin{lstlisting}[caption=HUTN for people with mothers and fathers., label=lst:non-conformant_hutn, language=HutnFamilies]
 Persons "kafkas" {
     Person "Franz"   { name: "Franz"   }
     Person "Julie"   { name: "Julie"   }
     Person "Hermann" { name: "Hermann" }
     
-    Person "Franz" mother Person "Julie"
-    Person "Franz" father Person "Hermann"
+    Person "Franz" mother Person "Julie";
+    Person "Franz" father Person "Hermann";
 }
 \end{lstlisting}
 
@@ -360,17 +360,25 @@ Note that, by using a configuration file to specify that a Person's name is take
 
 If the Persons metamodel now evolves such that mother and father are merged to form a parents reference, Epsilon HUTN reports conformance problems on the HUTN document, as illustrated by the screenshot in Figure~\ref{fig:hutn_conformance_reporting}.
 
+\begin{figure}[htbp]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.44]{5.Implementation/hutn_conformance_reporting.png}
+  \end{center}
+  \caption{Conformance problem reporting in Epsilon HUTN.}
+  \label{fig:hutn_conformance_reporting}
+\end{figure}
 
 Resolving the conformance problems requires the user to change the feature named in the infix associations from mother (father) to parents. The Epsilon HUTN development tools provide content assistance, which might be useful in this situation. Listing~\ref{lst:conformant_hutn} shows a HUTN document that conforms to the metamodel defining parents rather than mother and father.
 
-\begin{lstlisting}[caption=Exemplar HUTN document., label=lst:conformant_hutn, language=HutnFamilies]
+\begin{lstlisting}[caption=HUTN for people with parents., label=lst:conformant_hutn, language=HutnFamilies]
 Persons "kafkas" {
     Person "Franz"   { name: "Franz"   }
     Person "Julie"   { name: "Julie"   }
     Person "Hermann" { name: "Hermann" }
     
-    Person "Franz" parents Person "Julie"
-    Person "Franz" parents Person "Hermann"
+    Person "Franz" parents Person "Julie";
+    Person "Franz" parents Person "Hermann";
 }
 \end{lstlisting}
 
@@ -384,8 +392,7 @@ Failure behaviours comprise a number of expressions that specify how each compon
 (\{\_\}, \{\_\}) \rightarrow (\{late\})
 \end{eqnarray}
 
-
-A failure behaviour can contain many expressions, and each component may be connected to many other components, so the metamodel for failure behaviours contains a large number of classes. In the generic concrete syntax, the specification of these behaviours is unhelpfully terse. For example. Listing \ref{lst:fptc-hutn} gives the HUTN syntax for failure behaviour (\ref{failure}), above.
+The above expression is written using a domain-specific syntax. In HUTN, the specification of these behaviours is less concise. For example, Listing \ref{lst:fptc-hutn} gives the HUTN syntax for failure behaviour (\ref{failure}), above.
 
 \begin{lstlisting}[caption=Failure behaviour specified in HUTN., label=lst:fptc-hutn, language=FPTC]
 Behaviour {
@@ -399,6 +406,8 @@ Behaviour {
     }
 }
 \end{lstlisting}
+
+The domain-specific syntax exploits two characteristics of failure expressions to achieve a compact notation. Firstly, structural domain concepts are mapped to symbols: tuples to parentheses and identifier sets to braces. Secondly, little syntactic sugar is needed for many domain concepts, as they define only one feature: a fault is referred to only by its name, the contents of identifier sets and tuples are separated using only commas.
 
 In general, HUTN is less concise than a domain-specific syntax for metamodels containing a large number of classes with few attributes, and in cases where most attributes are used to define structural relationships among concepts. However, there might still be benefits from using HUTN in such cases, if the metamodel is likely to be modified frequently, of it the model does not yet have a formal metamodel.
 
@@ -458,6 +467,7 @@ Using the above example, the existing approaches for specifying and executing mo
 
 
 \subsection{Existing Approaches}
+\label{subsec:existing_migration_languages}
 Using the above example, the existing approaches for specifying and executing model migration strategies are now compared.
 
 \subsubsection{Manual Specification with Model-to-Model Transformation}
