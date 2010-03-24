@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:minuml1="minuml1">
-  <minuml1:ActivityGraph name="graph">
-    <top xsi:type="minuml1:CompositeState" name="top">
-      <subvertex xsi:type="minuml1:Pseudostate" name="pk_initial1" outgoing="/0/@transitions.0"/>
-      <subvertex xsi:type="minuml1:ActionState" name="Request service" partition="/1" outgoing="/0/@transitions.1" incoming="/0/@transitions.0"/>
-      <subvertex xsi:type="minuml1:Pseudostate" name="pk_fork1" partition="/1" outgoing="/0/@transitions.2 /0/@transitions.7" incoming="/0/@transitions.1"/>
-      <subvertex xsi:type="minuml1:ActionState" name="Take order" partition="/2" outgoing="/0/@transitions.4" incoming="/0/@transitions.3"/>
-      <subvertex xsi:type="minuml1:ObjectFlowState" name="Placed Order" partition="/2" outgoing="/0/@transitions.3" incoming="/0/@transitions.2"/>
-      <subvertex xsi:type="minuml1:ActionState" name="Fill order" partition="/3" outgoing="/0/@transitions.5" incoming="/0/@transitions.15"/>
-      <subvertex xsi:type="minuml1:ObjectFlowState" name="Entered Order" partition="/3" outgoing="/0/@transitions.12" incoming="/0/@transitions.4"/>
-      <subvertex xsi:type="minuml1:Pseudostate" name="pk_join1" partition="/2" outgoing="/0/@transitions.9" incoming="/0/@transitions.6 /0/@transitions.8"/>
-      <subvertex xsi:type="minuml1:ObjectFlowState" name="Filled Order" partition="/3" outgoing="/0/@transitions.6" incoming="/0/@transitions.5"/>
-      <subvertex xsi:type="minuml1:ActionState" name="Pay" partition="/1" outgoing="/0/@transitions.8" incoming="/0/@transitions.7"/>
-      <subvertex xsi:type="minuml1:ActionState" name="Deliver order" partition="/2" outgoing="/0/@transitions.10" incoming="/0/@transitions.9"/>
-      <subvertex xsi:type="minuml1:ActionState" name="Collect order" partition="/1" outgoing="/0/@transitions.17" incoming="/0/@transitions.11"/>
-      <subvertex xsi:type="minuml1:ObjectFlowState" name="Delivered Order" partition="/2" outgoing="/0/@transitions.11" incoming="/0/@transitions.10"/>
-      <subvertex xsi:type="minuml1:Pseudostate" name="pk_junction1" partition="/3" outgoing="/0/@transitions.13 /0/@transitions.14" incoming="/0/@transitions.12"/>
-      <subvertex xsi:type="minuml1:ActionState" name="Restock" partition="/3" outgoing="/0/@transitions.16" incoming="/0/@transitions.14"/>
-      <subvertex xsi:type="minuml1:Pseudostate" name="pk_junction2" partition="/3" outgoing="/0/@transitions.15" incoming="/0/@transitions.13 /0/@transitions.16"/>
-      <subvertex xsi:type="minuml1:FinalState" name="Finished" incoming="/0/@transitions.17"/>
+  <minuml1:ActivityGraph xmi:id="_i58SIDcwEd-6Kq9KBByU0A" name="graph">
+    <top xsi:type="minuml1:CompositeState" xmi:id="_i58SITcwEd-6Kq9KBByU0A" name="top">
+      <subvertex xsi:type="minuml1:Pseudostate" xmi:id="_i58SIjcwEd-6Kq9KBByU0A" name="pk_initial1" outgoing="_i585OjcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:ActionState" xmi:id="_i58SIzcwEd-6Kq9KBByU0A" name="Request service" partition="_i59gSjcwEd-6Kq9KBByU0A" outgoing="_i585OzcwEd-6Kq9KBByU0A" incoming="_i585OjcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:Pseudostate" xmi:id="_i58SJDcwEd-6Kq9KBByU0A" name="pk_fork1" partition="_i59gSjcwEd-6Kq9KBByU0A" outgoing="_i585PDcwEd-6Kq9KBByU0A _i585QTcwEd-6Kq9KBByU0A" incoming="_i585OzcwEd-6Kq9KBByU0A" kind="fork"/>
+      <subvertex xsi:type="minuml1:ActionState" xmi:id="_i58SJTcwEd-6Kq9KBByU0A" name="Take order" partition="_i59gSzcwEd-6Kq9KBByU0A" outgoing="_i585PjcwEd-6Kq9KBByU0A" incoming="_i585PTcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:ObjectFlowState" xmi:id="_i58SJjcwEd-6Kq9KBByU0A" name="Placed Order" partition="_i59gSzcwEd-6Kq9KBByU0A" outgoing="_i585PTcwEd-6Kq9KBByU0A" incoming="_i585PDcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:ActionState" xmi:id="_i58SJzcwEd-6Kq9KBByU0A" name="Fill order" partition="_i59gTDcwEd-6Kq9KBByU0A" outgoing="_i585PzcwEd-6Kq9KBByU0A" incoming="_i59gRzcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:ObjectFlowState" xmi:id="_i58SKDcwEd-6Kq9KBByU0A" name="Entered Order" partition="_i59gTDcwEd-6Kq9KBByU0A" outgoing="_i59gQDcwEd-6Kq9KBByU0A" incoming="_i585PjcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:Pseudostate" xmi:id="_i585MDcwEd-6Kq9KBByU0A" name="pk_join1" partition="_i59gSzcwEd-6Kq9KBByU0A" outgoing="_i585QzcwEd-6Kq9KBByU0A" incoming="_i585QDcwEd-6Kq9KBByU0A _i585QjcwEd-6Kq9KBByU0A" kind="fork"/>
+      <subvertex xsi:type="minuml1:ObjectFlowState" xmi:id="_i585MTcwEd-6Kq9KBByU0A" name="Filled Order" partition="_i59gTDcwEd-6Kq9KBByU0A" outgoing="_i585QDcwEd-6Kq9KBByU0A" incoming="_i585PzcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:ActionState" xmi:id="_i585MjcwEd-6Kq9KBByU0A" name="Pay" partition="_i59gSjcwEd-6Kq9KBByU0A" outgoing="_i585QjcwEd-6Kq9KBByU0A" incoming="_i585QTcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:ActionState" xmi:id="_i585MzcwEd-6Kq9KBByU0A" name="Deliver order" partition="_i59gSzcwEd-6Kq9KBByU0A" outgoing="_i585RDcwEd-6Kq9KBByU0A" incoming="_i585QzcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:ActionState" xmi:id="_i585NDcwEd-6Kq9KBByU0A" name="Collect order" partition="_i59gSjcwEd-6Kq9KBByU0A" outgoing="_i59gSTcwEd-6Kq9KBByU0A" incoming="_i585RTcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:ObjectFlowState" xmi:id="_i585NTcwEd-6Kq9KBByU0A" name="Delivered Order" partition="_i59gSzcwEd-6Kq9KBByU0A" outgoing="_i585RTcwEd-6Kq9KBByU0A" incoming="_i585RDcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:Pseudostate" xmi:id="_i585NjcwEd-6Kq9KBByU0A" name="pk_junction1" partition="_i59gTDcwEd-6Kq9KBByU0A" outgoing="_i59gQTcwEd-6Kq9KBByU0A _i59gRDcwEd-6Kq9KBByU0A" incoming="_i59gQDcwEd-6Kq9KBByU0A" kind="junction"/>
+      <subvertex xsi:type="minuml1:ActionState" xmi:id="_i585NzcwEd-6Kq9KBByU0A" name="Restock" partition="_i59gTDcwEd-6Kq9KBByU0A" outgoing="_i59gSDcwEd-6Kq9KBByU0A" incoming="_i59gRDcwEd-6Kq9KBByU0A"/>
+      <subvertex xsi:type="minuml1:Pseudostate" xmi:id="_i585ODcwEd-6Kq9KBByU0A" name="pk_junction2" partition="_i59gTDcwEd-6Kq9KBByU0A" outgoing="_i59gRzcwEd-6Kq9KBByU0A" incoming="_i59gQTcwEd-6Kq9KBByU0A _i59gSDcwEd-6Kq9KBByU0A" kind="junction"/>
+      <subvertex xsi:type="minuml1:FinalState" xmi:id="_i585OTcwEd-6Kq9KBByU0A" name="Finished" incoming="_i59gSTcwEd-6Kq9KBByU0A"/>
     </top>
-    <transitions source="/0/@top/@subvertex.0" target="/0/@top/@subvertex.1"/>
-    <transitions source="/0/@top/@subvertex.1" target="/0/@top/@subvertex.2"/>
-    <transitions source="/0/@top/@subvertex.2" target="/0/@top/@subvertex.4"/>
-    <transitions source="/0/@top/@subvertex.4" target="/0/@top/@subvertex.3"/>
-    <transitions source="/0/@top/@subvertex.3" target="/0/@top/@subvertex.6"/>
-    <transitions source="/0/@top/@subvertex.5" target="/0/@top/@subvertex.8"/>
-    <transitions source="/0/@top/@subvertex.8" target="/0/@top/@subvertex.7"/>
-    <transitions source="/0/@top/@subvertex.2" target="/0/@top/@subvertex.9"/>
-    <transitions source="/0/@top/@subvertex.9" target="/0/@top/@subvertex.7"/>
-    <transitions source="/0/@top/@subvertex.7" target="/0/@top/@subvertex.10"/>
-    <transitions source="/0/@top/@subvertex.10" target="/0/@top/@subvertex.12"/>
-    <transitions source="/0/@top/@subvertex.12" target="/0/@top/@subvertex.11"/>
-    <transitions source="/0/@top/@subvertex.6" target="/0/@top/@subvertex.13"/>
-    <transitions source="/0/@top/@subvertex.13" target="/0/@top/@subvertex.15">
-      <guard name="in stock">
-        <expression language="" body="in stock"/>
+    <transitions xmi:id="_i585OjcwEd-6Kq9KBByU0A" source="_i58SIjcwEd-6Kq9KBByU0A" target="_i58SIzcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585OzcwEd-6Kq9KBByU0A" source="_i58SIzcwEd-6Kq9KBByU0A" target="_i58SJDcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585PDcwEd-6Kq9KBByU0A" source="_i58SJDcwEd-6Kq9KBByU0A" target="_i58SJjcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585PTcwEd-6Kq9KBByU0A" source="_i58SJjcwEd-6Kq9KBByU0A" target="_i58SJTcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585PjcwEd-6Kq9KBByU0A" source="_i58SJTcwEd-6Kq9KBByU0A" target="_i58SKDcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585PzcwEd-6Kq9KBByU0A" source="_i58SJzcwEd-6Kq9KBByU0A" target="_i585MTcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585QDcwEd-6Kq9KBByU0A" source="_i585MTcwEd-6Kq9KBByU0A" target="_i585MDcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585QTcwEd-6Kq9KBByU0A" source="_i58SJDcwEd-6Kq9KBByU0A" target="_i585MjcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585QjcwEd-6Kq9KBByU0A" source="_i585MjcwEd-6Kq9KBByU0A" target="_i585MDcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585QzcwEd-6Kq9KBByU0A" source="_i585MDcwEd-6Kq9KBByU0A" target="_i585MzcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585RDcwEd-6Kq9KBByU0A" source="_i585MzcwEd-6Kq9KBByU0A" target="_i585NTcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i585RTcwEd-6Kq9KBByU0A" source="_i585NTcwEd-6Kq9KBByU0A" target="_i585NDcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i59gQDcwEd-6Kq9KBByU0A" source="_i58SKDcwEd-6Kq9KBByU0A" target="_i585NjcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i59gQTcwEd-6Kq9KBByU0A" source="_i585NjcwEd-6Kq9KBByU0A" target="_i585ODcwEd-6Kq9KBByU0A">
+      <guard xmi:id="_i59gQjcwEd-6Kq9KBByU0A" name="in stock">
+        <expression xmi:id="_i59gQzcwEd-6Kq9KBByU0A" language="" body="in stock"/>
       </guard>
     </transitions>
-    <transitions source="/0/@top/@subvertex.13" target="/0/@top/@subvertex.14">
-      <guard name="not in stock">
-        <expression language="" body="not in stock"/>
+    <transitions xmi:id="_i59gRDcwEd-6Kq9KBByU0A" source="_i585NjcwEd-6Kq9KBByU0A" target="_i585NzcwEd-6Kq9KBByU0A">
+      <guard xmi:id="_i59gRTcwEd-6Kq9KBByU0A" name="not in stock">
+        <expression xmi:id="_i59gRjcwEd-6Kq9KBByU0A" language="" body="not in stock"/>
       </guard>
     </transitions>
-    <transitions source="/0/@top/@subvertex.15" target="/0/@top/@subvertex.5"/>
-    <transitions source="/0/@top/@subvertex.14" target="/0/@top/@subvertex.15"/>
-    <transitions source="/0/@top/@subvertex.11" target="/0/@top/@subvertex.16"/>
+    <transitions xmi:id="_i59gRzcwEd-6Kq9KBByU0A" source="_i585ODcwEd-6Kq9KBByU0A" target="_i58SJzcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i59gSDcwEd-6Kq9KBByU0A" source="_i585NzcwEd-6Kq9KBByU0A" target="_i585ODcwEd-6Kq9KBByU0A"/>
+    <transitions xmi:id="_i59gSTcwEd-6Kq9KBByU0A" source="_i585NDcwEd-6Kq9KBByU0A" target="_i585OTcwEd-6Kq9KBByU0A"/>
   </minuml1:ActivityGraph>
-  <minuml1:Partition name="Customer" contents="/0/@top/@subvertex.1 /0/@top/@subvertex.2 /0/@top/@subvertex.9 /0/@top/@subvertex.11"/>
-  <minuml1:Partition name="Sales" contents="/0/@top/@subvertex.3 /0/@top/@subvertex.4 /0/@top/@subvertex.7 /0/@top/@subvertex.10 /0/@top/@subvertex.12"/>
-  <minuml1:Partition name="Stockroom" contents="/0/@top/@subvertex.5 /0/@top/@subvertex.6 /0/@top/@subvertex.14 /0/@top/@subvertex.15 /0/@top/@subvertex.13 /0/@top/@subvertex.8"/>
+  <minuml1:Partition xmi:id="_i59gSjcwEd-6Kq9KBByU0A" name="Customer" contents="_i58SIzcwEd-6Kq9KBByU0A _i58SJDcwEd-6Kq9KBByU0A _i585MjcwEd-6Kq9KBByU0A _i585NDcwEd-6Kq9KBByU0A"/>
+  <minuml1:Partition xmi:id="_i59gSzcwEd-6Kq9KBByU0A" name="Sales" contents="_i58SJTcwEd-6Kq9KBByU0A _i58SJjcwEd-6Kq9KBByU0A _i585MDcwEd-6Kq9KBByU0A _i585MzcwEd-6Kq9KBByU0A _i585NTcwEd-6Kq9KBByU0A"/>
+  <minuml1:Partition xmi:id="_i59gTDcwEd-6Kq9KBByU0A" name="Stockroom" contents="_i58SJzcwEd-6Kq9KBByU0A _i58SKDcwEd-6Kq9KBByU0A _i585NzcwEd-6Kq9KBByU0A _i585ODcwEd-6Kq9KBByU0A _i585NjcwEd-6Kq9KBByU0A _i585MTcwEd-6Kq9KBByU0A"/>
 </xmi:XMI>

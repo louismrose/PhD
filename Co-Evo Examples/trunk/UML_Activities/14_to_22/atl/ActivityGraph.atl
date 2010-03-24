@@ -1,0 +1,117 @@
+module ActivityGraph;
+
+create Migrated : After from Original : Before;
+
+rule ActivityGraph {
+	from 
+		o : Before!ActivityGraph
+	to
+		p : After!Package (
+			packagedElement <- m
+		),
+		m : After!Activity (
+			name <- o.name,
+			node <- o.top.subvertex,
+			edge <- o.transitions,
+			group <- o.partition
+		)
+}
+
+rule Partitions {
+	from 
+		o : Before!Partition
+	to
+		p : After!ActivityPartition (
+			name <- o.name,
+			edge <- o.contents->select(c|c.oclIsKindOf(Before!Transition)),
+			node <- o.contents->reject(c|c.oclIsKindOf(Before!ObjectFlowState))
+		)
+}
+
+rule ActionState2OpaqueAction {
+	from 
+		o : Before!ActionState
+	to
+		p : After!OpaqueAction (
+			name <- o.name
+		)
+}
+
+rule Initials {
+	from 
+		o : Before!Pseudostate (
+				o.kind = #inital
+			)
+	to
+		p : After!InitialNode
+}
+
+rule Decisions {
+	from 
+		o : Before!Pseudostate (
+				o.kind = #junction
+			)
+	to
+		p : After!DecisionNode
+}
+
+rule Forks {
+	from 
+		o : Before!Pseudostate (
+				o.kind = #fork
+			)
+	to
+		p : After!ForkNode
+}
+
+rule Joins {
+	from 
+		o : Before!Pseudostate (
+				o.kind = #join
+			)
+	to
+		p : After!MergeNode
+}
+
+rule Finals {
+	from 
+		o : Before!FinalState
+	to
+		p : After!ActivityFinalNode
+}
+
+rule ObjectFlows {
+	from 
+		o : Before!Transition (
+			o.target.oclIsTypeOf(Before!ObjectFlowState)	
+		)
+	to
+		p : After!ObjectFlow (
+			source <- o.source,
+			target <- o.target.outgoing->first().target
+		)
+}
+
+rule ControlFlows {
+	from 
+		o : Before!Transition (
+			not o.source.oclIsTypeOf(Before!ObjectFlowState) and
+			not o.target.oclIsTypeOf(Before!ObjectFlowState)
+		)
+	to
+		p : After!ControlFlow (
+			guard <- o.guard,
+			source <- o.source,
+			target <- o.target
+		)
+}
+
+rule Guards {
+	from 
+		o : Before!Guard
+	to
+		p : After!OpaqueExpression (
+			body <- o.expression.body
+		)
+}
+
