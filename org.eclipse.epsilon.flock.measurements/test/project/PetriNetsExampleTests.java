@@ -17,6 +17,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 import org.junit.Test;
 
@@ -25,7 +26,7 @@ public class PetriNetsExampleTests {
 	private static final Example example = new Example(new File("../Co-Evo Examples/Literature/PetriNets"));
 	
 	@Test
-	public void flockFile() {
+	public void flockFile() throws FileNotFoundException {
 		final File expected = new File("../Co-Evo Examples/Literature/PetriNets/mig_lang/PetriNets.mig");
 		final File actual = example.getFlockFile();
 		
@@ -34,7 +35,7 @@ public class PetriNetsExampleTests {
 	}
 	
 	@Test
-	public void etlFile() {
+	public void etlFile() throws FileNotFoundException {
 		final File expected = new File("../Co-Evo Examples/Literature/PetriNets/etl/PetriNets.etl");
 		final File actual = example.getEtlFile();
 		

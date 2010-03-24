@@ -18,6 +18,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 import org.junit.Test;
 
@@ -26,7 +27,7 @@ public class EnumToClassesExampleTests {
 	private static final Example example = new Example(new File("../Co-Evo Examples/GADIN/Enum to Classes"));
 	
 	@Test
-	public void flockFile() {
+	public void flockFile() throws FileNotFoundException {
 		final File expected = new File("../Co-Evo Examples/GADIN/Enum to Classes/mig_lang/Enum to Classes.mig");
 		final File actual = example.getFlockFile();
 		
@@ -35,7 +36,7 @@ public class EnumToClassesExampleTests {
 	}
 	
 	@Test
-	public void etlFile() {
+	public void etlFile() throws FileNotFoundException {
 		final File expected = new File("../Co-Evo Examples/GADIN/Enum to Classes/etl/Enum to Classes.etl");
 		final File actual = example.getEtlFile();
 		
