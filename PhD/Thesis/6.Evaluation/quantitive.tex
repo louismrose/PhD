@@ -1,33 +1,62 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
 
 \subsection{Quantitive Comparison of Model Migration Languages}
-As discussed in Chapter~\ref{Implementation}, the languages currently used for model migration vary. Model-to-model transformation languages are used in some migration tools (e.g. \cite{cicchetti,garces}); general-purpose languages in others (e.g. \cite{ecore2ecore,cope}) and in ad-hoc solutions to migration (e.g. \cite{gmf}).
+In Section~\ref{subsec:requirements_identification}, the following research requirement was identified: \emph{This thesis must implement and evaluate a domain-specific language for specifying and executing model migration strategies, comparing it to existing languages for specifying model migration strategies.} As discussed in Section~\ref{subsec:flock_implementation}, this thesis contributes Epsilon Flock, a domain-specific language for model migration. This section fulfils the second part of the above research requirement, comparing Flock with languages that are used in contemporary migration tools. 
 
-In developer-driven migration, a programming language codifies the migration strategy. Because migration involves deriving the migrated model from the original, migration strategies typically access information from the original model and, based on that information, update the migrated model in some way. As such, migration is written in a language with constructs for accessing and updating the original and migrated models. Here, those language constructs are termed \textit{model operations}. Using XX examples of model migration, this section explores the variation in frequency of \emph{model operation} over different model migration languages, and discusses to what extent the results of this comparison can be used to assess the suitability of the languages considered for model migration.
+In developer-driven migration, a programming language codifies the migration strategy. Because migration involves deriving the migrated model from the original, migration strategies typically access information from the original model and, based on that information, update the migrated model in some way. As such, migration is written in a language with constructs for accessing and updating the original and migrated models. Here, those language constructs are termed \textit{model operations}. Using examples of co-evolution, this section explores the variation in frequency of \emph{model operation} over different model migration languages, and discusses to what extent the results of this comparison can be used to assess the suitability of the languages considered for model migration.
 
-The remainder of this section.... TODO
+As discussed in Chapter~\ref{Implementation}, the languages currently used for model migration vary. Model-to-model transformation languages are used in some migration tools (e.g. \cite{cicchetti,garces}); general-purpose languages in others (e.g. \cite{ecore2ecore,cope}). Irrespective of the language used for migration, the way in which a migration tool relates original and migrated model elements falls into one of two categories: new- or existing-target, which were first introduced in Section~\ref{subsec:existing_migration_languages}. In the former, the migrated model is created afresh by the execution of the migration strategy. In the latter, the migrated model is initialised as a copy of the original model and then the migration strategy is executed.
 
+Flock contributes a novel approach for relating original and migrated model elements, termed conservative copy. Conservative copy is a hybrid of new- and existing-target approaches. This section compares new-target, existing-target and conservative copy in the context of model migration. \footnote{TODO: Explain the structure of the rest of this section}
+
+\subsubsection{Data}
+Five examples of co-evolution were used to compare new-target, existing-target and conservative copy. This section briefly discusses the data used in the comparison.
+
+\paragraph{Co-evolution Examples}
+TODO: GMFx2, Newsgroupsx2, UML Activities. Briefly describe these and explain where they came from.
+
+These examples were not used in the work described in Chapters~\ref{Analysis} and \ref{Implementation}.
+
+\pargraph{Selection of Migration Languages}
+As discussed above, there are two ways in which existing migration languages relate original and migrated model elements, new- and existing-target. Flock contributes a third way, conservative copy. For the comparison with Flock, one new- and one existing-target language was chosen.
+
+The Atlas Transformation Language (ATL), a model-to-model transformation language has been used in \cite{cicchetti,garces} for model migration. As discussed in Section~\ref{subsec:existing_migration_languages}, model-to-model transformation languages support only new-target transformations for model migration\foonote{Because, in model migration, the source and target metamodels are not the same.}.
+
+The author is aware of two approaches to migration that use existing-target transformations. In COPE \cite{cope}, migration strategies are hand-written in Groovy when no co-evolutionary operator can be applied. As discussed in Section~\ref{subsec:existing_migration_languages}, COPE's Groovy migration strategies use an existing-target approach. COPE provides 6\footnote{check this} operations for interacting with model elements, such as \texttt{set}, for changing the value of a feature, and \texttt{unset}, for removing all values from a feature. In the remainder of this section, the term \emph{Groovy-for-COPE} is used to refer to the combination of the Groovy programming language and the operators provided by COPE for use in hand-written migration strategies. In Ecore2Ecore \cite{ecore2ecore}, migration is performed when the original model is loaded, effectively an existing-target approach. Ecore2Ecore migration strategies are written in Java and must interact with libraries for interacting with EMF and XML.
+
+The comparison to Flock described in this section uses ATL to represent new-target approaches and Groovy-for-COPE to represent existing-target approaches. Groovy-for-COPE was preferred to Ecore2Ecore because the latter is not as expressive\foonote{Communication with Ed Merks, Eclipse Modeling Project leader, 2009, available at \url{http://www.eclipse.org/forums/index.php?t=tree&goto=486690&S=b1fdb2853760c9ce6b6b48d3a01b9aac}} and cannot be used for migration in the co-evolution examples considered in this section.
 
 \subsubsection{Method}
-XX examples of co-evolution, taken from the projects identified in Chapter~\ref{Analysis}, were used to explore the variation in frequency of model operations over different migration languages. For each example, a migration strategy was written in each migration language to be compared. The correctness of the migration strategy was assured by comparing the migrated models provided by the co-evolution example with the result of executing the migration strategy on the original models provided by the co-evolution example.
+For each example of co-evolution, a migration strategy was written using each migration language (namely ATL, Groovy-for-COPE and Flock). The correctness of the migration strategy was assured by comparing the migrated models provided by the co-evolution example with the result of executing the migration strategy on the original models provided by the co-evolution example.
 
-For each migration language, a set of model operations were identified, as described in Section~\ref{subsec:model_migration_languages}. A program was written to count the number of \emph{model operations} appearing in each migration strategy. The results are presented in Section~\ref{subsec:quantitive_results}.
+For each migration language, a set of model operations were identified, as described in Section~\ref{subsec:model_migration_languages}. A program was written to count the number of \emph{model operations} appearing in each migration strategy. The counting program was tested by writing migration strategies in each language for the co-evolution examples identified in Chapter~\ref{Analysis}.
 
-There are two non-trivial threats to the validity of the comparison performed in this section. Firstly, the author wrote the migration strategies for Epsilon Flock (a migration language that the author developed) and for the other migration languages considered (which the author has not developed). Therefore, it is possible that the migration strategies written in the latter may contain more model operations than necessary. For some migration languages, it was possible to reduce the effects of this threat by re-using or adapting existing migration strategy code written by the migration language authors. This is discussed further in Section~\ref{model_migration_languages}.
-
-Secondly, the examples of co-evolution used to perform this analysis were taken from Chapter~\ref{Analysis} and have influenced the development of Flock, as discussed in Chapter~\ref{Implementation}.  % To mitigate this, could I perform the comparison again on GMF, UML, etc?
+There is one non-trivial threat to the validity of the comparison performed in this section. The author wrote the migration strategies for Flock (a migration language that the author developed) and for the other migration languages considered (which the author has not developed). Therefore, it is possible that the migration strategies written in the latter may contain more model operations than necessary. In some cases, it was possible to reduce the effects of this threat by re-using or adapting existing migration strategy code written by the migration language authors. This is discussed further in Section~\ref{model_migration_languages}.
 
 
 \subsubsection{Model Migration Languages}
 \label{subsec:model_migration_languages}
-The variation in frequency of model operations was explored across three model migration languages, ATL (used in  \cite{cicchetti,garces}), Groovy (as used in \cite{cope}), and Epsilon Flock, the migration language developed in this thesis. Here, the model operations of each language are identified. In addition, the extent to which the comparison described in this section was able to use code written by the authors of each language is discussed.
+The variation in frequency of model operations was explored across three model migration languages, ATL, Groovy-for-COPE and Flock. Here, the model operations of each language are identified. In addition, the extent to which the comparison described in this section was able to use code written by the authors of each language is discussed.
 
 
 \paragraph{Atlas Transformation Language}
+The Atlas Transformation Language (ATL), ....
 
+TODO: Delete isn't measure because elements aren't deleted, they're simply not copied.
+TODO: Where do COPE / FLock use new? Why doesn't ATL? If it does, I need to count those too. OR, reconsider counting new - is it necessary?
 
-\paragraph{Groovy for COPE}
-In COPE \cite{cope}, migration strategies are codified in Groovy, a general-purpose, dynamically-typed programming language. COPE provides model operations for manipulating the migrated model via a metamodel-independent representation, as discussed in Chapters~\ref{Analysis} and \ref{Implementation}. For COPE, the following model operations were counted:
+\begin{itemize}
+	\item Assignment to a feature:
+	\subitem \texttt{<element>.<feature> <- <value>} 
+	
+	\item Changing the type of a model element:
+	\subitem \texttt{rule \{ from <name> : <original_type> to <name> : <migrated_type> \}}
+\end{itemize}
+
+The \texttt{to} part of a \texttt{migrate} rule is optional. \texttt{Migrate} rules without \texttt{to} parts were not counted as model operations.
+
+\paragraph{Groovy-for-COPE}
+In COPE \cite{cope}, migration strategies are codified in Groovy, a general-purpose, dynamically-typed programming language. COPE provides model operations for manipulating the migrated model via a metamodel-independent representation, as discussed in Chapters~\ref{Analysis} and \ref{Implementation}. For Groovy-for-COPE, the following model operations were counted:
 
 \begin{itemize}
 	\item Assignment to a feature:
@@ -76,65 +105,45 @@ Epsilon Flock, a transformation language tailored for model migration, was devel
 The \texttt{to} part of a \texttt{migrate} rule is optional. \texttt{Migrate} rules without \texttt{to} parts were not counted as model operations.
 
 
-\paragraph{Java for Ecore2Ecore}
-The migration strategies used in the Ecore2Ecore migration tool, part of the Eclipse Modeling Framework (EMF) \cite{steinberg09emf}, are written in Java. Programming interfaces from EMF are used in Ecore2Ecore migration strategies to access and update model elements. The comparison described in this section does not include Java migration strategies written for the Ecore2Ecore migration tool because Ecore2Ecore cannot be used to specify migration for most\footnote{TODO: give an exact figure} of the examples considered here. The Ecore2Ecore tool interacts directly with the XMI of the original model. When migration involves adding levels of nesting to the XMI, Ecore2Ecore cannot be used\footnote{Communication with Ed Merks, Eclipse Modeling Project leader, 2009, available at \url{http://www.eclipse.org/forums/index.php?t=tree&goto=486690&S=b1fdb2853760c9ce6b6b48d3a01b9aac}}. 
-
-
 \subsubsection{Results}
 \label{subsec:quantitive_results}
-By measuring the number of model operations in model migration strategies, the way in which each co-evolution approach relates original and migrated model elements was investigated. Fifteen examples of model migration were measured to obtain the results shown in Table~\ref{tab:model_operations_results}. 
+By measuring the number of model operations in model migration strategies, the way in which each co-evolution approach relates original and migrated model elements was investigated. Five examples of model migration were measured to obtain the results shown in Table~\ref{tab:model_operations_results}. 
 
 \begin{table}
 	\caption{Model operation frequency. An asterisk denotes an example that is not supported by Ecore2Ecore.}
 	\centering
 	\begin{tabular}{|r|c|c|c|}
 		\hline
-		Name       & ETL & COPE & Flock \\
+		Name                        & ATL & COPE & Flock \\
 		\hline
 		\hline
-		FPTC Connections             &  6  &  7  &  4 \\
-		\hline
-		FPTC Fault Sets*             & 13  &  6  &  4  \\ 
-		\hline
-		GADIN Enum to Classes*       &  7  &  4  &  3  \\
+		Newsgroup Extract Person    & 9  &  7  &  6  \\
 		\hline                       
-		GADIN Partition Containment  &  4  &  4  &  3  \\
+		Newsgroup Resolve Replies   &  8  &  3  &  2  \\
 		\hline                       
-		Literature Petri Nets        & 12  & 12  &  8  \\
+		UML Activity Diagrams       &  26  &  TBC  &  17  \\
 		\hline                       
-		Newsgroup Extract Person*    & 12  &  7  &  6  \\
+		GMF Graph                   &  101  &  TBC  &  16  \\
 		\hline                       
-		Newsgroup Resolve Replies*   &  8  &  3  &  2  \\
-		\hline                       
-		PO Split ConnectionPoint*    &  9  &  3  &  3  \\
-		\hline                       
-		Ref Change C to R            &  6  &  5  &  4  \\
-		\hline                       
-		Ref Change R to C*           &  4  &  6  &  4  \\
-		\hline                       
-		Ref Extract Class            &  5  &  5  &  3  \\
-		\hline                       
-		Ref Extract Subclass         &  7  &  1  &  1  \\
-		\hline                       
-		Ref Inline Class             &  4  &  5  &  2  \\
-		\hline                       
-		Ref Move Feature             &  6  &  2  &  1  \\
-		\hline                       
-		Ref Push Down Feature        &  7  &  1  &  1  \\
+		GMF Gen2009                 &  310  &  TBC  &  21  \\
 		\hline
 		\hline
-		Totals                       & 110 & 71  &  49 \\
+		Totals                       & TBC & TBC  &  TBC \\
 		\hline
-		Averages                     &  7.33  &  4.73  &  3.27 \\
+		Averages                     &  TBC  &  TBC  &  TBC \\
 		\hline
 	\end{tabular}
 	\label{tab:model_operations_results}
 \end{table}
 
-The results in Table~\ref{tab:model_operations_results} show that no migration strategy encoded in Flock contained less model operations when encoded in COPE or ATL. For the majority of examples, no migration strategy encoded in COPE contains less model operations when encoded in ETL. The three exceptions to the latter are FPTC Connections, Ref Change R to C and Ref Inline Class. The reasons for the results shown in Table~\ref{tab:model_operations_results} are now investigated.
+TODO: might be interesting to reinstate the table for results from examples described in analysis chapter.
+
+TODO: Comment on why GMF results are so much higher for ATL (It's because the source metamodels contain a lot of features. The UML example would have had similar differences in figures, but uses a minimal metamodel because ATL / COPE don't support MDR).
+
+The results in Table~\ref{tab:model_operations_results} show that no migration strategy encoded in Flock contained less model operations when encoded in Groovy-for-COPE or ATL. For the majority of examples, no migration strategy encoded in Groovy-for-COPE contained less model operations when encoded in ETL. The reasons for the results shown in Table~\ref{tab:model_operations_results} are now investigated.
 
 \paragrah{Copying Strategy}
-Each approach initialises the migrated model in a different way: ATL initialises an empty model, while COPE initialises a complete copy of the original model. Flock initialises the migrated model by copying only those model elements from the original model that conform to the migrated metamodel. The effects of these different copying strategies can be seen in many of the fifteen examples in Table~\ref{tab:model_operations_results}; perhaps most notably in the Literature Petri Nets example, shown below.
+Each approach initialises the migrated model in a different way: ATL initialises an empty model, while COPE initialises a complete copy of the original model. Flock initialises the migrated model by copying only those model elements from the original model that conform to the migrated metamodel. The effects of these different copying strategies can be seen in many of the examples in Table~\ref{tab:model_operations_results}. To explain this, a smaller example of co-evolution is used below.
 
 A Petri \texttt{Net} comprises \texttt{Place}s and \texttt{Transition}s (Figure~\ref{fig:original_mm}). A \texttt{Place} has any number of \texttt{src} or \texttt{dst} \texttt{Transition}s. Similarly, a \texttt{Transition} has at least one \texttt{src} and \texttt{dst} \texttt{Place}. The metamodel in Figure~\ref{fig:original_mm} is to be evolved so as to support weighted connections between \texttt{Place}s and \texttt{Transition}s and between \texttt{Transition}s and \texttt{Place}s.
 
@@ -156,43 +165,56 @@ The evolved metamodel is shown in Figure~\ref{fig:evolved_mm}. \texttt{Place}s a
 
 Models that were consistent with the original metamodel may not be consistent with the evolved metamodel. For example, \texttt{Transition} objects can no longer define values for \texttt{src} and \texttt{dst} features, and must define at least one value for the \texttt{in} and \texttt{out} features.
 
-The migration strategy for this evolution varies when specified in ATL, COPE and Flock, largely due to the differences in the way in which each approach initialises migrated models. When specified in ATL, migration must copy values from original to migrated model, as shown on lines 5-6, 12 and 20 of Listing~\ref{lst:quantitive_etl}. When using COPE, values contained in slots that no longer correspond to features in the migrated metamodel must be unset, as shown on lines 2, 9 and 18-19 of Listing~\ref{lst:quantitive_cope}. Finally, Flock initialises the migrated model by copying values only for those features that remain unchanged in the migrated model. Consequently, no explicit copying or unsetting is required in Listing~\ref{lst:quantitive_flock}; the migration strategy manipulates only metafeatures that do not exist in the evolved metamodel (\texttt{Transition\#src} and \texttt{Transition\#dst}) and the new metaclasses, \texttt{TPArc} and \texttt{PTArc}.
+The migration strategy for this evolution varies when specified in ATL, Groovy-for-COPE and Flock, largely due to the differences in the way in which each approach initialises migrated models. When specified in ATL, migration must copy values from original to migrated model, as shown on lines 5-6, 12 and 20 of Listing~\ref{lst:quantitive_etl}. When using Groovy-for-COPE, values contained in slots that no longer correspond to features in the migrated metamodel must be unset, as shown on lines 2, 9 and 18-19 of Listing~\ref{lst:quantitive_cope}. Finally, Flock initialises the migrated model by copying values only for those features that remain unchanged in the migrated model. Consequently, no explicit copying or unsetting is required in Listing~\ref{lst:quantitive_flock}; the migration strategy manipulates only metafeatures that do not exist in the evolved metamodel (\texttt{Transition\#src} and \texttt{Transition\#dst}) and the new metaclasses, \texttt{TPArc} and \texttt{PTArc}.
 
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, flexiblecolumns=true, numbers=left, nolol=true, caption=Petri nets model migration in ETL, label=lst:quantitive_etl, language=ETL, tabsize=2]
-rule Net2Net
-  transform o : Original!Net
-  to        m : Migrated!Net {
-
-  m.places      := o.places.equivalent();
-  m.transitions := o.transitions.equivalent();
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, flexiblecolumns=true, numbers=left, nolol=true, caption=Petri nets model migration in ATL, label=lst:quantitive_etl, language=ETL, tabsize=2]
+rule Nets {
+	from
+		o : Before!Net
+	to
+	  m : After!Net ( places <- o.places, transitions <- o.transitions )
 }
 
-rule Place2Place
-  transform o : Original!Place
-  to        m : Migrated!Place {
-
-  m.name := o.name;
+rule Places {
+	from
+		o : Before!Place
+	to
+		m : After!Place ( name <- o.name )
 }
 
-rule Transition2Transition
-  transform o : Original!Transition
-  to        m : Migrated!Transition {
+rule Transitions {
+	from
+		o : Before!Transition
+	to
+		m : After!Transition (
+			name <- o.name,
+			"in" <- o.src->collect(p | thisModule.PTArcs(p,o)),
+			out  <- o.dst->collect(p | thisModule.TPArcs(o,p))
+		)
+}
 
-  m.name := o.name;
+lazy rule PTArcs {
+	from
+		place       : Before!Place,
+		destination : Before!Transition
+	to
+		ptarcs : After!PTArc (
+			src <- place,
+			dst <- destination,
+			net <- destination.net
+		)
+}
 
-  for (source in o.src) {
-    var arc := new Migrated!PTArc;
-    arc.src := source.equivalent();
-    arc.dst := m;
-    arc.net := o.net.equivalent();
-  }
-
-  for (destination in o.dst) {
-    var arc := new Migrated!TPArc;
-    arc.src := m;
-    arc.dst := destination.equivalent();
-    arc.net := o.net.equivalent();
-  }
+lazy rule TPArcs {
+	from
+		transition  : Before!Transition,
+		destination : Before!Place
+	to
+		tparcs : After!TPArc (
+			src <- transition,
+			dst <- destination,
+			net <- transition.net
+		)
 }
 \end{lstlisting}
 
@@ -241,13 +263,13 @@ migrate Transition {
 
 With regard to the way in which they initialise the migrated model, COPE and ATL are opposites. The former initialises an exact copy of the original model, and so unset operations must be used when the value of a feature should not have been copied. By contrast, the latter initialises an empty model, and so explicit assignment operations must be used to copy values from original to migrated model for each feature that is not affected by the metamodel evolution.
 
-This difference explains almost all of the results shown in Table~\ref{tab:model_operations_results}. Firstly, because Flock requires no unsetting of affected model elements nor explicit copying of unaffected model elements, less model operations are used when specifying a migration strategy with Flock than is used when specifying the same migration strategy with COPE or with ATL. Secondly, in most of the fifteen examples, there are more features unaffected by metamodel evolution than affected. Consequently, specifying model migration with ATL for the examples shown in Table~\ref{tab:model_operations_results} requires more model operations than in COPE. In the FPTC Connections and Ref Inline Class examples, the opposite is true (i.e. more features are affected by metamodel evolution than affected) and so encoding the migration strategy with ATL requires less model operations than with COPE. 
+This difference explains the results shown in Table~\ref{tab:model_operations_results}. Firstly, because Flock requires no unsetting of affected model elements nor explicit copying of unaffected model elements, less model operations are used when specifying a migration strategy with Flock than is used when specifying the same migration strategy with Groovy-for-COPE or with ATL. Secondly, there are more features unaffected by metamodel evolution than affected. Consequently, specifying model migration with ATL for the examples shown in Table~\ref{tab:model_operations_results} requires more model operations than in Groovy-for-COPE.
 
 
 \paragrah{Side-Effects during Initialisation}
-The measurements observed for one example, Change R to C, cannot be explained by the difference in copying strategy. Instead, the way in which models are initialised by the migration languages must be considered. When a reference feature is changed to a containment reference during metamodel evolution, constructing the migrated model by starting from the original model (as is the case with COPE and, when the feature is not renamed, also Flock) can have side-effects which complicate migration. For the examples in Table~\ref{tab:model_operations_results}, only Change R to C, discussed below, was affected by this phenomenon.
+The measurements observed for one of the examples of co-evolution from Chapter~\ref{Analysis}, Change Reference to Containment, cannot be explained by the difference in copying strategy. Instead, the way in which models are initialised by the migration languages must be considered. When a reference feature is changed to a containment reference during metamodel evolution, constructing the migrated model by starting from the original model (as is the case with Groovy-for-COPE and, when the feature is not renamed, also Flock) can have side-effects which complicate migration.
 
-In the Change R to C example, a \texttt{System} initially comprises \texttt{Port}s and \texttt{Signature}s (Figure~\ref{fig:ref2cont_original_mm}). A \texttt{Signature} references any number of \texttt{ports}. The metamodel is to be evolved so that \texttt{Port}s can no longer be shared between \texttt{Signature}s.
+In the Change Reference to Containment example, a \texttt{System} initially comprises \texttt{Port}s and \texttt{Signature}s (Figure~\ref{fig:ref2cont_original_mm}). A \texttt{Signature} references any number of \texttt{ports}. The metamodel is to be evolved so that \texttt{Port}s can no longer be shared between \texttt{Signature}s.
 
 \begin{figure}[htbp]
   \centering
@@ -265,31 +287,35 @@ The evolved metamodel is shown in Figure~\ref{fig:ref2cont_evolved_mm}. \texttt{
   \label{fig:ref2cont_evolved_mm}
 \end{figure}
 
-The migration strategy is straightforward in ATL: for each \texttt{Signature} in the original model, each member of the \texttt{ports} feature is cloned and added to the \texttt{ports} feature of the equivalent \texttt{Signature}.
+The migration strategy is straightforward in ATL: for each \texttt{Signature} in the original model, each member of the \texttt{ports} feature is cloned, using a lazy rule, and added to the \texttt{ports} feature of the equivalent \texttt{Signature}.
 
 \begin{lstlisting}[basicstyle=\ttfamily\footnotesize, flexiblecolumns=true, numbers=left, nolol=true, caption=Change R to C model migration in ATL, label=lst:ref2cont_atl, language=ATL, tabsize=2]
-rule System2System
-	transform old : Old!System
-	to        s   : New!System {
-	
-	s.signatures := old.signatures.equivalent();
+rule Systems {
+	from
+		o : Before!System
+	to
+		m : After!System ( signatures <- o.signatures )
 }
 
-rule Signature2Signature
-	transform old : Old!Signature
-	to        s   : New!Signature {
-	
-	for (port in old.ports) {
-		var clone := new New!Port;
-		clone.name := port.name;
-		s.ports.add(clone);
-	}
+rule Signature {
+	from
+		o : Before!Signature
+	to
+		m : After!Signature (
+			ports <- o.ports->collect(p | thisModule.Port(p))
+		)
 }
+
+lazy rule Port {
+	from
+		o : Before!Port
+	to
+		m : After!Port ( name <- o.name )
 \end{lstlisting}
 
-In Flock and COPE, migration is less straightforward because, during migration, the value of a containment reference (\texttt{Signature\#ports}) is set automatically by the migration strategy execution engine. When a containment reference is set, the contained objects are removed from their previous containment reference (i.e. setting a containment reference can have side-effects). Therefore, in a \texttt{System} where more than one \texttt{Signature} references the same \texttt{Port}, the migrated model cannot be formed by copying the contents of \texttt{Signature\#ports} from the original model. Attempting to do so causes each \texttt{Port} to be contained only in the last referencing \texttt{Signature} that was copied.
+In Flock and Groovy-for-COPE, migration is less straightforward because, during migration, the value of a containment reference (\texttt{Signature\#ports}) is set automatically by the migration strategy execution engine. When a containment reference is set, the contained objects are removed from their previous containment reference (i.e. setting a containment reference can have side-effects). Therefore, in a \texttt{System} where more than one \texttt{Signature} references the same \texttt{Port}, the migrated model cannot be formed by copying the contents of \texttt{Signature\#ports} from the original model. Attempting to do so causes each \texttt{Port} to be contained only in the last referencing \texttt{Signature} that was copied.
 
-In COPE, the containment nature of the reference is not enforced until after the migration strategy is executed. Hence, the migration strategy can be specified by unsetting the contents of the \texttt{ports} reference (line 4 of Listing~\ref{lst:ref2cont_cope}), and creating a copy of each referenced \texttt{Port} (lines 5-7 of Listing~\ref{lst:ref2cont_cope}). Unlike the ATL migration strategy, the COPE migration strategy ports are cloned in the same model as the original port. Consequently, the COPE migration strategy must either only clone ports that are referenced by more than one signature or clone every referenced port, but delete all of the original ports. The latter approach requires 2 more model operations (to populate and delete the original ports) than the former (shown in Listing~\ref{lst:ref2cont_cope}).
+In Groovy-for-COPE, the containment nature of the reference is not enforced until after the migration strategy is executed. Hence, the migration strategy can be specified by unsetting the contents of the \texttt{ports} reference (line 4 of Listing~\ref{lst:ref2cont_cope}), and creating a copy of each referenced \texttt{Port} (lines 5-7 of Listing~\ref{lst:ref2cont_cope}). Unlike the ATL migration strategy, the ports in the Groovy-for-COPE migration strategy are cloned in the same model as the original port. Consequently, the Groovy-for-COPE migration strategy must either only clone ports that are referenced by more than one signature or clone every referenced port, but delete all of the original ports. The latter approach requires 2 more model operations (to populate and delete the original ports) than the former (shown in Listing~\ref{lst:ref2cont_cope}).
 
 \begin{lstlisting}[basicstyle=\ttfamily\footnotesize, flexiblecolumns=true, numbers=left, nolol=true, caption=Change R to C model migration in COPE, label=lst:ref2cont_cope, language=COPE, tabsize=2]
 def contained = []
@@ -332,9 +358,9 @@ delete Port when: not Original!Signature.all.exists(s|s.ports.includes(original)
 \end{lstlisting}
 
 
-The COPE and Flock migration strategies must also remove any \texttt{Port}s which are not referenced by any \texttt{Signature} (lines 17-21 of Listing~\ref{lst:ref2cont_cope}, and line 11 of Listing~\ref{lst:ref2cont_flock} respectively), whereas the ATL migration strategy, which initialises any empty migrated model, does not copy unreferenced \texttt{Port}s.
+The Groovy-for-COPE and Flock migration strategies must also remove any \texttt{Port}s which are not referenced by any \texttt{Signature} (lines 17-21 of Listing~\ref{lst:ref2cont_cope}, and line 11 of Listing~\ref{lst:ref2cont_flock} respectively), whereas the ATL migration strategy, which initialises any empty migrated model, does not copy unreferenced \texttt{Port}s.
 
-When a non-containment reference is changed to a containment reference, a Flock migration strategy requires one more more model operation than the equivalent ATL migration strategy: to delete model elements that are not contained in any instance of the containment reference (line 11 of Listing~\ref{lst:ref2cont_flock}). A COPE migration strategy requires three more model operations than the equivalent ATL migration strategy: one to delete model elements that are not contained in any instance of the containment reference (lines 17-21 of Listing~\ref{lst:ref2cont_cope}), one to dereference model elements that have already been cloned (line 10 of Listing~\ref{lst:ref2cont_cope}), and one to mark a model element as contained (line 12 of Listing~\ref{lst:ref2cont_cope}).  In the example considered here, the ATL migration strategy requires one more model operation than the Flock and COPE migration strategies (to copy the contents of System\#signature features from original to migrated model), due to the difference in copying strategy. This leads to the result shown in Table~\ref{tab:model_operations_results}: the Flock and ATL migration strategies have an equal number of model operations, while the COPE migration strategy has two more.
+When a non-containment reference is changed to a containment reference, a Flock migration strategy requires one more more model operation than the equivalent ATL migration strategy: to delete model elements that are not contained in any instance of the containment reference (line 11 of Listing~\ref{lst:ref2cont_flock}). A Groovy-for-COPE migration strategy requires three more model operations than the equivalent ATL migration strategy: one to delete model elements that are not contained in any instance of the containment reference (lines 17-21 of Listing~\ref{lst:ref2cont_cope}), one to dereference model elements that have already been cloned (line 10 of Listing~\ref{lst:ref2cont_cope}), and one to mark a model element as contained (line 12 of Listing~\ref{lst:ref2cont_cope}).  In the example considered here, the ATL migration strategy requires one more model operation than the Flock and Groovy-for-COPE migration strategies (to copy the contents of System\#signature features from original to migrated model), due to the difference in copying strategy. This leads to the result shown in Table~\ref{tab:model_operations_results}: the Flock and ATL migration strategies have an equal number of model operations, while the COPE migration strategy has two more.
 
 
 \subsubsection{Summary}

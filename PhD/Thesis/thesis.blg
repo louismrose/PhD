@@ -14,45 +14,45 @@ Warning--I didn't find a database entry for "cicchetti"
 Warning--I didn't find a database entry for "garces"
 Warning--I didn't find a database entry for "ecore2ecore"
 Warning--I didn't find a database entry for "cope"
-You've used 48 entries,
+You've used 47 entries,
             2472 wiz_defined-function locations,
-            789 strings with 11876 characters,
-and the built_in function-call counts, 17518 in all, are:
-= -- 1739
-> -- 665
+            786 strings with 11740 characters,
+and the built_in function-call counts, 17248 in all, are:
+= -- 1712
+> -- 657
 < -- 19
-+ -- 214
-- -- 202
-* -- 1197
-:= -- 2759
-add.period$ -- 155
-call.type$ -- 48
-change.case$ -- 286
++ -- 211
+- -- 200
+* -- 1184
+:= -- 2716
+add.period$ -- 152
+call.type$ -- 47
+change.case$ -- 281
 chr.to.int$ -- 42
-cite$ -- 48
-duplicate$ -- 788
-empty$ -- 1474
-format.name$ -- 260
-if$ -- 3736
-int.to.chr$ -- 7
+cite$ -- 47
+duplicate$ -- 777
+empty$ -- 1448
+format.name$ -- 257
+if$ -- 3678
+int.to.chr$ -- 6
 int.to.str$ -- 0
 missing$ -- 33
-newline$ -- 243
-num.names$ -- 144
-pop$ -- 361
+newline$ -- 238
+num.names$ -- 141
+pop$ -- 353
 preamble$ -- 1
-purify$ -- 341
+purify$ -- 335
 quote$ -- 0
-skip$ -- 645
+skip$ -- 634
 stack$ -- 0
-substring$ -- 715
-swap$ -- 210
+substring$ -- 708
+swap$ -- 208
 text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 364
+type$ -- 356
 warning$ -- 0
-while$ -- 131
-width$ -- 55
-write$ -- 617
+while$ -- 129
+width$ -- 54
+write$ -- 605
 (There were 4 warnings)

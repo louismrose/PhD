@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  22 MAR 2010 14:12
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  24 MAR 2010 16:18
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -198,185 +198,410 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `thesis.toc'.
 
  [3]
-\openout2 = `5.Implementation/implementation.aux'.
+\openout2 = `6.Evaluation/evaluation.aux'.
 
- (./5.Implementation/implementation.tex
-Chapter 5.
-<5.Implementation/overview.pdf, id=16, 673.51625pt x 160.6pt>
-File: 5.Implementation/overview.pdf Graphic file (type pdf)
+ (./6.Evaluation/evaluation.tex [56
 
-<use 5.Implementation/overview.pdf>
-Overfull \hbox (99.5221pt too wide) in paragraph at lines 9--11
- [] 
+
+
+
+
+
+
+]
+Chapter 6.
+(./6.Evaluation/case_study.tex) (./6.Evaluation/collaborative_case_study.tex)
+(./6.Evaluation/ttc.tex) (./6.Evaluation/quantitive.tex
+Overfull \hbox (12.2056pt too wide) in paragraph at lines 3--3
+[]\OT1/cmr/bx/n/12 Quantitive Com-par-i-son of Model Mi-gra-tion Lan-guages 
  []
 
-[31
+
+LaTeX Warning: Reference `subsec:requirements_identification' on page 57 undefi
+ned on input line 4.
 
 
+LaTeX Warning: Citation `cicchetti' on page 57 undefined on input line 8.
 
 
+LaTeX Warning: Citation `garces' on page 57 undefined on input line 8.
 
 
- <./5.Implementation/overview.pdf>]
-Overfull \hbox (2.00308pt too wide) in paragraph at lines 25--26
-\OT1/cmr/m/n/10 used to load and store mod-els. XML Meta-data In-ter-change (XM
-I) [[]],
- []
+LaTeX Warning: Citation `ecore2ecore' on page 57 undefined on input line 8.
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
+
+LaTeX Warning: Citation `cope' on page 57 undefined on input line 8.
+
+
+LaTeX Warning: Reference `subsec:existing_migration_languages' on page 57 undef
+ined on input line 8.
+
+[57]
+./6.Evaluation/quantitive.tex:20: Undefined control sequence.
+l.20 \pargraph
+              {Selection of Migration Languages}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `cicchetti' on page 58 undefined on input line 23.
+
+
+LaTeX Warning: Citation `garces' on page 58 undefined on input line 23.
+
+
+LaTeX Warning: Reference `subsec:existing_migration_languages' on page 58 undef
+ined on input line 23.
+
+./6.Evaluation/quantitive.tex:23: Undefined control sequence.
+l.23 ...ransformations for model migration\foonote
+                                                  {Because, in model migrati...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `cope' on page 58 undefined on input line 25.
+
+
+LaTeX Warning: Reference `subsec:existing_migration_languages' on page 58 undef
+ined on input line 25.
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 25.
 (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-)
-LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <7> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 34.
- [32]
-<5.Implementation/slot_model.pdf, id=40, 320.19624pt x 71.26625pt>
-File: 5.Implementation/slot_model.pdf Graphic file (type pdf)
 
-<use 5.Implementation/slot_model.pdf>
-<5.Implementation/mof.pdf, id=41, 338.26375pt x 74.2775pt>
-File: 5.Implementation/mof.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `ecore2ecore' on page 58 undefined on input line 25.
 
-<use 5.Implementation/mof.pdf> [33 <./5.Implementation/slot_model.pdf> <./5.Imp
-lementation/mof.pdf>]
-Overfull \hbox (0.18585pt too wide) in paragraph at lines 79--80
-[]\OT1/cmr/m/n/10 Conformance con-straints vary over mod-elling lan-guages. For
- ex-am-ple, Ecore,
- []
+./6.Evaluation/quantitive.tex:27: Undefined control sequence.
+l.27 ...se the latter is not as expressive\foonote
+                                                  {Communication with Ed Mer...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<5.Implementation/GenericBinding.pdf, id=67, 454.69875pt x 276.03125pt>
-File: 5.Implementation/GenericBinding.pdf Graphic file (type pdf)
 
-<use 5.Implementation/GenericBinding.pdf> [34 <./5.Implementation/GenericBindin
-g.pdf>] [35] [36]
-<5.Implementation/families.pdf, id=91, 272.01625pt x 152.57pt>
-File: 5.Implementation/families.pdf Graphic file (type pdf)
-
-<use 5.Implementation/families.pdf> [37 <./5.Implementation/families.pdf>]
-[38] [39]
-Overfull \hbox (33.56604pt too wide) in paragraph at lines 253--254
-[]\OT1/cmr/m/n/10 The core of the plat-form is the Ep-silon Ob-ject Lan-guage (
-EOL) [[]],
- []
-
-<5.Implementation/hutn_workflow.png, id=154, 760.8425pt x 195.73125pt>
-File: 5.Implementation/hutn_workflow.png Graphic file (type png)
-
-<use 5.Implementation/hutn_workflow.png> [40 <./5.Implementation/hutn_workflow.
-png (PNG copy)>]
-Overfull \hbox (18.93442pt too wide) in paragraph at lines 271--272
-\OT1/cmr/m/n/10 e-ment, \OT1/pcr/m/n/10 PackageObject\OT1/cmr/m/n/10 , was adde
-d to the generic meta-model. A \OT1/pcr/m/n/10 PackageObject
- []
-
-[41] [42]
-
-LaTeX Warning: Reference `fig:hutn_conformance_reporting' on page 43 undefined 
-on input line 359.
-
-[43]
-Overfull \hbox (17.19502pt too wide) in paragraph at lines 379--380
-[]\OT1/cmr/m/n/10 Notwithstanding the power of gener-ic-ity, there are sit-u-a-
-tions where a metamodel-
- []
-
-[44]
-Overfull \hbox (11.33557pt too wide) in paragraph at lines 411--412
-\OT1/cmr/m/n/10 tion 5.3.4[]). This work de-scribed in this sec-tion was pub-li
-shed in [[]]. 
- []
-
-<5.Implementation/petri_nets_step0.pdf, id=173, 254.9525pt x 153.57375pt>
-File: 5.Implementation/petri_nets_step0.pdf Graphic file (type pdf)
-
-<use 5.Implementation/petri_nets_step0.pdf>
-<5.Implementation/petri_nets_step1.pdf, id=174, 336.25626pt x 234.8775pt>
-File: 5.Implementation/petri_nets_step1.pdf Graphic file (type pdf)
-
-<use 5.Implementation/petri_nets_step1.pdf> [45 <./5.Implementation/petri_nets_
-step0.pdf> <./5.Implementation/petri_nets_step1.pdf>] [46]
-Overfull \hbox (16.99106pt too wide) in paragraph at lines 506--507
-\OT1/cmr/m/n/10 of \OT1/pcr/m/n/10 Place\OT1/cmr/m/n/10 s. The method is used t
-o ac-cess the \OT1/pcr/m/n/10 src \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 dst \OT1/
-cmr/m/n/10 fea-tures of \OT1/pcr/m/n/10 Transition\OT1/cmr/m/n/10 ,
- []
-
-[47] (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 509.
-Missing character: There is no Â in font pcrr7t!
-Missing character: There is no   in font pcrr7t!
-LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 520.
-Missing character: There is no Â in font pcrr7t!
-Missing character: There is no   in font pcrr7t!
-
-Overfull \hbox (88.20508pt too wide) in paragraph at lines 532--533
-\OT1/cmr/m/n/10 Operator-based ap-proaches to man-ag-ing co-evolution, such as 
-COPE [[]],
- []
-
-[48]
-Overfull \hbox (27.1412pt too wide) in paragraph at lines 538--539
-\OT1/cmr/m/n/10 sen-ta-tion. Fur-ther de-tails of this tech-nique are given in 
-[[]]. 
- []
-
-<5.Implementation/cope_mm.pdf, id=301, 363.3575pt x 144.54pt>
-File: 5.Implementation/cope_mm.pdf Graphic file (type pdf)
-
-<use 5.Implementation/cope_mm.pdf> [49 <./5.Implementation/cope_mm.pdf>]
-[50]
-Overfull \hbox (33.56604pt too wide) in paragraph at lines 606--607
-[]\OT1/cmr/m/n/10 The core of the plat-form is the Ep-silon Ob-ject Lan-guage (
-EOL) [[]],
+Overfull \hbox (2.69467pt too wide) in paragraph at lines 27--28
+\OT1/cmr/m/n/10 leader, 2009, avail-able at $\OT1/pcr/m/n/10 http : / / www . e
+clipse . org / forums / index . php ?
  []
 
 
-<5.Implementation/flock_abstract_syntax.pdf, id=322, 462.72874pt x 142.5325pt>
-File: 5.Implementation/flock_abstract_syntax.pdf Graphic file (type pdf)
-
-<use 5.Implementation/flock_abstract_syntax.pdf>
-Overfull \hbox (2.0457pt too wide) in paragraph at lines 617--618
- [][] 
+Overfull \hbox (11.88895pt too wide) in paragraph at lines 27--28
+\OT1/pcr/m/n/10 t = tree&goto = 486690&S = b1fdb2853760c9ce6b6b48d3a01b9aac$ \O
+T1/cmr/m/n/10 and can-
  []
 
-[51]
-Overfull \hbox (19.36142pt too wide) in paragraph at lines 651--652
-\OT1/cmr/m/n/10 meta-class of \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 is de-ter-mine
-d from the \OT1/pcr/m/n/10 evolvedType \OT1/cmr/m/n/10 (or the \OT1/pcr/m/n/10 
-originalType
+[58]
+
+LaTeX Warning: Reference `model_migration_languages' on page 59 undefined on in
+put line 34.
+
+
+Overfull \hbox (9.97443pt too wide) in paragraph at lines 43--44
+ \OT1/cmr/bx/n/10 At-las Trans-for-ma-tion Lan-guage[] \OT1/cmr/m/n/10 The At-l
+as Trans-for-ma-tion Lan-guage (ATL),
  []
 
-[52 <./5.Implementation/flock_abstract_syntax.pdf>]
-Overfull \hbox (3.13936pt too wide) in paragraph at lines 655--656
-[]| \OT1/cmr/m/n/10 Ex-e-cute the body of \OT1/pcr/m/n/10 r \OT1/cmr/m/n/10 bin
-d-ing \OT1/pcr/m/n/10 e \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 
-to vari-ables named \OT1/pcr/m/n/10 original
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 666.
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
 (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 666.
- [53] [54]
-Overfull \hbox (44.95235pt too wide) in paragraph at lines 716--730
- [][] 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 53.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/omspcr.fd
+File: omspcr.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
+
+./6.Evaluation/quantitive.tex:53: Missing $ inserted.
+<inserted text> 
+                $
+l.53 ...inal_type> to <name> : <migrated_type> \}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./6.Evaluation/quantitive.tex:53: Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.53 ...inal_type> to <name> : <migrated_type> \}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+./6.Evaluation/quantitive.tex:54: LaTeX Error: Command \end{itemize} invalid in
+ math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./6.Evaluation/quantitive.tex:54: LaTeX Error: Something's wrong--perhaps a mis
+sing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./6.Evaluation/quantitive.tex:54: LaTeX Error: Something's wrong--perhaps a mis
+sing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./6.Evaluation/quantitive.tex:54: Missing $ inserted.
+<inserted text> 
+                $
+l.54 \end{itemize}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./6.Evaluation/quantitive.tex:54: Missing } inserted.
+<inserted text> 
+                }
+l.54 \end{itemize}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (32.1349pt too wide) in paragraph at lines 53--55
+[]| \OT1/pcr/m/n/10 rule \OMS/cmsy/m/n/10 f \OT1/pcr/m/n/10 from <name> : <orig
+inal$[]\OML/cmm/m/it/10 ype > to < name >\OT1/cmr/m/n/10 :\OML/cmm/m/it/10 < mi
+grated[]ype >
  []
 
-) [55] (./thesis.bbl [58
 
+LaTeX Warning: Citation `cope' on page 59 undefined on input line 59.
+
+
+Overfull \hbox (18.47304pt too wide) in paragraph at lines 59--60
+\OT1/cmr/m/n/10 model op-er-a-tions for ma-nip-u-lat-ing the mi-grated model vi
+a a metamodel-independent
+ []
+
+[59]
+./6.Evaluation/quantitive.tex:102: Missing $ inserted.
+<inserted text> 
+                $
+l.102 ...grate <original_type> to <migrated_type>}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./6.Evaluation/quantitive.tex:102: Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.102 ...grate <original_type> to <migrated_type>}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+./6.Evaluation/quantitive.tex:103: LaTeX Error: Command \end{itemize} invalid i
+n math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 \end{itemize}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./6.Evaluation/quantitive.tex:103: LaTeX Error: Something's wrong--perhaps a mi
+ssing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 \end{itemize}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./6.Evaluation/quantitive.tex:103: LaTeX Error: Something's wrong--perhaps a mi
+ssing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 \end{itemize}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./6.Evaluation/quantitive.tex:103: Missing $ inserted.
+<inserted text> 
+                $
+l.103 \end{itemize}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./6.Evaluation/quantitive.tex:103: Missing } inserted.
+<inserted text> 
+                }
+l.103 \end{itemize}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[60]
+./6.Evaluation/quantitive.tex:145: Undefined control sequence.
+l.145 \paragrah
+               {Copying Strategy}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: File `petri_nets_step0.pdf' not found on input line 152.
+
+
+./6.Evaluation/quantitive.tex:152: Package graphics Error: File `petri_nets_ste
+p0.pdf' not found.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.152 ...raphics[scale=0.75]{petri_nets_step0.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[61]
+
+LaTeX Warning: File `petri_nets_step1.pdf' not found on input line 161.
+
+
+./6.Evaluation/quantitive.tex:161: Package graphics Error: File `petri_nets_ste
+p1.pdf' not found.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161 ...raphics[scale=0.75]{petri_nets_step1.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 171.
+[62] (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+[63]
+./6.Evaluation/quantitive.tex:269: Undefined control sequence.
+l.269 \paragrah
+               {Side-Effects during Initialisation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: File `change_ref_to_cont_before.pdf' not found on input line 276
+.
+
+
+./6.Evaluation/quantitive.tex:276: Package graphics Error: File `change_ref_to_
+cont_before.pdf' not found.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.276 ...cale=0.75]{change_ref_to_cont_before.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `change_ref_to_cont_after.pdf' not found on input line 285.
+
+
+
+./6.Evaluation/quantitive.tex:285: Package graphics Error: File `change_ref_to_
+cont_after.pdf' not found.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.285 ...scale=0.75]{change_ref_to_cont_after.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[64]
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 325.
+ [65] [66])) [67] (./thesis.bbl [58
 
 
 
@@ -398,34 +623,32 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3156 strings out of 493886
- 45595 string characters out of 1151098
- 165730 words of memory out of 3000000
- 6308 multiletter control sequences out of 10000+50000
- 14399 words of font info for 50 fonts, out of 3000000 for 5000
+ 2967 strings out of 493886
+ 42297 string characters out of 1151098
+ 212509 words of memory out of 3000000
+ 6119 multiletter control sequences out of 10000+50000
+ 12658 words of font info for 44 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 30i,8n,53p,1403b,1551s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,8n,44p,1385b,1599s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
 08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
-dist/fonts/type1/bluesky/cm/cmbxti10.pfb></usr/local/texlive/2008/texmf-dist/fo
-nts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1
-/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/c
-m/cmr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr17.pf
-b></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/loc
-al/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/
-2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-
-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/
-type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blu
-esky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/c
-mti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.pfb>
-</usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/lo
-cal/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texl
-ive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/200
-8/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on thesis.pdf (33 pages, 495588 bytes).
+dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/font
+s/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bl
+uesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/c
+mr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb><
+/usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/
+texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/200
+8/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dis
+t/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/typ
+e1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesk
+y/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti
+10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><
+/usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/loc
+al/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on thesis.pdf (20 pages, 172866 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
+ 136 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

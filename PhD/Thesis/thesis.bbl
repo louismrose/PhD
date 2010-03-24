@@ -23,17 +23,11 @@ Krzysztof Czarnecki and Simon Helsen.
 \newblock Feature-based survey of model transformation approaches.
 \newblock {\em IBM Systems Journal}, 45(3):621--646, 2006.
 
-\bibitem[Eclipse 2008a]{gmt}{$~$}
+\bibitem[Eclipse 2008]{gmt}{$~$}
 Eclipse.
 \newblock {Generative Modelling Technologies} project [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/gmt}, 2008.
-
-\bibitem[Eclipse 2008b]{gmf}{$~$}
-Eclipse.
-\newblock {Graphical Modelling Framework} project [online].
-\newblock [Accessed 19 September 2008] Available at:
-  \url{http://www.eclipse.org/modeling/gmf/}, 2008.
 
 \bibitem[Eclipse 2009a]{mdt}{$~$}
 Eclipse.

@@ -64,11 +64,11 @@
 \contentsline {subsubsection}{Inter-Package References}{38}
 \contentsline {subsubsection}{Alternative Reference Syntax}{39}
 \contentsline {subsubsection}{Customisation via Configuration}{39}
-\contentsline {subsection}{\numberline {5.2.2}Epsilon HUTN}{40}
+\contentsline {subsection}{\numberline {5.2.2}Epsilon HUTN}{39}
 \contentsline {subsubsection}{The Epsilon Platform}{40}
 \contentsline {subsubsection}{Implementation of Epsilon HUTN}{40}
 \contentsline {paragraph}{AST Model to Intermediate Model}{41}
-\contentsline {paragraph}{Intermediate Model Validation}{42}
+\contentsline {paragraph}{Intermediate Model Validation}{41}
 \contentsline {paragraph}{Intermediate Model to Target Model}{42}
 \contentsline {subsection}{\numberline {5.2.3}Migration with HUTN}{43}
 \contentsline {subsection}{\numberline {5.2.4}Limitations}{44}
@@ -98,21 +98,20 @@
 \contentsline {subsection}{\numberline {6.1.2}Collaborative Case Study}{57}
 \contentsline {subsection}{\numberline {6.1.3}Transformation Tools Contest}{57}
 \contentsline {subsection}{\numberline {6.1.4}Quantitive Comparison of Model Migration Languages}{57}
-\contentsline {subsection}{\numberline {6.1.5}Method}{57}
-\contentsline {subsection}{\numberline {6.1.6}Model Migration Languages}{58}
-\contentsline {subsubsection}{Atlas Transformation Language}{58}
-\contentsline {subsubsection}{Groovy for COPE}{58}
-\contentsline {subsubsection}{Epsilon Flock}{59}
-\contentsline {subsubsection}{Java for Ecore2Ecore}{59}
-\contentsline {subsection}{\numberline {6.1.7}Results}{60}
-\contentsline {subsubsection}{Copying Strategy}{60}
-\contentsline {subsubsection}{Side-Effects during Initialisation}{63}
-\contentsline {subsection}{\numberline {6.1.8}Summary}{66}
-\contentsline {section}{\numberline {6.2}Discussion}{66}
-\contentsline {subsection}{\numberline {6.2.1}Threats to validity}{66}
-\contentsline {section}{\numberline {6.3}Dissemination / Reception / ??}{66}
-\contentsline {subsection}{\numberline {6.3.1}Publications}{66}
-\contentsline {subsection}{\numberline {6.3.2}Delivery through Eclipse}{66}
+\contentsline {subsubsection}{Data}{58}
+\contentsline {paragraph}{Co-evolution Examples}{58}
+\contentsline {subsubsection}{Method}{58}
+\contentsline {subsubsection}{Model Migration Languages}{59}
+\contentsline {paragraph}{Atlas Transformation Language}{59}
+\contentsline {paragraph}{Groovy-for-COPE}{59}
+\contentsline {paragraph}{Epsilon Flock}{60}
+\contentsline {subsubsection}{Results}{61}
+\contentsline {subsubsection}{Summary}{67}
+\contentsline {section}{\numberline {6.2}Discussion}{67}
+\contentsline {subsection}{\numberline {6.2.1}Threats to validity}{67}
+\contentsline {section}{\numberline {6.3}Dissemination / Reception / ??}{67}
+\contentsline {subsection}{\numberline {6.3.1}Publications}{67}
+\contentsline {subsection}{\numberline {6.3.2}Delivery through Eclipse}{67}
 \contentsline {chapter}{\numberline {7}Conclusion}{53}
 \contentsline {chapter}{\numberline {A}Experiments}{55}
 \contentsline {section}{\numberline {A.1}Metamodel-Independent Change}{55}
