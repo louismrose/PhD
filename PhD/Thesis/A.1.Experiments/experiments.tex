@@ -1,0 +1,49 @@
+%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+
+\chapter{Experiments}
+
+- Introduction
+- Indicate that none of the literature makes analysis method available
+- Explain that not all examples were used in all experiments to save time
+
+COPE v1.3.5 was used for these experiments.
+
+
+\section{Metamodel-Independent Change}
+Some metamodel changes are metamodel-independent and occur irrespective of the domain being modelled. Some examples of metamodel-independent changes are the renaming of a class, or changing a containment feature to a reference feature. The purpose of this experiment is to show the extent to which existing migration tools provide support for metamodel-independent changes, and to highlight any areas that could be improved. In particular, this experiment asks the following questions:
+
+\begin{itemize}
+	\item Correctness: Do all migrated instance conform to the evolved metamodel?
+	\item Automation: How much guidance was provided to the tool?
+  \item Customisation: To what extent could the generated migration strategy be customised?
+  \item Extensibility: How, if at all, could new metamodel-independent migration strategies be added?
+\end{itemize}
+
+The following steps for each evolutionary change were carried out in the co-evolution tool under analysis:
+
+\begin{enumerate}
+	\item Recreate the metamodel as it was before any evolutionary change.
+	\item Adapt the metamodel according to the version history in its (real-world) project.
+	\item Use the tool to automatically migrate each instance of the original metamodel to conform to the evolved metamodel.
+\end{enumerate}
+
+COPE was the only tool capable of performing migration using metamodel-independent changes. For this experiment, the object-oriented refactoring project was selected, as it contained some examples of co-evolution for which COPE provides a co-evolutionary operator, and some examples for which COPE does not.  
+
+\subsection{Correctness}
+COPE had co-evolution operators for three of the seven examples: MoveFeature, Extract Class and Inline Class. Using the last two operators, COPE correctly migrated models in response to these refactorings. The co-evolution operation used for MoveFeature produced a conformant model, but with an unexpected side-effect: when two different values were specified for the same slot, the migration used the last value it encountered, rather than prompt the user or throw an error.
+
+COPE provided no appropriate co-evolution operators for Change Containment to Reference, Change Reference to Containment, Extract Subclass and Push Down Feature. Since this experiment was conducted, I have contributed to COPE implementations for all but one of these operators. (It was not possible to implement an operator for Change Containment to Reference, as discussed below).
+
+\subsection{Automation}
+Very little data was supplied to use these refactorings. For example, for Extract Class, the name of the extracted class and the name of the reference was the only data required. Following metamodel evolution, COPE was used to generate a model migration (in the form of a Groovy script). The model migration depends on the COPE runtime, and, as such, COPE generates an Eclipse plugin for performing model migration. The plugin is distributed to metamodel users who wish to perform automated model migration.
+
+\subsection{Customisation}
+To customise a migration strategy, extra code could have been added to the generated Groovy script or Eclipse plug-in. However, the metamodel-independent change cannot be customised as it is implemented as a call to an operation embedded in the COPE runtime.
+
+\subsection{Extensibility}
+COPE provides an Eclipse extension point for contributing new metamodel-independent co-evolution operators. The operators must be authored in Groovy and be described in a corresponding instance of a metamodel provided by COPE. COPE provides some automation for generating instances of the description metamodel from Groovy code.
+
+Authoring co-evolutionary operators for COPE required good knowledge of Ecore and some knowledge of Groovy. Groovy is weakly typed, and consequently type errors are reported at runtime. Testing co-evolutionary operators involves installing the extending plugin, specifying a metamodel evolution using the operators-under-test, generating a migration strategy plugin, installing the generated plugin and executing the generatjkkjed migration strategy on a model. This process is repeated each time an error is found, and COPE currently provides no way to test co-evolutionary operators in isolation.
+
+To capture the co-evolution examples considered, a clone method for creating copies of model elements was implemented, which is not a feature provided by the COPE runtime. In addition, COPE provides no mechanisms for throwing an error or prompting the user for input, which would have been useful for the Move Feature example (as discussed above).
+It was not possible to implement a metamodel-independent migration strategy for Change Containment to Reference, as COPE does not support metamodel-independent migration strategies that require model elements as arguments.\footnote{TODO: Give an example or otherwise explain this point.}

@@ -1,0 +1,9 @@
+# Fdb version 2
+["latex"] 0 "experiments.tex" "experiments.dvi" "experiments" 
+  "experiments.tex" 1266246388 30 63dc47d2d5e1a703f8978b69eeaca360 ""
+["pdflatex"] 1266246390 "experiments.tex" "experiments.pdf" "experiments" 
+  "e.g., `I\hbox'" 0 -1 0 ""
+  "e.g., `\hobx'" 0 -1 0 ""
+  "experiments.aux" 1266246370 622 1012757ef6a47d51293e86fe9c36529f ""
+  "experiments.tex" 1266246388 30 63dc47d2d5e1a703f8978b69eeaca360 ""
+  "job aborted, no legal \end found" 0 -1 0 ""
