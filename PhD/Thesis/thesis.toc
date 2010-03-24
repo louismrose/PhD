@@ -102,10 +102,10 @@
 \contentsline {paragraph}{Co-evolution Examples}{58}
 \contentsline {subsubsection}{Method}{58}
 \contentsline {subsubsection}{Model Migration Languages}{59}
-\contentsline {paragraph}{Atlas Transformation Language}{59}
+\contentsline {paragraph}{Atlas Transformation Language (ATL)}{59}
 \contentsline {paragraph}{Groovy-for-COPE}{59}
 \contentsline {paragraph}{Epsilon Flock}{60}
-\contentsline {subsubsection}{Results}{61}
+\contentsline {subsubsection}{Results}{60}
 \contentsline {subsubsection}{Summary}{67}
 \contentsline {section}{\numberline {6.2}Discussion}{67}
 \contentsline {subsection}{\numberline {6.2.1}Threats to validity}{67}

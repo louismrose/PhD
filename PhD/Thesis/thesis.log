@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  24 MAR 2010 16:18
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  24 MAR 2010 17:47
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -305,206 +305,21 @@ T1/cmr/m/n/10 and can-
 LaTeX Warning: Reference `model_migration_languages' on page 59 undefined on in
 put line 34.
 
-
-Overfull \hbox (9.97443pt too wide) in paragraph at lines 43--44
- \OT1/cmr/bx/n/10 At-las Trans-for-ma-tion Lan-guage[] \OT1/cmr/m/n/10 The At-l
-as Trans-for-ma-tion Lan-guage (ATL),
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
 (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 53.
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/omspcr.fd
-File: omspcr.fd 
-)
-LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
-
-./6.Evaluation/quantitive.tex:53: Missing $ inserted.
-<inserted text> 
-                $
-l.53 ...inal_type> to <name> : <migrated_type> \}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./6.Evaluation/quantitive.tex:53: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.53 ...inal_type> to <name> : <migrated_type> \}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-./6.Evaluation/quantitive.tex:54: LaTeX Error: Command \end{itemize} invalid in
- math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 \end{itemize}
-                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./6.Evaluation/quantitive.tex:54: LaTeX Error: Something's wrong--perhaps a mis
-sing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 \end{itemize}
-                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./6.Evaluation/quantitive.tex:54: LaTeX Error: Something's wrong--perhaps a mis
-sing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 \end{itemize}
-                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./6.Evaluation/quantitive.tex:54: Missing $ inserted.
-<inserted text> 
-                $
-l.54 \end{itemize}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./6.Evaluation/quantitive.tex:54: Missing } inserted.
-<inserted text> 
-                }
-l.54 \end{itemize}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (32.1349pt too wide) in paragraph at lines 53--55
-[]| \OT1/pcr/m/n/10 rule \OMS/cmsy/m/n/10 f \OT1/pcr/m/n/10 from <name> : <orig
-inal$[]\OML/cmm/m/it/10 ype > to < name >\OT1/cmr/m/n/10 :\OML/cmm/m/it/10 < mi
-grated[]ype >
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+ [59]
+Overfull \hbox (2.27832pt too wide) in paragraph at lines 72--73
+[]\OT1/cmr/m/n/10 Deletion op-er-a-tions (un-set and re-move above) are nec-es-
+sary for some existing-
  []
-
-
-LaTeX Warning: Citation `cope' on page 59 undefined on input line 59.
-
-
-Overfull \hbox (18.47304pt too wide) in paragraph at lines 59--60
-\OT1/cmr/m/n/10 model op-er-a-tions for ma-nip-u-lat-ing the mi-grated model vi
-a a metamodel-independent
- []
-
-[59]
-./6.Evaluation/quantitive.tex:102: Missing $ inserted.
-<inserted text> 
-                $
-l.102 ...grate <original_type> to <migrated_type>}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./6.Evaluation/quantitive.tex:102: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.102 ...grate <original_type> to <migrated_type>}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-./6.Evaluation/quantitive.tex:103: LaTeX Error: Command \end{itemize} invalid i
-n math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \end{itemize}
-                   
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./6.Evaluation/quantitive.tex:103: LaTeX Error: Something's wrong--perhaps a mi
-ssing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \end{itemize}
-                   
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./6.Evaluation/quantitive.tex:103: LaTeX Error: Something's wrong--perhaps a mi
-ssing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \end{itemize}
-                   
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./6.Evaluation/quantitive.tex:103: Missing $ inserted.
-<inserted text> 
-                $
-l.103 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./6.Evaluation/quantitive.tex:103: Missing } inserted.
-<inserted text> 
-                }
-l.103 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
 [60]
-./6.Evaluation/quantitive.tex:145: Undefined control sequence.
-l.145 \paragrah
+./6.Evaluation/quantitive.tex:132: Undefined control sequence.
+l.132 \paragrah
                {Copying Strategy}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -513,48 +328,48 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: File `petri_nets_step0.pdf' not found on input line 152.
+LaTeX Warning: File `petri_nets_step0.pdf' not found on input line 139.
 
 
-./6.Evaluation/quantitive.tex:152: Package graphics Error: File `petri_nets_ste
+./6.Evaluation/quantitive.tex:139: Package graphics Error: File `petri_nets_ste
 p0.pdf' not found.
 
 See the graphics package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.152 ...raphics[scale=0.75]{petri_nets_step0.pdf}
+l.139 ...raphics[scale=0.75]{petri_nets_step0.pdf}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[61]
 
-LaTeX Warning: File `petri_nets_step1.pdf' not found on input line 161.
+LaTeX Warning: File `petri_nets_step1.pdf' not found on input line 148.
 
 
-./6.Evaluation/quantitive.tex:161: Package graphics Error: File `petri_nets_ste
+./6.Evaluation/quantitive.tex:148: Package graphics Error: File `petri_nets_ste
 p1.pdf' not found.
 
 See the graphics package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.161 ...raphics[scale=0.75]{petri_nets_step1.pdf}
+l.148 ...raphics[scale=0.75]{petri_nets_step1.pdf}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[61]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 171.
-[62] (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 158.
+ [62] (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 [63]
-./6.Evaluation/quantitive.tex:269: Undefined control sequence.
-l.269 \paragrah
+./6.Evaluation/quantitive.tex:256: Undefined control sequence.
+l.256 \paragrah
                {Side-Effects during Initialisation}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -563,36 +378,36 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: File `change_ref_to_cont_before.pdf' not found on input line 276
+LaTeX Warning: File `change_ref_to_cont_before.pdf' not found on input line 263
 .
 
 
-./6.Evaluation/quantitive.tex:276: Package graphics Error: File `change_ref_to_
+./6.Evaluation/quantitive.tex:263: Package graphics Error: File `change_ref_to_
 cont_before.pdf' not found.
 
 See the graphics package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.276 ...cale=0.75]{change_ref_to_cont_before.pdf}
+l.263 ...cale=0.75]{change_ref_to_cont_before.pdf}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `change_ref_to_cont_after.pdf' not found on input line 285.
+LaTeX Warning: File `change_ref_to_cont_after.pdf' not found on input line 272.
 
 
 
-./6.Evaluation/quantitive.tex:285: Package graphics Error: File `change_ref_to_
+./6.Evaluation/quantitive.tex:272: Package graphics Error: File `change_ref_to_
 cont_after.pdf' not found.
 
 See the graphics package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.285 ...scale=0.75]{change_ref_to_cont_after.pdf}
+l.272 ...scale=0.75]{change_ref_to_cont_after.pdf}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
@@ -600,7 +415,7 @@ If that doesn't work, type  X <return>  to quit.
 
 [64]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 325.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 312.
  [65] [66])) [67] (./thesis.bbl [58
 
 
@@ -623,32 +438,31 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2967 strings out of 493886
- 42297 string characters out of 1151098
- 212509 words of memory out of 3000000
- 6119 multiletter control sequences out of 10000+50000
+ 2952 strings out of 493886
+ 42024 string characters out of 1151098
+ 201374 words of memory out of 3000000
+ 6107 multiletter control sequences out of 10000+50000
  12658 words of font info for 44 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 32i,8n,44p,1385b,1599s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,8n,44p,1385b,1603s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
 08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/font
-s/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bl
-uesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/c
-mr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb><
-/usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/
-texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/200
-8/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dis
-t/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/typ
-e1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesk
-y/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti
-10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><
-/usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/loc
-al/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on thesis.pdf (20 pages, 172866 bytes).
+dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts
+/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blu
+esky/cm/cmr17.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
+r5.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></us
+r/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/tex
+live/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/t
+exmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist
+/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
+pe1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/c
+ourier/ucrb8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/u
+crr8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.p
+fb>
+Output written on thesis.pdf (20 pages, 164763 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
+ 128 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

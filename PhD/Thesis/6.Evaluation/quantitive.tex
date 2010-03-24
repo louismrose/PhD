@@ -38,25 +38,22 @@ There is one non-trivial threat to the validity of the comparison performed in t
 \label{subsec:model_migration_languages}
 The variation in frequency of model operations was explored across three model migration languages, ATL, Groovy-for-COPE and Flock. Here, the model operations of each language are identified. In addition, the extent to which the comparison described in this section was able to use code written by the authors of each language is discussed.
 
+The comparison described in this section counts two categories of model operation: copying operations, deletion operations. The former are used to assign values to elements of the migrated model, while the latter are used to remove values from elements of the migrated model.
 
-\paragraph{Atlas Transformation Language}
-The Atlas Transformation Language (ATL), ....
-
-TODO: Delete isn't measure because elements aren't deleted, they're simply not copied.
-TODO: Where do COPE / FLock use new? Why doesn't ATL? If it does, I need to count those too. OR, reconsider counting new - is it necessary?
-
+\paragraph{Atlas Transformation Language (ATL)}
+For the Atlas Transformation Language (ATL), the following model operations were counted:
+	
 \begin{itemize}
 	\item Assignment to a feature:
-	\subitem \texttt{<element>.<feature> <- <value>} 
-	
-	\item Changing the type of a model element:
-	\subitem \texttt{rule \{ from <name> : <original_type> to <name> : <migrated_type> \}}
+	\subitem \texttt{<feature> <- <value>} 
 \end{itemize}
 
-The \texttt{to} part of a \texttt{migrate} rule is optional. \texttt{Migrate} rules without \texttt{to} parts were not counted as model operations.
+Deletion operations are not used in new-target migration strategies. A new-target migration strategy specifies only those values that must appear in the migrated model and, unlike in COPE or Flock, no values are copied automatically prior to the execution of the migration.
+
+TODO - discuss whether it was possible to use AML to generate ATL and hence reduce the impact of the threat to validity identified above.
 
 \paragraph{Groovy-for-COPE}
-In COPE \cite{cope}, migration strategies are codified in Groovy, a general-purpose, dynamically-typed programming language. COPE provides model operations for manipulating the migrated model via a metamodel-independent representation, as discussed in Chapters~\ref{Analysis} and \ref{Implementation}. For Groovy-for-COPE, the following model operations were counted:
+For Groovy-for-COPE, the following model operations were counted:
 
 \begin{itemize}
 	\item Assignment to a feature:
@@ -68,15 +65,11 @@ In COPE \cite{cope}, migration strategies are codified in Groovy, a general-purp
 	\item Unsetting a feature:
 	\subitem \texttt{<element>.<feature>.unset()}	
 	
-	\item Creating a new model element:
-	\subitem \texttt{<element\_type>.newInstance()}
-	
-	\item Deleting a model element:
+	\item Removing a model element:
 	\subitem \texttt{delete <element>}
-	
-	\item Changing the type of a model element:
-	\subitem \texttt{<element>.migrate(<element\_type>)}
 \end{itemize}
+
+Deletion operations (unset and remove above) are necessary for some existing-target migration strategies, because the migrated model (which is initialised as a copy of the original model) may contain data that is no longer captured in the evolved metamodel.
 
 COPE provides a library of built-in, reusable co-evolutionary operators. Each co-evolutionary operator specifies a metamodel evolution along with a corresponding model migration strategy. For example, the ``Make Reference Containment'' operator evolves the metamodel such that a non-containment reference becomes a containment reference and migrates models such that the values of the evolved reference are replaced by copies.
 
@@ -91,18 +84,12 @@ Epsilon Flock, a transformation language tailored for model migration, was devel
 	\subitem \texttt{<element>.<feature> := <value>} 
 	\subitem \texttt{<element>.<feature>.add(<value>)}
 	\subitem \texttt{<element>.<feature>.addAll(<collection\_of\_values>)}
-
-	\item Creating a new model element:
-	\subitem \texttt{new <element\_type>}
 	
-	\item Deleting a model element:
+	\item Removing a model element:
 	\subitem \texttt{delete <element>}
-	
-	\item Changing the type of a model element:
-	\subitem \texttt{migrate <original_type> to <migrated_type>}
 \end{itemize}
 
-The \texttt{to} part of a \texttt{migrate} rule is optional. \texttt{Migrate} rules without \texttt{to} parts were not counted as model operations.
+Flock provides a remove operation but not an unset. The former is required to remove model elements that no longer conform to the target metamodel. The latter is not necessary because conservative copy will never copy to the migrated model any value that does not conform the evolved metamodel. 
 
 
 \subsubsection{Results}
@@ -117,15 +104,15 @@ By measuring the number of model operations in model migration strategies, the w
 		Name                        & ATL & COPE & Flock \\
 		\hline
 		\hline
-		Newsgroup Extract Person    & 9  &  7  &  6  \\
+		Newsgroup Extract Person    & 9  &  6  &  5  \\
 		\hline                       
 		Newsgroup Resolve Replies   &  8  &  3  &  2  \\
 		\hline                       
-		UML Activity Diagrams       &  26  &  TBC  &  17  \\
+		UML Activity Diagrams       &  15  &  TBC  &  5  \\
 		\hline                       
-		GMF Graph                   &  101  &  TBC  &  16  \\
+		GMF Graph                   &  101  &  TBC  &  14  \\
 		\hline                       
-		GMF Gen2009                 &  310  &  TBC  &  21  \\
+		GMF Gen2009                 &  310  &  TBC  &  15  \\
 		\hline
 		\hline
 		Totals                       & TBC & TBC  &  TBC \\
