@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2010-03-25T09:12:48.114+0000">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="minuml1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="minuml1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="minuml1"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//ModelElement">
+        <changes xsi:type="history:Set" element="Before.ecore#//ModelElement" featureName="name"
+            dataValue="ModelElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ModelElement" referenceName="eStructuralFeatures"
+          element="Before.ecore#//ModelElement/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//ModelElement/name"
+            featureName="name" dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ModelElement/name"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//StateMachine">
+        <changes xsi:type="history:Set" element="Before.ecore#//StateMachine" featureName="name"
+            dataValue="StateMachine"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//StateMachine" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//ModelElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Activity">
+        <changes xsi:type="history:Set" element="Before.ecore#//Activity" featureName="name"
+            dataValue="ActivityGraph"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Activity" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//StateMachine"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Partition">
+        <changes xsi:type="history:Set" element="Before.ecore#//Partition" featureName="name"
+            dataValue="Partition"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Partition" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//ModelElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ModelElement" referenceName="eStructuralFeatures"
+          element="Before.ecore#//ModelElement/partition">
+        <changes xsi:type="history:Set" element="Before.ecore#//ModelElement/partition"
+            featureName="name" dataValue="partition"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ModelElement/partition"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ModelElement/partition"
+            featureName="eType" referenceValue="Before.ecore#//Partition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Activity" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Activity/parition">
+        <changes xsi:type="history:Set" element="Before.ecore#//Activity/parition"
+            featureName="name" dataValue="parition"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Activity/parition"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Activity/parition"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Activity/parition"
+            featureName="eType" referenceValue="Before.ecore#//Partition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Partition" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Partition/contents">
+        <changes xsi:type="history:Set" element="Before.ecore#//Partition/contents"
+            featureName="name" dataValue="contents"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Partition/contents"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Partition/contents"
+            featureName="eType" referenceValue="Before.ecore#//ModelElement"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Partition/contents"
+            featureName="eOpposite" referenceValue="Before.ecore#//ModelElement/partition"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ModelElement/partition"
+            featureName="eOpposite" referenceValue="Before.ecore#//Partition/contents"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//StateVertex">
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex" featureName="name"
+            dataValue="StateVertex"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//StateVertex" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//ModelElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//State">
+        <changes xsi:type="history:Set" element="Before.ecore#//State" featureName="name"
+            dataValue="State"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//State" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//StateVertex"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//StateMachine" referenceName="eStructuralFeatures"
+          element="Before.ecore#//StateMachine/top">
+        <changes xsi:type="history:Set" element="Before.ecore#//StateMachine/top"
+            featureName="name" dataValue="top"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateMachine/top"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateMachine/top"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateMachine/top"
+            featureName="eType" referenceValue="Before.ecore#//State"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CompositeState">
+        <changes xsi:type="history:Set" element="Before.ecore#//CompositeState" featureName="name"
+            dataValue="CompositeState"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CompositeState" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//State"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CompositeState" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CompositeState/subvertex">
+        <changes xsi:type="history:Set" element="Before.ecore#//CompositeState/subvertex"
+            featureName="name" dataValue="subvertex"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CompositeState/subvertex"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CompositeState/subvertex"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CompositeState/subvertex"
+            featureName="eType" referenceValue="Before.ecore#//StateVertex"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//ActionState">
+        <changes xsi:type="history:Set" element="Before.ecore#//ActionState" featureName="name"
+            dataValue="ActionState"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//ActionState" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//State"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ActionState" referenceName="eStructuralFeatures"
+          element="Before.ecore#//ActionState/isDynamic">
+        <changes xsi:type="history:Set" element="Before.ecore#//ActionState/isDynamic"
+            featureName="name" dataValue="isDynamic"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ActionState/isDynamic"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Pseudostate">
+        <changes xsi:type="history:Set" element="Before.ecore#//Pseudostate" featureName="name"
+            dataValue="Pseudostate"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Pseudostate" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//StateVertex"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//ObjectFlowState">
+        <changes xsi:type="history:Set" element="Before.ecore#//ObjectFlowState" featureName="name"
+            dataValue="ObjectFlowState"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//ObjectFlowState" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//State"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ObjectFlowState" referenceName="eStructuralFeatures"
+          element="Before.ecore#//ObjectFlowState/type">
+        <changes xsi:type="history:Set" element="Before.ecore#//ObjectFlowState/type"
+            featureName="name" dataValue="type"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ObjectFlowState/type"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ObjectFlowState/type"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ObjectFlowState/type"
+            featureName="eType" referenceValue="Before.ecore#//ModelElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//FinalState">
+        <changes xsi:type="history:Set" element="Before.ecore#//FinalState" featureName="name"
+            dataValue="FinalState"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//FinalState" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//State"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Transition">
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition" featureName="name"
+            dataValue="Transition"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Transition" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//ModelElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//StateMachine" referenceName="eStructuralFeatures"
+          element="Before.ecore#//StateMachine/transitions">
+        <changes xsi:type="history:Set" element="Before.ecore#//StateMachine/transitions"
+            featureName="name" dataValue="transitions"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateMachine/transitions"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateMachine/transitions"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateMachine/transitions"
+            featureName="eType" referenceValue="Before.ecore#//Transition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//StateVertex" referenceName="eStructuralFeatures"
+          element="Before.ecore#//StateVertex/outgoing">
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex/outgoing"
+            featureName="name" dataValue="outgoing"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex/outgoing"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex/outgoing"
+            featureName="eType" referenceValue="Before.ecore#//Transition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//StateVertex" referenceName="eStructuralFeatures"
+          element="Before.ecore#//StateVertex/incoming">
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex/incoming"
+            featureName="name" dataValue="incoming"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex/incoming"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex/incoming"
+            featureName="eType" referenceValue="Before.ecore#//Transition"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Transition" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Transition/source">
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/source"
+            featureName="name" dataValue="source"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/source"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/source"
+            featureName="eType" referenceValue="Before.ecore#//StateVertex"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/source"
+            featureName="eOpposite" referenceValue="Before.ecore#//StateVertex/outgoing"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex/outgoing"
+            featureName="eOpposite" referenceValue="Before.ecore#//Transition/source"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Transition" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Transition/target">
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/target"
+            featureName="name" dataValue="target"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/target"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/target"
+            featureName="eType" referenceValue="Before.ecore#//StateVertex"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/target"
+            featureName="eOpposite" referenceValue="Before.ecore#//StateVertex/incoming"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//StateVertex/incoming"
+            featureName="eOpposite" referenceValue="Before.ecore#//Transition/target"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Guard">
+        <changes xsi:type="history:Set" element="Before.ecore#//Guard" featureName="name"
+            dataValue="Guard"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Guard" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//ModelElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Transition" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Transition/guard">
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/guard"
+            featureName="name" dataValue="guard"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/guard"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Transition/guard"
+            featureName="eType" referenceValue="Before.ecore#//Guard"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//BooleanExpression">
+        <changes xsi:type="history:Set" element="Before.ecore#//BooleanExpression"
+            featureName="name" dataValue="BooleanExpression"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Guard" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Guard/expression">
+        <changes xsi:type="history:Set" element="Before.ecore#//Guard/expression"
+            featureName="name" dataValue="expression"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Guard/expression"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Guard/expression"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Guard/expression"
+            featureName="eType" referenceValue="Before.ecore#//BooleanExpression"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//BooleanExpression"
+          referenceName="eStructuralFeatures" element="Before.ecore#//BooleanExpression/language">
+        <changes xsi:type="history:Set" element="Before.ecore#//BooleanExpression/language"
+            featureName="name" dataValue="language"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BooleanExpression/language"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//BooleanExpression"
+          referenceName="eStructuralFeatures" element="Before.ecore#//BooleanExpression/body">
+        <changes xsi:type="history:Set" element="Before.ecore#//BooleanExpression/body"
+            featureName="name" dataValue="body"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BooleanExpression/body"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//PseudostateKind">
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind" featureName="name"
+            dataValue="PseudostateKind"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Pseudostate" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Pseudostate/kind">
+        <changes xsi:type="history:Set" element="Before.ecore#//Pseudostate/kind"
+            featureName="name" dataValue="kind"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Pseudostate/kind"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Pseudostate/kind"
+            featureName="eType" referenceValue="Before.ecore#//PseudostateKind"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PseudostateKind" referenceName="eLiterals"
+          element="Before.ecore#//PseudostateKind/inital">
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/inital"
+            featureName="name" dataValue="inital"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/inital"
+            featureName="literal" dataValue="inital"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PseudostateKind" referenceName="eLiterals"
+          element="Before.ecore#//PseudostateKind/join">
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/join"
+            featureName="name" dataValue="join"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/join"
+            featureName="value" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/join"
+            featureName="literal" dataValue="join"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PseudostateKind" referenceName="eLiterals"
+          element="Before.ecore#//PseudostateKind/fork">
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/fork"
+            featureName="name" dataValue="fork"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/fork"
+            featureName="value" dataValue="2" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/fork"
+            featureName="literal" dataValue="fork"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PseudostateKind" referenceName="eLiterals"
+          element="Before.ecore#//PseudostateKind/junction">
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/junction"
+            featureName="name" dataValue="junction"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/junction"
+            featureName="value" dataValue="3" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PseudostateKind/junction"
+            featureName="literal" dataValue="junction"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="for (model in activities.Model.allInstances) {&#xA;&#x9;model.migrate(activities.Package)&#xA;&#x9;model.packagedElement = model.unset(ownedElement)&#xA;}&#xA;&#xA;for (activity in activities.ActivityGraph.allInstances) {&#xA;&#x9;activity.migrate(activities.Activity)&#xA;&#x9;activity.node = activity.unset(top).subvertex&#xA;&#x9;activity.edge = activity.unset(transitions)&#xA;&#x9;activity.group = activity.unset(partition)&#xA;}&#xA;&#xA;for (partition in activities.ActivityGraph.allInstances) {&#xA;&#x9;def contents = partition.unset(contents)&#xA;&#x9;partition.edges = contents.findAll{it -> it instanceof activities.Transition}&#xA;&#x9;partition.nodes = contents.findAll{it -> it instanceof activities.StateVertex and not (it instanceof activities.ObjectFlowState)}&#xA;}&#xA;&#xA;for (action in activities.ActionState.allInstances) {&#xA;&#x9;action.migrate(activities.OpaqueAction)&#xA;}&#xA;&#xA;for (pseudostate in activities.Pseudeostate) {&#xA;&#x9;switch ( pseudostate.kind.toString() ) {&#xA;&#x9;    case &quot;pk_initial&quot;:&#xA;&#x9;        pseudeostate.migrate(activities.InitialNode)&#xA;&#x9;        break&#xA;&#x9;&#x9;case &quot;pk_junction&quot;&#xA;&#x9;&#x9;&#x9;pseudeostate.migrate(activities.DecisionNode)&#xA;&#x9;&#x9;&#x9;break&#xA;&#x9;&#x9;case &quot;pk_fork&quot;&#xA;&#x9;&#x9;&#x9;pseudeostate.migrate(activities.ForkNode)&#xA;&#x9;&#x9;&#x9;break&#xA;&#x9;&#x9;case &quot;pk_join&quot;&#xA;&#x9;&#x9;&#x9;pseudeostate.migrate(activities.JoinNode)&#xA;&#x9;&#x9;&#x9;break&#xA;&#x9;}&#xA;}&#xA;&#xA;for (finalstate in activities.FinalState.allInstances) {&#xA;&#x9;finalstate.migrate(activities.ActivityFinalNode)&#xA;}&#xA;&#xA;for (transition in activities.ObjectFlow.allInstances.findAll{it -> it.target instanceof activities.ObjectFlowState}) {&#xA;&#x9;transition.target = transition.target.outgoing.first.target&#xA;}&#xA;&#xA;for (transition in activities.Transition.allInstances) {&#xA;&#x9;transition.migrate(activities.ControlFlow)&#xA;}&#xA;&#xA;for (guard in activities.Guard.allInstances) {&#xA;&#x9;transition.migrate(activities.OpaqueExpression)&#xA;&#x9;transition.body = transition.unset(expression).body&#xA;}">
+      <changes xsi:type="history:CompositeChange">
+        <changes xsi:type="history:Set" element="Before.ecore#//Activity" featureName="name"
+            dataValue="Activity" oldDataValue="ActivityGraph"/>
+      </changes>
+    </changes>
+  </releases>
+</history:History>
