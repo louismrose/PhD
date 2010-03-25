@@ -62,7 +62,7 @@ operation createOrRetrieveExternalParser() : Migrated!ExternalParser {
 operation createOrRetrieveGenParsers() : Migrated!GenParsers {
 	if (Migrated!GenEditorGenerator.all.first.labelParsers.isUndefined()) {
 		Migrated!GenEditorGenerator.all.first.labelParsers := new Migrated!GenParsers;
-		Migrated!GenEditorGenerator.all.first.labelParsers.extensibleViaService = true;
+		Migrated!GenEditorGenerator.all.first.labelParsers.extensibleViaService := true;
 	}
 	
 	return Migrated!GenEditorGenerator.all.first.labelParsers;
