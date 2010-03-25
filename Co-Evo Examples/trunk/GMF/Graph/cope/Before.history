@@ -1,0 +1,2316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2010-03-25T12:56:57.609+0000">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="gmfgraph"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="http://www.eclipse.org/gmf/2005/GraphicalDefinition"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="gmfgraph"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Identity">
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity" featureName="name"
+            dataValue="Identity"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Canvas">
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas" featureName="name"
+            dataValue="Canvas"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Canvas" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Identity"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//FigureGallery">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery" featureName="name"
+            dataValue="FigureGallery"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//FigureGallery" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Identity"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Canvas" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Canvas/figures">
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/figures" featureName="name"
+            dataValue="figures"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/figures" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/figures" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/figures" featureName="eType"
+            referenceValue="Before.ecore#//FigureGallery"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Canvas/figures" referenceName="eAnnotations"
+          element="Before.ecore#//Canvas/figures/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/figures/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Canvas/figures/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Canvas/figures/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/figures/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/figures/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="containment here doesn't restrict nodes/connection from using figure galeries defined elsewhere. No assumption should be made whether or not node/connection figure is defined in the galery beloning to this canvas"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureGallery" referenceName="eAnnotations"
+          element="Before.ecore#//FigureGallery/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureGallery/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//FigureGallery/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Kind of explicit figure library notion. Bundle of figures. Allows to specify plugin id (allows importing it later from gmfgen code) in addition to figures"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureGallery" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FigureGallery/implementationBundle">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery/implementationBundle"
+            featureName="name" dataValue="implementationBundle"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery/implementationBundle"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Identity" referenceName="eAnnotations"
+          element="Before.ecore#//Identity/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Identity/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Identity/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Easy and readable way to reference element of the model from another one"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Identity" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Identity/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity/name" featureName="name"
+            dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity/name" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity/name" featureName="iD"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Identity/name" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//DiagramElement">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement" featureName="name"
+            dataValue="DiagramElement"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//DiagramElement" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Identity"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Node">
+        <changes xsi:type="history:Set" element="Before.ecore#//Node" featureName="name"
+            dataValue="Node"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Node" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//DiagramElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Canvas" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Canvas/nodes">
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/nodes" featureName="name"
+            dataValue="nodes"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/nodes" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/nodes" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/nodes" featureName="eType"
+            referenceValue="Before.ecore#//Node"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Connection">
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection" featureName="name"
+            dataValue="Connection"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Connection" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//DiagramElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Canvas" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Canvas/connections">
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/connections"
+            featureName="name" dataValue="connections"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/connections"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/connections"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/connections"
+            featureName="eType" referenceValue="Before.ecore#//Connection"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Compartment">
+        <changes xsi:type="history:Set" element="Before.ecore#//Compartment" featureName="name"
+            dataValue="Compartment"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Compartment" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//DiagramElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Canvas" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Canvas/compartments">
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/compartments"
+            featureName="name" dataValue="compartments"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/compartments"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/compartments"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/compartments"
+            featureName="eType" referenceValue="Before.ecore#//Compartment"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Compartment" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Compartment/collapsible">
+        <changes xsi:type="history:Set" element="Before.ecore#//Compartment/collapsible"
+            featureName="name" dataValue="collapsible"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Compartment/collapsible"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Compartment" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Compartment/needsTitle">
+        <changes xsi:type="history:Set" element="Before.ecore#//Compartment/needsTitle"
+            featureName="name" dataValue="needsTitle"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Compartment/needsTitle"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//DiagramLabel">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramLabel" featureName="name"
+            dataValue="DiagramLabel"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//DiagramLabel" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Node"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Canvas" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Canvas/labels">
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/labels" featureName="name"
+            dataValue="labels"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/labels" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/labels" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Canvas/labels" featureName="eType"
+            referenceValue="Before.ecore#//DiagramLabel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramLabel" referenceName="eStructuralFeatures"
+          element="Before.ecore#//DiagramLabel/elementIcon">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramLabel/elementIcon"
+            featureName="name" dataValue="elementIcon"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramLabel/elementIcon"
+            featureName="defaultValueLiteral" dataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramLabel/elementIcon"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//VisualFacet">
+        <changes xsi:type="history:Set" element="Before.ecore#//VisualFacet" featureName="name"
+            dataValue="VisualFacet"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//VisualFacet" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//VisualFacet" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramElement" referenceName="eOperations"
+          element="Before.ecore#//DiagramElement/find">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/find"
+            featureName="name" dataValue="find"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/find"
+            featureName="eType" referenceValue="Before.ecore#//VisualFacet"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramElement/find"
+          referenceName="eAnnotations" element="Before.ecore#//DiagramElement/find/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/find/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramElement/find/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//DiagramElement/find/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/find/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/find/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="utility operation to get first visual facet assignable (in Java terms, {@link Class#isAssignableFrom(Class)}) to variables of designated class. Argument can't be null"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramElement/find"
+          referenceName="eParameters" element="Before.ecore#//DiagramElement/find/facetClass">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/find/facetClass"
+            featureName="name" dataValue="facetClass"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/find/facetClass"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EJavaClass"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramElement" referenceName="eStructuralFeatures"
+          element="Before.ecore#//DiagramElement/facets">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/facets"
+            featureName="name" dataValue="facets"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/facets"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/facets"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/facets"
+            featureName="eType" referenceValue="Before.ecore#//VisualFacet"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramElement/facets"
+          referenceName="eAnnotations" element="Before.ecore#//DiagramElement/facets/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/facets/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramElement/facets/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//DiagramElement/facets/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/facets/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/facets/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="anything to further specify constraint or any other aspect of the element"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//GeneralFacet">
+        <changes xsi:type="history:Set" element="Before.ecore#//GeneralFacet" featureName="name"
+            dataValue="GeneralFacet"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//GeneralFacet" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//VisualFacet"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GeneralFacet" referenceName="eAnnotations"
+          element="Before.ecore#//GeneralFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//GeneralFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GeneralFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//GeneralFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//GeneralFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GeneralFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="provide means to attach arbitrary data to your diagram element definition. It's up to you (template author) to process it somehow."/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GeneralFacet" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GeneralFacet/identifier">
+        <changes xsi:type="history:Set" element="Before.ecore#//GeneralFacet/identifier"
+            featureName="name" dataValue="identifier"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GeneralFacet/identifier"
+            featureName="iD" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GeneralFacet/identifier"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GeneralFacet" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GeneralFacet/data">
+        <changes xsi:type="history:Set" element="Before.ecore#//GeneralFacet/data"
+            featureName="name" dataValue="data"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GeneralFacet/data"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//AlignmentFacet">
+        <changes xsi:type="history:Set" element="Before.ecore#//AlignmentFacet" featureName="name"
+            dataValue="AlignmentFacet"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//AlignmentFacet" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//VisualFacet"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//AlignmentFacet" referenceName="eAnnotations"
+          element="Before.ecore#//AlignmentFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//AlignmentFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//AlignmentFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//AlignmentFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//AlignmentFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//AlignmentFacet/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Makes sense for DiagramLabels of Links only (now). Constants from {@link org.eclipse.draw2d.ConnectionLocator} are: MIDDLE = Alignment.CENTER, TARGET = Alignment.END, SOURCE = Alignment.BEGINNING"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//GradientFacet">
+        <changes xsi:type="history:Set" element="Before.ecore#//GradientFacet" featureName="name"
+            dataValue="GradientFacet"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//GradientFacet" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//VisualFacet"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//LabelOffsetFacet">
+        <changes xsi:type="history:Set" element="Before.ecore#//LabelOffsetFacet"
+            featureName="name" dataValue="LabelOffsetFacet"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//LabelOffsetFacet"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//VisualFacet"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LabelOffsetFacet"
+          referenceName="eStructuralFeatures" element="Before.ecore#//LabelOffsetFacet/x">
+        <changes xsi:type="history:Set" element="Before.ecore#//LabelOffsetFacet/x"
+            featureName="name" dataValue="x"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LabelOffsetFacet/x"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LabelOffsetFacet"
+          referenceName="eStructuralFeatures" element="Before.ecore#//LabelOffsetFacet/y">
+        <changes xsi:type="history:Set" element="Before.ecore#//LabelOffsetFacet/y"
+            featureName="name" dataValue="y"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LabelOffsetFacet/y"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//DefaultSizeFacet">
+        <changes xsi:type="history:Set" element="Before.ecore#//DefaultSizeFacet"
+            featureName="name" dataValue="DefaultSizeFacet"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//DefaultSizeFacet"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//VisualFacet"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//FigureHandle">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle" featureName="name"
+            dataValue="FigureHandle"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureHandle" referenceName="eAnnotations"
+          element="Before.ecore#//FigureHandle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureHandle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//FigureHandle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Entry in the figure's hierarchy to reference from diagram element"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureHandle" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FigureHandle/referencingElements">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle/referencingElements"
+            featureName="name" dataValue="referencingElements"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle/referencingElements"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle/referencingElements"
+            featureName="eType" referenceValue="Before.ecore#//DiagramElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramElement" referenceName="eStructuralFeatures"
+          element="Before.ecore#//DiagramElement/figure">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/figure"
+            featureName="name" dataValue="figure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/figure"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/figure"
+            featureName="eType" referenceValue="Before.ecore#//FigureHandle"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/figure"
+            featureName="eOpposite" referenceValue="Before.ecore#//FigureHandle/referencingElements"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureHandle/referencingElements"
+            featureName="eOpposite" referenceValue="Before.ecore#//DiagramElement/figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CustomClass">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass" featureName="name"
+            dataValue="CustomClass"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomClass" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CustomClass/qualifiedClassName">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass/qualifiedClassName"
+            featureName="name" dataValue="qualifiedClassName"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass/qualifiedClassName"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomClass" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CustomClass/bundleName">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass/bundleName"
+            featureName="name" dataValue="bundleName"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass/bundleName"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CustomAttribute">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute" featureName="name"
+            dataValue="CustomAttribute"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomClass" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CustomClass/attributes">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass/attributes"
+            featureName="name" dataValue="attributes"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass/attributes"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass/attributes"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomClass/attributes"
+            featureName="eType" referenceValue="Before.ecore#//CustomAttribute"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomAttribute" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CustomAttribute/name">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/name"
+            featureName="name" dataValue="name"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/name"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/name"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomAttribute" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CustomAttribute/value">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/value"
+            featureName="name" dataValue="value"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/value"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/value"
+            featureName="defaultValueLiteral" dataValue="null"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/value"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomAttribute" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CustomAttribute/directAccess">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/directAccess"
+            featureName="name" dataValue="directAccess"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/directAccess"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/directAccess"
+            featureName="defaultValueLiteral" dataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/directAccess"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomAttribute" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CustomAttribute/multiStatementValue">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/multiStatementValue"
+            featureName="name" dataValue="multiStatementValue"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/multiStatementValue"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/multiStatementValue"
+            featureName="defaultValueLiteral" dataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomAttribute/multiStatementValue"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//FigureAccessor">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureAccessor" featureName="name"
+            dataValue="FigureAccessor"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//FigureAccessor" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//FigureHandle"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureAccessor" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FigureAccessor/accessor">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureAccessor/accessor"
+            featureName="name" dataValue="accessor"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureAccessor/accessor"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureAccessor/accessor"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Color">
+        <changes xsi:type="history:Set" element="Before.ecore#//Color" featureName="name"
+            dataValue="Color"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Color" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Color" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//RGBColor">
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor" featureName="name"
+            dataValue="RGBColor"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//RGBColor" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Color"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//RGBColor" referenceName="eStructuralFeatures"
+          element="Before.ecore#//RGBColor/red">
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor/red" featureName="name"
+            dataValue="red"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor/red" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor/red" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//RGBColor" referenceName="eStructuralFeatures"
+          element="Before.ecore#//RGBColor/green">
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor/green" featureName="name"
+            dataValue="green"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor/green" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor/green" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//RGBColor" referenceName="eStructuralFeatures"
+          element="Before.ecore#//RGBColor/blue">
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor/blue" featureName="name"
+            dataValue="blue"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor/blue" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RGBColor/blue" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//ConstantColor">
+        <changes xsi:type="history:Set" element="Before.ecore#//ConstantColor" featureName="name"
+            dataValue="ConstantColor"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//ConstantColor" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Color"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//ColorConstants">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants" featureName="name"
+            dataValue="ColorConstants"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ConstantColor" referenceName="eStructuralFeatures"
+          element="Before.ecore#//ConstantColor/value">
+        <changes xsi:type="history:Set" element="Before.ecore#//ConstantColor/value"
+            featureName="name" dataValue="value"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ConstantColor/value"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ConstantColor/value"
+            featureName="eType" referenceValue="Before.ecore#//ColorConstants"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/white">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/white"
+            featureName="name" dataValue="white"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/white"
+            featureName="literal" dataValue="white"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/black">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/black"
+            featureName="name" dataValue="black"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/black"
+            featureName="value" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/black"
+            featureName="literal" dataValue="black"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/lightGray">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/lightGray"
+            featureName="name" dataValue="lightGray"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/lightGray"
+            featureName="value" dataValue="2" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/lightGray"
+            featureName="literal" dataValue="lightGray"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/gray">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/gray"
+            featureName="name" dataValue="gray"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/gray"
+            featureName="value" dataValue="3" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/gray"
+            featureName="literal" dataValue="gray"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/darkGray">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/darkGray"
+            featureName="name" dataValue="darkGray"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/darkGray"
+            featureName="value" dataValue="4" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/darkGray"
+            featureName="literal" dataValue="darkGray"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/red">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/red"
+            featureName="name" dataValue="red"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/red"
+            featureName="value" dataValue="5" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/red"
+            featureName="literal" dataValue="red"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/orange">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/orange"
+            featureName="name" dataValue="orange"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/orange"
+            featureName="value" dataValue="6" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/orange"
+            featureName="literal" dataValue="orange"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/yellow">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/yellow"
+            featureName="name" dataValue="yellow"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/yellow"
+            featureName="value" dataValue="7" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/yellow"
+            featureName="literal" dataValue="yellow"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/green">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/green"
+            featureName="name" dataValue="green"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/green"
+            featureName="value" dataValue="8" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/green"
+            featureName="literal" dataValue="green"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/lightGreen">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/lightGreen"
+            featureName="name" dataValue="lightGreen"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/lightGreen"
+            featureName="value" dataValue="9" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/lightGreen"
+            featureName="literal" dataValue="lightGreen"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/darkGreen">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/darkGreen"
+            featureName="name" dataValue="darkGreen"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/darkGreen"
+            featureName="value" dataValue="10" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/darkGreen"
+            featureName="literal" dataValue="darkGreen"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/cyan">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/cyan"
+            featureName="name" dataValue="cyan"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/cyan"
+            featureName="value" dataValue="11" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/cyan"
+            featureName="literal" dataValue="cyan"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/lightBlue">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/lightBlue"
+            featureName="name" dataValue="lightBlue"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/lightBlue"
+            featureName="value" dataValue="12" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/lightBlue"
+            featureName="literal" dataValue="lightBlue"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/blue">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/blue"
+            featureName="name" dataValue="blue"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/blue"
+            featureName="value" dataValue="13" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/blue"
+            featureName="literal" dataValue="blue"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ColorConstants" referenceName="eLiterals"
+          element="Before.ecore#//ColorConstants/darkBlue">
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/darkBlue"
+            featureName="name" dataValue="darkBlue"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/darkBlue"
+            featureName="value" dataValue="14" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ColorConstants/darkBlue"
+            featureName="literal" dataValue="darkBlue"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Font">
+        <changes xsi:type="history:Set" element="Before.ecore#//Font" featureName="name"
+            dataValue="Font"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Font" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Font" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//BasicFont">
+        <changes xsi:type="history:Set" element="Before.ecore#//BasicFont" featureName="name"
+            dataValue="BasicFont"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//BasicFont" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Font"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//BasicFont" referenceName="eStructuralFeatures"
+          element="Before.ecore#//BasicFont/faceName">
+        <changes xsi:type="history:Set" element="Before.ecore#//BasicFont/faceName"
+            featureName="name" dataValue="faceName"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BasicFont/faceName"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//BasicFont" referenceName="eStructuralFeatures"
+          element="Before.ecore#//BasicFont/height">
+        <changes xsi:type="history:Set" element="Before.ecore#//BasicFont/height"
+            featureName="name" dataValue="height"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BasicFont/height"
+            featureName="defaultValueLiteral" dataValue="9"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BasicFont/height"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//FontStyle">
+        <changes xsi:type="history:Set" element="Before.ecore#//FontStyle" featureName="name"
+            dataValue="FontStyle"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//BasicFont" referenceName="eStructuralFeatures"
+          element="Before.ecore#//BasicFont/style">
+        <changes xsi:type="history:Set" element="Before.ecore#//BasicFont/style" featureName="name"
+            dataValue="style"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BasicFont/style" featureName="defaultValueLiteral"
+            dataValue="NORMAL"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BasicFont/style" featureName="eType"
+            referenceValue="Before.ecore#//FontStyle"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FontStyle" referenceName="eLiterals"
+          element="Before.ecore#//FontStyle/NORMAL">
+        <changes xsi:type="history:Set" element="Before.ecore#//FontStyle/NORMAL"
+            featureName="name" dataValue="NORMAL"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FontStyle/NORMAL"
+            featureName="literal" dataValue="NORMAL"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FontStyle" referenceName="eLiterals"
+          element="Before.ecore#//FontStyle/BOLD">
+        <changes xsi:type="history:Set" element="Before.ecore#//FontStyle/BOLD" featureName="name"
+            dataValue="BOLD"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FontStyle/BOLD" featureName="value"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FontStyle/BOLD" featureName="literal"
+            dataValue="BOLD"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FontStyle" referenceName="eLiterals"
+          element="Before.ecore#//FontStyle/ITALIC">
+        <changes xsi:type="history:Set" element="Before.ecore#//FontStyle/ITALIC"
+            featureName="name" dataValue="ITALIC"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FontStyle/ITALIC"
+            featureName="value" dataValue="2" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FontStyle/ITALIC"
+            featureName="literal" dataValue="ITALIC"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Point">
+        <changes xsi:type="history:Set" element="Before.ecore#//Point" featureName="name"
+            dataValue="Point"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Point" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Point/x">
+        <changes xsi:type="history:Set" element="Before.ecore#//Point/x" featureName="name"
+            dataValue="x"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Point/x" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Point" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Point/y">
+        <changes xsi:type="history:Set" element="Before.ecore#//Point/y" featureName="name"
+            dataValue="y"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Point/y" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Dimension">
+        <changes xsi:type="history:Set" element="Before.ecore#//Dimension" featureName="name"
+            dataValue="Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DefaultSizeFacet"
+          referenceName="eStructuralFeatures" element="Before.ecore#//DefaultSizeFacet/defaultSize">
+        <changes xsi:type="history:Set" element="Before.ecore#//DefaultSizeFacet/defaultSize"
+            featureName="name" dataValue="defaultSize"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DefaultSizeFacet/defaultSize"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DefaultSizeFacet/defaultSize"
+            featureName="eType" referenceValue="Before.ecore#//Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Dimension" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Dimension/dx">
+        <changes xsi:type="history:Set" element="Before.ecore#//Dimension/dx" featureName="name"
+            dataValue="dx"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Dimension/dx" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Dimension" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Dimension/dy">
+        <changes xsi:type="history:Set" element="Before.ecore#//Dimension/dy" featureName="name"
+            dataValue="dy"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Dimension/dy" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Insets">
+        <changes xsi:type="history:Set" element="Before.ecore#//Insets" featureName="name"
+            dataValue="Insets"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Insets" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Insets/top">
+        <changes xsi:type="history:Set" element="Before.ecore#//Insets/top" featureName="name"
+            dataValue="top"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Insets/top" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Insets" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Insets/left">
+        <changes xsi:type="history:Set" element="Before.ecore#//Insets/left" featureName="name"
+            dataValue="left"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Insets/left" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Insets" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Insets/bottom">
+        <changes xsi:type="history:Set" element="Before.ecore#//Insets/bottom" featureName="name"
+            dataValue="bottom"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Insets/bottom" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Insets" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Insets/right">
+        <changes xsi:type="history:Set" element="Before.ecore#//Insets/right" featureName="name"
+            dataValue="right"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Insets/right" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Border">
+        <changes xsi:type="history:Set" element="Before.ecore#//Border" featureName="name"
+            dataValue="Border"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Border" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Border" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//LineBorder">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineBorder" featureName="name"
+            dataValue="LineBorder"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//LineBorder" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Border"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineBorder" referenceName="eStructuralFeatures"
+          element="Before.ecore#//LineBorder/color">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineBorder/color"
+            featureName="name" dataValue="color"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineBorder/color"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineBorder/color"
+            featureName="eType" referenceValue="Before.ecore#//Color"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineBorder" referenceName="eStructuralFeatures"
+          element="Before.ecore#//LineBorder/width">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineBorder/width"
+            featureName="name" dataValue="width"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineBorder/width"
+            featureName="defaultValueLiteral" dataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineBorder/width"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//MarginBorder">
+        <changes xsi:type="history:Set" element="Before.ecore#//MarginBorder" featureName="name"
+            dataValue="MarginBorder"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//MarginBorder" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Border"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//MarginBorder" referenceName="eStructuralFeatures"
+          element="Before.ecore#//MarginBorder/insets">
+        <changes xsi:type="history:Set" element="Before.ecore#//MarginBorder/insets"
+            featureName="name" dataValue="insets"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//MarginBorder/insets"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//MarginBorder/insets"
+            featureName="eType" referenceValue="Before.ecore#//Insets"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CompoundBorder">
+        <changes xsi:type="history:Set" element="Before.ecore#//CompoundBorder" featureName="name"
+            dataValue="CompoundBorder"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CompoundBorder" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Border"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CompoundBorder" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CompoundBorder/outer">
+        <changes xsi:type="history:Set" element="Before.ecore#//CompoundBorder/outer"
+            featureName="name" dataValue="outer"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CompoundBorder/outer"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CompoundBorder/outer"
+            featureName="eType" referenceValue="Before.ecore#//Border"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CompoundBorder" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CompoundBorder/inner">
+        <changes xsi:type="history:Set" element="Before.ecore#//CompoundBorder/inner"
+            featureName="name" dataValue="inner"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CompoundBorder/inner"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CompoundBorder/inner"
+            featureName="eType" referenceValue="Before.ecore#//Border"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CustomBorder">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomBorder" featureName="name"
+            dataValue="CustomBorder"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomBorder" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Border"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomBorder" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//CustomClass"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Direction">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction" featureName="name"
+            dataValue="Direction"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Node" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Node/resizeConstraint">
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/resizeConstraint"
+            featureName="name" dataValue="resizeConstraint"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/resizeConstraint"
+            featureName="defaultValueLiteral" dataValue="NSEW"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/resizeConstraint"
+            featureName="eType" referenceValue="Before.ecore#//Direction"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Node" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Node/affixedParentSide">
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/affixedParentSide"
+            featureName="name" dataValue="affixedParentSide"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/affixedParentSide"
+            featureName="defaultValueLiteral" dataValue="NONE"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/affixedParentSide"
+            featureName="eType" referenceValue="Before.ecore#//Direction"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GradientFacet" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GradientFacet/direction">
+        <changes xsi:type="history:Set" element="Before.ecore#//GradientFacet/direction"
+            featureName="name" dataValue="direction"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GradientFacet/direction"
+            featureName="eType" referenceValue="Before.ecore#//Direction"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eAnnotations"
+          element="Before.ecore#//Direction/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Direction/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Geographical bit constants from org.eclipse.draw2d.PositionConstants"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/NONE">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NONE" featureName="name"
+            dataValue="NONE"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NONE" featureName="literal"
+            dataValue="NONE"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/NORTH">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH" featureName="name"
+            dataValue="NORTH"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH" featureName="value"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH" featureName="literal"
+            dataValue="NORTH"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/SOUTH">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/SOUTH" featureName="name"
+            dataValue="SOUTH"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/SOUTH" featureName="value"
+            dataValue="4" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/SOUTH" featureName="literal"
+            dataValue="SOUTH"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/WEST">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/WEST" featureName="name"
+            dataValue="WEST"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/WEST" featureName="value"
+            dataValue="8" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/WEST" featureName="literal"
+            dataValue="WEST"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/EAST">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/EAST" featureName="name"
+            dataValue="EAST"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/EAST" featureName="value"
+            dataValue="16" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/EAST" featureName="literal"
+            dataValue="EAST"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/NORTH_EAST">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH_EAST"
+            featureName="name" dataValue="NORTH_EAST"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH_EAST"
+            featureName="value" dataValue="17" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH_EAST"
+            featureName="literal" dataValue="NORTH_EAST"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/NORTH_WEST">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH_WEST"
+            featureName="name" dataValue="NORTH_WEST"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH_WEST"
+            featureName="value" dataValue="9" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH_WEST"
+            featureName="literal" dataValue="NORTH_WEST"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/SOUTH_EAST">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/SOUTH_EAST"
+            featureName="name" dataValue="SOUTH_EAST"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/SOUTH_EAST"
+            featureName="value" dataValue="20" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/SOUTH_EAST"
+            featureName="literal" dataValue="SOUTH_EAST"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/SOUTH_WEST">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/SOUTH_WEST"
+            featureName="name" dataValue="SOUTH_WEST"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/SOUTH_WEST"
+            featureName="value" dataValue="12" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/SOUTH_WEST"
+            featureName="literal" dataValue="SOUTH_WEST"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/NORTH_SOUTH">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH_SOUTH"
+            featureName="name" dataValue="NORTH_SOUTH"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH_SOUTH"
+            featureName="value" dataValue="5" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NORTH_SOUTH"
+            featureName="literal" dataValue="NORTH_SOUTH"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/EAST_WEST">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/EAST_WEST"
+            featureName="name" dataValue="EAST_WEST"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/EAST_WEST"
+            featureName="value" dataValue="24" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/EAST_WEST"
+            featureName="literal" dataValue="EAST_WEST"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Direction" referenceName="eLiterals"
+          element="Before.ecore#//Direction/NSEW">
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NSEW" featureName="name"
+            dataValue="NSEW"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NSEW" featureName="value"
+            dataValue="29" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Direction/NSEW" featureName="literal"
+            dataValue="NSEW"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//LineKind">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind" featureName="name"
+            dataValue="LineKind"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineKind" referenceName="eAnnotations"
+          element="Before.ecore#//LineKind/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineKind/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//LineKind/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.Graphics.LINE_* (== org.eclipse.swt.SWT.LINE_*. Values are same as SWT constants"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineKind" referenceName="eLiterals"
+          element="Before.ecore#//LineKind/LINE_SOLID">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_SOLID"
+            featureName="name" dataValue="LINE_SOLID"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_SOLID"
+            featureName="value" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_SOLID"
+            featureName="literal" dataValue="LINE_SOLID"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineKind" referenceName="eLiterals"
+          element="Before.ecore#//LineKind/LINE_DASH">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DASH"
+            featureName="name" dataValue="LINE_DASH"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DASH"
+            featureName="value" dataValue="2" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DASH"
+            featureName="literal" dataValue="LINE_DASH"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineKind" referenceName="eLiterals"
+          element="Before.ecore#//LineKind/LINE_DOT">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DOT"
+            featureName="name" dataValue="LINE_DOT"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DOT"
+            featureName="value" dataValue="3" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DOT"
+            featureName="literal" dataValue="LINE_DOT"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineKind" referenceName="eLiterals"
+          element="Before.ecore#//LineKind/LINE_DASHDOT">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DASHDOT"
+            featureName="name" dataValue="LINE_DASHDOT"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DASHDOT"
+            featureName="value" dataValue="4" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DASHDOT"
+            featureName="literal" dataValue="LINE_DASHDOT"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineKind" referenceName="eLiterals"
+          element="Before.ecore#//LineKind/LINE_DASHDOTDOT">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DASHDOTDOT"
+            featureName="name" dataValue="LINE_DASHDOTDOT"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DASHDOTDOT"
+            featureName="value" dataValue="5" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_DASHDOTDOT"
+            featureName="literal" dataValue="LINE_DASHDOTDOT"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LineKind" referenceName="eLiterals"
+          element="Before.ecore#//LineKind/LINE_CUSTOM">
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_CUSTOM"
+            featureName="name" dataValue="LINE_CUSTOM"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_CUSTOM"
+            featureName="value" dataValue="6" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LineKind/LINE_CUSTOM"
+            featureName="literal" dataValue="LINE_CUSTOM"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//LayoutData">
+        <changes xsi:type="history:Set" element="Before.ecore#//LayoutData" featureName="name"
+            dataValue="LayoutData"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LayoutData" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LayoutData" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CustomLayoutData">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomLayoutData"
+            featureName="name" dataValue="CustomLayoutData"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomLayoutData"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//LayoutData"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomLayoutData"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//CustomClass"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//GridLayoutData">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData" featureName="name"
+            dataValue="GridLayoutData"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//GridLayoutData" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//LayoutData"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayoutData/grabExcessHorizontalSpace">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/grabExcessHorizontalSpace"
+            featureName="name" dataValue="grabExcessHorizontalSpace"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/grabExcessHorizontalSpace"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/grabExcessHorizontalSpace"
+            featureName="defaultValueLiteral" dataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/grabExcessHorizontalSpace"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayoutData/grabExcessVerticalSpace">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/grabExcessVerticalSpace"
+            featureName="name" dataValue="grabExcessVerticalSpace"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/grabExcessVerticalSpace"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/grabExcessVerticalSpace"
+            featureName="defaultValueLiteral" dataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/grabExcessVerticalSpace"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayoutData/verticalSpan">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/verticalSpan"
+            featureName="name" dataValue="verticalSpan"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/verticalSpan"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/verticalSpan"
+            featureName="defaultValueLiteral" dataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/verticalSpan"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayoutData/horizontalSpan">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalSpan"
+            featureName="name" dataValue="horizontalSpan"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalSpan"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalSpan"
+            featureName="defaultValueLiteral" dataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalSpan"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayoutData/horizontalIndent">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalIndent"
+            featureName="name" dataValue="horizontalIndent"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalIndent"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalIndent"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayoutData/sizeHint">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/sizeHint"
+            featureName="name" dataValue="sizeHint"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/sizeHint"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/sizeHint"
+            featureName="eType" referenceValue="Before.ecore#//Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//BorderLayoutData">
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayoutData"
+            featureName="name" dataValue="BorderLayoutData"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//BorderLayoutData"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//LayoutData"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//BorderLayoutData"
+          referenceName="eStructuralFeatures" element="Before.ecore#//BorderLayoutData/vertical">
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayoutData/vertical"
+            featureName="name" dataValue="vertical"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayoutData/vertical"
+            featureName="defaultValueLiteral" dataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayoutData/vertical"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Alignment">
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment" featureName="name"
+            dataValue="Alignment"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//AlignmentFacet" referenceName="eStructuralFeatures"
+          element="Before.ecore#//AlignmentFacet/alignment">
+        <changes xsi:type="history:Set" element="Before.ecore#//AlignmentFacet/alignment"
+            featureName="name" dataValue="alignment"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//AlignmentFacet/alignment"
+            featureName="eType" referenceValue="Before.ecore#//Alignment"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayoutData/verticalAlignment">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/verticalAlignment"
+            featureName="name" dataValue="verticalAlignment"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/verticalAlignment"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/verticalAlignment"
+            featureName="defaultValueLiteral" dataValue="CENTER"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/verticalAlignment"
+            featureName="eType" referenceValue="Before.ecore#//Alignment"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayoutData/horizontalAlignment">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalAlignment"
+            featureName="name" dataValue="horizontalAlignment"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalAlignment"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalAlignment"
+            featureName="defaultValueLiteral" dataValue="CENTER"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayoutData/horizontalAlignment"
+            featureName="eType" referenceValue="Before.ecore#//Alignment"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//BorderLayoutData"
+          referenceName="eStructuralFeatures" element="Before.ecore#//BorderLayoutData/alignment">
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayoutData/alignment"
+            featureName="name" dataValue="alignment"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayoutData/alignment"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayoutData/alignment"
+            featureName="defaultValueLiteral" dataValue="CENTER"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayoutData/alignment"
+            featureName="eType" referenceValue="Before.ecore#//Alignment"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Alignment" referenceName="eLiterals"
+          element="Before.ecore#//Alignment/BEGINNING">
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/BEGINNING"
+            featureName="name" dataValue="BEGINNING"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/BEGINNING"
+            featureName="literal" dataValue="BEGINNING"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Alignment" referenceName="eLiterals"
+          element="Before.ecore#//Alignment/CENTER">
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/CENTER"
+            featureName="name" dataValue="CENTER"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/CENTER"
+            featureName="value" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/CENTER"
+            featureName="literal" dataValue="CENTER"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Alignment" referenceName="eLiterals"
+          element="Before.ecore#//Alignment/END">
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/END" featureName="name"
+            dataValue="END"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/END" featureName="value"
+            dataValue="2" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/END" featureName="literal"
+            dataValue="END"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Alignment" referenceName="eLiterals"
+          element="Before.ecore#//Alignment/FILL">
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/FILL" featureName="name"
+            dataValue="FILL"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/FILL" featureName="value"
+            dataValue="3" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Alignment/FILL" featureName="literal"
+            dataValue="FILL"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Layoutable">
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable" featureName="name"
+            dataValue="Layoutable"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//FigureMarker">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker" featureName="name"
+            dataValue="FigureMarker"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//FigureMarker" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Layoutable"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureMarker" referenceName="eAnnotations"
+          element="Before.ecore#//FigureMarker/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureMarker/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//FigureMarker/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Anything you could combine visual representation from. Ordinary GEF figures, custom-defined or references to defined elsewhere."/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Figure">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure" featureName="name"
+            dataValue="Figure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Figure" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//FigureMarker"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Figure" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//FigureHandle"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Figure" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Identity"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureGallery" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FigureGallery/figures">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery/figures"
+            featureName="name" dataValue="figures"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery/figures"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery/figures"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureGallery/figures"
+            featureName="eType" referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Node" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Node/nodeFigure">
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure" featureName="name"
+            dataValue="nodeFigure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure" featureName="lowerBound"
+            dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure" featureName="changeable"
+            dataValue="false" oldDataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure" featureName="volatile"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure" featureName="transient"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure" featureName="derived"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure" featureName="resolveProxies"
+            dataValue="false" oldDataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure" featureName="eType"
+            referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Node/nodeFigure" referenceName="eAnnotations"
+          element="Before.ecore#//Node/nodeFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Node/nodeFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Node/nodeFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Node/nodeFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Specializes DiagramElement.figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Connection" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Connection/connectionFigure">
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure"
+            featureName="name" dataValue="connectionFigure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure"
+            featureName="changeable" dataValue="false" oldDataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure"
+            featureName="volatile" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure"
+            featureName="transient" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure"
+            featureName="derived" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure"
+            featureName="resolveProxies" dataValue="false" oldDataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure"
+            featureName="eType" referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Connection/connectionFigure"
+          referenceName="eAnnotations" element="Before.ecore#//Connection/connectionFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Connection/connectionFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Connection/connectionFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection/connectionFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Specializes DiagramElement.figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eAnnotations"
+          element="Before.ecore#//Figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/children">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/children" featureName="name"
+            dataValue="children"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/children" featureName="upperBound"
+            dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/children" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/children" featureName="eType"
+            referenceValue="Before.ecore#//FigureMarker"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureMarker" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FigureMarker/parent">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker/parent"
+            featureName="name" dataValue="parent"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker/parent"
+            featureName="changeable" dataValue="false" oldDataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker/parent"
+            featureName="resolveProxies" dataValue="false" oldDataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker/parent"
+            featureName="eType" referenceValue="Before.ecore#//Figure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureMarker/parent"
+            featureName="eOpposite" referenceValue="Before.ecore#//Figure/children"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/children" featureName="eOpposite"
+            referenceValue="Before.ecore#//FigureMarker/parent"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/foregroundColor">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/foregroundColor"
+            featureName="name" dataValue="foregroundColor"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/foregroundColor"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/foregroundColor"
+            featureName="eType" referenceValue="Before.ecore#//Color"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/backgroundColor">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/backgroundColor"
+            featureName="name" dataValue="backgroundColor"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/backgroundColor"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/backgroundColor"
+            featureName="eType" referenceValue="Before.ecore#//Color"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/maximumSize">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/maximumSize"
+            featureName="name" dataValue="maximumSize"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/maximumSize"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/maximumSize"
+            featureName="eType" referenceValue="Before.ecore#//Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/minimumSize">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/minimumSize"
+            featureName="name" dataValue="minimumSize"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/minimumSize"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/minimumSize"
+            featureName="eType" referenceValue="Before.ecore#//Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/preferredSize">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/preferredSize"
+            featureName="name" dataValue="preferredSize"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/preferredSize"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/preferredSize"
+            featureName="eType" referenceValue="Before.ecore#//Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/font">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/font" featureName="name"
+            dataValue="font"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/font" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/font" featureName="eType"
+            referenceValue="Before.ecore#//Font"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/insets">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/insets" featureName="name"
+            dataValue="insets"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/insets" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/insets" featureName="eType"
+            referenceValue="Before.ecore#//Insets"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/border">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/border" featureName="name"
+            dataValue="border"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/border" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/border" featureName="eType"
+            referenceValue="Before.ecore#//Border"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/location">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/location" featureName="name"
+            dataValue="location"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/location" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/location" featureName="eType"
+            referenceValue="Before.ecore#//Point"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Figure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Figure/size">
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/size" featureName="name"
+            dataValue="size"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/size" featureName="containment"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Figure/size" featureName="eType"
+            referenceValue="Before.ecore#//Point"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//FigureRef">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef" featureName="name"
+            dataValue="FigureRef"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//FigureRef" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//FigureMarker"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureRef" referenceName="eAnnotations"
+          element="Before.ecore#//FigureRef/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureRef/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//FigureRef/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Need this to facilitate reuse of figures while keeping (so nice looking) containment relationship in the Figure class"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureRef" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FigureRef/figure">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef/figure"
+            featureName="name" dataValue="figure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef/figure"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef/figure"
+            featureName="eType" referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureRef/figure"
+          referenceName="eAnnotations" element="Before.ecore#//FigureRef/figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef/figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureRef/figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//FigureRef/figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef/figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureRef/figure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="not FigureMarker because don't want to reference figure references."/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//ConnectionFigure">
+        <changes xsi:type="history:Set" element="Before.ecore#//ConnectionFigure"
+            featureName="name" dataValue="ConnectionFigure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ConnectionFigure"
+            featureName="abstract" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ConnectionFigure"
+            featureName="interface" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//ConnectionFigure"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//DecorationFigure">
+        <changes xsi:type="history:Set" element="Before.ecore#//DecorationFigure"
+            featureName="name" dataValue="DecorationFigure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DecorationFigure"
+            featureName="abstract" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DecorationFigure"
+            featureName="interface" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//DecorationFigure"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Shape">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape" featureName="name"
+            dataValue="Shape"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Shape" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape" referenceName="eAnnotations"
+          element="Before.ecore#//Shape/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Shape/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.Shape"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Shape/outline">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/outline" featureName="name"
+            dataValue="outline"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/outline" featureName="defaultValueLiteral"
+            dataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/outline" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Shape/fill">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/fill" featureName="name"
+            dataValue="fill"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/fill" featureName="defaultValueLiteral"
+            dataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/fill" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Shape/lineWidth">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/lineWidth" featureName="name"
+            dataValue="lineWidth"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/lineWidth" featureName="defaultValueLiteral"
+            dataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/lineWidth" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Shape/lineKind">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/lineKind" featureName="name"
+            dataValue="lineKind"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/lineKind" featureName="eType"
+            referenceValue="Before.ecore#//LineKind"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Shape/xorFill">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/xorFill" featureName="name"
+            dataValue="xorFill"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/xorFill" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Shape/xorOutline">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/xorOutline"
+            featureName="name" dataValue="xorOutline"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/xorOutline"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Shape/resolvedChildren">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren"
+            featureName="name" dataValue="resolvedChildren"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren"
+            featureName="changeable" dataValue="false" oldDataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren"
+            featureName="volatile" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren"
+            featureName="transient" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren"
+            featureName="derived" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren"
+            featureName="eType" referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape/resolvedChildren"
+          referenceName="eAnnotations" element="Before.ecore#//Shape/resolvedChildren/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Shape/resolvedChildren/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Shape/resolvedChildren/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Shape/resolvedChildren/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Same as children, but resolves child FigureRefs, if any, to Figures"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Label">
+        <changes xsi:type="history:Set" element="Before.ecore#//Label" featureName="name"
+            dataValue="Label"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Label" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Label" referenceName="eAnnotations"
+          element="Before.ecore#//Label/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Label/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Label/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Label/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Label/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Label/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.Label"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Label" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Label/text">
+        <changes xsi:type="history:Set" element="Before.ecore#//Label/text" featureName="name"
+            dataValue="text"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Label/text" featureName="eType"
+            referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//LabeledContainer">
+        <changes xsi:type="history:Set" element="Before.ecore#//LabeledContainer"
+            featureName="name" dataValue="LabeledContainer"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//LabeledContainer"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Figure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LabeledContainer"
+          referenceName="eAnnotations" element="Before.ecore#//LabeledContainer/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//LabeledContainer/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LabeledContainer/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//LabeledContainer/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//LabeledContainer/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LabeledContainer/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.LabeledContainer"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Rectangle">
+        <changes xsi:type="history:Set" element="Before.ecore#//Rectangle" featureName="name"
+            dataValue="Rectangle"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Rectangle" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Shape"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Rectangle" referenceName="eAnnotations"
+          element="Before.ecore#//Rectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Rectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Rectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Rectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Rectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Rectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.RectangleFigure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//RoundedRectangle">
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle"
+            featureName="name" dataValue="RoundedRectangle"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//RoundedRectangle"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Shape"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//RoundedRectangle"
+          referenceName="eAnnotations" element="Before.ecore#//RoundedRectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//RoundedRectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//RoundedRectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.RoundedRectangle"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//RoundedRectangle"
+          referenceName="eStructuralFeatures" element="Before.ecore#//RoundedRectangle/cornerWidth">
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle/cornerWidth"
+            featureName="name" dataValue="cornerWidth"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle/cornerWidth"
+            featureName="defaultValueLiteral" dataValue="8"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle/cornerWidth"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//RoundedRectangle"
+          referenceName="eStructuralFeatures" element="Before.ecore#//RoundedRectangle/cornerHeight">
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle/cornerHeight"
+            featureName="name" dataValue="cornerHeight"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle/cornerHeight"
+            featureName="defaultValueLiteral" dataValue="8"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//RoundedRectangle/cornerHeight"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Ellipse">
+        <changes xsi:type="history:Set" element="Before.ecore#//Ellipse" featureName="name"
+            dataValue="Ellipse"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Ellipse" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Shape"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Ellipse" referenceName="eAnnotations"
+          element="Before.ecore#//Ellipse/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Ellipse/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Ellipse/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Ellipse/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Ellipse/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Ellipse/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.Ellipse"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Polyline">
+        <changes xsi:type="history:Set" element="Before.ecore#//Polyline" featureName="name"
+            dataValue="Polyline"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Polyline" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Shape"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Polyline" referenceName="eAnnotations"
+          element="Before.ecore#//Polyline/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Polyline/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Polyline/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Polyline/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Polyline/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Polyline/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.Polyline"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Polyline" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Polyline/template">
+        <changes xsi:type="history:Set" element="Before.ecore#//Polyline/template"
+            featureName="name" dataValue="template"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Polyline/template"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Polyline/template"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Polyline/template"
+            featureName="eType" referenceValue="Before.ecore#//Point"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Polygon">
+        <changes xsi:type="history:Set" element="Before.ecore#//Polygon" featureName="name"
+            dataValue="Polygon"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Polygon" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Polyline"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Polygon" referenceName="eAnnotations"
+          element="Before.ecore#//Polygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//Polygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Polygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//Polygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//Polygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Polygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.Polygon"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//ScalablePolygon">
+        <changes xsi:type="history:Set" element="Before.ecore#//ScalablePolygon" featureName="name"
+            dataValue="ScalablePolygon"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//ScalablePolygon" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Polygon"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ScalablePolygon" referenceName="eAnnotations"
+          element="Before.ecore#//ScalablePolygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//ScalablePolygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//ScalablePolygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//ScalablePolygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//ScalablePolygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//ScalablePolygon/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Marker interface to denote polygons with ability to autoscale to fit all available bounds. Separate class is needed instead of property in the Polygon class because of generalization PolygonDecoration extends Polygon"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//PolylineConnection">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineConnection"
+            featureName="name" dataValue="PolylineConnection"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//PolylineConnection"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Polyline"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//PolylineConnection"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//ConnectionFigure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PolylineConnection"
+          referenceName="eAnnotations" element="Before.ecore#//PolylineConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PolylineConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//PolylineConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.PolylineConnection"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PolylineConnection"
+          referenceName="eStructuralFeatures" element="Before.ecore#//PolylineConnection/sourceDecoration">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineConnection/sourceDecoration"
+            featureName="name" dataValue="sourceDecoration"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineConnection/sourceDecoration"
+            featureName="eType" referenceValue="Before.ecore#//DecorationFigure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PolylineConnection"
+          referenceName="eStructuralFeatures" element="Before.ecore#//PolylineConnection/targetDecoration">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineConnection/targetDecoration"
+            featureName="name" dataValue="targetDecoration"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineConnection/targetDecoration"
+            featureName="eType" referenceValue="Before.ecore#//DecorationFigure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//PolylineDecoration">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineDecoration"
+            featureName="name" dataValue="PolylineDecoration"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//PolylineDecoration"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Polyline"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//PolylineDecoration"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//DecorationFigure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PolylineDecoration"
+          referenceName="eAnnotations" element="Before.ecore#//PolylineDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PolylineDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//PolylineDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PolylineDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.PolylineDecoration"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//PolygonDecoration">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolygonDecoration"
+            featureName="name" dataValue="PolygonDecoration"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//PolygonDecoration"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//Polygon"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//PolygonDecoration"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//DecorationFigure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PolygonDecoration"
+          referenceName="eAnnotations" element="Before.ecore#//PolygonDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolygonDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//PolygonDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//PolygonDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//PolygonDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//PolygonDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="org.eclipse.draw2d.PolygonDecoration"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CustomFigure">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomFigure" featureName="name"
+            dataValue="CustomFigure"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomFigure" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Figure"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomFigure" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//CustomClass"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FigureAccessor" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FigureAccessor/typedFigure">
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureAccessor/typedFigure"
+            featureName="name" dataValue="typedFigure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FigureAccessor/typedFigure"
+            featureName="eType" referenceValue="Before.ecore#//CustomFigure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomFigure" referenceName="eAnnotations"
+          element="Before.ecore#//CustomFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//CustomFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomFigure/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Any figure class provided by some bundle"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomFigure" referenceName="eStructuralFeatures"
+          element="Before.ecore#//CustomFigure/customChildren">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomFigure/customChildren"
+            featureName="name" dataValue="customChildren"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomFigure/customChildren"
+            featureName="upperBound" dataValue="-1" oldDataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomFigure/customChildren"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomFigure/customChildren"
+            featureName="eType" referenceValue="Before.ecore#//FigureAccessor"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CustomDecoration">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomDecoration"
+            featureName="name" dataValue="CustomDecoration"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomDecoration"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//CustomFigure"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomDecoration"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//DecorationFigure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomDecoration"
+          referenceName="eAnnotations" element="Before.ecore#//CustomDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//CustomDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomDecoration/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Same as CustomFigure, but for Decorations"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CustomConnection">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomConnection"
+            featureName="name" dataValue="CustomConnection"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomConnection"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//CustomFigure"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomConnection"
+            featureName="eSuperTypes" referenceValue="Before.ecore#//ConnectionFigure"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomConnection"
+          referenceName="eAnnotations" element="Before.ecore#//CustomConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+            featureName="source" dataValue="http://www.eclipse.org/emf/2002/GenModel"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//CustomConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%"
+          referenceName="details" element="Before.ecore#//CustomConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="key" dataValue="documentation"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomConnection/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"
+            featureName="value" dataValue="Same as CustomFigure, but for Connections"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Layoutable" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Layoutable/layoutData">
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable/layoutData"
+            featureName="name" dataValue="layoutData"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable/layoutData"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable/layoutData"
+            featureName="eType" referenceValue="Before.ecore#//LayoutData"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//LayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//LayoutData/owner">
+        <changes xsi:type="history:Set" element="Before.ecore#//LayoutData/owner"
+            featureName="name" dataValue="owner"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LayoutData/owner"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LayoutData/owner"
+            featureName="eType" referenceValue="Before.ecore#//Layoutable"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//LayoutData/owner"
+            featureName="eOpposite" referenceValue="Before.ecore#//Layoutable/layoutData"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable/layoutData"
+            featureName="eOpposite" referenceValue="Before.ecore#//LayoutData/owner"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Layout">
+        <changes xsi:type="history:Set" element="Before.ecore#//Layout" featureName="name"
+            dataValue="Layout"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Layout" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Layout" featureName="interface"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//Layoutable" referenceName="eStructuralFeatures"
+          element="Before.ecore#//Layoutable/layout">
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable/layout"
+            featureName="name" dataValue="layout"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable/layout"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//Layoutable/layout"
+            featureName="eType" referenceValue="Before.ecore#//Layout"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//CustomLayout">
+        <changes xsi:type="history:Set" element="Before.ecore#//CustomLayout" featureName="name"
+            dataValue="CustomLayout"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomLayout" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Layout"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//CustomLayout" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//CustomClass"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//GridLayout">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout" featureName="name"
+            dataValue="GridLayout"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//GridLayout" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Layout"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayout/numColumns">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/numColumns"
+            featureName="name" dataValue="numColumns"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/numColumns"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/numColumns"
+            featureName="defaultValueLiteral" dataValue="1"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/numColumns"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayout/equalWidth">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/equalWidth"
+            featureName="name" dataValue="equalWidth"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/equalWidth"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/equalWidth"
+            featureName="defaultValueLiteral" dataValue="true"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/equalWidth"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayout/margins">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/margins"
+            featureName="name" dataValue="margins"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/margins"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/margins"
+            featureName="eType" referenceValue="Before.ecore#//Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//GridLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//GridLayout/spacing">
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/spacing"
+            featureName="name" dataValue="spacing"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/spacing"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//GridLayout/spacing"
+            featureName="eType" referenceValue="Before.ecore#//Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//BorderLayout">
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayout" featureName="name"
+            dataValue="BorderLayout"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//BorderLayout" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Layout"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//BorderLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//BorderLayout/spacing">
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayout/spacing"
+            featureName="name" dataValue="spacing"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayout/spacing"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//BorderLayout/spacing"
+            featureName="eType" referenceValue="Before.ecore#//Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//FlowLayout">
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout" featureName="name"
+            dataValue="FlowLayout"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//FlowLayout" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Layout"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FlowLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FlowLayout/vertical">
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/vertical"
+            featureName="name" dataValue="vertical"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/vertical"
+            featureName="defaultValueLiteral" dataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/vertical"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FlowLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FlowLayout/matchMinorSize">
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/matchMinorSize"
+            featureName="name" dataValue="matchMinorSize"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/matchMinorSize"
+            featureName="defaultValueLiteral" dataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/matchMinorSize"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FlowLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FlowLayout/forceSingleLine">
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/forceSingleLine"
+            featureName="name" dataValue="forceSingleLine"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/forceSingleLine"
+            featureName="defaultValueLiteral" dataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/forceSingleLine"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FlowLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FlowLayout/majorAlignment">
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/majorAlignment"
+            featureName="name" dataValue="majorAlignment"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/majorAlignment"
+            featureName="defaultValueLiteral" dataValue="BEGINNING"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/majorAlignment"
+            featureName="eType" referenceValue="Before.ecore#//Alignment"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FlowLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FlowLayout/minorAlignment">
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/minorAlignment"
+            featureName="name" dataValue="minorAlignment"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/minorAlignment"
+            featureName="defaultValueLiteral" dataValue="BEGINNING"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/minorAlignment"
+            featureName="eType" referenceValue="Before.ecore#//Alignment"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FlowLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FlowLayout/majorSpacing">
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/majorSpacing"
+            featureName="name" dataValue="majorSpacing"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/majorSpacing"
+            featureName="defaultValueLiteral" dataValue="5"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/majorSpacing"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//FlowLayout" referenceName="eStructuralFeatures"
+          element="Before.ecore#//FlowLayout/minorSpacing">
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/minorSpacing"
+            featureName="name" dataValue="minorSpacing"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/minorSpacing"
+            featureName="defaultValueLiteral" dataValue="5"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//FlowLayout/minorSpacing"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//XYLayout">
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayout" featureName="name"
+            dataValue="XYLayout"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//XYLayout" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Layout"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//XYLayoutData">
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayoutData" featureName="name"
+            dataValue="XYLayoutData"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//XYLayoutData" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//LayoutData"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//XYLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//XYLayoutData/topLeft">
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayoutData/topLeft"
+            featureName="name" dataValue="topLeft"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayoutData/topLeft"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayoutData/topLeft"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayoutData/topLeft"
+            featureName="eType" referenceValue="Before.ecore#//Point"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//XYLayoutData" referenceName="eStructuralFeatures"
+          element="Before.ecore#//XYLayoutData/size">
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayoutData/size"
+            featureName="name" dataValue="size"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayoutData/size"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayoutData/size"
+            featureName="containment" dataValue="true" oldDataValue="false"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//XYLayoutData/size"
+            featureName="eType" referenceValue="Before.ecore#//Dimension"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//StackLayout">
+        <changes xsi:type="history:Set" element="Before.ecore#//StackLayout" featureName="name"
+            dataValue="StackLayout"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//StackLayout" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Layout"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="for (gallery in graph.FigureGallery.allInstances) {&#xA;&#x9;while(not gallery.figures.isEmpty()) {&#xA;&#x9;&#x9;def figure = gallery.figures.first()&#xA;&#x9;&#x9;def descriptor = new graph.FigureDescriptor&#xA;&#xA;&#x9;&#x9;descriptor.name = figure.name&#xA;&#x9;&#x9;descriptor.actualFigure = figure&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;figure.set(descriptor) = descriptor&#xA;&#xA;&#x9;&#x9;figure.children.findAll{ it -> it instanceof graph.Label}.each do |it|&#xA;&#x9;&#x9;&#x9;def accessor = new graph.ChildAccess&#xA;&#xA;&#x9;&#x9;&#x9;accessor.figure = it&#xA;&#x9;&#x9;&#x9;descriptor.accessors.add(accessor)&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;it.set(accessor) = accessor&#xA;&#x9;&#x9;end&#xA;&#xA;&#x9;&#x9;return descriptor;&#xA;&#x9;}&#xA;}&#xA;&#xA;for (diagramElement in graph.DiagramElement.allInstances()) {&#xA;&#x9;diagramElement.figure = diagramElement.figure.unset(descriptor);&#xA;}&#xA;&#xA;for (diagramLabel in graph.DiagramLabel.allInstances()) {&#xA;&#x9;diagramElement.accessor = diagramElement.figure.unset(accessor);&#xA;}">
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//FigureDescriptor"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//FigureDescriptor" featureName="name"
+          dataValue="FigureDescriptor"/>
+    </changes>
+  </releases>
+</history:History>
