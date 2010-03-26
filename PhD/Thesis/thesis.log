@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  24 MAR 2010 17:47
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  26 MAR 2010 12:57
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -135,14 +135,8 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))) (./thesis.aux
 (./1.Introduction/introduction.aux) (./2.Background/background.aux)
 (./3.LiteratureReview/literature_review.aux) (./4.Analysis/analysis.aux)
-(./5.Implementation/implementation.aux) (./6.Evaluation/evaluation.aux
-
-LaTeX Warning: Label `fig:original_mm' multiply defined.
-
-
-LaTeX Warning: Label `fig:evolved_mm' multiply defined.
-
-) (./7.Conclusion/conclusion.aux) (./A.1.Experiments/experiments.aux))
+(./5.Implementation/implementation.aux) (./6.Evaluation/evaluation.aux)
+(./7.Conclusion/conclusion.aux) (./A.1.Experiments/experiments.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -217,252 +211,117 @@ Overfull \hbox (12.2056pt too wide) in paragraph at lines 3--3
  []
 
 
-LaTeX Warning: Reference `subsec:requirements_identification' on page 57 undefi
-ned on input line 4.
-
-
-LaTeX Warning: Citation `cicchetti' on page 57 undefined on input line 8.
-
-
-LaTeX Warning: Citation `garces' on page 57 undefined on input line 8.
-
-
-LaTeX Warning: Citation `ecore2ecore' on page 57 undefined on input line 8.
-
-
-LaTeX Warning: Citation `cope' on page 57 undefined on input line 8.
-
-
-LaTeX Warning: Reference `subsec:existing_migration_languages' on page 57 undef
-ined on input line 8.
+Overfull \hbox (13.08565pt too wide) in paragraph at lines 8--9
+\OT1/cmr/m/n/10 guages in oth-ers (e.g. [[], []]).
+ []
 
 [57]
-./6.Evaluation/quantitive.tex:20: Undefined control sequence.
-l.20 \pargraph
-              {Selection of Migration Languages}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `cicchetti' on page 58 undefined on input line 23.
-
-
-LaTeX Warning: Citation `garces' on page 58 undefined on input line 23.
-
-
-LaTeX Warning: Reference `subsec:existing_migration_languages' on page 58 undef
-ined on input line 23.
-
-./6.Evaluation/quantitive.tex:23: Undefined control sequence.
-l.23 ...ransformations for model migration\foonote
-                                                  {Because, in model migrati...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `cope' on page 58 undefined on input line 25.
-
-
-LaTeX Warning: Reference `subsec:existing_migration_languages' on page 58 undef
-ined on input line 25.
-
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 25.
-(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 26.
+ (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-
-LaTeX Warning: Citation `ecore2ecore' on page 58 undefined on input line 25.
-
-./6.Evaluation/quantitive.tex:27: Undefined control sequence.
-l.27 ...se the latter is not as expressive\foonote
-                                                  {Communication with Ed Mer...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (2.69467pt too wide) in paragraph at lines 27--28
-\OT1/cmr/m/n/10 leader, 2009, avail-able at $\OT1/pcr/m/n/10 http : / / www . e
-clipse . org / forums / index . php ?
+) [58]
+Underfull \hbox (badness 2744) in paragraph at lines 28--28
+[][]\OT1/cmr/m/n/8 Communication with Ed Merks, Eclipse Mod-el-ing Project lead
+er, 2009, avail-
  []
 
 
-Overfull \hbox (11.88895pt too wide) in paragraph at lines 27--28
-\OT1/pcr/m/n/10 t = tree&goto = 486690&S = b1fdb2853760c9ce6b6b48d3a01b9aac$ \O
-T1/cmr/m/n/10 and can-
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\OT1/cmr/m/n/8 able at $\OT1/pcr/m/n/8 http : / / www . eclipse . org / forums 
+/ index . php ? t = tree&goto = 486690&S =
  []
 
-[58]
-
-LaTeX Warning: Reference `model_migration_languages' on page 59 undefined on in
-put line 34.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
 (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
  [59]
-Overfull \hbox (2.27832pt too wide) in paragraph at lines 72--73
+Overfull \hbox (2.27832pt too wide) in paragraph at lines 73--74
 []\OT1/cmr/m/n/10 Deletion op-er-a-tions (un-set and re-move above) are nec-es-
 sary for some existing-
  []
 
-[60]
-./6.Evaluation/quantitive.tex:132: Undefined control sequence.
-l.132 \paragrah
-               {Copying Strategy}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[60] [61]
+Overfull \hbox (19.20001pt too wide) in paragraph at lines 189--190
+[]\OT1/pcr/m/n/10 <migrated[]element>.<feature> = <original[]element>.<feature>
+ 
+ []
 
+[62] <6.Evaluation/images/subtyping.pdf, id=45, 291.0875pt x 193.72375pt>
+File: 6.Evaluation/images/subtyping.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `petri_nets_step0.pdf' not found on input line 139.
-
-
-./6.Evaluation/quantitive.tex:139: Package graphics Error: File `petri_nets_ste
-p0.pdf' not found.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.139 ...raphics[scale=0.75]{petri_nets_step0.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `petri_nets_step1.pdf' not found on input line 148.
-
-
-./6.Evaluation/quantitive.tex:148: Package graphics Error: File `petri_nets_ste
-p1.pdf' not found.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.148 ...raphics[scale=0.75]{petri_nets_step1.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[61]
+<use 6.Evaluation/images/subtyping.pdf> [63 <./6.Evaluation/images/subtyping.pd
+f>]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 158.
- [62] (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-[63]
-./6.Evaluation/quantitive.tex:256: Undefined control sequence.
-l.256 \paragrah
-               {Side-Effects during Initialisation}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 212.
+ [64]
+<6.Evaluation/images/change_ref_to_cont_before.pdf, id=115, 247.92625pt x 118.4
+425pt>
+File: 6.Evaluation/images/change_ref_to_cont_before.pdf Graphic file (type pdf)
+
+ <use 6.Evaluation/images/change_ref_to_cont_before.pdf>
+<6.Evaluation/images/change_ref_to_cont_after.pdf, id=116, 356.33125pt x 62.232
+5pt>
+File: 6.Evaluation/images/change_ref_to_cont_after.pdf Graphic file (type pdf)
+ <use 6.Evaluation/images/change_ref_to_cont_after.pdf> [65 <./6.Evaluation/ima
+ges/change_ref_to_cont_before.pdf>]
+Overfull \hbox (30.63933pt too wide) in paragraph at lines 322--323
+\OT1/cmr/m/n/10 less straight-for-ward be-cause the value of a con-tain-ment re
+f-er-ence (\OT1/pcr/m/n/10 Signature#ports\OT1/cmr/m/n/10 )
+ []
 
 
-LaTeX Warning: File `change_ref_to_cont_before.pdf' not found on input line 263
-.
+Overfull \hbox (7.47287pt too wide) in paragraph at lines 324--325
+[]\OT1/cmr/m/n/10 In existing-target mi-gra-tion lan-guages, con-for-mance is m
+ost likely only checked
+ []
 
-
-./6.Evaluation/quantitive.tex:263: Package graphics Error: File `change_ref_to_
-cont_before.pdf' not found.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.263 ...cale=0.75]{change_ref_to_cont_before.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `change_ref_to_cont_after.pdf' not found on input line 272.
-
-
-
-./6.Evaluation/quantitive.tex:272: Package graphics Error: File `change_ref_to_
-cont_after.pdf' not found.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.272 ...scale=0.75]{change_ref_to_cont_after.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[64]
+[66 <./6.Evaluation/images/change_ref_to_cont_after.pdf>]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 312.
- [65] [66])) [67] (./thesis.bbl [58
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 333.
+ [67])) [68]
+(./thesis.bbl [72
 
 
 
 
-] [59] [60]
+] [73] [74]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
- [61]) [62] (./thesis.aux
+ [75]) [76] (./thesis.aux
 (./1.Introduction/introduction.aux) (./2.Background/background.aux)
 (./3.LiteratureReview/literature_review.aux) (./4.Analysis/analysis.aux)
 (./5.Implementation/implementation.aux) (./6.Evaluation/evaluation.aux)
-(./7.Conclusion/conclusion.aux) (./A.1.Experiments/experiments.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+(./7.Conclusion/conclusion.aux) (./A.1.Experiments/experiments.aux)) ) 
 Here is how much of TeX's memory you used:
- 2952 strings out of 493886
- 42024 string characters out of 1151098
- 201374 words of memory out of 3000000
- 6107 multiletter control sequences out of 10000+50000
+ 2861 strings out of 493886
+ 41421 string characters out of 1151098
+ 156815 words of memory out of 3000000
+ 6020 multiletter control sequences out of 10000+50000
  12658 words of font info for 44 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 32i,8n,44p,1385b,1603s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
-08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts
-/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blu
-esky/cm/cmr17.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
-r5.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></us
-r/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/tex
-live/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/t
-exmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist
-/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
-pe1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/c
-ourier/ucrb8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/u
-crr8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.p
-fb>
-Output written on thesis.pdf (20 pages, 164763 bytes).
+ 32i,8n,44p,1063b,1047s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/loc
+al/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2008
+/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2008/texmf-di
+st/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-dist/fonts/
+type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blue
+sky/cm/cmr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr
+17.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></us
+r/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/tex
+live/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/t
+exmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/f
+onts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type
+1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky
+/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb
+8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><
+/usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on thesis.pdf (21 pages, 227763 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
+ 277 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

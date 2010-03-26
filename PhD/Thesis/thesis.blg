@@ -10,13 +10,9 @@ A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "cicchetti"
-Warning--I didn't find a database entry for "garces"
-Warning--I didn't find a database entry for "ecore2ecore"
-Warning--I didn't find a database entry for "cope"
 You've used 47 entries,
             2472 wiz_defined-function locations,
-            786 strings with 11740 characters,
+            782 strings with 11710 characters,
 and the built_in function-call counts, 17248 in all, are:
 = -- 1712
 > -- 657
@@ -55,4 +51,3 @@ warning$ -- 0
 while$ -- 129
 width$ -- 54
 write$ -- 605
-(There were 4 warnings)
