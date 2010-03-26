@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.etl.eclipse.dt.launching.EtlLaunchConfigurationDelegate">
+<listAttribute key="models">
+<listEntry value="#&#10;#Fri Mar 26 12:20:32 GMT 2010&#10;isMetamodelFileBased=true&#10;name=After&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Mine/Subtyping/etl/After.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/Mine/Subtyping/After.ecore&#10;"/>
+<listEntry value="#&#10;#Fri Mar 26 12:20:11 GMT 2010&#10;isMetamodelFileBased=true&#10;name=Before&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Mine/Subtyping/Before.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/Mine/Subtyping/Before.ecore&#10;"/>
+</listAttribute>
+<stringAttribute key="source" value="/Co-Evo Examples/Mine/Subtyping/etl/Subtyping.etl"/>
+</launchConfiguration>

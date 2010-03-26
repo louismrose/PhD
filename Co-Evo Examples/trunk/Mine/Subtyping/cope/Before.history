@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history:History xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:history="http://www.cs.tum.edu/cope/history/0.1.42">
+  <releases date="2010-03-26T12:27:46.844+0000">
+    <changes xsi:type="history:CompositeChange">
+      <changes xsi:type="history:Create" element="Before.ecore#/">
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="name"
+            dataValue="subtyping"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsURI"
+            dataValue="subtyping"/>
+        <changes xsi:type="history:Set" element="Before.ecore#/" featureName="nsPrefix"
+            dataValue="subtyping"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//DiagramElement">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement" featureName="name"
+            dataValue="DiagramElement"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement" featureName="abstract"
+            dataValue="true" oldDataValue="false"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramElement" referenceName="eStructuralFeatures"
+          element="Before.ecore#//DiagramElement/figure">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/figure"
+            featureName="name" dataValue="figure"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/figure"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/figure"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Node">
+        <changes xsi:type="history:Set" element="Before.ecore#//Node" featureName="name"
+            dataValue="Node"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Node" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//DiagramElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Connection">
+        <changes xsi:type="history:Set" element="Before.ecore#//Connection" featureName="name"
+            dataValue="Connection"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Connection" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//DiagramElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//Compartment">
+        <changes xsi:type="history:Set" element="Before.ecore#//Compartment" featureName="name"
+            dataValue="Compartment"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//Compartment" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//DiagramElement"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#/" referenceName="eClassifiers"
+          element="Before.ecore#//DiagramLabel">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramLabel" featureName="name"
+            dataValue="DiagramLabel"/>
+        <changes xsi:type="history:Add" element="Before.ecore#//DiagramLabel" featureName="eSuperTypes"
+            referenceValue="Before.ecore#//Node"/>
+      </changes>
+      <changes xsi:type="history:Create" target="Before.ecore#//DiagramLabel" referenceName="eStructuralFeatures"
+          element="Before.ecore#//DiagramLabel/accessor">
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramLabel/accessor"
+            featureName="name" dataValue="accessor"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramLabel/accessor"
+            featureName="lowerBound" dataValue="1" oldDataValue="0"/>
+        <changes xsi:type="history:Set" element="Before.ecore#//DiagramLabel/accessor"
+            featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </changes>
+    </changes>
+  </releases>
+  <releases>
+    <changes xsi:type="history:MigrationChange" migration="figureAttribute = subtyping.DiagramElement.figure&#xA;eIntDataType = emf.EInt&#xA;figureAttribute.eType = eIntDataType&#xA;accessorAttribute = subtyping.DiagramLabel.accessor&#xA;accessorAttribute.eType = eIntDataType&#xA;&#xA;for (diagramElement in subtyping.DiagramElement.allInstances()) {&#xA;&#x9;diagramElement.figure = diagramElement.figure.length()&#xA;&#x9;&#xA;&#x9;if (subtyping.DiagramLabel.allInstances.contains(diagramElement)) {&#xA;&#x9;&#x9;diagramElement.accessor = diagramElement.accessor.length()&#xA;&#x9;}&#xA;}">
+      <changes xsi:type="history:Set" element="Before.ecore#//DiagramElement/figure"
+          featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          oldReferenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <changes xsi:type="history:Set" element="Before.ecore#//DiagramLabel/accessor"
+          featureName="eType" referenceValue="http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          oldReferenceValue="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </changes>
+  </releases>
+</history:History>

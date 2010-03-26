@@ -1,0 +1,33 @@
+@abstract
+rule DiagramElements
+	transform o : Before!DiagramElement
+	to        m : After!DiagramElement {
+	
+	m.figure := o.figure.length();		
+}
+
+rule Nodes
+	transform o : Before!Node
+	to        m : After!Node
+	extends DiagramElements {
+}
+
+rule Connections
+	transform o : Before!Connection
+	to        m : After!Connection
+	extends DiagramElements {
+}
+
+rule Compartments
+	transform o : Before!Compartment
+	to        m : After!Compartment
+	extends DiagramElements {
+}
+
+rule DiagramLabels
+	transform o : Before!DiagramLabel
+	to        m : After!DiagramLabel
+	extends Nodes {
+	
+	m.accessor := o.accessor.length();
+}

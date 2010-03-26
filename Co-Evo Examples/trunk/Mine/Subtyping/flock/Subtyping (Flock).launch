@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
+<stringAttribute key="bad_container_name" value="migrate DiagramLabel {&#10;&#9;migrated.figure   := original.figure.length();&#10;&#9;migrated.accessor := original.accessor"/>
+<intAttribute key="migratedModel" value="1"/>
+<listAttribute key="models">
+<listEntry value="#&#10;#Fri Mar 26 12:26:02 GMT 2010&#10;isMetamodelFileBased=true&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Mine/Subtyping/Before.model&#10;expand=false&#10;metamodelFile=/Co-Evo Examples/Mine/Subtyping/Before.ecore&#10;"/>
+<listEntry value="#&#10;#Fri Mar 26 12:26:38 GMT 2010&#10;isMetamodelFileBased=true&#10;name=Migrated&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/Mine/Subtyping/flock/After.model&#10;expand=false&#10;metamodelFile=/Co-Evo Examples/Mine/Subtyping/After.ecore&#10;"/>
+</listAttribute>
+<intAttribute key="originalModel" value="0"/>
+<stringAttribute key="source" value="/Co-Evo Examples/Mine/Subtyping/flock/Subtyping.mig"/>
+</launchConfiguration>

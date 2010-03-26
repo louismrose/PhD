@@ -1,0 +1,22 @@
+@namespace(uri="subtyping", prefix="subtyping")
+
+package subtyping;
+
+abstract class DiagramElement {
+   attr int[1] figure;
+}
+
+class Node extends DiagramElement {
+}
+
+class Connection extends DiagramElement {
+
+}
+
+class Compartment extends DiagramElement {
+
+}
+
+class DiagramLabel extends Node {
+   attr int[1] accessor;
+}

@@ -1,0 +1,42 @@
+module Subtyping;
+
+create Migrated : After from Original : Before;
+
+abstract rule DiagramElements {
+	from
+		o : Before!DiagramElement
+	to
+		m : After!DiagramElement (
+		figure <- o.figure.length()		
+	)
+}
+
+rule Nodes extends DiagramElements {
+	from
+		o : Before!Node
+	to
+		m : After!Node
+}
+
+rule Connections extends DiagramElements {
+	from
+		o : Before!Connection
+	to
+		m : After!Connection
+}
+
+rule Compartments extends DiagramElements {
+	from
+		o : Before!Compartment
+	to
+		m : After!Compartment
+}
+
+rule DiagramLabels extends Nodes {
+	from
+		o : Before!DiagramLabel
+	to
+		m : After!DiagramLabel (
+		accessor <- o.accessor.length()		
+	)
+}

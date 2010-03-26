@@ -1,0 +1,16 @@
+migrate Compartment {
+	migrated.figure := original.figure.length();
+}
+
+migrate Connection {
+	migrated.figure := original.figure.length();
+}
+
+migrate DiagramLabel {
+	migrated.figure   := original.figure.length();
+	migrated.accessor := original.accessor.length();
+}
+
+migrate Node {
+	migrated.figure := original.figure.length();
+}

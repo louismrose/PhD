@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:subtyping="subtyping">
+  <subtyping:Node figure="4"/>
+  <subtyping:Connection figure="10"/>
+  <subtyping:Compartment figure="11"/>
+  <subtyping:DiagramLabel figure="5" accessor="8"/>
+</xmi:XMI>
