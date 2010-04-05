@@ -4,10 +4,6 @@ migrate FigureGallery {
 	}
 }
 
-migrate FigureAccessor {
-	original.println();
-}
-
 -- TODO : extend Flock to reduce this duplication. The following elements all descend from DiagramElement
 migrate Compartment {
 	migrated.figure := original.figure.equivalent().~descriptor;
