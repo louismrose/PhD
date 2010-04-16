@@ -124,6 +124,14 @@ Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock In {\em Proc. Workshop on Rigorous Methods for Software Construction
   and Analysis}, 2008.
 
+\bibitem[Kolovos {\it et al.}\  2009]{kolovos09eugenia}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Louis~M. Rose.
+\newblock {EuGENia}: {GMF} for mortals.
+\newblock Long talk at Eclipse Summit Europe, October 2009, Ludwigsburg,
+  Germany. Available at:
+  \url{https://www.eclipsecon.org/submissions/ese2009/view_talk.php?id=979}
+  [Accessed 12 April 2010], 2009.
+
 \bibitem[Kolovos 2009]{kolovos09thesis}{$~$}
 Dimitrios~S. Kolovos.
 \newblock {\em An Extensible Platform for Specification of Integrated Languages

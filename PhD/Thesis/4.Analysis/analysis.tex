@@ -359,11 +359,11 @@ Therefore, the following requirement was derived: \emph{This thesis must investi
 
 
 \subsection{User-driven co-evolution}
-When a metamodel change will affect conformance in only a small number of models, a metamodel developer may decide that the extra effort required to specify an executable migration strategy is too great, and prefer a user-driven co-evolution technique. Section~\ref{subsec:user-driven_co-evolution} introduced user-driven co-evolution techniques, highlighting several of challenges faced when they are applied. Those challenges are now summarised and used to derive requirements for this thesis.
+When a metamodel change will affect conformance in only a small number of models, a metamodel developer may decide that the extra effort required to specify an executable migration strategy is too great, and prefer a user-driven co-evolution technique. Section~\ref{subsec:user-driven_co-evolution} introduced user-driven co-evolution techniques, highlighting several of the challenges faced when they are applied. Those challenges are now summarised and used to derive requirements for this thesis.
 
 Because modelling frameworks typically cannot be used to load non-conformant models, user-driven co-evolution involves editing the storage representation of a model. As discussed above, model storage representations are typically not optimised for human use and hence user-driven co-evolution can be error-prone and time consuming. When a multi-pass parser is used to load models (as is the case with EMF), user-driven co-evolution is an iterative process, because not all conformance errors are reported at once.
 
-Therefore, the following requirement was derived: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a sound and complete conformance report for the original model and evolved metamodel.}
+Therefore, the following requirement was derived: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a conformance report for the original model and evolved metamodel.}
 
 
 \subsection{Developer-driven co-evolution}
