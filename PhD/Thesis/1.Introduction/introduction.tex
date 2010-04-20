@@ -8,8 +8,14 @@
 \section{Software Evolution}
 %The introduction will then discuss software evolution, and its causes. The challenges presented by software evolution will be highlighted, particularly in the context of MDE, and used to motivate the proposed thesis.
 
+Studying software evolution can provide benefits other than improving the maintainability of a system. For instance, by understanding the mistakes made in the engineering of existing software systems, similar mistakes may be avoided in the future. Experts and analysts can devise best practices that guide developers away from problematic practices. For this reason, Kerievsky notes that ``studying the evolution of great software designs will be more valuable than studying the great designs themselves'' \cite{kerievsky04refactoring}.
+
+
 \section{Research Aim}
 %The high-level aim of the research will be stated, providing a context for the background and literature review chapters. 
 
 \section{Research Method}
+\label{sec:research_method}
 %This section will discuss the way in which the research was conducted, including a description of the evaluation strategy.
+
+Due to the method employed, Dig's refactoring research is the most relevant to this research. Initially, \cite{dig06apis} conducted a survey to identify and categorise the changes made to five mid-sized APIs, with the hypothesis that a significant number of the changes could be classified as behaviour-preserving (i.e. refactorings). By using examples from the survey, \cite{dig06detection} were able to devise an algorithm for automatically detecting refactorings to a high degree of accuracy (over 85\%). The algorithm was then utilised in tools for (1) replaying refactorings to perform migration of client code following breaking changes to an API \cite{dig06automatic}, and (2) versioning object-oriented programs using a refactoring-aware configuration management system \cite{dig07cms}. The latter facilitated better understanding of program evolution, and the refinement of the refactoring detection algorithm.

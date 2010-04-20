@@ -1,10 +1,47 @@
 \begin{thebibliography}{99}
 
+\bibitem[37-Signals 2008]{ror}{$~$}
+37-Signals.
+\newblock {Ruby on Rails} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.rubyonrails.org/}, 2008.
+
+\bibitem[Alexander {\it et al.}\  1977]{alexander77pattern}{$~$}
+Christopher Alexander, Sara Ishikawa, and Murray Silverstein.
+\newblock {\em A Pattern Language: Towns, Buildings, Construction (Center for
+  Environmental Structure Series)}.
+\newblock Oxford University Press, 1977.
+
 \bibitem[ATLAS 2007]{atl}{$~$}
 ATLAS.
 \newblock {Atlas Transformation Language Project Website} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/m2m/atl/}, 2007.
+
+\bibitem[Backus 1978]{backus78history}{$~$}
+John Backus.
+\newblock The history of {FORTRAN} {I}, {II} and {III}.
+\newblock {\em History of Programming Languages}, 1:165--180, 1978.
+
+\bibitem[Balazinska {\it et al.}\  2000]{balazinska00advanced}{$~$}
+Magdalena Balazinska, Ettore Merlo, Michel Dagenais, Bruno Lag\"{u}e, and
+  Kostas Kontogiannis.
+\newblock Advanced clone-analysis to support object-oriented system
+  refactoring.
+\newblock In {\em Proc. Working Conference on Reverse Engineering}, pages
+  98--107. IEEE Computer Society, 2000.
+
+\bibitem[Banerjee {\it et al.}\  1987]{banerjee87semantics}{$~$}
+Jay Banerjee, Won Kim, Hyoung-Joo Kim, and Henry~F. Korth.
+\newblock Semantics and implementation of schema evolution in object-oriented
+  databases.
+\newblock In {\em Proc. Special Interest Group on Management of Data},
+  volume~16, pages 311--322. ACM, 1987.
+
+\bibitem[Beck \& Cunningham 1989]{beck89constructing}{$~$}
+Kent Beck and Ward Cunningham.
+\newblock Constructing abstractions for object-oriented applications.
+\newblock {\em Journal of Object Oriented Programming}, 2, 1989.
 
 \bibitem[Bloch 2005]{bloch05apis}{$~$}
 Joshua Bloch.
@@ -12,6 +49,23 @@ Joshua Bloch.
 \newblock Keynote address to the LCSD Workshop at OOPSLA, October 2005, San
   Diego, United States of America. [Accessed 23 July 2009] Available at:
   \url{http://lcsd05.cs.tamu.edu/slides/keynote.pdf}, 2005.
+
+\bibitem[Bosch 1998]{bosch98patterns}{$~$}
+Jan Bosch.
+\newblock Design patterns as language constructs.
+\newblock {\em Journal of Object Oriented Programming}, 11(2):18--32, 1998.
+
+\bibitem[Brown {\it et al.}\  1998]{brown98antipatterns}{$~$}
+William~J. Brown, Raphael~C. Malveau, Hays W.~McCormick III, and Thomas~J.
+  Mowbray.
+\newblock {\em Anti Patterns}.
+\newblock Wiley, 1998.
+
+\bibitem[Cervelle {\it et al.}\  2006]{cervelle06tatoo}{$~$}
+Julien Cervelle, R\'{e}mi Forax, and Gilles Roussel.
+\newblock Tatoo: an innovative parser generator.
+\newblock In {\em Principles and Practice of Programming in Java}, pages
+  13--20. ACM, 2006.
 
 \bibitem[Cicchetti {\it et al.}\  2008]{cicchetti08automating}{$~$}
 Antonio Cicchetti, Davide~Di Ruscio, Romina Eramo, and Alfonso Pierantonio.
@@ -23,7 +77,49 @@ Krzysztof Czarnecki and Simon Helsen.
 \newblock Feature-based survey of model transformation approaches.
 \newblock {\em IBM Systems Journal}, 45(3):621--646, 2006.
 
-\bibitem[Eclipse 2008]{gmt}{$~$}
+\bibitem[Deursen {\it et al.}\  2007]{deursen07mdse}{$~$}
+Arie van Deursen, Eelco Visser, and Jos Warmer.
+\newblock Model-driven software evolution: A research agenda.
+\newblock In {\em Proc. Workshop on Model-Driven Software Evolution}, pages
+  41--49, 2007.
+
+\bibitem[Dig \& Johnson 2006a]{dig06automatic}{$~$}
+Danny Dig and Ralph Johnson.
+\newblock Automated upgrading of component-based applications.
+\newblock In {\em OOPSLA Companion}, pages 675--676, 2006.
+
+\bibitem[Dig \& Johnson 2006b]{dig06apis}{$~$}
+Danny Dig and Ralph Johnson.
+\newblock How do {API}s evolve? {A} story of refactoring.
+\newblock {\em Journal of Software Maintenance and Evolution}, 18(2):83--107,
+  2006.
+
+\bibitem[Dig {\it et al.}\  2006]{dig06detection}{$~$}
+Danny Dig, Can Comertoglu, Darko Marinov, and Ralph Johnson.
+\newblock Automated detection of refactorings in evolving components.
+\newblock In {\em Proc. European Conference on Object-Oriented Programming},
+  volume 4067 of {\em LNCS}, pages 404--428. Springer, 2006.
+
+\bibitem[Dig {\it et al.}\  2007]{dig07cms}{$~$}
+Danny Dig, Kashif Manzoor, Ralph Johnson, and Tien~N. Nguyen.
+\newblock Refactoring-aware configuration management for object-oriented
+  programs.
+\newblock In {\em Proc. International Conference on Software Engineering},
+  pages 427--436. IEEE Computer Society, 2007.
+
+\bibitem[Ducasse {\it et al.}\  1999]{ducasse99language}{$~$}
+St\'{e}phane Ducasse, Matthias Rieger, and Serge Demeyer.
+\newblock A language independent approach for detecting duplicated code.
+\newblock In {\em Proc. International Conference on Software Maintenance},
+  pages 109--118. IEEE Computer Society, 1999.
+
+\bibitem[Eclipse 2008a]{emf}{$~$}
+Eclipse.
+\newblock {Eclipse Modeling Framework} project [online].
+\newblock [Accessed 22 January 2009] Available at:
+  \url{http://www.eclipse.org/modeling/emf/}, 2008.
+
+\bibitem[Eclipse 2008b]{gmt}{$~$}
 Eclipse.
 \newblock {Generative Modelling Technologies} project [online].
 \newblock [Accessed 30 June 2008] Available at:
@@ -47,10 +143,38 @@ Eclipse.
 \newblock [Accessed 15 February 2010] Available at:
   \url{http://www.eclipse.org/modeling/emf/?project=cdo#cdo}, 2010.
 
+\bibitem[Edelweiss \& Freitas~Moreira 2005]{edelweiss05temporal}{$~$}
+Nina Edelweiss and \'{A}lvaro Freitas~Moreira.
+\newblock Temporal and versioning model for schema evolution in object-oriented
+  databases.
+\newblock {\em Data \& Knowledge Engineering}, 53(2):99--128, 2005.
+
+\bibitem[Elmasri \& Navathe 2006]{elmasri06database}{$~$}
+Ramez Elmasri and Shamkant~B. Navathe.
+\newblock {\em Fundamentals of Database Systems}.
+\newblock Addison-Wesley Longman, 2006.
+
+\bibitem[Erlikh 2000]{erlikh00leveraging}{$~$}
+Len Erlikh.
+\newblock Leveraging legacy system dollars for e-business.
+\newblock {\em IT Professional}, 2(3):17--23, 2000.
+
+\bibitem[Ferrandina {\it et al.}\  1995]{ferrandina95schema}{$~$}
+Fabrizio Ferrandina, Thorsten Meyer, Roberto Zicari, Guy Ferran, and Jo\"{e}lle
+  Madec.
+\newblock Schema and database evolution in the {O2} object database system.
+\newblock In {\em Very Large Data Bases}, pages 170--181. Morgan Kaufmann,
+  1995.
+
 \bibitem[Fowler 1999]{fowler99refactoring}{$~$}
 Martin Fowler.
 \newblock {\em Refactoring: improving the design of existing code}.
 \newblock Addison-Wesley, 1999.
+
+\bibitem[Fowler 2002]{fowler02patterns}{$~$}
+Martin Fowler.
+\newblock {\em Patterns of Enterprise Application Architecture}.
+\newblock Addison-Wesley, 2002.
 
 \bibitem[Gamma {\it et al.}\  1995]{gamma95patterns}{$~$}
 Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
@@ -64,10 +188,26 @@ Kelly Garc{\'e}s, Fr{\'e}d{\'e}ric Jouault, Pierre Cointe, and Jean
 \newblock In {\em Proc. ECMDA-FA}, volume 5562 of {\em LNCS}, pages 34--49.
   Springer, 2009.
 
+\bibitem[Gosling {\it et al.}\  2005]{java}{$~$}
+James Gosling, Bill Joy, Guy Steele, and Gilad Bracha.
+\newblock {\em The Java\texttrademark\ Language Specification}.
+\newblock Addison-Wesley, Boston, MA, USA, 2005.
+
 \bibitem[Gronback 2006]{gronback06gmf}{$~$}
 Richard Gronback.
 \newblock Introduction to the {Eclipse Graphical Modeling Framework}.
 \newblock In {\em Proc. EclipseCon}, Santa Clara, California, 2006.
+
+\bibitem[Gruschko {\it et al.}\  2007]{gruschko07towards}{$~$}
+Boris Gruschko, Dimitrios~S. Kolovos, and Richard~F. Paige.
+\newblock Towards synchronizing models with evolving metamodels.
+\newblock In {\em Proc. Workshop on Model-Driven Software Evolution}, 2007.
+
+\bibitem[Guerrini {\it et al.}\  2005]{guerrini05impact}{$~$}
+Giovanna Guerrini, Marco Mesiti, and Daniele Rossi.
+\newblock Impact of {XML} schema evolution on valid documents.
+\newblock In {\em Proc. Workshop on Web Information and Data Management}, pages
+  39--44, 2005.
 
 \bibitem[Herrmannsdoerfer {\it et al.}\  2009]{herrmannsdoerfer09cope}{$~$}
 Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
@@ -99,11 +239,28 @@ Fr{\'e}d{\'e}ric Jouault and Ivan Kurtev.
   Model Driven Engineering Languages and Systems}, volume 3844 of {\em LNCS},
   pages 128--138. Springer, 2005.
 
+\bibitem[Kataoka {\it et al.}\  2001]{kataoka01automated}{$~$}
+Yoshio Kataoka, Michael~D. Ernst, William~G. Griswold, and David Notkin.
+\newblock Automated support for program refactoring using invariants.
+\newblock In {\em Proc. International Conference on Software Maintenance},
+  pages 736--743. IEEE Computer Society, 2001.
+
+\bibitem[Kerievsky 2004]{kerievsky04refactoring}{$~$}
+Joshua Kerievsky.
+\newblock {\em Refactoring to Patterns}.
+\newblock Addison-Wesley, 2004.
+
 \bibitem[Kleppe {\it et al.}\  2003]{kleppe03mda}{$~$}
 Anneke~G. Kleppe, Jos Warmer, and Wim Bast.
 \newblock {\em MDA Explained: The Model Driven Architecture: Practice and
   Promise}.
 \newblock Addison-Wesley, 2003.
+
+\bibitem[Klint {\it et al.}\  2003]{klint03grammarware}{$~$}
+P.~Klint, R.~L\"{a}mmel, and C.~Verhoef.
+\newblock Towards an engineering discipline for grammarware.
+\newblock {\em {ACM} Transactions on Software Engineering Methodology},
+  14:331--380, 2003.
 
 \bibitem[Kolovos {\it et al.}\  2006]{kolovos06eol}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
@@ -138,16 +295,76 @@ Dimitrios~S. Kolovos.
   for Model Management}.
 \newblock PhD thesis, University of York, United Kingdom, 2009.
 
+\bibitem[Kramer 2001]{kramer01xem}{$~$}
+Diane Kramer.
+\newblock {XEM: XML Evolution Management}.
+\newblock Master's thesis, Worcester Polytechnic Institute, MA, USA, 2001.
+
+\bibitem[L{\"a}mmel 2001]{lammel01grammar_adaptation}{$~$}
+R.~L{\"a}mmel.
+\newblock Grammar adaptation.
+\newblock In {\em Proc. Formal Methods for Increasing Software Productivity
+  (FME), International Symposium of Formal Methods Europe}, volume 2021 of {\em
+  LNCS}, pages 550--570. Springer, 2001.
+
+\bibitem[Lehman 1969]{lehman69programming}{$~$}
+Meir~M. Lehman.
+\newblock The programming process.
+\newblock Technical report, {IBM Res. Rep. RC 2722}, 1969.
+
+\bibitem[Lehman 1978]{lehman78programs}{$~$}
+Meir~M. Lehman.
+\newblock Programs, cities, students - limits to growth?
+\newblock {\em Programming Methodology}, pages 42--62, 1978.
+
+\bibitem[Lehman 1980]{lehman80understanding}{$~$}
+Meir~M. Lehman.
+\newblock On understanding laws, evolution, and conservation in the
+  large-program life cycle.
+\newblock {\em Journal of Systems and Software}, 1:213--221, 1980.
+
+\bibitem[Lehman 1985]{lehman85program}{$~$}
+Meir~M. Lehman.
+\newblock {\em Program evolution: processes of software change}.
+\newblock Academic, 1985.
+
+\bibitem[Lehman 1996]{lehman96laws}{$~$}
+Meir~M. Lehman.
+\newblock Laws of software evolution revisited.
+\newblock In {\em Proc. European Workshop on Software Process Technology},
+  pages 108--124, 1996.
+
 \bibitem[Lerner 2000]{lerner00model}{$~$}
 Barbara~Staudt Lerner.
 \newblock A model for compound type changes encountered in schema evolution.
 \newblock {\em ACM Transactions on Database Systems}, 25(1):83--127, 2000.
+
+\bibitem[McCarthy 1978]{mcarthy78lisp}{$~$}
+John McCarthy.
+\newblock History of {L}isp.
+\newblock {\em History of Programming Languages}, 1:217--223, 1978.
+
+\bibitem[Mens \& Tourw\'{e} 2004]{mens04survey}{$~$}
+Tom Mens and Tom Tourw\'{e}.
+\newblock A survey of software refactoring.
+\newblock {\em {IEEE} Transactions on Software Engineering}, 30(2):126--139,
+  2004.
+
+\bibitem[Mens {\it et al.}\  2007]{mens07modelrefactoring}{$~$}
+Tom Mens, Gabriele Taentzer, and Dirk M\"{u}ller.
+\newblock Challenges in model refactoring.
+\newblock In {\em Proc. Workshop on Object-Oriented Reengineering}, 2007.
 
 \bibitem[Merriam-Webster 2010]{nucleardef}{$~$}
 Merriam-Webster.
 \newblock {Definition of Nuclear Family}.
 \newblock \url{http://www.merriam-webster.com/dictionary/nuclear%20family},
   2010.
+
+\bibitem[Moad 1990]{moad90maintaining}{$~$}
+J~Moad.
+\newblock Maintaining the competitive edge.
+\newblock {\em Datamation}, 36(4):61--66, 1990.
 
 \bibitem[Muller \& Hassenforder 2005]{muller05hutn}{$~$}
 Pierre-Alain Muller and Michel Hassenforder.
@@ -191,10 +408,22 @@ OMG.
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.omg.org/technology/documents/formal/xmi.htm}, 2007.
 
-\bibitem[OMG 2008]{omg}{$~$}
+\bibitem[OMG 2008a]{mof}{$~$}
+OMG.
+\newblock {Meta-Object Facility} [online].
+\newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org/mof},
+  2008.
+
+\bibitem[OMG 2008b]{omg}{$~$}
 OMG.
 \newblock {Object Management Group} home page [online].
 \newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org}, 2008.
+
+\bibitem[Opdyke 1992]{opdyke92refactoring}{$~$}
+William~F. Opdyke.
+\newblock {\em Refactoring Object-Oriented Frameworks}.
+\newblock PhD thesis, University of Illinois at Urbana-Champaign, IL, USA,
+  1992.
 
 \bibitem[openArchitectureWare 2007]{oaw}{$~$}
 openArchitectureWare.
@@ -214,6 +443,24 @@ Terence Parr.
 \newblock {\em The Definitive {ANTLR} Reference: Building Domain-Specific
   Languages}.
 \newblock Pragmatic Programmers, 2007.
+
+\bibitem[Pilgrim {\it et al.}\  2008]{pilgrim08constructing}{$~$}
+Jens von Pilgrim, Bert Vanhooff, Immo Schulz-Gerlach, and Yolande Berbers.
+\newblock Constructing and visualizing transformation chains.
+\newblock In {\em Proc. European Conference on the Model Driven Architecture --
+  Foundations and Applications}, volume 5095 of {\em LNCS}, pages 17--32.
+  Springer, 2008.
+
+\bibitem[Pizka \& J{\"u}rgens 2007]{pizka07automating}{$~$}
+M.~Pizka and E.~J{\"u}rgens.
+\newblock Automating language evolution.
+\newblock In {\em Proc. Joint IEEE/IFIP Symposium on Theoretical Aspects of
+  Software Engineering (TASE)}, pages 305--315. IEEE Computer Society, 2007.
+
+\bibitem[Rising 2001]{rising01designpatterns}{$~$}
+Linda Rising, editor.
+\newblock {\em Design patterns in communications software}.
+\newblock Cambridge University Press, 2001.
 
 \bibitem[Rose {\it et al.}\  2008]{rose08egl}{$~$}
 Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
@@ -250,6 +497,22 @@ Dag~I.K. Sj{\o}berg.
 \newblock Quantifying schema evolution.
 \newblock {\em Information \& Software Technology}, 35(1):35--44, 1993.
 
+\bibitem[Sommerville 2006]{sommerville06software}{$~$}
+Ian Sommerville.
+\newblock {\em Software Engineering}.
+\newblock Addison-Wesley Longman, 2006.
+
+\bibitem[Sprinkle \& Karsai 2004]{sprinkle04domain}{$~$}
+Jonathan Sprinkle and G\'abor Karsai.
+\newblock A domain-specific visual language for domain model evolution.
+\newblock {\em Journal of Visual Languages and Computing}, 15(3-4):291--307,
+  2004.
+
+\bibitem[Sprinkle 2003]{sprinkle03thesis}{$~$}
+Jonathan Sprinkle.
+\newblock {\em Metamodel Driven Model Migration}.
+\newblock PhD thesis, Vanderbilt University, TN, USA, 2003.
+
 \bibitem[Sprinkle 2008]{cicchetti08thesis}{$~$}
 Jonathan Sprinkle.
 \newblock {\em Difference Representation and Conflict Management in
@@ -262,10 +525,33 @@ Dave Steinberg, Frank Budinsky, Marcelo Paternostro, and Ed~Merks.
 \newblock {\em {EMF}: {E}clipse {M}odeling {F}ramework}.
 \newblock Addison-Wesley Professional, 2008.
 
+\bibitem[Su {\it et al.}\  2001]{su01xem}{$~$}
+Hong Su, Diane Kramer, Li~Chen, Kajal~T. Claypool, and Elke~A. Rundensteiner.
+\newblock {XEM}: Managing the evolution of {XML} documents.
+\newblock In {\em Proc. Workshop on Research Issues in Data Engineering}, pages
+  103--110, 2001.
+
 \bibitem[Varr\'{o} \& Balogh 2007]{VIATRA}{$~$}
 D\'{a}niel Varr\'{o} and Andr\'{a}s Balogh.
 \newblock The model transformation language of the {VIATRA2} framework.
 \newblock {\em Science of Computer Programming}, 68(3):187--207, 2007.
+
+\bibitem[Vries \& Roddick 2004]{vries04facilitating}{$~$}
+Denise de~Vries and John~F. Roddick.
+\newblock Facilitating database attribute domain evolution using meso-data.
+\newblock In {\em Proc. Workshop on Evolution and Change in Data Management},
+  pages 429--440, 2004.
+
+\bibitem[W3C 2007a]{xmlschema}{$~$}
+W3C.
+\newblock {W3C XML Schema 1.1 Specification} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.w3.org/XML/Schema}, 2007.
+
+\bibitem[W3C 2007b]{w3c}{$~$}
+W3C.
+\newblock {World Wide Web Consortium} [online].
+\newblock [Accessed 30 June 2008] Available at: \url{http://www.w3.org/}, 2007.
 
 \bibitem[Wachsmuth 2007]{wachsmuth07metamodel}{$~$}
 Guido Wachsmuth.

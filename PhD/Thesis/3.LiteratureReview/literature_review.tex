@@ -5,9 +5,198 @@
 %The literature review chapter will provide a thorough review and critical analysis of software evolution research. We will compare and contrast existing techniques for managing and automating activities relating to software evolution. As well as reviewing techniques that apply to the specific challenges caused by software evolution in the context of MDE, we will also critique literature from related areas, such as database and XML schema evolution; and program and modelling language evolution. This chapter will conclude by providing high-level research objectives in the context of the reviewed literature.
 
 
-\section{Model-Driven Engineering}
+Studies \cite{erlikh00leveraging,moad90maintaining} suggest that the evolution of software can account for as much as 90\% of a development budget. Such figures are sometimes described as uncertain \cite[ch. 21]{sommerville06software}, mainly because terms such as evolution and maintenance are used ambiguously. Nonetheless, there is a corpus of software evolution research, and publications in this area have existed since the 1960s (e.g. \cite{lehman69programming}). Some of the existing research in the areas of software, programming language and modelling language evolution are discussed in this chapter.
 
-\subsection{Tools}
 
-\subsubsection{Epsilon}
-\label{subsubsec:epsilon}
+\section{Software Evolution Theory}
+In this section, two research areas are discussed that relate to program and API evolution: refactoring and design patterns. The former concentrates on improving the structure of existing code, while the latter is more often used when designing software. Both provide a common vocabulary for discussing software design and evolution. There is an abundance of research in these areas, including seminal works by \cite{opdyke92refactoring} and \cite{fowler99refactoring}; and \cite{alexander77pattern} and \cite{gamma95patterns}, respectively.
+
+
+\subsection{Analysis of Software Evolution}
+\cite{lehman80understanding,lehman78programs,lehman69programming} identify several laws of software evolution for \textit{evolutionary-type systems} (\textit{E-type systems}) -- systems that solve problems or implement software in the real world. E-type systems differ from \textit{specification-type systems} (\textit{S-type systems}) where the ``sole criterion of acceptability is correctness in the mathematical sense'' \cite{lehman85program}.
+
+The law of \textit{continuing change} states that ``E-type systems must be continually adapted else they become progressively less satisfactory'' \cite{lehman78programs}. Later, Lehman et al. \cite{lehman96laws} introduce another complementary law, the law of \textit{declining quality}: ``The quality of E-type systems will appear to be declining unless they are rigorously maintained and adapted to operational environment change''. Both laws indicate that the evolution of E-type systems during their effective lifetime is inevitable. 
+
+\cite{sjoberg93quantifying} identifies reasons for software evolution, which include addressing changing requirements, adapting to new technologies, and architectural restructuring. These reasons are examples of three common types of software evolution \cite[ch. 21]{sommerville06software}:
+
+\begin{itemize}
+ \item \textbf{Corrective evolution} takes place when a system exhibiting unintended or faulty behaviour is corrected. Alternatively, corrective evolution may be used to adapt a system to new or changing requirements. 
+ \item \textbf{Adaptive evolution} is employed to make a system compatible with a change to platforms or technologies that underpin its implementation.
+ \item \textbf{Perfective evolution} refers to the process of improving the internal quality of a system, while preserving the behaviour of the system. 
+\end{itemize}
+
+
+\subsection{Refactoring}
+\label{LitReview:SoftwareEvo:Refactoring}
+In \cite{mens04survey}, Mens and Tourw\'{e} report ``an urgent need for techniques that reduce software complexity by incrementally improving the internal software quality.'' Refactoring -- ``the process of changing a software system in such a way that it does not alter the external behaviour of the code yet improves its internal structure'' \cite[pg. xvi]{fowler99refactoring} -- is being applied to resolve this issue. Refactoring plays a significant role in the evolution of software systems -- a recent study of five open-source projects showed that over 80\% of changes were refactorings \cite{dig06apis}.
+
+Typically, refactoring literature concentrates on three primary activities in the refactoring process: \emph{identification} (where should refactoring be applied, and which refactorings should be used?), \emph{verification} (has refactoring preserved behaviour?) and \emph{assessment} (how has refactoring affected other qualities of the system, such as cohesion and efficiency?).
+
+In \cite{fowler99refactoring}, Beck describes an informal means for identifying the need for refactoring, termed \textit{bad smells}: ``structures in the code that suggest (sometimes scream for) the possibility of refactoring.''. Tools and semi-automated approaches have also been devised for refactoring identification, such as Daikon \cite{kataoka01automated}, which detects program invariants that may indicate the possibility for refactoring. Clone analysis tools have been employed for identifying refactorings that eliminate duplication \cite{balazinska00advanced,ducasse99language}. The types of refactoring being performed may vary over different domains. For example, Buck describes a number of refactorings particular to the Ruby on Rails web framework \cite{ror}, such as ``Skinny Controller, Fat Model'' \footnote{Described by Buck in a keynote address to the First International Ruby on Rails Conference (RailsConf), May 2007, Portland, Oregon, United States of America.}.
+
+MOF \cite{mof} provides a standard notation for describing the abstract syntax of metamodels. As MOF re-uses many concepts from UML class diagrams (which are used to describe the structure of object-oriented systems), refactoring can be applied to metamodels defined using MOF. However, no standard means has yet been defined for attaching semantics to modelling language constructs. When a metamodel is defined without a rigorous semantics, refactoring as it is applied to OO code does not seem to be directly applicable. (In particular, drawing parallels to existing approaches for the verification and assessment activities of refactoring seems difficult). Regardless, the author anticipates that refactoring catalogues, such as the one provided by \cite{fowler99refactoring}, are likely to influence the way in which model evolution is recorded, due to the clarity and conciseness of their format. This is discussed further in Section \ref{sec:LitReviewPatterns}.
+
+
+\subsection{Patterns and anti-patterns}
+\label{sec:LitReviewPatterns}
+A \textit{design pattern} identifies a commonly occurring design problem and describes a re-usable solution to that problem. Related design patterns are often combined to form a \textit{pattern catalogue} -- such as for object-oriented programming \cite{gamma95patterns} or enterprise applications \cite{fowler02patterns}. A pattern description comprises at least a name, overview of the problem, and details of a common solution \cite{brown98antipatterns}. Depending on the domain, further information may be included in the pattern description (such as a classification, a description of the pattern's applicability and an example usage).
+
+Design patterns can be thought of as describing objectives for improving the internal quality of a system (perfective software evolution). Kerievsky \cite{kerievsky04refactoring} provides a practical guide that describes how software can be refactored towards design patterns to improve its quality. Studying the way in which experts perform perfective software evolution can lead to devising best practices, sometimes in the form of a pattern catalogue \cite{fowler99refactoring}.
+
+\cite{alexander77pattern} first utilised design patterns when devising a pattern catalogue for town planning. \cite{beck89constructing} later adapted Alexander's ideas for software architecture, by specifying a pattern catalogue for designing user-interfaces. Utilising pattern catalogues allowed the software industry to ``reuse the expertise of experienced developers to repeatedly train the less experienced.'' \cite[pg10]{brown98antipatterns}. \cite[pg xii]{rising01designpatterns} summarises the usefulness of design patterns: ``Patterns help to define a vocabulary for talking about software development and integration challenges; and provide a process for the orderly resolution of these challenges.'' 
+
+Anti-patterns are an alternative literary form for describing patterns of a software architecture \cite{brown98antipatterns}. Rather than describe patterns that have often been observed in successful architectures, they describe those which are present in unsuccessful architectures. Essentially, an anti-pattern is a pattern in an inappropriate context, which describes a problematic solution to a frequently encountered problem. The (anti-)pattern catalogue may include alternative solutions that are known to yield better results (termed ``refactored solutions'' by \cite{brown98antipatterns}). Coplien notes that ``patterns and anti-patterns are complementary'' \cite[pg13]{brown98antipatterns}; both are useful in providing a common vocabulary for discussion of system architectures and in educating less experienced developers.
+
+
+\section{Software Evolution in Practice}
+
+\subsection{Programming Language Evolution}
+Programming language designers often attempt to ensure that legacy programs remain conformant with new language specifications. For example, Cervelle \cite{cervelle06tatoo} highlights that the Java \cite{java} language designers are reluctant to introduce new keywords (as identifiers in legacy programs could then be mistakenly recognised as instances of the new keyword).
+
+Although designers are cautious about changing programming languages, evolution does occur. In this section, two examples of the ways in which programming languages have evolved are discussed. The examples demonstrate scenarios in which evolution can occur. The vocabulary used to describe the scenarios is applicable to evolution of MDE artefacts. Furthermore, MDE sometimes involves the use of general-purpose modelling languages, such as UML \cite{uml212}. The evolution of general-purpose modelling languages may be similar to that of general-purpose programming languages. However, the author does not know of any literature that explores this claim.
+
+\subsubsection{Reduction}
+Mapping language abstractions to executable concepts can be complicated. Therefore, languages are sometimes evolved to simplify the implementation of translators (compilers, interpreters, etc). It seems that this type of evolution is more likely to occur (1) when language design is a linear process (with a reference implementation occurring after design), and (2) in larger languages.
+
+\cite{backus78history} identifies some simplification during FORTRAN's evolution: originally, FORTRAN's \verb|DO| statements were awkward to compile. The semantics of \verb|DO| were simplified such that more efficient object code could be generated from them. Essentially, the simplified \verb|DO| statement allowed linear changes to index statements to be detected (and optimised) by compilers.
+
+Another example of this type of evolution is the removal of the \verb|RELABEL| construct (which facilitated more straightforward indexing into multi-dimensional arrays) from the FORTRAN language specification \cite{backus78history}.
+
+\subsubsection{Revolution}
+Developers often form best practices for using languages. Design patterns are one way in which best practices may be communicated with other developers. Incorporating existing design patterns as language constructs is one approach to specifying a new language (e.g. \cite{bosch98patterns}).
+
+Some features of Lisp were devised by promoting Fortran List Processing Language (FLPL) design patterns to language constructs. For example, \cite{mcarthy78lisp} describes the awkwardness of using FLPL's \verb|IF| construct, and the way in which experienced developers would often prefer to define a function of the form \verb|XIF(P, T, F)| where \verb|T| was executed iff \verb|P| was true, and \verb|F| was executed otherwise. However, such functions had to be used sparingly, as all three arguments would be evaluated due to the way in which FORTRAN executed function calls. McCarthy \cite{mcarthy78lisp} defined a more efficient semantics, wherein \verb|T| (\verb|F|) was only evaluated when  \verb|P| was true (false). As FORTRAN programs could not express these semantics, McCarthy's new construct informed the design of Lisp.
+
+
+\subsection{Schema Evolution}
+\label{LitReview:Schemas}
+This section reviews schema evolution research. Work covering the evolution of XML and database schemata is considered. Both types of schema are used to describe a set of concepts (termed the \textit{universe of discourse} in database literature). Schema designers decide which details of their domain concepts to describe; their schemata provide an abstraction containing only those concepts which are relevant \cite[pg30]{elmasri06database}. As such, schemata in these domains may be thought of as analogous to metamodels -- they provide a means for describing an abstraction over a phenomenon of interest, (i.e. a model, Section \ref{Intro:MDA}). Therefore, approaches to identifying, analysing and performing schema evolution are directly relevant to the evolution of metamodels in MDE. However, the patterns of evolution commonly seen in database systems and with XML may be different to those of metamodels because evolution can be:
+
+\begin{itemize}
+ \item \textbf{Domain-specific}: Patterns of evolution may be applicable only within a particular domain (e.g. normalisation in a relational database).
+ \item \textbf{Language-specific}: The way in which evolution occurs may be influenced by the language (or tool) used to express the change. (For example, some implementations of SQL may not have a \texttt{rename relation} command, so alternative means for renaming a relation must be used).
+\end{itemize}
+
+Many of the published works on schema evolution share a similar method, with the aim of defining a taxonomy of evolutionary operators. Schema maintainers are expected to employ these operators to change their schemata. This approach (elaborated in Section \ref{LitReview:XmlSchemaEvo}) is used heavily in the XML schema evolution community, and was the sole strategy encountered. Similar taxonomies have been defined for schema evolution in relational database systems (e.g. in \cite{banerjee87semantics,edelweiss05temporal}), but other approaches to evolution are also prevalent. In Section \ref{LitReview:RdbsSchemaEvo}, one alternative proposed in \cite{lerner00model} is discussed in depth, along with a summary of other work.
+
+
+\subsubsection{XML Schema Evolution}
+\label{LitReview:XmlSchemaEvo}
+XML provides a specification for defining mark-up languages. XML documents can reference a schema, which provides a description of the ways in which the concepts in the mark-up should relate (i.e. the schema describes the syntax of the XML document). Prior to the definition of the XML Schema specification \cite{xmlschema} by the W3C \cite{w3c}, authors of XML documents could use a specific Document Type Definition (DTD) to describe the syntax of their mark-up language. XML Schemata provide a number of advantages over the DTD specification:
+
+\begin{itemize}
+ \item XML Schemata are defined in XML and may, therefore, be validated against another XML Schema. DTDs are specified in another language entirely, which requires a different parser and different validation tools.
+ \item DTDs provide a means for specifying constraints only on the mark-up language, whereas XML Schema may also specify constraints on the data in an XML document.
+\end{itemize}
+
+Work on the evolution of the structure of XML documents is now discussed. \cite{guerrini05impact} concentrate on changes made to XML Schema, while \cite{kramer01xem} focuses on DTDs.
+
+\cite{guerrini05impact} propose a set of primitive operators for changing XML schemata. They show this set to be both sound (application of an operator always results in a valid schema) and complete (any valid schema can be produced by composing operators). Their classification also details those operators that are `validity-preserving' (i.e. application of the operator produces a schema that does not require its instances to be migrated). Guerrini et al. show that the arguments of an operator can influence whether it is validity-preserving. For example, inserting an element is validity-preserving when inclusion of the element is optional for instances of the schema. In addition to soundness and completeness, minimality is another desirable property in a taxonomy of primitive operators for performing schema evolution \cite{su01xem}. To complement a minimal set of primitives, and to improve the conciseness with which schema evolutions can be specified, Guerrini et al. propose a number of `high-level' operators, which comprise two or more primitive operators.
+
+\cite{kramer01xem} provides another taxonomy of primitives for XML schema evolution. To describe her evolution operators, Kramer utilises a template, which comprises a name, syntax, semantics, preconditions, resulting DTD changes and resulting data changes section for each operator. This style is similar to a pattern catalogue, but Kramer does not provide a context for her operators (i.e. there are no examples that describe when the application of an operator may be useful). Kramer utilises her taxonomy in a repository system, Exemplar, for managing the evolution of XML documents and their schemata. The repository provides an environment in which the variation of XML documents can be managed. However, to be of practical use, Exemplar would benefit from integration with a source code management system (to provide features such as branching, and version merging).
+
+As noted in \cite{pizka05automating}, the approaches described in \cite{kramer01xem,su01xem,guerrini05impact} are complete in the sense that any valid schema can be produced, but do not allow for arbitrary updates of the XML documents in response to schema changes. Hence, none of the approaches discussed in this section ensure that information contained in XML documents is not lost.
+
+
+\subsubsection{Relational Database Schema Evolution}
+\label{LitReview:RdbsSchemaEvo}
+Defining a taxonomy of operators for performing schema updates is also common for supporting relational database schema evolution (e.g. \cite{edelweiss05temporal,banerjee87semantics}). However, \cite{lerner00model} highlights problems that arise when performing data migration after these taxonomies have been used to specify schema evolution:
+
+ \begin{quote}
+ ``There are two major issues involved in schema evolution. The first issue is understanding how a schema has changed. The second issue involves deciding when and how to modify the database to address such concerns as efficiency, availability, and impact on existing code. Most research efforts have been aimed at this second issue and assume a small set of schema changes that are easy to support, such as adding and removing record fields, while requiring the maintainer to provide translation routines for more complicated changes. As a result, progress has been made in developing the backend mechanisms to convert, screen, or version the existing data, but little progress has been made on supporting a rich collection of changes'' \cite{lerner00model}.
+ \end{quote}
+
+Fundamentally, \cite{lerner00model} believes that any taxonomy of operators for schema evolution is too fine-grained to capture the semantics intended by the schema developer, and therefore cannot be used to provide automated migration: \cite{lerner00model} states that existing taxonomies are concerned with the ``editing process rather than the editing result''. Furthermore, Lerner believes that developing such a taxonomy creates a proliferation of operators, increasing the complexity of specifying migration. To demonstrate, Lerner  considers moving a field from one type to another in a schema. This could be expressed using two primitive operators, \verb|delete_field| and \verb|add_field|. However, the semantics of a \verb|delete_field| command likely dictate that the data associated with the field will be lost, making it unsuitable for use when specifying that a type has been moved. The designer of the taxonomy could introduce a \verb|move_field| command to solve this problem, but now the maintainer of the schema needs to understand the difference between the two ways in which moving a type can be specified, and carefully select the correct one. Lerner provides other examples which elucidate this issue (such as introducing a new type by splitting an existing type). Even though \cite{lerner00model} highlights that a fine-grained approach may not be the most suitable for specifying schema evolution,  other potential uses for a taxonomy of evolutionary operators (such as being used as a common vocabulary for discussing the restructuring of a schema) are not discussed.
+
+\cite{lerner00model} proposes an alternative to operator-based schema evolution in which two versions of a schema are compared to infer the schema changes. Using the inferred changes, migration strategies for the affected data can be proposed. \cite{lerner00model} presents algorithms for inferring changes from schemata and performing both automated and guided migration of affected data. By inferring changes, developers maintaining the schema are afforded more flexibility. In particular, they need not use a domain-specific language or editor to change a schema, and can concentrate on the desired result, rather than how best to express the changes to the schema in the small. Furthermore, algorithms for inferring changes have use other than for migration (e.g. for semantically-aware comparison of schemata, similar to that provided by a refactoring-aware \textit{source code management system}, such as \cite{dig07cms}).
+
+In \cite{vries04facilitating}, de Vries and Roddick propose the introduction of an extra layer to the architecture typical of a relational database management system. They demonstrate the way in which the extra layer can be used to perform migration subsequent to a change of an attribute type. The layer contains (mathematical) relations, termed \textit{mesodata}, that describe the way in which an old value (data prior to migration) maps to one or more new values (data subsequent to migration). These mappings are added to the mesodata by the developer performing schema updates, and are used to semi-automate migration. It is not clear how this approach can be applied when schema evolution is not an attribute type change.
+
+In the O2 database \cite{ferrandina95schema}, schema updates are performed using a small domain-specific language. Modification constructs are used to describe the changes to be made to the schema. To perform data migration, O2 provides conversion functions as part of its modification constructs. Conversion functions are either user-defined or default (pre-defined). The pre-defined functions concentrate on providing mappings for attributes whose types are changed (e.g. from a double to an integer; from a set to a list). Additionally, conversion functions may be executed in conjunction with the schema update, or they may be deferred, and executed only when the data is accessed through the updated schema. Ferrandina et al. observe that deferred updates may prevent unnecessary downtime of the database system. Although the approach outlined in \cite{ferrandina95schema} addresses the concern that ``approaches to coping with schema evolution should be concerned with the editing result rather than the editing process'' \cite{lerner00model}, there is no support for some types of evolution such as moving an attribute from one relation to another.
+
+
+\subsection{Grammar Evolution}
+\cite{klint03grammarware} calls for an engineering approach to producing grammarware (grammars and software that depends on grammars, such as parsers and program convertors). The grammarware engineering approach envisaged by Klint et al. is based on best practices and techniques, which they anticipate will be derived from addressing open research challenges. Klint et al. identify seven key questions for grammarware engineering, one of which relates to grammar evolution: ``How does one systematically transform grammatical structure when faced with evolution?'' \cite[pg334]{klint03grammarware}.
+
+Between 2001 and 2005, Ralf L\"{a}mmel, co-author of \cite{klint03grammarware}, and his colleagues (at Vrije Universiteit, Amsterdam) published several important papers on grammar evolution. \cite{lammel01grammar_adaptation} proposes a taxonomy of operators for semi-automatic grammar refactoring. 
+
+TODO: more of Lammel's work
+
+The work of L\"{a}mmel et al. focuses on grammar evolution for refactoring or for \emph{grammar recovery} (corrective evolution in which a deviation from a language reference is removed), but does not address the impact of grammar evolution on corresponding programs or grammarware. For instance, if the XML grammar changes, updates are potentially required to both XML documents and to tools that parse, generate or otherwise manipulate XML.
+
+\cite{pizka07automating} seeks to address three challenges faced in grammarware engineering, one of which is the co-evolution of languages (grammars) and their words (programs). Pizka and Juergens believe that most domain-specific languages will evolve over time and that, without tool support, co-evolution is a complex, time-consuming and error prone task. To this end, \cite{pizka07automating} propose Lever, a language evolution tool. Lever defines and uses operators for changing grammars (and programs) in an approach that is inspired by \cite{lammel01grammar_adaptation}.
+
+Compared to the taxonomy in \cite{lammel01grammar_adaptation}, Lever can manage the evolution of grammars, programs and the co-evolution of grammars and programs, and the taxonomy defined by L\"{a}mmel et al. can only manage grammar evolution. Consequently, Lever sacrifices the formal preservation properties of the taxonomy defined by L\"{a}mmel et al.
+
+
+\subsection{Evolution of MDE Artefacts}
+\label{LitReview:SoftwareEvo:MdeEvo}
+As discussed in Chapter~\ref{Introduction}, the evolution of development artefacts during MDE inhibits the productivity and maintainability of model-driven approaches for constructing software systems. Mitigating the effects of evolution on MDE is an open research topic, to which this thesis contributes.
+
+- TODO: discuss metamodel refactoring (and also model refactoring, in which refactoring patterns can be specified at the metamodel level using, for example, EVL and EWL).
+
+This section discusses literature that explores the evolution of development artefacts used when performing MDE. \cite{deursen07mdse} highlight that evolution in MDE is complicated, because it spans multiple dimensions. In particular, there are three types of development artefact specific to MDE: models, metamodels, and specifications of model management tasks\footnote{Some examples of model management tasks include model-to-model transformation, model-to-text transformation, model validation, model merging and model comparison.}. A change to one type of artefact can affect other artefacts (possibly of a different type). 
+
+This section focuses on the two types of co-evolution discussed in model-driven engineering literature. \emph{Model synchronisation} involves updating a model in response to a change made in another model, usually by executing a model-to-model transformation. \emph{Model-metamodel co-evolution} involves updating a model in response to a change made to a metamodel. This section concludes by reviewing existing techniques for visualising model-to-model transformation and assessing their usefulness for understanding evolution of MDE development artefacts. 
+
+\subsubsection{Model Synchronisation}
+\label{LitReview:ArtefactCoEvo}
+Changes made to MDE development artefacts may require that related artefacts (models, code, documentation) be updated to remain synchronised. These artefacts may be upstream, as well as downstream, when an elaborationist approach is being used. This activity is termed \textit{model synchronisation}.
+
+\cite{mens07modelrefactoring} suggest model refactoring as one means for performing synchronisation. However, ``research in model refactoring is still in its infancy'' \cite{mens07modelrefactoring} limiting its applicability. Mens et al. identify some of the formalisms being used to start investigating the feasibility and scalability of model refactoring. In particular, Mens et al. suggest that meaning-preservation (an objective of refactoring, as discussed in Section \ref{LitReview:SoftwareEvo:Refactoring}) can be checked by evaluating OCL constraints, behavioural models or downstream program code.
+
+Fields related to artefact co-evolution are those concerned with traceability in MDE (e.g. ECMDA Traceability Workshops) and impact analysis (used in modern development IDEs for activities such as incremental background compilation).
+
+\subsubsection{Model-metamodel Co-Evolution}
+\label{LitReview:ModelCoEvo}
+When a metamodel evolves, any instance models may require migration to remain conformant. This activity is termed \textit{model-metamodel co-evolution} and is subsequently referred to as \emph{co-evolution}. Existing approaches to co-evolution are now explored.
+
+\cite{sprinkle04domain} were the first to describe co-evolution as distinct from the more general activity of model-to-model transformation. Sprinkle and Karsai identified the need for approaches that consider the specific requirements of co-evolution. In particular, the phrase ``evolution, not revolution'' was coined in \cite{sprinkle03thesis} to highlight that, during co-evolution, the difference between source and target metamodels is often small. Another key contribution was the way in which \cite{sprinkle04domain} identified migration strategies as either syntactic or semantic (which was discussed in Section \ref{Intro:MigrationProblem}).
+
+The approach to co-evolution outlined in \cite{sprinkle04domain} requires that migration activities are specified by the developer. Instead, \cite{gruschko07towards} suggest inferring co-evolution strategies, based on either a difference model of two versions of the evolving metamodel (direct comparison) or on a list of changes recorded during the evolution of a metamodel (indirect comparison). The primary contribution made in \cite{sprinkle04domain} was the definition of a process for performing co-evolution, shown in Figure \ref{fig:coevoprocess}. One key innovation is the way in which metamodel changes are classified. Gruschko et al. recognise that co-evolution in response to some types of metamodel change can be automated only when guided by a developer.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.6]{3.LiteratureReview/CoEvoProcess.png}
+  \end{center}
+  \caption{Envisaged approach to co-evolution, taken from \cite{gruschko07towards}.}
+  \label{fig:coevoprocess}
+\end{figure}
+
+\cite{wachsmuth07metamodel} classifies metamodel updates, and provides formal definitions of their impact on instance models. Wachsmuth was the first to employ higher-order model transformation\footnote{A model-to-model transformation that consumes or produces a model-to-model transformation is termed a higher-order model transformation.} to generate a model-to-model transformation for performing co-evolution. However, the co-evolution strategies produced by \cite{wachsmuth07metamodel} are not automatically inferred. The most recent work on co-evolution includes a mechanism for automatically inferring co-evolution strategies \cite{cicchetti08automating}.
+
+Automated migration is still an open research challenge. The most promising approaches (described in \cite{wachsmuth07metamodel,cicchetti08automating}) are still in their infancy, and key problems still need to be addressed. For example, as discussed in Section \ref{LitReview:RdbsSchemaEvo}, \cite{lerner00model} highlights that analysis of a difference model can yield more than one feasible set of co-evolution strategies. The approaches discussed in \cite{wachsmuth07metamodel,cicchetti08automating} do not acknowledge this challenge.
+
+Another open challenge is in identifying an appropriate notation for describing co-evolution.  \cite{wachsmuth07metamodel,cicchetti08automating} use higher-order transformations. Although this is a sensible approach, co-evolution specialises model-to-model transformation: co-evolution only occurs in response to metamodel evolution. Therefore, devising a domain-specific language for specifying co-evolution strategies may facilitate increased expressiveness.
+
+Until automated co-evolution is better understood and tools to support it become stable, improving existing technology to better support evolution is necessary. For example, the Eclipse Modelling Framework \cite{emf} cannot load models that no longer conform to their metamodel. This poses a problem for performing co-evolution manually. The author is not aware of any work that seeks to improve existing tooling to better facilitate manual migration.
+
+
+\subsubsection{Visualisation}
+To better understand the effects of evolution on development artefacts, visualising different versions of each artefact may be beneficial. Existing research for comparing text can be enhanced to perform semantic-differencing of models with a textual concrete syntax. For models with a visual concrete syntax, another approach is required. 
+
+\cite{pilgrim08constructing} have implemented a three-dimensional editor for exploring transformation chains (the sequential composition of model-to-model transformations). Their tool enables developers to visualise the way in which model elements are transformed throughout the chain. Figure \ref{fig:transformation-chains} depicts a sample transformation chain visualisation. Each plane represents a model. The links between each plane illustrates the effects of a model-to-model transformation.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.25]{3.LiteratureReview/transformation-chain.png}
+  \end{center}
+  \caption{Visualising a transformation chain \cite{pilgrim08constructing}.}
+  \label{fig:transformation-chains}
+\end{figure}
+
+The visualisation technology described in \cite{pilgrim08constructing} could be used to facilitate exploration of artefact co-evolution.
+
+Furthermore, as co-evolution is often implemented as a specialisation of model-to-model transformation, Pilgrim et al.'s editor could be extended to permit visualisation of co-evolution for models with a visual concrete syntax. In this case, each plane would represent an instance conforming to different versions of the same metamodel.
+
+
+\section{Summary}
+Domain-specific languages underpin the implementation of almost all of the approaches discussed in this chapter. (Lever \cite{pizka07automating}, for example, defines three domain-specific languages for evolving grammars and words, and for co-evolving grammars with programs). Yet the literature does not assess the efficacy of the DSLs, in particular for capturing the patterns common to evolution in their respective domains (databases, XML, grammarware, MDD environments). This is an area of research to which this thesis contributes, particularly in Chapter~\ref{Implementation}.
+
+Most existing approaches to managing software evolution are defined in work that uses a similar method: first, identify and categorise all feasible evolutionary changes. Next, design a taxonomy of operators that capture these changes (or a matching algorithm that detects the application of the changes). Finally, implement a tool that allows the developer to apply the evolutionary operators (or invoke the matching algorithm), and evaluate the tool on existing projects.
+
+Most notably, Digg's work on program refactoring (\cite{dig06apis,dig06automatic,dig06detection,dig07cms}) follows a different method in which the first step analyses existing projects to identify common and feasible evolutionary changes. Identifying changes from existing projects has several benefits compared to the method typically used in managing software evolution, described above. Firstly, further research requirements can be identified from the solutions currently employed by existing projects. Secondly, related work can be more rigorously analysed and compared via application to existing projects. On the other hand, evaluating work produced by identifying changes from existing projects presents a challenge: more data may be required overall, as data used in the analysis should not be used in the evaluation.
+
+As discussed in Section~\ref{sec:research_method}, this thesis follows a research method similar to that of Digg. Existing approaches to co-evolution and model synchronisation are compared using data taken from MDE projects that exhibit some degree of evolutionary change. From this analysis, research requirements are derived, and structures and process for managing evolution are implemented, evaluated, and then related back to the literature discussed in this chapter.

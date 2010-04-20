@@ -10,44 +10,47 @@ A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-You've used 48 entries,
+Warning--I didn't find a database entry for "pizka05automating"
+Warning--can't use both volume and number fields in banerjee87semantics
+You've used 98 entries,
             2472 wiz_defined-function locations,
-            786 strings with 11997 characters,
-and the built_in function-call counts, 17585 in all, are:
-= -- 1744
-> -- 676
-< -- 19
-+ -- 217
-- -- 206
-* -- 1207
-:= -- 2771
-add.period$ -- 155
-call.type$ -- 48
-change.case$ -- 288
-chr.to.int$ -- 43
-cite$ -- 48
-duplicate$ -- 788
-empty$ -- 1474
-format.name$ -- 264
-if$ -- 3748
-int.to.chr$ -- 6
+            1025 strings with 18881 characters,
+and the built_in function-call counts, 37681 in all, are:
+= -- 3808
+> -- 1385
+< -- 41
++ -- 444
+- -- 422
+* -- 2613
+:= -- 5869
+add.period$ -- 316
+call.type$ -- 98
+change.case$ -- 586
+chr.to.int$ -- 89
+cite$ -- 99
+duplicate$ -- 1727
+empty$ -- 3114
+format.name$ -- 548
+if$ -- 8052
+int.to.chr$ -- 10
 int.to.str$ -- 0
-missing$ -- 33
-newline$ -- 243
-num.names$ -- 144
-pop$ -- 363
+missing$ -- 82
+newline$ -- 493
+num.names$ -- 295
+pop$ -- 690
 preamble$ -- 1
-purify$ -- 343
+purify$ -- 701
 quote$ -- 0
-skip$ -- 645
+skip$ -- 1413
 stack$ -- 0
-substring$ -- 715
-swap$ -- 210
-text.length$ -- 19
+substring$ -- 1850
+swap$ -- 485
+text.length$ -- 41
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 364
-warning$ -- 0
-while$ -- 131
-width$ -- 55
-write$ -- 617
+type$ -- 728
+warning$ -- 1
+while$ -- 306
+width$ -- 107
+write$ -- 1267
+(There were 2 warnings)
