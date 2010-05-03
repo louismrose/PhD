@@ -7,11 +7,12 @@
 \contentsline {section}{\numberline {2.1}Modelling}{7}
 \contentsline {subsection}{\numberline {2.1.1}Models}{7}
 \contentsline {subsection}{\numberline {2.1.2}Modelling Languages}{7}
-\contentsline {section}{\numberline {2.2}Model-Driven Engineering}{7}
-\contentsline {subsection}{\numberline {2.2.1}Tools}{7}
-\contentsline {subsubsection}{Epsilon}{7}
-\contentsline {section}{\numberline {2.3}Related Areas}{7}
-\contentsline {section}{\numberline {2.4}Categories of Evolution in MDE}{7}
+\contentsline {section}{\numberline {2.2}Model-Driven Engineering}{8}
+\contentsline {subsection}{\numberline {2.2.1}Tools}{8}
+\contentsline {subsubsection}{Epsilon}{8}
+\contentsline {section}{\numberline {2.3}Related Areas}{8}
+\contentsline {subsection}{\numberline {2.3.1}Grammarware}{8}
+\contentsline {section}{\numberline {2.4}Categories of Evolution in MDE}{8}
 \contentsline {chapter}{\numberline {3}Literature Review}{9}
 \contentsline {section}{\numberline {3.1}Software Evolution Theory}{9}
 \contentsline {subsection}{\numberline {3.1.1}Analysis of Software Evolution}{9}
@@ -26,126 +27,127 @@
 \contentsline {subsubsection}{Relational Database Schema Evolution}{14}
 \contentsline {subsection}{\numberline {3.2.3}Grammar Evolution}{16}
 \contentsline {subsection}{\numberline {3.2.4}Evolution of MDE Artefacts}{17}
-\contentsline {subsubsection}{Model Synchronisation}{17}
-\contentsline {subsubsection}{Model-metamodel Co-Evolution}{17}
-\contentsline {subsubsection}{Visualisation}{19}
-\contentsline {section}{\numberline {3.3}Summary}{19}
-\contentsline {chapter}{\numberline {4}Analysis}{19}
-\contentsline {section}{\numberline {4.1}Locating Data}{20}
-\contentsline {subsection}{\numberline {4.1.1}Requirements}{20}
-\contentsline {subsubsection}{Common requirements}{20}
-\contentsline {subsubsection}{Co-evolution requirements}{20}
-\contentsline {subsubsection}{Synchronisation requirements}{20}
-\contentsline {subsection}{\numberline {4.1.2}Project Selection}{21}
-\contentsline {subsubsection}{GSN}{21}
-\contentsline {subsubsection}{OMG}{21}
-\contentsline {subsubsection}{Zoos}{21}
-\contentsline {subsubsection}{MDT}{22}
-\contentsline {subsubsection}{MODELPLEX}{22}
-\contentsline {subsubsection}{FPTC}{22}
-\contentsline {subsubsection}{xText}{22}
-\contentsline {subsubsection}{GMF}{22}
-\contentsline {subsubsection}{Summary of selection}{23}
-\contentsline {subsection}{\numberline {4.1.3}Other examples}{23}
-\contentsline {subsubsection}{Examples of evolution from object-oriented systems}{23}
-\contentsline {subsubsection}{Research collaborations}{25}
-\contentsline {subsection}{\numberline {4.1.4}Summary}{25}
-\contentsline {section}{\numberline {4.2}Analysing Existing Techniques}{26}
-\contentsline {subsection}{\numberline {4.2.1}Modelling Framework Characteristics Relevant to Co-Evolution}{26}
-\contentsline {subsubsection}{Model-Metamodel Separation}{26}
-\contentsline {subsubsection}{Implicit Conformance}{26}
-\contentsline {subsection}{\numberline {4.2.2}User-Driven Co-Evolution}{27}
-\contentsline {subsubsection}{Scenario}{28}
-\contentsline {subsubsection}{Challenges}{28}
-\contentsline {subsection}{\numberline {4.2.3}Categorisation of Developer-Driven Co-Evolution Techniques}{29}
-\contentsline {subsubsection}{Manual Specification}{29}
-\contentsline {subsubsection}{Operator-based}{29}
-\contentsline {subsubsection}{Metamodel Matching}{31}
-\contentsline {paragraph}{Example}{32}
-\contentsline {paragraph}{Change recording}{33}
-\contentsline {paragraph}{Differencing}{34}
-\contentsline {subsection}{\numberline {4.2.4}Summary}{34}
-\contentsline {section}{\numberline {4.3}Requirements Identification}{35}
-\contentsline {subsection}{\numberline {4.3.1}Explicit conformance checking}{35}
-\contentsline {subsection}{\numberline {4.3.2}User-driven co-evolution}{36}
-\contentsline {subsection}{\numberline {4.3.3}Developer-driven co-evolution}{36}
-\contentsline {section}{\numberline {4.4}Chapter Summary}{37}
-\contentsline {chapter}{\numberline {5}Implementation}{39}
-\contentsline {section}{\numberline {5.1}Metamodel-Independent Syntax}{39}
-\contentsline {subsection}{\numberline {5.1.1}Model Storage Representation}{40}
-\contentsline {subsection}{\numberline {5.1.2}Binding to a generic metamodel}{41}
-\contentsline {subsection}{\numberline {5.1.3}Example}{42}
-\contentsline {subsection}{\numberline {5.1.4}Applications}{43}
-\contentsline {subsubsection}{Automatic Consistency Checking}{43}
-\contentsline {section}{\numberline {5.2}Textual Modelling Notation}{44}
-\contentsline {subsection}{\numberline {5.2.1}Human-Usable Textual Notation}{44}
-\contentsline {subsubsection}{Basic Notation}{45}
-\contentsline {subsubsection}{Keywords and Adjectives}{46}
-\contentsline {subsubsection}{Inter-Package References}{46}
-\contentsline {subsubsection}{Alternative Reference Syntax}{47}
-\contentsline {subsubsection}{Customisation via Configuration}{47}
-\contentsline {subsection}{\numberline {5.2.2}Epsilon HUTN}{47}
-\contentsline {subsubsection}{The Epsilon Platform}{48}
-\contentsline {subsubsection}{Implementation of Epsilon HUTN}{48}
-\contentsline {paragraph}{AST Model to Intermediate Model}{49}
-\contentsline {paragraph}{Intermediate Model Validation}{49}
-\contentsline {paragraph}{Intermediate Model to Target Model}{50}
-\contentsline {subsection}{\numberline {5.2.3}Migration with HUTN}{51}
-\contentsline {subsection}{\numberline {5.2.4}Limitations}{52}
-\contentsline {subsection}{\numberline {5.2.5}Summary}{53}
-\contentsline {section}{\numberline {5.3}Epsilon Flock}{53}
-\contentsline {subsection}{\numberline {5.3.1}Co-Evolution Example}{53}
-\contentsline {subsection}{\numberline {5.3.2}Existing Approaches}{54}
-\contentsline {subsubsection}{Manual Specification with Model-to-Model Transformation}{54}
-\contentsline {subsubsection}{Manual Specification with Ecore2Ecore Mapping}{55}
-\contentsline {subsubsection}{Operator-based Co-evolution with COPE}{56}
-\contentsline {subsection}{\numberline {5.3.3}Analysis}{58}
-\contentsline {subsubsection}{Source-Target Relationship}{58}
-\contentsline {subsubsection}{Model Representation}{58}
-\contentsline {subsection}{\numberline {5.3.4}Implementation}{59}
-\contentsline {subsection}{\numberline {5.3.5}The Epsilon Platform}{59}
-\contentsline {subsection}{\numberline {5.3.6}Flock}{59}
-\contentsline {subsubsection}{Abstract Syntax}{59}
-\contentsline {subsubsection}{Concrete Syntax}{59}
-\contentsline {subsubsection}{Execution Semantics}{60}
-\contentsline {subsubsection}{Conservative Copying}{61}
-\contentsline {subsubsection}{Development and User Tools}{62}
-\contentsline {subsection}{\numberline {5.3.7}Example}{62}
-\contentsline {section}{\numberline {5.4}Chapter Summary}{63}
-\contentsline {chapter}{\numberline {6}Evaluation}{65}
-\contentsline {section}{\numberline {6.1}Evaluation Measures}{65}
-\contentsline {subsection}{\numberline {6.1.1}Exemplar User-Driven Co-Evolution}{65}
-\contentsline {subsubsection}{Co-Evolution Example}{66}
-\contentsline {subsubsection}{Existing Process}{67}
-\contentsline {subsubsection}{Proposed Process}{68}
-\contentsline {subsubsection}{Summary}{68}
-\contentsline {subsection}{\numberline {6.1.2}Collaborative Case Study}{71}
-\contentsline {subsection}{\numberline {6.1.3}Transformation Tools Contest}{71}
-\contentsline {subsection}{\numberline {6.1.4}Quantitive Comparison of Model Migration Languages}{71}
-\contentsline {subsubsection}{Data}{71}
-\contentsline {paragraph}{Co-evolution Examples}{71}
-\contentsline {paragraph}{Selection of Migration Languages}{72}
-\contentsline {subsubsection}{Method}{72}
-\contentsline {subsubsection}{Model Operations}{73}
-\contentsline {paragraph}{Atlas Transformation Language (ATL)}{73}
-\contentsline {paragraph}{Groovy-for-COPE}{73}
-\contentsline {paragraph}{Epsilon Flock}{74}
-\contentsline {subsubsection}{Results}{74}
-\contentsline {paragraph}{Source-Target Relationships}{76}
-\contentsline {paragraph}{Subtyping}{77}
-\contentsline {paragraph}{Side-Effects during Initialisation}{79}
-\contentsline {subsubsection}{Summary}{82}
-\contentsline {section}{\numberline {6.2}Discussion}{82}
-\contentsline {subsection}{\numberline {6.2.1}Threats to validity}{82}
-\contentsline {section}{\numberline {6.3}Dissemination / Reception / ??}{82}
-\contentsline {subsection}{\numberline {6.3.1}Publications}{82}
-\contentsline {subsection}{\numberline {6.3.2}Delivery through Eclipse}{82}
-\contentsline {chapter}{\numberline {7}Conclusion}{83}
-\contentsline {section}{\numberline {7.1}Future Work}{83}
-\contentsline {subsection}{\numberline {7.1.1}Extensions to Epsilon Flock}{83}
-\contentsline {chapter}{\numberline {A}Experiments}{85}
-\contentsline {section}{\numberline {A.1}Metamodel-Independent Change}{85}
-\contentsline {subsection}{\numberline {A.1.1}Correctness}{86}
-\contentsline {subsection}{\numberline {A.1.2}Automation}{86}
-\contentsline {subsection}{\numberline {A.1.3}Customisation}{86}
-\contentsline {subsection}{\numberline {A.1.4}Extensibility}{86}
+\contentsline {subsubsection}{Model Refactoring}{17}
+\contentsline {subsubsection}{Model Synchronisation}{18}
+\contentsline {subsubsection}{Model-metamodel Co-Evolution}{18}
+\contentsline {subsubsection}{Visualisation}{20}
+\contentsline {section}{\numberline {3.3}Summary}{21}
+\contentsline {chapter}{\numberline {4}Analysis}{23}
+\contentsline {section}{\numberline {4.1}Locating Data}{24}
+\contentsline {subsection}{\numberline {4.1.1}Requirements}{24}
+\contentsline {subsubsection}{Common requirements}{24}
+\contentsline {subsubsection}{Co-evolution requirements}{24}
+\contentsline {subsubsection}{Synchronisation requirements}{24}
+\contentsline {subsection}{\numberline {4.1.2}Project Selection}{25}
+\contentsline {subsubsection}{GSN}{25}
+\contentsline {subsubsection}{OMG}{25}
+\contentsline {subsubsection}{Zoos}{25}
+\contentsline {subsubsection}{MDT}{26}
+\contentsline {subsubsection}{MODELPLEX}{26}
+\contentsline {subsubsection}{FPTC}{26}
+\contentsline {subsubsection}{xText}{26}
+\contentsline {subsubsection}{GMF}{26}
+\contentsline {subsubsection}{Summary of selection}{27}
+\contentsline {subsection}{\numberline {4.1.3}Other examples}{27}
+\contentsline {subsubsection}{Examples of evolution from object-oriented systems}{27}
+\contentsline {subsubsection}{Research collaborations}{29}
+\contentsline {subsection}{\numberline {4.1.4}Summary}{29}
+\contentsline {section}{\numberline {4.2}Analysing Existing Techniques}{30}
+\contentsline {subsection}{\numberline {4.2.1}Modelling Framework Characteristics Relevant to Co-Evolution}{30}
+\contentsline {subsubsection}{Model-Metamodel Separation}{30}
+\contentsline {subsubsection}{Implicit Conformance}{30}
+\contentsline {subsection}{\numberline {4.2.2}User-Driven Co-Evolution}{31}
+\contentsline {subsubsection}{Scenario}{32}
+\contentsline {subsubsection}{Challenges}{32}
+\contentsline {subsection}{\numberline {4.2.3}Categorisation of Developer-Driven Co-Evolution Techniques}{33}
+\contentsline {subsubsection}{Manual Specification}{33}
+\contentsline {subsubsection}{Operator-based}{33}
+\contentsline {subsubsection}{Metamodel Matching}{35}
+\contentsline {paragraph}{Example}{36}
+\contentsline {paragraph}{Change recording}{37}
+\contentsline {paragraph}{Differencing}{38}
+\contentsline {subsection}{\numberline {4.2.4}Summary}{39}
+\contentsline {section}{\numberline {4.3}Requirements Identification}{39}
+\contentsline {subsection}{\numberline {4.3.1}Explicit conformance checking}{40}
+\contentsline {subsection}{\numberline {4.3.2}User-driven co-evolution}{40}
+\contentsline {subsection}{\numberline {4.3.3}Developer-driven co-evolution}{40}
+\contentsline {section}{\numberline {4.4}Chapter Summary}{42}
+\contentsline {chapter}{\numberline {5}Implementation}{43}
+\contentsline {section}{\numberline {5.1}Metamodel-Independent Syntax}{43}
+\contentsline {subsection}{\numberline {5.1.1}Model Storage Representation}{44}
+\contentsline {subsection}{\numberline {5.1.2}Binding to a generic metamodel}{45}
+\contentsline {subsection}{\numberline {5.1.3}Example}{46}
+\contentsline {subsection}{\numberline {5.1.4}Applications}{47}
+\contentsline {subsubsection}{Automatic Consistency Checking}{47}
+\contentsline {section}{\numberline {5.2}Textual Modelling Notation}{48}
+\contentsline {subsection}{\numberline {5.2.1}Human-Usable Textual Notation}{48}
+\contentsline {subsubsection}{Basic Notation}{49}
+\contentsline {subsubsection}{Keywords and Adjectives}{50}
+\contentsline {subsubsection}{Inter-Package References}{50}
+\contentsline {subsubsection}{Alternative Reference Syntax}{51}
+\contentsline {subsubsection}{Customisation via Configuration}{51}
+\contentsline {subsection}{\numberline {5.2.2}Epsilon HUTN}{51}
+\contentsline {subsubsection}{The Epsilon Platform}{52}
+\contentsline {subsubsection}{Implementation of Epsilon HUTN}{52}
+\contentsline {paragraph}{AST Model to Intermediate Model}{53}
+\contentsline {paragraph}{Intermediate Model Validation}{53}
+\contentsline {paragraph}{Intermediate Model to Target Model}{54}
+\contentsline {subsection}{\numberline {5.2.3}Migration with HUTN}{55}
+\contentsline {subsection}{\numberline {5.2.4}Limitations}{56}
+\contentsline {subsection}{\numberline {5.2.5}Summary}{57}
+\contentsline {section}{\numberline {5.3}Epsilon Flock}{57}
+\contentsline {subsection}{\numberline {5.3.1}Co-Evolution Example}{57}
+\contentsline {subsection}{\numberline {5.3.2}Existing Approaches}{58}
+\contentsline {subsubsection}{Manual Specification with Model-to-Model Transformation}{58}
+\contentsline {subsubsection}{Manual Specification with Ecore2Ecore Mapping}{59}
+\contentsline {subsubsection}{Operator-based Co-evolution with COPE}{60}
+\contentsline {subsection}{\numberline {5.3.3}Analysis}{62}
+\contentsline {subsubsection}{Source-Target Relationship}{62}
+\contentsline {subsubsection}{Model Representation}{62}
+\contentsline {subsection}{\numberline {5.3.4}Implementation}{63}
+\contentsline {subsection}{\numberline {5.3.5}The Epsilon Platform}{63}
+\contentsline {subsection}{\numberline {5.3.6}Flock}{63}
+\contentsline {subsubsection}{Abstract Syntax}{63}
+\contentsline {subsubsection}{Concrete Syntax}{64}
+\contentsline {subsubsection}{Execution Semantics}{64}
+\contentsline {subsubsection}{Conservative Copying}{65}
+\contentsline {subsubsection}{Development and User Tools}{66}
+\contentsline {subsection}{\numberline {5.3.7}Example}{66}
+\contentsline {section}{\numberline {5.4}Chapter Summary}{67}
+\contentsline {chapter}{\numberline {6}Evaluation}{69}
+\contentsline {section}{\numberline {6.1}Evaluation Measures}{69}
+\contentsline {subsection}{\numberline {6.1.1}Exemplar User-Driven Co-Evolution}{69}
+\contentsline {subsubsection}{Co-Evolution Example}{70}
+\contentsline {subsubsection}{Existing Process}{71}
+\contentsline {subsubsection}{Proposed Process}{72}
+\contentsline {subsubsection}{Summary}{72}
+\contentsline {subsection}{\numberline {6.1.2}Collaborative Case Study}{75}
+\contentsline {subsection}{\numberline {6.1.3}Transformation Tools Contest}{75}
+\contentsline {subsection}{\numberline {6.1.4}Quantitive Comparison of Model Migration Languages}{75}
+\contentsline {subsubsection}{Data}{75}
+\contentsline {paragraph}{Co-evolution Examples}{75}
+\contentsline {paragraph}{Selection of Migration Languages}{76}
+\contentsline {subsubsection}{Method}{76}
+\contentsline {subsubsection}{Model Operations}{77}
+\contentsline {paragraph}{Atlas Transformation Language (ATL)}{77}
+\contentsline {paragraph}{Groovy-for-COPE}{77}
+\contentsline {paragraph}{Epsilon Flock}{78}
+\contentsline {subsubsection}{Results}{78}
+\contentsline {paragraph}{Source-Target Relationships}{80}
+\contentsline {paragraph}{Subtyping}{80}
+\contentsline {paragraph}{Side-Effects during Initialisation}{83}
+\contentsline {subsubsection}{Summary}{85}
+\contentsline {section}{\numberline {6.2}Discussion}{86}
+\contentsline {subsection}{\numberline {6.2.1}Threats to validity}{86}
+\contentsline {section}{\numberline {6.3}Dissemination / Reception / ??}{86}
+\contentsline {subsection}{\numberline {6.3.1}Publications}{86}
+\contentsline {subsection}{\numberline {6.3.2}Delivery through Eclipse}{86}
+\contentsline {chapter}{\numberline {7}Conclusion}{87}
+\contentsline {section}{\numberline {7.1}Future Work}{87}
+\contentsline {subsection}{\numberline {7.1.1}Extensions to Epsilon Flock}{87}
+\contentsline {chapter}{\numberline {A}Experiments}{89}
+\contentsline {section}{\numberline {A.1}Metamodel-Independent Change}{89}
+\contentsline {subsection}{\numberline {A.1.1}Correctness}{90}
+\contentsline {subsection}{\numberline {A.1.2}Automation}{90}
+\contentsline {subsection}{\numberline {A.1.3}Customisation}{90}
+\contentsline {subsection}{\numberline {A.1.4}Extensibility}{90}

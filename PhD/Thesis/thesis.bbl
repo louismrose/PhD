@@ -12,6 +12,12 @@ Christopher Alexander, Sara Ishikawa, and Murray Silverstein.
   Environmental Structure Series)}.
 \newblock Oxford University Press, 1977.
 
+\bibitem[Arendt {\it et al.}\  2009]{arendt09refactoring}{$~$}
+Thorsten Arendt, Florian Mantz, Lars Schneider, and Gabriele Taentzer.
+\newblock Model refactoring in eclipse by {LTK}, {EWL}, and {EMF Refactor}: A
+  case study.
+\newblock In {\em Proc. Joint {MoDSE-MCCM} Workshop}, 2009.
+
 \bibitem[ATLAS 2007]{atl}{$~$}
 ATLAS.
 \newblock {Atlas Transformation Language Project Website} [online].
@@ -42,6 +48,12 @@ Jay Banerjee, Won Kim, Hyoung-Joo Kim, and Henry~F. Korth.
 Kent Beck and Ward Cunningham.
 \newblock Constructing abstractions for object-oriented applications.
 \newblock {\em Journal of Object Oriented Programming}, 2, 1989.
+
+\bibitem[Biermann {\it et al.}\  2006]{biermann06refactoring}{$~$}
+Enrico Biermann, Karsten Ehrig, Christian K{\"o}hler, G{\"u}nter Kuhns,
+  Gabriele Taentzer, and Eduard Weiss.
+\newblock Emf model refactoring based on graph transformation concepts.
+\newblock {\em ECEASST}, 3, 2006.
 
 \bibitem[Bloch 2005]{bloch05apis}{$~$}
 Joshua Bloch.
@@ -159,6 +171,12 @@ Len Erlikh.
 \newblock Leveraging legacy system dollars for e-business.
 \newblock {\em IT Professional}, 2(3):17--23, 2000.
 
+\bibitem[Evans 2004]{evans04domain}{$~$}
+E.~Evans.
+\newblock {\em Domain-Driven Design: Tacking Complexity In the Heart of
+  Software}.
+\newblock Addison-Wesley, Boston, MA, USA, 2004.
+
 \bibitem[Ferrandina {\it et al.}\  1995]{ferrandina95schema}{$~$}
 Fabrizio Ferrandina, Thorsten Meyer, Roberto Zicari, Guy Ferran, and Jo\"{e}lle
   Madec.
@@ -268,6 +286,12 @@ Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock In {\em Proc. {ECMDA-FA}}, volume 4066 of {\em LNCS}, pages 128--142.
   Springer, 2006.
 
+\bibitem[Kolovos {\it et al.}\  2007]{kolovos07ewl}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, Fiona~A.C. Polack, and Louis~M. Rose.
+\newblock Update transformations in the small with the {Epsilon Wizard
+  Language}.
+\newblock {\em Journal of Object Technology}, 6(9):53--69, 2007.
+
 \bibitem[Kolovos {\it et al.}\  2008a]{kolovos08etl}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona Polack.
 \newblock {The Epsilon Transformation Language}.
@@ -300,12 +324,23 @@ Diane Kramer.
 \newblock {XEM: XML Evolution Management}.
 \newblock Master's thesis, Worcester Polytechnic Institute, MA, USA, 2001.
 
+\bibitem[L{\"a}mmel \& Verhoef 2001]{lammel01semiautomatic}{$~$}
+R.~L{\"a}mmel and C.~Verhoef.
+\newblock Semi-automatic grammar recovery.
+\newblock {\em Software - Practice and Experience}, 31(15):1395--1438, 2001.
+
 \bibitem[L{\"a}mmel 2001]{lammel01grammar_adaptation}{$~$}
 R.~L{\"a}mmel.
 \newblock Grammar adaptation.
 \newblock In {\em Proc. Formal Methods for Increasing Software Productivity
   (FME), International Symposium of Formal Methods Europe}, volume 2021 of {\em
   LNCS}, pages 550--570. Springer, 2001.
+
+\bibitem[L{\"a}mmel 2002]{lammel02towards}{$~$}
+R.~L{\"a}mmel.
+\newblock Towards generic refactoring.
+\newblock In {\em Proc. ACM SIGPLAN Workshop on Rule-Based Programming}, pages
+  15--28. ACM, 2002.
 
 \bibitem[Lehman 1969]{lehman69programming}{$~$}
 Meir~M. Lehman.
@@ -339,6 +374,11 @@ Barbara~Staudt Lerner.
 \newblock A model for compound type changes encountered in schema evolution.
 \newblock {\em ACM Transactions on Database Systems}, 25(1):83--127, 2000.
 
+\bibitem[Martin \& Martin 2006]{martin06agile}{$~$}
+R.C. Martin and M.~Martin.
+\newblock {\em Agile Principles, Patterns, and Practices in {C}\#}.
+\newblock Prentice Hall, Upper Saddle River, NJ, USA, 2006.
+
 \bibitem[McCarthy 1978]{mcarthy78lisp}{$~$}
 John McCarthy.
 \newblock History of {L}isp.
@@ -365,6 +405,12 @@ Merriam-Webster.
 J~Moad.
 \newblock Maintaining the competitive edge.
 \newblock {\em Datamation}, 36(4):61--66, 1990.
+
+\bibitem[Moha {\it et al.}\  2009]{moha09refactoring}{$~$}
+Naouel Moha, Vincent Mah{\'e}, Olivier Barais, and Jean-Marc J{\'e}z{\'e}quel.
+\newblock Generic model refactorings.
+\newblock In {\em Proc. MoDELS}, volume 5795 of {\em LNCS}, pages 628--643.
+  Springer, 2009.
 
 \bibitem[Muller \& Hassenforder 2005]{muller05hutn}{$~$}
 Pierre-Alain Muller and Michel Hassenforder.
@@ -456,6 +502,12 @@ M.~Pizka and E.~J{\"u}rgens.
 \newblock Automating language evolution.
 \newblock In {\em Proc. Joint IEEE/IFIP Symposium on Theoretical Aspects of
   Software Engineering (TASE)}, pages 305--315. IEEE Computer Society, 2007.
+
+\bibitem[Porres 2003]{porres03refactoring}{$~$}
+Ivan Porres.
+\newblock Model refactorings as rule-based update transformations.
+\newblock In {\em Proc. UML}, volume 2863 of {\em LNCS}, pages 159--174.
+  Springer, 2003.
 
 \bibitem[Rising 2001]{rising01designpatterns}{$~$}
 Linda Rising, editor.

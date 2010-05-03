@@ -1,0 +1,19 @@
+Claypool, K.T., Jin, J., Rundensteiner, E.A.: SERF: schema evolution through an extensible, re-usable and flexible framework. In: 7th International Conference on Information and Knowledge Management (CIKM), pp. 314–321. ACM Press, New York (1998)
+
+L ̈ammel, R., Wachsmuth, G.: Transformation of SDF syntax definitions in the
+ASF+SDF Meta-Environment. Electronical Notes in Theoretical Computer Sci-
+ence 44 (2001)
+
+L ̈ammel, R.: Coupled software transformations (extended abstract). In: SET ’04:
+1st International Workshop on Software Evolution Transformations, Proceedings,
+pp. 31–35 (2004)
+
+L ̈ammel, R., Verhoef, C.: Semi-automatic grammar recovery. Softw. Pract. Ex- per. 31, 1395–1438 (2001) Metamodel Adaptation and Model Co-adaptation
+
+L ̈ammel, R.: Towards generic refactoring. In: RULE ’02: Proceedings of the 2002 ACM SIGPLAN workshop on Rule-based programming, pp. 15–28. ACM Press, New York (2002)
+
+Heering, J., L ̈ammel, R.: Generic software transformations (extended abstract). In: Proceedings of the Software Transformation Systems Workshop (2004)
+
+L ̈ammel, R., Lohmann, W.: Format evolution. In: Kouloumdjian, J., Mayr, H.C., Erkollar, A. (eds.) RETIS ’01: 7th International Conference on Re-Technologies for Information Systems, Proceedings. vol. 155 of books@ocg.at. OCG, 2001, pp. 113–134 
+
+Lohmann, W., Riedewald, G.: Towards automatical migration of transformation rules after grammar extension. In: CSMR ’03: 7th European Conference on Soft- ware Maintenance and Reengineering, Benevento, Italy, Proceedings, pp. 30–39. IEEE Computer Society Press, Los Alamitos (2003)

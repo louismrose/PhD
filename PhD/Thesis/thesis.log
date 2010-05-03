@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  20 APR 2010 15:09
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  3 MAY 2010 14:37
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -194,14 +194,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [3]
 \openout2 = `3.LiteratureReview/literature_review.aux'.
 
- (./3.LiteratureReview/literature_review.tex [8
+ (./3.LiteratureReview/literature_review.tex
+Chapter 3.
+[9
 
 
 
 
 ]
-Chapter 3.
-[9]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
  (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -232,8 +232,9 @@ Overfull \hbox (6.13838pt too wide) in paragraph at lines 96--97
  []
 
 
-LaTeX Warning: Citation `pizka05automating' on page 14 undefined on input line 
-98.
+Overfull \hbox (9.19505pt too wide) in paragraph at lines 98--99
+[]\OT1/cmr/m/n/10 As noted in [[]], the ap-proaches de-scribed in [[],
+ []
 
 
 Overfull \hbox (53.46371pt too wide) in paragraph at lines 103--104
@@ -241,46 +242,91 @@ Overfull \hbox (53.46371pt too wide) in paragraph at lines 103--104
  [[],
  []
 
-[14] [15]
+[14]
+Underfull \vbox (badness 1270) has occurred while \output is active []
 
-LaTeX Warning: Reference `Introduction' on page 16 undefined on input line 134.
+ [15]
+Overfull \hbox (18.02834pt too wide) in paragraph at lines 125--126
+[]\OT1/cmr/m/n/10 [[]] recog-nises and seeks to ad-dress the chal-lenge of gram
+mar-
+ []
 
+
+Overfull \hbox (14.04698pt too wide) in paragraph at lines 125--126
+\OT1/cmr/m/n/10 com-plex, time-consuming and er-ror prone task. To this end, [[
+]]
+ []
 
 [16]
 
-LaTeX Warning: Reference `Intro:MigrationProblem' on page 17 undefined on input
- line 154.
+LaTeX Warning: Reference `Introduction' on page 17 undefined on input line 132.
+
+
+
+LaTeX Warning: Citation `biermann06refactoring' on page 17 undefined on input l
+ine 143.
+
+
+LaTeX Warning: Citation `porres03refactoring' on page 17 undefined on input lin
+e 143.
+
+
+LaTeX Warning: Citation `moha09refactoring' on page 17 undefined on input line 
+146.
+
+
+LaTeX Warning: Citation `moha09refactoring' on page 17 undefined on input line 
+146.
 
 [17]
-Overfull \hbox (26.09955pt too wide) in paragraph at lines 156--157
+
+LaTeX Warning: Reference `sec:mde_benefits' on page 18 undefined on input line 
+148.
+
+
+LaTeX Warning: Reference `sec:dsls' on page 18 undefined on input line 148.
+
+
+LaTeX Warning: Citation `kolovos07ewl' on page 18 undefined on input line 151.
+
+
+LaTeX Warning: Citation `arendt09refactoring' on page 18 undefined on input lin
+e 153.
+
+
+LaTeX Warning: Reference `LitReview:SoftwareEvo:Refactoring' on page 18 undefin
+ed on input line 165.
+
+
+LaTeX Warning: Reference `Intro:MigrationProblem' on page 18 undefined on input
+ line 173.
+
+
+Overfull \hbox (26.09955pt too wide) in paragraph at lines 175--176
 \OT1/cmr/m/n/10 that mi-gra-tion ac-tiv-i-ties are spec-i-fied by the de-vel-op
 er. In-stead, [[]]
  []
 
-<3.LiteratureReview/CoEvoProcess.png, id=55, 424.58624pt x 340.27126pt>
+[18] <3.LiteratureReview/CoEvoProcess.png, id=55, 424.58624pt x 340.27126pt>
 File: 3.LiteratureReview/CoEvoProcess.png Graphic file (type png)
 
 <use 3.LiteratureReview/CoEvoProcess.png>
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
 []\OT1/cmr/m/n/10 Figure 3.1: En-vis-aged ap-proach to co-evolution, taken from
 
  []
 
-[18 <./3.LiteratureReview/CoEvoProcess.png>]
+[19 <./3.LiteratureReview/CoEvoProcess.png>]
 <3.LiteratureReview/transformation-chain.png, id=61, 1215.54124pt x 1038.88126p
 t>
 File: 3.LiteratureReview/transformation-chain.png Graphic file (type png)
- <use 3.LiteratureReview/transformation-chain.png> [19]
-Overfull \hbox (6.82806pt too wide) in paragraph at lines 200--201
+ <use 3.LiteratureReview/transformation-chain.png> [20 <./3.LiteratureReview/tr
+ansformation-chain.png (PNG copy)>]
+Overfull \hbox (6.82806pt too wide) in paragraph at lines 219--220
 []\OT1/cmr/m/n/10 , [], []]) fol-lows a dif-fer-ent method
  []
 
-
-LaTeX Warning: Reference `sec:research_method' on page 20 undefined on input li
-ne 202.
-
-) [20 <./3.LiteratureReview/transformation-chain.png (PNG copy)>] [21]
-(./thesis.bbl [88
+) [21] (./thesis.bbl [92
 
 
 
@@ -288,21 +334,21 @@ ne 202.
 
 
 
-] [89] [90] [91]
-Underfull \hbox (badness 4927) in paragraph at lines 284--291
+] [93] [94] [95]
+Underfull \hbox (badness 4927) in paragraph at lines 290--297
 []$ []$ \OT1/cmr/m/n/10 Dim-itrios S. Kolovos, Richard F. Paige, and
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 284--291
+Underfull \hbox (badness 2521) in paragraph at lines 290--297
 \OT1/cmr/m/n/10 Louis M. Rose.  Eu-GE-Nia: GMF for mor-tals.  Long talk at
  []
 
-[92]
+[96] [97]
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no  in font cmr10!
- [93] [94] [95]) [96] (./thesis.aux (./1.Introduction/introduction.aux)
+ [98] [99]) [100] (./thesis.aux (./1.Introduction/introduction.aux)
 (./2.Background/background.aux) (./3.LiteratureReview/literature_review.aux)
 (./4.Analysis/analysis.aux) (./5.Implementation/implementation.aux)
 (./6.Evaluation/evaluation.aux) (./7.Conclusion/conclusion.aux)
@@ -312,10 +358,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2807 strings out of 493886
- 40976 string characters out of 1151098
- 98007 words of memory out of 3000000
- 5983 multiletter control sequences out of 10000+50000
+ 2819 strings out of 493886
+ 41193 string characters out of 1151098
+ 98105 words of memory out of 3000000
+ 5995 multiletter control sequences out of 10000+50000
  11360 words of font info for 39 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  26i,8n,32p,1668b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -332,9 +378,9 @@ live/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008
 st/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/
 type1/bluesky/cm/cmti7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/
 courier/ucrr8a.pfb>
-Output written on thesis.pdf (26 pages, 1139812 bytes).
+Output written on thesis.pdf (25 pages, 1142596 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
+ 140 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

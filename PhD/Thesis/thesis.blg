@@ -10,47 +10,54 @@ A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "pizka05automating"
+Repeated entry---line 1043 of file thesis.bib
+ : @inproceedings{lammel01semiautomatic
+ :                                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1065 of file thesis.bib
+ : @inproceedings{lammel02towards
+ :                               ,
+I'm skipping whatever remains of this entry
 Warning--can't use both volume and number fields in banerjee87semantics
-You've used 98 entries,
+You've used 107 entries,
             2472 wiz_defined-function locations,
-            1025 strings with 18881 characters,
-and the built_in function-call counts, 37681 in all, are:
-= -- 3808
-> -- 1385
-< -- 41
-+ -- 444
-- -- 422
-* -- 2613
-:= -- 5869
-add.period$ -- 316
-call.type$ -- 98
-change.case$ -- 586
-chr.to.int$ -- 89
-cite$ -- 99
-duplicate$ -- 1727
-empty$ -- 3114
-format.name$ -- 548
-if$ -- 8052
+            1067 strings with 20138 characters,
+and the built_in function-call counts, 41512 in all, are:
+= -- 4193
+> -- 1541
+< -- 46
++ -- 494
+- -- 472
+* -- 2906
+:= -- 6466
+add.period$ -- 346
+call.type$ -- 107
+change.case$ -- 645
+chr.to.int$ -- 98
+cite$ -- 108
+duplicate$ -- 1902
+empty$ -- 3415
+format.name$ -- 611
+if$ -- 8866
 int.to.chr$ -- 10
 int.to.str$ -- 0
-missing$ -- 82
-newline$ -- 493
-num.names$ -- 295
-pop$ -- 690
+missing$ -- 93
+newline$ -- 538
+num.names$ -- 322
+pop$ -- 750
 preamble$ -- 1
-purify$ -- 701
+purify$ -- 771
 quote$ -- 0
-skip$ -- 1413
+skip$ -- 1549
 stack$ -- 0
-substring$ -- 1850
-swap$ -- 485
-text.length$ -- 41
+substring$ -- 2047
+swap$ -- 536
+text.length$ -- 46
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 728
+type$ -- 792
 warning$ -- 1
-while$ -- 306
-width$ -- 107
-write$ -- 1267
-(There were 2 warnings)
+while$ -- 336
+width$ -- 116
+write$ -- 1388
+(There were 2 error messages)

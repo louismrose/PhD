@@ -27,7 +27,7 @@ The law of \textit{continuing change} states that ``E-type systems must be conti
 
 
 \subsection{Refactoring}
-\label{LitReview:SoftwareEvo:Refactoring}
+\label{subsec:refactoring}
 In \cite{mens04survey}, Mens and Tourw\'{e} report ``an urgent need for techniques that reduce software complexity by incrementally improving the internal software quality.'' Refactoring -- ``the process of changing a software system in such a way that it does not alter the external behaviour of the code yet improves its internal structure'' \cite[pg. xvi]{fowler99refactoring} -- is being applied to resolve this issue. Refactoring plays a significant role in the evolution of software systems -- a recent study of five open-source projects showed that over 80\% of changes were refactorings \cite{dig06apis}.
 
 Typically, refactoring literature concentrates on three primary activities in the refactoring process: \emph{identification} (where should refactoring be applied, and which refactorings should be used?), \emph{verification} (has refactoring preserved behaviour?) and \emph{assessment} (how has refactoring affected other qualities of the system, such as cohesion and efficiency?).
@@ -95,7 +95,7 @@ Work on the evolution of the structure of XML documents is now discussed. \cite{
 
 \cite{kramer01xem} provides another taxonomy of primitives for XML schema evolution. To describe her evolution operators, Kramer utilises a template, which comprises a name, syntax, semantics, preconditions, resulting DTD changes and resulting data changes section for each operator. This style is similar to a pattern catalogue, but Kramer does not provide a context for her operators (i.e. there are no examples that describe when the application of an operator may be useful). Kramer utilises her taxonomy in a repository system, Exemplar, for managing the evolution of XML documents and their schemata. The repository provides an environment in which the variation of XML documents can be managed. However, to be of practical use, Exemplar would benefit from integration with a source code management system (to provide features such as branching, and version merging).
 
-As noted in \cite{pizka05automating}, the approaches described in \cite{kramer01xem,su01xem,guerrini05impact} are complete in the sense that any valid schema can be produced, but do not allow for arbitrary updates of the XML documents in response to schema changes. Hence, none of the approaches discussed in this section ensure that information contained in XML documents is not lost.
+As noted in \cite{pizka07automating}, the approaches described in \cite{kramer01xem,su01xem,guerrini05impact} are complete in the sense that any valid schema can be produced, but do not allow for arbitrary updates of the XML documents in response to schema changes. Hence, none of the approaches discussed in this section ensure that information contained in XML documents is not lost.
 
 
 \subsubsection{Relational Database Schema Evolution}
@@ -118,26 +118,42 @@ In the O2 database \cite{ferrandina95schema}, schema updates are performed using
 \subsection{Grammar Evolution}
 \cite{klint03grammarware} calls for an engineering approach to producing grammarware (grammars and software that depends on grammars, such as parsers and program convertors). The grammarware engineering approach envisaged by Klint et al. is based on best practices and techniques, which they anticipate will be derived from addressing open research challenges. Klint et al. identify seven key questions for grammarware engineering, one of which relates to grammar evolution: ``How does one systematically transform grammatical structure when faced with evolution?'' \cite[pg334]{klint03grammarware}.
 
-Between 2001 and 2005, Ralf L\"{a}mmel, co-author of \cite{klint03grammarware}, and his colleagues (at Vrije Universiteit, Amsterdam) published several important papers on grammar evolution. \cite{lammel01grammar_adaptation} proposes a taxonomy of operators for semi-automatic grammar refactoring. 
+Between 2001 and 2005, Ralf L\"{a}mmel, co-author of \cite{klint03grammarware}, and his colleagues (at Vrije Universiteit, Amsterdam) published several important papers on grammar evolution. \cite{lammel01grammar_adaptation} proposes a taxonomy of operators for semi-automatic grammar refactoring and demonstrates their usefulness in recovering the formal specifications of undocumented grammars (such as VS COBOL II in \cite{lammel01semiautomatic}) and in specifying generic refactorings \cite{lammel02towards}. 
 
-TODO: more of Lammel's work
+The work of L\"{a}mmel et al. focuses on grammar evolution for refactoring or for \emph{grammar recovery} (corrective evolution in which a deviation from a language reference is removed), but does not address the impact of grammar evolution on corresponding programs or grammarware. For instance, when a grammar changes, updates are potentially required to both programs written in using that grammar and to tools that parse, generate or otherwise manipulate programs written in that grammar.
 
-The work of L\"{a}mmel et al. focuses on grammar evolution for refactoring or for \emph{grammar recovery} (corrective evolution in which a deviation from a language reference is removed), but does not address the impact of grammar evolution on corresponding programs or grammarware. For instance, if the XML grammar changes, updates are potentially required to both XML documents and to tools that parse, generate or otherwise manipulate XML.
+\cite{pizka07automating} recognises and seeks to address the challenge of grammar-program co-evolution. Pizka and Juergens believe that most domain-specific languages will evolve over time and that, without tool support, co-evolution is a complex, time-consuming and error prone task. To this end, \cite{pizka07automating} proposes Lever, a language evolution tool. Lever defines and uses operators for changing grammars (and programs) in an approach that is inspired by \cite{lammel01grammar_adaptation}.
 
-\cite{pizka07automating} seeks to address three challenges faced in grammarware engineering, one of which is the co-evolution of languages (grammars) and their words (programs). Pizka and Juergens believe that most domain-specific languages will evolve over time and that, without tool support, co-evolution is a complex, time-consuming and error prone task. To this end, \cite{pizka07automating} propose Lever, a language evolution tool. Lever defines and uses operators for changing grammars (and programs) in an approach that is inspired by \cite{lammel01grammar_adaptation}.
-
-Compared to the taxonomy in \cite{lammel01grammar_adaptation}, Lever can manage the evolution of grammars, programs and the co-evolution of grammars and programs, and the taxonomy defined by L\"{a}mmel et al. can only manage grammar evolution. Consequently, Lever sacrifices the formal preservation properties of the taxonomy defined by L\"{a}mmel et al.
+Compared to the taxonomy in \cite{lammel01grammar_adaptation}, Lever can be used to manage the evolution of grammars, programs and the co-evolution of grammars and programs, and the taxonomy defined by L\"{a}mmel et al. can be used only to manage grammar evolution. However, as a consequence, Lever sacrifices the formal preservation properties of the taxonomy defined by L\"{a}mmel et al.
 
 
 \subsection{Evolution of MDE Artefacts}
 \label{LitReview:SoftwareEvo:MdeEvo}
 As discussed in Chapter~\ref{Introduction}, the evolution of development artefacts during MDE inhibits the productivity and maintainability of model-driven approaches for constructing software systems. Mitigating the effects of evolution on MDE is an open research topic, to which this thesis contributes.
 
-- TODO: discuss metamodel refactoring (and also model refactoring, in which refactoring patterns can be specified at the metamodel level using, for example, EVL and EWL).
-
 This section discusses literature that explores the evolution of development artefacts used when performing MDE. \cite{deursen07mdse} highlight that evolution in MDE is complicated, because it spans multiple dimensions. In particular, there are three types of development artefact specific to MDE: models, metamodels, and specifications of model management tasks\footnote{Some examples of model management tasks include model-to-model transformation, model-to-text transformation, model validation, model merging and model comparison.}. A change to one type of artefact can affect other artefacts (possibly of a different type). 
 
 This section focuses on the two types of co-evolution discussed in model-driven engineering literature. \emph{Model synchronisation} involves updating a model in response to a change made in another model, usually by executing a model-to-model transformation. \emph{Model-metamodel co-evolution} involves updating a model in response to a change made to a metamodel. This section concludes by reviewing existing techniques for visualising model-to-model transformation and assessing their usefulness for understanding evolution of MDE development artefacts. 
+
+\subsubsection{Model Refactoring}
+Refactoring (Section~\ref{subsec:refactoring}) is a perfective software evolution activity in which a system's quality is improved without changing its functional behaviour.  Refactoring has been studied in the context of model-driven engineering because refactoring can be domain-specific (e.g. normalisation in relational databases). Refactoring languages allow metamodel developers to capture commonly occurring refactoring patterns and provide their users with model editors that support automatic refactoring. 
+
+In model transformation terminology, a refactoring is an \emph{endogenous}, \emph{in-place} transformation. Refactorings are applied to an artefact (e.g. model, code) producing a semantically equivalent artefact, and hence an artefact that conforms to the same rules and structures as the original. Because refactorings are used to improve the structure of an existing artefact, the refactored artefact typically replaces the original. Endogenous, in-place transformation languages, suitable for refactoring, are described in \cite{biermann06refactoring,porres03refactoring} (which propose declarative approaches based on graph theory) and in \cite{kolovos07ewl} (which mixes declarative and imperative parts).
+
+There are similarities between the structures defined in the MOF metamodelling language and in object-oriented programming languages. For the latter, refactoring pattern catalogues exist (such as \cite{fowler99refactoring}), which might usefully be applied to modelling languages. \cite{moha09refactoring} provides a notation for specifying refactorings for MOF and UML models and Java programs in a generic (metamodel-independent) manner. Because MOF, UML and the Java language share some concepts (such as classes and attributes), \cite{moha09refactoring} show that refactorings can be shared among them, but only consider 3 of XX the object-oriented refactorings identified in \cite{fowler99refactoring}. To more thoroughly understand metamodel-independent refactoring, a larger number of refactorings and languages should be explored.
+
+Abstraction is a fundamental benefit of MDE (Section~\ref{sec:mde_benefits}). Defining a domain-specific language is one way in which abstraction can be realised for MDE (Section~\ref{sec:dsls}). In addition to tools for defining modelling languages, generating model editors and performing model transformation, model-driven development environments might benefit from mechanisms for defining domain-specific refactorings. 
+
+
+Some approaches can be used for specifying domain-specific refactorings (EMF Refactor, EWL \cite{kolovos07ewl}).
+
+\cite{arendt09refactoring} compare three tools for specifying a refactoring on a UML model. 
+
+
+ 
+
+% Engels et al. envisage a means for specifying model transformations that preserve the semantics of input models in the result models. The approach is demonstrated for transforming from UML to TAAL, a simple object-oriented programming language. 
+
 
 \subsubsection{Model Synchronisation}
 \label{LitReview:ArtefactCoEvo}
