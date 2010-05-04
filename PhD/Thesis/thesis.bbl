@@ -305,6 +305,12 @@ Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock In {\em Proc. Workshop on Rigorous Methods for Software Construction
   and Analysis}, 2008.
 
+\bibitem[Kolovos {\it et al.}\  2008c]{kolovos08scalability}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock Scalability : The holy grail of model driven engineering.
+\newblock In {\em Proc. Workshop on Challenges in Model Driven Engineering},
+  2008.
+
 \bibitem[Kolovos {\it et al.}\  2009]{kolovos09eugenia}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Louis~M. Rose.
 \newblock {EuGENia}: {GMF} for mortals.

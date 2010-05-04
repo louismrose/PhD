@@ -19,45 +19,45 @@ Repeated entry---line 1065 of file thesis.bib
  :                               ,
 I'm skipping whatever remains of this entry
 Warning--can't use both volume and number fields in banerjee87semantics
-You've used 107 entries,
+You've used 108 entries,
             2472 wiz_defined-function locations,
-            1067 strings with 20138 characters,
-and the built_in function-call counts, 41512 in all, are:
-= -- 4193
-> -- 1541
+            1070 strings with 20270 characters,
+and the built_in function-call counts, 41877 in all, are:
+= -- 4225
+> -- 1560
 < -- 46
-+ -- 494
-- -- 472
-* -- 2906
-:= -- 6466
-add.period$ -- 346
-call.type$ -- 107
-change.case$ -- 645
++ -- 501
+- -- 478
+* -- 2932
+:= -- 6524
+add.period$ -- 349
+call.type$ -- 108
+change.case$ -- 652
 chr.to.int$ -- 98
-cite$ -- 108
-duplicate$ -- 1902
-empty$ -- 3415
-format.name$ -- 611
-if$ -- 8866
-int.to.chr$ -- 10
+cite$ -- 109
+duplicate$ -- 1920
+empty$ -- 3447
+format.name$ -- 618
+if$ -- 8942
+int.to.chr$ -- 11
 int.to.str$ -- 0
-missing$ -- 93
-newline$ -- 538
-num.names$ -- 322
-pop$ -- 750
+missing$ -- 94
+newline$ -- 543
+num.names$ -- 325
+pop$ -- 760
 preamble$ -- 1
-purify$ -- 771
+purify$ -- 779
 quote$ -- 0
-skip$ -- 1549
+skip$ -- 1560
 stack$ -- 0
-substring$ -- 2047
-swap$ -- 536
+substring$ -- 2054
+swap$ -- 539
 text.length$ -- 46
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 792
+type$ -- 800
 warning$ -- 1
-while$ -- 336
-width$ -- 116
-write$ -- 1388
+while$ -- 338
+width$ -- 117
+write$ -- 1400
 (There were 2 error messages)

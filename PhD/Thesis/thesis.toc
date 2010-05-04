@@ -28,10 +28,10 @@
 \contentsline {subsection}{\numberline {3.2.3}Grammar Evolution}{16}
 \contentsline {subsection}{\numberline {3.2.4}Evolution of MDE Artefacts}{17}
 \contentsline {subsubsection}{Model Refactoring}{17}
-\contentsline {subsubsection}{Model Synchronisation}{18}
-\contentsline {subsubsection}{Model-metamodel Co-Evolution}{18}
-\contentsline {subsubsection}{Visualisation}{20}
-\contentsline {section}{\numberline {3.3}Summary}{21}
+\contentsline {subsubsection}{Model Synchronisation}{20}
+\contentsline {subsubsection}{Model-metamodel Co-Evolution}{20}
+\contentsline {subsubsection}{Visualisation}{21}
+\contentsline {section}{\numberline {3.3}Summary}{22}
 \contentsline {chapter}{\numberline {4}Analysis}{23}
 \contentsline {section}{\numberline {4.1}Locating Data}{24}
 \contentsline {subsection}{\numberline {4.1.1}Requirements}{24}

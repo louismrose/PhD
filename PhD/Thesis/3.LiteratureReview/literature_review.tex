@@ -142,14 +142,32 @@ In model transformation terminology, a refactoring is an \emph{endogenous}, \emp
 
 There are similarities between the structures defined in the MOF metamodelling language and in object-oriented programming languages. For the latter, refactoring pattern catalogues exist (such as \cite{fowler99refactoring}), which might usefully be applied to modelling languages. \cite{moha09refactoring} provides a notation for specifying refactorings for MOF and UML models and Java programs in a generic (metamodel-independent) manner. Because MOF, UML and the Java language share some concepts (such as classes and attributes), \cite{moha09refactoring} show that refactorings can be shared among them, but only consider 3 of XX the object-oriented refactorings identified in \cite{fowler99refactoring}. To more thoroughly understand metamodel-independent refactoring, a larger number of refactorings and languages should be explored.
 
-Abstraction is a fundamental benefit of MDE (Section~\ref{sec:mde_benefits}). Defining a domain-specific language is one way in which abstraction can be realised for MDE (Section~\ref{sec:dsls}). In addition to tools for defining modelling languages, generating model editors and performing model transformation, model-driven development environments might benefit from mechanisms for defining domain-specific refactorings. 
+Abstraction is a fundamental benefit of MDE (Section~\ref{sec:mde_benefits}). Defining a domain-specific language is one way in which abstraction can be realised for MDE (Section~\ref{sec:dsls}). In addition to tools for defining modelling languages, generating model editors and performing model transformation, model-driven development environments might benefit from mechanisms for defining domain-specific refactorings. In particular, metamodel developers may wish to document common patterns of evolution, perhaps in an executable format.
 
+Eclipse, an extensible development environment, provides a library for building development tools for textual languages, LTK (language toolkit). LTK allows developers to specify -- in Java -- refactorings for their language, which can be invoked via the language editor. LTK makes no assumptions on the way in which languages will be structured, and as such refactoring code that operates on models must interact with the modelling framework directly.
 
-Some approaches can be used for specifying domain-specific refactorings (EMF Refactor, EWL \cite{kolovos07ewl}).
+The Epsilon Wizard Language (EWL) \cite{kolovos07ewl} is a model transformation language tailored for the specification of model refactorings. EWL is built atop Epsilon and its object language (EOL), which can query, update and navigate models represented in a diverse range of modelling technologies (Section~\ref{subsec:epsilon}). Consequently, EWL, unlike LTK, abstracts over modelling frameworks.
 
-\cite{arendt09refactoring} compare three tools for specifying a refactoring on a UML model. 
+\cite{arendt09refactoring} present EMF Refactor, comparing it with EWL and the LTK by specifying a refactoring on a UML model. EMF Refactor, like EWL, contributes a model transformation language tailored for refactoring. In contrast to EWL, EMF Refactor has a visual (rather than textual) syntax, and is based on graph transformation concepts. Figure~\ref{fig:emf_refactor} shows the ``Change attribute to association end'' refactoring for the UML metamodel in EMF Refactor. The left-hand side of the refactoring rule (Figure~\ref{fig:emf_refactor_lhs}) matches a Class whose owned attributes contains a Property whose type has the same name as a Class. The right-hand side of the rule (Figure~\ref{fig:emf_refactor_rhs}) introduces a new Association, whose member end is the Property matched in the left-hand side of the rule. Due to the visual syntax, EMF Refactor might be usable only with modelling technologies based on MOF (which has a graphical concrete-syntax based on UML class diagrams).  From \cite{arendt09refactoring}, it is not clear to what extend EMF Refactor can be used with modelling technologies other than EMF.
 
+\begin{figure}[htbp]
+	\centering
+	\subfigure[Left-hand side matching rule.]
+	{
+	    \label{fig:emf_refactor_lhs}
+	    \includegraphics[width=11cm]{3.LiteratureReview/images/emf_refactor_lhs.pdf}
+	}
+	\subfigure[Right-hand side production rule.]
+	{
+	    \label{fig:emf_refactor_rhs}
+	    \includegraphics[width=12cm]{3.LiteratureReview/images/emf_refactor_rhs.pdf}
+	}
+	\caption{Attribute to association end refactoring in EMF Refactor. Taken from \cite{arendt09refactoring}.}
+\label{fig:emf_refactor}
+\end{figure}
 
+ 
+\cite{kolovos07ewl} and \cite{arendt09refactoring} focus on refactoring a model in isolation. Neither approach can be used to specify \emph{inter-model refactorings}, which impact more than one model at once. The Eclipse Java Development Tools support refactorings of Java code that update many source-code artefacts at once: for example, renaming a class in one source file updates references to that class in other source files. In the context of MDE, support for inter-model refactoring would facilitate a greater degree of model modularisation, regarded by \cite{kolovos08scalability} as a solution to scalability, one of the challenges faced by MDE.
  
 
 % Engels et al. envisage a means for specifying model transformations that preserve the semantics of input models in the result models. The approach is demonstrated for transforming from UML to TAAL, a simple object-oriented programming language. 
@@ -174,7 +192,7 @@ The approach to co-evolution outlined in \cite{sprinkle04domain} requires that m
 \begin{figure}[htbp]
   \begin{center}
     \leavevmode
-    \includegraphics[scale=0.6]{3.LiteratureReview/CoEvoProcess.png}
+    \includegraphics[scale=0.6]{3.LiteratureReview/images/CoEvoProcess.png}
   \end{center}
   \caption{Envisaged approach to co-evolution, taken from \cite{gruschko07towards}.}
   \label{fig:coevoprocess}
@@ -197,7 +215,7 @@ To better understand the effects of evolution on development artefacts, visualis
 \begin{figure}[htbp]
   \begin{center}
     \leavevmode
-    \includegraphics[scale=0.25]{3.LiteratureReview/transformation-chain.png}
+    \includegraphics[scale=0.25]{3.LiteratureReview/images/transformation-chain.png}
   \end{center}
   \caption{Visualising a transformation chain \cite{pilgrim08constructing}.}
   \label{fig:transformation-chains}
