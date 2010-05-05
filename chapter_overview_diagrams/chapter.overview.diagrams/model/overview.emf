@@ -1,0 +1,30 @@
+@namespace(uri="overview", prefix="overview")
+
+@gmf(foo="bar")
+package overview;
+
+@gmf.diagram(onefile="true")
+class Overview {
+   val Chapter[*] chapterrs;
+   val Input[*] inputs;
+   val Output[*] outputs;
+}
+
+@gmf.node(label="name", label.icon="false")
+abstract class NamedElement {
+   attr String[1] name;
+}
+
+@gmf.node(color="166,193,152")
+class Chapter extends NamedElement {  
+}
+
+class Input extends NamedElement {
+   @gmf.link(target.decoration="arrow", width="3")
+   ref Chapter[1] chapteri;
+}
+
+class Output extends NamedElement {
+   @gmf.link(source.decoration="arrow", width="3")
+   ref Chapter[1] chaptero;
+}

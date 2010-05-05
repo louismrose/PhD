@@ -1,0 +1,7 @@
+# Tracing options for the chapter.overview.diagrams.diagram plug-in
+
+# Common issues
+chapter.overview.diagrams.diagram/debug=false
+
+# Visual IDs
+chapter.overview.diagrams.diagram/debug/visualID=false

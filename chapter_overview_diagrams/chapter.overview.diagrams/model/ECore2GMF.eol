@@ -1,0 +1,28 @@
+findLabel('ChapterLabelFigure').font = createFont(20);
+findLabel('InputLabelFigure').font   = createFont(13);
+findLabel('OutputLabelFigure').font  = createFont(13);
+
+findShape('ChapterFigure').layout = createCustomLayout();
+findShape('InputFigure').layout   = createCustomLayout();
+findShape('OutputFigure').layout  = createCustomLayout();
+
+operation findLabel(name : String) : GmfGraph!Label {
+	return GmfGraph!Label.all.selectOne(l|l.name = name);
+}
+
+operation findShape(name : String) : GmfGraph!Label {
+	return GmfGraph!Shape.all.selectOne(s|s.name = name);
+}
+
+operation createFont(height : Integer) : GmfGraph!BasicFont {
+	var font = new GmfGraph!BasicFont;
+	font.faceName = 'Gills Sans';
+	font.height = height;
+	return font;
+}
+
+operation createCustomLayout() : GmfGraph!CustomLayout {
+	var layout = new GmfGraph!CustomLayout;
+	layout.qualifiedClassName = 'overview.diagram.custom.layouts.CentredLayout';
+	return layout;
+}
