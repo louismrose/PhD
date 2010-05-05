@@ -30,20 +30,26 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//NamedElement">
+    <eAnnotations source="gmf.node">
+      <details key="border.width" value="0"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="chapteri" lowerBound="1"
         eType="#//Chapter">
       <eAnnotations source="gmf.link">
         <details key="target.decoration" value="arrow"/>
-        <details key="width" value="3"/>
+        <details key="width" value="2"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//NamedElement">
+    <eAnnotations source="gmf.node">
+      <details key="border.width" value="0"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="chaptero" lowerBound="1"
         eType="#//Chapter">
       <eAnnotations source="gmf.link">
         <details key="source.decoration" value="arrow"/>
-        <details key="width" value="3"/>
+        <details key="width" value="2"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

@@ -105,7 +105,7 @@ public class InputChapteriEditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public InputChapteriFigure() {
-			this.setLineWidth(3);
+			this.setLineWidth(2);
 
 			setTargetDecoration(createTargetDecoration());
 		}

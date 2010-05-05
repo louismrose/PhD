@@ -50,7 +50,8 @@
         name="InputFigure">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
-          name="InputFigure">
+          name="InputFigure"
+          lineWidth="0">
         <layout
             xsi:type="gmfgraph:CustomLayout"
             qualifiedClassName="overview.diagram.custom.layouts.CentredLayout"/>
@@ -80,7 +81,8 @@
         name="OutputFigure">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
-          name="OutputFigure">
+          name="OutputFigure"
+          lineWidth="0">
         <layout
             xsi:type="gmfgraph:CustomLayout"
             qualifiedClassName="overview.diagram.custom.layouts.CentredLayout"/>
@@ -111,7 +113,7 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="InputChapteriFigure"
-          lineWidth="3"
+          lineWidth="2"
           targetDecoration="//@figures.0/@figures.0"/>
     </descriptors>
     <descriptors
@@ -125,7 +127,7 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="OutputChapteroFigure"
-          lineWidth="3"
+          lineWidth="2"
           sourceDecoration="//@figures.0/@figures.1"/>
     </descriptors>
     <descriptors

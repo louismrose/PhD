@@ -105,7 +105,7 @@ public class OutputChapteroEditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public OutputChapteroFigure() {
-			this.setLineWidth(3);
+			this.setLineWidth(2);
 
 			setSourceDecoration(createSourceDecoration());
 		}

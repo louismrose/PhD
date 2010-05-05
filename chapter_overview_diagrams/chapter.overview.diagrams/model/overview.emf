@@ -19,12 +19,14 @@ abstract class NamedElement {
 class Chapter extends NamedElement {  
 }
 
+@gmf.node(border.width="0")
 class Input extends NamedElement {
-   @gmf.link(target.decoration="arrow", width="3")
+   @gmf.link(target.decoration="arrow", width="2")
    ref Chapter[1] chapteri;
 }
 
+@gmf.node(border.width="0")
 class Output extends NamedElement {
-   @gmf.link(source.decoration="arrow", width="3")
+   @gmf.link(source.decoration="arrow", width="2")
    ref Chapter[1] chaptero;
 }
