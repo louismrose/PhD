@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  4 MAY 2010 15:21
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  17 MAY 2010 14:05
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -196,134 +196,152 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  (./3.LiteratureReview/literature_review.tex
 Chapter 3.
-[9
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 18.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 18.
+ [9
 
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
- (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
-
-Overfull \hbox (30.02257pt too wide) in paragraph at lines 35--36
+Overfull \hbox (30.02257pt too wide) in paragraph at lines 31--32
 \OT1/cmr/m/n/10 ing refac-tor-ings that elim-i-nate du-pli-ca-tion [[], []].
  []
 
-[10] [11]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 61.
+[10]
+Overfull \hbox (34.19516pt too wide) in paragraph at lines 51--52
+\OT1/cmr/m/n/10 ingly trace-abil-ity is used for arte-facts other than re-quire
+-ments [[]].
+ []
+
+[11]
+<3.LiteratureReview/images/traceability_links.pdf, id=31, 354.98764pt x 291.285
+14pt>
+File: 3.LiteratureReview/images/traceability_links.pdf Graphic file (type pdf)
+ <use 3.LiteratureReview/images/traceability_links.pdf> [12 <./3.LiteratureRevi
+ew/images/traceability_links.pdf>]
+Overfull \hbox (25.47455pt too wide) in paragraph at lines 81--82
+\OT1/cmr/m/n/10 con-tinue to con-form to new lan-guage spec-i-fi-ca-tions. For 
+ex-am-ple, [[]]
+ []
+
+[13]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 88.
  (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-
-LaTeX Warning: Reference `Intro:MDA' on page 12 undefined on input line 73.
-
-
-Underfull \vbox (badness 2707) has occurred while \output is active []
-
- [12]
-[13]
-Overfull \hbox (6.13838pt too wide) in paragraph at lines 96--97
+) [14]
+Overfull \hbox (6.13838pt too wide) in paragraph at lines 123--124
 \OT1/cmr/m/n/10 which com-prises a name, syn-tax, se-man-tics, pre-con-di-tions
 , re-sult-ing DTD changes
  []
 
-
-Overfull \hbox (9.19505pt too wide) in paragraph at lines 98--99
+[15]
+Overfull \hbox (9.19505pt too wide) in paragraph at lines 125--126
 []\OT1/cmr/m/n/10 As noted in [[]], the ap-proaches de-scribed in [[],
  []
 
 
-Overfull \hbox (53.46371pt too wide) in paragraph at lines 103--104
+Overfull \hbox (53.46371pt too wide) in paragraph at lines 130--131
 \OT1/cmr/m/n/10 for sup-port-ing re-la-tional database schema evo-lu-tion (e.g.
  [[],
  []
 
-[14]
-Underfull \vbox (badness 1270) has occurred while \output is active []
-
- [15]
-Overfull \hbox (18.02834pt too wide) in paragraph at lines 125--126
+[16] [17]
+Overfull \hbox (18.02834pt too wide) in paragraph at lines 152--153
 []\OT1/cmr/m/n/10 [[]] recog-nises and seeks to ad-dress the chal-lenge of gram
 mar-
  []
 
 
-Overfull \hbox (14.04698pt too wide) in paragraph at lines 125--126
+Overfull \hbox (14.04698pt too wide) in paragraph at lines 152--153
 \OT1/cmr/m/n/10 com-plex, time-consuming and er-ror prone task. To this end, [[
 ]]
  []
 
-[16]
-
-LaTeX Warning: Reference `Introduction' on page 17 undefined on input line 132.
-
-
-[17]
-
-LaTeX Warning: Reference `sec:mde_benefits' on page 18 undefined on input line 
-145.
-
-
-LaTeX Warning: Reference `sec:dsls' on page 18 undefined on input line 145.
-
-
-<3.LiteratureReview/images/emf_refactor_lhs.pdf, id=51, 298.83914pt x 92.4245pt
+[18] [19]
+<3.LiteratureReview/images/emf_refactor_lhs.pdf, id=97, 298.83914pt x 92.4245pt
 >
 File: 3.LiteratureReview/images/emf_refactor_lhs.pdf Graphic file (type pdf)
  <use 3.LiteratureReview/images/emf_refactor_lhs.pdf>
-<3.LiteratureReview/images/emf_refactor_rhs.pdf, id=52, 296.52852pt x 173.29593
+<3.LiteratureReview/images/emf_refactor_rhs.pdf, id=98, 296.52852pt x 173.29593
 pt>
 File: 3.LiteratureReview/images/emf_refactor_rhs.pdf Graphic file (type pdf)
  <use 3.LiteratureReview/images/emf_refactor_rhs.pdf>
-Overfull \hbox (3.09972pt too wide) in paragraph at lines 159--165
+Overfull \hbox (3.09972pt too wide) in paragraph at lines 186--192
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-[19 <./3.LiteratureReview/images/emf_refactor_lhs.pdf> <./3.LiteratureReview/im
-ages/emf_refactor_rhs.pdf>]
+ [20 <./3.LiteratureReview/images/emf_refactor_lhs.pdf> <./3.LiteratureReview/i
+mages/emf_refactor_rhs.pdf>]
+<3.LiteratureReview/images/retransformation.pdf, id=181, 156.30023pt x 149.3706
+5pt>
+File: 3.LiteratureReview/images/retransformation.pdf Graphic file (type pdf)
+ <use 3.LiteratureReview/images/retransformation.pdf>
+<3.LiteratureReview/images/live_transformation.pdf, id=182, 160.91989pt x 149.3
+7065pt>
+File: 3.LiteratureReview/images/live_transformation.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `LitReview:SoftwareEvo:Refactoring' on page 20 undefin
-ed on input line 180.
+ <use 3.LiteratureReview/images/live_transformation.pdf>
+Underfull \hbox (badness 2856) in paragraph at lines 227--227
+[]\OT1/cmr/m/n/10 Figure 3.3: Ap-proaches to in-cre-men-tal trans-for-ma-tion. 
+Taken from
+ []
+
+[21]
+Overfull \hbox (13.84492pt too wide) in paragraph at lines 235--236
+\OT1/cmr/m/n/10 refac-tor-ing func-tion-al-ity of the Eclipse Java De-vel-op-me
+nt Tools [[]]. 
+ []
 
 
-LaTeX Warning: Reference `Intro:MigrationProblem' on page 20 undefined on input
- line 188.
+LaTeX Warning: Citation `olsen07traceability' on page 22 undefined on input lin
+e 237.
 
 
-Overfull \hbox (26.09955pt too wide) in paragraph at lines 190--191
+LaTeX Warning: Citation `olsen07traceability' on page 22 undefined on input lin
+e 237.
+
+[22 <./3.LiteratureReview/images/retransformation.pdf> <./3.LiteratureReview/im
+ages/live_transformation.pdf>]
+Overfull \hbox (26.19218pt too wide) in paragraph at lines 254--255
+\OT1/cmr/m/n/10 syn-tax can-not per-form mi-gra-tion in the face of ad-di-tive 
+changes [[]].
+ []
+
+[23]
+Overfull \hbox (26.09955pt too wide) in paragraph at lines 256--257
 \OT1/cmr/m/n/10 that mi-gra-tion ac-tiv-i-ties are spec-i-fied by the de-vel-op
 er. In-stead, [[]]
  []
 
 
-<3.LiteratureReview/images/CoEvoProcess.png, id=139, 424.58624pt x 340.27126pt>
+<3.LiteratureReview/images/CoEvoProcess.png, id=266, 424.58624pt x 340.27126pt>
 File: 3.LiteratureReview/images/CoEvoProcess.png Graphic file (type png)
 <use 3.LiteratureReview/images/CoEvoProcess.png>
-Underfull \hbox (badness 10000) in paragraph at lines 197--197
-[]\OT1/cmr/m/n/10 Figure 3.2: En-vis-aged ap-proach to co-evolution, taken from
+Underfull \hbox (badness 10000) in paragraph at lines 263--263
+[]\OT1/cmr/m/n/10 Figure 3.4: En-vis-aged ap-proach to co-evolution, taken from
 
  []
 
-[20] [21 <./3.LiteratureReview/images/CoEvoProcess.png>]
-<3.LiteratureReview/images/transformation-chain.png, id=148, 1215.54124pt x 103
+[24 <./3.LiteratureReview/images/CoEvoProcess.png>]
+<3.LiteratureReview/images/transformation-chain.png, id=273, 1215.54124pt x 103
 8.88126pt>
 File: 3.LiteratureReview/images/transformation-chain.png Graphic file (type png
 )
- <use 3.LiteratureReview/images/transformation-chain.png> [22 <./3.LiteratureRe
-view/images/transformation-chain.png (PNG copy)>]
-Overfull \hbox (6.82806pt too wide) in paragraph at lines 234--235
+ <use 3.LiteratureReview/images/transformation-chain.png> [25]
+Overfull \hbox (6.82806pt too wide) in paragraph at lines 301--302
 []\OT1/cmr/m/n/10 , [], []]) fol-lows a dif-fer-ent method
  []
 
-) [23] (./thesis.bbl [92
+) [26 <./3.LiteratureReview/images/transformation-chain.png (PNG copy)>]
+(./thesis.bbl [96
 
 
 
@@ -331,60 +349,65 @@ Overfull \hbox (6.82806pt too wide) in paragraph at lines 234--235
 
 
 
-] [93] [94] [95] [96]
-Underfull \hbox (badness 4927) in paragraph at lines 314--321
+] [97] [98] [99] [100]
+Underfull \hbox (badness 4927) in paragraph at lines 368--375
 []$ []$ \OT1/cmr/m/n/10 Dim-itrios S. Kolovos, Richard F. Paige, and
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 314--321
+Underfull \hbox (badness 2521) in paragraph at lines 368--375
 \OT1/cmr/m/n/10 Louis M. Rose.  Eu-GE-Nia: GMF for mor-tals.  Long talk at
  []
 
-[97]
+[101] [102]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
- [98] [99]) [100] (./thesis.aux (./1.Introduction/introduction.aux)
-(./2.Background/background.aux) (./3.LiteratureReview/literature_review.aux)
-(./4.Analysis/analysis.aux) (./5.Implementation/implementation.aux)
-(./6.Evaluation/evaluation.aux) (./7.Conclusion/conclusion.aux)
-(./A.1.Experiments/experiments.aux))
+ [103] [104] [105]) [106] (./thesis.aux
+(./1.Introduction/introduction.aux) (./2.Background/background.aux)
+(./3.LiteratureReview/literature_review.aux) (./4.Analysis/analysis.aux)
+(./5.Implementation/implementation.aux) (./6.Evaluation/evaluation.aux)
+(./7.Conclusion/conclusion.aux) (./A.1.Experiments/experiments.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 2837 strings out of 493886
- 41865 string characters out of 1151098
- 98297 words of memory out of 3000000
- 6010 multiletter control sequences out of 10000+50000
+ 2877 strings out of 493886
+ 43078 string characters out of 1151098
+ 98788 words of memory out of 3000000
+ 6047 multiletter control sequences out of 10000+50000
  11360 words of font info for 39 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  26i,8n,32p,1668b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
 08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts
-/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blu
-esky/cm/cmr17.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
-r6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></us
-r/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/tex
-live/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008
-/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-di
-st/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/
-type1/bluesky/cm/cmti7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/publ
-ic/cm-super/sfbx0900.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public
-/cm-super/sfbx1000.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/c
-m-super/sfbx1200.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-
-super/sfrm0900.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-su
-per/sfrm1000.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-supe
-r/sfti1000.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/
-sftt1000.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a
-.pfb>
-Output written on thesis.pdf (27 pages, 2289622 bytes).
+dist/fonts/type1/bluesky/cm/cmbx9.pfb></usr/local/texlive/2008/texmf-dist/fonts
+/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bl
+uesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/c
+mr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb><
+/usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/
+texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/200
+8/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dis
+t/fonts/type1/bluesky/cm/cmr9.pfb></usr/local/texlive/2008/texmf-dist/fonts/typ
+e1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesk
+y/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti
+10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti7.pfb></u
+sr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr
+/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/l
+ocal/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/loc
+al/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local
+/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/t
+exlive/2008/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/tex
+live/2008/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texli
+ve/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on thesis.pdf (32 pages, 2624761 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
+ 366 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

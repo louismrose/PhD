@@ -2,21 +2,16 @@
 
 \chapter{Literature Review}
 \label{LiteratureReview}
-%The literature review chapter will provide a thorough review and critical analysis of software evolution research. We will compare and contrast existing techniques for managing and automating activities relating to software evolution. As well as reviewing techniques that apply to the specific challenges caused by software evolution in the context of MDE, we will also critique literature from related areas, such as database and XML schema evolution; and program and modelling language evolution. This chapter will conclude by providing high-level research objectives in the context of the reviewed literature.
-
-
-Studies \cite{erlikh00leveraging,moad90maintaining} suggest that the evolution of software can account for as much as 90\% of a development budget. Such figures are sometimes described as uncertain \cite[ch. 21]{sommerville06software}, mainly because terms such as evolution and maintenance are used ambiguously. Nonetheless, there is a corpus of software evolution research, and publications in this area have existed since the 1960s (e.g. \cite{lehman69programming}). Some of the existing research in the areas of software, programming language and modelling language evolution are discussed in this chapter.
+This chapter provides a review and critical analysis of existing work on software evolution and identifies potential research directions. The principles of software evolution are discussed in Section~\ref{sec:software_evolution_theory}, while Section~\ref{sec:software_evolution_practice} reviews the ways in which evolution is identified, analysed and managed in a range of fields, including relational databases, programming languages, and model-driven development environments. From the reviewed literature, Section~\ref{sec:literature_review_summary} synthesises open research challenges, highlighting those to which this thesis contributes.
 
 
 \section{Software Evolution Theory}
-In this section, two research areas are discussed that relate to program and API evolution: refactoring and design patterns. The former concentrates on improving the structure of existing code, while the latter is more often used when designing software. Both provide a common vocabulary for discussing software design and evolution. There is an abundance of research in these areas, including seminal works by \cite{opdyke92refactoring} and \cite{fowler99refactoring}; and \cite{alexander77pattern} and \cite{gamma95patterns}, respectively.
+\label{sec:software_evolution_theory}
+Studies \cite{erlikh00leveraging,moad90maintaining} suggest that the evolution of software can account for as much as 90\% of a development budget. Such figures are sometimes described as uncertain \cite[ch. 21]{sommerville06software}, primarily because the term evolution is not used consistently. Nonetheless, there is a corpus of software evolution research, and publications in this area have existed since the 1960s (e.g. \cite{lehman69programming}).
 
+The remainder of this section introduces software evolution terminology and discusses two research areas that relate to software evolution: refactoring and design patterns. The former concentrates on improving the structure of existing systems, while the latter is more often used when designing software. Both areas provide a common vocabulary for discussing software design and evolution. There is an abundance of research in these areas, including seminal works on refactoring by \cite{opdyke92refactoring} and \cite{fowler99refactoring}; and on design patterns by \cite{alexander77pattern} and \cite{gamma95patterns}.
 
-\subsection{Analysis of Software Evolution}
-\cite{lehman80understanding,lehman78programs,lehman69programming} identify several laws of software evolution for \textit{evolutionary-type systems} (\textit{E-type systems}) -- systems that solve problems or implement software in the real world. E-type systems differ from \textit{specification-type systems} (\textit{S-type systems}) where the ``sole criterion of acceptability is correctness in the mathematical sense'' \cite{lehman85program}.
-
-The law of \textit{continuing change} states that ``E-type systems must be continually adapted else they become progressively less satisfactory'' \cite{lehman78programs}. Later, Lehman et al. \cite{lehman96laws} introduce another complementary law, the law of \textit{declining quality}: ``The quality of E-type systems will appear to be declining unless they are rigorously maintained and adapted to operational environment change''. Both laws indicate that the evolution of E-type systems during their effective lifetime is inevitable. 
-
+\subsection{Categories of Software Evolution}
 \cite{sjoberg93quantifying} identifies reasons for software evolution, which include addressing changing requirements, adapting to new technologies, and architectural restructuring. These reasons are examples of three common types of software evolution \cite[ch. 21]{sommerville06software}:
 
 \begin{itemize}
@@ -25,6 +20,7 @@ The law of \textit{continuing change} states that ``E-type systems must be conti
  \item \textbf{Perfective evolution} refers to the process of improving the internal quality of a system, while preserving the behaviour of the system. 
 \end{itemize}
 
+The remainder of this section adopts this categorisation for discussing software evolution literature. Refactoring, for instance, is one way in which perfective evolution can be realised.
 
 \subsection{Refactoring}
 \label{subsec:refactoring}
@@ -48,19 +44,50 @@ Design patterns can be thought of as describing objectives for improving the int
 Anti-patterns are an alternative literary form for describing patterns of a software architecture \cite{brown98antipatterns}. Rather than describe patterns that have often been observed in successful architectures, they describe those which are present in unsuccessful architectures. Essentially, an anti-pattern is a pattern in an inappropriate context, which describes a problematic solution to a frequently encountered problem. The (anti-)pattern catalogue may include alternative solutions that are known to yield better results (termed ``refactored solutions'' by \cite{brown98antipatterns}). Coplien notes that ``patterns and anti-patterns are complementary'' \cite[pg13]{brown98antipatterns}; both are useful in providing a common vocabulary for discussion of system architectures and in educating less experienced developers.
 
 
+\subsection{Traceability}
+\label{subsec:traceability}
+A software development artefact rarely evolves in isolation. Changes to one artefact cause and are caused by changes to other artefacts (e.g. object code is recompiled when source code changes, source code and documentation are updated when requirements change). Hence, traceability -- the ability to describe and follow the life of software artefacts \cite{winkler09survey,lago09scoped} -- is closely related to and facilitates software evolution. This section reviews and analyses traceability literature, focussing on the relationship between traceability and software evolution.
+
+Historically, traceability is a branch of requirements engineering, but increasingly traceability is used for artefacts other than requirements \cite{winkler09survey}. Because MDD prescribes automated transformation between models, traceability is also researched in the context of MDD. The remainder of this section discusses traceability principles, while Section~\ref{subsec:mde_evo} reviews the traceability literature that relates to MDD.
+
+Traceability is facilitated by \emph{traceability links}, which document the dependencies, causalities and influences between artefacts. Traceability links are established by hand and by automated analysis of artefacts. In MDD environments, some traceability links can be automatically inferred because the relationships between some types of artefact are specified in a structured manner (for example, as a model-to-model transformation).
+
+Traceability links are defined between artefacts at the same level of abstraction (horizontal links) and at different levels of abstraction (vertical links). Uni-directional traceability links are navigated either \emph{forwards} (away from the dependent artefact) or \emph{backwards} (toward the dependent artefact). Figure~\ref{fig:traceability_links} summaries these categories of traceability link.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=10cm]{3.LiteratureReview/images/traceability_links.pdf}
+  \end{center}
+  \caption{Categories of traceability link \cite{winkler09survey}.}
+  \label{fig:traceability_links}
+\end{figure}
+
+The traceability literature uses inconsistent terminology. This thesis adopts the same terminology as \cite{winkler09survey}: \emph{traceability} is the ability to describe and follow the life of software artefacts; \emph{traceability links} are the relationships between software artefacts.
+
+Traceability supports software evolution activities, such as impact analysis (discovering and reasoning about the effects of a change) and change propagation (updating impacted artefacts following a change to an artefact). Moreover, automated software evolution is facilitated by programmatic access to traceability links.
+
+Current approaches for traceability-supported software evolution use \emph{triggers} and \emph{events}. Each approach proposes mechanisms for detecting triggers (changes to artefacts) and for notifying dependent artefacts of events (the details of a change). Existing approaches vary in the extent to which they can automatically update dependent artefacts. The approaches described in \cite{chen99consistency,cleland03eventbased} report inconsistencies to support manual updates, while \cite{aizenbud05operational,costa2007rtmdd} propose reactive approaches for guided or fully automatic updates. Section~\ref{subsubsec:model_synch} provides a more thorough discussion and critical analysis of event-based approaches for impact analysis and change propagation in the context of model-driven development.
+
+To remain accurate and hence useful, traceability links must be updated as a system evolves. Although most existing approaches to traceability are ``not well suited to the evolution of [traceability] artefacts'' \cite[pg24]{winkler09survey}, there is some work in this area. For example, \cite{mader08rule} describe a development environment that records changes to artefacts, comparing the changes to a catalogue of built-in patterns. Each pattern provides an executable specification for updating traceability links. As discussed in Chapter~\ref{Analysis}, pattern-based approaches make assumptions on the development environment and are effective only when they provide a rich yet navigable catalogue of patterns. 
+
+Software evolution and traceability are entangled concerns. Traceability facilitates software evolution activities such as impact analysis and change propagation. Traceability is made possible with consistent and accurate traceability links. Software evolution can affect the relationships between artefacts (i.e. the traceability links) and hence software evolution techniques are applied to ensure that traceability links remain consistent and accurate.
+
 \section{Software Evolution in Practice}
+\label{sec:software_evolution_practice}
+Using the principles of software evolution described above, this section examines the ways in which evolution is identified, managed and analysed in a variety of settings, including programming language, schema and model-driven development. 
 
 \subsection{Programming Language Evolution}
-Programming language designers often attempt to ensure that legacy programs remain conformant with new language specifications. For example, Cervelle \cite{cervelle06tatoo} highlights that the Java \cite{java} language designers are reluctant to introduce new keywords (as identifiers in legacy programs could then be mistakenly recognised as instances of the new keyword).
+Programming language designers often attempt to ensure that legacy programs continue to conform to new language specifications. For example, \cite{cervelle06tatoo} highlights that the Java \cite{java} language designers are reluctant to introduce new keywords (as identifiers in legacy programs could then be mistakenly recognised as instances of the new keyword).
 
-Although designers are cautious about changing programming languages, evolution does occur. In this section, two examples of the ways in which programming languages have evolved are discussed. The examples demonstrate scenarios in which evolution can occur. The vocabulary used to describe the scenarios is applicable to evolution of MDE artefacts. Furthermore, MDE sometimes involves the use of general-purpose modelling languages, such as UML \cite{uml212}. The evolution of general-purpose modelling languages may be similar to that of general-purpose programming languages. However, the author does not know of any literature that explores this claim.
+Although designers are cautious about changing programming languages, evolution does occur. In this section, two examples of the ways in which programming languages have evolved are discussed. The vocabulary used to describe the scenarios is applicable to evolution of MDE artefacts. Furthermore, MDE sometimes involves the use of general-purpose modelling languages, such as UML \cite{uml212}. The evolution of general-purpose modelling languages may be similar to that of general-purpose programming languages.
 
 \subsubsection{Reduction}
-Mapping language abstractions to executable concepts can be complicated. Therefore, languages are sometimes evolved to simplify the implementation of translators (compilers, interpreters, etc). It seems that this type of evolution is more likely to occur (1) when language design is a linear process (with a reference implementation occurring after design), and (2) in larger languages.
+Mapping language abstractions to executable concepts can be complicated. Therefore, languages are sometimes evolved to simplify the implementation of translators (compilers, interpreters, etc). It seems that this type of evolution is more likely to occur when language design is a linear process (with a reference implementation occurring after design), and in larger languages.
 
 \cite{backus78history} identifies some simplification during FORTRAN's evolution: originally, FORTRAN's \verb|DO| statements were awkward to compile. The semantics of \verb|DO| were simplified such that more efficient object code could be generated from them. Essentially, the simplified \verb|DO| statement allowed linear changes to index statements to be detected (and optimised) by compilers.
 
-Another example of this type of evolution is the removal of the \verb|RELABEL| construct (which facilitated more straightforward indexing into multi-dimensional arrays) from the FORTRAN language specification \cite{backus78history}.
+The removal of the \verb|RELABEL| construct (which facilitated more straightforward indexing into multi-dimensional arrays) from the FORTRAN language specification \cite{backus78history} is a further example of reductionj.
 
 \subsubsection{Revolution}
 Developers often form best practices for using languages. Design patterns are one way in which best practices may be communicated with other developers. Incorporating existing design patterns as language constructs is one approach to specifying a new language (e.g. \cite{bosch98patterns}).
@@ -70,7 +97,7 @@ Some features of Lisp were devised by promoting Fortran List Processing Language
 
 \subsection{Schema Evolution}
 \label{LitReview:Schemas}
-This section reviews schema evolution research. Work covering the evolution of XML and database schemata is considered. Both types of schema are used to describe a set of concepts (termed the \textit{universe of discourse} in database literature). Schema designers decide which details of their domain concepts to describe; their schemata provide an abstraction containing only those concepts which are relevant \cite[pg30]{elmasri06database}. As such, schemata in these domains may be thought of as analogous to metamodels -- they provide a means for describing an abstraction over a phenomenon of interest, (i.e. a model, Section \ref{Intro:MDA}). Therefore, approaches to identifying, analysing and performing schema evolution are directly relevant to the evolution of metamodels in MDE. However, the patterns of evolution commonly seen in database systems and with XML may be different to those of metamodels because evolution can be:
+This section reviews schema evolution research. Work covering the evolution of XML and database schemata is considered. Both types of schema are used to describe a set of concepts (termed the \textit{universe of discourse} in database literature). Schema designers decide which details of their domain concepts to describe; their schemata provide an abstraction containing only those concepts which are relevant \cite[pg30]{elmasri06database}. As such, schemata in these domains may be thought of as analogous to metamodels -- they provide a means for describing an abstraction over a phenomenon of interest. Therefore, approaches to identifying, analysing and performing schema evolution are directly relevant to the evolution of metamodels in MDE. However, the patterns of evolution commonly seen in database systems and with XML may be different to those of metamodels because evolution can be:
 
 \begin{itemize}
  \item \textbf{Domain-specific}: Patterns of evolution may be applicable only within a particular domain (e.g. normalisation in a relational database).
@@ -128,7 +155,7 @@ Compared to the taxonomy in \cite{lammel01grammar_adaptation}, Lever can be used
 
 
 \subsection{Evolution of MDE Artefacts}
-\label{LitReview:SoftwareEvo:MdeEvo}
+\label{subsec:mde_evo}
 As discussed in Chapter~\ref{Introduction}, the evolution of development artefacts during MDE inhibits the productivity and maintainability of model-driven approaches for constructing software systems. Mitigating the effects of evolution on MDE is an open research topic, to which this thesis contributes.
 
 This section discusses literature that explores the evolution of development artefacts used when performing MDE. \cite{deursen07mdse} highlight that evolution in MDE is complicated, because it spans multiple dimensions. In particular, there are three types of development artefact specific to MDE: models, metamodels, and specifications of model management tasks\footnote{Some examples of model management tasks include model-to-model transformation, model-to-text transformation, model validation, model merging and model comparison.}. A change to one type of artefact can affect other artefacts (possibly of a different type). 
@@ -142,7 +169,7 @@ In model transformation terminology, a refactoring is an \emph{endogenous}, \emp
 
 There are similarities between the structures defined in the MOF metamodelling language and in object-oriented programming languages. For the latter, refactoring pattern catalogues exist (such as \cite{fowler99refactoring}), which might usefully be applied to modelling languages. \cite{moha09refactoring} provides a notation for specifying refactorings for MOF and UML models and Java programs in a generic (metamodel-independent) manner. Because MOF, UML and the Java language share some concepts (such as classes and attributes), \cite{moha09refactoring} show that refactorings can be shared among them, but only consider 3 of XX the object-oriented refactorings identified in \cite{fowler99refactoring}. To more thoroughly understand metamodel-independent refactoring, a larger number of refactorings and languages should be explored.
 
-Abstraction is a fundamental benefit of MDE (Section~\ref{sec:mde_benefits}). Defining a domain-specific language is one way in which abstraction can be realised for MDE (Section~\ref{sec:dsls}). In addition to tools for defining modelling languages, generating model editors and performing model transformation, model-driven development environments might benefit from mechanisms for defining domain-specific refactorings. In particular, metamodel developers may wish to document common patterns of evolution, perhaps in an executable format.
+Abstraction is a fundamental benefit of MDE (Section~\ref{subsec:mde_benefits}). Defining a domain-specific language is one way in which abstraction can be realised for MDE (Section~\ref{subsec:dsls}). In addition to tools for defining modelling languages, generating model editors and performing model transformation, model-driven development environments might benefit from mechanisms for defining domain-specific refactorings. In particular, metamodel developers may wish to document common patterns of evolution, perhaps in an executable format.
 
 Eclipse, an extensible development environment, provides a library for building development tools for textual languages, LTK (language toolkit). LTK allows developers to specify -- in Java -- refactorings for their language, which can be invoked via the language editor. LTK makes no assumptions on the way in which languages will be structured, and as such refactoring code that operates on models must interact with the modelling framework directly.
 
@@ -168,24 +195,63 @@ The Epsilon Wizard Language (EWL) \cite{kolovos07ewl} is a model transformation 
 
  
 \cite{kolovos07ewl} and \cite{arendt09refactoring} focus on refactoring a model in isolation. Neither approach can be used to specify \emph{inter-model refactorings}, which impact more than one model at once. The Eclipse Java Development Tools support refactorings of Java code that update many source-code artefacts at once: for example, renaming a class in one source file updates references to that class in other source files. In the context of MDE, support for inter-model refactoring would facilitate a greater degree of model modularisation, regarded by \cite{kolovos08scalability} as a solution to scalability, one of the challenges faced by MDE.
+
+According to \cite{mens07modelrefactoring}, ``research in model refactoring is still in its infancy.'' Mens et al. identify formalisms for investigating the feasibility and scalability of model refactoring. In particular, Mens et al. suggest that meaning-preservation (an objective of refactoring, as discussed in Section \ref{subsec:refactoring}) can be checked by evaluating OCL constraints, behavioural models or downstream program code.
+
+TODO: summary.
  
 
 % Engels et al. envisage a means for specifying model transformations that preserve the semantics of input models in the result models. The approach is demonstrated for transforming from UML to TAAL, a simple object-oriented programming language. 
 
 
 \subsubsection{Model Synchronisation}
-\label{LitReview:ArtefactCoEvo}
-Changes made to MDE development artefacts may require that related artefacts (models, code, documentation) be updated to remain synchronised. These artefacts may be upstream, as well as downstream, when an elaborationist approach is being used. This activity is termed \textit{model synchronisation}.
+\label{subsubsec:model_synch}
+Changes made to development artefacts may require the \emph{synchronisation} of related artefacts (models, code, documentation). Traceability links (which capture the relationships of software artefacts) facilitate synchronisation. Theoretical aspects of the traceability literature were reviewed in Section~\ref{subsec:traceability}. This section analyses the application of traceability theory to model-driven engineering, focusing on the way in which traceability facilitates \emph{model synchronisation}. 
 
-\cite{mens07modelrefactoring} suggest model refactoring as one means for performing synchronisation. However, ``research in model refactoring is still in its infancy'' \cite{mens07modelrefactoring} limiting its applicability. Mens et al. identify some of the formalisms being used to start investigating the feasibility and scalability of model refactoring. In particular, Mens et al. suggest that meaning-preservation (an objective of refactoring, as discussed in Section \ref{LitReview:SoftwareEvo:Refactoring}) can be checked by evaluating OCL constraints, behavioural models or downstream program code.
+There is an abundance of model synchronisation approaches that extend or instrument existing model-to-model transformation languages. Declarative transformation languages lend themselves to the specification of bi-directional transformations (which \cite{fritzsche08tracing} describe as traceability-by-design) and \emph{incremental transformations}, a style of model transformation that facilitates incremental updates of the target model. In fact, most model synchronisation literature focuses on incremental transformation. 
 
-Fields related to artefact co-evolution are those concerned with traceability in MDE (e.g. ECMDA Traceability Workshops) and impact analysis (used in modern development IDEs for activities such as incremental background compilation).
+Incremental transformation is most often achieved in one of two ways. Because model-to-model transformation is used to generate one or more target models from one or more source models, when a source model changes, the model-to-model transformation can be invoked to completely re-generate the target models. \cite{hearnden06incremental} call this activity \emph{re-transformation}, and propose an alternative approach, \emph{live transformation}, in which the transformation context is persistent. Figure~\ref{fig:incremental_transformation_types} illustrates the differences between re transformation and live transformation, showing the evolution of source and target models on the left-hand and right-hand sides, respectively, and the transformation context in the middle.  Live transformation facilitates change propagation from the source to the target models without completely re-generating the target models and is therefore a more efficient approach. As well as in \cite{hearnden06incremental}, live transformation is used to achieve incremental transformation in \cite{rath08live} and \cite{tratt08change}.
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[Re-transformation.]
+	{
+	    \label{fig:re-transformation}
+	    \includegraphics[width=5cm]{3.LiteratureReview/images/retransformation.pdf}
+	}
+	\subfigure[Live transformation.]
+	{
+	    \label{fig:live_transformation}
+	    \includegraphics[width=5cm]{3.LiteratureReview/images/live_transformation.pdf}
+	}
+	\caption{Approaches to incremental transformation. Taken from \cite{hearnden06incremental}.}
+\label{fig:incremental_transformation_types}
+\end{figure}
+
+Primarily, incremental transformation has been used to address the scalability of model transformations, and this focus might be unhelpful. For large models, transformation execution time has been shown to be significantly reduced by using incremental transformation \cite{hearnden06incremental}. However, \cite{kolovos08scalability} suggests that scalability should be addressed not only by attempting to develop techniques for increasing the speed of model transformation, but also by providing principles, practices and tools for building models that are less monolithic and more modular. For this end, model synchronisation research should seek to improve maintainability in conjunction with -- or rather than -- scalability.
+
+Model synchronisation and incremental transformation can be applied to decouple models and facilitate greater modularisation, although this is not commonly discussed in the literature. \cite{fritzsche08tracing} describe an automated, model-driven approach to performance engineering. Fritzche et al. contribute a transformation that produces, from any UML model, a model for which performance characteristics can be more readily analysed. The relationships between UML and performance model artefacts are recorded using traceability links. The results of the performance analysis are later fed back to the UML model using an incremental transformation made possible by the traceability links. Using this approach, performance engineers can focus primarily on the performance models, while other engineers are shielded from the low-level detail of the performance analysis. As such, Fritzsche et al. show that two different modelling concerns can be separated and decoupled, yet remain cohesive via the application of model synchronisation.
+
+Some existing work provides a foundation for automating model synchronisation activities. Enriching a model-to-model transformation with traceability is discussed in \cite{jouault05loosely}, which contributes a generic higher-order transformation for this purpose. In contrast to the genericity of the approach described in \cite{jouault05loosely}, \cite{drivalos08rigorously} propose domain-specific traceability metamodels for richer traceability link semantics. Further research is required to assess the requirements of automated model synchronisation tools and to select appropriate traceability approaches for their implementation. Furthermore, model synchronisation tools might apply techniques used in automated synchronisation tools for traditional development environments, such as the refactoring functionality of the Eclipse Java Development Tools \cite{fuhrer07refactoring}.
+
+While most of the model synchronisation literature focuses on synchronising models with other models, some papers consider synchronisation of models and text, usually in the context of code generation. The model-to-text language, Epsilon Generation Language (EGL) \cite{rose08egl}, produces traceability links between code generation templates and generated files. Sections of code can be marked protected, and are not overwritten by subsequent invocations of the code generation template. As described in \cite{olsen07traceability}, the MOFScript model-to-text language also provides protected sections and, in addition, stores traceability links in a structured manner. The traceability links described in \cite{olsen07traceability} can be used for impact analysis, model coverage (for highlighting which areas of the model contribute to the generated code) and orphan analysis (for detecting invalid traceability links).
+
+% TODO: impact analysis MDE literature from Winkler traceability survey papers
 
 \subsubsection{Model-metamodel Co-Evolution}
 \label{LitReview:ModelCoEvo}
 When a metamodel evolves, any instance models may require migration to remain conformant. This activity is termed \textit{model-metamodel co-evolution} and is subsequently referred to as \emph{co-evolution}. Existing approaches to co-evolution are now explored.
 
-\cite{sprinkle04domain} were the first to describe co-evolution as distinct from the more general activity of model-to-model transformation. Sprinkle and Karsai identified the need for approaches that consider the specific requirements of co-evolution. In particular, the phrase ``evolution, not revolution'' was coined in \cite{sprinkle03thesis} to highlight that, during co-evolution, the difference between source and target metamodels is often small. Another key contribution was the way in which \cite{sprinkle04domain} identified migration strategies as either syntactic or semantic (which was discussed in Section \ref{Intro:MigrationProblem}).
+\cite{sprinkle04domain} were the first to describe co-evolution as distinct from the more general activity of model-to-model transformation. Sprinkle and Karsai identified the need for approaches that consider the specific requirements of co-evolution. In particular, the phrase ``evolution, not revolution'' was coined in \cite{sprinkle03thesis} to highlight that, during co-evolution, the difference between source and target metamodels is often small.
+
+Another key contribution was the way in which \cite{sprinkle04domain} identified migration strategies as either \emph{syntactic} or \emph{semantic}. In the former, no information is known about the intention of the developer performing the evolution. In the latter, a lack of detailed information about the semantics of evolution can reduce the extent to which migration activities can be automated. For example, consider the case where a class is deleted from a metamodel. The following questions typically need to be answered to facilitate automated migration:
+ \begin{itemize}
+  \item Should subtypes of the deleted class also be removed? If not, should their inheritance hierarchy be changed? What is the correct type for references that used to have the type of the deleted class?
+  \item Suppose that the evolving metamodel was the target of a previous model-to-model transformation. Should the data that was previously transformed to instances of the deleted class now be transformed to instances of another metamodel class?
+  \item What should happen to instances of the deleted metamodel class? Perhaps they should be removed too, or perhaps their data should be migrated to new instances of another class.
+ \end{itemize}
+
+Tools that recognise only syntactic evolution tend to lack the information required to fully automate migration. Furthermore, tools that focus only upon syntax cannot perform migration in the face of additive changes \cite{gruschko07towards}. There are complexities involved in recording the semantics of software evolution. For example, the semantics of an impacted artefact need not be preserved during migration: this is often the case in corrective evolution. However, it is crucial that the semantics are sound (i.e. conform to their specification) after migration. Addressing this kind of complexity is still an open research topic, to which this thesis contributes.
 
 The approach to co-evolution outlined in \cite{sprinkle04domain} requires that migration activities are specified by the developer. Instead, \cite{gruschko07towards} suggest inferring co-evolution strategies, based on either a difference model of two versions of the evolving metamodel (direct comparison) or on a list of changes recorded during the evolution of a metamodel (indirect comparison). The primary contribution made in \cite{sprinkle04domain} was the definition of a process for performing co-evolution, shown in Figure \ref{fig:coevoprocess}. One key innovation is the way in which metamodel changes are classified. Gruschko et al. recognise that co-evolution in response to some types of metamodel change can be automated only when guided by a developer.
 
@@ -227,6 +293,7 @@ Furthermore, as co-evolution is often implemented as a specialisation of model-t
 
 
 \section{Summary}
+\label{sec:literature_review_summary}
 Domain-specific languages underpin the implementation of almost all of the approaches discussed in this chapter. (Lever \cite{pizka07automating}, for example, defines three domain-specific languages for evolving grammars and words, and for co-evolving grammars with programs). Yet the literature does not assess the efficacy of the DSLs, in particular for capturing the patterns common to evolution in their respective domains (databases, XML, grammarware, MDD environments). This is an area of research to which this thesis contributes, particularly in Chapter~\ref{Implementation}.
 
 Most existing approaches to managing software evolution are defined in work that uses a similar method: first, identify and categorise all feasible evolutionary changes. Next, design a taxonomy of operators that capture these changes (or a matching algorithm that detects the application of the changes). Finally, implement a tool that allows the developer to apply the evolutionary operators (or invoke the matching algorithm), and evaluate the tool on existing projects.

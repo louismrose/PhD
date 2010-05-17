@@ -10,54 +10,72 @@ A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Repeated entry---line 1043 of file thesis.bib
+Repeated entry---line 1166 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1065 of file thesis.bib
+Repeated entry---line 1188 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
+Name 1 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1187 of file longname.bst
+Name 1 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1187 of file longname.bst
+Name 2 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1187 of file longname.bst
+Name 3 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1187 of file longname.bst
+Name 4 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1187 of file longname.bst
 Warning--can't use both volume and number fields in banerjee87semantics
-You've used 108 entries,
+Name 1 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1253 of file longname.bst
+Name 2 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1253 of file longname.bst
+Name 3 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1253 of file longname.bst
+Name 4 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1253 of file longname.bst
+You've used 125 entries,
             2472 wiz_defined-function locations,
-            1070 strings with 20270 characters,
-and the built_in function-call counts, 41877 in all, are:
-= -- 4225
-> -- 1560
-< -- 46
-+ -- 501
-- -- 478
-* -- 2932
-:= -- 6524
-add.period$ -- 349
-call.type$ -- 108
-change.case$ -- 652
-chr.to.int$ -- 98
-cite$ -- 109
-duplicate$ -- 1920
-empty$ -- 3447
-format.name$ -- 618
-if$ -- 8942
+            1153 strings with 22782 characters,
+and the built_in function-call counts, 49310 in all, are:
+= -- 4973
+> -- 1845
+< -- 56
++ -- 595
+- -- 568
+* -- 3497
+:= -- 7647
+add.period$ -- 403
+call.type$ -- 125
+change.case$ -- 764
+chr.to.int$ -- 115
+cite$ -- 126
+duplicate$ -- 2263
+empty$ -- 4050
+format.name$ -- 733
+if$ -- 10533
 int.to.chr$ -- 11
 int.to.str$ -- 0
-missing$ -- 94
-newline$ -- 543
-num.names$ -- 325
-pop$ -- 760
+missing$ -- 112
+newline$ -- 628
+num.names$ -- 376
+pop$ -- 877
 preamble$ -- 1
-purify$ -- 779
+purify$ -- 909
 quote$ -- 0
-skip$ -- 1560
+skip$ -- 1833
 stack$ -- 0
-substring$ -- 2054
-swap$ -- 539
-text.length$ -- 46
+substring$ -- 2483
+swap$ -- 644
+text.length$ -- 56
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 800
+type$ -- 932
 warning$ -- 1
-while$ -- 338
-width$ -- 117
-write$ -- 1400
-(There were 2 error messages)
+while$ -- 401
+width$ -- 131
+write$ -- 1622
+(There were 11 error messages)

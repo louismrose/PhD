@@ -6,6 +6,12 @@
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.rubyonrails.org/}, 2008.
 
+\bibitem[Aizenbud-Reshef {\it et al.}\  2005]{aizenbud05operational}{$~$}
+N.~Aizenbud-Reshef, R.F. Paige, J.~Rubin, Y.~Shaham-Gafni, and D.S. Kolovos.
+\newblock Operational semantics for traceability.
+\newblock In {\em Proc. {ECMDA-FA} Workshop on Traceability}, pages 8--14,
+  2005.
+
 \bibitem[Alexander {\it et al.}\  1977]{alexander77pattern}{$~$}
 Christopher Alexander, Sara Ishikawa, and Murray Silverstein.
 \newblock {\em A Pattern Language: Towns, Buildings, Construction (Center for
@@ -79,10 +85,27 @@ Julien Cervelle, R\'{e}mi Forax, and Gilles Roussel.
 \newblock In {\em Principles and Practice of Programming in Java}, pages
   13--20. ACM, 2006.
 
+\bibitem[Chen \& Chou 1999]{chen99consistency}{$~$}
+J.Y.J. Chen and S.C. Chou.
+\newblock Consistency management in a process environment.
+\newblock {\em Systems and Software}, 47(2-3):105--110, 1999.
+
 \bibitem[Cicchetti {\it et al.}\  2008]{cicchetti08automating}{$~$}
 Antonio Cicchetti, Davide~Di Ruscio, Romina Eramo, and Alfonso Pierantonio.
 \newblock Automating co-evolution in model-driven engineering.
 \newblock In {\em Proc. {EDOC}}, pages 222--231. IEEE Computer Society, 2008.
+
+\bibitem[Cleland-Huang {\it et al.}\  2003]{cleland03eventbased}{$~$}
+Jane Cleland-Huang, Carl~K. Chang, and Mark Christensen.
+\newblock Event-based traceability for managing evolutionary change.
+\newblock {\em IEEE Transactions on Software Engineering}, 29(9):796--810,
+  2003.
+
+\bibitem[Costa \& Silva 2007]{costa2007rtmdd}{$~$}
+M.~Costa and A.R. da~Silva.
+\newblock {RT-MDD} framework -- a practical approach.
+\newblock In {\em Proc. {ECMDA-FA} Workshop on Traceability}, pages 17--26,
+  2007.
 
 \bibitem[Czarnecki \& Helsen 2006]{czarnecki06survey}{$~$}
 Krzysztof Czarnecki and Simon Helsen.
@@ -118,6 +141,13 @@ Danny Dig, Kashif Manzoor, Ralph Johnson, and Tien~N. Nguyen.
   programs.
 \newblock In {\em Proc. International Conference on Software Engineering},
   pages 427--436. IEEE Computer Society, 2007.
+
+\bibitem[Drivalos {\it et al.}\  2008]{drivalos08rigorously}{$~$}
+Nicholas Drivalos, Richard~F. Paige, Kiran~J. Fernandes, and Dimitrios~S.
+  Kolovos.
+\newblock Towards rigorously defined model-to-model traceability.
+\newblock In {\em Proc. European Conference on the Model Driven Architecture
+  Workshop on Traceability}, 2008.
 
 \bibitem[Ducasse {\it et al.}\  1999]{ducasse99language}{$~$}
 St\'{e}phane Ducasse, Matthias Rieger, and Serge Demeyer.
@@ -194,6 +224,18 @@ Martin Fowler.
 \newblock {\em Patterns of Enterprise Application Architecture}.
 \newblock Addison-Wesley, 2002.
 
+\bibitem[Fritzsche {\it et al.}\  2008]{fritzsche08tracing}{$~$}
+M.~Fritzsche, J.~Johannes, S.~Zschaler, A.~Zherebtsov, and A.~Terekhov.
+\newblock Application of tracing techniques in {Model-Driven Performance
+  Engineering}.
+\newblock In {\em Proc. ECMDA Traceability Workshop (ECMDA-TW)}, pages
+  111--120, 2008.
+
+\bibitem[Fuhrer {\it et al.}\  2007]{fuhrer07refactoring}{$~$}
+Robert~M. Fuhrer, Adam Kiezun, and Markus Keller.
+\newblock Refactoring in the {Eclipse JDT}: Past, present, and future.
+\newblock In {\em Proc. Workshop on Refactoring Tools}, 2007.
+
 \bibitem[Gamma {\it et al.}\  1995]{gamma95patterns}{$~$}
 Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
 \newblock {\em Design patterns: elements of reusable object-oriented software}.
@@ -227,6 +269,13 @@ Giovanna Guerrini, Marco Mesiti, and Daniele Rossi.
 \newblock In {\em Proc. Workshop on Web Information and Data Management}, pages
   39--44, 2005.
 
+\bibitem[Hearnden {\it et al.}\  2006]{hearnden06incremental}{$~$}
+David Hearnden, Michael Lawley, and Kerry Raymond.
+\newblock Incremental model transformation for the evolution of model-driven
+  systems.
+\newblock In {\em Model Driven Engineering Languages and Systems}, volume 4199
+  of {\em LNCS}, pages 321--335. Springer, 2006.
+
 \bibitem[Herrmannsdoerfer {\it et al.}\  2009]{herrmannsdoerfer09cope}{$~$}
 Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
 \newblock {COPE} - automating coupled evolution of metamodels and models.
@@ -256,6 +305,11 @@ Fr{\'e}d{\'e}ric Jouault and Ivan Kurtev.
 \newblock In {\em Proc. Satellite Events at the International Conference on
   Model Driven Engineering Languages and Systems}, volume 3844 of {\em LNCS},
   pages 128--138. Springer, 2005.
+
+\bibitem[Jouault 2005]{jouault05loosely}{$~$}
+Fr{\'e}d{\'e}ric Jouault.
+\newblock Loosely coupled traceability for {ATL}.
+\newblock In {\em Proc. {ECMDA-FA} Workshop on Traceability}, 2005.
 
 \bibitem[Kataoka {\it et al.}\  2001]{kataoka01automated}{$~$}
 Yoshio Kataoka, Michael~D. Ernst, William~G. Griswold, and David Notkin.
@@ -330,6 +384,11 @@ Diane Kramer.
 \newblock {XEM: XML Evolution Management}.
 \newblock Master's thesis, Worcester Polytechnic Institute, MA, USA, 2001.
 
+\bibitem[Lago {\it et al.}\  2009]{lago09scoped}{$~$}
+Patricia Lago, Henry Muccini, and Hans van Vliet.
+\newblock A scoped approach to traceability management.
+\newblock {\em Systems and Software}, 82(1):168--182, 2009.
+
 \bibitem[L{\"a}mmel \& Verhoef 2001]{lammel01semiautomatic}{$~$}
 R.~L{\"a}mmel and C.~Verhoef.
 \newblock Semi-automatic grammar recovery.
@@ -380,6 +439,12 @@ Barbara~Staudt Lerner.
 \newblock A model for compound type changes encountered in schema evolution.
 \newblock {\em ACM Transactions on Database Systems}, 25(1):83--127, 2000.
 
+\bibitem[M\"{a}der {\it et al.}\  2008]{mader08rule}{$~$}
+P.~M\"{a}der, O.~Gotel, and I.~Philippow.
+\newblock Rule-based maintenance of post-requirements traceability relations.
+\newblock In {\em Proc. {IEEE} International Requirements Engineering
+  Conference (RE)}, pages 23--32, 2008.
+
 \bibitem[Martin \& Martin 2006]{martin06agile}{$~$}
 R.C. Martin and M.~Martin.
 \newblock {\em Agile Principles, Patterns, and Practices in {C}\#}.
@@ -429,6 +494,12 @@ Jon Oldevik, Tor Neple, Roy Gr{\o}nmo, Jan~{\O}yvind Aagedal, and
 \newblock Toward standardised model to text transformations.
 \newblock In {\em Proc. {ECMDA-FA}}, volume 3748 of {\em LNCS}, pages 239--253.
   Springer, 2005.
+
+\bibitem[Olsen \& Oldevik 2007]{olsen07traceability}{$~$}
+G{\o}ran~K. Olsen and Jon Oldevik.
+\newblock Scenarios of traceability in model to text transformations.
+\newblock In {\em Proc. ECMDA-FA}, volume 4530 of {\em Lecture Notes in
+  Computer Science}, pages 144--156. Springer, 2007.
 
 \bibitem[OMG 2004]{hutn}{$~$}
 OMG.
@@ -509,11 +580,23 @@ M.~Pizka and E.~J{\"u}rgens.
 \newblock In {\em Proc. Joint IEEE/IFIP Symposium on Theoretical Aspects of
   Software Engineering (TASE)}, pages 305--315. IEEE Computer Society, 2007.
 
+\bibitem[Pool 1997]{pool97society}{$~$}
+R.~Pool.
+\newblock {\em Beyond Engineering: How Society Shapes Technology}.
+\newblock Oxford University Press, 1997.
+
 \bibitem[Porres 2003]{porres03refactoring}{$~$}
 Ivan Porres.
 \newblock Model refactorings as rule-based update transformations.
 \newblock In {\em Proc. UML}, volume 2863 of {\em LNCS}, pages 159--174.
   Springer, 2003.
+
+\bibitem[R{\'a}th {\it et al.}\  2008]{rath08live}{$~$}
+Istv{\'a}n R{\'a}th, G{\'a}bor Bergmann, Andr{\'a}s {\"O}kr{\"o}s, and
+  D{\'a}niel Varr{\'o}.
+\newblock Live model transformations driven by incremental pattern matching.
+\newblock In {\em Proc. ICMT}, volume 5063 of {\em LNCS}, pages 107--121.
+  Springer, 2008.
 
 \bibitem[Rising 2001]{rising01designpatterns}{$~$}
 Linda Rising, editor.
@@ -549,6 +632,11 @@ Louis~M. Rose, Dimitrios~S. Kolovos, Nicholas Drivalos, James.~R. Williams,
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model migration with flock.
 \newblock In {\em In preparation}, 2010.
+
+\bibitem[Selic 2003]{selic03pragmatics}{$~$}
+Bran Selic.
+\newblock The pragmatics of {Model-Driven Development}.
+\newblock {\em IEEE Software}, 20(5):19--25, 2003.
 
 \bibitem[Sj{\o}berg 1993]{sjoberg93quantifying}{$~$}
 Dag~I.K. Sj{\o}berg.
@@ -589,6 +677,11 @@ Hong Su, Diane Kramer, Li~Chen, Kajal~T. Claypool, and Elke~A. Rundensteiner.
 \newblock In {\em Proc. Workshop on Research Issues in Data Engineering}, pages
   103--110, 2001.
 
+\bibitem[Tratt 2008]{tratt08change}{$~$}
+Laurence Tratt.
+\newblock A change propagating model transformation language.
+\newblock {\em Journal of Object Technology}, 7(3):107--124, 2008.
+
 \bibitem[Varr\'{o} \& Balogh 2007]{VIATRA}{$~$}
 D\'{a}niel Varr\'{o} and Andr\'{a}s Balogh.
 \newblock The model transformation language of the {VIATRA2} framework.
@@ -628,5 +721,11 @@ Malcolm Wallace.
 Andrew Watson.
 \newblock A brief history of {MDA}.
 \newblock {\em Upgrade}, 9(2), 2008.
+
+\bibitem[Winkler \& Pilgrim 2009]{winkler09survey}{$~$}
+Stefan Winkler and Jens von Pilgrim.
+\newblock A survey of traceability in requirements engineering and model-driven
+  development.
+\newblock {\em Software and Systems Modeling}, December 2009.
 
 \end{thebibliography}
