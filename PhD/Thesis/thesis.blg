@@ -10,11 +10,11 @@ A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Repeated entry---line 1166 of file thesis.bib
+Repeated entry---line 1208 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1188 of file thesis.bib
+Repeated entry---line 1230 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
@@ -37,45 +37,45 @@ Name 3 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A.
 while executing---line 1253 of file longname.bst
 Name 4 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1253 of file longname.bst
-You've used 125 entries,
+You've used 129 entries,
             2472 wiz_defined-function locations,
-            1153 strings with 22782 characters,
-and the built_in function-call counts, 49310 in all, are:
-= -- 4973
-> -- 1845
-< -- 56
-+ -- 595
-- -- 568
-* -- 3497
-:= -- 7647
-add.period$ -- 403
-call.type$ -- 125
-change.case$ -- 764
-chr.to.int$ -- 115
-cite$ -- 126
-duplicate$ -- 2263
-empty$ -- 4050
-format.name$ -- 733
-if$ -- 10533
-int.to.chr$ -- 11
+            1174 strings with 23422 characters,
+and the built_in function-call counts, 51562 in all, are:
+= -- 5219
+> -- 1910
+< -- 61
++ -- 614
+- -- 588
+* -- 3660
+:= -- 7960
+add.period$ -- 419
+call.type$ -- 129
+change.case$ -- 790
+chr.to.int$ -- 120
+cite$ -- 130
+duplicate$ -- 2376
+empty$ -- 4236
+format.name$ -- 757
+if$ -- 11051
+int.to.chr$ -- 10
 int.to.str$ -- 0
-missing$ -- 112
-newline$ -- 628
-num.names$ -- 376
-pop$ -- 877
+missing$ -- 117
+newline$ -- 648
+num.names$ -- 388
+pop$ -- 900
 preamble$ -- 1
-purify$ -- 909
+purify$ -- 939
 quote$ -- 0
-skip$ -- 1833
+skip$ -- 1927
 stack$ -- 0
-substring$ -- 2483
-swap$ -- 644
-text.length$ -- 56
+substring$ -- 2656
+swap$ -- 694
+text.length$ -- 61
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 932
+type$ -- 964
 warning$ -- 1
-while$ -- 401
-width$ -- 131
-write$ -- 1622
+while$ -- 421
+width$ -- 135
+write$ -- 1680
 (There were 11 error messages)

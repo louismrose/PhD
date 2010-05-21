@@ -55,6 +55,11 @@ Kent Beck and Ward Cunningham.
 \newblock Constructing abstractions for object-oriented applications.
 \newblock {\em Journal of Object Oriented Programming}, 2, 1989.
 
+\bibitem[B{\'e}zivin 2005]{bezivin05unification}{$~$}
+Jean B{\'e}zivin.
+\newblock On the unification power of models.
+\newblock {\em Software and System Modeling}, 4(2):171--188, 2005.
+
 \bibitem[Biermann {\it et al.}\  2006]{biermann06refactoring}{$~$}
 Enrico Biermann, Karsten Ehrig, Christian K{\"o}hler, G{\"u}nter Kuhns,
   Gabriele Taentzer, and Eduard Weiss.
@@ -68,10 +73,22 @@ Joshua Bloch.
   Diego, United States of America. [Accessed 23 July 2009] Available at:
   \url{http://lcsd05.cs.tamu.edu/slides/keynote.pdf}, 2005.
 
+\bibitem[Bohner 2002]{bohner02impactanalysis}{$~$}
+Shawn~A. Bohner.
+\newblock Software change impacts - an evolving perspective.
+\newblock In {\em Proc. International Conference on Software Maintenance
+  (ICSM)}, pages 263--272. IEEE Computer Society, 2002.
+
 \bibitem[Bosch 1998]{bosch98patterns}{$~$}
 Jan Bosch.
 \newblock Design patterns as language constructs.
 \newblock {\em Journal of Object Oriented Programming}, 11(2):18--32, 1998.
+
+\bibitem[Briand {\it et al.}\  2003]{briand03impactanalysis}{$~$}
+Lionel~C. Briand, Yvan Labiche, and L.~O'Sullivan.
+\newblock Impact analysis and change management of uml models.
+\newblock In {\em Proc. International Conference on Software Maintenance
+  (ICSM)}, pages 256--265. IEEE Computer Society, 2003.
 
 \bibitem[Brown {\it et al.}\  1998]{brown98antipatterns}{$~$}
 William~J. Brown, Raphael~C. Malveau, Hays W.~McCormick III, and Thomas~J.
@@ -155,13 +172,7 @@ St\'{e}phane Ducasse, Matthias Rieger, and Serge Demeyer.
 \newblock In {\em Proc. International Conference on Software Maintenance},
   pages 109--118. IEEE Computer Society, 1999.
 
-\bibitem[Eclipse 2008a]{emf}{$~$}
-Eclipse.
-\newblock {Eclipse Modeling Framework} project [online].
-\newblock [Accessed 22 January 2009] Available at:
-  \url{http://www.eclipse.org/modeling/emf/}, 2008.
-
-\bibitem[Eclipse 2008b]{gmt}{$~$}
+\bibitem[Eclipse 2008]{gmt}{$~$}
 Eclipse.
 \newblock {Generative Modelling Technologies} project [online].
 \newblock [Accessed 30 June 2008] Available at:
@@ -275,6 +286,15 @@ David Hearnden, Michael Lawley, and Kerry Raymond.
   systems.
 \newblock In {\em Model Driven Engineering Languages and Systems}, volume 4199
   of {\em LNCS}, pages 321--335. Springer, 2006.
+
+\bibitem[Herrmannsdoerfer {\it et al.}\
+  2008]{herrmannsdoerfer08automatability}{$~$}
+Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
+\newblock Automatability of coupled evolution of metamodels and models in
+  practice.
+\newblock In {\em Proc. International Conference on Model Driven Engineering
+  Languages and Systems}, volume 5301 of {\em LNCS}, pages 645--659. Springer,
+  2008.
 
 \bibitem[Herrmannsdoerfer {\it et al.}\  2009]{herrmannsdoerfer09cope}{$~$}
 Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
@@ -487,6 +507,12 @@ Naouel Moha, Vincent Mah{\'e}, Olivier Barais, and Jean-Marc J{\'e}z{\'e}quel.
 Pierre-Alain Muller and Michel Hassenforder.
 \newblock {HUTN as a Bridge between ModelWare and GrammarWare}.
 \newblock In {\em Proc. Workshop in Software Modelling Engineering}, 2005.
+
+\bibitem[Nguyen {\it et al.}\  2005]{nguyen05versioning}{$~$}
+Tien~Nhut Nguyen, Cheng Thao, and Ethan~V. Munson.
+\newblock On product versioning for hypertexts.
+\newblock In {\em Proc. International Workshop on Software Configuration
+  Management (SCM)}, pages 113--132. ACM, 2005.
 
 \bibitem[Oldevik {\it et al.}\  2005]{oldevik05toward}{$~$}
 Jon Oldevik, Tor Neple, Roy Gr{\o}nmo, Jan~{\O}yvind Aagedal, and
