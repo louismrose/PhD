@@ -3,70 +3,10 @@
 \chapter{Background}
 \label{Background}
 
-\section{Modelling}
+Before reviewing software evolution research, it is first necessary to survey literature from model-driven engineering, which is the engineering approach in which the thesis research is conducted. Section~\ref{sec:mde_terms} introduces the terminology and fundamental principles used in model-driven engineering. Section~\ref{sec:mde_approaches} reviews three approaches for model-driven engineering that are prescribed by MDE practitioners today. Section~\ref{sec:mde_tools} describes contemporary model-driven engineering environments. The related areas of domain-specific languages, language-oriented programming and grammarware are discussed in Section~\ref{sec:mde_related}. Finally, the benefits of and current challenges for model-driven engineering are described in Section~\ref{sec:mde_benefits_and_challenges}.
 
-\subsection{Models}
-
-\cite[pg397]{evans04domain}: ``Distillation is the process of separating the components of a mixture to extract the essence in a form that makes it more valuable and useful. A model is a distillation of knowledge. With every refactoring to deeper insight, we abstract some crucial aspect of domain knowledge and priorities.''
-
-\cite[ch14]{martin06agile} notes that, in some engineering disciplines, models are used to reduce risk. Structural engineers build models of bridges. Aerospace engineers build models of aircraft. In these disciplines, a model is used to determine the efficacy of the real thing and, moreover, is cheaper to build and test than the real thing, often by a huge factor. The produce of many engineering disciplines is physical and the manufacturing process costly. Often, software models are not cheaper by a huge factor to build and test than the software they represent. Consequently, \cite[ch14]{martin06agile} prescribes software modelling for communicating and reasoning about a design, and not as a long-term replacement for real, working software.
-
-All software has a \emph{domain}, the activities or business of its users. The domain of a library's lending system includes books, people and loans. \cite{evans04domain} prescribes principles and practices for building software in a way that emphasises the underlying domain, while tackling its complexity. In \cite{evans04domain}, domain models are key -- they are used to shape the solution's design, to define a common vocabulary for communication between team members, and to distinguish interesting and uninteresting elements of the domain. According to \cite{evans04domain}, domain models are key to software development. 
-
-% Leading towards this argument:  Model-driven engineering provides principles and practices for defining and using modelling languages. A common metamodelling language is key. Is generative programming?
-
-% How is the situation Martin describes (and other adovcates of "agile" principles) different to the software produced by model-driven engineering? Perhaps for enterprise systems it is much cheaper to build / test a model?? Or perhaps Martin is right, but MDD has different advantages to modelling (e.g. a common metamodelling language).
-
-\subsection{Modelling Languages}
-
-\cite[pg377]{evans04domain}: ``Use a well-documented shared language that can express the necessary domain information as a common medium of communication.'' Evans uses the example of Chemical Markup Language (CML), which has been standardised and facilitates the creation of tools (such as JUMBO Browser, which creates graphical views of chemical structures) that would probably never have been developed for in-house, ad-hoc domain models of chemicals.
-
-
-
-The meta-object facility (MOF) is a standardised language for expressing modelling languages and their models. As the Chemical Markup Language does for chemical structures, MOF makes possible the creation of tools for specifying, analysing, using and testing modelling languages. Modelling language tools are interoperable because MOF standardises the way in which modelling languages are persisted. MOF specifies that modelling languages and their models are persisted using XML Metadata Interchange (XMI), a dialect of XML optimised and standardised by the OMF for loading, storing and exchanging models. For these reasons, a standardised modelling language is key to the principles and practices of model-driven engineering. 
-
-
-\section{Model-Driven Engineering}
-\label{sec:mde}
-
-\subsection{Model Management}
-
-\subsubsection{Model Transformation}
-\label{subsubsec:model_transformation}
-
-\subsection{Tools}
-
-\subsubsection{Epsilon}
-\label{subsubsec:epsilon}
-
-%The background chapter will serve two purposes: firstly, to introduce areas of computer science that are related to our research, and secondly to introduce two categories of evolution observed in model-driven engineering. These two categories were described in the progress report.
-
-
-\subsection{Benefits of MDE}
-\label{subsec:mde_benefits}
-Abstraction.
-
-\subsection{Challenges for MDE}
-
-
-\section{Related Areas}
-%Several subsections will be used, one per related area. Topics are likely to include domain-specific languages and language-oriented programming; refactoring and design patterns; and iterative and incremental approaches to software engineering. We will discuss the applicability and relationship of each area to software evolution in the context of model-driven engineering.
-
-\subsection{Domain-Specific Languages}
-\label{subsec:dsls}
-
-\subsubsection{Language-Oriented Programming}
-
-Jetbrains MPS:
-http://www.jetbrains.com/mps/index.html
-http://blogs.jetbrains.com/mps/
-http://confluence.jetbrains.net/display/MPS/MPS+User%27s+Guide
-http://www.jetbrains.net/devnet/community/mps
-
-
-\subsection{Grammarware}
-\label{subsec:grammarware}
-- Relationship between grammars and metamodels (as discussed in ``Toward an Engineering Discipline for Grammarware'', Klint, particularly section 2).
-
-\section{Categories of Evolution in MDE}
-%This section will discuss model and metamodel co-evolution and model synchronisation, two categories of evolution observed in MDE. These categories were introduced in Section~\ref{sec:introduction} of this thesis outline.
+\input{2.Background/terms}
+\input{2.Background/approaches}
+\input{2.Background/tools}
+\input{2.Background/related}
+\input{2.Background/benefits_and_challenges}

@@ -4,52 +4,64 @@
 \contentsline {section}{\numberline {1.3}Research Aim}{6}
 \contentsline {section}{\numberline {1.4}Research Method}{6}
 \contentsline {chapter}{\numberline {2}Background}{7}
-\contentsline {section}{\numberline {2.1}Modelling}{7}
+\contentsline {section}{\numberline {2.1}MDE Terminology and Principles}{7}
 \contentsline {subsection}{\numberline {2.1.1}Models}{7}
-\contentsline {subsection}{\numberline {2.1.2}Modelling Languages}{7}
-\contentsline {section}{\numberline {2.2}Model-Driven Engineering}{8}
-\contentsline {subsection}{\numberline {2.2.1}Model Management}{8}
-\contentsline {subsubsection}{Model Transformation}{8}
-\contentsline {subsection}{\numberline {2.2.2}Tools}{8}
-\contentsline {subsubsection}{Epsilon}{8}
-\contentsline {subsection}{\numberline {2.2.3}Benefits of MDE}{8}
-\contentsline {subsection}{\numberline {2.2.4}Challenges for MDE}{8}
-\contentsline {section}{\numberline {2.3}Related Areas}{8}
-\contentsline {subsection}{\numberline {2.3.1}Domain-Specific Languages}{8}
-\contentsline {subsubsection}{Language-Oriented Programming}{8}
-\contentsline {subsection}{\numberline {2.3.2}Grammarware}{8}
-\contentsline {section}{\numberline {2.4}Categories of Evolution in MDE}{8}
-\contentsline {chapter}{\numberline {3}Literature Review}{9}
-\contentsline {section}{\numberline {3.1}Software Evolution Theory}{9}
-\contentsline {subsection}{\numberline {3.1.1}Categories of Software Evolution}{9}
-\contentsline {subsection}{\numberline {3.1.2}Refactoring}{10}
-\contentsline {subsection}{\numberline {3.1.3}Patterns and anti-patterns}{11}
-\contentsline {subsection}{\numberline {3.1.4}Traceability}{12}
-\contentsline {section}{\numberline {3.2}Software Evolution in Practice}{14}
-\contentsline {subsection}{\numberline {3.2.1}Programming Language Evolution}{14}
-\contentsline {subsubsection}{Reduction}{14}
-\contentsline {subsubsection}{Revolution}{14}
-\contentsline {subsection}{\numberline {3.2.2}Schema Evolution}{15}
-\contentsline {subsubsection}{XML Schema Evolution}{15}
-\contentsline {subsubsection}{Relational Database Schema Evolution}{16}
-\contentsline {subsection}{\numberline {3.2.3}Grammar Evolution}{18}
-\contentsline {subsection}{\numberline {3.2.4}Evolution of MDE Artefacts}{19}
-\contentsline {subsubsection}{Model Refactoring}{20}
-\contentsline {subsubsection}{Model Synchronisation}{23}
-\contentsline {paragraph}{Incremental Transformation}{23}
-\contentsline {paragraph}{Towards automated model synchronisation}{24}
-\contentsline {paragraph}{Synchronisation of models with text and trace links}{26}
-\contentsline {subsubsection}{Model-metamodel Co-Evolution}{26}
-\contentsline {paragraph}{Co-evolution theory}{27}
-\contentsline {paragraph}{Co-evolution patterns}{27}
-\contentsline {paragraph}{Co-evolution approaches}{27}
-\contentsline {paragraph}{Summary}{29}
-\contentsline {subsubsection}{Visualisation}{29}
-\contentsline {section}{\numberline {3.3}Summary}{30}
-\contentsline {paragraph}{Model Refactoring Challenges}{30}
-\contentsline {paragraph}{Model Synchronisation Challenges}{31}
-\contentsline {paragraph}{Model-Metamodel Co-evolution Challenges}{31}
-\contentsline {paragraph}{General Challenges for Evolution in MDE}{31}
+\contentsline {subsection}{\numberline {2.1.2}Metamodelling}{8}
+\contentsline {subsubsection}{MOF}{9}
+\contentsline {subsection}{\numberline {2.1.3}Model-Driven Engineering}{10}
+\contentsline {subsubsection}{Model Transformation}{10}
+\contentsline {paragraph}{Model-to-Model Transformation}{10}
+\contentsline {paragraph}{Model-to-Text Transformation}{10}
+\contentsline {paragraph}{Text-to-Model Transformation}{10}
+\contentsline {subsubsection}{Model Validation}{10}
+\contentsline {subsubsection}{Model Comparison}{10}
+\contentsline {subsubsection}{Model Merging}{10}
+\contentsline {section}{\numberline {2.2}Approaches to MDE}{10}
+\contentsline {subsection}{\numberline {2.2.1}MDA}{10}
+\contentsline {subsection}{\numberline {2.2.2}Methods? Approaches?}{12}
+\contentsline {subsubsection}{Architecture-Centric Model-Driven Software Development}{12}
+\contentsline {subsubsection}{Domain-Specific Modelling}{12}
+\contentsline {subsubsection}{Microsoft Software Factories}{13}
+\contentsline {subsubsection}{Summary}{14}
+\contentsline {section}{\numberline {2.3}MDE Tools}{14}
+\contentsline {subsection}{\numberline {2.3.1}Eclipse Modelling Framework}{15}
+\contentsline {subsection}{\numberline {2.3.2}Epsilon}{15}
+\contentsline {section}{\numberline {2.4}Research Relating to MDE}{16}
+\contentsline {subsection}{\numberline {2.4.1}Domain-Specific Languages}{16}
+\contentsline {subsection}{\numberline {2.4.2}Language-Oriented Programming}{17}
+\contentsline {subsection}{\numberline {2.4.3}Grammarware}{18}
+\contentsline {section}{\numberline {2.5}Benefits of and Current Challenges for MDE}{18}
+\contentsline {chapter}{\numberline {3}Literature Review}{19}
+\contentsline {section}{\numberline {3.1}Software Evolution Theory}{19}
+\contentsline {subsection}{\numberline {3.1.1}Categories of Software Evolution}{19}
+\contentsline {subsection}{\numberline {3.1.2}Refactoring}{20}
+\contentsline {subsection}{\numberline {3.1.3}Patterns and anti-patterns}{21}
+\contentsline {subsection}{\numberline {3.1.4}Traceability}{22}
+\contentsline {section}{\numberline {3.2}Software Evolution in Practice}{24}
+\contentsline {subsection}{\numberline {3.2.1}Programming Language Evolution}{24}
+\contentsline {subsubsection}{Reduction}{24}
+\contentsline {subsubsection}{Revolution}{24}
+\contentsline {subsection}{\numberline {3.2.2}Schema Evolution}{25}
+\contentsline {subsubsection}{XML Schema Evolution}{25}
+\contentsline {subsubsection}{Relational Database Schema Evolution}{26}
+\contentsline {subsection}{\numberline {3.2.3}Grammar Evolution}{28}
+\contentsline {subsection}{\numberline {3.2.4}Evolution of MDE Artefacts}{29}
+\contentsline {subsubsection}{Model Refactoring}{30}
+\contentsline {subsubsection}{Model Synchronisation}{33}
+\contentsline {paragraph}{Incremental Transformation}{33}
+\contentsline {paragraph}{Towards automated model synchronisation}{34}
+\contentsline {paragraph}{Synchronisation of models with text and trace links}{36}
+\contentsline {subsubsection}{Model-metamodel Co-Evolution}{36}
+\contentsline {paragraph}{Co-evolution theory}{37}
+\contentsline {paragraph}{Co-evolution patterns}{37}
+\contentsline {paragraph}{Co-evolution approaches}{37}
+\contentsline {paragraph}{Summary}{39}
+\contentsline {subsubsection}{Visualisation}{39}
+\contentsline {section}{\numberline {3.3}Summary}{40}
+\contentsline {paragraph}{Model Refactoring Challenges}{40}
+\contentsline {paragraph}{Model Synchronisation Challenges}{41}
+\contentsline {paragraph}{Model-Metamodel Co-evolution Challenges}{41}
+\contentsline {paragraph}{General Challenges for Evolution in MDE}{41}
 \contentsline {chapter}{\numberline {4}Analysis}{33}
 \contentsline {section}{\numberline {4.1}Locating Data}{33}
 \contentsline {subsection}{\numberline {4.1.1}Requirements}{34}

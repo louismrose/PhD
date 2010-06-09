@@ -18,6 +18,11 @@ Christopher Alexander, Sara Ishikawa, and Murray Silverstein.
   Environmental Structure Series)}.
 \newblock Oxford University Press, 1977.
 
+\bibitem[\'{A}lvarez {\it et al.}\  2001]{alvarez01mml}{$~$}
+Jos\'{e} \'{A}lvarez, Andy Evans, and Paul Sammut.
+\newblock {MML} and the metamodel architecture.
+\newblock In {\em Proc. Workshop on Transformation in {UML}}, 2001.
+
 \bibitem[Arendt {\it et al.}\  2009]{arendt09refactoring}{$~$}
 Thorsten Arendt, Florian Mantz, Lars Schneider, and Gabriele Taentzer.
 \newblock Model refactoring in eclipse by {LTK}, {EWL}, and {EMF Refactor}: A
@@ -102,6 +107,12 @@ Julien Cervelle, R\'{e}mi Forax, and Gilles Roussel.
 \newblock In {\em Principles and Practice of Programming in Java}, pages
   13--20. ACM, 2006.
 
+\bibitem[Ceteva 2008]{xmf}{$~$}
+Ceteva.
+\newblock {XMF} -- the extensible programming language [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.ceteva.com/xmf.html}, 2008.
+
 \bibitem[Chen \& Chou 1999]{chen99consistency}{$~$}
 J.Y.J. Chen and S.C. Chou.
 \newblock Consistency management in a process environment.
@@ -111,6 +122,13 @@ J.Y.J. Chen and S.C. Chou.
 Antonio Cicchetti, Davide~Di Ruscio, Romina Eramo, and Alfonso Pierantonio.
 \newblock Automating co-evolution in model-driven engineering.
 \newblock In {\em Proc. {EDOC}}, pages 222--231. IEEE Computer Society, 2008.
+
+\bibitem[Clark {\it et al.}\  2008]{clark08superlanguages}{$~$}
+Tony Clark, Paul Sammut, and James Willians.
+\newblock Superlanguages: Developing languages and applications with {XMF}
+  [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.ceteva.com/docs/Superlanguages.pdf}, 2008.
 
 \bibitem[Cleland-Huang {\it et al.}\  2003]{cleland03eventbased}{$~$}
 Jane Cleland-Huang, Carl~K. Chang, and Mark Christensen.
@@ -128,6 +146,11 @@ M.~Costa and A.R. da~Silva.
 Krzysztof Czarnecki and Simon Helsen.
 \newblock Feature-based survey of model transformation approaches.
 \newblock {\em IBM Systems Journal}, 45(3):621--646, 2006.
+
+\bibitem[Deursen {\it et al.}\  2000]{deursen00dslbib}{$~$}
+Arie van Deursen, Paul Klint, and Joost Visser.
+\newblock Domain-specific languages: An annotated bibliography.
+\newblock {\em {SIGPLAN} Notices}, 35(6):26--36, 2000.
 
 \bibitem[Deursen {\it et al.}\  2007]{deursen07mdse}{$~$}
 Arie van Deursen, Eelco Visser, and Jos Warmer.
@@ -159,6 +182,13 @@ Danny Dig, Kashif Manzoor, Ralph Johnson, and Tien~N. Nguyen.
 \newblock In {\em Proc. International Conference on Software Engineering},
   pages 427--436. IEEE Computer Society, 2007.
 
+\bibitem[Dmitriev 2004]{dmitriev04lop}{$~$}
+Sergey Dmitriev.
+\newblock Language oriented programming: The next programming paradigm.
+\newblock {\em {JetBrains onBoard} [online]}, 1, 2004.
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.onboard.jetbrains.com/is1/articles/04/10/lop/}.
+
 \bibitem[Drivalos {\it et al.}\  2008]{drivalos08rigorously}{$~$}
 Nicholas Drivalos, Richard~F. Paige, Kiran~J. Fernandes, and Dimitrios~S.
   Kolovos.
@@ -172,7 +202,25 @@ St\'{e}phane Ducasse, Matthias Rieger, and Serge Demeyer.
 \newblock In {\em Proc. International Conference on Software Maintenance},
   pages 109--118. IEEE Computer Society, 1999.
 
-\bibitem[Eclipse 2008]{gmt}{$~$}
+\bibitem[Eclipse 2008a]{emf}{$~$}
+Eclipse.
+\newblock {Eclipse Modeling Framework} project [online].
+\newblock [Accessed 22 January 2009] Available at:
+  \url{http://www.eclipse.org/modeling/emf/}, 2008.
+
+\bibitem[Eclipse 2008b]{eclipse}{$~$}
+Eclipse.
+\newblock Eclipse project [online].
+\newblock [Accessed 20 January 2009] Available at:
+  \url{http://www.eclipse.org}, 2008.
+
+\bibitem[Eclipse 2008c]{epsilon}{$~$}
+Eclipse.
+\newblock {Epsilon} home page [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.eclipse.org/gmt/epsilon/}, 2008.
+
+\bibitem[Eclipse 2008d]{gmt}{$~$}
 Eclipse.
 \newblock {Generative Modelling Technologies} project [online].
 \newblock [Accessed 30 June 2008] Available at:
@@ -235,6 +283,19 @@ Martin Fowler.
 \newblock {\em Patterns of Enterprise Application Architecture}.
 \newblock Addison-Wesley, 2002.
 
+\bibitem[Fowler 2005]{fowler05language}{$~$}
+Martin Fowler.
+\newblock Language workbenches: The killer-app for domain specific languages?
+  [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.martinfowler.com/articles/languageWorkbench.html}, 2005.
+
+\bibitem[Frankel 2002]{frankel02mda}{$~$}
+David Frankel.
+\newblock {\em Model Driven Architecture: Applying MDA to Enterprise
+  Computing}.
+\newblock Wiley, 2002.
+
 \bibitem[Fritzsche {\it et al.}\  2008]{fritzsche08tracing}{$~$}
 M.~Fritzsche, J.~Johannes, S.~Zschaler, A.~Zherebtsov, and A.~Terekhov.
 \newblock Application of tracing techniques in {Model-Driven Performance
@@ -263,6 +324,17 @@ Kelly Garc{\'e}s, Fr{\'e}d{\'e}ric Jouault, Pierre Cointe, and Jean
 James Gosling, Bill Joy, Guy Steele, and Gilad Bracha.
 \newblock {\em The Java\texttrademark\ Language Specification}.
 \newblock Addison-Wesley, Boston, MA, USA, 2005.
+
+\bibitem[Graham 1993]{graham93lisp}{$~$}
+Paul Graham.
+\newblock {\em On Lisp: Advanced Techniques for Common Lisp}.
+\newblock Prentice-Hall, 1993.
+
+\bibitem[Greenfield {\it et al.}\  2004]{greenfield04software}{$~$}
+Jack Greenfield, Keith Short, Steve Cook, and Stuart Kent.
+\newblock {\em Software Factories: Assembling Applications with Patterns,
+  Models, Frameworks, and Tools}.
+\newblock Wiley, 2004.
 
 \bibitem[Gronback 2006]{gronback06gmf}{$~$}
 Richard Gronback.
@@ -319,6 +391,23 @@ IRISA.
 \newblock {Sintaks}.
 \newblock \url{http://www.kermeta.org/sintaks/}, 2007.
 
+\bibitem[ISO/IEC 1996]{ebnf}{$~$}
+Information~Technology ISO/IEC.
+\newblock {Syntactic metalanguage -- Extended BNF}.
+\newblock {ISO 14977:1996 International Standard}, 1996.
+
+\bibitem[ISO/IEC 2002]{z}{$~$}
+Information~Technology ISO/IEC.
+\newblock {Z Formal Specification Notation -- Syntax, Type System and
+  Semantics}.
+\newblock {ISO 13568:2002 International Standard}, 2002.
+
+\bibitem[JetBrains 2008]{mps}{$~$}
+JetBrains.
+\newblock {MPS -- Meta Programming System} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.jetbrains.com/mps/index.html}, 2008.
+
 \bibitem[Jouault \& Kurtev 2005]{jouault05transforming}{$~$}
 Fr{\'e}d{\'e}ric Jouault and Ivan Kurtev.
 \newblock Transforming models with {ATL}.
@@ -337,6 +426,11 @@ Yoshio Kataoka, Michael~D. Ernst, William~G. Griswold, and David Notkin.
 \newblock In {\em Proc. International Conference on Software Maintenance},
   pages 736--743. IEEE Computer Society, 2001.
 
+\bibitem[Kelly \& Tolvanen 2008]{kelly08dsm}{$~$}
+Steven Kelly and Juha-Pekka Tolvanen.
+\newblock {\em Domain-Specific Modelling}.
+\newblock Wiley, 2008.
+
 \bibitem[Kerievsky 2004]{kerievsky04refactoring}{$~$}
 Joshua Kerievsky.
 \newblock {\em Refactoring to Patterns}.
@@ -354,7 +448,19 @@ P.~Klint, R.~L\"{a}mmel, and C.~Verhoef.
 \newblock {\em {ACM} Transactions on Software Engineering Methodology},
   14:331--380, 2003.
 
-\bibitem[Kolovos {\it et al.}\  2006]{kolovos06eol}{$~$}
+\bibitem[Kolovos {\it et al.}\  2006a]{kolovos06epsilondt}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock Epsilon development tools for eclipse.
+\newblock In {\em Proc. Eclipse Summit}, Esslingen, Germany, 2006.
+
+\bibitem[Kolovos {\it et al.}\  2006b]{kolovos06ecl}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock Model comparison: a foundation for model composition and model
+  transformation testing.
+\newblock In {\em {Proc. Workshop on Global Integrated Model Management}},
+  pages 13--20, 2006.
+
+\bibitem[Kolovos {\it et al.}\  2006c]{kolovos06eol}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock {The Epsilon Object Language (EOL)}.
 \newblock In {\em Proc. {ECMDA-FA}}, volume 4066 of {\em LNCS}, pages 128--142.
@@ -475,6 +581,17 @@ John McCarthy.
 \newblock History of {L}isp.
 \newblock {\em History of Programming Languages}, 1:217--223, 1978.
 
+\bibitem[McNeile 2003]{mcneile03mda}{$~$}
+Ashley McNeile.
+\newblock {MDA}: The vision with the hole?
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.metamaxim.com/download/documents/MDAv1.pdf }, 2003.
+
+\bibitem[Mellor \& Balcer 2002]{mellor02executable}{$~$}
+Stephen~J. Mellor and Marc Balcer.
+\newblock {\em Executable {UML}: A Foundation for Model-Driven Architectures}.
+\newblock Addison-Wesley Longman, 2002.
+
 \bibitem[Mens \& Tourw\'{e} 2004]{mens04survey}{$~$}
 Tom Mens and Tom Tourw\'{e}.
 \newblock A survey of software refactoring.
@@ -574,11 +691,17 @@ William~F. Opdyke.
 \newblock PhD thesis, University of Illinois at Urbana-Champaign, IL, USA,
   1992.
 
-\bibitem[openArchitectureWare 2007]{oaw}{$~$}
+\bibitem[openArchitectureWare 2007a]{oaw}{$~$}
 openArchitectureWare.
 \newblock {openArchitectureWare Project Website} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/gmt/oaw/}, 2007.
+
+\bibitem[openArchitectureWare 2007b]{xpand}{$~$}
+openArchitectureWare.
+\newblock {XPand Language Reference} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.eclipse.org/gmt/oaw/doc/4.1/r20_xPandReference.pdf}, 2007.
 
 \bibitem[Paige {\it et al.}\  2009]{paige08fptc}{$~$}
 Richard~F. Paige, Louis~M. Rose, Xiaocheng Ge, Dimitrios~S. Kolovos, and
@@ -692,6 +815,12 @@ Jonathan Sprinkle.
 \newblock PhD thesis, Universita' degli Studi dell'Aquila, L'Aquila, Italy,
   2008.
 
+\bibitem[Stahl {\it et al.}\  2006]{stahl06mdsd}{$~$}
+Thomas Stahl, Markus Voelter, and Krzysztof Czarnecki.
+\newblock {\em Model-Driven Software Development: Technology, Engineering,
+  Management}.
+\newblock Wiley, 2006.
+
 \bibitem[Steinberg {\it et al.}\  2008]{steinberg09emf}{$~$}
 Dave Steinberg, Frank Budinsky, Marcelo Paternostro, and Ed~Merks.
 \newblock {\em {EMF}: {E}clipse {M}odeling {F}ramework}.
@@ -708,7 +837,7 @@ Laurence Tratt.
 \newblock A change propagating model transformation language.
 \newblock {\em Journal of Object Technology}, 7(3):107--124, 2008.
 
-\bibitem[Varr\'{o} \& Balogh 2007]{VIATRA}{$~$}
+\bibitem[Varr\'{o} \& Balogh 2007]{viatra}{$~$}
 D\'{a}niel Varr\'{o} and Andr\'{a}s Balogh.
 \newblock The model transformation language of the {VIATRA2} framework.
 \newblock {\em Science of Computer Programming}, 68(3):187--207, 2007.
@@ -742,6 +871,11 @@ Malcolm Wallace.
   propagation and transformation.
 \newblock {\em Electronic Notes in Theoretical Computer Science},
   141(3):53--71, 2005.
+
+\bibitem[Ward 1994]{ward94lop}{$~$}
+Martin~P. Ward.
+\newblock Language-oriented programming.
+\newblock {\em Software --- Concepts and Tools}, 15(4):147--161, 1994.
 
 \bibitem[Watson 2008]{watson08mdahistory}{$~$}
 Andrew Watson.

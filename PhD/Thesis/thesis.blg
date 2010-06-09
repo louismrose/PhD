@@ -4,6 +4,11 @@ A level-1 auxiliary file: 1.Introduction/introduction.aux
 A level-1 auxiliary file: 2.Background/background.aux
 A level-1 auxiliary file: 3.LiteratureReview/literature_review.aux
 A level-1 auxiliary file: 4.Analysis/analysis.aux
+Case mismatch error between cite keys VIATRA and viatra
+---line 109 of file 4.Analysis/analysis.aux
+ : \citation{VIATRA
+ :                 }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: 5.Implementation/implementation.aux
 A level-1 auxiliary file: 6.Evaluation/evaluation.aux
 A level-1 auxiliary file: 7.Conclusion/conclusion.aux
@@ -37,45 +42,45 @@ Name 3 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A.
 while executing---line 1253 of file longname.bst
 Name 4 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1253 of file longname.bst
-You've used 129 entries,
+You've used 152 entries,
             2472 wiz_defined-function locations,
-            1174 strings with 23422 characters,
-and the built_in function-call counts, 51562 in all, are:
-= -- 5219
-> -- 1910
-< -- 61
-+ -- 614
-- -- 588
-* -- 3660
-:= -- 7960
-add.period$ -- 419
-call.type$ -- 129
-change.case$ -- 790
-chr.to.int$ -- 120
-cite$ -- 130
-duplicate$ -- 2376
-empty$ -- 4236
-format.name$ -- 757
-if$ -- 11051
-int.to.chr$ -- 10
+            1257 strings with 26470 characters,
+and the built_in function-call counts, 58743 in all, are:
+= -- 5911
+> -- 2186
+< -- 62
++ -- 700
+- -- 668
+* -- 4108
+:= -- 9125
+add.period$ -- 489
+call.type$ -- 152
+change.case$ -- 916
+chr.to.int$ -- 137
+cite$ -- 153
+duplicate$ -- 2698
+empty$ -- 4863
+format.name$ -- 864
+if$ -- 12556
+int.to.chr$ -- 16
 int.to.str$ -- 0
-missing$ -- 117
-newline$ -- 648
-num.names$ -- 388
-pop$ -- 900
+missing$ -- 135
+newline$ -- 764
+num.names$ -- 457
+pop$ -- 1081
 preamble$ -- 1
-purify$ -- 939
+purify$ -- 1094
 quote$ -- 0
-skip$ -- 1927
+skip$ -- 2197
 stack$ -- 0
-substring$ -- 2656
-swap$ -- 694
-text.length$ -- 61
+substring$ -- 2881
+swap$ -- 749
+text.length$ -- 62
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 964
+type$ -- 1124
 warning$ -- 1
-while$ -- 421
-width$ -- 135
-write$ -- 1680
-(There were 11 error messages)
+while$ -- 473
+width$ -- 157
+write$ -- 1963
+(There were 12 error messages)

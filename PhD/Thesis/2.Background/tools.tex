@@ -1,0 +1,38 @@
+%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+
+\section{MDE Tools}
+\label{sec:mde_tools}
+For model-driven engineering to be applicable in the large, and to complex systems, mature and powerful model management tools and languages must be available. Such tools and languages are beginning to emerge, e.g., model-to-
+model (M2M) transformation tools such as ATL \cite{atl} and VIATRA \cite{viatra}, workflow architectures such as oAW \cite{oaw}, and model-to-text (M2T) transformation tools such as MOFScript \cite{oldevik05toward} and XPand \cite{xpand}.
+
+This section provides a brief overview of the Eclipse Modelling Framework \cite{emf}, which underpins many of these tools and facilitates their interoperability. Subsequently, a discussion of Epsilon \cite{epsilon}, an extensible platform for the specification of languages that operate on models, is presented. The highly extensible nature of Epsilon (elaborated on below) makes it an ideal host for the rapid prototyping of languages to better support evolution and migration in MDE. 
+
+\subsection{Eclipse Modelling Framework}
+\cite{eclipse} is an open-source community whose projects seek to build an extensible development platform. The Eclipse Modelling Framework (EMF) project \cite{emf} enables MDE within Eclipse. EMF provides a modelling framework with code generation facilities. EMF also provides a meta-modelling language, Ecore, for defining the structure of models. Ecore is an implementation of the MOF 2.0 specification \cite{mof}.
+
+EMF provides support for making changes to Ecore models, but does not automate migration activities. Instead, EMF provides hooks for monitoring changes made to Ecore models and their instances, which may then be used to construct tools for observing, categorising and reacting to evolution. 
+
+\label{LitReview:Epsilon}
+\subsection{Epsilon}
+The Extensible Platform for Specification of Integrated Languages for mOdel maNagement (Epsilon) \cite{epsilon} is a suite of tools and domain-specific languages for use in model-driven engineering. Epsilon comprises a number of integrated model management languages, based upon a common infrastructure, for performing tasks such as model merging, model transformation and intermodel consistency checking \cite{kolovos06epsilondt}.  Whilst many model management languages are bound to a particular subset of modelling technologies, limiting their applicability, Epsilon is metamodel-agnostic -- models written in any modelling language can be manipulated by Epsilon's model management languages \cite{kolovos06eol}. (Epsilon currently supports models implemented using EMF, MOF 1.4, pure XML, or CZT.)
+
+Epsilon is presently a member of the Eclipse GMT \cite{gmt} project, a research incubator for the top-level modelling technology project. Epsilon provides a lightweight means for defining new experimental languages for MDE Feedback from users of the GMT components is particularly valuable in contributing to research in this area.
+
+Figure \ref{fig:epsilon} illustrates the various components of Epsilon.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.6]{Epsilon.png}
+  \end{center}
+  \caption{The architecture of Epsilon, taken from \cite{rose08egl}.}
+  \label{fig:epsilon}
+\end{figure}
+
+The Epsilon design promotes reuse when building task-specific model management languages and tools.  Each Epsilon language (such as EOL \cite{kolovos06eol}, ECL \cite{kolovos06ecl}, EVL \cite{kolovos08evl}) can be reused wholesale in the production of new languages. Ideally, the developer of a new language only has to design language concepts and logic that do not already exist in Epsilon languages. As such, new task-specific languages can be implemented in a minimalistic fashion. We have demonstrated this claim by contributing to the platform the Epsilon Generation Language (EGL) for specifying code generating templates \cite{rose08egl}.
+
+The core language, the Epsilon Object Language (EOL) \cite{kolovos06eol} provides functionality similar to that of OCL \cite{ocl2}. However, EOL provides an extended feature set, which includes the ability to update models, access to multiple models, conditional and loop statements, statement sequencing, and provision of standard output and error streams.
+
+As shown in Figure \ref{fig:epsilon}, every Epsilon language re-uses EOL, so improvements to this language enhance the entire platform. One recent example is the provision of constructs for performing profiling. Developers using any Epsilon language may now monitor and fine-tune performance. EOL also allows developers to delegate computationally intensive tasks to extension points, where the task can be authored in Java.
+
+Due to the high level of re-use available in the platform and its presence in a research incubator (The Eclipse Generative Modelling Technologies Project \cite{gmt}), Epsilon is uniquely positioned as an ideal host for the rapid prototyping of languages for better supporting automated migration during MDE.
