@@ -66,17 +66,39 @@ In the past, the means for describing modelling constructs has been inconsistent
 Model-driven engineering (MDE) is a principled approach to software engineering in which models are produced throughout the engineering process. Models are manipulated throughout development to produce software. This thesis uses the term \emph{model management}, defined in \cite{kolovos09thesis}, to refer to development activities that manipulate models for the purpose of producing software. Typical model management activities are discussed in this section.
 
 \subsubsection{Model Transformation}
+Model transformation is a development activity in which software artefacts are derived from others, according to some well-defined specification. Model transformations are specified between modelling languages (model-to-model transformation), between modelling languages and textual artefacts (model-to-text-transformation) and between textual artefacts and modelling languages (text-to-model transformation).
 
-\paragraph{Model-to-Model Transformation}
+\cite{czarnecki06survey} survey describes a feature model for distinguishing and categorising model transformation approaches. Several of the features described by Czarnecki and Helsen are relevant to the research presented in this thesis, and are now discussed. 
 
-\paragraph{Model-to-Text Transformation}
+% TODO Styles: imperative / hybrid / declarative 
 
-\paragraph{Text-to-Model Transformation}
+Transformations specified between the same source and target metamodel are termed \emph{endogenous}, while transformation specified between different source and target metamodels are term \emph{exogenous}. Endogenous transformations can typically be specified with a more compact syntax than exogenous transformations, because there is no need to specify mappings between source and target types.
+
+A \emph{new-target} transformation creates target models afresh on each invocation. An \emph{existing-target} transformation is executed on existing target models. Existing target transformations are used for partial (incremental) transformation and for preserving parts of the target that are not derived from the source.
+
+Endogenous, existing-target transformations are used to perform small or incremental updates to models, such as refactorings, which will be discussed in Chapter~\ref{LiteratureReview}.
+
+
+\paragraph{Model-to-Model (M2M) Transformation} M2M transformation has been characterised as the heart-and-soul of MDE \cite{sendall03heart}. Large and complex systems can be represented using several interdependent models. By automating the derivation of models from others, model transformation has the potential to reduce the cost of engineering large and complex systems.
+
+\cite{kolovos08etl} notes that the current consensus is that hybrid languages, such as QVT \cite{qvt} and ATL \cite{jouault05transforming} are more suitable for specifying model transformation than pure imperative or declarative languages. 
+
+\paragraph{Model-to-Text (M2T) Transformation} M2T transformation is an important model management task with a number of applications, including model serialisation (enabling model interchange); code and documentation generation; and model visualisation and exploration.  In 2005, the OMG \cite{omg} recognised the lack of a standardised in M2T transformation with its M2T Language Request for Proposals \cite{m2trfp}. In response, various M2T languages have been developed, including JET \cite{jet}, XPand 
+and MOFScript.
+
+Because M2T transformation is used to produce unstructured artefacts, M2T transformation has different requirements to M2M transformation. For instance, code generators often provide mechanisms for specifying sections of code to be completed manually and for preserving those hand-written sections. Traceability between structured and unstructured artefacts is also a key requirement for model-to-text (and text-to-model) transformation, and is discussed further in Chapter~\ref{LiteratureReview}.
+
+\paragraph{Text-to-Model (T2M) Transformation} T2M transformation is most often implemented as a parser that produces a model. Parser generators such as ANTLR \cite{antlrbook} can be used to produce a structured artefact (such as an abstract syntax tree) from text. T2M tools are built atop parser generators and post-process the structured artefacts such that they conform to the target metamodel. Xtext \cite{xtext} and EMFtext \cite{emftext} are contemporary examples of T2M tools that, given a grammar and a target metamodel, will automatically generate a parser that transforms text to a model.
 
 \subsubsection{Model Validation}
+Model validation provides a mechanism for managing the integrity of the software developed using MDE. A model that omits information is said to be \emph{incomplete}, while related models that suggest differences in the underlying phenomena are said to be \emph{contradicting}. Incompleteness and contradiction are two examples of \emph{inconsistency}. In MDE, inconsistency is detrimental, because, when artefacts are automatically derived from each other, the inconsistency of one artefact might be propagated to others. Model validation is used to detect, report and reconcile inconsistency throughout a MDE process.
 
-\subsubsection{Model Comparison}
+\cite{kolovos09thesis} observes that inconsistency detection is inherently pattern-based and, hence, higher-order languages are more suitable for model validation than 3G languages (such as Java). The Object Constraint Language (OCL) \cite{ocl2}, an OMG standard, can be used to specify consistency constraints on UML and MOF models. Unlike OCL, the xlinkit toolkit \cite{nentwich2003flexible} can be used for specifying inter-model consistency constraints. 
 
-\subsubsection{Model Merging}
+\subsubsection{Further model management activities}
+In addition to model transformation and validation, further examples of model management activities include model comparison (e.g. \cite{kolovos06ecl}), in which a \emph{trace} of similar and different elements is produced from two or more models, and model merging or weaving (e.g. \cite{kolovos07eml}), in which a two or more models are combined to produce a unified model.
 
+Further activities, such as model versioning and tracing, might be regarded as model management but, in the context of this thesis, are considered as evolutionary activities and as such are discussed in Chapter~\ref{LiteratureReview}.
 
+\subsection{Summary}
+This section has introduced the terminology and principles necessary for discussing MDE in this thesis. Models provide abstraction, capturing necessary and disregarding irrelevant details. Metamodels provide a structured mechanism for describing the syntactic and semantic rules to which a model most conform. Metamodels facilitate interoperability between modelling tools and MOF, the OMG standard metamodelling language, enables the development of tools that can be used with a range of metamodels, such as model management tools. Throughout model-driven engineering, models are manipulated to produce other development artefacts using model management activities such as model transformation and validation. Using the terms and principles described in this section, the ways in which model-driven engineering is performed in practice are now discussed.

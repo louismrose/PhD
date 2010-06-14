@@ -448,19 +448,14 @@ P.~Klint, R.~L\"{a}mmel, and C.~Verhoef.
 \newblock {\em {ACM} Transactions on Software Engineering Methodology},
   14:331--380, 2003.
 
-\bibitem[Kolovos {\it et al.}\  2006a]{kolovos06epsilondt}{$~$}
-Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
-\newblock Epsilon development tools for eclipse.
-\newblock In {\em Proc. Eclipse Summit}, Esslingen, Germany, 2006.
-
-\bibitem[Kolovos {\it et al.}\  2006b]{kolovos06ecl}{$~$}
+\bibitem[Kolovos {\it et al.}\  2006a]{kolovos06ecl}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model comparison: a foundation for model composition and model
   transformation testing.
 \newblock In {\em {Proc. Workshop on Global Integrated Model Management}},
   pages 13--20, 2006.
 
-\bibitem[Kolovos {\it et al.}\  2006c]{kolovos06eol}{$~$}
+\bibitem[Kolovos {\it et al.}\  2006b]{kolovos06eol}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock {The Epsilon Object Language (EOL)}.
 \newblock In {\em Proc. {ECMDA-FA}}, volume 4066 of {\em LNCS}, pages 128--142.
@@ -625,6 +620,12 @@ Pierre-Alain Muller and Michel Hassenforder.
 \newblock {HUTN as a Bridge between ModelWare and GrammarWare}.
 \newblock In {\em Proc. Workshop in Software Modelling Engineering}, 2005.
 
+\bibitem[Nentwich {\it et al.}\  2003]{nentwich2003flexible}{$~$}
+C.~Nentwich, W.~Emmerich, A.~Finkelstein, and E.~Ellmer.
+\newblock Flexible consistency checking.
+\newblock {\em ACM Transactions on Software Engineering and Methodology},
+  12(1):28--63, 2003.
+
 \bibitem[Nguyen {\it et al.}\  2005]{nguyen05versioning}{$~$}
 Tien~Nhut Nguyen, Cheng Thao, and Ethan~V. Munson.
 \newblock On product versioning for hypertexts.
@@ -680,7 +681,13 @@ OMG.
 \newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org/mof},
   2008.
 
-\bibitem[OMG 2008b]{omg}{$~$}
+\bibitem[OMG 2008b]{mda}{$~$}
+OMG.
+\newblock {Model Driven Architecture} [online].
+\newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org/mda/},
+  2008.
+
+\bibitem[OMG 2008c]{omg}{$~$}
 OMG.
 \newblock {Object Management Group} home page [online].
 \newblock [Accessed 30 June 2008] Available at: \url{http://www.omg.org}, 2008.
@@ -691,17 +698,11 @@ William~F. Opdyke.
 \newblock PhD thesis, University of Illinois at Urbana-Champaign, IL, USA,
   1992.
 
-\bibitem[openArchitectureWare 2007a]{oaw}{$~$}
+\bibitem[openArchitectureWare 2007]{oaw}{$~$}
 openArchitectureWare.
 \newblock {openArchitectureWare Project Website} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/gmt/oaw/}, 2007.
-
-\bibitem[openArchitectureWare 2007b]{xpand}{$~$}
-openArchitectureWare.
-\newblock {XPand Language Reference} [online].
-\newblock [Accessed 30 June 2008] Available at:
-  \url{http://www.eclipse.org/gmt/oaw/doc/4.1/r20_xPandReference.pdf}, 2007.
 
 \bibitem[Paige {\it et al.}\  2009]{paige08fptc}{$~$}
 Richard~F. Paige, Louis~M. Rose, Xiaocheng Ge, Dimitrios~S. Kolovos, and
@@ -837,7 +838,7 @@ Laurence Tratt.
 \newblock A change propagating model transformation language.
 \newblock {\em Journal of Object Technology}, 7(3):107--124, 2008.
 
-\bibitem[Varr\'{o} \& Balogh 2007]{viatra}{$~$}
+\bibitem[Varr\'{o} \& Balogh 2007]{VIATRA}{$~$}
 D\'{a}niel Varr\'{o} and Andr\'{a}s Balogh.
 \newblock The model transformation language of the {VIATRA2} framework.
 \newblock {\em Science of Computer Programming}, 68(3):187--207, 2007.
