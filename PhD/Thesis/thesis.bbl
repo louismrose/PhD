@@ -670,6 +670,12 @@ G{\o}ran~K. Olsen and Jon Oldevik.
 \newblock In {\em Proc. ECMDA-FA}, volume 4530 of {\em Lecture Notes in
   Computer Science}, pages 144--156. Springer, 2007.
 
+\bibitem[OMG 2001]{uml14}{$~$}
+OMG.
+\newblock {Unified Modelling Language 1.4 Specification} [online].
+\newblock [Accessed 15 September 2008] Available at:
+  \url{http://www.omg.org/spec/UML/1.4/}, 2001.
+
 \bibitem[OMG 2004]{hutn}{$~$}
 OMG.
 \newblock {Human-Usable Textual Notation 1.0 Specification} [online].
@@ -694,7 +700,13 @@ OMG.
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.omg.org/spec/UML/2.1.2/}, 2007.
 
-\bibitem[OMG 2007b]{xmi}{$~$}
+\bibitem[OMG 2007b]{uml22}{$~$}
+OMG.
+\newblock {Unified Modelling Language 2.2 Specification} [online].
+\newblock [Accessed 5 March 2010] Available at:
+  \url{http://www.omg.org/spec/UML/2.2/}, 2007.
+
+\bibitem[OMG 2007c]{xmi}{$~$}
 OMG.
 \newblock {XML Metadata Interchange 2.1.1 Specification} [online].
 \newblock [Accessed 30 June 2008] Available at:
@@ -795,7 +807,14 @@ Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
 \newblock An analysis of approaches to model migration.
 \newblock In {\em Proc. Joint {MoDSE-MCCM} Workshop}, 2009.
 
-\bibitem[Rose {\it et al.}\  2010a]{rose10concordance}{$~$}
+\bibitem[Rose {\it et al.}\  2010a]{rose10comparison}{$~$}
+Louis~M. Rose, Markus Herrmannsdoerfer, James~R. Williams, Dimitrios~S.
+  Kolovos, Kelly Garc\'{e}s, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock A comparison of model migration tools.
+\newblock In {\em Proc. MoDELS}, volume TBC of {\em Lecture Notes in Computer
+  Science}, page TBC. Springer, 2010.
+
+\bibitem[Rose {\it et al.}\  2010b]{rose10concordance}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Nicholas Drivalos, James.~R. Williams,
   Richard~F. Paige, Fiona~A.C. Polack, and Kiran~J. Fernandes.
 \newblock Concordance: An efficient framework for managing model integrity
@@ -803,23 +822,26 @@ Louis~M. Rose, Dimitrios~S. Kolovos, Nicholas Drivalos, James.~R. Williams,
 \newblock In {\em Proc. European Conference on Modelling Foundations and
   Applications}, 2010.
 
-\bibitem[Rose {\it et al.}\  2010b]{rose10flock}{$~$}
+\bibitem[Rose {\it et al.}\  2010c]{rose10ttc_case}{$~$}
+Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock Model migration case.
+\newblock In {\em Proc. TTC}, 2010.
+
+\bibitem[Rose {\it et al.}\  2010d]{rose10flock}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model migration with epsilon flock.
 \newblock In {\em Proc. ICMT}, volume 6142 of {\em Lecture Notes in Computer
   Science}, pages 184--198. Springer, 2010.
 
-\bibitem[Rose {\it et al.}\  2010c]{rose10comparison}{$~$}
-Louis~M. Rose, Dimitrios S. Kolovos Kelly~Garc\'{e}s Markus~Herrmannsdoerfer,
-  James R.~Williams, Richard~F. Paige, and Fiona~A.C. Polack.
-\newblock A comparison of model migration tools.
-\newblock In {\em Proc. MoDELS}, volume TBC of {\em Lecture Notes in Computer
-  Science}, page TBC. Springer, 2010.
-
 \bibitem[Selic 2003]{selic03pragmatics}{$~$}
 Bran Selic.
 \newblock The pragmatics of {Model-Driven Development}.
 \newblock {\em IEEE Software}, 20(5):19--25, 2003.
+
+\bibitem[Selic 2005]{selic05uml2}{$~$}
+Bran Selic.
+\newblock What’s new in {UML} 2.0?
+\newblock {\em {IBM Rational} software}, 2005.
 
 \bibitem[Sendall \& Kozaczynski 2003]{sendall03heart}{$~$}
 Shane Sendall and Wojtek Kozaczynski.

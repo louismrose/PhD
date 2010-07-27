@@ -11,16 +11,15 @@ A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
 Warning--I'm ignoring heidenreich09derivation's extra "year" field
---line 612 of file thesis.bib
-Repeated entry---line 1302 of file thesis.bib
+--line 619 of file thesis.bib
+Repeated entry---line 1325 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1324 of file thesis.bib
+Repeated entry---line 1347 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "uml21"
 Name 1 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
 while executing---line 1187 of file longname.bst
 Name 1 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
@@ -39,9 +38,7 @@ Name 3 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A.
 while executing---line 1187 of file longname.bst
 Name 4 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1187 of file longname.bst
-Name 2 in "Louis M. Rose and Markus Herrmannsdoerfer, James R. Williams, Dimitrios S. Kolovos, Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
-while executing---line 1187 of file longname.bst
-Too many commas in name 2 of "Louis M. Rose and Markus Herrmannsdoerfer, James R. Williams, Dimitrios S. Kolovos, Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" for entry rose10comparison
+Name 5 in "Louis M. Rose and Markus Herrmannsdoerfer and James R. Williams and Dimitrios S. Kolovos and Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
 while executing---line 1187 of file longname.bst
 Name 1 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
 while executing---line 1187 of file longname.bst
@@ -68,49 +65,47 @@ Name 2 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." 
 while executing---line 1253 of file longname.bst
 Name 3 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
 while executing---line 1253 of file longname.bst
-Name 2 in "Louis M. Rose and Markus Herrmannsdoerfer, James R. Williams, Dimitrios S. Kolovos, Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
+Name 5 in "Louis M. Rose and Markus Herrmannsdoerfer and James R. Williams and Dimitrios S. Kolovos and Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
 while executing---line 1253 of file longname.bst
-Too many commas in name 2 of "Louis M. Rose and Markus Herrmannsdoerfer, James R. Williams, Dimitrios S. Kolovos, Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" for entry rose10comparison
-while executing---line 1253 of file longname.bst
-You've used 158 entries,
+You've used 162 entries,
             2472 wiz_defined-function locations,
-            1284 strings with 27270 characters,
-and the built_in function-call counts, 61855 in all, are:
-= -- 6234
-> -- 2303
+            1295 strings with 27654 characters,
+and the built_in function-call counts, 63150 in all, are:
+= -- 6355
+> -- 2366
 < -- 72
-+ -- 741
-- -- 706
-* -- 4363
-:= -- 9577
-add.period$ -- 512
-call.type$ -- 158
-change.case$ -- 957
-chr.to.int$ -- 141
-cite$ -- 159
-duplicate$ -- 2840
-empty$ -- 5096
-format.name$ -- 910
-if$ -- 13240
-int.to.chr$ -- 18
++ -- 763
+- -- 726
+* -- 4446
+:= -- 9791
+add.period$ -- 524
+call.type$ -- 162
+change.case$ -- 983
+chr.to.int$ -- 143
+cite$ -- 163
+duplicate$ -- 2894
+empty$ -- 5201
+format.name$ -- 934
+if$ -- 13505
+int.to.chr$ -- 20
 int.to.str$ -- 0
-missing$ -- 143
-newline$ -- 794
-num.names$ -- 475
-pop$ -- 1116
+missing$ -- 145
+newline$ -- 814
+num.names$ -- 487
+pop$ -- 1150
 preamble$ -- 1
-purify$ -- 1143
+purify$ -- 1173
 quote$ -- 0
-skip$ -- 2317
+skip$ -- 2364
 stack$ -- 0
-substring$ -- 3075
-swap$ -- 814
+substring$ -- 3103
+swap$ -- 823
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1164
+type$ -- 1196
 warning$ -- 1
-while$ -- 500
-width$ -- 163
-write$ -- 2050
-(There were 27 error messages)
+while$ -- 508
+width$ -- 167
+write$ -- 2098
+(There were 25 error messages)
