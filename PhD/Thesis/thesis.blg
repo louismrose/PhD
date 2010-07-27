@@ -10,23 +10,16 @@ A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Repeated entry---line 1218 of file thesis.bib
+Warning--I'm ignoring heidenreich09derivation's extra "year" field
+--line 612 of file thesis.bib
+Repeated entry---line 1302 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1240 of file thesis.bib
+Repeated entry---line 1324 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "sendall03heart"
-Warning--I didn't find a database entry for "m2trfp"
-Warning--I didn't find a database entry for "jet"
-Warning--I didn't find a database entry for "antlrbook"
-Warning--I didn't find a database entry for "xtext"
-Warning--I didn't find a database entry for "emftext"
-Warning--I didn't find a database entry for "kolovos07eml"
-Warning--I didn't find a database entry for "xmi21"
-Warning--I didn't find a database entry for "czt"
 Name 1 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
 while executing---line 1187 of file longname.bst
 Name 1 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
@@ -44,6 +37,16 @@ while executing---line 1187 of file longname.bst
 Name 3 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1187 of file longname.bst
 Name 4 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
+while executing---line 1187 of file longname.bst
+Name 2 in "Louis M. Rose and Markus Herrmannsdoerfer, James R. Williams, Dimitrios S. Kolovos, Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
+while executing---line 1187 of file longname.bst
+Too many commas in name 2 of "Louis M. Rose and Markus Herrmannsdoerfer, James R. Williams, Dimitrios S. Kolovos, Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" for entry rose10comparison
+while executing---line 1187 of file longname.bst
+Name 1 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
+while executing---line 1187 of file longname.bst
+Name 1 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
+while executing---line 1187 of file longname.bst
+Name 2 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
 while executing---line 1187 of file longname.bst
 Warning--can't use both volume and number fields in banerjee87semantics
 Name 1 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
@@ -54,51 +57,59 @@ Name 3 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A.
 while executing---line 1253 of file longname.bst
 Name 4 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1253 of file longname.bst
+Name 1 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
+while executing---line 1253 of file longname.bst
+Name 2 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
+while executing---line 1253 of file longname.bst
 Name 1 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
 while executing---line 1253 of file longname.bst
 Name 2 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
 while executing---line 1253 of file longname.bst
 Name 3 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
 while executing---line 1253 of file longname.bst
-You've used 152 entries,
+Name 2 in "Louis M. Rose and Markus Herrmannsdoerfer, James R. Williams, Dimitrios S. Kolovos, Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
+while executing---line 1253 of file longname.bst
+Too many commas in name 2 of "Louis M. Rose and Markus Herrmannsdoerfer, James R. Williams, Dimitrios S. Kolovos, Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" for entry rose10comparison
+while executing---line 1253 of file longname.bst
+You've used 158 entries,
             2472 wiz_defined-function locations,
-            1269 strings with 26588 characters,
-and the built_in function-call counts, 58816 in all, are:
-= -- 5920
-> -- 2191
-< -- 62
-+ -- 701
-- -- 670
-* -- 4122
-:= -- 9139
-add.period$ -- 489
-call.type$ -- 152
-change.case$ -- 917
-chr.to.int$ -- 138
-cite$ -- 153
-duplicate$ -- 2695
-empty$ -- 4862
-format.name$ -- 866
-if$ -- 12565
-int.to.chr$ -- 15
+            1283 strings with 27265 characters,
+and the built_in function-call counts, 61855 in all, are:
+= -- 6234
+> -- 2303
+< -- 72
++ -- 741
+- -- 706
+* -- 4363
+:= -- 9577
+add.period$ -- 512
+call.type$ -- 158
+change.case$ -- 957
+chr.to.int$ -- 141
+cite$ -- 159
+duplicate$ -- 2840
+empty$ -- 5096
+format.name$ -- 910
+if$ -- 13240
+int.to.chr$ -- 18
 int.to.str$ -- 0
-missing$ -- 135
-newline$ -- 764
-num.names$ -- 457
-pop$ -- 1076
+missing$ -- 143
+newline$ -- 794
+num.names$ -- 475
+pop$ -- 1116
 preamble$ -- 1
-purify$ -- 1095
+purify$ -- 1143
 quote$ -- 0
-skip$ -- 2199
+skip$ -- 2317
 stack$ -- 0
-substring$ -- 2900
-swap$ -- 749
-text.length$ -- 62
+substring$ -- 3075
+swap$ -- 814
+text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1124
+type$ -- 1164
 warning$ -- 1
-while$ -- 475
-width$ -- 158
-write$ -- 1963
-(There were 18 error messages)
+while$ -- 500
+width$ -- 163
+write$ -- 2050
+(There were 27 error messages)

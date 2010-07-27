@@ -55,16 +55,16 @@ For situations when a model does not conform to its metamodel, this thesis propo
   \label{fig:slot_model}
 \end{figure}
 
-Using the metamodel in Figure~\ref{fig:slot_model} in conjunction with MOF, conformance constraints can be expressed, as shown below. A minimal subset of MOF is shown in Figure~\ref{fig:mof}.
+Using the metamodel in Figure~\ref{fig:slot_model} in conjunction with MOF, conformance constraints can be expressed, as shown below. A minimal subset of MOF is shown in Figure~\ref{fig:minimal_mof}.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=3.3in]{5.Implementation/mof.pdf}
   \caption{Minimal MOF metamodel.}
-  \label{fig:mof}
+  \label{fig:minimal_mof}
 \end{figure}
 
-The following constraints between metamodels (e.g. instances of MOF, Figure~\ref{fig:mof}) and models represented with a generic metamodel (e.g. instances of Figure~\ref{fig:slot_model}) can be used to express conformance:
+The following constraints between metamodels (e.g. instances of MOF, Figure~\ref{fig:minimal_mof}) and models represented with a generic metamodel (e.g. instances of Figure~\ref{fig:slot_model}) can be used to express conformance:
 
 \begin{enumerate}
 	\item Each object's type must be the name of some non-abstract metamodel class.
@@ -247,7 +247,7 @@ Some limited customisation of HUTN for particular metamodels can be achieved usi
 
 
 \subsection{Epsilon HUTN}
-To investigate the extent to which HUTN can be used during user-driven co-evolution, an implementation was constructed. The implementation, Epsilon HUTN, makes extensive use of the Epsilon model management platform. Before presenting HUTN, it is necessary to revisit some details of the Epsilon \cite{kolovos09thesis} platform, which was introduced in Section~\ref{subsubsec:epsilon}.
+To investigate the extent to which HUTN can be used during user-driven co-evolution, an implementation was constructed. The implementation, Epsilon HUTN, makes extensive use of the Epsilon model management platform. Before presenting HUTN, it is necessary to revisit some details of the Epsilon \cite{kolovos09thesis} platform, which was introduced in Section~\ref{subsec:epsilon}.
 
 \subsubsection{The Epsilon Platform}
 Epsilon, a component of the Eclipse GMT project \cite{gmt}, provides infrastructure for implementing uniform and interoperable model management languages, for performing tasks such as model merging, model transformation and inter-model consistency checking. 
@@ -606,12 +606,11 @@ To apply co-evolution operators, COPE requires the metamodel developer to use a 
 
 \subsection{Implementation}
 \label{subsec:flock_implementation}
-Driven by the analysis presented above, Epsilon Flock (subsequently referred to as Flock) was designed and implemented. Flock is a domain-specific language for specifying and executing model migration strategies. Flock uses a model connectivity framework, which decouples migration from the representation of models and provides compatibility with several modelling frameworks (Section~\ref{subsubsec:epsilon}). Flock automatically maps each element of the original model to an equivalent element of the migrated model using a novel conservative copying algorithm and user-defined migration rules (Section~\ref{subsubsec:conservative_copying}).
+Driven by the analysis presented above, Epsilon Flock (subsequently referred to as Flock) was designed and implemented. Flock is a domain-specific language for specifying and executing model migration strategies. Flock uses a model connectivity framework, which decouples migration from the representation of models and provides compatibility with several modelling frameworks. Flock automatically maps each element of the original model to an equivalent element of the migrated model using a novel conservative copying algorithm and user-defined migration rules (Section~\ref{subsubsec:conservative_copying}).
 
 
 \subsection{The Epsilon Platform}
-\label{subsec:epsilon}
-Before presenting Flock, it is necessary to revisit some details of the Epsilon \cite{kolovos09thesis} platform, which was introduced in Section~\ref{subsubsec:epsilon}. Epsilon, a component of the Eclipse GMT project \cite{gmt}, provides infrastructure for implementing uniform and interoperable model management languages, for performing tasks such as model merging, model transformation and inter-model consistency checking. 
+Before presenting Flock, it is necessary to revisit some details of the Epsilon \cite{kolovos09thesis} platform, which was introduced in Section~\ref{subsec:epsilon}. Epsilon, a component of the Eclipse GMT project \cite{gmt}, provides infrastructure for implementing uniform and interoperable model management languages, for performing tasks such as model merging, model transformation and inter-model consistency checking. 
 
 The core of the platform is the Epsilon Object Language (EOL) \cite{kolovos06eol}, a reworking and extension of OCL that includes the ability to update models, conditional and loop statements, statement sequencing, and access to standard I/O streams. EOL provides mechanisms for reusing sections of code, such as user-defined operators along with modules and import statements. The Epsilon task-specific languages are built atop EOL, giving highly efficient inheritance and reuse of features.
 
@@ -668,6 +667,7 @@ A Flock module has the following behaviour when executed:
 
 \subsubsection{Conservative Copying}
 \label{subsubsec:conservative_copying}
+% TODO A detailed example of conservative copy + equivalence establishment might be useful
 Flock contributes an algorithm, termed \emph{conservative copy}, that copies model elements from original to migrated model only when those model elements conform to the evolved metamodel. Because of its conservative copy algorithm, Flock is a hybrid of new target and existing target transformation languages. This section discusses the conservative copying algorithm in more detail.
 
 The algorithm operates on an original model element, \texttt{o}, and its equivalent model element in the migrated model, \texttt{e}. When \texttt{o} has no equivalent in the migrated model (for example, when a metaclass has been removed and the migration strategy specifies no alternative metaclass), \texttt{o} is not copied to the migrated model. Otherwise, conservative copy is invoked for \texttt{o} and \texttt{e}, proceeding as follows:

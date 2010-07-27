@@ -13,7 +13,7 @@ This section provides a brief overview of the Eclipse Modelling Framework \cite{
 \label{subsec:emf}
 \cite{eclipse} is an open-source community whose projects seek to build an extensible development platform. The Eclipse Modelling Framework (EMF) project \cite{emf} enables MDE within Eclipse. EMF provides a modelling framework with code generation facilities, and a meta-modelling language, Ecore, that implements the MOF 2.0 specification \cite{mof}. EMF is arguably the most widely-used contemporary MDE modelling framework.
 
-EMF provide metamodel-specific editors for loading, storing and constructing models. EMF model editors comprise a navigation view that depicts the model as a structure and a properties view that is used to specify the values of model element features. By default, EMF editors represent models on disk as XMI 2.1 \cite{xmi21} documents.  Figure~\ref{fig:emf_model_editor} shows an EMF model editor for a simplistic state machine language. 
+EMF provide metamodel-specific editors for loading, storing and constructing models. EMF model editors comprise a navigation view that depicts the model as a structure and a properties view that is used to specify the values of model element features. By default, EMF editors represent models on disk as XMI 2.1 \cite{xmi} documents.  Figure~\ref{fig:emf_model_editor} shows an EMF model editor for a simplistic state machine language. 
 
 \begin{figure}[htbp]
   \begin{center}
@@ -58,7 +58,7 @@ The range of concrete syntaxes for Ecore models presents a challenge for tools t
 
 From an Ecore model, EMF can generate a metamodel-specific model editor. The metamodel specified in Figure~\ref{fig:emf_metamodel_editor} was used to generate the Java code for the model editor shown in Figure~\ref{fig:emf_model_editor}. Because model editors are generated from metamodels, models and metamodels are kept separate in EMF. Consequently, metamodel changes cannot be propagated directly to models.
 
-The Graphical Modeling Framework (GMF) \cite{gronback06gmf} is used to specify graphical concrete syntax for metamodels defined in EMF. GMF itself uses a model-driven approach: users specify several models, which are combined, transformed and then used to generate code for the resulting graphical editor. Figure~\ref{fig:gmf_model_editor} shows a model editor produced with GMF for the simplistic state machine language described above.
+The Graphical Modeling Framework (GMF) \cite{gronback09emp} is used to specify graphical concrete syntax for metamodels defined in EMF. GMF itself uses a model-driven approach: users specify several models, which are combined, transformed and then used to generate code for the resulting graphical editor. Figure~\ref{fig:gmf_model_editor} shows a model editor produced with GMF for the simplistic state machine language described above.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -77,7 +77,7 @@ The Extensible Platform for Specification of Integrated Languages for mOdel maNa
 
 Figure \ref{fig:epsilon} illustrates the various components of Epsilon.
 
-Whilst many model management languages are bound to a particular subset of modelling technologies, limiting their applicability, Epsilon is metamodel-agnostic -- models written in any modelling language can be manipulated by Epsilon's model management languages \cite{kolovos06eol}. Currently, Epsilon supports models implemented using EMF, MOF 1.4, XML, or Community Z Tools (CZT) \cite{czt}. Interoperability with further modelling technologies can be achieved via extensions of the Epsilon Model Connectivity (EMC) layer. 
+Whilst many model management languages are bound to a particular subset of modelling technologies, limiting their applicability, Epsilon is metamodel-agnostic -- models written in any modelling language can be manipulated by Epsilon's model management languages \cite{kolovos06eol}. Currently, Epsilon supports models implemented using EMF, MOF 1.4, XML, or Community Z Tools (CZT) \footnote{\url{http://czt.sourceforge.net/}}. Interoperability with further modelling technologies can be achieved via extensions of the Epsilon Model Connectivity (EMC) layer. 
 
 \begin{figure}[htbp]
   \begin{center}

@@ -290,6 +290,11 @@ Martin Fowler.
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.martinfowler.com/articles/languageWorkbench.html}, 2005.
 
+\bibitem[Fowler 2010]{fowler10dsls}{$~$}
+Martin Fowler.
+\newblock {\em Domain Specific Languages}.
+\newblock Addison-Wesley Professional, 2010.
+
 \bibitem[Frankel 2002]{frankel02mda}{$~$}
 David Frankel.
 \newblock {\em Model Driven Architecture: Applying MDA to Enterprise
@@ -336,10 +341,11 @@ Jack Greenfield, Keith Short, Steve Cook, and Stuart Kent.
   Models, Frameworks, and Tools}.
 \newblock Wiley, 2004.
 
-\bibitem[Gronback 2006]{gronback06gmf}{$~$}
-Richard Gronback.
-\newblock Introduction to the {Eclipse Graphical Modeling Framework}.
-\newblock In {\em Proc. EclipseCon}, Santa Clara, California, 2006.
+\bibitem[Gronback 2009]{gronback09emp}{$~$}
+R.C. Gronback.
+\newblock {\em {Eclipse Modeling Project}: A {Domain-Specific Language} (DSL)
+  Toolkit}.
+\newblock Addison-Wesley Professional, 2009.
 
 \bibitem[Gruschko {\it et al.}\  2007]{gruschko07towards}{$~$}
 Boris Gruschko, Dimitrios~S. Kolovos, and Richard~F. Paige.
@@ -359,6 +365,13 @@ David Hearnden, Michael Lawley, and Kerry Raymond.
 \newblock In {\em Model Driven Engineering Languages and Systems}, volume 4199
   of {\em LNCS}, pages 321--335. Springer, 2006.
 
+\bibitem[Heidenreich {\it et al.}\  2009]{heidenreich09derivation}{$~$}
+Florian Heidenreich, Jendrik Johannes, Sven Karol, Mirko Seifert, and Christian
+  Wende.
+\newblock Derivation and refinement of textual syntax for models.
+\newblock In {\em Proc. ECMDA-FA}, volume 5562 of {\em LNCS}, pages 114--129.
+  Springer, 2009.
+
 \bibitem[Herrmannsdoerfer {\it et al.}\
   2008]{herrmannsdoerfer08automatability}{$~$}
 Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
@@ -368,7 +381,13 @@ Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
   Languages and Systems}, volume 5301 of {\em LNCS}, pages 645--659. Springer,
   2008.
 
-\bibitem[Herrmannsdoerfer {\it et al.}\  2009]{herrmannsdoerfer09cope}{$~$}
+\bibitem[Herrmannsdoerfer {\it et al.}\  2009a]{herrmannsdoerfer09gmf}{$~$}
+M.~Herrmannsdoerfer, D.~Ratiu, and G.~Wachsmuth.
+\newblock Language evolution in practice.
+\newblock In {\em Proc. SLE}, volume 5696 of {\em LNCS}, pages 3--22. Springer,
+  2009.
+
+\bibitem[Herrmannsdoerfer {\it et al.}\  2009b]{herrmannsdoerfer09cope}{$~$}
 Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
 \newblock {COPE} - automating coupled evolution of metamodels and models.
 \newblock In {\em Proc. {ECOOP}}, volume 5653 of {\em LNCS}, pages 52--76.
@@ -448,14 +467,20 @@ P.~Klint, R.~L\"{a}mmel, and C.~Verhoef.
 \newblock {\em {ACM} Transactions on Software Engineering Methodology},
   14:331--380, 2003.
 
-\bibitem[Kolovos {\it et al.}\  2006a]{kolovos06ecl}{$~$}
+\bibitem[Kolovos {\it et al.}\  2006a]{kolovos07eml}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock Merging models with the epsilon merging language (eml).
+\newblock In {\em Proc. MoDELS}, volume 4199 of {\em Lecture Notes in Computer
+  Science}, pages 215--229. Springer, 2006.
+
+\bibitem[Kolovos {\it et al.}\  2006b]{kolovos06ecl}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model comparison: a foundation for model composition and model
   transformation testing.
 \newblock In {\em {Proc. Workshop on Global Integrated Model Management}},
   pages 13--20, 2006.
 
-\bibitem[Kolovos {\it et al.}\  2006b]{kolovos06eol}{$~$}
+\bibitem[Kolovos {\it et al.}\  2006c]{kolovos06eol}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock {The Epsilon Object Language (EOL)}.
 \newblock In {\em Proc. {ECMDA-FA}}, volume 4066 of {\em LNCS}, pages 128--142.
@@ -780,13 +805,27 @@ Louis~M. Rose, Dimitrios~S. Kolovos, Nicholas Drivalos, James.~R. Williams,
 
 \bibitem[Rose {\it et al.}\  2010b]{rose10flock}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
-\newblock Model migration with flock.
-\newblock In {\em In preparation}, 2010.
+\newblock Model migration with epsilon flock.
+\newblock In {\em Proc. ICMT}, volume 6142 of {\em Lecture Notes in Computer
+  Science}, pages 184--198. Springer, 2010.
+
+\bibitem[Rose {\it et al.}\  2010c]{rose10comparison}{$~$}
+Louis~M. Rose, Dimitrios S. Kolovos Kelly~Garc\'{e}s Markus~Herrmannsdoerfer,
+  James R.~Williams, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock A comparison of model migration tools.
+\newblock In {\em Proc. MoDELS}, volume TBC of {\em Lecture Notes in Computer
+  Science}, page TBC. Springer, 2010.
 
 \bibitem[Selic 2003]{selic03pragmatics}{$~$}
 Bran Selic.
 \newblock The pragmatics of {Model-Driven Development}.
 \newblock {\em IEEE Software}, 20(5):19--25, 2003.
+
+\bibitem[Sendall \& Kozaczynski 2003]{sendall03heart}{$~$}
+Shane Sendall and Wojtek Kozaczynski.
+\newblock Model transformation: The heart and soul of model-driven software
+  development.
+\newblock {\em IEEE Software}, 20:42--45, 2003.
 
 \bibitem[Sj{\o}berg 1993]{sjoberg93quantifying}{$~$}
 Dag~I.K. Sj{\o}berg.

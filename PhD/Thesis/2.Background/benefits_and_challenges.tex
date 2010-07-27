@@ -2,3 +2,49 @@
 
 \section{Benefits of and Current Challenges for MDE}
 \label{sec:mde_benefits_and_challenges}
+
+\subsection{Benefits}
+Modelling allows software engineers to capture concepts of interest and simultaneously disregard superfluous detail. Proponents of MDE use models to increase the extent to which software systems exhibit characteristics they find desirable. For example, the guidelines set out for MDE in MDA \cite{mda} highlight principles and patterns for modelling to increase the adaptability of software systems by, for example, separating platform-specific and platform-independent detail. When the target platform changes (for example a new technological architecture is required), only part of the system needs to be changed.
+%(But, in practice, is this separation always desirable / achievable?)
+
+MDE facilitates automation of the error-prone or tedious elements of software engineering. For example, code generation can be used to automatically produce 
+``boilerplate'' code % explain boilerplate code
+
+For software systems that must incorporate large-scale complexity, such as those that support large businesses, managing stochastic interaction in-the-large is a key concern. With MDE it is possible to sacrifice total reliability or validity of a system to achieve a working solution. Sacrificing reliability or validity is not always possible when other engineering approaches are used to construct software (such as formal methods). 
+
+MOF, the standard metamodelling language for MDE, facilitates interoperability between tools via model interchange. In Ecore, EMF provides a reference implementation of MOF atop which many MDE tools are built. There are, however, many further ways in which MDE tools might usefully interoperate, which are discussed, along with other challenges for MDE, in the sequel.
+
+\subsection{Challenges}
+
+Start-up hurdle
+Tools more than theory (modelling is relatively accessible)
+Legacy issue: some capabilities not yet well integrated with MDE tools (e.g. refactoring, version control)
+Learning curve can be very steep (huge effort for first, trivial result). Particularly apparent in GMF.
+Businesses might put one person (and usually not their best person) on exploring new technology.
+Bad first experience causes low adoption rates.
+Potential solutions: more examples (what's the MDE "hello world"?), automation for complicated tasks
+Danger of MDE becoming a purely academic endeavour?
+Academic advances should be linked to commercial realities
+Formal methods have had some success here
+Open-source helps to encourage commercial activity (but there are often concerns about support / bug fixing)
+Code generation vs runtime models
+Is code generation less important when one language is used? Some libraries use one language to abstract over others, for example Google Web Toolkit (all code written in Java, and source is compiled to HTML and Javascript).
+Here much of the model is in the code, and we're back to the problem of "does my model match my code?"
+Code generation often requires an elaborate software architecture that facilitates the mixing of generated and hand-written code.
+Perception
+In some situations, using MDE produces more artefacts (which have to be maintained)
+Confusion between tools: What is Eclipse? What is EMF? Where are the boundaries? How decoupled are the tools?
+Do we need something between a heavyweight method and freeform hacking? For example, process patterns that recommend useful combinations of MDE tools.
+Interoperability of MDE tools
+Good interoperability of terms of model interchange, but tighter integration might be necessary
+Open-source helps: use a suitable tool, rather than an unsuitable tool to validate the cost of the license
+
+\subsubsection{Scalability}
+In traditional approaches to software engineering, a model is considered of comparable value to any other documentation artefact, such as a word processor document or a spreadsheet. As a result, the convenience of maintaining self-contained model files which can be easily shared outweighs other desirable attributes. This perception has led to the current situation where single-file models of the order of tens (if not hundreds) of megabytes, containing hundreds of thousands of model elements, are the norm for real-world software projects \cite{kolovos08scalability}.
+
+In model-driven engineering, a model is a development artefact and, while sharing models with others is still a concern, other attributes are desirable. Modularity, for example, is important for supporting incremental transformation and collaborative development \cite{kolovos08scalability}.
+
+MDE languages and tools must be usable with with large and complex models...
+
+
+\subsubsection{Resistance to change}
