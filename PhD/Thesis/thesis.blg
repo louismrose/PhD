@@ -20,6 +20,7 @@ Repeated entry---line 1324 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "uml21"
 Name 1 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
 while executing---line 1187 of file longname.bst
 Name 1 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
@@ -73,7 +74,7 @@ Too many commas in name 2 of "Louis M. Rose and Markus Herrmannsdoerfer, James R
 while executing---line 1253 of file longname.bst
 You've used 158 entries,
             2472 wiz_defined-function locations,
-            1283 strings with 27265 characters,
+            1284 strings with 27270 characters,
 and the built_in function-call counts, 61855 in all, are:
 = -- 6234
 > -- 2303

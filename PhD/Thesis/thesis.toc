@@ -205,25 +205,29 @@
 \contentsline {subsubsection}{Discussion}{112}
 \contentsline {subsubsection}{Summary}{113}
 \contentsline {subsection}{\numberline {6.1.3}Transformation Tools Contest}{114}
+\contentsline {subsubsection}{Model Migration Case}{114}
+\contentsline {subsubsection}{Model Migration Solution in Epsilon Flock}{114}
+\contentsline {subsubsection}{Epsilon Flock in the Live Contest}{114}
+\contentsline {subsubsection}{Summary}{114}
 \contentsline {subsection}{\numberline {6.1.4}Quantitive Comparison of Model Migration Languages}{114}
-\contentsline {subsubsection}{Data}{114}
+\contentsline {subsubsection}{Data}{115}
 \contentsline {paragraph}{Co-evolution Examples}{115}
 \contentsline {paragraph}{Selection of Migration Languages}{115}
-\contentsline {subsubsection}{Method}{115}
+\contentsline {subsubsection}{Method}{116}
 \contentsline {subsubsection}{Model Operations}{116}
-\contentsline {paragraph}{Atlas Transformation Language (ATL)}{116}
-\contentsline {paragraph}{Groovy-for-COPE}{116}
-\contentsline {paragraph}{Epsilon Flock}{117}
-\contentsline {subsubsection}{Results}{117}
+\contentsline {paragraph}{Atlas Transformation Language (ATL)}{117}
+\contentsline {paragraph}{Groovy-for-COPE}{117}
+\contentsline {paragraph}{Epsilon Flock}{118}
+\contentsline {subsubsection}{Results}{118}
 \contentsline {paragraph}{Source-Target Relationships}{119}
-\contentsline {paragraph}{Subtyping}{119}
+\contentsline {paragraph}{Subtyping}{120}
 \contentsline {paragraph}{Side-Effects during Initialisation}{122}
-\contentsline {subsubsection}{Summary}{124}
-\contentsline {section}{\numberline {6.2}Discussion}{125}
-\contentsline {subsection}{\numberline {6.2.1}Threats to validity}{125}
-\contentsline {section}{\numberline {6.3}Dissemination / Reception / ??}{125}
-\contentsline {subsection}{\numberline {6.3.1}Publications}{125}
-\contentsline {subsection}{\numberline {6.3.2}Delivery through Eclipse}{125}
+\contentsline {subsubsection}{Summary}{125}
+\contentsline {section}{\numberline {6.2}Discussion}{126}
+\contentsline {subsection}{\numberline {6.2.1}Threats to validity}{126}
+\contentsline {section}{\numberline {6.3}Dissemination / Reception / ??}{126}
+\contentsline {subsection}{\numberline {6.3.1}Publications}{126}
+\contentsline {subsection}{\numberline {6.3.2}Delivery through Eclipse}{126}
 \contentsline {chapter}{\numberline {7}Conclusion}{127}
 \contentsline {section}{\numberline {7.1}Future Work}{127}
 \contentsline {subsection}{\numberline {7.1.1}Extensions to Epsilon Flock}{127}
