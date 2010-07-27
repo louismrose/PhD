@@ -1,6 +1,6 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
 
-\subsection{Quantitive Comparison of Model Migration Languages}
+\section{Quantitive Comparison of Model Migration Languages}
 In Section~\ref{sec:requirements_identification}, the following research requirement was identified: \emph{This thesis must implement and evaluate a domain-specific language for specifying and executing model migration strategies, comparing it to existing languages for specifying model migration strategies.} As discussed in Section~\ref{subsec:flock_implementation}, this thesis contributes Epsilon Flock, a domain-specific language for model migration. This section fulfils the second part of the above research requirement, comparing Flock with languages that are used in contemporary migration tools. 
 
 In developer-driven migration, a programming language codifies the migration strategy. Because migration involves deriving the migrated model from the original, migration strategies typically access information from the original model and, based on that information, update the migrated model in some way. As such, migration is written in a language with constructs for accessing and updating the original and migrated models. Here, those language constructs are termed \textit{model operations}. Using examples of co-evolution, this section explores the variation in frequency of \emph{model operation} over different model migration languages, and discusses to what extent the results of this comparison can be used to assess the suitability of the languages considered for model migration.
@@ -9,16 +9,16 @@ As discussed in Chapter~\ref{Implementation}, the languages currently used for m
 
 Flock contributes a novel approach for relating original and migrated model elements, termed conservative copy. Conservative copy is a hybrid of new- and existing-target approaches. This section compares new-target, existing-target and conservative copy in the context of model migration. Section~\ref{subsubsec:quantitive_data} describes the data used in the comparison. The method for the comparison is discussed in Section~\ref{subsubsec:quantitive_method}. Section~\ref{subsubsec:quantitive_model_operations} identifies model operations for each of the migration languages used in the comparison, and Section~\ref{subsubsec:quantitive_results} presents and analysis the results.
 
-\subsubsection{Data}
+\subsection{Data}
 \label{subsubsec:quantitive_data}
 Five examples of co-evolution were used to compare new-target, existing-target and conservative copy. This section briefly discusses the data used in the comparison.
 
-\paragraph{Co-evolution Examples}
+\subsubsection{Co-evolution Examples}
 To remove one of the possible threats to the validity of the comparison, the examples used were distinct from those identified in Chapter~\ref{Analysis}, which were used to define requirements for Flock and conservative copy. The five examples used in this section are taken from three projects.
 
 Two examples were taken from the \emph{Newsgroup} project, which performs statistical analysis of NNTP newsgroups and is developed by Dimitris Kolovos, a lecturer in this department. One example was taken from \emph{UML} (the Unified Modeling Language), an OMG specification of a language for modelling software systems. Two examples were taken from \emph{GMF} (Graphical Modeling Framework) \cite{gronback09emp}, an Eclipse project for generating graphical model editors.
 
-\paragraph{Selection of Migration Languages}
+\subsubsection{Selection of Migration Languages}
 As discussed above, there are two ways in which existing migration languages relate original and migrated model elements, new- and existing-target. Flock contributes a third way, conservative copy. For the comparison with Flock, one new- and one existing-target language was chosen.
 
 The Atlas Transformation Language (ATL), a model-to-model transformation language has been used in \cite{cicchetti08automating,garces09managing} for model migration. As discussed in Section~\ref{subsec:existing_migration_languages}, model-to-model transformation languages support only new-target transformations for model migration\footnote{Because, in model migration, the source and target metamodels are not the same.}.
@@ -27,7 +27,7 @@ The author is aware of two approaches to migration that use existing-target tran
 
 The comparison to Flock described in this section uses ATL to represent new-target approaches and Groovy-for-COPE to represent existing-target approaches. Groovy-for-COPE was preferred to Ecore2Ecore because the latter is not as expressive\footnote{Communication with Ed Merks, Eclipse Modeling Project leader, 2009, available at \url{http://www.eclipse.org/forums/index.php?t=tree&goto=486690&S=b1fdb2853760c9ce6b6b48d3a01b9aac}} and cannot be used for migration in the co-evolution examples considered in this section.
 
-\subsubsection{Method}
+\subsection{Method}
 \label{subsubsec:quantitive_method}
 For each example of co-evolution, a migration strategy was written using each migration language (namely ATL, Groovy-for-COPE and Flock). The correctness of the migration strategy was assured by comparing the migrated models provided by the co-evolution example with the result of executing the migration strategy on the original models provided by the co-evolution example.
 
@@ -35,13 +35,13 @@ For each migration language, a set of model operations were identified, as descr
 
 There is one non-trivial threat to the validity of the comparison performed in this section. The author wrote the migration strategies for Flock (a migration language that the author developed) and for the other migration languages considered (which the author has not developed). Therefore, it is possible that the migration strategies written in the latter may contain more model operations than necessary. In some cases, it was possible to reduce the effects of this threat by re-using or adapting existing migration strategy code written by the migration language authors. This is discussed further in the sequel.
 
-\subsubsection{Model Operations}
+\subsection{Model Operations}
 \label{subsubsec:quantitive_model_operations}
 The variation in frequency of model operations was explored across three model migration languages, ATL, Groovy-for-COPE and Flock. Here, the model operations of each language are identified. In addition, the extent to which the comparison described in this section was able to use code written by the authors of each language is discussed.
 
 The comparison described in this section counts two categories of model operation: copying operations, deletion operations. The former are used to assign values to elements of the migrated model, while the latter are used to remove values from elements of the migrated model.
 
-\paragraph{Atlas Transformation Language (ATL)}
+\subsubsection{Atlas Transformation Language (ATL)}
 For the Atlas Transformation Language (ATL), the following model operations were counted:
 	
 \begin{itemize}
@@ -53,7 +53,7 @@ Deletion operations are not used in new-target migration strategies. A new-targe
 
 TODO discuss whether it was possible to use AML to generate ATL and hence reduce the impact of the threat to validity identified above.
 
-\paragraph{Groovy-for-COPE}
+\subsubsection{Groovy-for-COPE}
 For Groovy-for-COPE, the following model operations were counted:
 
 \begin{itemize}
@@ -77,7 +77,7 @@ COPE provides a library of built-in, reusable co-evolutionary operators. Each co
 As such, writing the Groovy migration strategy for the examples of co-evolution considered in this section involved, where possible, applying an appropriate COPE co-evolutionary operator and counting the number of model operations in the generated migration strategy. Not all examples could be completely specified using COPE co-evolutionary operator. In these cases, the Groovy migration strategy was written by the author.
 
 
-\paragraph{Epsilon Flock}
+\subsubsection{Epsilon Flock}
 Epsilon Flock, a transformation language tailored for model migration, was developed in this thesis and discussed in Chapter~\ref{Implementation}. Flock uses the Epsilon Object Language (EOL) \cite{kolovos06eol} to access and update model values. In addition, Flock defines \texttt{migrate} rules, which can be used to change the type of a model element. For Flock, the following model operations were counted:
 
 \begin{itemize}
@@ -93,7 +93,7 @@ Epsilon Flock, a transformation language tailored for model migration, was devel
 Flock provides a remove operation but not an unset. The former is required to remove model elements that no longer conform to the target metamodel. The latter is not necessary because conservative copy will never copy to the migrated model any value that does not conform the evolved metamodel. 
 
 
-\subsubsection{Results}
+\subsection{Results}
 \label{subsubsec:quantitive_results}
 By measuring the number of model operations in model migration strategies, the way in which each co-evolution approach relates original and migrated model elements was investigated. Five examples of model migration were measured to obtain the results shown in Table~\ref{tab:model_operations_results}. The results from measuring the examples identified from the analysis chapter are shown in Table~\ref{tab:model_operations_results_analysis_examples}.
 
@@ -173,7 +173,7 @@ Because the examples used to produce the measurements shown in Table~\ref{tab:mo
 
 For all but one of the examples shown above, conservative copy requires less model operations than new-target and existing-target. For the majority of examples, no migration strategy specified with existing-target contained less model operations when encoded with new-target. These results are now investigated, starting by discussing the differences between the source-target relationships. Investigating the results led to the discovery of two limitations of the conservative copy implementation in Flock, relating to sub-typing and side-effects during initialisation. These limitations are also discussed below.
 
-\paragraph{Source-Target Relationships}
+\subsubsection{Source-Target Relationships}
 New-target, existing-target and conservative copy initialise the migrated model in a different way. New-target initialises an empty model, while existing-target initialises a complete copy of the original model. Conservative copy initialises the migrated model by copying only those model elements from the original model that conform to the migrated metamodel.
 
 New- and existing-target are opposites. In the former, explicit assignment operations must be used to copy values from original to migrated model for each feature that is not affected by the metamodel evolution. By contrast, in the latter unset operations must be used when the value of a feature should not have been copied.
@@ -194,7 +194,7 @@ Conservative copy is a hybrid of new- and existing target. Model values that hav
 
 Two conclusions can be drawn from this discussion. Firstly, in general, less model operations are used when specifying a migration strategy with a conservative copy migration language than when specifying the same migration strategy with a new- or existing-target migration language. Secondly, in the examples studied here, there are often more features unaffected by metamodel evolution than affected. Consequently, specifying model migration with a new-target migration language requires more model operations than in an existing-target migration language for the examples shown in Tables~\ref{tab:model_operations_results} and ~\ref{tab:model_operations_results_analysis_examples}.
 
-\paragraph{Subtyping}
+\subsubsection{Subtyping}
 The GMF Graph example shown in Table~\ref{tab:model_operations_results} is the one case where conservative copy requires more model operations than existing-target. Investigating this result revealed a limitation in conservative copy limitation in Flock, relating to the way in subtypes are migrated.
 
 Figure~\ref{fig:subtyping} shows a simplified part of the GMF Graph metamodel prior to evolution. When the metamodel evolved, the type of the \texttt{figure} and \texttt{accessor} features were changed. Consequently, the migration strategy needed to change the values stored in the \texttt{figure} and \texttt{accessor} features. In the simplified example presented here, the type of the \texttt{figure} and \texttt{accessor} features was changed from string to integer. The intended migration semantics are for the integer value to be the length of the original string value. This is representative of the actual GMF Graph metamodel evolution.
@@ -270,7 +270,7 @@ migrate Node {
 
 The example presented in this section highlights a limitation of the conservative copy algorithm as it is implemented in Flock. The extent to which this limitation can be addressed in Flock, and in general, is discussed in Section~\ref{sec:future_work}. This section now considers one further limitation of existing-target and conservative copy, relative to new-target.
 
-\paragraph{Side-Effects during Initialisation}
+\subsubsection{Side-Effects during Initialisation}
 The measurements observed for one of the examples of co-evolution from Chapter~\ref{Analysis}, Change Reference to Containment, cannot be explained by the conceptual differences between source-target relationship. Instead, the way in which the source-target relationship is implemented must be considered.
 
 When a reference feature is changed to a containment reference during metamodel evolution, constructing the migrated model by starting from the original model (as is the case with existing-target and conservative copy) can have side-effects which complicate migration.
@@ -370,7 +370,7 @@ The Groovy-for-COPE and Flock migration strategies must also remove any \texttt{
 When a non-containment reference is changed to a containment reference, producing a corresponding migration strategy in Flock and Groovy-for-COPE requires the user to be aware of the side-effects that can occur during initialisation. It may be possible to extend the existing-target and conservative copy algorithms used in COPE and Flock, respectively, to automatically perform cloning when a reference is changed to be a containment reference. This is discussed further, for conservative copy, in Section~\ref{sec:future_work}.
 
 
-\subsubsection{Summary}
+\subsection{Summary}
 By measuring frequency of model operations, this section has compared, in the context of model migration, three approaches to relating source-target relationship: new-target, existing-target and conservative copy. The results have been analysed and the measurement method described thoroughly.
 
 The analysis of the measurements obtained has shown that a new- and existing-target migration languages are most suitable for specifying migration strategies for different types of migration language. New-target requires less model operations than existing-target when metamodel evolution involves the renaming of features. Conversely, existing-target requires less model operations than new-target when metamodel evolution does not affect most model elements. Conservative copy requires less model operations than both new- and existing-target in almost all of the examples studied here.

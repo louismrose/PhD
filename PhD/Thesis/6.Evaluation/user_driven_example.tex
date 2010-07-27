@@ -1,13 +1,13 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
 
-\subsection{Exemplar User-Driven Co-Evolution}
+\section{Exemplar User-Driven Co-Evolution}
 The analysis presented in Chapter~\ref{Analysis} led to the discovery of user-driven co-evolution, in which model migration is not executable and is instead performed by hand. Chapter~\ref{Analysis} highlighted two challenges faced when user-driven co-evolution techniques are applied. Firstly, model storage representations have not been optimised for use by humans, and hence user-driven co-evolution can be error-prone and time consuming. Secondly, when a multi-pass parser is used to load models (as is the case with EMF), user-driven co-evolution is an iterative process, because not all conformance errors are reported at once. These challenges led to the derivation of the following research requirement: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a conformance report for the original model and evolved metamodel.}
 
 Chapter~\ref{Implementation} presented two tools that seek to fulfil the above research requirement. The first, metamodel-independent syntax, facilitates the conformance checking of a model against any metamodel. Conformance checking can be manual (invoked by the user) or automatic (via integration of the metamodel-independent syntax with a framework for monitoring workspace changes, as described in Section~\ref{subsec:automatic_checking}). The second tool, an implementation of the textual modelling notation HUTN, allows models to be managed in a format that is reputedly easier for humans to use than the canonical model storage format, XMI \cite{hutn}.
 
 This section demonstrates a user-driven co-evolution process which uses the conformance reporting and textual modelling notation described in this thesis. To this end, an example of co-evolution, based on changes observed in the process-oriented project described in Chapter~\ref{Analysis}, is used throughout the remainder of this section. The example is used to show the way in which user-driven co-evolution might be achieved with and without the conformance reporting and textual modelling notation described in Chapter~\ref{Implementation}.
 
-\subsubsection{Co-Evolution Example}
+\subsection{Co-Evolution Example}
 The co-evolution example used throughout this section is based on changes observed in the process-oriented project, which was described in Chapter~\ref{Analysis}. The metamodel considered was developed in joint work with Adam Sampson, a research associate at the University of Kent. The work involved building a prototypical tool for editing graphical models of process-oriented programs. EuGENia \cite{kolovos09eugenia} was used to automatically generate a graphical editor from the process-oriented metamodel. The metamodel was developed iteratively in the following manner:
 
 \begin{enumerate}
@@ -42,7 +42,7 @@ In general, changes made during step 2 of the process described above could caus
 
 When the process-oriented metamodel was developed, no tools were available for performing user-driven co-evolution. Migration was performed by editing the storage representation of the models, which was error-prone and time-consuming. This process is now described, and is then compared to a user-driven co-evolution process that uses the conformance checking tool and the textual modelling notation described in Chapter~\ref{Implementation}.
 
-\subsubsection{Existing Process}
+\subsection{Existing Process}
 The process-oriented metamodel was developed before the conformance reporting tool and textual modelling notation described in Chapter~\ref{Implementation} were implemented. As such, model migration involved attempting to load existing, potentially non-conformant models with EMF, noting any conformance errors and changing the corresponding XMI to make the model conform to the evolved metamodel.
 
 For the metamodel changes shown in Figure~\ref{fig:po_mms}, conformance errors were reported for all of the existing models. Initially, two types of messages were received for non-conformant models. For every instance of \texttt{Co\-nn\-ec\-ti\-o\-nPo\-i\-nt}, the following message was produced: ``Class `ConnectionPoint' is not found or is abstract.'' For every instance of \texttt{Ch\-an\-n\-el} that referenced a \texttt{Co\-nn\-ec\-ti\-o\-nPo\-i\-nt}, the following message was produced: ``Unresolved reference `\texttt{<ID>}' '' where \texttt{<ID>} was the identifier of the referenced \texttt{Co\-nn\-ec\-ti\-o\-nPo\-i\-nt}.
@@ -54,7 +54,7 @@ In a small number of cases, the wrong subtype of \texttt{Co\-nn\-ec\-ti\-onPo\-i
 Conformance errors are reported only when a model is loaded by EMF (and hence, in this case, only when the graphical editor is used to open a model). In other words, when the XMI of a model is changed by hand, conformance is not checked when the model is saved to disk. When the wrong subtype of  \texttt{Co\-nn\-ec\-ti\-onPo\-in\-t} was selected, the following message was produced when the model was opened with the graphical editor: ``Value `po.im\-pl.Re\-ad\-i\-ngCo\-nn\-ec\-ti\-onPo\-i\-nt@7f\-de\-16\-84 (name: a\_writer)' is not legal.'' After changing \texttt{xsi:type} attributes to instantiate the correct subtypes of \texttt{Co\-nn\-ec\-ti\-onPo\-in\-t}, all of the models could be opened without error by the graphical editor.
 
 
-\subsubsection{Proposed Process}
+\subsection{Proposed Process}
 A user-driven co-evolution process using the conformance reporting tool and the textual modelling notation, HUTN, presented in Chapter~\ref{Implementation} is now described. The new process involves invoking the conformance reporting tool to determine which models have conformance problems, generating HUTN for each non-conformant model, and fixing the conformance problems in the HUTN.
 
 For the metamodel changes shown in Figure~\ref{fig:po_mms}, the conformance reporting tool reports three types of error message when invoked on non-conformant models\footnote{As described in Section~\ref{subsec:automatic_checking}, the conformance reporting tool can be invoked manually, via a context menu, or automatically as a result of integration with Concordance.}. For every instance of \texttt{Co\-nn\-ec\-ti\-o\-nPo\-i\-nt}, the following message is produced: ``Cannot instantiate the abstract class: ConnectionPoint.'' For every instance of \texttt{Ch\-an\-n\-el}, the following two error messages are produced: ``Expected ReadingConnectionPoint for: reader'' and ``Expected WritingConnectionPoint for: writer.''
@@ -68,7 +68,7 @@ To fix the errors, a HUTN representation of each non-conformant model is generat
   \label{fig:po_hutn}
 \end{figure}
 
-\subsubsection{Summary}
+\subsection{Summary}
 This section has demonstrated existing and new user-driven co-evolution processes using an example of metamodel changes. Comparison of the two highlights several benefits of the new process, which used tools described in Chapter~\ref{Implementation}.
 
 Firstly, the conformance reporting tool presented in Section~\ref{sec:mmi_syntax} can report more types of conformance problem at once than the model loading mechanism of EMF because the former uses a multi-pass parser, while the latter uses a single-pass parser. For the metamodel changes shown in Figure~\ref{fig:evolved_po_mm}, both the conformance reporting tool and the EMF loading mechanism reported that the evolved metamodel did not permit instantiation of the abstract class \texttt{Co\-nn\-ec\-ti\-o\-nPo\-i\-nt}. Another type of conformance problem -- the type of \texttt{Ch\-an\-n\-el\#re\-ad\-er} (\texttt{Ch\-an\-n\-el\#wr\-it\-er}) must be a \texttt{Re\-ad\-i\-ngCo\-nn\-ec\-ti\-o\-nPo\-i\-nt} (\texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nPo\-i\-nt}) -- was reported by the conformance reporting tool when it was first invoked and reported by the loading mechanism of EMF only when it was invoked after the first category of conformance problem was fixed.

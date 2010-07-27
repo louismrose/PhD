@@ -149,90 +149,87 @@
 \contentsline {subsection}{\numberline {5.3.7}Example}{94}
 \contentsline {section}{\numberline {5.4}Chapter Summary}{95}
 \contentsline {chapter}{\numberline {6}Evaluation}{97}
-\contentsline {section}{\numberline {6.1}Evaluation Measures}{97}
-\contentsline {subsection}{\numberline {6.1.1}Exemplar User-Driven Co-Evolution}{97}
-\contentsline {subsubsection}{Co-Evolution Example}{98}
-\contentsline {subsubsection}{Existing Process}{99}
-\contentsline {subsubsection}{Proposed Process}{100}
-\contentsline {subsubsection}{Summary}{100}
-\contentsline {subsection}{\numberline {6.1.2}Migration Tool Comparison}{103}
-\contentsline {subsubsection}{Comparison Method}{103}
-\contentsline {paragraph}{Co-Evolution Examples}{103}
-\contentsline {subparagraph}{Petri Nets.}{103}
-\contentsline {subparagraph}{GMF.}{104}
-\contentsline {paragraph}{Compared Tools}{105}
-\contentsline {paragraph}{Comparison Process}{105}
-\contentsline {subsubsection}{Comparison Results}{105}
-\contentsline {paragraph}{Constructing the migration strategy}{106}
-\contentsline {subparagraph}{AML.}{106}
-\contentsline {subparagraph}{COPE.}{106}
-\contentsline {subparagraph}{Ecore2Ecore.}{107}
-\contentsline {subparagraph}{Flock.}{107}
-\contentsline {paragraph}{Changing the migration strategy}{107}
-\contentsline {subparagraph}{AML.}{107}
-\contentsline {subparagraph}{COPE.}{108}
-\contentsline {subparagraph}{Ecore2Ecore.}{108}
-\contentsline {subparagraph}{Flock.}{108}
-\contentsline {paragraph}{Extensibility}{108}
-\contentsline {subparagraph}{AML.}{108}
-\contentsline {subparagraph}{COPE}{108}
-\contentsline {paragraph}{Re-use}{108}
-\contentsline {subparagraph}{AML.}{108}
-\contentsline {subparagraph}{COPE.}{108}
-\contentsline {subparagraph}{Ecore2Ecore.}{109}
-\contentsline {subparagraph}{Flock.}{109}
-\contentsline {paragraph}{Conciseness}{109}
-\contentsline {subparagraph}{AML.}{109}
-\contentsline {subparagraph}{COPE}{109}
-\contentsline {subparagraph}{Ecore2Ecore.}{109}
-\contentsline {subparagraph}{Flock.}{109}
-\contentsline {paragraph}{Clarity}{109}
-\contentsline {subparagraph}{AML.}{109}
-\contentsline {subparagraph}{COPE.}{110}
-\contentsline {subparagraph}{Ecore2Ecore.}{110}
-\contentsline {subparagraph}{Flock}{110}
-\contentsline {paragraph}{Expressiveness}{110}
-\contentsline {subparagraph}{AML.}{110}
-\contentsline {subparagraph}{COPE.}{110}
-\contentsline {subparagraph}{Ecore2Ecore.}{110}
-\contentsline {subparagraph}{Flock.}{110}
-\contentsline {paragraph}{Interoperability}{111}
-\contentsline {subparagraph}{AML}{111}
-\contentsline {subparagraph}{COPE}{111}
-\contentsline {subparagraph}{Ecore2Ecore}{111}
-\contentsline {subparagraph}{Flock}{111}
-\contentsline {paragraph}{Performance}{111}
-\contentsline {subsubsection}{Discussion}{112}
-\contentsline {subsubsection}{Summary}{113}
-\contentsline {subsection}{\numberline {6.1.3}Transformation Tools Contest}{114}
-\contentsline {subsubsection}{Model Migration Case}{114}
-\contentsline {paragraph}{Activity Diagrams in UML}{114}
-\contentsline {paragraph}{Evolution of Activity Diagrams}{115}
-\contentsline {paragraph}{Extension 1: Alternative Object Flow State Migration Semantics}{117}
-\contentsline {paragraph}{Extension 2: Concrete Syntax}{118}
-\contentsline {paragraph}{Extension 3: XMI}{118}
-\contentsline {subsubsection}{Model Migration Solution in Epsilon Flock}{119}
-\contentsline {subsubsection}{Epsilon Flock in the Live Contest}{119}
-\contentsline {subsubsection}{Summary}{119}
-\contentsline {subsection}{\numberline {6.1.4}Quantitive Comparison of Model Migration Languages}{119}
-\contentsline {subsubsection}{Data}{120}
-\contentsline {paragraph}{Co-evolution Examples}{120}
-\contentsline {paragraph}{Selection of Migration Languages}{120}
-\contentsline {subsubsection}{Method}{121}
-\contentsline {subsubsection}{Model Operations}{121}
-\contentsline {paragraph}{Atlas Transformation Language (ATL)}{121}
-\contentsline {paragraph}{Groovy-for-COPE}{121}
-\contentsline {paragraph}{Epsilon Flock}{122}
-\contentsline {subsubsection}{Results}{123}
-\contentsline {paragraph}{Source-Target Relationships}{124}
-\contentsline {paragraph}{Subtyping}{125}
-\contentsline {paragraph}{Side-Effects during Initialisation}{127}
-\contentsline {subsubsection}{Summary}{130}
-\contentsline {section}{\numberline {6.2}Discussion}{130}
-\contentsline {subsection}{\numberline {6.2.1}Threats to validity}{130}
-\contentsline {section}{\numberline {6.3}Dissemination / Reception / ??}{130}
-\contentsline {subsection}{\numberline {6.3.1}Publications}{130}
-\contentsline {subsection}{\numberline {6.3.2}Delivery through Eclipse}{130}
+\contentsline {section}{\numberline {6.1}Exemplar User-Driven Co-Evolution}{97}
+\contentsline {subsection}{\numberline {6.1.1}Co-Evolution Example}{98}
+\contentsline {subsection}{\numberline {6.1.2}Existing Process}{99}
+\contentsline {subsection}{\numberline {6.1.3}Proposed Process}{100}
+\contentsline {subsection}{\numberline {6.1.4}Summary}{100}
+\contentsline {section}{\numberline {6.2}Migration Tool Comparison}{103}
+\contentsline {subsection}{\numberline {6.2.1}Comparison Method}{103}
+\contentsline {subsubsection}{Co-Evolution Examples}{103}
+\contentsline {paragraph}{Petri Nets.}{103}
+\contentsline {paragraph}{GMF.}{104}
+\contentsline {subsubsection}{Compared Tools}{105}
+\contentsline {subsubsection}{Comparison Process}{105}
+\contentsline {subsection}{\numberline {6.2.2}Comparison Results}{105}
+\contentsline {subsubsection}{Constructing the migration strategy}{106}
+\contentsline {paragraph}{AML.}{106}
+\contentsline {paragraph}{COPE.}{106}
+\contentsline {paragraph}{Ecore2Ecore.}{107}
+\contentsline {paragraph}{Flock.}{107}
+\contentsline {subsubsection}{Changing the migration strategy}{107}
+\contentsline {paragraph}{AML.}{107}
+\contentsline {paragraph}{COPE.}{108}
+\contentsline {paragraph}{Ecore2Ecore.}{108}
+\contentsline {paragraph}{Flock.}{108}
+\contentsline {subsubsection}{Extensibility}{108}
+\contentsline {paragraph}{AML.}{108}
+\contentsline {paragraph}{COPE}{108}
+\contentsline {subsubsection}{Re-use}{108}
+\contentsline {paragraph}{AML.}{109}
+\contentsline {paragraph}{COPE.}{109}
+\contentsline {paragraph}{Ecore2Ecore.}{109}
+\contentsline {paragraph}{Flock.}{109}
+\contentsline {subsubsection}{Conciseness}{109}
+\contentsline {paragraph}{AML.}{109}
+\contentsline {paragraph}{COPE}{109}
+\contentsline {paragraph}{Ecore2Ecore.}{109}
+\contentsline {paragraph}{Flock.}{109}
+\contentsline {subsubsection}{Clarity}{110}
+\contentsline {paragraph}{AML.}{110}
+\contentsline {paragraph}{COPE.}{110}
+\contentsline {paragraph}{Ecore2Ecore.}{110}
+\contentsline {paragraph}{Flock}{110}
+\contentsline {subsubsection}{Expressiveness}{110}
+\contentsline {paragraph}{AML.}{110}
+\contentsline {paragraph}{COPE.}{110}
+\contentsline {paragraph}{Ecore2Ecore.}{111}
+\contentsline {paragraph}{Flock.}{111}
+\contentsline {subsubsection}{Interoperability}{111}
+\contentsline {paragraph}{AML}{111}
+\contentsline {paragraph}{COPE}{111}
+\contentsline {paragraph}{Ecore2Ecore}{111}
+\contentsline {paragraph}{Flock}{111}
+\contentsline {subsubsection}{Performance}{112}
+\contentsline {subsection}{\numberline {6.2.3}Discussion}{112}
+\contentsline {subsection}{\numberline {6.2.4}Summary}{114}
+\contentsline {section}{\numberline {6.3}Transformation Tools Contest}{114}
+\contentsline {subsection}{\numberline {6.3.1}Model Migration Case}{114}
+\contentsline {subsubsection}{Activity Diagrams in UML}{115}
+\contentsline {subsubsection}{Evolution of Activity Diagrams}{115}
+\contentsline {subsubsection}{Extension 1: Alternative Object Flow State Migration Semantics}{118}
+\contentsline {subsubsection}{Extension 2: Concrete Syntax}{119}
+\contentsline {subsubsection}{Extension 3: XMI}{119}
+\contentsline {subsection}{\numberline {6.3.2}Model Migration Solution in Epsilon Flock}{119}
+\contentsline {subsection}{\numberline {6.3.3}Epsilon Flock in the Live Contest}{119}
+\contentsline {subsection}{\numberline {6.3.4}Summary}{119}
+\contentsline {section}{\numberline {6.4}Quantitive Comparison of Model Migration Languages}{120}
+\contentsline {subsection}{\numberline {6.4.1}Data}{120}
+\contentsline {subsubsection}{Co-evolution Examples}{120}
+\contentsline {subsubsection}{Selection of Migration Languages}{121}
+\contentsline {subsection}{\numberline {6.4.2}Method}{121}
+\contentsline {subsection}{\numberline {6.4.3}Model Operations}{122}
+\contentsline {subsubsection}{Atlas Transformation Language (ATL)}{122}
+\contentsline {subsubsection}{Groovy-for-COPE}{122}
+\contentsline {subsubsection}{Epsilon Flock}{123}
+\contentsline {subsection}{\numberline {6.4.4}Results}{123}
+\contentsline {subsubsection}{Source-Target Relationships}{125}
+\contentsline {subsubsection}{Subtyping}{126}
+\contentsline {subsubsection}{Side-Effects during Initialisation}{128}
+\contentsline {subsection}{\numberline {6.4.5}Summary}{130}
+\contentsline {section}{\numberline {6.5}Limitations}{131}
+\contentsline {subsection}{\numberline {6.5.1}Threats to validity}{131}
+\contentsline {section}{\numberline {6.6}Summary}{131}
 \contentsline {chapter}{\numberline {7}Conclusion}{127}
 \contentsline {section}{\numberline {7.1}Future Work}{127}
 \contentsline {subsection}{\numberline {7.1.1}Extensions to Epsilon Flock}{127}
