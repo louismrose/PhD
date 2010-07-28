@@ -5,10 +5,10 @@ The Transformation Tools Contest (TTC) is a workshop series that seeks to compar
 
 Participation in TTC 2010 facilitated further evaluation of Flock. Flock and 8 other transformation tools were assessed for a model migration problem based on a real-world example of metamodel evolution from the UML \cite{uml22}. As part of the live contest, Flock was also assessed along with 13 transformation tools for a model transformation problem. Compared to the evaluation described in Section~\ref{subsec:collaborative_comparison}, the evaluation in this section compares Flock to a wider range of tools (model and graph transformation tools, and not just model migration tools), and investigates the suitability of Flock for specifying model transformation.
 
-The remainder of this section describes the model migration problem (Section~\ref{subsubsec:ttc_case}) and Flock solution (Section~\ref{subsubsec:ttc_solution}), and the use of Flock for specifying a model transformation in the live contest (Section~\ref{subsubsec:ttc_live_contest}).
+The remainder of this section describes the model migration problem (Section~\ref{subsec:ttc_case}) and Flock solution (Section~\ref{subsec:ttc_solution}), and the use of Flock for specifying a model transformation in the live contest (Section~\ref{subsec:ttc_live_contest}).
 
 \subsection{Model Migration Case}
-\label{subsubsec:ttc_case}
+\label{subsec:ttc_case}
 To compare Flock with other transformation tools for specifying model migration, the thesis author submitted a case to TTC based on the evolution of the UML. The way in which activity diagrams are modelled in the UML changed significantly between versions 1.4 and 2.1 of the specification. In the former, activities were defined as a special case of state machines, while in the latter they are defined atop a more general semantic base\footnote{A variant of generalised coloured Petri nets.} \cite{selic05uml2}.
 
 The remainder of this section briefly introduces UML activity diagrams, describes their evolution, and discusses the way in which solutions were assessed. The work presented in this section is based on the case submitted to TTC 2010 \cite{rose10ttc_case}. 
@@ -95,19 +95,172 @@ As an extension to the core task, submissions were invited to consider how to mi
 Following the submission of the case, solutions were encouraged to solve this extension by Tom Morris, the project leader for ArgoEclipse and a committer on ArgoUML. On the TTC forums, Morris stated that ``We have nothing available to fill this hole currently, so any contributions would be hugely valuable.  Not only would achieve academic fame and glory from the contest, but you'd get to see your code benefit users of one of the oldest (10+ yrs) open source UML modeling tools.'' \footnote{\url{http://www.planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewdiscussion&groupid=4&topicid=20&Itemid=150} (registration required)}
 
 \subsection{Model Migration Solution in Epsilon Flock}
-\label{subsubsec:ttc_solution}
+\label{subsec:ttc_solution}
+This section discusses the Flock solution to the TTC case described above (the evolution of UML activity diagrams).  
+
+The solution was developed in an iterative and incremental manner, using the following process:
+
+\begin{enumerate}
+	\item Change the Flock migration strategy.
+	\item Execute Flock on the original model, producing a migrated model.
+	\item Compare the migrated model with the reference model provided in the case resources.
+	\item Repeat until the migrated and reference models were the same.
+\end{enumerate}
+
+The remainder of this section presents the Flock solution in an incremental manner. The code listings in this section show only those rules relevant to the iteration being discussed.
+
+\subsubsection{Actions, Transitions and Final States}
+Development of the migration strategy began by executing an empty Flock migration strategy on the original model. Because Flock automatically copies model elements that have not been affected by evolution, the resulting model contained \texttt{Pseudostates}s and \texttt{Transition}s, but none of the \texttt{ActionState}s from the original model. In UML 2.2 activities, \texttt{OpaqueAction}s replace \texttt{ActionState}s. Listing~\ref{lst:actions} shows the Flock code for changing \texttt{ActionState}s to corresponding \texttt{OpaqueAction}s.
+
+\begin{lstlisting}[caption=Migrating Actions, label=lst:actions, language=Flock]
+migrate ActionState to OpaqueAction
+\end{lstlisting}
+
+Next, similar rules were added to migrate instances of \texttt{FinalState} to instances of \texttt{ActivityFinalNode} and to migrate instances of \texttt{Transition} to \texttt{ControlFlow}, as shown in Listing~\ref{lst:final_states}.
+
+\begin{lstlisting}[caption=Migrating FinalStates and Transitions, label=lst:final_states, language=Flock]
+migrate FinalState to ActivityFinalNode
+migrate Transition to ControlFlow
+\end{lstlisting}
+
+\subsubsection{Pseudostates}
+Development continued by selected further types of state that were not present in the migrated model, such as \texttt{Pseudostates}s, which are not used in UML 2.2 activities. Instead, UML 2.2 activities use specialised \texttt{Node}s, such as \texttt{InitialNode}. Listing~\ref{lst:pseudostates} shows the Flock code used to change \texttt{Pseudostate}s to corresponding \texttt{Node}s.
+
+\begin{lstlisting}[caption=Migrating Pseudostates, label=lst:pseudostates, language=Flock]
+migrate Pseudostate to InitialNode  when: original.kind = Original!PseudostateKind#initial
+migrate Pseudostate to DecisionNode when: original.kind = Original!PseudostateKind#junction
+migrate Pseudostate to ForkNode     when: original.kind = Original!PseudostateKind#fork
+migrate Pseudostate to JoinNode     when: original.kind = Original!PseudostateKind#join
+\end{lstlisting}
+
+\subsubsection{Activities}
+In UML 2.2, \texttt{Activity}s no longer inherit from state machines. As such, some of the features defined by \texttt{Activity} have been renamed. Specifically, \texttt{tr\-an\-si\-ti\-o\-ns} has become \texttt{edges} and \texttt{paritions} has become \texttt{group}. Furthermore, the states (or nodes in UML 2.2 parlance) of an \texttt{Activity} are now contained in a feature called \texttt{nodes}, rather than in the \texttt{subvertex} feature of a composite state accessed via the \texttt{top} feature of \texttt{Activity}. The Flock migration rule shown in Listing~\ref{lst:activities} captured these changes.
+
+\begin{lstlisting}[caption=Migrating ActivityGraphs, label=lst:activities, language=Flock]
+migrate ActivityGraph to Activity {
+	migrated.edge  = original.transitions.equivalent();
+	migrated.group = original.partition.equivalent();
+	migrated.node  = original.top.subvertex.equivalent();
+}
+\end{lstlisting}
+
+Note that the rule in Listing~\ref{lst:activities} used the built-in \texttt{equivalent} operation to find migrated model elements from original model elements. As discussed in Section~\ref{sec:flock}, the \texttt{equivalent} operation invokes other migration rules where necessary and caches results to improve performance.
+
+Next, a similar rule for migrating \texttt{Guard}s was added. In UML 1.4, the the \texttt{guard} feature of \texttt{Transition} references a \texttt{Guard}, which in turn references an \texttt{Ex\-pr\-es\-si\-on} via its \texttt{expression} feature. In UML 2.2, the \texttt{guard} feature of \texttt{Transition} references an \texttt{OpaqueExpression} directly. Listing~\ref{lst:guards} captures this in Flock.
+
+\begin{lstlisting}[caption=Migrating Guards, label=lst:guards, language=Flock]
+migrate Guard to OpaqueExpression {
+	migrated.body.add(original.expression.body);
+}
+
+\end{lstlisting}
+
+
+\subsubsection{Partitions}
+In UML 1.4 activity diagrams, \texttt{Partition} specifies a single containment reference for its \texttt{contents}. In UML 2.2 activity diagrams, partitions have been renamed to \texttt{ActivityPartition}s and specify two containment features for their contents, \texttt{edges} and \texttt{nodes}. Listing~\ref{lst:partitions} shows the rule used to migrate \texttt{Partition}s to \texttt{ActivityPartition}s in Flock. The body of the rule shown in Listing~\ref{lst:partitions} uses the \emph{collect} operation to segregate the \texttt{contents} feature of the original model element into two parts.
+
+\begin{lstlisting}[caption=Migrating Partitions, label=lst:partitions, language=Flock]
+migrate Partition to ActivityPartition {
+	migrated.edges = original.contents.collect(e:Transition | e.equivalent());
+	migrated.nodes = original.contents.collect(n:StateVertex | n.equivalent());	
+}
+\end{lstlisting}
+
+
+\subsubsection{ObjectFlows}
+Finally, two rules were written for migrating model elements relating to object flows. In UML 1.4 activity diagrams, object flows are specified using \texttt{ObjectFlowState}, a subtype of \texttt{St\-at\-eVe\-rt\-ex}. In UML 2.2 activity diagrams, object flows are modelled using a subtype of \texttt{ObjectNode}. In UML 2.2 flows that connect to and from \texttt{ObjectNode}s must be represented with \texttt{ObjectFlow}s rather than \texttt{ControlFlow}s.
+
+Listing~\ref{lst:objectflows} shows the Flock rule used to migrate \texttt{Transiton}s to \texttt{ObjectFlow}s. The rule applies for \texttt{Transition}s whose source or target \texttt{St\-at\-eVe\-rt\-ex} is of type \texttt{ObjectFlowState}.
+
+\begin{lstlisting}[caption=Migrating ObjectFlows, label=lst:objectflows, language=Flock]
+migrate ObjectFlowState to ActivityParameterNode
+
+migrate Transition to ObjectFlow when: original.source.isTypeOf(ObjectFlowState) or original.target.isTypeOf(ObjectFlowState)
+\end{lstlisting}
+
+In addition to the core task, the Flock solution also approached two of the three extensions described in the case (Section~\ref{subsec:ttc_case}). The solutions to the extensions are now discussed.
+
+\subsubsection{Alternative ObjectFlowState Migration Semantics}
+The first extension required submissions to consider an alternative migration semantics for \texttt{ObjectFlowState}, in which a single \texttt{ObjectFlow} replaces each \texttt{ObjectFlowState} and any connected \texttt{Transition}s.
+
+Listing~\ref{lst:objectflows2} shows the Flock source code used to migrate \texttt{ObjectFlowStates} (and connecting \texttt{Transitions}) to a single \texttt{ObjectFlow}. This rule was used instead of the two rules defined in Listing~\ref{lst:objectflows}. In the body of the rule shown in Listing~\ref{lst:objectflows2}, the \texttt{source} of the \texttt{Transition} is copied directly to the \texttt{source} of the \texttt{ObjectFlow}. The \texttt{target} of the \texttt{ObjectFlow} is set to the target of the first outgoing \texttt{Transition} from the \texttt{ObjectFlowState}. 
+
+\begin{lstlisting}[caption=Migrating ObjectFlowStates to a single ObjectFlow, label=lst:objectflows2, language=Flock]
+migrate Transition to ObjectFlow when: original.target.isTypeOf(ObjectFlowState) {
+	migrated.source = original.source.equivalent();
+	migrated.target = original.target.outgoing.first.target.equivalent();
+}
+\end{lstlisting}
+
+Because, in this alternative semantics, \texttt{ObjectFlowState}s are represented as edges rather than nodes, the partition migration rule was changed such that \texttt{ObjectFlowState}s were not copied to the \texttt{nodes} feature of \texttt{Partition}s. To filter out the \texttt{ObjectFlowState}s, line 3 of Listing~\ref{lst:partitions} was changed to include a reject statement, as shown on line 3 of Listing~\ref{lst:partitions2}.
+
+\begin{lstlisting}[caption=Migrating Partitions without ObjectFlowStates, label=lst:partitions2, language=Flock]
+migrate Partition to ActivityPartition {
+	migrated.edges = original.contents.collect(e:Transition | e.equivalent());
+	migrated.nodes = original.contents.reject(ofs:ObjectFlowState | true).collect(n:Original!StateVertex | n.equivalent());	
+}
+\end{lstlisting}
+
+
+\subsubsection{XMI}
+\label{sec:xmi}
+The second extension required submissions to migrate an activity graph conforming to UML 1.4 and encoded in XMI 1.2 to an equivalent activity graph conforming to UML 2.2 and encoded in XMI 2.1. The core task did not require submissions to consider changes to XMI (the model storage representation), but, in practice, this is a challenge to migration, as noted by Tom Morris on the TTC forums\footnote{\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewdiscussion&groupid=4&topicid=20&Itemid=150} (registration required)}}.
+
+As discussed in Section~\ref{sec:flock}, Flock is built atop Epsilon, which includes a model connectivity layer (EMC). EMC provides a common interface for accessing and persisting models. Currently, EMC supports EMF (XMI 2.x), MDR (XMI 1.x), and plain XML models. To support migration between metamodels defined in heterogenous modelling frameworks, EMC was extended during the development of Flock to provide a conformance checking service.
+
+Consequently, the migration strategy developed for the core task works for all of the types of model supported by EMC. To migrate a model encoded in XMI 1.2 rather than in XMI 2.1, the user must select a different option when executing the Flock migration strategy. Otherwise, no other changes are required.
+
+\subsubsection{Results}
+At the workshop, solutions to the migration case described in Section~\ref{subsec:ttc_case} were presented. Each solution was allocated two opponents who highlighted weaknesses of each approach. Following the solution presentations and opposition statements, each solution was scored using the four criteria described above, correctness, clarity, conciseness and number of extensions solved. Every workshop participants scored each solution on clarity and conciseness. The workshop organisers scored each solution on correctness and number of extensions solved, as these criteria could be measured objectively. Epsilon Flock was awarded first position for the migration case.
+
+The opposition statements highlighted two weaknesses of Flock. Firstly, there is some duplicated code in Listing~\ref{lst:pseudostates}: the \texttt{migrate Pseudostate to X} statement appears several times. The duplication exists because Flock only allows one-to-one mappings between original and evolved metamodel types. The conservative copy algorithm would need to be extended to allow one-to-many mappings to remove this kind of duplication.
+
+Secondly, the body of Flock rules are specified in an imperative manner. Consequently, reasoning about the correctness of the a migration strategy is more difficult than in languages that use a purely declarative syntax. \footnote{TODO: Need to expand on this. I probably need to explain why migration need not preserve semantics, but I don't really want to open that can of worms here.}
 
 \subsection{Epsilon Flock in the Live Contest}
-\label{subsubsec:ttc_live_contest}
+\label{subsec:ttc_live_contest}
+TTC 2010 also invited the workshop participants to take part in a live contest. A problem was announced at the start of the workshop, and participants developed their solutions during the first day. The solutions were presented in the workshop and assessed in four categories. Flock was awarded first position for the \emph{exogenous transformation} category. The remainder of this section discusses the parts of the problem that relate to the exogenous transformation category and the Flock solution. 
+
+The live contest problem required several model management operations be combined to perform beta-reduction of a simplified lambda calculus. Flock was used to specify one of the model management operations: model transformation between two similar (but not identical) metamodels. Flock was chosen rather than a new-target transformation language because the metamodels shared several classes and features. Using Flock allowed automatic copying of the model elements conforming to the classes common to both source and target metamodel. In other words, transformation rules were specified only for those parts of the metamodels that differed.
+
+Flock was awarded first position by the workshop participants and organisers for the category in which it was entered. Participation in the live contest highlighted that, in addition to model migration, Flock can be used for specifying model transformation. In particular, Flock was appropriate because the source and target metamodels were similar (having several classes and features in common) and the conservative copy strategy reduced the number of rules required to specify the transformation.
+
+
+% \begin{lstlisting}[caption=Flock migration strategy for the TTC 2010 live contest, label=lst:live_contest_flock, language=Flock]
+% migrate Abstr {
+% 	migrated.boundVar = new BoundVar;
+% 	migrated.boundVar.name = original.bound;
+% }
+% 
+% migrate Var to Ref {
+% 	var migrated_var : Two!Var;
+% 	
+% 	if (original.isBound()) {
+% 		migrated_var = original.bindingContext().equivalent().boundVar;
+% 	} else {
+% 		migrated_var = new Two!FreeVar;
+% 		migrated_var.name = original.name;
+% 	}
+% 	
+% 	migrated.refersTo = migrated_var;
+% }
+% 
+% operation One!Var isBound() : Boolean {
+% 	return self.bindingContext().isDefined();
+% }
+% 
+% operation One!Var bindingContext() : One!Abstr {
+% 	return One!Abstr.all.selectOne(a|a.bound == self.name);
+% }
+% \end{lstlisting}
 
 
 \subsection{Summary}
-- Summarise work
+This section has discussed the way in which Flock was evaluated by participating in the 2010 edition of the Transformation Tools Contest (TTC). Flock was assessed by application to an example of migration from the UML and comparison with eight other model and graph transformation tools. Flock was awarded first prize by the workshop participants and organisers. Additionally, Flock was used as part of a solution to a live contest developed during the workshop. The live contest highlighted that Flock is suitable for specifying some types of model transformation (in particular, those in which the source and target metamodel have common classes and features), as Flock was awarded first prize in the exogenous transformation category.
 
-- Contributions
--- Established a real-world example of migration that can be used in further comparison / evaluation work.
--- Flock won two awards.
+In addition to evaluating Flock, the work described in this section provides three further contributions. Firstly, the migration case submitted to TTC 2010, described in Section~\ref{subsec:ttc_case} provides a real-world example of co-evolution for use in future comparisons of model migration tools. The case is based on the evolution of UML, between versions 1.4 and 2.2. The migration strategy was devised by analysis of the UML specification, and by discussion between workshop participants.
 
-- Threats to validity
--- I chose the migration case. Some mitigation: based on real world example, discussion on the forums helped to identify ambiguities. 
+Secondly, the Flock solution to the migration case (Section~\ref{subsec:ttc_solution}) demonstrates the way in which a migration strategy can be constructed using Flock. In particular, Section~\ref{subsec:ttc_solution} describes an iterative and incremental development process and inicates that an empty Flock migration strategy can provide a useful starting point for development.
+
+Finally, Section~\ref{sec:flock} claims that Flock support several modelling technologies. The solution described in Section~\ref{subsec:ttc_solution} demonstrates the way in which Flock can be used to migrate models over two modelling technologies: MDR (XMI 1.x) and EMF (XMI 2.x). 
 

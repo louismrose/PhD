@@ -211,25 +211,33 @@
 \contentsline {subsubsection}{Extension 2: Concrete Syntax}{119}
 \contentsline {subsubsection}{Extension 3: XMI}{119}
 \contentsline {subsection}{\numberline {6.3.2}Model Migration Solution in Epsilon Flock}{119}
-\contentsline {subsection}{\numberline {6.3.3}Epsilon Flock in the Live Contest}{119}
-\contentsline {subsection}{\numberline {6.3.4}Summary}{119}
-\contentsline {section}{\numberline {6.4}Quantitive Comparison of Model Migration Languages}{120}
-\contentsline {subsection}{\numberline {6.4.1}Data}{120}
-\contentsline {subsubsection}{Co-evolution Examples}{120}
-\contentsline {subsubsection}{Selection of Migration Languages}{121}
-\contentsline {subsection}{\numberline {6.4.2}Method}{121}
-\contentsline {subsection}{\numberline {6.4.3}Model Operations}{122}
-\contentsline {subsubsection}{Atlas Transformation Language (ATL)}{122}
-\contentsline {subsubsection}{Groovy-for-COPE}{122}
-\contentsline {subsubsection}{Epsilon Flock}{123}
-\contentsline {subsection}{\numberline {6.4.4}Results}{123}
-\contentsline {subsubsection}{Source-Target Relationships}{125}
-\contentsline {subsubsection}{Subtyping}{126}
-\contentsline {subsubsection}{Side-Effects during Initialisation}{128}
-\contentsline {subsection}{\numberline {6.4.5}Summary}{130}
-\contentsline {section}{\numberline {6.5}Limitations}{131}
-\contentsline {subsection}{\numberline {6.5.1}Threats to validity}{131}
-\contentsline {section}{\numberline {6.6}Summary}{131}
+\contentsline {subsubsection}{Actions, Transitions and Final States}{120}
+\contentsline {subsubsection}{Pseudostates}{120}
+\contentsline {subsubsection}{Activities}{120}
+\contentsline {subsubsection}{Partitions}{121}
+\contentsline {subsubsection}{ObjectFlows}{121}
+\contentsline {subsubsection}{Alternative ObjectFlowState Migration Semantics}{122}
+\contentsline {subsubsection}{XMI}{122}
+\contentsline {subsubsection}{Results}{123}
+\contentsline {subsection}{\numberline {6.3.3}Epsilon Flock in the Live Contest}{123}
+\contentsline {subsection}{\numberline {6.3.4}Summary}{124}
+\contentsline {section}{\numberline {6.4}Quantitive Comparison of Model Migration Languages}{124}
+\contentsline {subsection}{\numberline {6.4.1}Data}{125}
+\contentsline {subsubsection}{Co-evolution Examples}{125}
+\contentsline {subsubsection}{Selection of Migration Languages}{125}
+\contentsline {subsection}{\numberline {6.4.2}Method}{126}
+\contentsline {subsection}{\numberline {6.4.3}Model Operations}{126}
+\contentsline {subsubsection}{Atlas Transformation Language (ATL)}{127}
+\contentsline {subsubsection}{Groovy-for-COPE}{127}
+\contentsline {subsubsection}{Epsilon Flock}{128}
+\contentsline {subsection}{\numberline {6.4.4}Results}{128}
+\contentsline {subsubsection}{Source-Target Relationships}{130}
+\contentsline {subsubsection}{Subtyping}{130}
+\contentsline {subsubsection}{Side-Effects during Initialisation}{133}
+\contentsline {subsection}{\numberline {6.4.5}Summary}{135}
+\contentsline {section}{\numberline {6.5}Limitations}{136}
+\contentsline {subsection}{\numberline {6.5.1}Threats to validity}{136}
+\contentsline {section}{\numberline {6.6}Summary}{136}
 \contentsline {chapter}{\numberline {7}Conclusion}{127}
 \contentsline {section}{\numberline {7.1}Future Work}{127}
 \contentsline {subsection}{\numberline {7.1.1}Extensions to Epsilon Flock}{127}
