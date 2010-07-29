@@ -8,6 +8,7 @@ A level-1 auxiliary file: 5.Implementation/implementation.aux
 A level-1 auxiliary file: 6.Evaluation/evaluation.aux
 A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
+A level-1 auxiliary file: A.2.Measurements/measurements.aux
 The style file: longname.bst
 Database file #1: thesis.bib
 Warning--I'm ignoring heidenreich09derivation's extra "year" field
@@ -69,7 +70,7 @@ Name 5 in "Louis M. Rose and Markus Herrmannsdoerfer and James R. Williams and D
 while executing---line 1253 of file longname.bst
 You've used 162 entries,
             2472 wiz_defined-function locations,
-            1295 strings with 27654 characters,
+            1296 strings with 27687 characters,
 and the built_in function-call counts, 63150 in all, are:
 = -- 6355
 > -- 2366

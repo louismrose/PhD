@@ -1,10 +1,12 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
 
 \section{Limitations}
-% We will discuss the limitations of our work, using for context the feedback of users, reviews of publications and scenarios from the case study discussed in Section~\ref{subsubsec:case_study}
+The limitations and threats to the validity of the thesis research are now discussed. Some of the shortcomings identified here are elaborated on in Section~\ref{sec:future_work}, which highlights areas of future work.
 
-\subsection{Threats to validity}
-% Need to check other theses, but I think these threats need not relate onlyt o the evaluation chapter. These should be threats to the validity of the thesis as a whole?
+\paragraph{Generality} The thesis research focuses on model-metamodel co-evolution, but, as discussed in Chapter~\ref{Analysis}, metamodel changes can affect artefacts other than models. Model management operations and model editors are specified using metamodel concepts and, consequently, are affected when a metamodel changes. The work presented in Chapter~\ref{Implementation} focuses on migrating models in response to metamodel changes, and does not consider integration with tools for migrating model management operations and model editors. To reduce the effort required to manage the effects of metamodel changes, it seems reasonable to envisage a unified approach that migrates models, model management operations, model editors, and other affected artefacts.
 
-% Some ideas:
-%% * I chose the TTC case. Mitigation: taken from real-world example, ambiguity discussed between participants.
+\paragraph{Reproducibility}: The analysis and evaluation presented in Chapters~\ref{Analysis} and \ref{Evaluation} respectively involved using migration tools to understand and assess their functionality. With the exceptions noted below, the work presented in these chapters is difficult to reproduce and therefore the results drawn are somewhat subjective. On the other hand, multiple approaches to analysis and evaluation have been taken, and the work has been published and subjected to peer review. 
+
+Not all of the work in Chapters~\ref{Analysis} and \ref{Evaluation} is difficult to reproduce. In particular, Section~\ref{sec:analysing_existing_techniques} describes limitations of existing migration tools and was derived from the experiments discussed in Appendix~\ref{Experiments}. The measurements described in the quantitive comparison of model migration languages (Section~\ref{sec:quantitive}) were taken using the program described in Appendix~\ref{Measurements}. The appendices seek to capture the information necessary to reproduce parts of the thesis research.
+
+\paragraph{Formal semantics} No formal semantics for the conservative copy algorithm (Section~\ref{sec:flock}) have been provided. Instead, a reference implementation, Epsilon Flock, was developed, which facilitated comparison with other migration tools and participation in the transformation tools contest. Including a reference implementation in the Epsilon project will allow feedback to be gathered from industrial partners. For Epsilon as a whole, \cite{kolovos09thesis} makes a similar case for choosing a reference implementation over a formal semantics. For domains where completeness and correctness are a primary concern, a formal semantics would be required before Flock could be applied to manage model-metamodel co-evolution.  
