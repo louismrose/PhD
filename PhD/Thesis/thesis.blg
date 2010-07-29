@@ -8,7 +8,6 @@ A level-1 auxiliary file: 5.Implementation/implementation.aux
 A level-1 auxiliary file: 6.Evaluation/evaluation.aux
 A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
-A level-1 auxiliary file: A.2.Measurements/measurements.aux
 The style file: longname.bst
 Database file #1: thesis.bib
 Warning--I'm ignoring heidenreich09derivation's extra "year" field
@@ -68,45 +67,45 @@ Name 3 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." 
 while executing---line 1253 of file longname.bst
 Name 5 in "Louis M. Rose and Markus Herrmannsdoerfer and James R. Williams and Dimitrios S. Kolovos and Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
 while executing---line 1253 of file longname.bst
-You've used 162 entries,
+You've used 163 entries,
             2472 wiz_defined-function locations,
-            1296 strings with 27687 characters,
-and the built_in function-call counts, 63150 in all, are:
-= -- 6355
-> -- 2366
+            1297 strings with 27718 characters,
+and the built_in function-call counts, 63546 in all, are:
+= -- 6389
+> -- 2390
 < -- 72
-+ -- 763
-- -- 726
-* -- 4446
-:= -- 9791
-add.period$ -- 524
-call.type$ -- 162
-change.case$ -- 983
++ -- 772
+- -- 734
+* -- 4476
+:= -- 9855
+add.period$ -- 527
+call.type$ -- 163
+change.case$ -- 991
 chr.to.int$ -- 143
-cite$ -- 163
-duplicate$ -- 2894
-empty$ -- 5201
-format.name$ -- 934
-if$ -- 13505
-int.to.chr$ -- 20
+cite$ -- 164
+duplicate$ -- 2912
+empty$ -- 5233
+format.name$ -- 943
+if$ -- 13586
+int.to.chr$ -- 21
 int.to.str$ -- 0
-missing$ -- 145
-newline$ -- 814
-num.names$ -- 487
-pop$ -- 1150
+missing$ -- 146
+newline$ -- 819
+num.names$ -- 490
+pop$ -- 1161
 preamble$ -- 1
-purify$ -- 1173
+purify$ -- 1182
 quote$ -- 0
-skip$ -- 2364
+skip$ -- 2375
 stack$ -- 0
-substring$ -- 3103
-swap$ -- 823
+substring$ -- 3110
+swap$ -- 826
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1196
+type$ -- 1204
 warning$ -- 1
-while$ -- 508
-width$ -- 167
-write$ -- 2098
+while$ -- 510
+width$ -- 168
+write$ -- 2110
 (There were 25 error messages)

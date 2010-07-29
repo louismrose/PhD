@@ -822,12 +822,17 @@ Louis~M. Rose, Dimitrios~S. Kolovos, Nicholas Drivalos, James.~R. Williams,
 \newblock In {\em Proc. European Conference on Modelling Foundations and
   Applications}, 2010.
 
-\bibitem[Rose {\it et al.}\  2010c]{rose10ttc_case}{$~$}
+\bibitem[Rose {\it et al.}\  2010c]{rose10ttc_solution}{$~$}
+Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock Migrating activity diagrams with epsilon flock.
+\newblock In {\em Proc. TTC}, 2010.
+
+\bibitem[Rose {\it et al.}\  2010d]{rose10ttc_case}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model migration case.
 \newblock In {\em Proc. TTC}, 2010.
 
-\bibitem[Rose {\it et al.}\  2010d]{rose10flock}{$~$}
+\bibitem[Rose {\it et al.}\  2010e]{rose10flock}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model migration with epsilon flock.
 \newblock In {\em Proc. ICMT}, volume 6142 of {\em Lecture Notes in Computer

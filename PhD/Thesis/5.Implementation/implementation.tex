@@ -80,6 +80,7 @@ Conformance constraints vary over modelling languages. For example, Ecore, the m
 
 
 \subsection{Example}
+\label{subsec:mmi_syntax_example}
 By binding a model not to the underlying programming languages types defined in its metamodel but to the generic metamodel presented in Figure~\ref{fig:slot_model}, conformance can be checked using the above constraints. Binding the exemplar XMI in Listing~\ref{lst:xmi} to the generic metamodel shown in Figure~\ref{fig:slot_model} produces three Objects, all with type ``Person''. Each class object contains a slot whose feature is name, one with the value ``Franz'', one with the value ``Julie'' and the other with the value ``Hermann''. The object containing the slot with value ``Franz'' contains two further slots: one whose feature is mother and whose value is a reference\footnote{The generic metamodel used in this thesis implements reference values using the proxy design pattern \cite{gamma95patterns}.} to the object that contains the name slot with the value ``Julie'' and one whose feature is father and whose value is a reference to the object containing ``Hermann''. A UML object diagram for this instantiation of the generic metamodel is shown in Figure~\ref{fig:generic_binding}. Instances of object (slot) are shaded grey (white).
 
 \begin{figure}[htbp]
