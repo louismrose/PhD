@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  2 AUG 2010 14:51
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  2 AUG 2010 15:17
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -192,217 +192,192 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `thesis.toc'.
 
  [4]
-\openout2 = `3.LiteratureReview/literature_review.aux'.
+\openout2 = `5.Implementation/implementation.aux'.
 
- (./3.LiteratureReview/literature_review.tex [26
+ (./5.Implementation/implementation.tex
+Chapter 5.
+<5.Implementation/overview.pdf, id=20, 615.29875pt x 162.6075pt>
+File: 5.Implementation/overview.pdf Graphic file (type pdf)
+
+<use 5.Implementation/overview.pdf> [71
 
 
 
 
-]
-Chapter 3.
 
-Overfull \hbox (22.5748pt too wide) in paragraph at lines 9--10
-\OT1/cmr/m/n/10 Software evo-lu-tion is an im-por-tant facet of soft-ware en-gi
--neer-ing. Stud-ies [[],
+
+ <./5.Implementation/overview.pdf>]
+Overfull \hbox (0.89195pt too wide) in paragraph at lines 25--26
+\OT1/cmr/m/n/10 used to load and store mod-els. XML Meta-data In-ter-change (XM
+I) [[]],
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <7> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 34.
+ [72]
+<5.Implementation/slot_model.pdf, id=32, 320.19624pt x 71.26625pt>
+File: 5.Implementation/slot_model.pdf Graphic file (type pdf)
+
+<use 5.Implementation/slot_model.pdf>
+<5.Implementation/mof.pdf, id=33, 338.26375pt x 74.2775pt>
+File: 5.Implementation/mof.pdf Graphic file (type pdf)
+
+<use 5.Implementation/mof.pdf> [73 <./5.Implementation/slot_model.pdf> <./5.Imp
+lementation/mof.pdf>]
+Overfull \hbox (0.18585pt too wide) in paragraph at lines 79--80
+[]\OT1/cmr/m/n/10 Conformance con-straints vary over mod-elling lan-guages. For
+ ex-am-ple, Ecore,
+ []
+
+<5.Implementation/GenericBinding.pdf, id=60, 454.69875pt x 276.03125pt>
+File: 5.Implementation/GenericBinding.pdf Graphic file (type pdf)
+
+<use 5.Implementation/GenericBinding.pdf> [74 <./5.Implementation/GenericBindin
+g.pdf>] [75] <5.Implementation/families.pdf, id=80, 272.01625pt x 152.57pt>
+File: 5.Implementation/families.pdf Graphic file (type pdf)
+
+<use 5.Implementation/families.pdf> [76] [77 <./5.Implementation/families.pdf>]
+[78] [79]
+Overfull \hbox (38.01048pt too wide) in paragraph at lines 256--257
+[]\OT1/cmr/m/n/10 The core of the plat-form is the Ep-silon Ob-ject Lan-guage (
+EOL) [[]],
+ []
+
+<5.Implementation/hutn_workflow.png, id=147, 760.8425pt x 195.73125pt>
+File: 5.Implementation/hutn_workflow.png Graphic file (type png)
+
+<use 5.Implementation/hutn_workflow.png>
+Overfull \hbox (18.93442pt too wide) in paragraph at lines 274--275
+\OT1/cmr/m/n/10 e-ment, \OT1/pcr/m/n/10 PackageObject\OT1/cmr/m/n/10 , was adde
+d to the generic meta-model. A \OT1/pcr/m/n/10 PackageObject
+ []
+
+[80 <./5.Implementation/hutn_workflow.png (PNG copy)>] [81] [82]
+<5.Implementation/hutn_conformance_reporting.png, id=157, 647.41875pt x 137.513
+75pt>
+File: 5.Implementation/hutn_conformance_reporting.png Graphic file (type png)
+ <use 5.Implementation/hutn_conformance_reporting.png> [83 <./5.Implementation/
+hutn_conformance_reporting.png (PNG copy)>]
+Overfull \hbox (2.19502pt too wide) in paragraph at lines 388--389
+\OT1/cmr/m/n/10 Notwithstanding the power of gener-ic-ity, there are sit-u-a-ti
+ons where a metamodel-
+ []
+
+[84] <5.Implementation/petri_nets_step0.pdf, id=166, 254.9525pt x 153.57375pt>
+File: 5.Implementation/petri_nets_step0.pdf Graphic file (type pdf)
+
+<use 5.Implementation/petri_nets_step0.pdf>
+<5.Implementation/petri_nets_step1.pdf, id=167, 336.25626pt x 234.8775pt>
+File: 5.Implementation/petri_nets_step1.pdf Graphic file (type pdf)
+
+<use 5.Implementation/petri_nets_step1.pdf>
+Overfull \hbox (1.2688pt too wide) in paragraph at lines 443--444
+\OT1/pcr/m/n/10 Place \OT1/cmr/m/n/10 has any num-ber of \OT1/pcr/m/n/10 src \O
+T1/cmr/m/n/10 or \OT1/pcr/m/n/10 dst Transition\OT1/cmr/m/n/10 s. Sim-i-larly, 
+a \OT1/pcr/m/n/10 Transition
+ []
+
+[85 <./5.Implementation/petri_nets_step0.pdf> <./5.Implementation/petri_nets_st
+ep1.pdf>] [86] [87]
+Overfull \hbox (16.99106pt too wide) in paragraph at lines 516--517
+\OT1/cmr/m/n/10 of \OT1/pcr/m/n/10 Place\OT1/cmr/m/n/10 s. The method is used t
+o ac-cess the \OT1/pcr/m/n/10 src \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 dst \OT1/
+cmr/m/n/10 fea-tures of \OT1/pcr/m/n/10 Transition\OT1/cmr/m/n/10 ,
+ []
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 519.
+Missing character: There is no Â in font pcrr7t!
+Missing character: There is no   in font pcrr7t!
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 530.
+Missing character: There is no Â in font pcrr7t!
+Missing character: There is no   in font pcrr7t!
+
+Overfull \hbox (93.76065pt too wide) in paragraph at lines 542--543
+\OT1/cmr/m/n/10 Operator-based ap-proaches to man-ag-ing co-evolution, such as 
+COPE [[]],
+ []
+
+[88]
+Overfull \hbox (32.69678pt too wide) in paragraph at lines 548--549
+\OT1/cmr/m/n/10 sen-ta-tion. Fur-ther de-tails of this tech-nique are given in 
+[[]]. 
+ []
+
+<5.Implementation/cope_mm.pdf, id=294, 363.3575pt x 144.54pt>
+File: 5.Implementation/cope_mm.pdf Graphic file (type pdf)
+
+<use 5.Implementation/cope_mm.pdf> [89 <./5.Implementation/cope_mm.pdf>]
+[90]
+Overfull \hbox (2.22946pt too wide) in paragraph at lines 606--606
+[]\OT1/cmr/bx/n/14.4 Epsilon Flock: A Model Mi-gra-tion Lan-guage 
+ []
+
+
+Overfull \hbox (38.01048pt too wide) in paragraph at lines 615--616
+[]\OT1/cmr/m/n/10 The core of the plat-form is the Ep-silon Ob-ject Lan-guage (
+EOL) [[]],
+ []
+
+[91]
+<5.Implementation/flock_abstract_syntax.pdf, id=319, 462.72874pt x 142.5325pt>
+File: 5.Implementation/flock_abstract_syntax.pdf Graphic file (type pdf)
+
+<use 5.Implementation/flock_abstract_syntax.pdf>
+Overfull \hbox (2.0457pt too wide) in paragraph at lines 626--627
+ [][] 
+ []
+
+[92 <./5.Implementation/flock_abstract_syntax.pdf>]
+Overfull \hbox (19.36142pt too wide) in paragraph at lines 660--661
+\OT1/cmr/m/n/10 meta-class of \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 is de-ter-mine
+d from the \OT1/pcr/m/n/10 evolvedType \OT1/cmr/m/n/10 (or the \OT1/pcr/m/n/10 
+originalType
+ []
+
+
+Overfull \hbox (3.13936pt too wide) in paragraph at lines 664--665
+[]| \OT1/cmr/m/n/10 Ex-e-cute the body of \OT1/pcr/m/n/10 r \OT1/cmr/m/n/10 bin
+d-ing \OT1/pcr/m/n/10 e \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 
+to vari-ables named \OT1/pcr/m/n/10 original
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 676.
+
 (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
- [27]
-Overfull \hbox (7.01923pt too wide) in paragraph at lines 24--25
-\OT1/cmr/m/n/10 arte-fact in re-sponse to a change made to an-other). In ad-di-
-tion, [[]]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 676.
+ [93] [94]
+<5.Implementation/uml_step0.pdf, id=414, 553.06625pt x 170.6375pt>
+File: 5.Implementation/uml_step0.pdf Graphic file (type pdf)
+
+<use 5.Implementation/uml_step0.pdf>
+<5.Implementation/uml_step1.pdf, id=415, 516.93124pt x 164.615pt>
+File: 5.Implementation/uml_step1.pdf Graphic file (type pdf)
+
+<use 5.Implementation/uml_step1.pdf> [95]
+Overfull \hbox (44.95235pt too wide) in paragraph at lines 790--804
+ [][] 
  []
 
-
-Overfull \hbox (36.41739pt too wide) in paragraph at lines 32--33
-\OT1/cmr/m/n/10 Con-troller, Fat Model'', par-tic-u-lar to the Ruby on Rails we
-b frame-work [[]]. 
- []
-
-[28]
-Overfull \hbox (31.84285pt too wide) in paragraph at lines 41--42
-\OT1/cmr/m/n/10 form a \OT1/cmr/m/it/10 pat-tern cat-a-logue \OT1/cmr/m/n/10 --
- such as for object-oriented pro-gram-ming [[]]
- []
-
-
-Overfull \hbox (48.06721pt too wide) in paragraph at lines 41--42
-\OT1/cmr/m/n/10 least a name, overview of the prob-lem, and de-tails of a com-m
-on so-lu-tion [[]].
- []
-
-[29]
-Overfull \hbox (34.19516pt too wide) in paragraph at lines 54--55
-\OT1/cmr/m/n/10 ingly trace-abil-ity is used for arte-facts other than re-quire
--ments [[]].
- []
-
-
-<3.LiteratureReview/images/traceability_links.pdf, id=38, 354.98764pt x 291.285
-14pt>
-File: 3.LiteratureReview/images/traceability_links.pdf Graphic file (type pdf)
- <use 3.LiteratureReview/images/traceability_links.pdf> [30] [31 <./3.Literatur
-eReview/images/traceability_links.pdf>]
-Overfull \hbox (25.47455pt too wide) in paragraph at lines 84--85
-\OT1/cmr/m/n/10 con-tinue to con-form to new lan-guage spec-i-fi-ca-tions. For 
-ex-am-ple, [[]]
- []
-
-[32]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 91.
- (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [33]
-[34]
-Overfull \hbox (9.19505pt too wide) in paragraph at lines 128--129
-[]\OT1/cmr/m/n/10 As noted in [[]], the ap-proaches de-scribed in [[],
- []
-
-
-Overfull \hbox (53.46371pt too wide) in paragraph at lines 133--134
-\OT1/cmr/m/n/10 for sup-port-ing re-la-tional database schema evo-lu-tion (e.g.
- [[],
- []
-
-[35] [36]
-Overfull \hbox (10.13945pt too wide) in paragraph at lines 156--157
-[]\OT1/cmr/m/n/10 [[]] recog-nise and seek to ad-dress the chal-lenge of gramma
-r-
- []
-
-[37]
-Overfull \hbox (36.38664pt too wide) in paragraph at lines 174--175
-\OT1/cmr/m/n/10 only upon syn-tax can-not be ap-plied in the face of ad-di-tive
- changes [[]].
- []
-
-[38]
-Overfull \hbox (10.38855pt too wide) in paragraph at lines 189--190
-\OT1/cmr/m/n/10 ing de-vel-op-ment tools for tex-tual lan-guages, LTK (lan-guag
-e toolkit) [[]].
- []
-
-[39]
-<3.LiteratureReview/images/emf_refactor_lhs.pdf, id=109, 298.83914pt x 92.4245p
-t>
-File: 3.LiteratureReview/images/emf_refactor_lhs.pdf Graphic file (type pdf)
- <use 3.LiteratureReview/images/emf_refactor_lhs.pdf>
-<3.LiteratureReview/images/emf_refactor_rhs.pdf, id=110, 296.52852pt x 173.2959
-3pt>
-File: 3.LiteratureReview/images/emf_refactor_rhs.pdf Graphic file (type pdf)
- <use 3.LiteratureReview/images/emf_refactor_rhs.pdf>
-Overfull \hbox (3.09972pt too wide) in paragraph at lines 201--207
- [] 
- []
-
-[40 <./3.LiteratureReview/images/emf_refactor_lhs.pdf> <./3.LiteratureReview/im
-ages/emf_refactor_rhs.pdf>]
-Overfull \hbox (5.63956pt too wide) in paragraph at lines 222--223
-\OT1/cmr/m/n/10 tive trans-for-ma-tion lan-guages lend them-selves to the spec-
-i-fi-ca-tion of bi-directional
- []
-
-
-<3.LiteratureReview/images/retransformation.pdf, id=194, 156.30023pt x 149.3706
-5pt>
-File: 3.LiteratureReview/images/retransformation.pdf Graphic file (type pdf)
- <use 3.LiteratureReview/images/retransformation.pdf>
-<3.LiteratureReview/images/live_transformation.pdf, id=195, 160.91989pt x 149.3
-7065pt>
-File: 3.LiteratureReview/images/live_transformation.pdf Graphic file (type pdf)
-
- <use 3.LiteratureReview/images/live_transformation.pdf>
-Underfull \hbox (badness 2856) in paragraph at lines 238--238
-[]\OT1/cmr/m/n/10 Figure 3.3: Ap-proaches to in-cre-men-tal trans-for-ma-tion. 
-Taken from
- []
-
-[41] [42 <./3.LiteratureReview/images/retransformation.pdf> <./3.LiteratureRevi
-ew/images/live_transformation.pdf>]
-<3.LiteratureReview/images/impact_analysis_pattern.pdf, id=276, 446.71843pt x 4
-57.50133pt>
-File: 3.LiteratureReview/images/impact_analysis_pattern.pdf Graphic file (type 
-pdf)
- <use 3.LiteratureReview/images/impact_analysis_pattern.pdf>
-Overfull \hbox (29.95605pt too wide) in paragraph at lines 266--267
-\OT1/cmr/m/n/10 the refac-tor-ing func-tion-al-ity of the Eclipse Java De-vel-o
-p-ment Tools [[]]. 
- []
-
-
-Overfull \hbox (11.29698pt too wide) in paragraph at lines 272--273
-\OT1/cmr/m/n/10 vo-ca-tions of the code gen-er-a-tion tem-plate. As de-scribed 
-in [[]],
- []
-
-[43] [44 <./3.LiteratureReview/images/impact_analysis_pattern.pdf>]
-Overfull \hbox (71.79735pt too wide) in paragraph at lines 286--287
-\OT1/cmr/m/n/10 model changes made [[], [], [],
- []
-
-[45]
-Overfull \hbox (57.19687pt too wide) in paragraph at lines 288--289
-\OT1/cmr/m/n/10 cause au-to-mated co-evolution ap-proaches are built atop them.
- [[]]
- []
-
-
-Overfull \hbox (4.1192pt too wide) in paragraph at lines 291--292
- \OT1/cmr/bx/n/10 Co-evolution ap-proaches[] \OT1/cmr/m/n/10 Sev-eral ap-proach
-es for man-ag-ing co-evolution have
- []
-
-
-<3.LiteratureReview/images/CoEvoProcess.png, id=324, 424.58624pt x 340.27126pt>
-File: 3.LiteratureReview/images/CoEvoProcess.png Graphic file (type png)
-<use 3.LiteratureReview/images/CoEvoProcess.png>
-Overfull \hbox (73.56119pt too wide) in paragraph at lines 306--307
-[]\OT1/cmr/m/n/10 Both [[]] and [[]] ex-tend the work of [[]],
- []
-
-[46]
-Overfull \hbox (7.55615pt too wide) in paragraph at lines 308--309
-[]\OT1/cmr/m/n/10 Some co-evolution ap-proaches pre-date the clas-si-fi-ca-tion
-s of meta-model changes
- []
-
-
-Overfull \hbox (3.83559pt too wide) in paragraph at lines 311--312
-\OT1/cmr/m/n/10 can yield more than one fea-si-ble set of mi-gra-tion strate-gi
-es. [[]]
- []
-
-[47 <./3.LiteratureReview/images/CoEvoProcess.png>]
-<3.LiteratureReview/images/transformation-chain.png, id=335, 1215.54124pt x 103
-8.88126pt>
-File: 3.LiteratureReview/images/transformation-chain.png Graphic file (type png
-)
- <use 3.LiteratureReview/images/transformation-chain.png> [48]
-Overfull \hbox (14.30786pt too wide) in paragraph at lines 340--341
-\OT1/cmr/m/n/10 mo-ti-va-tion of most model syn-chro-ni-sa-tion re-search. How-
-ever, [[]]
- []
-
-
-Overfull \hbox (3.6463pt too wide) in paragraph at lines 342--343
- \OT1/cmr/bx/n/10 Model-Metamodel Co-evolution Chal-lenges[] \OT1/cmr/m/n/10 To
- bet-ter un-der-stand model-
- []
-
-[49 <./3.LiteratureReview/images/transformation-chain.png (PNG copy)>]
-Overfull \hbox (64.38971pt too wide) in paragraph at lines 348--349
-\OT1/cmr/m/n/10 used by Digg in his work on pro-gram refac-tor-ing ([[], [],
- []
-
-) [50] (./thesis.bbl [144
-
-
+) [96 <./5.Implementation/uml_step0.pdf> <./5.Implementation/uml_step1.pdf>]
+[97] (./thesis.bbl [144
 
 
 
@@ -454,40 +429,36 @@ Missing character: There is no ™ in font cmr10!
 (./5.Implementation/implementation.aux) (./6.Evaluation/evaluation.aux)
 (./7.Conclusion/conclusion.aux) (./A.1.Experiments/experiments.aux)) ) 
 Here is how much of TeX's memory you used:
- 2982 strings out of 493886
- 45150 string characters out of 1151098
- 101323 words of memory out of 3000000
- 6150 multiletter control sequences out of 10000+50000
- 11712 words of font info for 40 fonts, out of 3000000 for 5000
+ 3429 strings out of 493886
+ 50855 string characters out of 1151098
+ 173860 words of memory out of 3000000
+ 6577 multiletter control sequences out of 10000+50000
+ 14748 words of font info for 51 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 26i,8n,32p,1668b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,8n,53p,1403b,1553s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/loc
 al/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2008
 /texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2008/texmf-di
 st/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-dist/fonts/
-type1/bluesky/cm/cmbx9.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blue
-sky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
-r10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></
-usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/local/
-texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/200
-8/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dis
-t/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/typ
-e1/bluesky/cm/cmr9.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/
-cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy10
-.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></us
-r/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti7.pfb></usr/local/te
-xlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.pfb></usr/local/texlive/2008
-/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2008/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2008/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2008/texmf
--dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2008/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2008/texmf-dis
-t/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2008/texmf-dist/
-fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2008/texmf-dist/fo
-nts/type1/urw/courier/ucrr8a.pfb>
-Output written on thesis.pdf (42 pages, 2747497 bytes).
+type1/bluesky/cm/cmbxti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/b
+luesky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm
+/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb
+></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/loc
+al/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/texlive/
+2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-
+dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dist/fonts/
+type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blues
+ky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cms
+y10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb><
+/usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti7.pfb></usr/local
+/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.pfb></usr/local/texlive/2
+008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2008/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2008/texmf-dist/f
+onts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
+pe1/urw/zapfding/uzdr.pfb>
+Output written on thesis.pdf (44 pages, 650134 bytes).
 PDF statistics:
- 442 PDF objects out of 1000 (max. 8388607)
+ 704 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

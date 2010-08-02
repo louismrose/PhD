@@ -129,7 +129,7 @@
 \contentsline {subsection}{\numberline {5.2.3}Migration with HUTN}{83}
 \contentsline {subsection}{\numberline {5.2.4}Limitations}{84}
 \contentsline {subsection}{\numberline {5.2.5}Summary}{85}
-\contentsline {section}{\numberline {5.3}Epsilon Flock}{85}
+\contentsline {section}{\numberline {5.3}Analysis of Languages used for Migration}{85}
 \contentsline {subsection}{\numberline {5.3.1}Co-Evolution Example}{85}
 \contentsline {subsection}{\numberline {5.3.2}Existing Approaches}{86}
 \contentsline {subsubsection}{Manual Specification with Model-to-Model Transformation}{86}
@@ -138,16 +138,19 @@
 \contentsline {subsection}{\numberline {5.3.3}Analysis}{90}
 \contentsline {subsubsection}{Source-Target Relationship}{90}
 \contentsline {subsubsection}{Model Representation}{90}
-\contentsline {subsection}{\numberline {5.3.4}Implementation}{91}
-\contentsline {subsection}{\numberline {5.3.5}The Epsilon Platform}{91}
-\contentsline {subsection}{\numberline {5.3.6}Flock}{91}
+\contentsline {section}{\numberline {5.4}Epsilon Flock: A Model Migration Language}{91}
+\contentsline {subsection}{\numberline {5.4.1}The Epsilon Platform}{91}
+\contentsline {subsection}{\numberline {5.4.2}Flock}{91}
 \contentsline {subsubsection}{Abstract Syntax}{91}
 \contentsline {subsubsection}{Concrete Syntax}{92}
 \contentsline {subsubsection}{Execution Semantics}{92}
 \contentsline {subsubsection}{Conservative Copying}{93}
 \contentsline {subsubsection}{Development and User Tools}{94}
-\contentsline {subsection}{\numberline {5.3.7}Example}{94}
-\contentsline {section}{\numberline {5.4}Chapter Summary}{95}
+\contentsline {subsection}{\numberline {5.4.3}Examples}{94}
+\contentsline {subsubsection}{Petri Nets in Flock}{94}
+\contentsline {subsubsection}{Petri Nets in Flock}{95}
+\contentsline {subsubsection}{Comparison}{96}
+\contentsline {section}{\numberline {5.5}Chapter Summary}{97}
 \contentsline {chapter}{\numberline {6}Evaluation}{97}
 \contentsline {paragraph}{Evaluation of the Metamodel-Indepenent Syntax}{97}
 \contentsline {section}{\numberline {6.1}Exemplar User-Driven Co-Evolution}{98}
