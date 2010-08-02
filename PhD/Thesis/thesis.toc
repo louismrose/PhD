@@ -43,29 +43,29 @@
 \contentsline {subsection}{\numberline {3.1.4}Traceability}{30}
 \contentsline {section}{\numberline {3.2}Software Evolution in Practice}{32}
 \contentsline {subsection}{\numberline {3.2.1}Programming Language Evolution}{32}
-\contentsline {subsubsection}{Reduction}{32}
-\contentsline {subsubsection}{Revolution}{32}
+\contentsline {subsubsection}{Reduction}{33}
+\contentsline {subsubsection}{Revolution}{33}
 \contentsline {subsection}{\numberline {3.2.2}Schema Evolution}{33}
-\contentsline {subsubsection}{XML Schema Evolution}{33}
-\contentsline {subsubsection}{Relational Database Schema Evolution}{34}
-\contentsline {subsection}{\numberline {3.2.3}Grammar Evolution}{36}
+\contentsline {subsubsection}{XML Schema Evolution}{34}
+\contentsline {subsubsection}{Relational Database Schema Evolution}{35}
+\contentsline {subsection}{\numberline {3.2.3}Grammar Evolution}{37}
 \contentsline {subsection}{\numberline {3.2.4}Evolution of MDE Artefacts}{37}
-\contentsline {subsubsection}{Model Refactoring}{38}
-\contentsline {subsubsection}{Model Synchronisation}{40}
-\contentsline {paragraph}{Incremental Transformation}{40}
-\contentsline {paragraph}{Towards automated model synchronisation}{41}
-\contentsline {paragraph}{Synchronisation of models with text and trace links}{42}
-\contentsline {subsubsection}{Model-metamodel Co-Evolution}{44}
-\contentsline {paragraph}{Co-evolution theory}{44}
-\contentsline {paragraph}{Co-evolution patterns}{44}
-\contentsline {paragraph}{Co-evolution approaches}{45}
-\contentsline {paragraph}{Summary}{46}
-\contentsline {subsubsection}{Visualisation}{47}
-\contentsline {section}{\numberline {3.3}Summary}{47}
+\contentsline {subsubsection}{Model Refactoring}{39}
+\contentsline {subsubsection}{Model Synchronisation}{41}
+\contentsline {paragraph}{Incremental Transformation}{41}
+\contentsline {paragraph}{Towards automated model synchronisation}{42}
+\contentsline {paragraph}{Synchronisation of models with text and trace links}{43}
+\contentsline {subsubsection}{Model-metamodel Co-Evolution}{45}
+\contentsline {paragraph}{Co-evolution theory}{45}
+\contentsline {paragraph}{Co-evolution patterns}{46}
+\contentsline {paragraph}{Co-evolution approaches}{46}
+\contentsline {paragraph}{Summary}{47}
+\contentsline {subsubsection}{Visualisation}{48}
+\contentsline {section}{\numberline {3.3}Summary}{48}
 \contentsline {paragraph}{Model Refactoring Challenges}{48}
-\contentsline {paragraph}{Model Synchronisation Challenges}{48}
-\contentsline {paragraph}{Model-Metamodel Co-evolution Challenges}{48}
-\contentsline {paragraph}{General Challenges for Evolution in MDE}{48}
+\contentsline {paragraph}{Model Synchronisation Challenges}{49}
+\contentsline {paragraph}{Model-Metamodel Co-evolution Challenges}{49}
+\contentsline {paragraph}{General Challenges for Evolution in MDE}{50}
 \contentsline {chapter}{\numberline {4}Analysis}{51}
 \contentsline {section}{\numberline {4.1}Locating Data}{51}
 \contentsline {subsection}{\numberline {4.1.1}Requirements}{52}

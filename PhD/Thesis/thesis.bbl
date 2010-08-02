@@ -301,6 +301,13 @@ David Frankel.
   Computing}.
 \newblock Wiley, 2002.
 
+\bibitem[Frenzel 2006]{ltk}{$~$}
+Leif Frenzel.
+\newblock The language toolkit: An {API} for automated refactorings in
+  eclipse-based {IDE}s [online].
+\newblock [Accessed 02 August 2010] Available at:
+  \url{http://www.eclipse.org/articles/Article-LTK/ltk.html}, 2006.
+
 \bibitem[Fritzsche {\it et al.}\  2008]{fritzsche08tracing}{$~$}
 M.~Fritzsche, J.~Johannes, S.~Zschaler, A.~Zherebtsov, and A.~Terekhov.
 \newblock Application of tracing techniques in {Model-Driven Performance

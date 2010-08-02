@@ -67,45 +67,45 @@ Name 3 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." 
 while executing---line 1253 of file longname.bst
 Name 5 in "Louis M. Rose and Markus Herrmannsdoerfer and James R. Williams and Dimitrios S. Kolovos and Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
 while executing---line 1253 of file longname.bst
-You've used 163 entries,
+You've used 164 entries,
             2472 wiz_defined-function locations,
-            1297 strings with 27718 characters,
-and the built_in function-call counts, 63546 in all, are:
-= -- 6389
-> -- 2390
+            1301 strings with 27922 characters,
+and the built_in function-call counts, 63818 in all, are:
+= -- 6416
+> -- 2398
 < -- 72
-+ -- 772
-- -- 734
-* -- 4476
-:= -- 9855
-add.period$ -- 527
-call.type$ -- 163
-change.case$ -- 991
-chr.to.int$ -- 143
-cite$ -- 164
-duplicate$ -- 2912
-empty$ -- 5233
-format.name$ -- 943
-if$ -- 13586
++ -- 775
+- -- 736
+* -- 4489
+:= -- 9898
+add.period$ -- 530
+call.type$ -- 164
+change.case$ -- 996
+chr.to.int$ -- 144
+cite$ -- 165
+duplicate$ -- 2923
+empty$ -- 5259
+format.name$ -- 946
+if$ -- 13644
 int.to.chr$ -- 21
 int.to.str$ -- 0
 missing$ -- 146
-newline$ -- 819
-num.names$ -- 490
-pop$ -- 1161
+newline$ -- 824
+num.names$ -- 493
+pop$ -- 1169
 preamble$ -- 1
-purify$ -- 1182
+purify$ -- 1188
 quote$ -- 0
-skip$ -- 2375
+skip$ -- 2387
 stack$ -- 0
-substring$ -- 3110
-swap$ -- 826
+substring$ -- 3118
+swap$ -- 828
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1204
+type$ -- 1212
 warning$ -- 1
-while$ -- 510
-width$ -- 168
-write$ -- 2110
+while$ -- 512
+width$ -- 169
+write$ -- 2122
 (There were 25 error messages)
