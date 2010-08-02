@@ -17,21 +17,21 @@
 \contentsline {subsubsection}{Further model management activities}{12}
 \contentsline {subsection}{\numberline {2.1.4}Summary}{12}
 \contentsline {section}{\numberline {2.2}MDE Methods}{12}
-\contentsline {subsection}{\numberline {2.2.1}Model-Driven Architecture (MDA)}{12}
+\contentsline {subsection}{\numberline {2.2.1}Model-Driven Architecture (MDA)}{13}
 \contentsline {subsection}{\numberline {2.2.2}Methods for MDE}{14}
 \contentsline {subsubsection}{Architecture-Centric Model-Driven Software Development}{14}
 \contentsline {subsubsection}{Domain-Specific Modelling}{14}
 \contentsline {subsubsection}{Microsoft Software Factories}{15}
 \contentsline {subsection}{\numberline {2.2.3}Summary}{16}
-\contentsline {section}{\numberline {2.3}MDE Tools}{16}
+\contentsline {section}{\numberline {2.3}MDE Tools}{17}
 \contentsline {subsection}{\numberline {2.3.1}Eclipse Modelling Framework}{17}
-\contentsline {subsection}{\numberline {2.3.2}Epsilon}{19}
+\contentsline {subsection}{\numberline {2.3.2}Epsilon}{20}
 \contentsline {section}{\numberline {2.4}Research Relating to MDE}{21}
 \contentsline {subsection}{\numberline {2.4.1}Domain-Specific Languages}{21}
 \contentsline {subsection}{\numberline {2.4.2}Language-Oriented Programming}{22}
-\contentsline {subsection}{\numberline {2.4.3}Grammarware}{23}
-\contentsline {section}{\numberline {2.5}Benefits of and Current Challenges for MDE}{23}
-\contentsline {subsection}{\numberline {2.5.1}Benefits}{23}
+\contentsline {subsection}{\numberline {2.4.3}Grammarware}{24}
+\contentsline {section}{\numberline {2.5}Benefits of and Current Challenges for MDE}{24}
+\contentsline {subsection}{\numberline {2.5.1}Benefits}{24}
 \contentsline {subsection}{\numberline {2.5.2}Challenges}{24}
 \contentsline {subsubsection}{Scalability}{25}
 \contentsline {subsubsection}{Resistance to change}{25}
@@ -100,12 +100,12 @@
 \contentsline {paragraph}{Example}{64}
 \contentsline {paragraph}{Change recording}{65}
 \contentsline {paragraph}{Differencing}{66}
-\contentsline {subsection}{\numberline {4.2.4}Summary}{66}
+\contentsline {subsection}{\numberline {4.2.4}Summary}{67}
 \contentsline {section}{\numberline {4.3}Requirements Identification}{67}
-\contentsline {subsection}{\numberline {4.3.1}Explicit conformance checking}{67}
+\contentsline {subsection}{\numberline {4.3.1}Explicit conformance checking}{68}
 \contentsline {subsection}{\numberline {4.3.2}User-driven co-evolution}{68}
 \contentsline {subsection}{\numberline {4.3.3}Developer-driven co-evolution}{68}
-\contentsline {section}{\numberline {4.4}Chapter Summary}{69}
+\contentsline {section}{\numberline {4.4}Chapter Summary}{70}
 \contentsline {chapter}{\numberline {5}Implementation}{71}
 \contentsline {section}{\numberline {5.1}Metamodel-Independent Syntax}{71}
 \contentsline {subsection}{\numberline {5.1.1}Model Storage Representation}{72}
@@ -142,7 +142,7 @@
 \contentsline {subsection}{\numberline {5.3.5}The Epsilon Platform}{91}
 \contentsline {subsection}{\numberline {5.3.6}Flock}{91}
 \contentsline {subsubsection}{Abstract Syntax}{91}
-\contentsline {subsubsection}{Concrete Syntax}{91}
+\contentsline {subsubsection}{Concrete Syntax}{92}
 \contentsline {subsubsection}{Execution Semantics}{92}
 \contentsline {subsubsection}{Conservative Copying}{93}
 \contentsline {subsubsection}{Development and User Tools}{94}
@@ -241,13 +241,14 @@
 \contentsline {paragraph}{Reproducibility}{137}
 \contentsline {paragraph}{Formal semantics}{137}
 \contentsline {section}{\numberline {6.6}Summary}{137}
-\contentsline {chapter}{\numberline {7}Conclusion}{137}
-\contentsline {section}{\numberline {7.1}Future Work}{137}
-\contentsline {subsubsection}{Generalisation}{137}
-\contentsline {subsection}{\numberline {7.1.1}Extensions to Epsilon Flock}{137}
-\contentsline {chapter}{\numberline {A}Experiments}{139}
-\contentsline {section}{\numberline {A.1}Metamodel-Independent Change}{139}
-\contentsline {subsection}{\numberline {A.1.1}Correctness}{140}
-\contentsline {subsection}{\numberline {A.1.2}Automation}{140}
-\contentsline {subsection}{\numberline {A.1.3}Customisation}{140}
-\contentsline {subsection}{\numberline {A.1.4}Extensibility}{140}
+\contentsline {chapter}{\numberline {7}Conclusion}{139}
+\contentsline {section}{\numberline {7.1}Closing Remarks}{139}
+\contentsline {section}{\numberline {7.2}Future Work}{139}
+\contentsline {subsubsection}{Generalisation}{139}
+\contentsline {subsection}{\numberline {7.2.1}Extensions to Epsilon Flock}{139}
+\contentsline {chapter}{\numberline {A}Experiments}{141}
+\contentsline {section}{\numberline {A.1}Metamodel-Independent Change}{141}
+\contentsline {subsection}{\numberline {A.1.1}Correctness}{142}
+\contentsline {subsection}{\numberline {A.1.2}Automation}{142}
+\contentsline {subsection}{\numberline {A.1.3}Customisation}{142}
+\contentsline {subsection}{\numberline {A.1.4}Extensibility}{142}
