@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  2 AUG 2010 15:17
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  3 AUG 2010 13:55
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -192,198 +192,312 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `thesis.toc'.
 
  [4]
-\openout2 = `5.Implementation/implementation.aux'.
+\openout2 = `6.Evaluation/evaluation.aux'.
 
- (./5.Implementation/implementation.tex
-Chapter 5.
-<5.Implementation/overview.pdf, id=20, 615.29875pt x 162.6075pt>
-File: 5.Implementation/overview.pdf Graphic file (type pdf)
-
-<use 5.Implementation/overview.pdf> [71
+ (./6.Evaluation/evaluation.tex [98
 
 
 
 
 
 
- <./5.Implementation/overview.pdf>]
-Overfull \hbox (0.89195pt too wide) in paragraph at lines 25--26
-\OT1/cmr/m/n/10 used to load and store mod-els. XML Meta-data In-ter-change (XM
-I) [[]],
+
+]
+Chapter 6.
+
+Overfull \hbox (30.17949pt too wide) in paragraph at lines 11--12
+ \OT1/cmr/bx/n/10 Eval-u-a-tion of the Metamodel-Indepenent Syn-tax[] \OT1/cmr/
+m/n/10 The metamodel-independent
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
+(./6.Evaluation/user_driven_example.tex [99] [100]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 24.
+
 (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
+<6.Evaluation/images/po_before.pdf, id=31, 261.97874pt x 136.51pt>
+File: 6.Evaluation/images/po_before.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/po_before.pdf>
+<6.Evaluation/images/po_after.pdf, id=32, 383.4325pt x 170.6375pt>
+File: 6.Evaluation/images/po_after.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/po_after.pdf> [101 <./6.Evaluation/images/po_before.pd
+f> <./6.Evaluation/images/po_after.pdf>] [102]
+<6.Evaluation/images/po_hutn.png, id=143, 740.7675pt x 819.06pt>
+File: 6.Evaluation/images/po_hutn.png Graphic file (type png)
+
+<use 6.Evaluation/images/po_hutn.png>
+Overfull \hbox (39.1122pt too wide) in paragraph at lines 67--68
+ [][] 
+ []
+
+[103] [104 <./6.Evaluation/images/po_hutn.png>]) (./6.Evaluation/quantitive.tex
+
+Overfull \hbox (15.38867pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 6.2.  QUANTITIVE COMPARISON OF MODEL MIGRATION LANGUAGES \OT1/
+cmr/m/n/10 105
+ []
+
+[105]
+Overfull \hbox (18.64122pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/10 guages in oth-ers (e.g. [[], []]).
+ []
+
+[106]
+Underfull \hbox (badness 2744) in paragraph at lines 29--29
+[][]\OT1/cmr/m/n/8 Communication with Ed Merks, Eclipse Mod-el-ing Project lead
+er, 2009, avail-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\OT1/cmr/m/n/8 able at $\OT1/pcr/m/n/8 http : / / www . eclipse . org / forums 
+/ index . php ? t = tree&goto = 486690&S =
+ []
+
+
+Overfull \hbox (15.38867pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 6.2.  QUANTITIVE COMPARISON OF MODEL MIGRATION LANGUAGES \OT1/
+cmr/m/n/10 107
+ []
+
+[107]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
+ (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-)
-LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <7> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 34.
- [72]
-<5.Implementation/slot_model.pdf, id=32, 320.19624pt x 71.26625pt>
-File: 5.Implementation/slot_model.pdf Graphic file (type pdf)
-
-<use 5.Implementation/slot_model.pdf>
-<5.Implementation/mof.pdf, id=33, 338.26375pt x 74.2775pt>
-File: 5.Implementation/mof.pdf Graphic file (type pdf)
-
-<use 5.Implementation/mof.pdf> [73 <./5.Implementation/slot_model.pdf> <./5.Imp
-lementation/mof.pdf>]
-Overfull \hbox (0.18585pt too wide) in paragraph at lines 79--80
-[]\OT1/cmr/m/n/10 Conformance con-straints vary over mod-elling lan-guages. For
- ex-am-ple, Ecore,
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+ [108]
+Overfull \hbox (15.38867pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 6.2.  QUANTITIVE COMPARISON OF MODEL MIGRATION LANGUAGES \OT1/
+cmr/m/n/10 109
  []
 
-<5.Implementation/GenericBinding.pdf, id=60, 454.69875pt x 276.03125pt>
-File: 5.Implementation/GenericBinding.pdf Graphic file (type pdf)
-
-<use 5.Implementation/GenericBinding.pdf> [74 <./5.Implementation/GenericBindin
-g.pdf>] [75] <5.Implementation/families.pdf, id=80, 272.01625pt x 152.57pt>
-File: 5.Implementation/families.pdf Graphic file (type pdf)
-
-<use 5.Implementation/families.pdf> [76] [77 <./5.Implementation/families.pdf>]
-[78] [79]
-Overfull \hbox (38.01048pt too wide) in paragraph at lines 256--257
-[]\OT1/cmr/m/n/10 The core of the plat-form is the Ep-silon Ob-ject Lan-guage (
-EOL) [[]],
+[109] [110]
+Overfull \hbox (19.20001pt too wide) in paragraph at lines 193--194
+[]\OT1/pcr/m/n/10 <migrated[]element>.<feature> = <original[]element>.<feature>
+ 
  []
 
-<5.Implementation/hutn_workflow.png, id=147, 760.8425pt x 195.73125pt>
-File: 5.Implementation/hutn_workflow.png Graphic file (type png)
 
-<use 5.Implementation/hutn_workflow.png>
-Overfull \hbox (18.93442pt too wide) in paragraph at lines 274--275
-\OT1/cmr/m/n/10 e-ment, \OT1/pcr/m/n/10 PackageObject\OT1/cmr/m/n/10 , was adde
-d to the generic meta-model. A \OT1/pcr/m/n/10 PackageObject
+Overfull \hbox (13.7079pt too wide) in paragraph at lines 195--196
+\OT1/cmr/m/n/10 tained sev-eral fea-ture re-nam-ings, and con-se-quently the Gr
+oovy-for-COPE (existing-
  []
 
-[80 <./5.Implementation/hutn_workflow.png (PNG copy)>] [81] [82]
-<5.Implementation/hutn_conformance_reporting.png, id=157, 647.41875pt x 137.513
-75pt>
-File: 5.Implementation/hutn_conformance_reporting.png Graphic file (type png)
- <use 5.Implementation/hutn_conformance_reporting.png> [83 <./5.Implementation/
-hutn_conformance_reporting.png (PNG copy)>]
-Overfull \hbox (2.19502pt too wide) in paragraph at lines 388--389
-\OT1/cmr/m/n/10 Notwithstanding the power of gener-ic-ity, there are sit-u-a-ti
-ons where a metamodel-
+<6.Evaluation/images/subtyping.pdf, id=174, 291.0875pt x 193.72375pt>
+File: 6.Evaluation/images/subtyping.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/subtyping.pdf>
+Overfull \hbox (15.38867pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 6.2.  QUANTITIVE COMPARISON OF MODEL MIGRATION LANGUAGES \OT1/
+cmr/m/n/10 111
  []
 
-[84] <5.Implementation/petri_nets_step0.pdf, id=166, 254.9525pt x 153.57375pt>
+[111]
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 218.
+ [112 <./6.Evaluation/images/subtyping.pdf>]
+Overfull \hbox (15.38867pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 6.2.  QUANTITIVE COMPARISON OF MODEL MIGRATION LANGUAGES \OT1/
+cmr/m/n/10 113
+ []
+
+[113]
+<6.Evaluation/images/change_ref_to_cont_before.pdf, id=248, 247.92625pt x 118.4
+425pt>
+File: 6.Evaluation/images/change_ref_to_cont_before.pdf Graphic file (type pdf)
+
+ <use 6.Evaluation/images/change_ref_to_cont_before.pdf>
+<6.Evaluation/images/change_ref_to_cont_after.pdf, id=249, 356.33125pt x 62.232
+5pt>
+File: 6.Evaluation/images/change_ref_to_cont_after.pdf Graphic file (type pdf)
+ <use 6.Evaluation/images/change_ref_to_cont_after.pdf>
+Overfull \hbox (30.63933pt too wide) in paragraph at lines 328--329
+\OT1/cmr/m/n/10 less straight-for-ward be-cause the value of a con-tain-ment re
+f-er-ence (\OT1/pcr/m/n/10 Signature#ports\OT1/cmr/m/n/10 )
+ []
+
+[114 <./6.Evaluation/images/change_ref_to_cont_before.pdf> <./6.Evaluation/imag
+es/change_ref_to_cont_after.pdf>]
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 339.
+
+Overfull \hbox (15.38867pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 6.2.  QUANTITIVE COMPARISON OF MODEL MIGRATION LANGUAGES \OT1/
+cmr/m/n/10 115
+ []
+
+[115]) (./6.Evaluation/collaborative_comparison.tex
+Underfull \vbox (badness 2027) has occurred while \output is active []
+
+ [116]
+<5.Implementation/petri_nets_step0.pdf, id=342, 254.9525pt x 153.57375pt>
 File: 5.Implementation/petri_nets_step0.pdf Graphic file (type pdf)
 
 <use 5.Implementation/petri_nets_step0.pdf>
-<5.Implementation/petri_nets_step1.pdf, id=167, 336.25626pt x 234.8775pt>
+<5.Implementation/petri_nets_step1.pdf, id=343, 336.25626pt x 234.8775pt>
 File: 5.Implementation/petri_nets_step1.pdf Graphic file (type pdf)
 
 <use 5.Implementation/petri_nets_step1.pdf>
-Overfull \hbox (1.2688pt too wide) in paragraph at lines 443--444
+Overfull \hbox (1.2688pt too wide) in paragraph at lines 41--42
 \OT1/pcr/m/n/10 Place \OT1/cmr/m/n/10 has any num-ber of \OT1/pcr/m/n/10 src \O
 T1/cmr/m/n/10 or \OT1/pcr/m/n/10 dst Transition\OT1/cmr/m/n/10 s. Sim-i-larly, 
 a \OT1/pcr/m/n/10 Transition
  []
 
-[85 <./5.Implementation/petri_nets_step0.pdf> <./5.Implementation/petri_nets_st
-ep1.pdf>] [86] [87]
-Overfull \hbox (16.99106pt too wide) in paragraph at lines 516--517
-\OT1/cmr/m/n/10 of \OT1/pcr/m/n/10 Place\OT1/cmr/m/n/10 s. The method is used t
-o ac-cess the \OT1/pcr/m/n/10 src \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 dst \OT1/
-cmr/m/n/10 fea-tures of \OT1/pcr/m/n/10 Transition\OT1/cmr/m/n/10 ,
- []
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 519.
-Missing character: There is no ¬ in font pcrr7t!
-Missing character: There is no † in font pcrr7t!
-LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 530.
-Missing character: There is no ¬ in font pcrr7t!
-Missing character: There is no † in font pcrr7t!
-
-Overfull \hbox (93.76065pt too wide) in paragraph at lines 542--543
-\OT1/cmr/m/n/10 Operator-based ap-proaches to man-ag-ing co-evolution, such as 
-COPE [[]],
- []
-
-[88]
-Overfull \hbox (32.69678pt too wide) in paragraph at lines 548--549
-\OT1/cmr/m/n/10 sen-ta-tion. Fur-ther de-tails of this tech-nique are given in 
-[[]]. 
- []
-
-<5.Implementation/cope_mm.pdf, id=294, 363.3575pt x 144.54pt>
-File: 5.Implementation/cope_mm.pdf Graphic file (type pdf)
-
-<use 5.Implementation/cope_mm.pdf> [89 <./5.Implementation/cope_mm.pdf>]
-[90]
-Overfull \hbox (2.22946pt too wide) in paragraph at lines 606--606
-[]\OT1/cmr/bx/n/14.4 Epsilon Flock: A Model Mi-gra-tion Lan-guage 
- []
-
-
-Overfull \hbox (38.01048pt too wide) in paragraph at lines 615--616
-[]\OT1/cmr/m/n/10 The core of the plat-form is the Ep-silon Ob-ject Lan-guage (
-EOL) [[]],
- []
-
-[91]
-<5.Implementation/flock_abstract_syntax.pdf, id=319, 462.72874pt x 142.5325pt>
-File: 5.Implementation/flock_abstract_syntax.pdf Graphic file (type pdf)
-
-<use 5.Implementation/flock_abstract_syntax.pdf>
-Overfull \hbox (2.0457pt too wide) in paragraph at lines 626--627
+[117] [118 <./5.Implementation/petri_nets_step0.pdf> <./5.Implementation/petri_
+nets_step1.pdf>]
+Overfull \hbox (48.86183pt too wide) in paragraph at lines 73--96
  [][] 
  []
 
-[92 <./5.Implementation/flock_abstract_syntax.pdf>]
-Overfull \hbox (19.36142pt too wide) in paragraph at lines 660--661
-\OT1/cmr/m/n/10 meta-class of \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 is de-ter-mine
-d from the \OT1/pcr/m/n/10 evolvedType \OT1/cmr/m/n/10 (or the \OT1/pcr/m/n/10 
-originalType
+
+Underfull \vbox (badness 3826) has occurred while \output is active []
+
+ [119]
+[120] [121]
+Overfull \hbox (8.88829pt too wide) in paragraph at lines 130--131
+ \OT1/cmr/bx/n/10 AML.[] \OT1/cmr/m/n/10 Be-cause AML au-to-mat-i-cally gen-er-
+ates mi-grat-ing trans-for-ma-tions, chang-
  []
 
 
-Overfull \hbox (3.13936pt too wide) in paragraph at lines 664--665
-[]| \OT1/cmr/m/n/10 Ex-e-cute the body of \OT1/pcr/m/n/10 r \OT1/cmr/m/n/10 bin
-d-ing \OT1/pcr/m/n/10 e \OT1/cmr/m/n/10 and \OT1/pcr/m/n/10 e' \OT1/cmr/m/n/10 
-to vari-ables named \OT1/pcr/m/n/10 original
+Overfull \hbox (3.21358pt too wide) in paragraph at lines 142--143
+\OT1/cmr/m/n/10 (op-er-a-tors and match heuris-tics, re-spec-tively) are ex-ten
+-si-ble. Flock and Ecore2E-
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 676.
+[122] [123]
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
+[][]$\OT1/pcr/m/n/8 http : / / www . eclipse . org / forums / index . php ? t =
+ rview&goto = 526894 # msg _
+ []
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+[124] [125]
+<6.Evaluation/images/migration_tool_performance.pdf, id=486, 469.755pt x 391.46
+25pt>
+File: 6.Evaluation/images/migration_tool_performance.pdf Graphic file (type pdf
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 676.
- [93] [94]
-<5.Implementation/uml_step0.pdf, id=414, 553.06625pt x 170.6375pt>
-File: 5.Implementation/uml_step0.pdf Graphic file (type pdf)
+ <use 6.Evaluation/images/migration_tool_performance.pdf>
+Underfull \vbox (badness 2035) has occurred while \output is active []
 
-<use 5.Implementation/uml_step0.pdf>
-<5.Implementation/uml_step1.pdf, id=415, 516.93124pt x 164.615pt>
-File: 5.Implementation/uml_step1.pdf Graphic file (type pdf)
+ [126 <./6.Evaluation/images/migration_tool_performance.pdf>]
+Overfull \hbox (83.06715pt too wide) in paragraph at lines 250--253
+\OT1/cmr/m/n/10 not be ex-pressed with Ecore2Ecore and changes that are clas-si
+-fied by [[]]
+ []
 
-<use 5.Implementation/uml_step1.pdf> [95]
-Overfull \hbox (44.95235pt too wide) in paragraph at lines 790--804
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [127])
+(./6.Evaluation/ttc.tex [128]
+<6.Evaluation/images/activity.pdf, id=508, 597.23125pt x 845.1575pt>
+File: 6.Evaluation/images/activity.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/activity.pdf>
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 22--23
  [][] 
  []
 
-) [96 <./5.Implementation/uml_step0.pdf> <./5.Implementation/uml_step1.pdf>]
-[97] (./thesis.bbl [144
+<6.Evaluation/images/uml14.pdf, id=510, 602.25pt x 372.39125pt>
+File: 6.Evaluation/images/uml14.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/uml14.pdf>
+<6.Evaluation/images/uml22.pdf, id=511, 464.73625pt x 366.36874pt>
+File: 6.Evaluation/images/uml22.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/uml22.pdf> [129] [130 <./6.Evaluation/images/activity.
+pdf>] [131 <./6.Evaluation/images/uml14.pdf> <./6.Evaluation/images/uml22.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[][]$\OT1/pcr/m/n/8 http : / / planet-[]research20 . org / ttc2010 / index . ph
+p ? option = com _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+\OT1/pcr/m/n/8 community&view = groups&task = viewgroup&groupid = 4&Itemid = 15
+0$ \OT1/cmr/m/n/8 (reg-is-tra-tion
+ []
+
+[132]
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no † in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[][]$\OT1/pcr/m/n/8 http : / / www . planet-[]research20 . org / ttc2010 / inde
+x . php ? option = com _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\OT1/pcr/m/n/8 community&view = groups&task = viewdiscussion&groupid = 4&topici
+d = 20&Itemid =
+ []
+
+[133]
+Overfull \hbox (1.1669pt too wide) in paragraph at lines 114--115
+\OT1/cmr/m/n/10 con-tained \OT1/pcr/m/n/10 Pseudostates\OT1/cmr/m/n/10 s and \O
+T1/pcr/m/n/10 Transition\OT1/cmr/m/n/10 s, but none of the \OT1/pcr/m/n/10 Acti
+onState\OT1/cmr/m/n/10 s
+ []
+
+
+Overfull \hbox (41.57343pt too wide) in paragraph at lines 114--115
+\OT1/cmr/m/n/10 from the orig-i-nal model. In UML 2.2 ac-tiv-i-ties, \OT1/pcr/m
+/n/10 OpaqueAction\OT1/cmr/m/n/10 s re-place \OT1/pcr/m/n/10 ActionState\OT1/cm
+r/m/n/10 s.
+ []
+
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <7> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 117.
+
+Overfull \hbox (18.76784pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 ac-tiv-i-ties. In-stead, UML 2.2 ac-tiv-i-ties use spe-cialised
+ \OT1/pcr/m/n/10 Node\OT1/cmr/m/n/10 s, such as \OT1/pcr/m/n/10 InitialNode\OT1
+/cmr/m/n/10 .
+ []
+
+[134] [135]
+Overfull \hbox (17.72258pt too wide) in paragraph at lines 174--175
+[]\OT1/cmr/m/n/10 Listing 6.15[] shows the Flock rule used to mi-grate \OT1/pcr
+/m/n/10 Transiton\OT1/cmr/m/n/10 s to \OT1/pcr/m/n/10 ObjectFlow\OT1/cmr/m/n/10
+ s.
+ []
+
+
+Overfull \hbox (8.27815pt too wide) in paragraph at lines 187--188
+[]\OT1/cmr/m/n/10 Listing 6.16[] shows the Flock source code used to mi-grate \
+OT1/pcr/m/n/10 ObjectFlowStates
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
+[][]$\OT1/pcr/m/n/8 http : / / www . planet-[]research20 . org / ttc2010 / inde
+x . php ? option = com _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
+\OT1/pcr/m/n/8 community&view = groups&task = viewdiscussion&groupid = 4&topici
+d = 20&Itemid =
+ []
+
+[136] [137]) (./6.Evaluation/limitations.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [138]))
+[139] [140] (./thesis.bbl [146
 
 
 
 
-
-] [145] [146] [147]
+] [147] [148] [149]
 Underfull \hbox (badness 3179) in paragraph at lines 286--292
 []$ []$ \OT1/cmr/m/n/10 Mar-tin Fowler.  Lan-guage work-benches: The killer-
  []
@@ -400,12 +514,12 @@ Underfull \hbox (badness 1466) in paragraph at lines 286--292
 wler . com / articles /
  []
 
-[148]
+[150]
 Underfull \hbox (badness 3189) in paragraph at lines 391--396
 []$ []$ \OT1/cmr/m/n/10 M. Her-rmanns-do-er-fer, D. Ratiu, and
  []
 
-[149] [150]
+[151] [152]
 Underfull \hbox (badness 4927) in paragraph at lines 521--528
 []$ []$ \OT1/cmr/m/n/10 Dim-itrios S. Kolovos, Richard F. Paige, and
  []
@@ -415,50 +529,47 @@ Underfull \hbox (badness 2521) in paragraph at lines 521--528
 \OT1/cmr/m/n/10 Louis M. Rose.  Eu-GE-Nia: GMF for mor-tals.  Long talk at
  []
 
-[151] [152]
+[153] [154]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
- [153] [154]
+ [155] [156]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [155]) [156] (./thesis.aux
+ [157]) [158] (./thesis.aux
 (./1.Introduction/introduction.aux) (./2.Background/background.aux)
 (./3.LiteratureReview/literature_review.aux) (./4.Analysis/analysis.aux)
 (./5.Implementation/implementation.aux) (./6.Evaluation/evaluation.aux)
 (./7.Conclusion/conclusion.aux) (./A.1.Experiments/experiments.aux)) ) 
 Here is how much of TeX's memory you used:
- 3429 strings out of 493886
- 50855 string characters out of 1151098
- 173860 words of memory out of 3000000
- 6577 multiletter control sequences out of 10000+50000
- 14748 words of font info for 51 fonts, out of 3000000 for 5000
+ 3208 strings out of 493886
+ 48209 string characters out of 1151098
+ 145451 words of memory out of 3000000
+ 6350 multiletter control sequences out of 10000+50000
+ 14396 words of font info for 50 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 30i,8n,53p,1403b,1553s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,8n,44p,1476b,1573s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/loc
 al/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2008
 /texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2008/texmf-di
 st/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-dist/fonts/
 type1/bluesky/cm/cmbxti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/b
-luesky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm
-/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb
-></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/loc
-al/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/texlive/
-2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-
-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dist/fonts/
-type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blues
-ky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cms
-y10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb><
-/usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti7.pfb></usr/local
-/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.pfb></usr/local/texlive/2
-008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2008/texm
-f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2008/texmf-dist/f
-onts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
-pe1/urw/zapfding/uzdr.pfb>
-Output written on thesis.pdf (44 pages, 650134 bytes).
+luesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/
+cmr12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb>
+</usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local
+/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/20
+08/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-di
+st/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
+pe1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blues
+ky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmt
+i10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti7.pfb></
+usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/loca
+l/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
+e/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on thesis.pdf (60 pages, 841281 bytes).
 PDF statistics:
- 704 PDF objects out of 1000 (max. 8388607)
+ 1076 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,7 +4,7 @@
 \label{sec:ttc}
 The Transformation Tools Contest (TTC) is a workshop series that seeks to compare and contrast tools for performing model and graph transformation. At TTC 2010, two rounds of submissions were invited: cases (transformation problems, three of which are selected by the workshop organisers) and solutions to the selected cases. In addition, TTC 2010 include a \emph{live contest}: during the workshop a further transformation problem was announced and solutions submitted.
 
-Participation in TTC 2010 facilitated further evaluation of Flock. Flock and 8 other transformation tools were assessed for a model migration problem based on a real-world example of metamodel evolution from the UML \cite{uml22}. As part of the live contest, Flock was also assessed along with 13 transformation tools for a model transformation problem. Compared to the evaluation described in Section~\ref{sec:collaborative_comparison}, the evaluation in this section compares Flock to a wider range of tools (model and graph transformation tools, and not just model migration tools), and investigates the suitability of Flock for specifying model transformation.
+Participation in TTC 2010 facilitated further evaluation of Flock. Flock and 8 other transformation tools were assessed for a model migration problem based on a real-world example of metamodel evolution from the UML \cite{uml22}. As part of the live contest, Flock was also assessed along with 13 transformation tools for a model transformation problem. Compared to the evaluation described in Section~\ref{sec:collaborative_comparison}, the evaluation in this section compares Flock to a wider range of tools (model and graph transformation tools, and not just model migration tools), and investigates the suitability of Flock for specifying model transformation (and not just model migration).
 
 The remainder of this section describes the model migration problem (Section~\ref{subsec:ttc_case}) and Flock solution (Section~\ref{subsec:ttc_solution}), and the use of Flock for specifying a model transformation in the live contest (Section~\ref{subsec:ttc_live_contest}).
 
@@ -205,7 +205,7 @@ migrate Partition to ActivityPartition {
 
 \subsubsection{XMI}
 \label{sec:xmi}
-The second extension required submissions to migrate an activity graph conforming to UML 1.4 and encoded in XMI 1.2 to an equivalent activity graph conforming to UML 2.2 and encoded in XMI 2.1. The core task did not require submissions to consider changes to XMI (the model storage representation), but, in practice, this is a challenge to migration, as noted by Tom Morris on the TTC forums\footnote{\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewdiscussion&groupid=4&topicid=20&Itemid=150} (registration required)}}.
+The second extension required submissions to migrate an activity graph conforming to UML 1.4 and encoded in XMI 1.2 to an equivalent activity graph conforming to UML 2.2 and encoded in XMI 2.1. The core task did not require submissions to consider changes to XMI (the model storage representation), but, in practice, this is a challenge to migration, as noted by Tom Morris on the TTC forums\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewdiscussion&groupid=4&topicid=20&Itemid=150} (registration required)}.
 
 As discussed in Section~\ref{sec:flock}, Flock is built atop Epsilon, which includes a model connectivity layer (EMC). EMC provides a common interface for accessing and persisting models. Currently, EMC supports EMF (XMI 2.x), MDR (XMI 1.x), and plain XML models. To support migration between metamodels defined in heterogenous modelling frameworks, EMC was extended during the development of Flock to provide a conformance checking service.
 
@@ -216,7 +216,7 @@ At the workshop, solutions to the migration case described in Section~\ref{subse
 
 The opposition statements highlighted two weaknesses of Flock. Firstly, there is some duplicated code in Listing~\ref{lst:pseudostates}: the \texttt{migrate Pseudostate to X} statement appears several times. The duplication exists because Flock only allows one-to-one mappings between original and evolved metamodel types. The conservative copy algorithm would need to be extended to allow one-to-many mappings to remove this kind of duplication.
 
-Secondly, the body of Flock rules are specified in an imperative manner. Consequently, reasoning about the correctness of the a migration strategy is more difficult than in languages that use a purely declarative syntax. \footnote{TODO: Need to expand on this. I probably need to explain why migration need not preserve semantics, but I don't really want to open that can of worms here.}
+Secondly, the body of Flock rules are specified in an imperative manner. Consequently, reasoning about the correctness of the a migration strategy is arguably more difficult than in languages that use a purely declarative syntax. This point is discussed further in Section~\ref{sec:limitations}, which considers the limitations of the thesis. 
 
 \subsection{Epsilon Flock in the Live Contest}
 \label{subsec:ttc_live_contest}
@@ -261,7 +261,7 @@ This section has discussed the way in which Flock was evaluated by participating
 
 In addition to evaluating Flock, the work described in this section provides three further contributions. Firstly, the migration case submitted to TTC 2010, described in Section~\ref{subsec:ttc_case} provides a real-world example of co-evolution for use in future comparisons of model migration tools. The case is based on the evolution of UML, between versions 1.4 and 2.2. The migration strategy was devised by analysis of the UML specification, and by discussion between workshop participants.
 
-Secondly, the Flock solution to the migration case (Section~\ref{subsec:ttc_solution}) demonstrates the way in which a migration strategy can be constructed using Flock. In particular, Section~\ref{subsec:ttc_solution} describes an iterative and incremental development process and inicates that an empty Flock migration strategy can provide a useful starting point for development.
+Secondly, the Flock solution to the migration case (Section~\ref{subsec:ttc_solution}) demonstrates the way in which a migration strategy can be constructed using Flock. In particular, Section~\ref{subsec:ttc_solution} describes an iterative and incremental development process and indicates that an empty Flock migration strategy can provide a useful starting point for development.
 
-Finally, Section~\ref{sec:flock} claims that Flock support several modelling technologies. The solution described in Section~\ref{subsec:ttc_solution} demonstrates the way in which Flock can be used to migrate models over two modelling technologies: MDR (XMI 1.x) and EMF (XMI 2.x). 
+Finally, Section~\ref{sec:flock} claims that Flock support several modelling technologies. The solution described in Section~\ref{subsec:ttc_solution} demonstrates the way in which Flock can be used to migrate models over two modelling technologies: MDR (XMI 1.x) and EMF (XMI 2.x), and hence supports the claim made in Section~\ref{sec:flock}.
 

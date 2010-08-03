@@ -3,24 +3,24 @@
 \section{Migration Tool Comparison}
 \label{sec:collaborative_comparison}
 
-As discussed in Chapter~\ref{LiteratureReview}, several tools for building migration strategy are described in the literature. Chapter~\ref{Implementation} proposes a further migration tool, Epsilon Flock. While each migration tool has strengths and weaknesses, little is known about how migration tools compare in practice, which makes tool selection more challenging.
+As discussed in Chapter~\ref{LiteratureReview}, several tools for managing co-evolution are described in the literature. Chapter~\ref{Implementation} proposes a further tool, Epsilon Flock. While each tool has strengths and weaknesses, little is known about how migration tools compare in practice, which makes tool selection more challenging. Consequently. Chapter~\ref{Analysis} identified the following thesis requirements: \emph{This thesis must compare and evaluate existing languages for specifying model migration strategies.} \emph{This thesis must implement and evaluate a domain-specific language for specifying and executing model migration strategies, \textbf{comparing it to existing languages for specifying model migration strategies}.}
 
-Chapter~\ref{Analysis} contributes a categorisation based on theoretical aspects of existing model migration approaches. This section describes a comparison of four model migration tools, selected from those described in Chapter~\ref{Analysis}. Following the process outlined in Section~\ref{sec:method}, the tools were applied to two co-evolution examples to facilitate their comparison. To improve the validity of the comparison, the developers of each tool were invited to participate. The remainder of this section reports our experiences with each tool (Section~\ref{sec:results}), and synthesises advice and guidelines for identifying the most appropriate model migration tool in different situations (Section~\ref{sec:discussion}).
+To approach these two requirements, this section describes work that compares Flock and three existing model migration that were selected from those described in Chapter~\ref{Analysis}. Following the process outlined in Section~\ref{sec:method}, the tools were applied to two co-evolution examples to facilitate their comparison. To improve the validity of the comparison, the developers of each tool were invited to participate. The remainder of this section reports our experiences with each tool (Section~\ref{sec:results}), and synthesises advice and guidelines for identifying the most appropriate model migration tool in different situations (Section~\ref{sec:discussion}).
 
-This section is based on joint work with Markus Herrmannsd\"{o}erfer (a research student at Technische Universit\"at M\"unchen), James Williams (a research student in this department), Dimitrios Kolovos (a lecturer in this department) and Kelly Garc\'{e}s (a research student at EMN-INRIA / LINA-INRIA in Nantes), and has been published in \cite{rose10comparison}. Kelly Garc\'{e}s provided assistance with installing and configuration one of the migration tools, and commented on a draft of the paper. The work presented in this section has been published in \cite{rose10comparison}. Here, the work described in the paper is narrated to make clear the contributions of the other authors.
+This section is based on joint work with Markus Herrmannsd\"{o}erfer (a research student at Technische Universit\"at M\"unchen), James Williams (a research student in this department), Dimitrios Kolovos (a lecturer in this department) and Kelly Garc\'{e}s (a research student at EMN-INRIA / LINA-INRIA in Nantes), and has been published in \cite{rose10comparison}. Garc\'{e}s provided assistance with installing and configuration one of the migration tools, and commented on a draft of the paper. Herrmannsd\"{o}erfer, Williams and Kolovos played a larger role in the comparison. Here, the work is narrated to make clear their contributions.
 
 \subsection{Comparison Method}
 \label{sec:method}
 
 \newcommand{\mm}[1]{\texttt{#1}}
-The comparison described in this section is based on practical application of the tools to the co-evolution examples described below. This section also discusses the tool selection and comparison processes. Markus and I identified the co-evolution examples, and formulated the comparison process.
+The comparison described in this section is based on practical application of the tools to the co-evolution examples described below. This section also discusses the tool selection and comparison processes. Herrmannsd\"{o}erfer and I identified the co-evolution examples, and formulated the comparison process.
 
 \subsubsection{Co-Evolution Examples}
 \label{subsec:method_examples}
 To compare migration tools, two examples of co-evolution were used. The first is a well-known problem in the model migration literature and was used to test the installation and configuration of the migration tools, as discussed in Section~\ref{subsec:method_process}. The second is a larger example taken from a real-world model-driven development project, and was identified as a potentially useful example for co-evolution case studies in Chapter~\ref{Analysis} and in \cite{herrmannsdoerfer09gmf}.
 
 \paragraph{Petri Nets.}
-The first example is an evolution of a Petri net metamodel, previously used to describe the implementation of Epsilon Flock (Section~\ref{sec:flock}), and in \cite{cicchetti08automating,garces09managing,rose10flock,wachsmuth07metamodel} to discuss co-evolution and model migration.
+The first example is an evolution of a Petri net metamodel, previously used to describe the implementation of Epsilon Flock (Section~\ref{sec:flock}), and in \cite{cicchetti08automating,garces09managing,wachsmuth07metamodel} to discuss co-evolution and model migration.
 
 \begin{figure}[htbp]
 	\centering
@@ -100,7 +100,7 @@ The comparison was conducted in three phases. In the first phase, criteria again
 \label{sec:results}
 This section reports the similarities and differences of each tool, using the nine criteria described above. The migration strategies formulated with each tool are available online\footnote{\url{http://github.com/louismrose/migration_comparison}}. 
 
-Each subsection below considers one criterion. This section reports the experiences of the developer to which each tool was allocated. As such, this section contains the work of others. Specifically, Markus Herrmannsd\"{o}erfer wrote about Epsilon Flock, James Williams wrote about COPE and Dimitrios Kolovos wrote about Ecore2Ecore. (I wrote about AML, and the introductions to each criterion). 
+Each subsection below considers one criterion. This section reports the experiences of the developer to which each tool was allocated. As such, this section contains the work of others. Specifically, Herrmannsd\"{o}erfer wrote about Epsilon Flock, Williams wrote about COPE and Kolovos wrote about Ecore2Ecore. (I wrote about AML, and the introductions to each criterion). 
 
 \subsubsection{Constructing the migration strategy}
 \label{subsec:constructing}
@@ -235,7 +235,7 @@ To measure performance, five sets of Petri net models were generated at random. 
 
 \subsection{Discussion}
 \label{sec:discussion}
-The comparison described above highlights similarities and differences between a representative sample of model migration approaches. From this comparison, guidance for selecting between tools was synthesised. The guidance is presented below, and was produced by all four participants in the comparison (Markus, James, Dimitrios and myself). 
+The comparison described above highlights similarities and differences between a representative sample of model migration approaches. From this comparison, guidance for selecting between tools was synthesised. The guidance is presented below, and was produced by all four participants in the comparison (Herrmannsd\"{o}erfer, Williams, Kolovos and myself). 
 
 COPE captures co-evolution patterns (which apply to both model and metamodel), while Ecore2Ecore, AML and Flock capture only model migration patterns (which apply just to models). Because of this, COPE facilitates a greater degree of re-use in model migration than other approaches. However, the order in which the user applies patterns with COPE impacts on both metamodel evolution and model migration, which can complicate pattern selection particularly when a large amount of evolution occurs at once. The re-usable co-evolution patterns in COPE make it well suited to migration problems in which metamodel evolution is frequent and in small steps.
 
@@ -283,4 +283,4 @@ cannot be expressed with AML. Because of this, it is important to investigate me
 \subsection{Summary}
 The work presented in this section compared a representative sample of approaches to automating model migration. The comparison was performed by following a methodical process and using an example from a real-world MDE project. Some preliminary recommendations and guidelines in choosing a migration tool were synthesised from the presented results and are summarised in Table~\ref{tab:advice}. The comparison was carried out by the developers of the migration tools (or stand-ins where the developers were unable to participate fully). Each developer used a tool other than their own so that the comparison could more closely emulate the level of expertise of a typical user.
 
-Some criteria were excluded from the comparison because of the method employed. For instance, the learnability of a tool affects the productivity of users, and, as such, affects tool selection. However, drawing conclusions about learnability (and also productivity and usability) is challenging with the comparison method employed because of the subjective nature of these characteristics. A comprehensive user study (with 100s of users) would be more suitable for assessing these types of criteria.
+Some criteria were excluded from the comparison because of the method employed. For instance, the learnability of a tool affects the productivity of users, and, as such, affects tool selection. However, drawing conclusions about learnability (and also productivity and usability) is challenging with the comparison method employed because of the subjective nature of these characteristics. A comprehensive user study (with hundreds of users) would be more suitable for assessing these types of criteria.
