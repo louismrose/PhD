@@ -6,6 +6,11 @@
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.rubyonrails.org/}, 2008.
 
+\bibitem[Ackoff 1962]{ackoff62scientific}{$~$}
+Russell~L. Ackoff.
+\newblock {\em Scientific Method: Optimizing Applied Research Decisions}.
+\newblock John Wiley and Sons, 1962.
+
 \bibitem[Aizenbud-Reshef {\it et al.}\  2005]{aizenbud05operational}{$~$}
 N.~Aizenbud-Reshef, R.F. Paige, J.~Rubin, Y.~Shaham-Gafni, and D.S. Kolovos.
 \newblock Operational semantics for traceability.
@@ -22,6 +27,9 @@ Christopher Alexander, Sara Ishikawa, and Murray Silverstein.
 Jos\'{e} \'{A}lvarez, Andy Evans, and Paul Sammut.
 \newblock {MML} and the metamodel architecture.
 \newblock In {\em Proc. Workshop on Transformation in {UML}}, 2001.
+
+\bibitem[apo]{apostel60models}{$~$}
+
 
 \bibitem[Arendt {\it et al.}\  2009]{arendt09refactoring}{$~$}
 Thorsten Arendt, Florian Mantz, Lars Schneider, and Gabriele Taentzer.
@@ -59,6 +67,11 @@ Jay Banerjee, Won Kim, Hyoung-Joo Kim, and Henry~F. Korth.
 Kent Beck and Ward Cunningham.
 \newblock Constructing abstractions for object-oriented applications.
 \newblock {\em Journal of Object Oriented Programming}, 2, 1989.
+
+\bibitem[B{\'e}zivin \& Gerb{\'e} 2001]{bezivin01definition}{$~$}
+Jean B{\'e}zivin and Olivier Gerb{\'e}.
+\newblock Towards a precise definition of the {OMG/MDA} framework.
+\newblock In {\em Proc. ASE}, pages 273--280. IEEE Computer Society, 2001.
 
 \bibitem[B{\'e}zivin 2005]{bezivin05unification}{$~$}
 Jean B{\'e}zivin.
@@ -266,6 +279,11 @@ E.~Evans.
   Software}.
 \newblock Addison-Wesley, Boston, MA, USA, 2004.
 
+\bibitem[Feathers 2004]{feathers04working}{$~$}
+Michael~C. Feathers.
+\newblock {\em Working Effectively with Legacy Code}.
+\newblock Prentice Hall, 2004.
+
 \bibitem[Ferrandina {\it et al.}\  1995]{ferrandina95schema}{$~$}
 Fabrizio Ferrandina, Thorsten Meyer, Roberto Zicari, Guy Ferran, and Jo\"{e}lle
   Madec.
@@ -428,6 +446,12 @@ Information~Technology ISO/IEC.
   Semantics}.
 \newblock {ISO 13568:2002 International Standard}, 2002.
 
+\bibitem[Jackson 1995]{jackson95software}{$~$}
+M.~Jackson.
+\newblock {\em Software Requirements and Specifications: A Lexicon of Practice,
+  Principles and Prejudices}.
+\newblock ACM Press, 1995.
+
 \bibitem[JetBrains 2008]{mps}{$~$}
 JetBrains.
 \newblock {MPS -- Meta Programming System} [online].
@@ -537,6 +561,11 @@ Diane Kramer.
 \newblock {XEM: XML Evolution Management}.
 \newblock Master's thesis, Worcester Polytechnic Institute, MA, USA, 2001.
 
+\bibitem[Kurtev 2004]{kurtev04thesis}{$~$}
+Ivan Kurtev.
+\newblock {\em Adaptability of Model Transformations}.
+\newblock PhD thesis, University of Twente, Netherlands, 2004.
+
 \bibitem[Lago {\it et al.}\  2009]{lago09scoped}{$~$}
 Patricia Lago, Henry Muccini, and Hans van Vliet.
 \newblock A scoped approach to traceability management.
@@ -618,6 +647,11 @@ Ashley McNeile.
 Stephen~J. Mellor and Marc Balcer.
 \newblock {\em Executable {UML}: A Foundation for Model-Driven Architectures}.
 \newblock Addison-Wesley Longman, 2002.
+
+\bibitem[Mens \& Demeyer 2007]{Mens07}{$~$}
+Tom Mens and Serge Demeyer.
+\newblock {\em Software Evolution}.
+\newblock Springer-Verlag, 2007.
 
 \bibitem[Mens \& Tourw\'{e} 2004]{mens04survey}{$~$}
 Tom Mens and Tom Tourw\'{e}.
@@ -742,11 +776,23 @@ William~F. Opdyke.
 \newblock PhD thesis, University of Illinois at Urbana-Champaign, IL, USA,
   1992.
 
-\bibitem[openArchitectureWare 2007]{oaw}{$~$}
+\bibitem[openArchitectureWare 2007a]{oaw}{$~$}
 openArchitectureWare.
 \newblock {openArchitectureWare Project Website} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/gmt/oaw/}, 2007.
+
+\bibitem[openArchitectureWare 2007b]{xpand}{$~$}
+openArchitectureWare.
+\newblock {XPand Language Reference} [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://www.eclipse.org/gmt/oaw/doc/4.1/r20_xPandReference.pdf}, 2007.
+
+\bibitem[Paige {\it et al.}\  2007]{paige07metamodel}{$~$}
+Richard~F. Paige, Phillip~J. Brooke, and Jonathan~S. Ostroff.
+\newblock Metamodel-based model conformance and multiview consistency checking.
+\newblock {\em ACM Transactions on Software Engineering and Methodology},
+  16(3), 2007.
 
 \bibitem[Paige {\it et al.}\  2009]{paige08fptc}{$~$}
 Richard~F. Paige, Louis~M. Rose, Xiaocheng Ge, Dimitrios~S. Kolovos, and
@@ -760,6 +806,11 @@ Terence Parr.
 \newblock {\em The Definitive {ANTLR} Reference: Building Domain-Specific
   Languages}.
 \newblock Pragmatic Programmers, 2007.
+
+\bibitem[Patrascoiu \& Rodgers 2004]{patrascoiu04embedding}{$~$}
+Octavian Patrascoiu and Peter Rodgers.
+\newblock Embedding {OCL} expressions in {YATL}.
+\newblock In {\em Proc. OCL and Model-Driven Engineering Workshop}, 2004.
 
 \bibitem[Pilgrim {\it et al.}\  2008]{pilgrim08constructing}{$~$}
 Jens von Pilgrim, Bert Vanhooff, Immo Schulz-Gerlach, and Yolande Berbers.
@@ -895,6 +946,11 @@ Thomas Stahl, Markus Voelter, and Krzysztof Czarnecki.
   Management}.
 \newblock Wiley, 2006.
 
+\bibitem[Starfield {\it et al.}\  1990]{starfield90model}{$~$}
+M.~Starfield, K.A. Smith, and A.L. Bleloch.
+\newblock {\em How to model it: Problem Solving for the Computer Age}.
+\newblock McGraw-Hill, 1990.
+
 \bibitem[Steinberg {\it et al.}\  2008]{steinberg09emf}{$~$}
 Dave Steinberg, Frank Budinsky, Marcelo Paternostro, and Ed~Merks.
 \newblock {\em {EMF}: {E}clipse {M}odeling {F}ramework}.
@@ -911,7 +967,7 @@ Laurence Tratt.
 \newblock A change propagating model transformation language.
 \newblock {\em Journal of Object Technology}, 7(3):107--124, 2008.
 
-\bibitem[Varr\'{o} \& Balogh 2007]{VIATRA}{$~$}
+\bibitem[Varr\'{o} \& Balogh 2007]{viatra}{$~$}
 D\'{a}niel Varr\'{o} and Andr\'{a}s Balogh.
 \newblock The model transformation language of the {VIATRA2} framework.
 \newblock {\em Science of Computer Programming}, 68(3):187--207, 2007.

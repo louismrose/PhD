@@ -2,50 +2,40 @@
 
 \section{Benefits of and Current Challenges for MDE}
 \label{sec:mde_benefits_and_challenges}
+Compared to traditional software engineering approaches and to domain-specific languages and language-oriented programming, MDE has several benefits and weaknesses. This section identifies benefits of and challenges to MDE, synthesised from the literature reviewed in this chapter.
 
 \subsection{Benefits}
 \label{subsec:mde_benefits}
-Modelling allows software engineers to capture concepts of interest and simultaneously disregard superfluous detail. Proponents of MDE use models to increase the extent to which software systems exhibit characteristics they find desirable. For example, the guidelines set out for MDE in MDA \cite{mda} highlight principles and patterns for modelling to increase the adaptability of software systems by, for example, separating platform-specific and platform-independent detail. When the target platform changes (for example a new technological architecture is required), only part of the system needs to be changed.
-%(But, in practice, is this separation always desirable / achievable?)
+Three benefits of MDE are now identified, and used to describe the advantages of the MDE principles and practices discussed in this chapter. 
 
-MDE facilitates automation of the error-prone or tedious elements of software engineering. For example, code generation can be used to automatically produce 
-``boilerplate'' code % explain boilerplate code
+\paragraph{Tool interoperability} MOF, the standard metamodelling language for MDE, facilitates interoperability between tools via model interchange. With Ecore, EMF provides a reference implementation of MOF atop which many contemporary MDE tools are built. Interoperability between modelling tools allows model management to be performed across a range of tools, and developers are not tied to one vendor. Furthermore, models represented in a range of modelling languages can be used together in a single environment. Prior to the formulation of MOF, developers would use different tools for each modelling language. Each tool would have different storage formats, complicating the interchange of models between tools.
 
-For software systems that must incorporate large-scale complexity, such as those that support large businesses, managing stochastic interaction in-the-large is a key concern. With MDE it is possible to sacrifice total reliability or validity of a system to achieve a working solution. Sacrificing reliability or validity is not always possible when other engineering approaches are used to construct software (such as formal methods). 
+\paragraph{Managing complexity} For software systems that must incorporate large-scale complexity, such as those that support large businesses, managing stochastic interaction in the large is a key concern. With MDE it is possible to sacrifice total reliability or validity of a system to achieve a working solution. Sacrificing reliability or validity is not always possible when other engineering approaches are used to construct software (such as formal methods).  
 
-MOF, the standard metamodelling language for MDE, facilitates interoperability between tools via model interchange. In Ecore, EMF provides a reference implementation of MOF atop which many MDE tools are built. There are, however, many further ways in which MDE tools might usefully interoperate, which are discussed, along with other challenges for MDE, in the sequel.
+\paragraph{Maintainability in the large} The guidelines set out for MDE in MDA \cite{mda} highlight principles and patterns for modelling to increase the adaptability of software systems by, for example, separating platform-specific and platform-independent detail. When the target platform changes (for example a new technological architecture is required), only part of the system needs to be changed. The platform-independent detail can be re-used wholesale. 
+
+Related to this, MDE facilitates automation of the error-prone or tedious elements of software engineering. For example, code generation can be used to automatically produce so-called ``boilerplate'' code, which is repetitive code that cannot be restructured to remove duplication (typically for technological reasons).
+
+While MDE can be used to reduce the extent to which a system is changed in some circumstances, MDE also introduces additional challenges for managing changing systems \cite{Mens07}. For example, mixing generated and hand-written code typically requires a more elaborate software architecture than would be used when code is only hand-written. Further examples of the challenges that MDE presents for maintainability are discussed in Section~\ref{subsec:mde_challenges}.
+
 
 \subsection{Challenges}
+\label{subsec:mde_challenges}
+Three challenges for MDE are now identified, and used to motivate areas of potential research for improving MDE. The remainder of the thesis focuses on the final challenge, maintainability in the small.
 
-Start-up hurdle
-Tools more than theory (modelling is relatively accessible)
-Legacy issue: some capabilities not yet well integrated with MDE tools (e.g. refactoring, version control)
-Learning curve can be very steep (huge effort for first, trivial result). Particularly apparent in GMF.
-Businesses might put one person (and usually not their best person) on exploring new technology.
-Bad first experience causes low adoption rates.
-Potential solutions: more examples (what's the MDE "hello world"?), automation for complicated tasks
-Danger of MDE becoming a purely academic endeavour?
-Academic advances should be linked to commercial realities
-Formal methods have had some success here
-Open-source helps to encourage commercial activity (but there are often concerns about support / bug fixing)
-Code generation vs runtime models
-Is code generation less important when one language is used? Some libraries use one language to abstract over others, for example Google Web Toolkit (all code written in Java, and source is compiled to HTML and Javascript).
-Here much of the model is in the code, and we're back to the problem of "does my model match my code?"
-Code generation often requires an elaborate software architecture that facilitates the mixing of generated and hand-written code.
-Perception
-In some situations, using MDE produces more artefacts (which have to be maintained)
-Confusion between tools: What is Eclipse? What is EMF? Where are the boundaries? How decoupled are the tools?
-Do we need something between a heavyweight method and freeform hacking? For example, process patterns that recommend useful combinations of MDE tools.
-Interoperability of MDE tools
-Good interoperability of terms of model interchange, but tighter integration might be necessary
-Open-source helps: use a suitable tool, rather than an unsuitable tool to validate the cost of the license
+\paragraph{Learnability} MDE involves new terminology, development activities and principles for software engineering. For the novice, producing a simple system with MDE is arguably challenging. For example, \cite{kolovos09eugenia} explores the steps required to generate a graphical model editor with the Graphical Modeling Framework (GMF), concludes that GMF is difficult for new users to understand, and presents a mechanism for simplifying GMF for new users. It seems reasonable to assume that the extent to which MDE tools and principles can be learnt will eventually determine the adoption rate of MDE.
 
-\subsubsection{Scalability}
-In traditional approaches to software engineering, a model is considered of comparable value to any other documentation artefact, such as a word processor document or a spreadsheet. As a result, the convenience of maintaining self-contained model files which can be easily shared outweighs other desirable attributes. This perception has led to the current situation where single-file models of the order of tens (if not hundreds) of megabytes, containing hundreds of thousands of model elements, are the norm for real-world software projects \cite{kolovos08scalability}.
+\paragraph{Scalability} As discussed in \cite{rose10concordance}, in traditional approaches to software engineering a model is considered of comparable value to any other documentation artefact, such as a word processor document or a spreadsheet. As a result, the convenience of maintaining self-contained model files which can be easily shared outweighs other desirable attributes. \cite{kolovos08scalability} notes that this perception has led to the situation where single-file models of the order of tens (if not hundreds) of megabytes, containing hundreds of thousands of model elements, are the norm for real-world software projects.
 
-In model-driven engineering, a model is a development artefact and, while sharing models with others is still a concern, other attributes are desirable. Modularity, for example, is important for supporting incremental transformation and collaborative development \cite{kolovos08scalability}.
+MDE languages and tools must scale such that they can be used with with large and complex models. \cite{hearnden06incremental,rath08live,tratt08change} explore ways in which the scalability of model management tasks, such as model transformation, can be improved. \cite{kolovos08scalability} takes a prescribes a different approach, suggesting that MDE research should aim for greater modularity in models, which, as a by-product, will result in greater scalability in MDE.
 
-MDE languages and tools must be usable with with large and complex models...
+\paragraph{Maintainability in the small} Notwithstanding the benefits that MDE promises for maintaining systems, the introduction of additional development artefacts, activities and tools presents additional challenges for maintainability at the low level \cite{Mens07}.
 
+In traditional approaches to engineering, maintainability is primarily achieved by restructuring code, updating documentation and running regression tests \cite{feathers04working}. It is not yet clear the extent to which existing maintenance activities can be applied to he additional development artefacts introduced by MDE. (For example, should models be tested and, if so, how?)
 
-\subsubsection{Resistance to change}
+As demonstrated in Chapter~\ref{Analysis}, the way in which some model-driven engineering tools are structured limits the extent to which some maintenance activities can be performed. Understanding, improving and assessing the way in which evolution is managed in the context of MDE is an open research topic to which this thesis contributes. 
+
+\subsection{Summary}
+This section has identified some of the benefits of and challenges for contemporary MDE. The interoperability of tools and modelling languages in MDE allows developers greater flexibility in their choice of tools and facilitates interchange between heterogenous tools and modelling frameworks. MDE is more flexible than other, more formal approaches to software engineering, which can be beneficial for constructing complex systems. The principles and practices of MDE can be used to achieve greater maintainability of systems by, for example, separating platform-independent and platform-specific details.
+
+As MDE tools approach maturity, non-functional requirements, such as learnability, scalability and maintainability, become increasingly desirable for practitioners. This section has identified weaknesses in the way in which existing MDE approaches and tools approach non-functional requirements. The remainder of this thesis focuses on one of those non-functional requirements, maintainability.

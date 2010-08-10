@@ -1,6 +1,6 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
 
-\section{MDE Methods}
+\section{MDE Guidelines and Methods}
 \label{sec:mde_methods}
 For performing model-driven engineering, new practices and processes have been proposed. Proponents of MDE have produced guidance and methods for model-driven engineering. This section discusses the guidance for MDE set out in the Model-Driven Architecture \cite{mda} and the methods described by \cite{stahl06mdsd,kelly08dsm,greenfield04software}. 
 
@@ -13,7 +13,7 @@ Figure \ref{fig:mda}.
 \begin{figure}[htbp]
   \begin{center}
     \leavevmode
-    \includegraphics[scale=0.5]{MDA.png}
+    \includegraphics[scale=0.5]{2.Background/images/PIMs_and_PSMs.png}
   \end{center}
   \caption{Interactions between a PIM and several PSMs.}
   \label{fig:mda}
@@ -35,17 +35,17 @@ The MDA prescribes a set of standards for MDE. The MDA allocates standards to on
 \begin{figure}[htbp]
   \begin{center}
     \leavevmode
-    \includegraphics[scale=0.5]{mda-pyramid.png}
+    \includegraphics[scale=0.5]{2.Background/images/mda-pyramid.png}
   \end{center}
   \caption{The tiers of standards used as part of MDA.}
   \label{fig:mda-pyramid}
 \end{figure}
 
-The base of the pyramid, tier M0, describes the real-world. When modelling a business, this tier is used to describe items of the business itself, such as a real customer or an invoice. When modelling software, M0 instances describe the software representation of such items. M1 contains a model of the concepts in M0, for example a customer may be represented as a class with attributes. The M2 tier describes the model of the modelling language used to describe elements of M1. For example, if UML \cite{uml212} were used to describe concepts as classes in the M1 tier, M2 would contain the UML metamodel. Finally, M3 is the meta-metamodel layer, which provides a description of the metamodel used in M2. M3 is necessary to permit reasoning about metamodels (such as the UML), and to enable tool standardisation. The OMG defines the Meta-Object Facility (MOF) \cite{mof} as the sole inhabitant of the M3 tier.
+The base of the pyramid, tier M0, describes the domain (real-world). When modelling a business, this tier is used to describe items of the business itself, such as a real customer or an invoice. When modelling software, M0 instances describe the software representation of such items. M1 contains a model of the concepts in M0, for example a customer may be represented as a class with attributes. The M2 tier describes the model of the modelling language used to describe elements of M1. For example, if UML \cite{uml212} were used to describe concepts as classes in the M1 tier, M2 would contain the UML metamodel. Finally, M3 is the meta-metamodel layer, which provides a description of the metamodel used in M2. M3 is necessary to permit reasoning about metamodels (such as the UML), and to enable tool standardisation. The OMG defines the Meta-Object Facility (MOF) \cite{mof} as the sole inhabitant of the M3 tier.
 
 
 \subsection{Methods for MDE}
-Several methods to MDE are prevalent today. In this section, three of the most established are discussed: Architecture-Centric Model-Driven Software Development \cite{stahl06mdsd}, Domain-Specific Modelling \cite{kelly08dsm} and Microsoft's Software Factories \cite{greenfield04software}. All three methods have been defined from a pragmatic standpoint (i.e. they have been used repeatedly to solve problems in industry). The methods vary in the extent to which they follow the guidelines set out by MDA.
+Several methods to MDE are prevalent today. In this section, three of the most established are discussed: Architecture-Centric Model-Driven Software Development \cite{stahl06mdsd}, Domain-Specific Modelling \cite{kelly08dsm} and Microsoft's Software Factories \cite{greenfield04software}. All three methods have been defined from a pragmatic standpoint, and have been used repeatedly to solve problems in industry. The methods vary in the extent to which they follow the guidelines set out by MDA.
 
 \subsubsection{Architecture-Centric Model-Driven Software Development}
 Model-Driven Software Development is the term given to MDE by in \cite{stahl06mdsd}. The style of MDE that Stahl et al. describe, \textit{architecture-centric model-driven software development} (AC-MDSD), focuses on generating the infrastructure of large-scale applications. For example, a typical J2EE application contains concepts (such as EJBs, descriptors, home and remote interfaces) that ``admittedly contain domain-related information such as method signatures, but which also exhibit a high degree of redundancy'' \cite{stahl06mdsd}. It is this redundancy that AC-MDSD seeks to remove by using code generators, requiring only the domain-related information to be specified.
@@ -77,7 +77,7 @@ The Software Factories method \cite{greenfield04software} prescribes a bottom-up
 
 The Software Factories method better addresses problems of portability compared to DSM: the former provides \textit{viewpoints} into the product-line (essentially different views of development artefacts), which allow decoupling of concerns (e.g. between logical, conceptual and physical layers). Viewpoints provide a mechanism for abstracting over different layers of platform independence, adhering more closely than DSM to the guidelines provided in MDA. Unlike the guidelines provided in MDA, the Software Factories method does not insist that development artefacts be derived automatically where possible.
 
-Finally, Microsoft prescribes the use of domain-specific languages (discussed in Section \ref{LitReview:DSLs}) for describing models in conjunction with Software Factories, rather than a general-purpose modelling language, as Microsoft believes that the latter often have imprecise semantics \cite{greenfield04software}.
+Finally, Software Factories prescribes the use of domain-specific languages (discussed in Section~\ref{subsec:dsls}) for describing models in conjunction with Software Factories, rather than a general-purpose modelling language, as the authors of Software Factories believe that the latter often have imprecise semantics \cite{greenfield04software}.
 
 \subsection{Summary}
 This section has discussed the ways in which process and practices for MDE have been captured. Guidance for MDE has been set out in the MDA standard, which seeks to use MDE to produce adaptable software in a productive and maintainable manner. Three methods for performing model-driven engineering have been discussed.

@@ -2,29 +2,63 @@
 
 \section{MDE Terminology and Principles}
 \label{sec:mde_terms}
-Software engineers using MDE construct and manipulate artefacts familiar from traditional approaches to software engineering (such as code and documentation) and, in addition, work with different types of artefact, such as \emph{models}, \emph{metamodels} and \emph{model transformations}. Furthermore, model-driven engineering involves new development activities, such as \emph{model management}. This section describes the artefacts and activities typically involved in a model-driven engineering process.
+Software engineers using MDE construct and manipulate artefacts familiar from traditional approaches to software engineering (such as code and documentation) and, in addition, work with different types of artefact, such as \emph{models}, \emph{metamodels} and \emph{model transformations}. Furthermore, MDE involves new development activities, such as \emph{model management}. This section describes the artefacts and activities typically involved in a model-driven engineering process.
 
-\subsection{Models} % TODO: review Jackson's and Kurtev's definitions of model
-When used here, the term \emph{model} has the same meaning as given in \cite{kolovos06eol}: a model is a description of a phenomenon of interest, and may have either a textual or graphical representation. A model provides an abstraction over a real-world object, which enables engineers of differing disciplines to reason about that object.
+\subsection{Models}
+Models are fundamental to MDE. \cite{kurtev04thesis} identifies many definitions of the term model, such as: ``any subject using a system A that is neither directly nor indirectly interacting with a system B to obtain information about the system B, is using A as a model for B.'' \cite{apostel60models}, ``a model is a representation of a concept. The representation is purposeful and used to abstract from reality the irrelevant details.'' \cite{starfield90model}, and ``a model is a simplification of a system written in a well-defined language.'' \cite{bezivin01definition}. 
 
-Abstraction is the primary reason for and the primary goal of modelling. \cite{evans04domain} proposes the use of models throughout the development process to capture and communicate domain knowledge and to shape the structure of the resulting software. Evans emphasises the importance of modelling and a process, which he terms \emph{refactoring to deeper insight}, that seeks incremental improvements to models.
+While there are many definitions of the term model, a common notion is that a model is a representation of the real-world \cite[pg12]{kurtev04thesis}. The part of the real-world represented by a model is termed the \emph{domain}, the \emph{object system} or, simply the \emph{system}. A further commonality is noted by \cite{kolovos06eol}: a model may have either a textual or graphical representation.
+
+\cite{ackoff62scientific} distinguishes three kinds of model. \emph{Iconic} models have a likeness to their object system. \emph{Analogous} models share characteristics of their object system. \emph{Analytic} models present a description of their object system. For example, a toy in the shape of an aeroplane is \emph{iconic}, a toy that can fly is \emph{analogous} to an aeroplane, and a set of differential equations describing the way in which the propellors of an aeroplane propellor function is \emph{analytic}.
+
+In this thesis, the models discussed are \emph{analogous}. The lending service of a library might be modelled by described books, people and loans, which share characteristics of their real-world counterparts: for example, a person loans a book. 
+
+In computer science, models analogous to an object system can be used to construct a computer system. The model of the real-world might be used to determine the way in which data is stored on disk, or the way in which a computer program is to be structured. In this sense, a model is analogous both the object system in the real world and to a further object system: the computer system. Terms in the model can be used to think about both the real system and the computer system.
+
+\cite{jackson95software} proposes that, in the context of computer science, Figure~\ref{fig:jackson_model} illustrates what it means to be a model. According to \cite{jackson95software}, a model is the description of the domain (object system) and the machine (computer system). Computer scientists switch between \emph{designations} when using a model to think about the object system or to think about the software system.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=10cm]{2.Background/images/jackson_model.png}
+  \end{center}
+  \caption{Jackson's definition of a model, taken from \cite[pg.125]{jackson95software}.}
+  \label{fig:jackson_model}
+\end{figure}
+
+In summary, this thesis considers models that are analogous, rather than iconic or analytical. Furthermore, models are analogous to both a (real-world) system and a computer system. 
+
+\subsection{Modelling in Computer Science}
+Analogous models are used widely in software engineering. To explore this statement, this section considers two approaches to developing computer systems, each seemingly with radically different views of models. \cite{evans04domain} advocates modelling throughout software development to better understand the real-world system and to structure the computer system. \cite{martin06agile} advocates that code should be regarded as the model of both the real-world system and the computer system.  
+
+\subsubsection{In Favour of Models over Code}
+\cite{evans04domain} proposes the use of models throughout the development process to capture and communicate knowledge of the object system and to shape the structure of the resulting software system. Wherever possible, the way in which code is structured is driven by the model. Throughout, \cite{evans04domain} emphasises the importance of modelling and a process, which he terms \emph{refactoring to deeper insight}, that seeks incremental improvements to models.
 
 \begin{quote}
 Distillation is the process of separating the components of a mixture to extract the essence in a form that makes it more valuable and useful. A model is a distillation of knowledge. With every refactoring to deeper insight, we abstract some crucial aspect of domain knowledge and priorities. \cite[pg397]{evans04domain}
 \end{quote}
 
-\cite[ch14]{martin06agile} notes that, in some engineering disciplines, models are used to reduce risk. Structural engineers build models of bridges. Aerospace engineers build models of aircraft. In these disciplines, a model is used to determine the efficacy of the real thing and, moreover, is cheaper to build and test than the real thing, often by a huge factor. The produce of many engineering disciplines is physical and the manufacturing process costly. Often, software models are not cheaper by a huge factor to build and test than the software they represent. Consequently, \cite[ch14]{martin06agile} prescribes software modelling for communicating and reasoning about a design, and not as a long-term replacement for real, working software.
+After each refactoring to deeper insight, the model should more closely represent the object system, and the computer system is changed to reflect the newfound knowledge. 
 
-All software has a \emph{domain}, the activities or business of its users. The domain of a library's lending system includes books, people and loans. \cite{evans04domain} prescribes principles and practices for building software in a way that emphasises the underlying domain, while tackling its complexity. In \cite{evans04domain}, domain models are key -- they are used to shape the solution's design, to define a common vocabulary for communication between team members, and to distinguish interesting and uninteresting elements of the domain. According to \cite{evans04domain}, domain models are key to software development. 
+\subsubsection{In Favour of Code over Models}
+By contrast, \cite[ch14]{martin06agile} prescribes modelling only for communicating and reasoning about a design, and not ``as a long-term replacement for real, working software''. Rather \cite{martin06agile} advocates using models to quickly compare different ways in which a system might be modelled and then to disregard those models in favour of working code.
 
-% Leading towards this argument:  Model-driven engineering provides principles and practices for defining and using modelling languages. A common metamodelling language is key. Is generative programming?
+\cite{martin06agile} seeks to justify this position by noting that, in some engineering disciplines, models are used to reduce risk. Structural engineers build models of bridges. Aerospace engineers build models of aircraft. In these disciplines, a model is used to determine the efficacy of the real thing and, moreover, is cheaper to build and test than the real thing, often by a huge factor. The produce of many engineering disciplines is physical and the manufacturing process costly. By contrast, software models are often not much cheaper to build and test than the software they represent. Consequently, \cite{martin06agile} argues that working code is to be favoured over models.
 
-% How is the situation Martin describes (and other adovcates of "agile" principles) different to the software produced by model-driven engineering? Perhaps for enterprise systems it is much cheaper to build / test a model?? Or perhaps Martin is right, but MDD has different advantages to modelling (e.g. a common metamodelling language).
+In this justification, it is clear that \cite{martin06agile} often favours code over \emph{models of computer systems}, but makes no argument for favouring code over \emph{models of object systems}. In fact, the case study (Chapter XX) used to demonstrate the principles and practices prescribed in \cite{martin06agile}, describes a model of a payroll system, according to Jackson's definition of a model \cite{jackson95software}. The model of the payroll system is used to make decisions about the way in which the corresponding computer system is structured. Here then, the code is both the model of the computer system and the model of the object system.
+
+\subsubsection{Models in MDE}
+As the discussion above demonstrates, the way in which models are used and regarded varies in software engineering. In \cite{evans04domain}, models are key -- they are used to shape the solution's design, to define a common vocabulary for communication between team members, and to distinguish interesting and uninteresting elements of the object system. In \cite{martin06agile}, code is the primary artefact used to describe the object system and the computer system, and can be regarded as a model.
+
+MDE recognises that models -- albeit in different forms -- are used throughout software engineering. Furthermore, MDE seeks to capture the way in which models can be used to develop software, as discussed in Section~\ref{sec:mde}. To facilitate this, models are structured such that they are amenable to manipulation. The sequel describes metamodelling, a process for describing the structure of models.
+
 
 \subsection{Metamodelling}
-In model-driven engineering, models are structured (conform to a well-defined set of syntactic and semantic constraints) rather than unstructured \cite{kolovos09thesis}. A \emph{modelling language} is the set of syntactic and semantic constraints used to define the structure of group of related models. In model-driven engineering, a modelling language is often specified as a model and, hence the term \emph{metamodel} is often used in place of \emph{modelling language}.
+In model-driven engineering, models are structured (satisfy a well-defined set of syntactic and semantic constraints) rather than unstructured \cite{kolovos09thesis}. A \emph{modelling language} is the set of syntactic and semantic constraints used to define the structure of a group of related models. In model-driven engineering, a modelling language is often specified as a model and, hence the term \emph{metamodel} is used in place of \emph{modelling language}.
 
-Metamodels facilitate model interchange and, hence, interoperability between modelling tools.  For this reason, Evans recommends that software engineers ``use a well-documented shared language that can express the necessary domain information as a common medium of communication.'' \cite[pg377]{evans04domain}. To support this recommendation, Evans discusses Chemical Markup Language (CML), a standardised language, which has facilitated the interoperability of tools (such as JUMBO Browser, which creates graphical views of chemical structures) developed by various institutions.
+\emph{Conformance} is a relationship between a metamodel and a model. A model \emph{conforms to} a metamodel when the metamodel specifies every concept used in the model definition, and the model uses the metamodel concepts according to the rules specified by the metamodel. Conformance can be described by a set of constraints between models and metamodels \cite{paige07metamodel}. When all constraints are satisfied, a model conforms to a metamodel. For example, a conformance constraint might state that every object in the model has a corresponding non-abstract class in the metamodel.
+
+Metamodels facilitate model interchange and, therefore, interoperability between modelling tools.  For this reason, Evans recommends that software engineers ``use a well-documented shared language that can express the necessary domain information as a common medium of communication.'' \cite[pg377]{evans04domain}. To support this recommendation, Evans discusses Chemical Markup Language (CML), a standardised language, which has facilitated the interoperability of tools (such as JUMBO Browser, which creates graphical views of chemical structures) developed by various institutions.
 
 A metamodel typically comprises three categories of constraint:
 
@@ -39,7 +73,7 @@ Concrete syntax, abstract syntax and semantics are used together to specify mode
 \subsubsection{MOF}
 Software engineers using model-driven engineering can use existing and define new metamodels. To facilitate interoperability between model-driven engineering tools, the OMG has standardised a language for specifying metamodels, the meta-object facility (MOF). Metamodels specified in MOF can be interchanged between model-driven engineering environments. Furthermore, modelling language tools are interoperable because MOF also standardises the way in which metamodels and their models are persisted to and from disk. For model and metamodel persistence MOF prescribes XML Metadata Interchange (XMI), a dialect of XML optimised and standardised by the OMG for loading, storing and exchanging models.
 
-Because MOF is a modelling language for describing modelling languages, it is sometimes termed a metamodelling language. A simplified fragment of the UML defined in MOF, is shown in Figure \ref{fig:mof}. The concrete syntax of MOF borrows is similar to the concrete syntax of UML class diagrams:
+Because MOF is a modelling language for describing modelling languages, it is sometimes termed a metamodelling language. A simplified fragment of the UML defined in MOF, is shown in Figure \ref{fig:mof}. The concrete syntax of MOF is similar to the concrete syntax of UML class diagrams. Specifically:
 
 \begin{itemize}
  \item Modelling constructs are drawn as boxes. The name of each modelling construct is emboldened. The name of abstract (uninstantiable) constructs are italicised.
@@ -52,52 +86,160 @@ Because MOF is a modelling language for describing modelling languages, it is so
 \begin{figure}[htbp]
   \begin{center}
     \leavevmode
-    \includegraphics[scale=0.33]{mof.png}
+    \includegraphics[scale=0.33]{2.Background/images/mof.png}
   \end{center}
   \caption{A fragment of the UML metamodel defined in MOF, from \cite{uml212}.}
   \label{fig:mof}
 \end{figure}
 
-In the past, the means for describing modelling constructs has been inconsistent between modelling languages. For example, both entity-relationship (ER) diagrams and UML class diagrams can be used to specify models of structured data but, as \cite[pg97]{frankel02mda} notes, similar constructs from ER diagrams and UML class diagrams have different concrete syntax. MOF seeks to standardise the way in which modelling languages are defined.
+Prior to the formulation of MOF, the means for describing modelling constructs has been inconsistent between modelling languages. For example, both entity-relationship (ER) diagrams and UML class diagrams can be used to specify models of structured data but, as \cite[pg97]{frankel02mda} notes, similar constructs from ER diagrams and UML class diagrams have different concrete syntax. MOF standardises the way in which modelling languages are defined.
 
+A standardised metamodelling language has facilitated the construction of MDE tools that can be used with a range of modelling languages. Without a standardised metamodelling language, modelling tools were specific to one modelling language, such as UML. In contemporary MDE environments, any number of modelling languages can be used together and manipulated in a uniform manner. The sequel discusses the way in which models and metamodels are used to construct systems in MDE.
 
-\subsection{Model-Driven Engineering}
+\subsection{Model Management}
 \label{sec:mde}
-Model-driven engineering (MDE) is a principled approach to software engineering in which models are produced throughout the engineering process. Models are manipulated throughout development to produce software. This thesis uses the term \emph{model management}, defined in \cite{kolovos09thesis}, to refer to development activities that manipulate models for the purpose of producing software. Typical model management activities are discussed in this section.
+Model-driven engineering (MDE) is a principled approach to software engineering in which models are produced throughout the engineering process. Models are \emph{managed} to produce software. This thesis uses the term \emph{model management}, defined in \cite{kolovos09thesis}, to refer to development activities that manipulate models for the purpose of producing software. Typical model management activities, such as model transformation and validation, are discussed in this section. Section~\ref{sec:mde_methods} discusses MDE guidelines and methods, and describes the way in which model management activities are used together to produce software.
 
 \subsubsection{Model Transformation}
 \label{subsubsec:model_transformation}
-Model transformation is a development activity in which software artefacts are derived from others, according to some well-defined specification. Model transformations are specified between modelling languages (model-to-model transformation), between modelling languages and textual artefacts (model-to-text-transformation) and between textual artefacts and modelling languages (text-to-model transformation).
+Model transformation is a development activity in which software artefacts are derived from others, according to some well-defined specification. Three different types of model transformation are described in \cite{kleppe03mda,kolovos09thesis}. Model transformations are specified between modelling languages (model-to-model transformation), between modelling languages and textual artefacts (model-to-text-transformation) and between textual artefacts and modelling languages (text-to-model transformation). Each type of transformation has unique characteristics and tools, but share some common characteristics. The remainder of this section first introduces the commonalities and then discusses each type of transformation individually.
 
-\cite{czarnecki06survey} survey describes a feature model for distinguishing and categorising model transformation approaches. Several of the features described by Czarnecki and Helsen are relevant to the research presented in this thesis, and are now discussed. 
+\paragraph{Common characteristics of model transformations}
+The input to a transformation is termed its \emph{source}, and the output its \emph{target}. In theory, a transformation can have more than one source and more than one target, but not all transformation languages support multiple sources and targets. Consequently, much of the model transformation literature considers single source and target transformations.
 
-% TODO Styles: imperative / hybrid / declarative 
+\cite{czarnecki06survey} describes a feature model for distinguishing and categorising model transformation approaches. Two of the features are relevant to the research presented in this thesis, and are now discussed. 
 
-Transformations specified between the same source and target metamodel are termed \emph{endogenous}, while transformation specified between different source and target metamodels are term \emph{exogenous}. Endogenous transformations can typically be specified with a more compact syntax than exogenous transformations, because there is no need to specify mappings between source and target types.
+\subparagraph{Source-target relationship} A \emph{new-target} transformation creates target models afresh on each invocation. An \emph{existing-target} transformation is executed on existing target models. Existing target transformations are used for partial (incremental) transformation and for preserving parts of the target that are not derived from the source.
 
-A \emph{new-target} transformation creates target models afresh on each invocation. An \emph{existing-target} transformation is executed on existing target models. Existing target transformations are used for partial (incremental) transformation and for preserving parts of the target that are not derived from the source.
+\subparagraph{Domain language} Transformations specified between a source and a target model that conform to the same metamodel are termed \emph{endogenous} or \emph{rephrasings}, while transformations specified between a source and a target model that conform to different metamodels are termed \emph{exogenous} or \emph{translations}.
 
-Endogenous, existing-target transformations are used to perform small or incremental updates to models, such as refactorings, which will be discussed in Chapter~\ref{LiteratureReview}.
+Endogenous, existing-target transformations are a special case of transformation and are termed \emph{refactorings}. Refactorings have been studied in the context of software evolution and are discussed more thoroughly in Chapter~\ref{LiteratureReview}.
 
 
-\paragraph{Model-to-Model (M2M) Transformation} M2M transformation has been characterised as the heart-and-soul of MDE \cite{sendall03heart}. Large and complex systems can be represented using several interdependent models. By automating the derivation of models from others, model transformation has the potential to reduce the cost of engineering large and complex systems.
+\paragraph{Model-to-Model (M2M) Transformation} M2M transformation is used to derive models from others. By automating the derivation of models from others, M2M transformation has the potential to reduce the cost of engineering large and complex systems that can be represented as a set of interdependent models \cite{sendall03heart}. 
 
-\cite{kolovos08etl} notes that the current consensus is that hybrid languages, such as QVT \cite{qvt} and ATL \cite{jouault05transforming} are more suitable for specifying model transformation than pure imperative or declarative languages. 
+M2M transformations are often specified as a set of \emph{rules} \cite{czarnecki06survey}. Each rule specifies the way in which a specific set of elements in the source model is transformed to an equivalent set of elements in the target model \cite[pg.44]{kolovos09thesis}.
 
-\paragraph{Model-to-Text (M2T) Transformation} M2T transformation is an important model management task with a number of applications, including model serialisation (enabling model interchange); code and documentation generation; and model visualisation and exploration.  In 2005, the OMG \cite{omg} recognised the lack of a standardised in M2T transformation with its M2T Language Request for Proposals \footnote{\url{http://www.omg.org/docs/ad/04-04-07.pdf}}. In response, various M2T languages have been developed, including JET\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=jet#jet}}, XPand\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=xpand}} 
-and MOFScript \cite{oldevik05toward}.
+Many M2M transformation languages have been proposed, such as the Atlas Transformation Language (ATL) \cite{jouault05transforming}, the Epsilon Transformation Language (ETL) \cite{kolovos08etl} and VIATRA \cite{viatra}. The OMG \cite{omg} provide a standardised M2M transformation language, Queries/Views/Transformations (QVT) \cite{qvt}. M2M transformation languages can be categorised according to their \emph{style}, which is either declarative, imperative or hybrid.
 
-Because M2T transformation is used to produce unstructured artefacts, M2T transformation has different requirements to M2M transformation. For instance, code generators often provide mechanisms for specifying sections of code to be completed manually and for preserving those hand-written sections. Traceability between structured and unstructured artefacts is also a key requirement for model-to-text (and text-to-model) transformation, and is discussed further in Chapter~\ref{LiteratureReview}.
+Declarative M2M transformation languages only provide constructs for mapping source to target model elements and, as such, are not computationally complete. Consequently, the scheduling of rules can be \emph{implicit} (determined by the execution engine of the transformation language). By contrast, imperative M2M transformation languages are computationally complete, but often require rule scheduling to be \emph{explicit} (specified by the user). Hybrid M2M transformation languages combine declarative and imperative parts, are computationally complete, and provide a mixture of implicit and explicit rule scheduling.
 
-\paragraph{Text-to-Model (T2M) Transformation} T2M transformation is most often implemented as a parser that produces a model. Parser generators such as ANTLR \cite{parr07antlr} can be used to produce a structured artefact (such as an abstract syntax tree) from text. T2M tools are built atop parser generators and post-process the structured artefacts such that they conform to the target metamodel. Xtext \footnote{\url{http://www.eclipse.org/Xtext/}} and EMFtext \cite{heidenreich09derivation} are contemporary examples of T2M tools that, given a grammar and a target metamodel, will automatically generate a parser that transforms text to a model.
+Because declarative M2M transformation languages cannot be used to solve some categories of transformation problem \cite{patrascoiu04embedding} and imperative M2M transformation languages are difficult to write and maintain \cite[pg.45]{kolovos09thesis}, \cite{kolovos08etl} notes that the current consensus is that hybrid languages, such as ATL are more suitable for specifying model transformation than pure imperative or declarative languages.
+
+An exemplar M2M transformation, written in the hybrid M2M transformation language ETL, is shown in Listing~\ref{lst:exemplar_m2m}. The source of the transformation is a state machine model, conforming to the metamodel shown in Figure~\ref{fig:state_machine_mm}. The target of the transformation an object-oriented model, conforming to the metamodel shown in Figure~\ref{fig:object_oriented_mm}. The transformation in Listing~\ref{lst:exemplar_m2m} comprises two rules.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=5cm]{2.Background/images/StateMachines.pdf}
+  \end{center}
+  \caption{Exemplar State Machine metamodel.}
+  \label{fig:state_machine_mm}
+\end{figure}
+
+\begin{figure}[htbp]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=8.5cm]{2.Background/images/OO.pdf}
+  \end{center}
+  \caption{Exemplar Object-Oriented metamodel.}
+  \label{fig:object_oriented_mm}
+\end{figure}
+
+\begin{lstlisting}[caption=Exemplar M2M transformation in the Epsilon Transformation Language, label=lst:exemplar_m2m, language=ETL]
+rule Machine2Package
+	transform m : StateMachine!Machine
+	to        p : ObjectOriented!Package {
+		
+	p.name     := 'uk.ac.york.cs.' + m.id;
+	p.contents := m.states.equivalent();
+}
+
+rule State2Class
+	transform s : StateMachine!State
+	to        c : ObjectOriented!Class 
+	
+	guard: not s.isFinal {
+		
+	c.name := s.name + 'State';
+}
+\end{lstlisting}
+
+The first rule (lines 1-7) is named \texttt{Machine2Package} (line 1) and transforms \emph{Machine}s (line 2) into \emph{Package}s (line 3). The body of the first rule (lines 5-6) specifies the way in which a \texttt{Package}, \texttt{p}, can be derived from a \texttt{Machine}, \texttt{m}. Specifically, the \texttt{name} of \texttt{p} is derived from the \texttt{id} of \texttt{m} (line 5), and the \texttt{contents} of \texttt{p} are derived from the \texttt{states} of \texttt{m} (line 6). 
+
+The second rule (lines 9-16) transforms \texttt{State}s (line 10) to \texttt{Class}es (line 11). Additionally, line 13 contains a \emph{guard} to specify that the rule is only to be applied to \texttt{State}s whose \texttt{isFinal} property is \texttt{false}.
+
+When executed, the transformation rules will be scheduled \textbf{implicitly} by the execution engine, and invoked once for each \texttt{Machine} and \texttt{State} in the source. On line 6 of Listing~\ref{lst:exemplar_m2m}, the built-in \texttt{equivalent()} operation is used to produce a set of \texttt{Class}es from a set of \texttt{State}s by invoking the relevant transformation rule. This is an example of \textbf{explicit} rule scheduling, in which the user defines when a rule will be called.
+
+
+\paragraph{Model-to-Text (M2T) Transformation} M2T transformation is used for model serialisation (enabling model interchange), code and documentation generation, and model visualisation and exploration.  In 2005, the OMG \cite{omg} recognised the lack of a standardised M2T transformation with its M2T Language Request for Proposals \footnote{\url{http://www.omg.org/docs/ad/04-04-07.pdf}}. In response, various M2T languages have been developed, including JET\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=jet#jet}}, XPand\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=xpand}}, MOFScript \cite{oldevik05toward} and the Epsilon Generation Language (EGL) \cite{rose08egl}.
+
+Because M2T transformation is used to produce unstructured rather than structured artefacts, M2T transformation has different requirements to M2M transformation. For instance, M2T transformation languages often provide mechanisms for specifying sections of text that will be completed manually and must not be overwritten by the transformation engine.
+
+\emph{Template}s are commonly used in M2T languages. Templates comprise \emph{static} and \emph{dynamic} sections. When the transformation is invoked, the contents of static sections are emitted verbatim, while dynamic sections contain logic and are executed.
+
+An exemplar M2T transformation, written in EGL, is shown in Listing~\ref{lst:exemplar_m2t}. The source of the transformation is an object-oriented model conforming to the metamodel shown in Figure~\ref{fig:object_oriented_mm}, and the target is Java source code. The template assumes that an instance of \texttt{Class} is stored in the \texttt{class} variable.
+
+\begin{lstlisting}[caption=Exemplar M2T transformation in the Epsilon Generation Language, label=lst:exemplar_m2t, language=EGL]
+package [%=class.package.name];
+
+public class [%=class.name] {
+	[% for(attribute in class.attributes) { %]
+	  private [%=attribute.type%] [%=attribute.name];
+	[% } %]
+}
+\end{lstlisting}
+
+In EGL, dynamic sections are contained within \texttt{[\%} and \texttt{\%]}. \emph{Dynamic output} sections are a specialisation of dynamic sections contained within \texttt{[\%=} and \texttt{\%]}. The result of evaluating a dynamic output section is included in the generated text. Line 1 of Listing~\ref{lst:exemplar_m2t} contains two static sections (\texttt{package}' and \texttt{;}) and a dynamic output section (\texttt{[\%=class.package.name]}), and will generate a package declaration when executed.  Similarly, line 3 will generate a class declaration. Lines 4 to 6 iterate over every \texttt{attribute} of the \texttt{class}, outputting a field declaration for each \texttt{attribute}.
+
+
+\paragraph{Text-to-Model (T2M) Transformation} T2M transformation is most often implemented as a parser that generates a model rather than object code. Parser generators such as ANTLR \cite{parr07antlr} can be used to produce a structured artefact (such as an abstract syntax tree) from text. T2M tools are built atop parser generators and post-process the structured artefacts such that they conform to a metamodel specified by the user.
+
+Xtext \footnote{\url{http://www.eclipse.org/Xtext/}} and EMFtext \cite{heidenreich09derivation} are contemporary examples of T2M tools that, given a grammar and a target metamodel, will automatically generate a parser that transforms text to a model.
+
+An exemplar T2M transformation, written in EMFtext, is shown in Listing~\ref{lst:exemplar_t2m}. From the transformation shown in Listing~\ref{lst:exemplar_t2m}, EMFtext can be used to generate a parser that, when executed, will produce state machine models. For the input, \texttt{lift[stationary up down stopping emergency]}, the parser will produce a model containing one \texttt{Machine} with \texttt{lift} as its \texttt{id}, and five \texttt{State}s with the \texttt{name}s, \texttt{stationary}, \texttt{up}, \texttt{down}, \texttt{stopping}, and \texttt{emergency}.
+
+\begin{lstlisting}[caption=Exemplar T2M transformation in EMFtext, label=lst:exemplar_t2m, language=EMFtext]
+SYNTAXDEF statemachine
+FOR <statemachine>
+START Machine
+
+TOKENS {
+	DEFINE IDENTIFIER $('a'..'z'|'A'..'Z')*$;
+	DEFINE LBRACKET $'['$;
+	DEFINE RBRACKET $']'$;
+}
+
+RULES {
+	Machine ::= id[IDENTIFIER] LBRACKET states* RBRACKET  ;
+	State ::= name[IDENTIFIER] ;
+}
+\end{lstlisting}
+
+Lines 1-2 of Listing~\ref{lst:exemplar_t2m} define the name of the parser and target metamodel. Line 3 indicates that parser should first seek to construct a \texttt{Machine} from the source text. Lines 5-9 define rules for the lexer, including a rule for recognising \texttt{IDENTIFIER}s (represented as alphabetic characters).  
+
+Lines 11-14 of Listing~\ref{lst:exemplar_t2m} are key to the transformation. Line 11 specifies that a \texttt{Machine} is constructed whenever an \texttt{IDENTIFIER} is followed by a \texttt{LBRACKET} and eventually a \texttt{RBRACKET}. When constructing a \texttt{Machine}, the first time an \texttt{IDENTIFIER} is encountered, it is stored in the \texttt{id} attribute of the \texttt{Machine}. The \texttt{states*} statement on line 12 indicates that, before matching a \texttt{RBRACKET}, the parser is permitted to transform subsequent text to a \texttt{State} (according to the rule on line 13) and store the resulting \texttt{State} in the \texttt{states} reference of the \texttt{Machine}. The asterisks in \texttt{states*} indicates that any number of \texttt{State}s can be constructed and stored in the \texttt{states} reference.
 
 \subsubsection{Model Validation}
-Model validation provides a mechanism for managing the integrity of the software developed using MDE. A model that omits information is said to be \emph{incomplete}, while related models that suggest differences in the underlying phenomena are said to be \emph{contradicting}. Incompleteness and contradiction are two examples of \emph{inconsistency}. In MDE, inconsistency is detrimental, because, when artefacts are automatically derived from each other, the inconsistency of one artefact might be propagated to others. Model validation is used to detect, report and reconcile inconsistency throughout a MDE process.
+Model validation provides a mechanism for managing the integrity of the software developed using MDE. A model that omits information is said to be \emph{incomplete}, while related models that suggest differences in the underlying phenomena are said to be \emph{contradicting} \cite{kolovos09thesis}. Incompleteness and contradiction are two examples of \emph{inconsistency}. In MDE, inconsistency is detrimental, because, when artefacts are automatically derived from each other, the inconsistency of one artefact might be propagated to others. Model validation is used to detect, report and reconcile inconsistency throughout a MDE process.
 
-\cite{kolovos09thesis} observes that inconsistency detection is inherently pattern-based and, hence, higher-order languages are more suitable for model validation than 3G languages (such as Java). The Object Constraint Language (OCL) \cite{ocl2}, an OMG standard, can be used to specify consistency constraints on UML and MOF models. Unlike OCL, the xlinkit toolkit \cite{nentwich2003flexible} can be used for specifying inter-model consistency constraints. 
+\cite{kolovos09thesis} observes that inconsistency detection is inherently pattern-based and, hence, higher-order languages are more suitable for model validation than so-called ``third-generation'' programming languages (such as Java). The Object Constraint Language (OCL) \cite{ocl2} is an OMG standard that can be used to specify consistency constraints on UML and MOF models. OCL cannot be used to specify inter-model constraints, unlike the xlinkit toolkit \cite{nentwich2003flexible} and the Epsilon Validation Language (EVL) \cite{kolovos08evl}.
+
+An exemplar model validation constraint, written in EVL, is shown in Listing~\ref{lst:exemplar_validation}. The constraint validates state machine models that conform to the metamodel shown in Figure~\ref{fig:state_machine_mm}. The constraint shown in Listing~\ref{lst:exemplar_validation} is defined for \texttt{State}s (line 1), and checks that there exists some transition whose source or target is the current state (line 4). When the check part (line 4) is not satisfied, the message part (line 6) is displayed. When executed, the EVL constraint will be invoked once for every \texttt{State} in the model. The keyword \texttt{self} is used to refer to the particular \texttt{State} on which the constraint is currently being invoked.
+
+\begin{lstlisting}[caption=Exemplar model validation in the Epsilon Validation Language, label=lst:exemplar_validation, language=EVL]
+context State {
+	constraint NoStateIsAnIsland {
+		check:
+			Transition.all.exists(t | t.source == self or t.target == self)
+		message:
+		  'The state ' + self.name + ' has no transitions.'
+	}
+}
+\end{lstlisting}
 
 \subsubsection{Further model management activities}
-In addition to model transformation and validation, further examples of model management activities include model comparison (e.g. \cite{kolovos06ecl}), in which a \emph{trace} of similar and different elements is produced from two or more models, and model merging or weaving (e.g. \cite{kolovos07eml}), in which a two or more models are combined to produce a unified model.
+In addition to model transformation and validation, further examples of model management activities include model comparison (e.g. \cite{kolovos06ecl}), in which a \emph{trace} of similar and different elements is produced from two or more models, and model merging or weaving (e.g. \cite{kolovos07eml}), in which two or more models are combined to produce a unified model.
 
 Further activities, such as model versioning and tracing, might be regarded as model management but, in the context of this thesis, are considered as evolutionary activities and as such are discussed in Chapter~\ref{LiteratureReview}.
 

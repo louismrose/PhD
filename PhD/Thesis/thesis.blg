@@ -4,22 +4,37 @@ A level-1 auxiliary file: 1.Introduction/introduction.aux
 A level-1 auxiliary file: 2.Background/background.aux
 A level-1 auxiliary file: 3.LiteratureReview/literature_review.aux
 A level-1 auxiliary file: 4.Analysis/analysis.aux
+Case mismatch error between cite keys VIATRA and viatra
+---line 109 of file 4.Analysis/analysis.aux
+ : \citation{VIATRA
+ :                 }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: 5.Implementation/implementation.aux
 A level-1 auxiliary file: 6.Evaluation/evaluation.aux
 A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Warning--I'm ignoring heidenreich09derivation's extra "year" field
---line 619 of file thesis.bib
-Repeated entry---line 1325 of file thesis.bib
+I was expecting a `,' or a `}'---line 9 of file thesis.bib
+ :    
+ :    author    = {Apostel, Leo},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1382 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1347 of file thesis.bib
+Repeated entry---line 1404 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in apostel60models
+Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
+while executing---line 1187 of file longname.bst
+Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
+while executing---line 1187 of file longname.bst
+Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
+while executing---line 1187 of file longname.bst
 Name 1 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
 while executing---line 1187 of file longname.bst
 Name 1 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
@@ -46,6 +61,10 @@ Name 1 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma a
 while executing---line 1187 of file longname.bst
 Name 2 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
 while executing---line 1187 of file longname.bst
+Warning--empty author in apostel60models
+Warning--empty title in apostel60models
+Warning--empty journal in apostel60models
+Warning--empty year in apostel60models
 Warning--can't use both volume and number fields in banerjee87semantics
 Name 1 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1253 of file longname.bst
@@ -67,45 +86,49 @@ Name 3 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." 
 while executing---line 1253 of file longname.bst
 Name 5 in "Louis M. Rose and Markus Herrmannsdoerfer and James R. Williams and Dimitrios S. Kolovos and Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
 while executing---line 1253 of file longname.bst
-You've used 164 entries,
+Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
+while executing---line 1253 of file longname.bst
+Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
+while executing---line 1253 of file longname.bst
+You've used 175 entries,
             2472 wiz_defined-function locations,
-            1301 strings with 27922 characters,
-and the built_in function-call counts, 63818 in all, are:
-= -- 6416
-> -- 2398
-< -- 72
-+ -- 775
-- -- 736
-* -- 4489
-:= -- 9898
-add.period$ -- 530
-call.type$ -- 164
-change.case$ -- 996
-chr.to.int$ -- 144
-cite$ -- 165
-duplicate$ -- 2923
-empty$ -- 5259
-format.name$ -- 946
-if$ -- 13644
-int.to.chr$ -- 21
+            1340 strings with 29092 characters,
+and the built_in function-call counts, 67231 in all, are:
+= -- 6740
+> -- 2516
+< -- 73
++ -- 810
+- -- 770
+* -- 4716
+:= -- 10447
+add.period$ -- 562
+call.type$ -- 175
+change.case$ -- 1050
+chr.to.int$ -- 154
+cite$ -- 182
+duplicate$ -- 3100
+empty$ -- 5555
+format.name$ -- 996
+if$ -- 14353
+int.to.chr$ -- 22
 int.to.str$ -- 0
-missing$ -- 146
-newline$ -- 824
-num.names$ -- 493
-pop$ -- 1169
+missing$ -- 160
+newline$ -- 877
+num.names$ -- 523
+pop$ -- 1256
 preamble$ -- 1
-purify$ -- 1188
+purify$ -- 1260
 quote$ -- 0
-skip$ -- 2387
+skip$ -- 2519
 stack$ -- 0
-substring$ -- 3118
-swap$ -- 828
-text.length$ -- 72
+substring$ -- 3228
+swap$ -- 859
+text.length$ -- 73
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1212
-warning$ -- 1
-while$ -- 512
-width$ -- 169
-write$ -- 2122
-(There were 25 error messages)
+type$ -- 1280
+warning$ -- 6
+while$ -- 535
+width$ -- 181
+write$ -- 2252
+(There were 32 error messages)
