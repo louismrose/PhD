@@ -2,20 +2,17 @@
 
 \section{MDE Terminology and Principles}
 \label{sec:mde_terms}
-Software engineers using MDE construct and manipulate artefacts familiar from traditional approaches to software engineering (such as code and documentation) and, in addition, work with different types of artefact, such as \emph{models}, \emph{metamodels} and \emph{model transformations}. Furthermore, MDE involves new development activities, such as \emph{model management}. This section describes the artefacts and activities typically involved in a model-driven engineering process.
+Software engineers using MDE construct and manipulate artefacts familiar from traditional approaches to software engineering (such as code and documentation) and, in addition, work with different types of artefact, such as \emph{models}, \emph{metamodels} and \emph{model transformations}. Furthermore, MDE involves new development activities, such as \emph{model management}. This section describes the artefacts and activities involved in MDE.
 
 \subsection{Models}
+\label{subsec:models}
 Models are fundamental to MDE. \cite{kurtev04thesis} identifies many definitions of the term model, such as: ``any subject using a system A that is neither directly nor indirectly interacting with a system B to obtain information about the system B, is using A as a model for B.'' \cite{apostel60models}, ``a model is a representation of a concept. The representation is purposeful and used to abstract from reality the irrelevant details.'' \cite{starfield90model}, and ``a model is a simplification of a system written in a well-defined language.'' \cite{bezivin01definition}. 
 
 While there are many definitions of the term model, a common notion is that a model is a representation of the real-world \cite[pg12]{kurtev04thesis}. The part of the real-world represented by a model is termed the \emph{domain}, the \emph{object system} or, simply the \emph{system}. A further commonality is noted by \cite{kolovos06eol}: a model may have either a textual or graphical representation.
 
-\cite{ackoff62scientific} distinguishes three kinds of model. \emph{Iconic} models have a likeness to their object system. \emph{Analogous} models share characteristics of their object system. \emph{Analytic} models present a description of their object system. For example, a toy in the shape of an aeroplane is \emph{iconic}, a toy that can fly is \emph{analogous} to an aeroplane, and a set of differential equations describing the way in which the propellors of an aeroplane propellor function is \emph{analytic}.
+\cite{ackoff62scientific} defines \emph{analogous} models as those which share some characteristics and can be used in place of their object system. An aeroplane toy that can fly is an analogous model of an aeroplane. In computer science, models can be used to construct a computer system. A model of an object system, say the lending service of a library, might be used to decide the way in which data is stored on disk, or the way in which a program is to be structured.
 
-In this thesis, the models discussed are \emph{analogous}. The lending service of a library might be modelled by described books, people and loans, which share characteristics of their real-world counterparts: for example, a person loans a book. 
-
-In computer science, models analogous to an object system can be used to construct a computer system. The model of the real-world might be used to determine the way in which data is stored on disk, or the way in which a computer program is to be structured. In this sense, a model is analogous both the object system in the real world and to a further object system: the computer system. Terms in the model can be used to think about both the real system and the computer system.
-
-\cite{jackson95software} proposes that, in the context of computer science, Figure~\ref{fig:jackson_model} illustrates what it means to be a model. According to \cite{jackson95software}, a model is the description of the domain (object system) and the machine (computer system). Computer scientists switch between \emph{designations} when using a model to think about the object system or to think about the software system.
+\cite{jackson95software} proposes that the models constructed in computer science are analogous to two systems: the object system (e.g. the library lending service in the real-world) and the computer system (e.g. the combination of software and hardware used to implement a library lending service). A model can be used to think about both the real system and the computer system. Figure~\ref{fig:jackson_model} illustrates this notion further. According to \cite{jackson95software}, a model is both the description of the domain (object system) and the machine (computer system). Computer scientists switch between \emph{designations} when using a model to think about the object system or to think about the software system.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -26,12 +23,15 @@ In computer science, models analogous to an object system can be used to constru
   \label{fig:jackson_model}
 \end{figure}
 
-In summary, this thesis considers models that are analogous, rather than iconic or analytical. Furthermore, models are analogous to both a (real-world) system and a computer system. 
+Models can be unstructured (for example, sketches on a piece of paper) or structured (conform to some well-defined set of syntactic and semantic constraints). In software engineering, models are used widely to reason about object systems and computer systems. MDE recognises this, and seeks to drive the development of computer systems from structured models.
 
-\subsection{Modelling in Computer Science}
-Analogous models are used widely in software engineering. To explore this statement, this section considers two approaches to developing computer systems, each seemingly with radically different views of models. \cite{evans04domain} advocates modelling throughout software development to better understand the real-world system and to structure the computer system. \cite{martin06agile} advocates that code should be regarded as the model of both the real-world system and the computer system.  
+\subsection{Models in Software Engineering}
 
-\subsubsection{In Favour of Models over Code}
+\emph{\textbf{Richard, Fiona}: This section is the result of reconciling an argument  I was having with myself! I agree with most of the principles in \cite{martin06agile}, but disagree that code should always be preferred to models. It took me quite a while to come to the conclusions reached in this section, but I'm not sure if the section adds enough value to warrant inclusion in the thesis.} \vspace{4mm}
+
+The models that \cite{jackson95software} describes are used widely in software engineering. This section considers two software engineering approaches, each with  different opinions of the role of models in software engineering. \cite{evans04domain} advocates modelling throughout software development to better understand the object system, and prescribes structuring software based on the terms and concepts identified in the object system. \cite{martin06agile} advocates that the primary product of software engineering is code, and as such, models should be used to explore ideas, but then disregarded in favour of code.
+
+\subsubsection{In Favour of Modelling}
 \cite{evans04domain} proposes the use of models throughout the development process to capture and communicate knowledge of the object system and to shape the structure of the resulting software system. Wherever possible, the way in which code is structured is driven by the model. Throughout, \cite{evans04domain} emphasises the importance of modelling and a process, which he terms \emph{refactoring to deeper insight}, that seeks incremental improvements to models.
 
 \begin{quote}
@@ -40,38 +40,39 @@ Distillation is the process of separating the components of a mixture to extract
 
 After each refactoring to deeper insight, the model should more closely represent the object system, and the computer system is changed to reflect the newfound knowledge. 
 
-\subsubsection{In Favour of Code over Models}
-By contrast, \cite[ch14]{martin06agile} prescribes modelling only for communicating and reasoning about a design, and not ``as a long-term replacement for real, working software''. Rather \cite{martin06agile} advocates using models to quickly compare different ways in which a system might be modelled and then to disregard those models in favour of working code.
+\subsubsection{In Favour of Coding}
+By contrast, \cite[ch14]{martin06agile} prescribes modelling only for communicating and reasoning about a design, and not ``as a long-term replacement for real, working software''. Rather \cite{martin06agile} advocates using models to quickly compare different ways in which a system might be structured and then to disregard those models in favour of working code.
 
-\cite{martin06agile} seeks to justify this position by noting that, in some engineering disciplines, models are used to reduce risk. Structural engineers build models of bridges. Aerospace engineers build models of aircraft. In these disciplines, a model is used to determine the efficacy of the real thing and, moreover, is cheaper to build and test than the real thing, often by a huge factor. The produce of many engineering disciplines is physical and the manufacturing process costly. By contrast, software models are often not much cheaper to build and test than the software they represent. Consequently, \cite{martin06agile} argues that working code is to be favoured over models.
+\cite{martin06agile} motivates this position by noting that, in some engineering disciplines, models are used to reduce risk. Structural engineers build models of bridges. Aerospace engineers build models of aircraft. In these disciplines, a model is used to determine the efficacy of the object system and, moreover, is cheaper to build and test than the object system, often by a huge factor. The produce of many engineering disciplines is physical and the manufacturing process costly. By contrast, \cite{martin06agile} argues that software models are often not much cheaper to build and test than the software they represent. Consequently, \cite{martin06agile} proposes that working code is to be favoured over models.
 
-In this justification, it is clear that \cite{martin06agile} often favours code over \emph{models of computer systems}, but makes no argument for favouring code over \emph{models of object systems}. In fact, the case study (Chapter XX) used to demonstrate the principles and practices prescribed in \cite{martin06agile}, describes a model of a payroll system, according to Jackson's definition of a model \cite{jackson95software}. The model of the payroll system is used to make decisions about the way in which the corresponding computer system is structured. Here then, the code is both the model of the computer system and the model of the object system.
+In this justification, it is clear that \cite{martin06agile} favours code over \emph{models of computer systems}, but makes no argument for favouring code over \emph{models of object systems}. In fact, it seems that for \cite{martin06agile}, the code is the model of the object system.
 
 \subsubsection{Models in MDE}
 As the discussion above demonstrates, the way in which models are used and regarded varies in software engineering. In \cite{evans04domain}, models are key -- they are used to shape the solution's design, to define a common vocabulary for communication between team members, and to distinguish interesting and uninteresting elements of the object system. In \cite{martin06agile}, code is the primary artefact used to describe the object system and the computer system, and can be regarded as a model.
 
-MDE recognises that models -- albeit in different forms -- are used throughout software engineering. Furthermore, MDE seeks to capture the way in which models can be used to develop software, as discussed in Section~\ref{sec:mde}. To facilitate this, models are structured such that they are amenable to manipulation. The sequel describes metamodelling, a process for describing the structure of models.
+MDE recognises that models -- albeit in different forms -- are used throughout software engineering. Furthermore, MDE seeks to capture the way in which models can be used to develop software, as discussed in Section~\ref{sec:mde}. To facilitate this, models are structured and, hence, are amenable to manipulation. The sequel describes modelling languages, which are used to describe the way in which groups of related models are structured.
 
-
-\subsection{Metamodelling}
-In model-driven engineering, models are structured (satisfy a well-defined set of syntactic and semantic constraints) rather than unstructured \cite{kolovos09thesis}. A \emph{modelling language} is the set of syntactic and semantic constraints used to define the structure of a group of related models. In model-driven engineering, a modelling language is often specified as a model and, hence the term \emph{metamodel} is used in place of \emph{modelling language}.
+\subsection{Modelling languages}
+\label{subsec:modelling_languages}
+In MDE, models are structured (satisfy a well-defined set of syntactic and semantic constraints) rather than unstructured \cite{kolovos09thesis}. A \emph{modelling language} is the set of syntactic and semantic constraints used to define the structure of a group of related models. In MDE, a modelling language is often specified as a model and, hence the term \emph{metamodel} is used in place of \emph{modelling language}.
 
 \emph{Conformance} is a relationship between a metamodel and a model. A model \emph{conforms to} a metamodel when the metamodel specifies every concept used in the model definition, and the model uses the metamodel concepts according to the rules specified by the metamodel. Conformance can be described by a set of constraints between models and metamodels \cite{paige07metamodel}. When all constraints are satisfied, a model conforms to a metamodel. For example, a conformance constraint might state that every object in the model has a corresponding non-abstract class in the metamodel.
 
-Metamodels facilitate model interchange and, therefore, interoperability between modelling tools.  For this reason, Evans recommends that software engineers ``use a well-documented shared language that can express the necessary domain information as a common medium of communication.'' \cite[pg377]{evans04domain}. To support this recommendation, Evans discusses Chemical Markup Language (CML), a standardised language, which has facilitated the interoperability of tools (such as JUMBO Browser, which creates graphical views of chemical structures) developed by various institutions.
+Metamodels facilitate model interchange and, therefore, interoperability between modelling tools.  For this reason, Evans recommends that software engineers ``use a well-documented shared language that can express the necessary domain information as a common medium of communication.'' \cite[pg377]{evans04domain}. To support this recommendation, Evans discusses the way in which chemists have collaborated to define a standardised language for describing chemical structures, Chemical Markup Language (CML)\footnote{\url{http://cml.sourceforge.net/}}. The standardisation of CML has facilitated interoperability between tools for specification, analysis and simulation.
 
 A metamodel typically comprises three categories of constraint:
 
 \begin{itemize}
 	\item \textbf{The concrete syntax} provides a notation for constructing models that conform to the language. For example, a model may be represented as a collection of boxes connected by lines. A standardised concrete syntax enables communication. Concrete syntax may be optimised for consumption by machines (e.g. XML Metadata Interchange (XMI) \cite{xmi}) or by humans (e.g. the concrete syntax of the Unified Modelling Language (UML) \cite{uml212}).
-	\item \textbf{The abstract syntax} defines the concepts described by the language, such as classes, packages, datatypes. The representation for these concepts is independent of the concrete syntax. For example, compilers may elect to use an abstract syntax tree to encode the abstract syntax of a program (whereas the concrete syntax for the same language may be textual or diagrammatic).
+	\item \textbf{The abstract syntax} defines the concepts described by the language, such as classes, packages, datatypes. The representation for these concepts is independent of the concrete syntax. For example, the implementation of a compiler might use an abstract syntax tree to encode the abstract syntax of a program (whereas the concrete syntax for the same language may be textual or graphical).
 	\item \textbf{The semantics} identifies the meaning of the modelling concepts in the particular domain of language. For example, consider a modelling language defined to describe genealogy, and another to describe flora. Although both languages may define a tree construct, the semantics of a tree in one is likely to be different from the semantics of a tree in the other. The semantics of a modelling language may be specified rigorously, by defining a reference semantics in a formal language such as Z \cite{z}, or in a semi-formal manner by employing natural language.
 \end{itemize}
 
 Concrete syntax, abstract syntax and semantics are used together to specify modelling languages. There are many other ways of defining languages, but this approach (first formalised in \cite{alvarez01mml}) is common in model-driven engineering: a metamodel is often used to define abstract syntax, a grammar or text-to-model transformation to specify concrete syntax, and code generators, annotated grammars or behavioural models to effect semantics.
 
-\subsubsection{MOF}
-Software engineers using model-driven engineering can use existing and define new metamodels. To facilitate interoperability between model-driven engineering tools, the OMG has standardised a language for specifying metamodels, the meta-object facility (MOF). Metamodels specified in MOF can be interchanged between model-driven engineering environments. Furthermore, modelling language tools are interoperable because MOF also standardises the way in which metamodels and their models are persisted to and from disk. For model and metamodel persistence MOF prescribes XML Metadata Interchange (XMI), a dialect of XML optimised and standardised by the OMG for loading, storing and exchanging models.
+\subsection{MOF: A metamodelling language}
+\label{subsec:mof}
+Software engineers using MDE can use existing and define new metamodels. To facilitate interoperability between MDE tools, the OMG has standardised a language for specifying metamodels, the Meta-Object Facility (MOF). Metamodels specified in MOF can be interchanged between MDE environments. Furthermore, modelling language tools are interoperable because MOF also standardises the way in which metamodels and their models are persisted to and from disk. For model and metamodel persistence, MOF prescribes XML Metadata Interchange (XMI), a dialect of XML optimised and standardised by the OMG for loading, storing and exchanging models.
 
 Because MOF is a modelling language for describing modelling languages, it is sometimes termed a metamodelling language. A simplified fragment of the UML defined in MOF, is shown in Figure \ref{fig:mof}. The concrete syntax of MOF is similar to the concrete syntax of UML class diagrams. Specifically:
 
@@ -92,13 +93,13 @@ Because MOF is a modelling language for describing modelling languages, it is so
   \label{fig:mof}
 \end{figure}
 
-Prior to the formulation of MOF, the means for describing modelling constructs has been inconsistent between modelling languages. For example, both entity-relationship (ER) diagrams and UML class diagrams can be used to specify models of structured data but, as \cite[pg97]{frankel02mda} notes, similar constructs from ER diagrams and UML class diagrams have different concrete syntax. MOF standardises the way in which modelling languages are defined.
+Specifying modelling languages with a common metamodelling language, such as MOF, ensures consistency in the way in which modelling constructs are specified. When modelling languages are specified without using a common metamodelling language, identifying similarities between modelling languages is challenging \cite[pg97]{frankel02mda}. 
 
 A standardised metamodelling language has facilitated the construction of MDE tools that can be used with a range of modelling languages. Without a standardised metamodelling language, modelling tools were specific to one modelling language, such as UML. In contemporary MDE environments, any number of modelling languages can be used together and manipulated in a uniform manner. The sequel discusses the way in which models and metamodels are used to construct systems in MDE.
 
 \subsection{Model Management}
 \label{sec:mde}
-Model-driven engineering (MDE) is a principled approach to software engineering in which models are produced throughout the engineering process. Models are \emph{managed} to produce software. This thesis uses the term \emph{model management}, defined in \cite{kolovos09thesis}, to refer to development activities that manipulate models for the purpose of producing software. Typical model management activities, such as model transformation and validation, are discussed in this section. Section~\ref{sec:mde_methods} discusses MDE guidelines and methods, and describes the way in which model management activities are used together to produce software.
+In MDE, models are \emph{managed} to produce software. This thesis uses the term \emph{model management}, defined in \cite{kolovos09thesis}, to refer to development activities that manipulate models for the purpose of producing software. Model management activities typical in MDE, such as model transformation and validation, are discussed in this section. Section~\ref{sec:mde_methods} discusses MDE guidelines and methods, and describes the way in which model management activities are used together to produce software in MDE.
 
 \subsubsection{Model Transformation}
 \label{subsubsec:model_transformation}

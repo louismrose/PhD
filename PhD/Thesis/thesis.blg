@@ -15,11 +15,6 @@ A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-I was expecting a `,' or a `}'---line 9 of file thesis.bib
- :    
- :    author    = {Apostel, Leo},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Repeated entry---line 1382 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
@@ -28,7 +23,6 @@ Repeated entry---line 1404 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
-Warning--to sort, need author or key in apostel60models
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -61,10 +55,6 @@ Name 1 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma a
 while executing---line 1187 of file longname.bst
 Name 2 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
 while executing---line 1187 of file longname.bst
-Warning--empty author in apostel60models
-Warning--empty title in apostel60models
-Warning--empty journal in apostel60models
-Warning--empty year in apostel60models
 Warning--can't use both volume and number fields in banerjee87semantics
 Name 1 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1253 of file longname.bst
@@ -92,43 +82,43 @@ Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 You've used 175 entries,
             2472 wiz_defined-function locations,
-            1340 strings with 29092 characters,
-and the built_in function-call counts, 67231 in all, are:
-= -- 6740
-> -- 2516
+            1346 strings with 29205 characters,
+and the built_in function-call counts, 67376 in all, are:
+= -- 6763
+> -- 2523
 < -- 73
-+ -- 810
-- -- 770
-* -- 4716
-:= -- 10447
-add.period$ -- 562
++ -- 812
+- -- 772
+* -- 4720
+:= -- 10484
+add.period$ -- 564
 call.type$ -- 175
-change.case$ -- 1050
+change.case$ -- 1052
 chr.to.int$ -- 154
-cite$ -- 182
-duplicate$ -- 3100
-empty$ -- 5555
-format.name$ -- 996
-if$ -- 14353
+cite$ -- 176
+duplicate$ -- 3101
+empty$ -- 5562
+format.name$ -- 999
+if$ -- 14384
 int.to.chr$ -- 22
 int.to.str$ -- 0
 missing$ -- 160
-newline$ -- 877
-num.names$ -- 523
-pop$ -- 1256
+newline$ -- 879
+num.names$ -- 526
+pop$ -- 1245
 preamble$ -- 1
-purify$ -- 1260
+purify$ -- 1261
 quote$ -- 0
-skip$ -- 2519
+skip$ -- 2522
 stack$ -- 0
-substring$ -- 3228
-swap$ -- 859
+substring$ -- 3252
+swap$ -- 861
 text.length$ -- 73
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1280
-warning$ -- 6
-while$ -- 535
+warning$ -- 1
+while$ -- 539
 width$ -- 181
-write$ -- 2252
-(There were 32 error messages)
+write$ -- 2259
+(There were 31 error messages)

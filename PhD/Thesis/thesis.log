@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  10 AUG 2010 15:26
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  12 AUG 2010 17:37
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -204,134 +204,135 @@ Chapter 2.
 <2.Background/images/jackson_model.png, id=24, 353.76164pt x 192.2382pt>
 File: 2.Background/images/jackson_model.png Graphic file (type png)
 
-<use 2.Background/images/jackson_model.png> [8 <./2.Background/images/jackson_m
-odel.png>] [9]
+<use 2.Background/images/jackson_model.png>
+Overfull \hbox (7.92123pt too wide) in paragraph at lines 30--31
+\OT1/cmr/m/it/10 hav-ing with my-self! I agree with most of the prin-ci-ples in
+ [[]],
+ []
+
+[8 <./2.Background/images/jackson_model.png>] [9]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 61.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
- (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
-
-[10] [11] <2.Background/images/mof.png, id=41, 928.46875pt x 589.20125pt>
+ [10]
+<2.Background/images/mof.png, id=42, 928.46875pt x 589.20125pt>
 File: 2.Background/images/mof.png Graphic file (type png)
 
-<use 2.Background/images/mof.png> [12 <./2.Background/images/mof.png (PNG copy)
->]
-Overfull \hbox (0.29599pt too wide) in paragraph at lines 108--109
+<use 2.Background/images/mof.png> [11] [12 <./2.Background/images/mof.png (PNG 
+copy)>]
+Overfull \hbox (0.29599pt too wide) in paragraph at lines 109--110
  \OT1/cmr/bx/n/10 Com-mon char-ac-ter-is-tics of model trans-for-ma-tions[] \OT
 1/cmr/m/n/10 The in-put to a trans-
  []
 
 
-Overfull \hbox (30.1479pt too wide) in paragraph at lines 121--122
+Overfull \hbox (30.1479pt too wide) in paragraph at lines 122--123
 []\OT1/cmr/m/n/10 M2M trans-for-ma-tions are of-ten spec-i-fied as a set of \OT
 1/cmr/m/it/10 rules \OT1/cmr/m/n/10 [[]].
  []
 
-[13]
-Overfull \hbox (31.39839pt too wide) in paragraph at lines 123--124
+
+Overfull \hbox (31.39839pt too wide) in paragraph at lines 124--125
 \OT1/cmr/m/n/10 for-ma-tion Lan-guage (ETL) [[]] and VI-A-TRA [[]].
  []
 
-<2.Background/images/StateMachines.pdf, id=48, 218.8175pt x 58.2175pt>
+[13] <2.Background/images/StateMachines.pdf, id=52, 218.8175pt x 58.2175pt>
 File: 2.Background/images/StateMachines.pdf Graphic file (type pdf)
 
 <use 2.Background/images/StateMachines.pdf>
-<2.Background/images/OO.pdf, id=49, 386.44376pt x 65.24374pt>
+<2.Background/images/OO.pdf, id=53, 386.44376pt x 65.24374pt>
 File: 2.Background/images/OO.pdf Graphic file (type pdf)
 
 <use 2.Background/images/OO.pdf>
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 149.
-
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <7> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 151.
  [14 <./2.Background/images/StateMachines.pdf> <./2.Background/images/OO.pdf>]
-Overfull \hbox (6.49042pt too wide) in paragraph at lines 175--176
+Overfull \hbox (6.49042pt too wide) in paragraph at lines 176--177
 \OT1/cmr/m/n/10 er-a-tion, and model vi-su-al-i-sa-tion and ex-plo-ration. In 2
 005, the OMG [[]]
  []
 
 [15] [16]
-Overfull \hbox (40.1326pt too wide) in paragraph at lines 226--227
+Overfull \hbox (40.1326pt too wide) in paragraph at lines 227--228
 \OT1/cmr/m/n/10 [[]] and the Ep-silon Val-i-da-tion Lan-guage (EVL) [[]]. 
  []
 
-[17]) (./2.Background/methods.tex
-<2.Background/images/PIMs_and_PSMs.png, id=140, 613.29124pt x 37.13875pt>
+) (./2.Background/methods.tex [17]
+<2.Background/images/PIMs_and_PSMs.png, id=141, 613.29124pt x 37.13875pt>
 File: 2.Background/images/PIMs_and_PSMs.png Graphic file (type png)
 
 <use 2.Background/images/PIMs_and_PSMs.png> [18 <./2.Background/images/PIMs_and
 _PSMs.png (PNG copy)>]
-<2.Background/images/mda-pyramid.png, id=144, 541.02126pt x 263.98625pt>
+<2.Background/images/mda-pyramid.png, id=145, 541.02126pt x 263.98625pt>
 File: 2.Background/images/mda-pyramid.png Graphic file (type png)
 
-<use 2.Background/images/mda-pyramid.png> [19 <./2.Background/images/mda-pyrami
-d.png (PNG copy)>]
+<use 2.Background/images/mda-pyramid.png>
+Overfull \hbox (14.38657pt too wide) in paragraph at lines 48--49
+\OT1/cmr/m/n/10 [[]] and Mi-crosoft's Soft-ware Fac-to-ries [[]].
+ []
+
+
 Overfull \hbox (29.03824pt too wide) in paragraph at lines 51--52
 \OT1/cmr/m/n/10 Model-Driven Soft-ware De-vel-op-ment is the term given to MDE 
 by in [[]].
  []
 
-[20] [21]) (./2.Background/tools.tex
+
+Underfull \vbox (badness 3439) has occurred while \output is active []
+
+ [19 <./2.Background/images/mda-pyramid.png (PNG copy)>] [20] [21])
+(./2.Background/tools.tex
 Overfull \hbox (21.19301pt too wide) in paragraph at lines 9--10
 \OT1/cmr/m/n/10 [[]] for M2M trans-for-ma-tion, oAW [[]]
  []
 
-[22]
+
 Overfull \hbox (25.26814pt too wide) in paragraph at lines 13--14
 \OT1/cmr/m/n/10 vel-op-ment plat-form. The Eclipse Mod-elling Frame-work (EMF) 
 project [[]]
  []
 
-<2.Background/images/emf_model_editor.png, id=159, 870.25125pt x 607.26875pt>
+[22]
+<2.Background/images/emf_model_editor.png, id=160, 870.25125pt x 607.26875pt>
 File: 2.Background/images/emf_model_editor.png Graphic file (type png)
 
 <use 2.Background/images/emf_model_editor.png>
-<2.Background/images/emf_metamodel_tree.png, id=160, 817.0525pt x 734.745pt>
+<2.Background/images/emf_metamodel_tree.png, id=161, 817.0525pt x 734.745pt>
 File: 2.Background/images/emf_metamodel_tree.png Graphic file (type png)
 
 <use 2.Background/images/emf_metamodel_tree.png>
-<2.Background/images/emf_metamodel_diagrammatic.png, id=161, 817.0525pt x 734.7
+<2.Background/images/emf_metamodel_diagrammatic.png, id=162, 817.0525pt x 734.7
 45pt>
 File: 2.Background/images/emf_metamodel_diagrammatic.png Graphic file (type png
 )
  <use 2.Background/images/emf_metamodel_diagrammatic.png>
-<2.Background/images/emf_metamodel_textual.png, id=162, 817.0525pt x 734.745pt>
+<2.Background/images/emf_metamodel_textual.png, id=163, 817.0525pt x 734.745pt>
 File: 2.Background/images/emf_metamodel_textual.png Graphic file (type png)
 <use 2.Background/images/emf_metamodel_textual.png> [23 <./2.Background/images/
 emf_model_editor.png>] [24 <./2.Background/images/emf_metamodel_tree.png> <./2.
 Background/images/emf_metamodel_diagrammatic.png>]
-<2.Background/images/gmf_model_editor.png, id=172, 870.25125pt x 615.29875pt>
+<2.Background/images/gmf_model_editor.png, id=173, 870.25125pt x 615.29875pt>
 File: 2.Background/images/gmf_model_editor.png Graphic file (type png)
 
-<use 2.Background/images/gmf_model_editor.png> [25 <./2.Background/images/emf_m
-etamodel_textual.png>]
-<2.Background/images/epsilon.png, id=177, 369.63094pt x 243.15843pt>
+<use 2.Background/images/gmf_model_editor.png>
+<2.Background/images/epsilon.png, id=174, 369.63094pt x 243.15843pt>
 File: 2.Background/images/epsilon.png Graphic file (type png)
 
-<use 2.Background/images/epsilon.png> [26 <./2.Background/images/gmf_model_edit
-or.png> <./2.Background/images/epsilon.png>]
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no † in font cmr10!
-) (./2.Background/related.tex
-Underfull \vbox (badness 3118) has occurred while \output is active []
-
- [27]
-[28]
+<use 2.Background/images/epsilon.png> [25 <./2.Background/images/emf_metamodel_
+textual.png>] [26 <./2.Background/images/gmf_model_editor.png> <./2.Background/
+images/epsilon.png>]) (./2.Background/related.tex [27] [28]
 Overfull \hbox (12.40797pt too wide) in paragraph at lines 26--27
 []\OT1/cmr/m/n/10 The high-level lan-guages that Ward dis-cusses are domain-spe
 cific. [[]]
- []
-
-
-Overfull \hbox (0.49762pt too wide) in paragraph at lines 28--29
-\OT1/cmr/m/n/10 guage. Clark terms this cat-e-gory of lan-guage a \OT1/cmr/m/it
-/10 su-per-lan-guage \OT1/cmr/m/n/10 [[]].
  []
 
 [29]) (./2.Background/benefits_and_challenges.tex
@@ -347,18 +348,18 @@ Overfull \hbox (1.63103pt too wide) in paragraph at lines 26--27
  []
 
 [31]
-Overfull \hbox (13.04155pt too wide) in paragraph at lines 32--33
- \OT1/cmr/bx/n/10 Main-tain-abil-ity in the small[] \OT1/cmr/m/n/10 Notwith-sta
-nd-ing the ben-e-fits that MDE promises
+Overfull \hbox (3.0007pt too wide) in paragraph at lines 32--33
+\OT1/cmr/m/n/10 struc-tur-ing code, up-dat-ing doc-u-men-ta-tion and re-gres-si
+on test-ing [[]].
  []
 
-
-Overfull \hbox (2.97292pt too wide) in paragraph at lines 34--35
-[]\OT1/cmr/m/n/10 In tra-di-tional ap-proaches to en-gi-neer-ing, main-tain-abi
-l-ity is pri-mar-ily achieved
+)
+Overfull \hbox (4.35254pt too wide) in paragraph at lines 39--12
+\OT1/cmr/m/n/10 learn-abil-ity, and scal-a-bil-ity, be-come in-creas-ingly de-s
+ir-able for prac-ti-tion-ers. MDE
  []
 
-)) [32] (./thesis.bbl [146
+) [32] (./thesis.bbl [146
 
 
 
@@ -368,34 +369,34 @@ l-ity is pri-mar-ily achieved
 
 
 ] [147] [148] [149]
-Underfull \hbox (badness 3179) in paragraph at lines 304--310
+Underfull \hbox (badness 3179) in paragraph at lines 306--312
 []$ []$ \OT1/cmr/m/n/10 Mar-tin Fowler.  Lan-guage work-benches: The killer-
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 304--310
+Underfull \hbox (badness 1584) in paragraph at lines 306--312
 \OT1/cmr/m/n/10 app for do-main spe-cific lan-guages? [on-line].  [Ac-cessed 30
  June
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 304--310
+Underfull \hbox (badness 1466) in paragraph at lines 306--312
 \OT1/cmr/m/n/10 2008] Avail-able at: $\OT1/pcr/m/n/10 http : / / www . martinfo
 wler . com / articles /
  []
 
 [150] [151]
-Underfull \hbox (badness 3189) in paragraph at lines 409--414
+Underfull \hbox (badness 3189) in paragraph at lines 411--416
 []$ []$ \OT1/cmr/m/n/10 M. Her-rmanns-do-er-fer, D. Ratiu, and
  []
 
 [152]
-Underfull \hbox (badness 4927) in paragraph at lines 545--552
+Underfull \hbox (badness 4927) in paragraph at lines 547--554
 []$ []$ \OT1/cmr/m/n/10 Dim-itrios S. Kolovos, Richard F. Paige, and
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 545--552
+Underfull \hbox (badness 2521) in paragraph at lines 547--554
 \OT1/cmr/m/n/10 Louis M. Rose.  Eu-GE-Nia: GMF for mor-tals.  Long talk at
  []
 
@@ -404,7 +405,7 @@ Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 785--790
+Underfull \hbox (badness 10000) in paragraph at lines 787--792
 \OT1/pcr/m/n/10 eclipse . org / gmt / oaw / doc / 4 . 1 / r20 _ xPandReference 
 . pdf$\OT1/cmr/m/n/10 ,
  []
@@ -419,31 +420,32 @@ Missing character: There is no ô in font cmr10!
 (./6.Evaluation/evaluation.aux) (./7.Conclusion/conclusion.aux)
 (./A.1.Experiments/experiments.aux)) ) 
 Here is how much of TeX's memory you used:
- 3176 strings out of 493886
- 47826 string characters out of 1151098
- 132913 words of memory out of 3000000
- 6320 multiletter control sequences out of 10000+50000
- 12905 words of font info for 45 fonts, out of 3000000 for 5000
+ 3181 strings out of 493886
+ 47905 string characters out of 1151098
+ 124960 words of memory out of 3000000
+ 6324 multiletter control sequences out of 10000+50000
+ 13264 words of font info for 46 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 31i,8n,44p,1135b,1584s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,8n,44p,1159b,1034s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2008/texmf-dist/fonts
 /enc/dvips/base/8r.enc}</usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/
 cm/cmbx10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx12
-.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr
-/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/tex
-live/2008/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/local/texlive/2008/
-texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/texlive/2008/texmf-dist/
-fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1
-/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm
-/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb
-></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/lo
-cal/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texli
-ve/2008/texmf-dist/fonts/type1/bluesky/cm/cmti7.pfb></usr/local/texlive/2008/te
-xmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2008/texmf-dist
-/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on thesis.pdf (44 pages, 1013797 bytes).
+.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbxti10.pfb></
+usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/
+texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/20
+08/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/local/texlive/2008/texmf-d
+ist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/texlive/2008/texmf-dist/fonts/t
+ype1/bluesky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesk
+y/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.p
+fb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/
+local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/tex
+live/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008
+/texmf-dist/fonts/type1/bluesky/cm/cmti7.pfb></usr/local/texlive/2008/texmf-dis
+t/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/
+type1/urw/courier/ucrr8a.pfb>
+Output written on thesis.pdf (44 pages, 1019772 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
+ 302 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

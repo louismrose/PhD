@@ -28,8 +28,10 @@ Jos\'{e} \'{A}lvarez, Andy Evans, and Paul Sammut.
 \newblock {MML} and the metamodel architecture.
 \newblock In {\em Proc. Workshop on Transformation in {UML}}, 2001.
 
-\bibitem[apo]{apostel60models}{$~$}
-
+\bibitem[Apostel 1960]{apostel60models}{$~$}
+Leo Apostel.
+\newblock Towards the formal study of models in the non-formal sciences.
+\newblock {\em Synthese}, 12:125--161, 1960.
 
 \bibitem[Arendt {\it et al.}\  2009]{arendt09refactoring}{$~$}
 Thorsten Arendt, Florian Mantz, Lars Schneider, and Gabriele Taentzer.
