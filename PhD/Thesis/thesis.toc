@@ -6,49 +6,47 @@
 \contentsline {chapter}{\numberline {2}Background}{7}
 \contentsline {section}{\numberline {2.1}MDE Terminology and Principles}{7}
 \contentsline {subsection}{\numberline {2.1.1}Models}{7}
-\contentsline {subsection}{\numberline {2.1.2}Models in Software Engineering}{8}
-\contentsline {subsubsection}{In Favour of Modelling}{9}
-\contentsline {subsubsection}{In Favour of Coding}{9}
-\contentsline {subsubsection}{Models in MDE}{9}
-\contentsline {subsection}{\numberline {2.1.3}Modelling languages}{10}
-\contentsline {subsection}{\numberline {2.1.4}MOF: A metamodelling language}{11}
-\contentsline {subsection}{\numberline {2.1.5}Model Management}{12}
-\contentsline {subsubsection}{Model Transformation}{12}
-\contentsline {paragraph}{Common characteristics of model transformations}{13}
-\contentsline {subparagraph}{Source-target relationship}{13}
-\contentsline {subparagraph}{Domain language}{13}
-\contentsline {paragraph}{Model-to-Model (M2M) Transformation}{13}
-\contentsline {paragraph}{Model-to-Text (M2T) Transformation}{15}
-\contentsline {paragraph}{Text-to-Model (T2M) Transformation}{16}
-\contentsline {subsubsection}{Model Validation}{17}
-\contentsline {subsubsection}{Further model management activities}{17}
-\contentsline {subsection}{\numberline {2.1.6}Summary}{17}
-\contentsline {section}{\numberline {2.2}MDE Guidelines and Methods}{18}
-\contentsline {subsection}{\numberline {2.2.1}Model-Driven Architecture (MDA)}{18}
-\contentsline {subsection}{\numberline {2.2.2}Methods for MDE}{19}
-\contentsline {subsubsection}{Architecture-Centric Model-Driven Software Development}{20}
-\contentsline {subsubsection}{Domain-Specific Modelling}{20}
-\contentsline {subsubsection}{Microsoft Software Factories}{21}
-\contentsline {subsection}{\numberline {2.2.3}Summary}{21}
-\contentsline {section}{\numberline {2.3}MDE Tools}{22}
-\contentsline {subsection}{\numberline {2.3.1}Eclipse Modelling Framework (EMF)}{22}
+\contentsline {subsection}{\numberline {2.1.2}Modelling languages}{8}
+\contentsline {subsection}{\numberline {2.1.3}MOF: A metamodelling language}{9}
+\contentsline {subsection}{\numberline {2.1.4}Model Management}{10}
+\contentsline {subsubsection}{Model Transformation}{11}
+\contentsline {paragraph}{Common characteristics of model transformations}{11}
+\contentsline {subparagraph}{Source-target relationship}{11}
+\contentsline {subparagraph}{Domain language}{12}
+\contentsline {paragraph}{Model-to-Model (M2M) Transformation}{12}
+\contentsline {paragraph}{Model-to-Text (M2T) Transformation}{13}
+\contentsline {paragraph}{Text-to-Model (T2M) Transformation}{14}
+\contentsline {subsubsection}{Model Validation}{15}
+\contentsline {subsubsection}{Further model management activities}{16}
+\contentsline {subsection}{\numberline {2.1.5}Summary}{16}
+\contentsline {section}{\numberline {2.2}MDE Guidelines and Methods}{16}
+\contentsline {subsection}{\numberline {2.2.1}Model-Driven Architecture (MDA)}{16}
+\contentsline {subsubsection}{Standards for MDA}{17}
+\contentsline {subsubsection}{Interpretations of MDA}{18}
+\contentsline {subsection}{\numberline {2.2.2}Methods for MDE}{18}
+\contentsline {subsubsection}{Architecture-Centric Model-Driven Software Development}{18}
+\contentsline {subsubsection}{Domain-Specific Modelling}{19}
+\contentsline {subsubsection}{Microsoft Software Factories}{20}
+\contentsline {subsection}{\numberline {2.2.3}Summary}{20}
+\contentsline {section}{\numberline {2.3}MDE Tools}{21}
+\contentsline {subsection}{\numberline {2.3.1}Eclipse Modelling Framework (EMF)}{21}
 \contentsline {subsection}{\numberline {2.3.2}Epsilon}{25}
-\contentsline {subsection}{\numberline {2.3.3}Summary}{27}
-\contentsline {section}{\numberline {2.4}Research Relating to MDE}{27}
-\contentsline {subsection}{\numberline {2.4.1}Domain-Specific Languages}{28}
-\contentsline {subsection}{\numberline {2.4.2}Language-Oriented Programming}{29}
-\contentsline {subsection}{\numberline {2.4.3}Summary}{30}
-\contentsline {section}{\numberline {2.5}Benefits of and Current Challenges for MDE}{30}
-\contentsline {subsection}{\numberline {2.5.1}Benefits}{30}
-\contentsline {paragraph}{Tool interoperability}{30}
-\contentsline {paragraph}{Managing complexity}{30}
-\contentsline {paragraph}{System evolution}{31}
-\contentsline {subsection}{\numberline {2.5.2}Challenges}{31}
-\contentsline {paragraph}{Learnability}{31}
-\contentsline {paragraph}{Scalability}{31}
-\contentsline {paragraph}{Development artefact evolution}{32}
-\contentsline {subsection}{\numberline {2.5.3}Summary}{32}
-\contentsline {section}{\numberline {2.6}Chapter Summary}{32}
+\contentsline {subsection}{\numberline {2.3.3}Summary}{26}
+\contentsline {section}{\numberline {2.4}Research Relating to MDE}{26}
+\contentsline {subsection}{\numberline {2.4.1}Domain-Specific Languages}{26}
+\contentsline {subsection}{\numberline {2.4.2}Language-Oriented Programming}{27}
+\contentsline {subsection}{\numberline {2.4.3}Summary}{28}
+\contentsline {section}{\numberline {2.5}Benefits of and Current Challenges for MDE}{29}
+\contentsline {subsection}{\numberline {2.5.1}Benefits}{29}
+\contentsline {paragraph}{Tool interoperability}{29}
+\contentsline {paragraph}{Managing complexity}{29}
+\contentsline {paragraph}{System evolution}{29}
+\contentsline {subsection}{\numberline {2.5.2}Challenges}{30}
+\contentsline {paragraph}{Learnability}{30}
+\contentsline {paragraph}{Scalability}{30}
+\contentsline {paragraph}{Development artefact evolution}{30}
+\contentsline {subsection}{\numberline {2.5.3}Summary}{31}
+\contentsline {section}{\numberline {2.6}Chapter Summary}{31}
 \contentsline {chapter}{\numberline {3}Literature Review}{27}
 \contentsline {section}{\numberline {3.1}Software Evolution Theory}{27}
 \contentsline {subsection}{\numberline {3.1.1}Categories of Software Evolution}{27}

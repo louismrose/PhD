@@ -432,6 +432,12 @@ IBM.
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.alphaworks.ibm.com/tech/emfatic}, 2005.
 
+\bibitem[{INRIA} 2007]{amma}{$~$}
+{INRIA}.
+\newblock {AMMA} project page [online].
+\newblock [Accessed 30 June 2008] Available at:
+  \url{http://wiki.eclipse.org/AMMA}, 2007.
+
 \bibitem[IRISA 2007]{sintaks}{$~$}
 IRISA.
 \newblock {Sintaks}.
@@ -650,6 +656,11 @@ Stephen~J. Mellor and Marc Balcer.
 \newblock {\em Executable {UML}: A Foundation for Model-Driven Architectures}.
 \newblock Addison-Wesley Longman, 2002.
 
+\bibitem[Melnik 2004]{melnik04thesis}{$~$}
+Sergey Melnik.
+\newblock {\em Generic Model Management: Concepts and Algorithms}.
+\newblock PhD thesis, University of Leipzig, Germany, 2004.
+
 \bibitem[Mens \& Demeyer 2007]{Mens07}{$~$}
 Tom Mens and Serge Demeyer.
 \newblock {\em Software Evolution}.
@@ -778,17 +789,17 @@ William~F. Opdyke.
 \newblock PhD thesis, University of Illinois at Urbana-Champaign, IL, USA,
   1992.
 
-\bibitem[openArchitectureWare 2007a]{oaw}{$~$}
+\bibitem[openArchitectureWare 2007]{oaw}{$~$}
 openArchitectureWare.
 \newblock {openArchitectureWare Project Website} [online].
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://www.eclipse.org/gmt/oaw/}, 2007.
 
-\bibitem[openArchitectureWare 2007b]{xpand}{$~$}
+\bibitem[openArchitectureWare 2008]{xpand}{$~$}
 openArchitectureWare.
 \newblock {XPand Language Reference} [online].
-\newblock [Accessed 30 June 2008] Available at:
-  \url{http://www.eclipse.org/gmt/oaw/doc/4.1/r20_xPandReference.pdf}, 2007.
+\newblock [Accessed 18 August 2010] Available at:
+  \url{http://wiki.eclipse.org/AMMA}, 2008.
 
 \bibitem[Paige {\it et al.}\  2007]{paige07metamodel}{$~$}
 Richard~F. Paige, Phillip~J. Brooke, and Jonathan~S. Ostroff.
