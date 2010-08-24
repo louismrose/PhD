@@ -110,6 +110,13 @@ Lionel~C. Briand, Yvan Labiche, and L.~O'Sullivan.
 \newblock In {\em Proc. International Conference on Software Maintenance
   (ICSM)}, pages 256--265. IEEE Computer Society, 2003.
 
+\bibitem[Brooks 1986]{brooks86nosilverbullet}{$~$}
+Frederick~P. Brooks.
+\newblock No silver bullet -- essence and accident in software engineering
+  (invited paper).
+\newblock In {\em Proc. International Federation for Information Processing},
+  pages 1069--1076, 1986.
+
 \bibitem[Brown {\it et al.}\  1998]{brown98antipatterns}{$~$}
 William~J. Brown, Raphael~C. Malveau, Hays W.~McCormick III, and Thomas~J.
   Mowbray.
@@ -196,6 +203,11 @@ Danny Dig, Kashif Manzoor, Ralph Johnson, and Tien~N. Nguyen.
   programs.
 \newblock In {\em Proc. International Conference on Software Engineering},
   pages 427--436. IEEE Computer Society, 2007.
+
+\bibitem[Dig 2007]{dig07thesis}{$~$}
+Daniel Dig.
+\newblock {\em Automated Upgrading of Component-Based Applications}.
+\newblock PhD thesis, University of Illinois at Urbana-Champaign, USA, 2007.
 
 \bibitem[Dmitriev 2004]{dmitriev04lop}{$~$}
 Sergey Dmitriev.
@@ -525,11 +537,17 @@ Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock In {\em Proc. {ECMDA-FA}}, volume 4066 of {\em LNCS}, pages 128--142.
   Springer, 2006.
 
-\bibitem[Kolovos {\it et al.}\  2007]{kolovos07ewl}{$~$}
+\bibitem[Kolovos {\it et al.}\  2007a]{kolovos07ewl}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, Fiona~A.C. Polack, and Louis~M. Rose.
 \newblock Update transformations in the small with the {Epsilon Wizard
   Language}.
 \newblock {\em Journal of Object Technology}, 6(9):53--69, 2007.
+
+\bibitem[Kolovos {\it et al.}\  2007b]{kolovos07ewlgmf}{$~$}
+Dimitrios~S. Kolovos, Richard~F. Paige, Louis~M. Rose, and Fiona~A.C. Polack.
+\newblock Bridging the {Epsilon Wizard Language} and the {Eclipse Graphical
+  Modeling Framework}.
+\newblock In {\em Proc. Eclipse Summit}, Ludwigsburg, Germany, 2007.
 
 \bibitem[Kolovos {\it et al.}\  2008a]{kolovos08etl}{$~$}
 Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona Polack.
@@ -871,7 +889,7 @@ Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
 \bibitem[Rose {\it et al.}\  2009a]{rose09enhanced}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Enhanced automation for managing model and metamodel inconsistency.
-\newblock In {\em Proc. {ASE}}. ACM Press, 2009.
+\newblock In {\em Proc. {ASE}}, pages 545--549. ACM Press, 2009.
 
 \bibitem[Rose {\it et al.}\  2009b]{rose09analysis}{$~$}
 Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
@@ -891,11 +909,11 @@ Louis~M. Rose, Dimitrios~S. Kolovos, Nicholas Drivalos, James.~R. Williams,
 \newblock Concordance: An efficient framework for managing model integrity
   [submitted to].
 \newblock In {\em Proc. European Conference on Modelling Foundations and
-  Applications}, 2010.
+  Applications}, volume 6138 of {\em LNCS}, pages 62--73. Springer, 2010.
 
 \bibitem[Rose {\it et al.}\  2010c]{rose10ttc_solution}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
-\newblock Migrating activity diagrams with epsilon flock.
+\newblock Migrating activity diagrams with {Epsilon Flock}.
 \newblock In {\em Proc. TTC}, 2010.
 
 \bibitem[Rose {\it et al.}\  2010d]{rose10ttc_case}{$~$}
@@ -905,7 +923,7 @@ Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 
 \bibitem[Rose {\it et al.}\  2010e]{rose10flock}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
-\newblock Model migration with epsilon flock.
+\newblock Model migration with {Epsilon Flock}.
 \newblock In {\em Proc. ICMT}, volume 6142 of {\em Lecture Notes in Computer
   Science}, pages 184--198. Springer, 2010.
 

@@ -1,5 +1,6 @@
 This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: 0.FrontMatter/front_matter.aux
 A level-1 auxiliary file: 1.Introduction/introduction.aux
 A level-1 auxiliary file: 2.Background/background.aux
 A level-1 auxiliary file: 3.LiteratureReview/literature_review.aux
@@ -15,11 +16,11 @@ A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Repeated entry---line 1382 of file thesis.bib
+Repeated entry---line 1387 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1404 of file thesis.bib
+Repeated entry---line 1409 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
@@ -80,45 +81,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 177 entries,
+You've used 180 entries,
             2472 wiz_defined-function locations,
-            1354 strings with 29391 characters,
-and the built_in function-call counts, 67903 in all, are:
-= -- 6818
-> -- 2539
-< -- 73
-+ -- 815
-- -- 776
-* -- 4749
-:= -- 10573
-add.period$ -- 570
-call.type$ -- 177
-change.case$ -- 1061
-chr.to.int$ -- 157
-cite$ -- 178
-duplicate$ -- 3125
-empty$ -- 5606
-format.name$ -- 1005
-if$ -- 14492
-int.to.chr$ -- 21
+            1373 strings with 29975 characters,
+and the built_in function-call counts, 69428 in all, are:
+= -- 6988
+> -- 2579
+< -- 77
++ -- 828
+- -- 788
+* -- 4853
+:= -- 10787
+add.period$ -- 580
+call.type$ -- 180
+change.case$ -- 1078
+chr.to.int$ -- 159
+cite$ -- 181
+duplicate$ -- 3202
+empty$ -- 5726
+format.name$ -- 1020
+if$ -- 14837
+int.to.chr$ -- 22
 int.to.str$ -- 0
-missing$ -- 160
-newline$ -- 889
-num.names$ -- 532
-pop$ -- 1256
+missing$ -- 162
+newline$ -- 904
+num.names$ -- 541
+pop$ -- 1273
 preamble$ -- 1
-purify$ -- 1273
+purify$ -- 1294
 quote$ -- 0
-skip$ -- 2547
+skip$ -- 2616
 stack$ -- 0
-substring$ -- 3266
-swap$ -- 865
-text.length$ -- 73
+substring$ -- 3383
+swap$ -- 901
+text.length$ -- 77
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1296
+type$ -- 1320
 warning$ -- 1
-while$ -- 543
-width$ -- 182
-write$ -- 2284
+while$ -- 558
+width$ -- 185
+write$ -- 2327
 (There were 31 error messages)

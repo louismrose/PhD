@@ -7,21 +7,24 @@
 \usepackage{multirow}
 \usepackage{subfigure}
 
+\include{front_matter_commands}
 \include{Listings/listings}
 \include{symbols}
 
-\title{Evolution in Model-Driven Engineering}
-\author{Louis M. Rose}
 
-\includeonly{2.Background/background}
+\include{title}
+
+\includeonly{1.Introduction/introduction}
+\includeonly{0.FrontMatter/front_matter,1.Introduction/introduction}
+
 
 \begin{document}
 
-\maketitle
+\frontmatter
+\include{0.FrontMatter/front_matter}
 
-\setcounter{tocdepth}{1}
-\tableofcontents
 
+\mainmatter
 \include{1.Introduction/introduction}
 \include{2.Background/background}
 \include{3.LiteratureReview/literature_review}
@@ -30,10 +33,12 @@
 \include{6.Evaluation/evaluation}
 \include{7.Conclusion/conclusion}
 
+
 \appendix
 \include{A.1.Experiments/experiments}
 
 
+\backmatter
 \bibliography{thesis}
 \bibliographystyle{longname}
 
