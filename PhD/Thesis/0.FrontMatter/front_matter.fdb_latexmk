@@ -1,0 +1,9 @@
+# Fdb version 2
+["latex"] 0 "front_matter.tex" "front_matter.dvi" "front_matter" 
+  "front_matter.tex" 1282656250 87 bbef37cf7bcbbbd394565c53448a6d43 ""
+["pdflatex"] 1282656260 "front_matter.tex" "front_matter.pdf" "front_matter" 
+  "e.g., `I\hbox'" 0 -1 0 ""
+  "e.g., `\hobx'" 0 -1 0 ""
+  "front_matter.aux" 1282656211 1071 c42f437007a2fcf5d2e1acda04ff1688 ""
+  "front_matter.tex" 1282656258 72 69662d1035f506f28d8355a5568d55a6 ""
+  "job aborted, no legal \end found" 0 -1 0 ""
