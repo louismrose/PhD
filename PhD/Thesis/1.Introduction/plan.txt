@@ -1,0 +1,32 @@
+Mine:
+- Introduce software evolution and MDE
+- Software evolution problems in MDE
+- Hypothesis and objectives
+- Research Method
+- Thesis structure
+
+
+Kolovos:
+- Introduces MDE, models, model management and lack of interoperability
+- Presents research hypothesis, objectives and method
+- Describes results
+- Presents thesis structure
+
+Kelly:
+- Examples of safety problems
+- Definitions
+- Challenges
+- Hypothesis
+- Structure
+
+Alexander:
+- Examples of SOS accidents
+- Challenges in identifying causes of SOS accidents
+- Thesis proposition
+- Structure
+
+White
+- Introduces graphs, pattern recognition, motivate need for generating graphs
+- Explain goals of thesis
+- Structure
+

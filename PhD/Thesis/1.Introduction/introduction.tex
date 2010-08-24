@@ -1,30 +1,33 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
 
+% TODO - I probably need to introduce model-metamodel co-evolution here, to make the method and structure sections more understandable. It might be possible to include an example of evolution in MDE in this chapter, and to identify types of evolution including model-metamodel co-evolution.
+
 \chapter{Introduction}
 \label{Introduction}
+% TODO - look at Brooks Mythical Man Month for context
+There is a demand for increasingly complicated software, the construction of which is currently beyond our ability. \cite{selic03pragmatics} observes that a similar situation occurred when steam and electrical power were introduced during the Industrial Revolution \cite{pool97society}. 
 
-\section{Model-Driven Engineering}
-%The proposed thesis will begin by discussing the challenges that MDE addresses. Terminology relevant to MDE will be introduced (including terms such as \emph{model}, \emph{metamodel} and \emph{model transformation}). The benefits of MDE will be discussed along with the main threats to its adoption, which include challenges for controlling and managing software evolution with MDE \cite{mens07softwareevolution}.
+Hardware development seems to advance more quickly than software development. For example, processors become faster and provide greater functionality each year, while software seems to improve more gradually. \cite{kleppe03mda} indicates that software development is perceived to lag behind hardware development because of rising complexity in software systems. Software developers now build distributed and interoperating applications with sophisticated graphical interfaces rather than insular, monolithic mainframe applications with no user interface.
 
-There is demand for increasingly complicated software, the construction of which is currently beyond our ability. \cite{selic03pragmatics} observes that a similar situation occurred when steam and electrical power were introduced during the Industrial Revolution \cite{pool97society}. 
+\cite{brooks86nosilverbullet} observes that engineering increasingly complicated systems with traditional development approaches presents many challenges, including:
 
-\section{Software Evolution}
-%The introduction will then discuss software evolution, and its causes. The challenges presented by software evolution will be highlighted, particularly in the context of MDE, and used to motivate the proposed thesis.
+\begin{enumerate}
+ \item \textit{Increasing size of development teams}: large teams may experience communication difficulties, detracting from productivity.
+ \item \textit{Difficulties providing system overviews}: incomplete system knowledge can impede maintenance activities.
+ \item \textit{Poor understandability}: new developers suffer a complex learning curve.
+ \item \textit{Resistance to change}: development reacts slowly when (1) requirements change, (2) new underlying technologies are to be adopted, and (3) unintended behaviour must be corrected.
+\end{enumerate}
 
-Studies \cite{erlikh00leveraging,moad90maintaining} suggest that the evolution of software can account for as much as 90\% of a development budget. Such figures are sometimes described as uncertain \cite[ch. 21]{sommerville06software}, mainly because terms such as evolution and maintenance are used ambiguously. However, precise figures are not required to see that the effects of evolution can inhibit the productivity of software development. %For example, Section \ref{Intro:MigrationProblem} illustrates an example of the issues caused by evolution, in the context of model-driven engineering.
+Uhl\footnote{Keynote address to the Fourth European Conference on Model Driven Architecture (ECMDA), June 2008, Berlin, Germany.} notes that software development improves radically only when systems can be defined at a higher level of abstraction. Historically, raising the level of abstraction of software development has led to increased productivity. For example, assembly language provides mnemonics for machine code, allowing developers to disregard superfluous detail (such as the binary representation of instructions). Object-orientation and functional programming permit further abstraction over assembler, enabling developers to express solutions in a manner that is more representative of their problem domain.
 
-Studying software evolution can provide benefits other than improving the maintainability of a system. For instance, by understanding the mistakes made in the engineering of existing software systems, similar mistakes may be avoided in the future. Experts and analysts can devise best practices that guide developers away from problematic practices. For this reason, Kerievsky notes that ``studying the evolution of great software designs will be more valuable than studying the great designs themselves'' \cite{kerievsky04refactoring}.
+Improvements to development processes have also facilitated greater abstraction. For example, developers are increasingly employing models of systems to aid design and implementation. During the 1990s, methods that prescribed modelling to aid software development were popular. A common modelling language, the Unified Modelling Language (UML) \cite{uml212}, was standardised by combining the modelling languages from three methods \cite{}. By communicating designs and abstracting away from unimportant details, software engineers are using models to address the first three of Brooks's challenges. However, modelling is effective only when the models are an accurate representation of the computer system.
 
-\cite{lehman80understanding,lehman78programs,lehman69programming} identify several laws of software evolution for \textit{evolutionary-type systems} (\textit{E-type systems}) -- systems that solve problems or implement software in the real world. E-type systems differ from \textit{specification-type systems} (\textit{S-type systems}) where the ``sole criterion of acceptability is correctness in the mathematical sense'' \cite{lehman85program}.
-
-The law of \textit{continuing change} states that ``E-type systems must be continually adapted else they become progressively less satisfactory'' \cite{lehman78programs}. Later, Lehman et al. \cite{lehman96laws} introduce another complementary law, the law of \textit{declining quality}: ``The quality of E-type systems will appear to be declining unless they are rigorously maintained and adapted to operational environment change''. Both laws indicate that the evolution of E-type systems during their effective lifetime is inevitable.
+During a system's lifecycle, design documents are often neglected and become out-of-date. Without a well-defined connection to the system's implementation, models are effectively design documents that might be neglected and can become inaccurate representations of the system \cite{frankel02mda,kleppe03mda}. For models to be used as effective means of communication and education, they must be accurate and, therefore, must be maintained and updated in response to change. Maintaining two unconnected representations of a system (models and implementation) obviously detracts from the productivity of the development team. Instead, an approach to software development that integrates modelling and coding can be used to address this productivity problem, as well as the first three of Brooks's challenges.
 
 
-\section{Research Aim}
-%The high-level aim of the research will be stated, providing a context for the background and literature review chapters. 
+\input{1.Introduction/topics}
+\input{1.Introduction/problems}
+\input{1.Introduction/hypothesis}
+\input{1.Introduction/method}
+\input{1.Introduction/structure}
 
-\section{Research Method}
-\label{sec:research_method}
-%This section will discuss the way in which the research was conducted, including a description of the evaluation strategy.
-
-Due to the method employed, Dig's refactoring research is the most relevant to this research. Initially, \cite{dig06apis} conducted a survey to identify and categorise the changes made to five mid-sized APIs, with the hypothesis that a significant number of the changes could be classified as behaviour-preserving (i.e. refactorings). By using examples from the survey, \cite{dig06detection} were able to devise an algorithm for automatically detecting refactorings to a high degree of accuracy (over 85\%). The algorithm was then utilised in tools for (1) replaying refactorings to perform migration of client code following breaking changes to an API \cite{dig06automatic}, and (2) versioning object-oriented programs using a refactoring-aware configuration management system \cite{dig07cms}. The latter facilitated better understanding of program evolution, and the refinement of the refactoring detection algorithm.
