@@ -1,40 +1,32 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
 
 \section{Research Hypothesis}
-The research presented in this thesis explores the following hypothesis:
+\label{sec:hypothesis}
+
+The research presented in this thesis explores the hypothesis below. The emboldened terms are potentially ambiguous, and their definition follows the hypothesis.
 
 \begin{quote}
-\emph{In existing MDE projects, evolution is typically managed in an ad-hoc manner with little regard for re-use. Dedicated structures and processes for identifying and managing evolutionary change can be designed by analysing evolution in existing MDE projects. Furthermore, supporting those dedicated structures and processes in contemporary MDE environments is beneficial in terms of increased \textbf{productivity}, \textbf{understandability}, and \textbf{portability}.}
+\emph{In existing MDE projects, the evolution of \textbf{MDE development artefacts} is typically managed in an ad-hoc manner with little regard for re-use. Dedicated structures and processes for \textbf{managing evolutionary change} can be designed by analysing evolution in existing MDE projects. Furthermore, supporting those dedicated structures and processes in contemporary MDE environments is beneficial in terms of increased \textbf{productivity} and \textbf{understandability} of software development.}
 \end{quote}
 
-Some of the terms used in the research hypothesis are ambiguous, and require further definition. Specifically, the terms productivity, understandability and portability are defined as follows:
+In this thesis, the terms below have the following definitions:
+
+\paragraph{MDE development artefacts.} Compared to traditional approaches to software engineering, MDE uses additional development artefacts as first-class citizens in the development process. The additional development artefacts particular to MDE include models and modelling languages, as well as model management operations (such as model transformations). Chapter~\ref{Background} describes models, modelling languages and model management operations in more detail.
+
+\paragraph{Managing evolutionary change.} Contemporary computer systems are constructed by combining numerous interdependent artefacts. Evolutionary changes to one artefact can affect other artefacts. For example, changing a database schema might cause data to become invalid with respect to the database integrity constraints, and changing source code may require recompilation of object code to ensure the latter is an accurate representation of the former. Managing evolutionary change typically comprises three related activities: \emph{identifying} when a change has occurred, \emph{reporting} the effects of a change, and \emph{reconciling} affected artefacts in response to a change.
 
 \paragraph{Productivity} is a measure of the amount of work required to complete a development activity. For example, the productivity of data entry might be increased by using an Optical Character Recognition (OCR) system rather than a typist. In this scenario, the extent to which productivity might be increased is affected by at least the following: the accuracy and capabilities of the OCR system, the speed and accuracy of the typist, and the legibility and consistency of the data. In general, productivity is affected by many factors.
 
-% Productivity
-%  HUTN + MMIS for user-driven co-evolution
-%  A choice of user-driven vs developer-driven co-evolution
-%  Dedicated migration lang rather than M2M lang for model migration 
 
-\paragraph{Understandability} is a measure of the ease with which the purpose, motivation and workings of a system can be identified from the representation of that system. For example, the function of a circuit is arguably easier to understand when examining a schematic of the circuit rather than a Printed Circuit Board (PCB) that implements the circuit. For example, components are often arranged to save space on a PCB, while components might be arranged to ease understanding of the system on a schematic. Clearly, understandability is somewhat subjective. Due to differences in knowledge and experience, a representation that is easy to understand for one person may be difficult for another. 
+\paragraph{Understandability} is a measure of the ease with which the requirements, implementation, dependencies, and other qualities of a system can be identified from the representation of that system. For example, the function of a circuit is arguably easier to understand when examining a schematic of the circuit rather than a Printed Circuit Board (PCB) that implements the circuit, because components are often arranged to save space on a PCB. Understanding why, how and when a system has evolved in the past is useful for anticipating future changes and improving the development process. Clearly, understandability is somewhat subjective. Due to differences in knowledge and experience, a representation that is easy to understand for one person may be difficult for another. 
 
-% Understandability
-%  Flock for expressing model migration
-%  Use of design patterns / refactorign terminology to describe metamodel evolution
-%  HUTN rather than XMI for representating non-conformant models
-
-\paragraph{Portability} is a measure of the extent to which a system can be changed to interoperate with other systems. For example, a system implemented directly in machine code can be used with only one family of machines, while an equivalent system implemented in a high-level language (and compiled to machine code) can be used with different families of machine. Hence, the latter is more portable than the former.
-
-% Portability:
-%  Migrating between modelling technologies
-%  Higher-order migration (migrating between transformation [and other model management?] languages)
 
 \subsection{Thesis Objectives}
 The objectives of the thesis are to:
 
 \begin{enumerate}
-	\item Identify and analyse evolutionary change in existing MDE projects.
-	\item Investigate the extent to which existing structures and processes for identifying and managing evolutionary change can be used in MDE. 
-	\item Develop new structures and processes for identifying and managing evolutionary change in the context of MDE, and integrate those structures and processes with a contemporary MDE development environment.
-	\item Evaluate and assess new and existing structures and processes for identifying and managing evolutionary change, particularly with respect to productivity, understandability and portability.
+	\item Identify and analyse the evolution of MDE development artefacts in existing projects.
+	\item Investigate the extent to which existing structures and processes can be used to manage the evolution of MDE development artefacts. 
+	\item Propose and develop new structures and processes for managing the evolution of MDE development artefacts, and integrate those structures and processes with a contemporary MDE development environment.
+	\item Evaluate and assess the proposed structures and processes for managing evolutionary change, particularly with respect to the productivity and understandability of software development.
 \end{enumerate}

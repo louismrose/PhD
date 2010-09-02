@@ -4,30 +4,34 @@
 
 \chapter{Introduction}
 \label{Introduction}
-% TODO - look at Brooks Mythical Man Month for context
-There is a demand for increasingly complicated software, the construction of which is currently beyond our ability. \cite{selic03pragmatics} observes that a similar situation occurred when steam and electrical power were introduced during the Industrial Revolution \cite{pool97society}. 
+The complexity of new software is increasing over time. Today's software developers build distributed and interoperating systems with sophisticated graphical interfaces rather than the insular, monolithic, and command-line driven mainframe applications built by their predecessors.
 
-Hardware development seems to advance more quickly than software development. For example, processors become faster and provide greater functionality each year, while software seems to improve more gradually. \cite{kleppe03mda} indicates that software development is perceived to lag behind hardware development because of rising complexity in software systems. Software developers now build distributed and interoperating applications with sophisticated graphical interfaces rather than insular, monolithic mainframe applications with no user interface.
+Some of the software demanded by users and developers today is so complicated that its construction is not possible, even using state-of-the-art software engineering techniques \cite{selic03pragmatics}. However, demand does not appear to exceed capability in all areas of computer science.
 
-\cite{brooks86nosilverbullet} observes that engineering increasingly complicated systems with traditional development approaches presents many challenges, including:
+%\cite{pool97society} observes that a similar situation occurred when steam and electrical power were introduced during the Industrial Revolution. 
 
-\begin{enumerate}
- \item \textit{Increasing size of development teams}: large teams may experience communication difficulties, detracting from productivity.
- \item \textit{Difficulties providing system overviews}: incomplete system knowledge can impede maintenance activities.
- \item \textit{Poor understandability}: new developers suffer a complex learning curve.
- \item \textit{Resistance to change}: development reacts slowly when (1) requirements change, (2) new underlying technologies are to be adopted, and (3) unintended behaviour must be corrected.
-\end{enumerate}
+Hardware development, for example, seems to advance more quickly than software development. Each year, faster personal computers with larger disk drives become available, while operating systems, office software and development environments seem to improve more gradually. \cite{brooks86nosilverbullet} suggests that radical advances in software development occur only by raising the level of abstraction at which software is specified.
 
-Uhl\footnote{Keynote address to the Fourth European Conference on Model Driven Architecture (ECMDA), June 2008, Berlin, Germany.} notes that software development improves radically only when systems can be defined at a higher level of abstraction. Historically, raising the level of abstraction of software development has led to increased productivity. For example, assembly language provides mnemonics for machine code, allowing developers to disregard superfluous detail (such as the binary representation of instructions). Object-orientation and functional programming permit further abstraction over assembler, enabling developers to express solutions in a manner that is more representative of their problem domain.
+% \cite{brooks86nosilverbullet} observes that engineering increasingly complicated systems with traditional development approaches presents many challenges, including:
+% 
+% \begin{enumerate}
+%  \item \textit{Increasing size of development teams}: large teams may experience communication difficulties, detracting from productivity.
+%  \item \textit{Difficulties providing system overviews}: incomplete system knowledge can impede maintenance activities.
+%  \item \textit{Poor understandability}: new developers suffer a complex learning curve.
+%  \item \textit{Resistance to change}: development reacts slowly when requirements change, new underlying technologies are to be adopted, and unintended behaviour must be corrected.
+% \end{enumerate}
+% 
+% 
+% 
+% Improvements to development processes have also facilitated greater abstraction. For example, developers are increasingly employing models of systems to aid design and implementation. During the 1990s, methods that prescribed modelling to aid software development were popular. A common modelling language, the Unified Modelling Language (UML) \cite{uml212}, was standardised by combining the modelling languages from three methods \cite{}. By communicating designs and abstracting away from unimportant details, software engineers are using models to address the first three of Brooks's challenges. However, modelling is effective only when the models are an accurate representation of the computer system.
 
-Improvements to development processes have also facilitated greater abstraction. For example, developers are increasingly employing models of systems to aid design and implementation. During the 1990s, methods that prescribed modelling to aid software development were popular. A common modelling language, the Unified Modelling Language (UML) \cite{uml212}, was standardised by combining the modelling languages from three methods \cite{}. By communicating designs and abstracting away from unimportant details, software engineers are using models to address the first three of Brooks's challenges. However, modelling is effective only when the models are an accurate representation of the computer system.
-
-During a system's lifecycle, design documents are often neglected and become out-of-date. Without a well-defined connection to the system's implementation, models are effectively design documents that might be neglected and can become inaccurate representations of the system \cite{frankel02mda,kleppe03mda}. For models to be used as effective means of communication and education, they must be accurate and, therefore, must be maintained and updated in response to change. Maintaining two unconnected representations of a system (models and implementation) obviously detracts from the productivity of the development team. Instead, an approach to software development that integrates modelling and coding can be used to address this productivity problem, as well as the first three of Brooks's challenges.
+% During a system's lifecycle, design documents are often neglected and become out-of-date. Without a well-defined connection to the system's implementation, models are effectively design documents that might be neglected and can become inaccurate representations of the system \cite{frankel02mda,kleppe03mda}. For models to be used as effective means of communication and education, they must be accurate and, therefore, must be maintained and updated in response to change. Maintaining two unconnected representations of a system (models and implementation) obviously detracts from the productivity of the development team. Instead, an approach to software development that integrates modelling and coding can be used to address this productivity problem, as well as the first three of Brooks's challenges.
 
 
 \input{1.Introduction/topics}
 \input{1.Introduction/problems}
 \input{1.Introduction/hypothesis}
 \input{1.Introduction/method}
+\input{1.Introduction/results}
 \input{1.Introduction/structure}
 

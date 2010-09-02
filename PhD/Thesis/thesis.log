@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  24 AUG 2010 16:33
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  2 SEP 2010 18:19
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -13,24 +13,320 @@ greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
 tin, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, romanian, rus
 sian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish, ukenglis
 h, ukrainian, uppersorbian, welsh, loaded.
-(/usr/local/texlive/2008/texmf-dist/tex/latex/base/book.cls
-Document Class: book 2005/09/16 v1.4f Standard LaTeX document class
-(/usr/local/texlive/2008/texmf-dist/tex/latex/base/bk10.clo
-File: bk10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2008/08/07 v1.6180339a configurable book, report, articl
+e document class
+\onelineskip=\skip41
+\lxvchars=\skip42
+\xlvchars=\skip43
+\@memcnta=\count79
+\c@@memmarkcntra=\count80
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2007/12/12 v1.6 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
 )
-\c@part=\count79
-\c@chapter=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
+
+Class memoir Warning: If there is an `ifetex' package then it is not installed.
+
+(memoir)              The package is being emulated.
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2006/08/21 v0.3 Provides ifxetex conditional
 )
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2007/12/12 v1.0 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+\stockheight=\skip44
+\stockwidth=\skip45
+\trimtop=\skip46
+\trimedge=\skip47
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/memoir/mem11.clo
+File: mem11.clo 2008/01/30 v0.3 memoir class 11pt size option
+)
+\spinemargin=\skip48
+\foremargin=\skip49
+\uppermargin=\skip50
+\lowermargin=\skip51
+\headdrop=\skip52
+\normalrulethickness=\skip53
+\headwidth=\skip54
+\c@storedpagenumber=\count81
+\memPD=\dimen102
+\m@mabparskip=\skip55
+\thanksmarkwidth=\skip56
+\thanksmarksep=\skip57
+\droptitle=\skip58
+\c@book=\count82
+\c@part=\count83
+\c@chapter=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\beforechapskip=\skip59
+\midchapskip=\skip60
+\afterchapskip=\skip61
+\chapindent=\skip62
+\bottomsectionskip=\skip63
+\secindent=\skip64
+\beforesecskip=\skip65
+\aftersecskip=\skip66
+\subsecindent=\skip67
+\beforesubsecskip=\skip68
+\aftersubsecskip=\skip69
+\subsubsecindent=\skip70
+\beforesubsubsecskip=\skip71
+\aftersubsubsecskip=\skip72
+\paraindent=\skip73
+\beforeparaskip=\skip74
+\afterparaskip=\skip75
+\subparaindent=\skip76
+\beforesubparaskip=\skip77
+\aftersubparaskip=\skip78
+\pfbreakskip=\skip79
+\c@@ppsavesec=\count90
+\c@@ppsaveapp=\count91
+\ragrparindent=\dimen103
+\everylistparindent=\dimen104
+\parsepi=\skip80
+\topsepi=\skip81
+\itemsepi=\skip82
+\parsepii=\skip83
+\topsepii=\skip84
+\topsepiii=\skip85
+\itemsepii=\skip86
+\itemsepiii=\skip87
+\partopsepii=\skip88
+\partopsepiii=\skip89
+\m@msavetopsep=\skip90
+\m@msavepartopsep=\skip91
+\@enLab=\toks14
+\abstitleskip=\skip92
+\absleftindent=\skip93
+\abs@leftindent=\dimen105
+\absrightindent=\skip94
+\absparindent=\skip95
+\absparsep=\skip96
+\c@vslineno=\count92
+\c@poemline=\count93
+\c@modulo@vs=\count94
+\c@memfvsline=\count95
+\vleftskip=\skip97
+\vrightskip=\skip98
+\stanzaskip=\skip99
+\versewidth=\skip100
+\vgap=\skip101
+\vindent=\skip102
+\vleftmargin=\dimen106
+\c@verse=\count96
+\c@chrsinstr=\count97
+\beforepoemtitleskip=\skip103
+\afterpoemtitleskip=\skip104
+\c@poem=\count98
+\beforePoemTitleskip=\skip105
+\midPoemTitleskip=\skip106
+\afterPoemTitleskip=\skip107
+\col@sep=\dimen107
+\extrarowheight=\dimen108
+\NC@list=\toks15
+\extratabsurround=\skip108
+\backup@length=\skip109
+\TX@col@width=\dimen109
+\TX@old@table=\dimen110
+\TX@old@col=\dimen111
+\TX@target=\dimen112
+\TX@delta=\dimen113
+\TX@cols=\count99
+\TX@ftn=\toks16
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
+\@cmidla=\count100
+\@cmidlb=\count101
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
+\@thisruleclass=\count102
+\@lastruleclass=\count103
+\@thisrulewidth=\dimen126
+\ctableftskip=\skip110
+\ctabrightskip=\skip111
+\abovecolumnspenalty=\count104
+\@linestogo=\count105
+\@cellstogo=\count106
+\@cellsincolumn=\count107
+\crtok=\toks17
+\@mincolumnwidth=\dimen127
+\c@newflo@tctr=\count108
+\@contcwidth=\skip112
+\@contindw=\skip113
+\abovecaptionskip=\skip114
+\belowcaptionskip=\skip115
+\subfloattopskip=\skip116
+\subfloatcapskip=\skip117
+\subfloatcaptopadj=\skip118
+\subfloatbottomskip=\skip119
+\subfloatlabelskip=\skip120
+\subfloatcapmargin=\dimen128
+\c@@contsubnum=\count109
+\m@mscap@capbox=\box26
+\m@mscap@fbox=\box27
+\sidecapsep=\dimen129
+\sidecapwidth=\dimen130
+\m@m@tempdima=\dimen131
+\m@mscapraise=\dimen132
+\sidecapraise=\dimen133
+\m@mscapmainwidth=\dimen134
+\m@mscaplkern=\dimen135
+\beforeepigraphskip=\skip121
+\afterepigraphskip=\skip122
+\epigraphwidth=\skip123
+\epigraphrule=\skip124
+LaTeX Info: Redefining \em on input line 6679.
+LaTeX Info: Redefining \emph on input line 6687.
+\tocentryskip=\skip125
+\tocbaseline=\skip126
+\cftparskip=\skip127
+\cftbeforebookskip=\skip128
+\cftbookindent=\dimen136
+\cftbooknumwidth=\dimen137
+\cftbeforepartskip=\skip129
+\cftpartindent=\skip130
+\cftpartnumwidth=\skip131
+\cftbeforechapterskip=\skip132
+\cftchapterindent=\skip133
+\cftchapternumwidth=\skip134
+\cftbeforesectionskip=\skip135
+\cftsectionindent=\skip136
+\cftsectionnumwidth=\skip137
+\cftbeforesubsectionskip=\skip138
+\cftsubsectionindent=\skip139
+\cftsubsectionnumwidth=\skip140
+\cftbeforesubsubsectionskip=\skip141
+\cftsubsubsectionindent=\skip142
+\cftsubsubsectionnumwidth=\skip143
+\cftbeforeparagraphskip=\skip144
+\cftparagraphindent=\skip145
+\cftparagraphnumwidth=\skip146
+\cftbeforesubparagraphskip=\skip147
+\cftsubparagraphindent=\skip148
+\cftsubparagraphnumwidth=\skip149
+\prechapterprecisshift=\dimen138
+\c@maxsecnumdepth=\count110
+\bibindent=\dimen139
+\bibitemsep=\skip150
+\indexcolsep=\skip151
+\indexrule=\skip152
+\indexmarkstyle=\toks18
+\@indexbox=\insert233
+\glossarycolsep=\dimen140
+\glossaryrule=\dimen141
+\sideparvshift=\skip153
+\sideins=\insert232
+\sidebartopsep=\skip154
+\sidebarhsep=\skip155
+\sidebarvsep=\skip156
+\sidebarwidth=\skip157
+\footmarkwidth=\skip158
+\footmarksep=\skip159
+\footparindent=\skip160
+\footinsdim=\skip161
+\footinsv@r=\insert231
+\@mpfootinsv@r=\insert230
+\m@m@k=\count111
+\m@m@h=\dimen142
+\m@mipn@skip=\skip162
+\c@pagenote=\count112
+\every@verbatim=\toks19
+\afterevery@verbatim=\toks20
+\verbatim@line=\toks21
+\tab@position=\count113
+\verbatim@in@stream=\read1
+\verbatimindent=\skip163
+\verbatim@out=\write3
+\bvboxsep=\skip164
+\c@memfbvline=\count114
+\c@bvlinectr=\count115
+\bvnumlength=\skip165
+\fb@frw=\dimen143
+\fb@frh=\dimen144
+\FrameRule=\dimen145
+\FrameSep=\dimen146
+\c@cp@cntr=\count116
+LaTeX Info: Redefining \: on input line 10508.
+LaTeX Info: Redefining \! on input line 10510.
+\c@ism@mctr=\count117
+\c@xsm@mctr=\count118
+\c@csm@mctr=\count119
+\c@ksm@mctr=\count120
+\c@xksm@mctr=\count121
+\c@cksm@mctr=\count122
+\c@msm@mctr=\count123
+\c@xmsm@mctr=\count124
+\c@cmsm@mctr=\count125
+\c@bsm@mctr=\count126
+\c@workm@mctr=\count127
+\c@sheetsequence=\count128
+\c@lastsheet=\count129
+\c@lastpage=\count130
+\c@figure=\count131
+\c@lofdepth=\count132
+\cftbeforefigureskip=\skip166
+\cftfigureindent=\skip167
+\cftfigurenumwidth=\skip168
+\c@table=\count133
+\c@lotdepth=\count134
+\cftbeforetableskip=\skip169
+\cfttableindent=\skip170
+\cfttablenumwidth=\skip171
+Package abstract [2008/07/23] emulated by memoir.
+Package appendix [2008/07/23] emulated by memoir.
+Package array [2008/07/23] emulated by memoir.
+Package booktabs [2008/07/23] emulated by memoir.
+Package ccaption [2008/07/23] emulated by memoir.
+Package changepage [2008/07/23] emulated by memoir.
+Package chngcntr [2008/07/23] emulated by memoir.
+Package chngpage [2008/07/23] emulated by memoir.
+Package crop emulated by memoir.
+Package dcolumn [2008/07/23] emulated by memoir.
+Package delarray [2008/07/23] emulated by memoir.
+Package enumerate [2008/07/23] emulated by memoir.
+Package epigraph [2008/07/23] emulated by memoir.
+Package ifmtarg [2008/07/23] emulated by memoir.
+Package ifetex [2008/07/23] emulated by memoir.
+Package index [2008/07/23] emulated by memoir.
+Package makeidx [2008/07/23] emulated by memoir.
+Package moreverb [2008/07/23] emulated by memoir.
+Package mparhack [2008/07/23] emulated by memoir.
+Package needspace [2008/07/23] emulated by memoir.
+Package newfile [2008/07/23] emulated by memoir.
+Package nextpage [2008/07/23] emulated by memoir.
+Package pagenote [2008/07/23] emulated by memoir.
+Package parskip [2008/07/23] emulated by memoir.
+Package patchcmd [2008/07/23] emulated by memoir.
+Package setspace [2008/07/23] emulated by memoir.
+Package shortvrb [2008/07/23] emulated by memoir.
+Package showidx [2008/07/23] emulated by memoir.
+Package tabularx [2008/07/23] emulated by memoir.
+Package titleref [2008/07/23] emulated by memoir.
+Package titling [2008/07/23] emulated by memoir.
+Package tocbibind [2008/07/23] emulated by memoir.
+Package tocloft [2008/07/23] emulated by memoir.
+Package verbatim [2008/07/23] emulated by memoir.
+Package verse [2008/07/23] emulated by memoir.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/memoir/mempatch.sty
+File: mempatch.sty 2008/07/23 v6.0 Patches for memoir class v1.6180339
+))
 (/usr/local/texlive/2008/texmf-dist/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
@@ -41,26 +337,26 @@ Package: courier 2005/04/12 PSNFSS-v9.2a (WaS)
 (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/listings.sty
 (/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks22
 )
-\lst@mode=\count88
-\lst@gtempboxa=\box26
-\lst@token=\toks15
-\lst@length=\count89
-\lst@currlwidth=\dimen103
-\lst@column=\count90
-\lst@pos=\count91
-\lst@lostspace=\dimen104
-\lst@width=\dimen105
-\lst@newlines=\count92
-\lst@lineno=\count93
-\lst@maxwidth=\dimen106
+\lst@mode=\count135
+\lst@gtempboxa=\box28
+\lst@token=\toks23
+\lst@length=\count136
+\lst@currlwidth=\dimen147
+\lst@column=\count137
+\lst@pos=\count138
+\lst@lostspace=\dimen148
+\lst@width=\dimen149
+\lst@newlines=\count139
+\lst@lineno=\count140
+\lst@maxwidth=\dimen150
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count94
-\lst@skipnumbers=\count95
-\lst@framebox=\box27
+\c@lstnumber=\count141
+\lst@skipnumbers=\count142
+\lst@framebox=\box29
 )
 (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
@@ -83,33 +379,61 @@ Package graphics Info: Driver file: pdftex.def on input line 90.
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2008/07/16 v0.04k Graphics/color for pdfTeX
-\Gread@gobject=\count96
+\Gread@gobject=\count143
 ))
-\Gin@req@height=\dimen107
-\Gin@req@width=\dimen108
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
 )
 (/usr/local/texlive/2008/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen109
+\bigstrutjot=\dimen153
 )
 (/usr/local/texlive/2008/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip43
-\subfigcapskip=\skip44
-\subfigcaptopadj=\dimen110
-\subfigbottomskip=\skip45
-\subfigcapmargin=\dimen111
-\subfiglabelskip=\skip46
-\c@subfigure=\count97
-\c@lofdepth=\count98
-\c@subtable=\count99
-\c@lotdepth=\count100
+\subfigtopskip=\skip172
+\subfigcapskip=\skip173
+\subfigcaptopadj=\dimen154
+\subfigbottomskip=\skip174
+\subfigcapmargin=\dimen155
+\subfiglabelskip=\skip175
+\c@subfigure=\count144
+
+
+/usr/local/texlive/2008/texmf-dist/tex/latex/subfigure/subfigure.sty:124: LaTeX
+ Error: Command \c@lofdepth already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.124 \newcounter{lofdepth}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\c@subtable=\count145
+
+/usr/local/texlive/2008/texmf-dist/tex/latex/subfigure/subfigure.sty:137: LaTeX
+ Error: Command \c@lotdepth already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.137 \newcounter{lotdepth}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (/usr/local/texlive/2008/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip47
-\subfig@bottom=\skip48
+\subfig@top=\skip176
+\subfig@bottom=\skip177
 )
 \@input{front_matter_commands.aux}
 \openout2 = `front_matter_commands.aux'.
@@ -159,40 +483,35 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
-\c@lstlisting=\count101
+\c@lstlisting=\count146
 
 (/usr/local/texlive/2008/texmf-dist/tex/context/base/supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count102
-\scratchdimen=\dimen112
-\scratchbox=\box28
-\nofMPsegments=\count103
-\nofMParguments=\count104
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count105
-\MPscratchDim=\dimen113
-\MPnumerator=\count106
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count147
+\scratchdimen=\dimen156
+\scratchbox=\box30
+\nofMPsegments=\count148
+\nofMParguments=\count149
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count150
+\MPscratchDim=\dimen157
+\MPnumerator=\count151
+\everyMPtoPDFconversion=\toks25
 )
-\openout2 = `1.Introduction/introduction.aux'.
+\openout2 = `6.Evaluation/evaluation.aux'.
 
- (./1.Introduction/introduction.tex
-Chapter 1.
+ (./6.Evaluation/evaluation.tex
 
-Overfull \hbox (8.50224pt too wide) in paragraph at lines 10--11
-\OT1/cmr/m/n/10 ity each year, while soft-ware seems to im-prove more grad-u-al
-ly. [[]]
- []
+Class memoir Warning: The \it font command is deprecated. 
+(memoir)              Use \textit{...} or {\itshape... } instead on input line 
+9.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 21.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 21.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 21.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 21.
-[1
+[119
+
+
+
+
+
 
 
 
@@ -208,103 +527,555 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 {/usr/local/texlive/2008/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (12.4282pt too wide) in paragraph at lines 25--26
-\OT1/cmr/m/n/10 be-come in-ac-cu-rate rep-re-sen-ta-tions of the sys-tem [[], [
-]].
+(./6.Evaluation/user_driven_example.tex
+Overfull \hbox (15.02997pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/10.95 per-form-ing user-driven co-evolution in con-tem-po-rary MDE
+ en-vi-ron-ments. Firstly,
  []
 
-(./1.Introduction/topics.tex) (./1.Introduction/problems.tex [2])
-(./1.Introduction/hypothesis.tex [3]) (./1.Introduction/method.tex
-<1.Introduction/images/method.pdf, id=20, 554.07pt x 545.03625pt>
-File: 1.Introduction/images/method.pdf Graphic file (type pdf)
+[120]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 16.
 
-<use 1.Introduction/images/method.pdf>) (./1.Introduction/structure.tex
-[4] [5 <./1.Introduction/images/method.pdf>])) [6] [152
+<6.Evaluation/images/user_driven/po_final_editor.png, id=13, 806.01125pt x 659.
+46375pt>
+File: 6.Evaluation/images/user_driven/po_final_editor.png Graphic file (type pn
+g)
+ <use 6.Evaluation/images/user_driven/po_final_editor.png>
+Overfull \hbox (15.1122pt too wide) in paragraph at lines 22--23
+ [][] 
+ []
 
-
-
-
-
-
-
-
-
-] (./thesis.bbl
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+[121]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 35.
+ (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [153
-
-] [154]
-[155]
-Underfull \hbox (badness 3179) in paragraph at lines 318--324
-[]$ []$ \OT1/cmr/m/n/10 Mar-tin Fowler.  Lan-guage work-benches: The killer-
+)
+<6.Evaluation/images/user_driven/po_original_editor.png, id=21, 697.60625pt x 5
+74.145pt>
+File: 6.Evaluation/images/user_driven/po_original_editor.png Graphic file (type
+ png)
+ <use 6.Evaluation/images/user_driven/po_original_editor.png>
+Overfull \hbox (15.1122pt too wide) in paragraph at lines 39--40
+ [][] 
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 318--324
-\OT1/cmr/m/n/10 app for do-main spe-cific lan-guages? [on-line].  [Ac-cessed 30
- June
+<6.Evaluation/images/user_driven/po_evolved_editor.png, id=22, 697.60625pt x 57
+4.145pt>
+File: 6.Evaluation/images/user_driven/po_evolved_editor.png Graphic file (type 
+png)
+ <use 6.Evaluation/images/user_driven/po_evolved_editor.png>
+Overfull \hbox (15.1122pt too wide) in paragraph at lines 49--50
+ [][] 
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 318--324
-\OT1/cmr/m/n/10 2008] Avail-able at: $\OT1/pcr/m/n/10 http : / / www . martinfo
-wler . com / articles /
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [122 <./6.Evaluation/images/user_driven/po_final_editor.png>]
+<6.Evaluation/images/user_driven/po_before.pdf, id=28, 261.97874pt x 136.51pt>
+File: 6.Evaluation/images/user_driven/po_before.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/user_driven/po_before.pdf>
+<6.Evaluation/images/user_driven/po_after.pdf, id=29, 383.4325pt x 170.6375pt>
+File: 6.Evaluation/images/user_driven/po_after.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/user_driven/po_after.pdf>
+Underfull \vbox (badness 2213) has occurred while \output is active []
+
+ [123 <./6.Evaluation/images/user_driven/po_original_editor.png>] [124 <./6.Eva
+luation/images/user_driven/po_evolved_editor.png>]
+<6.Evaluation/images/user_driven/emf_process.pdf, id=38, 845.1575pt x 597.23125
+pt>
+File: 6.Evaluation/images/user_driven/emf_process.pdf Graphic file (type pdf)
+ <use 6.Evaluation/images/user_driven/emf_process.pdf>
+Overfull \hbox (15.1122pt too wide) in paragraph at lines 93--94
+ [][] 
  []
 
-[156] [157]
-Underfull \hbox (badness 3189) in paragraph at lines 423--428
-[]$ []$ \OT1/cmr/m/n/10 M. Her-rmanns-do-er-fer, D. Ratiu, and
+[125 <./6.Evaluation/images/user_driven/po_before.pdf> <./6.Evaluation/images/u
+ser_driven/po_after.pdf>]
+<6.Evaluation/images/user_driven/po_original_xmi.png, id=145, 619.31375pt x 495
+.8525pt>
+File: 6.Evaluation/images/user_driven/po_original_xmi.png Graphic file (type pn
+g)
+ <use 6.Evaluation/images/user_driven/po_original_xmi.png>
+Overfull \hbox (15.1122pt too wide) in paragraph at lines 104--105
+ [][] 
  []
 
-[158] [159]
-Underfull \hbox (badness 4927) in paragraph at lines 571--578
-[]$ []$ \OT1/cmr/m/n/10 Dim-itrios S. Kolovos, Richard F. Paige, and
+
+Overfull \hbox (89.04445pt too wide) in paragraph at lines 109--110
+\OT1/cmr/m/n/10.95 nec-tion point should in-stan-ti-ate \OT1/pcr/m/n/10.95 Read
+ingConnectionPoint \OT1/cmr/m/n/10.95 or \OT1/pcr/m/n/10.95 WritingConnectionPo
+int\OT1/cmr/m/n/10.95 . 
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 571--578
-\OT1/cmr/m/n/10 Louis M. Rose.  Eu-GE-Nia: GMF for mor-tals.  Long talk at
+<6.Evaluation/images/user_driven/po_migrated_xmi.png, id=146, 697.60625pt x 574
+.145pt>
+File: 6.Evaluation/images/user_driven/po_migrated_xmi.png Graphic file (type pn
+g)
+ <use 6.Evaluation/images/user_driven/po_migrated_xmi.png>
+Overfull \hbox (15.1122pt too wide) in paragraph at lines 113--114
+ [][] 
  []
 
-[160] [161]
+[126 <./6.Evaluation/images/user_driven/emf_process.pdf>]
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 121.
+ [127 <./6.Evaluation/images/user_driven/po_original_xmi.png (PNG copy)>]
+(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 135.
+ [128 <./6.Evaluation/images/user_driven/po_migrated_xmi.png>]
+<6.Evaluation/images/user_driven/hutn_process.pdf, id=235, 845.1575pt x 597.231
+25pt>
+File: 6.Evaluation/images/user_driven/hutn_process.pdf Graphic file (type pdf)
+ <use 6.Evaluation/images/user_driven/hutn_process.pdf>
+Overfull \hbox (15.1122pt too wide) in paragraph at lines 158--159
+ [][] 
+ []
+
+
+<6.Evaluation/images/user_driven/po_hutn.png, id=236, 707.64375pt x 715.67375pt
+>
+File: 6.Evaluation/images/user_driven/po_hutn.png Graphic file (type png)
+ <use 6.Evaluation/images/user_driven/po_hutn.png>
+Overfull \hbox (15.1122pt too wide) in paragraph at lines 167--168
+ [][] 
+ []
+
+
+<6.Evaluation/images/user_driven/po_hutn_partial.png, id=237, 707.64375pt x 715
+.67375pt>
+File: 6.Evaluation/images/user_driven/po_hutn_partial.png Graphic file (type pn
+g)
+ <use 6.Evaluation/images/user_driven/po_hutn_partial.png>
+Overfull \hbox (15.1122pt too wide) in paragraph at lines 176--177
+ [][] 
+ []
+
+[129]
+Overfull \hbox (44.27104pt too wide) in paragraph at lines 181--182
+\OT1/cmr/m/n/10.95 changed to in-stan-ti-ate \OT1/pcr/m/n/10.95 ReadingConnecti
+onPoint \OT1/cmr/m/n/10.95 or \OT1/pcr/m/n/10.95 WritingConnectionPoint\OT1/cmr
+/m/n/10.95 .
+ []
+
+[130 <./6.Evaluation/images/user_driven/hutn_process.pdf>] [131 <./6.Evaluation
+/images/user_driven/po_hutn.png>] [132 <./6.Evaluation/images/user_driven/po_hu
+tn_partial.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [133])
+(./6.Evaluation/quantitive.tex
+Overfull \hbox (83.724pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/10.95 purpose lan-guages in oth-ers (e.g. [[], []]).
+ []
+
+[134]
+Overfull \vbox (11.56252pt too high) has occurred while \output is active []
+
+
+[135]
+Underfull \hbox (badness 1342) in paragraph at lines 29--29
+[][] [][]\OT1/cmr/m/n/9 Communication with Ed Merks, Eclipse Mod-el-ing Project
+ leader, 2009, avail-
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 29--29
+\OT1/cmr/m/n/9 able at $\OT1/pcr/m/n/9 http : / / www . eclipse . org / forums 
+/ index . php ? t = tree&goto = 486690&S =
+ []
+
+[136]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
+ (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+
+Overfull \hbox (1.61865pt too wide) in paragraph at lines 61--62
+[]| \OT1/pcr/m/n/10.95 <element>.<feature>.addAll(<collection[]of[]values>) 
+ []
+
+
+Overfull \vbox (11.56252pt too high) has occurred while \output is active []
+
+
+[137]
+Overfull \hbox (1.61865pt too wide) in paragraph at lines 85--86
+[]| \OT1/pcr/m/n/10.95 <element>.<feature>.addAll(<collection[]of[]values>) 
+ []
+
+
+Overfull \hbox (1.9034pt too wide) in paragraph at lines 91--92
+[]\OT1/cmr/m/n/10.95 Like Groovy-for-COPE, Flock pro-vides sev-eral as-sign-men
+t state-ments. The
+ []
+
+[138]
+Underfull \vbox (badness 1803) has occurred while \output is active []
+
+
+Overfull \vbox (11.56252pt too high) has occurred while \output is active []
+
+
+[139]
+Overfull \hbox (0.80634pt too wide) in paragraph at lines 181--182
+\OT1/cmr/m/n/10.95 New-target, existing-target and con-ser-va-tive copy ini-tia
+lise the mi-grated model
+ []
+
+
+Overfull \hbox (2.77957pt too wide) in paragraph at lines 189--190
+[]\OT1/pcr/m/n/10.95 <element>.<newFeature> = <element>.unset(<oldFeature>) 
+ []
+
+
+Overfull \hbox (30.37352pt too wide) in paragraph at lines 193--194
+[]\OT1/pcr/m/n/10.95 <migrated[]element>.<feature> = <original[]element>.<featu
+re> 
+ []
+
+[140]
+Overfull \hbox (5.51056pt too wide) in paragraph at lines 206--207
+\OT1/pcr/m/n/10.95 accessor \OT1/cmr/m/n/10.95 fea-tures were changed. Con-se-q
+uently, the mi-gra-tion strat-egy needed
+ []
+
+<6.Evaluation/images/subtyping.pdf, id=355, 291.0875pt x 193.72375pt>
+File: 6.Evaluation/images/subtyping.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/subtyping.pdf>
+Overfull \vbox (11.56252pt too high) has occurred while \output is active []
+
+
+[141]
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <9> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 218.
+ [142 <./6.Evaluation/images/subtyping.pdf>]
+Overfull \hbox (3.06668pt too wide) in paragraph at lines 256--257
+\OT1/pcr/m/n/10.95 migrate \OT1/cmr/m/n/10.95 key-word (i.e. \OT1/pcr/m/n/10.95
+ DiagramElement \OT1/cmr/m/n/10.95 here). Be-cause \OT1/pcr/m/n/10.95 DiagramEl
+ement
+ []
+
+
+Overfull \vbox (11.56252pt too high) has occurred while \output is active []
+
+
+[143]
+<6.Evaluation/images/change_ref_to_cont_before.pdf, id=427, 247.92625pt x 118.4
+425pt>
+File: 6.Evaluation/images/change_ref_to_cont_before.pdf Graphic file (type pdf)
+
+ <use 6.Evaluation/images/change_ref_to_cont_before.pdf>
+<6.Evaluation/images/change_ref_to_cont_after.pdf, id=428, 356.33125pt x 62.232
+5pt>
+File: 6.Evaluation/images/change_ref_to_cont_after.pdf Graphic file (type pdf)
+ <use 6.Evaluation/images/change_ref_to_cont_after.pdf>
+Overfull \hbox (2.93524pt too wide) in paragraph at lines 302--303
+\OT1/cmr/m/n/10.95 fea-ture is cloned and added to the \OT1/pcr/m/n/10.95 ports
+ \OT1/cmr/m/n/10.95 fea-ture of the equiv-a-lent \OT1/pcr/m/n/10.95 Signature\O
+T1/cmr/m/n/10.95 . 
+ []
+
+[144 <./6.Evaluation/images/change_ref_to_cont_before.pdf> <./6.Evaluation/imag
+es/change_ref_to_cont_after.pdf>]
+Overfull \hbox (42.32481pt too wide) in paragraph at lines 328--329
+\OT1/cmr/m/n/10.95 less straight-for-ward be-cause the value of a con-tain-ment
+ ref-er-ence (\OT1/pcr/m/n/10.95 Signature#ports\OT1/cmr/m/n/10.95 )
+ []
+
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <9> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 339.
+
+Overfull \vbox (11.56252pt too high) has occurred while \output is active []
+
+
+[145]
+Underfull \vbox (badness 5563) has occurred while \output is active []
+
+ [146])
+(./6.Evaluation/collaborative_comparison.tex [147]
+Overfull \hbox (11.03822pt too wide) in paragraph at lines 20--21
+\OT1/cmr/m/n/10.95 for co-evolution case stud-ies in Chap-ter 4[] and in [[]]. 
+
+ []
+
+<5.Implementation/petri_nets_step0.pdf, id=525, 254.9525pt x 153.57375pt>
+File: 5.Implementation/petri_nets_step0.pdf Graphic file (type pdf)
+
+<use 5.Implementation/petri_nets_step0.pdf>
+<5.Implementation/petri_nets_step1.pdf, id=526, 336.25626pt x 234.8775pt>
+File: 5.Implementation/petri_nets_step1.pdf Graphic file (type pdf)
+
+<use 5.Implementation/petri_nets_step1.pdf>
+Overfull \hbox (10.16396pt too wide) in paragraph at lines 41--42
+\OT1/pcr/m/n/10.95 Place \OT1/cmr/m/n/10.95 has any num-ber of \OT1/pcr/m/n/10.
+95 src \OT1/cmr/m/n/10.95 or \OT1/pcr/m/n/10.95 dst Transition\OT1/cmr/m/n/10.9
+5 s. Sim-i-larly, a \OT1/pcr/m/n/10.95 Transition
+ []
+
+[148 <./5.Implementation/petri_nets_step0.pdf> <./5.Implementation/petri_nets_s
+tep1.pdf>]
+Underfull \vbox (badness 5403) has occurred while \output is active []
+
+ [149]
+Overfull \hbox (61.1983pt too wide) in paragraph at lines 73--96
+ [][] 
+ []
+
+[150] [151] [152]
+Overfull \hbox (12.29367pt too wide) in paragraph at lines 142--143
+\OT1/cmr/m/n/10.95 (op-er-a-tors and match heuris-tics, re-spec-tively) are ex-
+ten-si-ble. Flock and Ecore2E-
+ []
+
+[153]
+Overfull \hbox (4.10597pt too wide) in paragraph at lines 156--157
+\OT1/cmr/bx/n/10.95 Ecore2Ecore.[] \OT1/cmr/m/n/10.95 Map-ping mod-els can-not 
+be reused or ex-tended in Ecore2Ecore
+ []
+
+[154] [155]
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
+[][] [][]$\OT1/pcr/m/n/9 http : / / www . eclipse . org / forums / index . php 
+? t = rview&goto = 526894 # msg _
+ []
+
+[156]
+<6.Evaluation/images/migration_tool_performance.pdf, id=668, 469.755pt x 391.46
+25pt>
+File: 6.Evaluation/images/migration_tool_performance.pdf Graphic file (type pdf
+)
+ <use 6.Evaluation/images/migration_tool_performance.pdf> [157] [158 <./6.Evalu
+ation/images/migration_tool_performance.pdf>]
+Overfull \hbox (0.31102pt too wide) in paragraph at lines 250--253
+\OT1/cmr/m/n/10.95 [[]] as \OT1/cmr/m/it/10.95 metamodel-specific \OT1/cmr/m/n/
+10.95 can-not be ex-pressed with
+ []
+
+[159]) (./6.Evaluation/ttc.tex [160]
+<6.Evaluation/images/activity.pdf, id=693, 597.23125pt x 845.1575pt>
+File: 6.Evaluation/images/activity.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/activity.pdf>
+Overfull \hbox (0.88582pt too wide) in paragraph at lines 22--23
+ [][] 
+ []
+
+[161] [162 <./6.Evaluation/images/activity.pdf>]
+<6.Evaluation/images/uml14.pdf, id=806, 602.25pt x 372.39125pt>
+File: 6.Evaluation/images/uml14.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/uml14.pdf>
+<6.Evaluation/images/uml22.pdf, id=807, 464.73625pt x 366.36874pt>
+File: 6.Evaluation/images/uml22.pdf Graphic file (type pdf)
+
+<use 6.Evaluation/images/uml22.pdf> [163 <./6.Evaluation/images/uml14.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[][] [][]$\OT1/pcr/m/n/9 http : / / planet-[]research20 . org / ttc2010 / index
+ . php ? option = com _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+\OT1/pcr/m/n/9 community&view = groups&task = viewgroup&groupid = 4&Itemid = 15
+0$ \OT1/cmr/m/n/9 (reg-is-tra-
+ []
+
+[164 <./6.Evaluation/images/uml22.pdf>] [165]
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no † in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[][] [][]$\OT1/pcr/m/n/9 http : / / www . planet-[]research20 . org / ttc2010 /
+ index . php ? option =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\OT1/pcr/m/n/9 com _ community&view = groups&task = viewdiscussion&groupid = 4&
+topicid =
+ []
+
+
+Overfull \hbox (10.05243pt too wide) in paragraph at lines 114--115
+\OT1/cmr/m/n/10.95 con-tained \OT1/pcr/m/n/10.95 Pseudostates\OT1/cmr/m/n/10.95
+ s and \OT1/pcr/m/n/10.95 Transition\OT1/cmr/m/n/10.95 s, but none of the \OT1/
+pcr/m/n/10.95 ActionState\OT1/cmr/m/n/10.95 s
+ []
+
+
+Overfull \hbox (10.13367pt too wide) in paragraph at lines 114--115
+\OT1/pcr/m/n/10.95 ActionState\OT1/cmr/m/n/10.95 s. List-ing 6.10[] shows the F
+lock code for chang-ing \OT1/pcr/m/n/10.95 ActionState\OT1/cmr/m/n/10.95 s
+ []
+
+[166]
+Overfull \hbox (16.33868pt too wide) in paragraph at lines 128--129
+\OT1/pcr/m/n/10.95 InitialNode\OT1/cmr/m/n/10.95 . List-ing 6.12[] shows the Fl
+ock code used to change \OT1/pcr/m/n/10.95 Pseudostate\OT1/cmr/m/n/10.95 s
+ []
+
+[167]
+Overfull \hbox (28.756pt too wide) in paragraph at lines 174--175
+[]\OT1/cmr/m/n/10.95 Listing 6.16[] shows the Flock rule used to mi-grate \OT1/
+pcr/m/n/10.95 Transiton\OT1/cmr/m/n/10.95 s to \OT1/pcr/m/n/10.95 ObjectFlow\OT
+1/cmr/m/n/10.95 s.
+ []
+
+[168]
+Overfull \hbox (18.41435pt too wide) in paragraph at lines 187--188
+[]\OT1/cmr/m/n/10.95 Listing 6.17[] shows the Flock source code used to mi-grat
+e \OT1/pcr/m/n/10.95 ObjectFlowStates
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
+[][] [][]$\OT1/pcr/m/n/9 http : / / www . planet-[]research20 . org / ttc2010 /
+ index . php ? option =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
+\OT1/pcr/m/n/9 com _ community&view = groups&task = viewdiscussion&groupid = 4&
+topicid =
+ []
+
+[169] [170] [171]) (./6.Evaluation/limitations.tex) [172]) [173] [180
+
+
+
+
+]
+(./thesis.bbl
+bibitemlist
+[181
+
+] [182] [183]
+Underfull \hbox (badness 1694) in paragraph at lines 212--218
+[]$ []$ \OT1/cmr/m/n/10.95 Sergey Dmitriev.  Lan-guage ori-ented pro-gram-ming:
+
+ []
+
+[184]
+Underfull \hbox (badness 1939) in paragraph at lines 318--324
+[]$ []$ \OT1/cmr/m/n/10.95 Mar-tin Fowler.  Lan-guage work-benches: The killer-
+
+ []
+
+[185] [186]
+Underfull \hbox (badness 1436) in paragraph at lines 423--428
+[]$ []$ \OT1/cmr/m/n/10.95 M. Her-rmanns-do-er-fer, D. Ratiu, and
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 435--440
+\OT1/cmr/m/n/10.95 USA. [Ac-cessed 07 Septem-ber 2009] Avail-able at: $\OT1/pcr
+/m/n/10.95 http : / / www .
+ []
+
+[187]
+Underfull \hbox (badness 2080) in paragraph at lines 521--526
+[]$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 527--533
+[]$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 534--539
+[]$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
+ []
+
+[188]
+Underfull \hbox (badness 1990) in paragraph at lines 558--564
+[]$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 565--570
+[]$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 571--578
+\OT1/cmr/m/n/10.95 mit Eu-rope, Oc-to-ber 2009, Lud-wigs-burg, Ger-many. Avail-
+able at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--578
+\OT1/pcr/m/n/10.95 https : / / www . eclipsecon . org / submissions / ese2009 /
+ view _
+ []
+
+[189] [190]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
- [162] [163]
+ [191] [192] [193]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [164] [165]) [166] (./thesis.aux
+ [194]) [195] [196] (./thesis.aux
 (./0.FrontMatter/front_matter.aux) (./1.Introduction/introduction.aux)
 (./2.Background/background.aux) (./3.LiteratureReview/literature_review.aux)
 (./4.Analysis/analysis.aux) (./5.Implementation/implementation.aux)
 (./6.Evaluation/evaluation.aux) (./7.Conclusion/conclusion.aux)
-(./A.1.Experiments/experiments.aux)) ) 
+(./A.1.Experiments/experiments.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2994 strings out of 493886
- 44488 string characters out of 1151098
- 101854 words of memory out of 3000000
- 6149 multiletter control sequences out of 10000+50000
- 10805 words of font info for 37 fonts, out of 3000000 for 5000
+ 6283 strings out of 493886
+ 90847 string characters out of 1151098
+ 253676 words of memory out of 3000000
+ 9385 multiletter control sequences out of 10000+50000
+ 15828 words of font info for 55 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 28i,8n,32p,1124b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2008/texmf-dist/fonts
-/enc/dvips/base/8r.enc}</usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/
-cm/cmbx10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx12
-.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbxti10.pfb></
-usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/
-texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/200
-8/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dis
-t/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/typ
-e1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesk
-y/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti
-7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on thesis.pdf (21 pages, 195180 bytes).
+ 35i,11n,53p,1479b,1656s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
+08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
+dist/fonts/type1/bluesky/cm/cmbxti10.pfb></usr/local/texlive/2008/texmf-dist/fo
+nts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/
+bluesky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/
+cmr7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></
+usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr9.pfb></usr/local/t
+exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/20
+08/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-
+dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/font
+s/type1/bluesky/cm/cmti8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/ur
+w/courier/ucrb8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courie
+r/ucrr8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrro8
+a.pfb>
+Output written on thesis.pdf (72 pages, 1300088 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
+ 1271 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 107 words of extra memory for PDF output out of 10000 (max. 10000000)
 

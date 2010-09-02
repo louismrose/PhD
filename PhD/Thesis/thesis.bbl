@@ -620,28 +620,6 @@ Meir~M. Lehman.
 \newblock The programming process.
 \newblock Technical report, {IBM Res. Rep. RC 2722}, 1969.
 
-\bibitem[Lehman 1978]{lehman78programs}{$~$}
-Meir~M. Lehman.
-\newblock Programs, cities, students - limits to growth?
-\newblock {\em Programming Methodology}, pages 42--62, 1978.
-
-\bibitem[Lehman 1980]{lehman80understanding}{$~$}
-Meir~M. Lehman.
-\newblock On understanding laws, evolution, and conservation in the
-  large-program life cycle.
-\newblock {\em Journal of Systems and Software}, 1:213--221, 1980.
-
-\bibitem[Lehman 1985]{lehman85program}{$~$}
-Meir~M. Lehman.
-\newblock {\em Program evolution: processes of software change}.
-\newblock Academic, 1985.
-
-\bibitem[Lehman 1996]{lehman96laws}{$~$}
-Meir~M. Lehman.
-\newblock Laws of software evolution revisited.
-\newblock In {\em Proc. European Workshop on Software Process Technology},
-  pages 108--124, 1996.
-
 \bibitem[Lerner 2000]{lerner00model}{$~$}
 Barbara~Staudt Lerner.
 \newblock A model for compound type changes encountered in schema evolution.
@@ -856,16 +834,18 @@ M.~Pizka and E.~J{\"u}rgens.
 \newblock In {\em Proc. Joint IEEE/IFIP Symposium on Theoretical Aspects of
   Software Engineering (TASE)}, pages 305--315. IEEE Computer Society, 2007.
 
-\bibitem[Pool 1997]{pool97society}{$~$}
-R.~Pool.
-\newblock {\em Beyond Engineering: How Society Shapes Technology}.
-\newblock Oxford University Press, 1997.
-
 \bibitem[Porres 2003]{porres03refactoring}{$~$}
 Ivan Porres.
 \newblock Model refactorings as rule-based update transformations.
 \newblock In {\em Proc. UML}, volume 2863 of {\em LNCS}, pages 159--174.
   Springer, 2003.
+
+\bibitem[Ramil \& Lehman 2000]{ramil00cost}{$~$}
+Juan~F. Ramil and Meir~M. Lehman.
+\newblock Cost estimation and evolvability monitoring for software evolution
+  processes.
+\newblock In {\em Proc. Workshop on Empirical Studies of Software Maintenance},
+  2000.
 
 \bibitem[R{\'a}th {\it et al.}\  2008]{rath08live}{$~$}
 Istv{\'a}n R{\'a}th, G{\'a}bor Bergmann, Andr{\'a}s {\"O}kr{\"o}s, and

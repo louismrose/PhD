@@ -6,7 +6,7 @@ A level-1 auxiliary file: 2.Background/background.aux
 A level-1 auxiliary file: 3.LiteratureReview/literature_review.aux
 A level-1 auxiliary file: 4.Analysis/analysis.aux
 Case mismatch error between cite keys VIATRA and viatra
----line 109 of file 4.Analysis/analysis.aux
+---line 110 of file 4.Analysis/analysis.aux
  : \citation{VIATRA
  :                 }
 I'm skipping whatever remains of this command
@@ -81,45 +81,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 180 entries,
+You've used 176 entries,
             2472 wiz_defined-function locations,
-            1373 strings with 29975 characters,
-and the built_in function-call counts, 69428 in all, are:
-= -- 6988
-> -- 2579
-< -- 77
-+ -- 828
-- -- 788
-* -- 4853
-:= -- 10787
-add.period$ -- 580
-call.type$ -- 180
-change.case$ -- 1078
-chr.to.int$ -- 159
-cite$ -- 181
-duplicate$ -- 3202
-empty$ -- 5726
-format.name$ -- 1020
-if$ -- 14837
+            1356 strings with 29658 characters,
+and the built_in function-call counts, 67981 in all, are:
+= -- 6835
+> -- 2552
+< -- 75
++ -- 822
+- -- 782
+* -- 4768
+:= -- 10569
+add.period$ -- 568
+call.type$ -- 176
+change.case$ -- 1061
+chr.to.int$ -- 155
+cite$ -- 177
+duplicate$ -- 3124
+empty$ -- 5598
+format.name$ -- 1012
+if$ -- 14521
 int.to.chr$ -- 22
 int.to.str$ -- 0
-missing$ -- 162
-newline$ -- 904
-num.names$ -- 541
-pop$ -- 1273
+missing$ -- 156
+newline$ -- 884
+num.names$ -- 529
+pop$ -- 1253
 preamble$ -- 1
-purify$ -- 1294
+purify$ -- 1271
 quote$ -- 0
-skip$ -- 2616
+skip$ -- 2548
 stack$ -- 0
-substring$ -- 3383
-swap$ -- 901
-text.length$ -- 77
+substring$ -- 3274
+swap$ -- 877
+text.length$ -- 75
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1320
+type$ -- 1296
 warning$ -- 1
-while$ -- 558
-width$ -- 185
-write$ -- 2327
+while$ -- 542
+width$ -- 181
+write$ -- 2276
 (There were 31 error messages)
