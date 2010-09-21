@@ -380,6 +380,11 @@ Jack Greenfield, Keith Short, Steve Cook, and Stuart Kent.
   Models, Frameworks, and Tools}.
 \newblock Wiley, 2004.
 
+\bibitem[Gronback 2006]{gronback06gmf}{$~$}
+Richard Gronback.
+\newblock Introduction to the {Eclipse Graphical Modeling Framework}.
+\newblock In {\em Proc. EclipseCon}, Santa Clara, California, 2006.
+
 \bibitem[Gronback 2009]{gronback09emp}{$~$}
 R.C. Gronback.
 \newblock {\em {Eclipse Modeling Project}: A {Domain-Specific Language} (DSL)
@@ -1022,6 +1027,13 @@ Martin~P. Ward.
 Andrew Watson.
 \newblock A brief history of {MDA}.
 \newblock {\em Upgrade}, 9(2), 2008.
+
+\bibitem[Welch \& Barnes 2005]{occam_pi}{$~$}
+Peter~H. Welch and Fred R.~M. Barnes.
+\newblock Communicating mobile processes.
+\newblock In {\em Proc. Symposium on the Occasion of 25 Years of Communicating
+  Sequential Processes (CSP)}, volume 3525 of {\em LNCS}, pages 175--210.
+  Springer, 2005.
 
 \bibitem[Winkler \& Pilgrim 2009]{winkler09survey}{$~$}
 Stefan Winkler and Jens von Pilgrim.

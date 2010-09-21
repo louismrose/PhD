@@ -2,7 +2,19 @@
 
 \section{Quantitive Comparison of Model Migration Languages}
 \label{sec:quantitive}
-In Section~\ref{sec:requirements_identification}, the following research requirement was identified: \emph{This thesis must implement and evaluate a domain-specific language for specifying and executing model migration strategies, comparing it to existing languages for specifying model migration strategies.} As discussed in Section~\ref{sec:flock}, this thesis contributes Epsilon Flock, a domain-specific language for model migration. This section approches the second part of the above research requirement by comparing Flock with languages that are used in contemporary migration tools. 
+
+% Evaluating conservative copy
+% Productivity: More concise migration strategies? Less to write, but could the other code be generated?
+% Understandability: More concise migration strategies? Less to read, but could ignore the repetitive sections. Proposing a dedicated language for migration, which allows patterns to be recognised (understood) and re-used (reduce effort, increase productivity)
+% But could I argue that by generating code or ignoring the repetitive sections one is doing a conservative copy, but implementing it with a different style of language?
+
+%% Counting model operations is an approximation of conciseness. I could have counted LOC, but that would be biased by differences in the languages
+
+% Other approaches
+%% Metamodel specific terminology: compare number of language-specific and number of metamodel-specific terms. 
+%% McCabe or Halstead complexity. Measures of programs, rather than programming languages. Can write the same program to have higher or lower McCabe / Halstead scores in the same programming language. 
+
+In Section~\ref{sec:requirements_identification}, the following research requirement was identified: \emph{This thesis must implement and evaluate a domain-specific language for specifying and executing model migration strategies, comparing it to existing languages for specifying model migration strategies.} As discussed in Section~\ref{sec:flock}, this thesis contributes Epsilon Flock, a domain-specific language for model migration. This section approaches the second part of the above research requirement by comparing Flock with languages that are used in contemporary migration tools. 
 
 In developer-driven migration, a programming language codifies the migration strategy. Because migration involves deriving the migrated model from the original, migration strategies typically access information from the original model and, based on that information, update the migrated model in some way. As such, migration is written in a language with constructs for accessing and updating the original and migrated models. Here, those language constructs are termed \textit{model operations}. Using examples of co-evolution, this section explores the variation in frequency of model operation over different model migration languages, and discusses to what extent the results of this comparison can be used to assess the suitability of the languages considered for model migration.
 

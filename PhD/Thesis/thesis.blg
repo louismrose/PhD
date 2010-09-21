@@ -14,6 +14,7 @@ A level-1 auxiliary file: 5.Implementation/implementation.aux
 A level-1 auxiliary file: 6.Evaluation/evaluation.aux
 A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
+A level-1 auxiliary file: A.2.ProcessOriented/process_oriented.aux
 The style file: longname.bst
 Database file #1: thesis.bib
 Repeated entry---line 1387 of file thesis.bib
@@ -24,6 +25,8 @@ Repeated entry---line 1409 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
+Warning--I'm ignoring occam_pi's extra "year" field
+--line 1439 of file thesis.bib
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -81,45 +84,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 176 entries,
+You've used 178 entries,
             2472 wiz_defined-function locations,
-            1356 strings with 29658 characters,
-and the built_in function-call counts, 67981 in all, are:
-= -- 6835
-> -- 2552
-< -- 75
-+ -- 822
-- -- 782
-* -- 4768
-:= -- 10569
-add.period$ -- 568
-call.type$ -- 176
-change.case$ -- 1061
-chr.to.int$ -- 155
-cite$ -- 177
-duplicate$ -- 3124
-empty$ -- 5598
-format.name$ -- 1012
-if$ -- 14521
+            1368 strings with 29996 characters,
+and the built_in function-call counts, 68821 in all, are:
+= -- 6923
+> -- 2573
+< -- 77
++ -- 828
+- -- 788
+* -- 4825
+:= -- 10691
+add.period$ -- 575
+call.type$ -- 178
+change.case$ -- 1072
+chr.to.int$ -- 157
+cite$ -- 179
+duplicate$ -- 3170
+empty$ -- 5674
+format.name$ -- 1022
+if$ -- 14712
 int.to.chr$ -- 22
 int.to.str$ -- 0
-missing$ -- 156
-newline$ -- 884
-num.names$ -- 529
-pop$ -- 1253
+missing$ -- 158
+newline$ -- 894
+num.names$ -- 535
+pop$ -- 1267
 preamble$ -- 1
-purify$ -- 1271
+purify$ -- 1284
 quote$ -- 0
-skip$ -- 2548
+skip$ -- 2582
 stack$ -- 0
-substring$ -- 3274
-swap$ -- 877
-text.length$ -- 75
+substring$ -- 3316
+swap$ -- 893
+text.length$ -- 77
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1296
+type$ -- 1312
 warning$ -- 1
-while$ -- 542
-width$ -- 181
-write$ -- 2276
+while$ -- 548
+width$ -- 183
+write$ -- 2304
 (There were 31 error messages)
