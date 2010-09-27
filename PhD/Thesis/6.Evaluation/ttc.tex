@@ -2,7 +2,7 @@
 
 \section{Transformation Tools Contest}
 \label{sec:ttc}
-The Transformation Tools Contest (TTC) is a workshop series that seeks to compare and contrast tools for performing model and graph transformation. At TTC 2010, two rounds of submissions were invited: cases (transformation problems, three of which are selected by the workshop organisers) and solutions to the selected cases. In addition, TTC 2010 include a \emph{live contest}: during the workshop a further transformation problem was announced and solutions submitted.
+The Transformation Tools Contest (TTC) is a workshop series that seeks to compare and contrast tools for performing model and graph transformation. At TTC 2010\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?Itemid=132}}, two rounds of submissions were invited: cases (transformation problems, three of which are selected by the workshop organisers) and solutions to the selected cases. In addition, TTC 2010 include a \emph{live contest}: during the workshop a further transformation problem was announced and solutions submitted.
 
 Participation in TTC 2010 facilitated further evaluation of Flock. Flock and 8 other transformation tools were assessed for a model migration problem based on a real-world example of metamodel evolution from the UML \cite{uml22}. As part of the live contest, Flock was also assessed along with 13 transformation tools for a model transformation problem. Compared to the evaluation described in Section~\ref{sec:collaborative_comparison}, the evaluation in this section compares Flock to a wider range of tools (model and graph transformation tools, and not just model migration tools), and investigates the suitability of Flock for specifying model transformation (and not just model migration).
 
@@ -10,7 +10,7 @@ The remainder of this section describes the model migration problem (Section~\re
 
 \subsection{Model Migration Case}
 \label{subsec:ttc_case}
-To compare Flock with other transformation tools for specifying model migration, the thesis author submitted a case to TTC based on the evolution of the UML. The way in which activity diagrams are modelled in the UML changed significantly between versions 1.4 and 2.1 of the specification. In the former, activities were defined as a special case of state machines, while in the latter they are defined atop a more general semantic base\footnote{A variant of generalised coloured Petri nets.} \cite{selic05uml2}.
+To compare Flock with other transformation tools for specifying model migration, the author submitted a case to TTC based on the evolution of the UML. The way in which activity diagrams are modelled in the UML changed significantly between versions 1.4 and 2.1 of the specification. In the former, activities were defined as a special case of state machines, while in the latter they are defined atop a more general semantic base\footnote{A variant of generalised coloured Petri nets.} \cite{selic05uml2}.
 
 The remainder of this section briefly introduces UML activity diagrams, describes their evolution, and discusses the way in which solutions were assessed. The work presented in this section is based on the case submitted to TTC 2010 \cite{rose10ttc_case}. 
 
@@ -46,22 +46,22 @@ Some differences between Figures~\ref{fig:uml14} and \ref{fig:uml22} are: activi
   \label{fig:uml22}
 \end{figure}
 
-To facilitate the comparison of solutions, the exemplar model shown in Figure~\ref{fig:activity} was used. Figure~\ref{fig:activity} is based on \cite[pg3-165]{uml14}. Solutions migrated the activity diagram shown in Figure~\ref{fig:activity} -- which conforms to UML 1.4 -- to conform to UML 2.2. The UML 1.4 model, the migrated UML 2.2 model, and the UML 1.4 and 2.2 metamodels are available from\footnote{\url{http://www.cs.york.ac.uk/~louis/ttc/}}.
+To facilitate the comparison of solutions, the model shown in Figure~\ref{fig:activity} was used. Figure~\ref{fig:activity} is based on \cite[pg3-165]{uml14}. Solutions migrated the activity diagram shown in Figure~\ref{fig:activity} -- which conforms to UML 1.4 -- to conform to UML 2.2. The UML 1.4 model, the migrated UML 2.2 model, and the UML 1.4 and 2.2 metamodels are available from\footnote{\url{http://www.cs.york.ac.uk/~louis/ttc/}}.
 
-Submissions were evaluated using the following four criteria, which were decided by the thesis author and the workshop organisers:
+Submissions were evaluated using the following four criteria, which were decided in advance by the author and the workshop organisers:
 
 \begin{itemize}
 	\item \textbf{Correctness}: Does the transformation produce a model equivalent to the migrated UML 2.2. model included in the case resources?
 	\item \textbf{Conciseness}: How much code is required to specify the transformation? (In \cite{sprinkle04domain} et al. propose that the amount of effort required to codify migration should be directly proportional to the number of changes between original and evolved metamodel).
-		\item \textbf{Clarity}: How easy is it to read and understand the transformation? (For example, is a well-known or standardised language?)
+		\item \textbf{Clarity}: How easy is it to read and understand the used transformation? (For example, is a well-known or standardised language?)
 		\item \textbf{Extensions}: Which of the case extensions (described below) were implemented in the solution?
 \end{itemize}
 
-To further distinguish between solutions, three extensions to the core task were proposed. The first extension was added after the case was submitted, and was proposed by the workshop organisers and the solution authors. The second and third extension were included in the case by the thesis author. 
+To further distinguish between solutions, three extensions to the core task were proposed. The first extension was added after the case was submitted, and was proposed by the workshop organisers and the solution authors. The second and third extension were included in the case by the author. 
 
 \subsubsection{Extension 1: Alternative Object Flow State Migration Semantics}
 \label{sub:object_flow_states}
-Following the submission of the case, discussion on the TTC forums\footnote{\url{http://planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewgroup&groupid=4&Itemid=150} (registration required)} revealed an ambiguity in the UML 2.2 specification indicating that the migration semantics for the ObjectFlowState UML 1.4 concept are not clear from the UML 2.2 specification.
+Following the submission of the case, discussion on the TTC forums\footnote{\url{http://planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewgroup&groupid=4&Itemid=150} (registration required)} revealed an ambiguity in the UML 2.2 specification indicating that the migration semantics for the ObjectFlowState UML 1.4 concept are not clear from the UML 2.2 specification. The case was revised to incorporate both the original semantics (suggested by the author and described above) and an alternative semantics (suggested by a workshop participant via the TTC forums) for migrating ObjectFlowStates. The alternative semantics are now described.
 
 \textbf{In the core task} described above, instances of ObjectFlowState were migrated to instances of ObjectNode. Any instances of Transition that had an ObjectFlowState as their source or target were migrated to instances of ObjectFlow. Listing~\ref{lst:ofs_to_node} shows an example application of this migration semantics. The top line of Listing~\ref{lst:ofs_to_node} shows instances of UML 1.4 metaclasses, include an instance of ObjectFlowState. The bottom line of Listing~\ref{lst:ofs_to_node} shows the equivalent UML 2.2 instances according to this migration semantics. Note that the Transitions, t1 and t2, are migrated to an instance of ObjectFlow. Likewise, the instance of ObjectFlowState, s2, is migrated to an instance of ObjectFlow.
 
@@ -85,26 +85,26 @@ The alternative semantics were proposed on the TTC 2010 forums, and agreed as an
 \label{sub:concrete_syntax}
 The second extension relates to the appearance of activity diagrams. The UML specifications provide no formally defined metamodel for the concrete syntax of UML diagrams. However, some UML tools store diagrammatic information in a structured manner using XML or a modelling tool. For example, the Eclipse UML 2 tools \cite{mdt_uml2} store diagrams as GMF \cite{gronback09emp} diagram models.
 
-As such, submissions were invited to explore the feasibility of migrating the concrete syntax of the activity diagram shown in Figure~\ref{fig:activity} to the concrete syntax in their chosen UML 2 tool. To facilitate this, the case resources included an ArgoUML project\footnote{\url{http://argouml.tigris.org/}} containing the activity diagram shown in Figure~\ref{fig:activity}.
+Submissions were invited to explore the feasibility of migrating the concrete syntax of the activity diagram shown in Figure~\ref{fig:activity} to the concrete syntax in their chosen UML 2 tool. To facilitate this, the case resources included an ArgoUML project\footnote{\url{http://argouml.tigris.org/}} containing the activity diagram shown in Figure~\ref{fig:activity}.
 
 \subsubsection{Extension 3: XMI}
 \label{sub:xmi}
-The UML specifications indicate that UML models should be stored using XMI. However, because XMI has evolved at the same time as UML, UML 1.4 tools most likely produce XMI of a different version to UML 2.2 tools. For instance, ArgoUML produces XMI 1.2 for UML 1.4 models, while the Eclipse UML2 tools produce XMI 2.1 for UML 2.2.
+The UML specifications \cite{uml14,uml22} indicate that UML models should be stored using XMI. However, because XMI has evolved at the same time as UML, UML 1.4 tools most likely produce XMI of a different version to UML 2.2 tools. For instance, ArgoUML produces XMI 1.2 for UML 1.4 models, while the Eclipse UML2 tools produce XMI 2.1 for UML 2.2.
 
 As an extension to the core task, submissions were invited to consider how to migrate a UML 1.4 model represented in XMI 1.x to a UML 2.1 model represented in XMI 2.x. To facilitate this, the UML 1.4 model shown in Figure~\ref{fig:activity} was made available in XMI 1.2 as part of the case resources.
 
-Following the submission of the case, solutions were encouraged to solve this extension by Tom Morris, the project leader for ArgoEclipse and a committer on ArgoUML. On the TTC forums, Morris stated that ``We have nothing available to fill this hole currently, so any contributions would be hugely valuable.  Not only would achieve academic fame and glory from the contest, but you'd get to see your code benefit users of one of the oldest (10+ yrs) open source UML modeling tools.'' \footnote{\url{http://www.planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewdiscussion&groupid=4&topicid=20&Itemid=150} (registration required)}
+Following the submission of the case, Tom Morris, the project leader for ArgoEclipse and a committer on ArgoUML, encouraged solutions to consider the extension described above. ArgoUML cannot, at present, migrate models from UML 1 to UML 2.  On the TTC forums, Morris stated that ``We have nothing available to fill this hole currently, so any contributions would be hugely valuable.  Not only would achieve academic fame and glory from the contest, but you'd get to see your code benefit users of one of the oldest (10+ yrs) open source UML modeling tools.'' \footnote{\url{http://www.planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewdiscussion&groupid=4&topicid=20&Itemid=150} (registration required)}
 
 \subsection{Model Migration Solution in Epsilon Flock}
 \label{subsec:ttc_solution}
-This section discusses the Flock solution to the TTC case described above (the evolution of UML activity diagrams).  
+This section describes a Flock solution for migrating UML activity diagrams in response to the evolution described above. The solution was developed by the author, and, at the workshop, compared with migration strategies written in other languages. The workshop participants and organisers rated each tool.
 
-The solution was developed in an iterative and incremental manner, using the following process:
+The Flock migration strategy was developed in an iterative and incremental manner, using the following process, starting with an empty migration strategy:
 
 \begin{enumerate}
-	\item Change the Flock migration strategy.
 	\item Execute Flock on the original model, producing a migrated model.
 	\item Compare the migrated model with the reference model provided in the case resources.
+	\item Change the Flock migration strategy.
 	\item Repeat until the migrated and reference models were the same.
 \end{enumerate}
 
@@ -211,7 +211,7 @@ As discussed in Section~\ref{sec:flock}, Flock is built atop Epsilon, which incl
 
 Consequently, the migration strategy developed for the core task works for all of the types of model supported by EMC. To migrate a model encoded in XMI 1.2 rather than in XMI 2.1, the user must select a different option when executing the Flock migration strategy. Otherwise, no other changes are required.
 
-\subsubsection{Results}
+\subsubsection{Comparison with other solutions}
 At the workshop, solutions to the migration case described in Section~\ref{subsec:ttc_case} were presented. Each solution was allocated two opponents who highlighted weaknesses of each approach. Following the solution presentations and opposition statements, each solution was scored using the four criteria described above, correctness, clarity, conciseness and number of extensions solved. Every workshop participants scored each solution on clarity and conciseness. The workshop organisers scored each solution on correctness and number of extensions solved, as these criteria could be measured objectively. Epsilon Flock was awarded first position for the migration case.
 
 The opposition statements highlighted two weaknesses of Flock. Firstly, there is some duplicated code in Listing~\ref{lst:pseudostates}: the \texttt{migrate Pseudostate to X} statement appears several times. The duplication exists because Flock only allows one-to-one mappings between original and evolved metamodel types. The conservative copy algorithm would need to be extended to allow one-to-many mappings to remove this kind of duplication.
