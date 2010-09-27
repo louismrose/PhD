@@ -40,6 +40,7 @@ delete <originalType>
 \end{lstlisting}
 
 \subsubsection{Execution Semantics}
+\label{subsubsec:execution_semantics}
 A Flock module has the following behaviour when executed:
 
 \begin{enumerate}
@@ -59,7 +60,7 @@ A Flock module has the following behaviour when executed:
 \end{enumerate}
 
 
-\subsubsection{Conservative Copying}
+\subsubsection{Conservative Copy}
 \label{subsubsec:conservative_copying}
 % TODO A detailed example of conservative copy + equivalence establishment might be useful
 Flock contributes an algorithm, termed \emph{conservative copy}, that copies model elements from original to migrated model only when those model elements conform to the evolved metamodel. Because of its conservative copy algorithm, Flock is a hybrid of new target and existing target transformation languages. This section discusses the conservative copying algorithm in more detail.
@@ -86,7 +87,54 @@ Epsilon includes a model connectivity layer (EMC), which provides a common inter
 
 Finally, some categories of model value must be converted before being copied from the original to the migrated model. Again, the need for and semantics of this conversion varies over modelling frameworks. Reference values typically require conversion before copying. In this case, the mappings between original and migrated model elements maintained by the Flock runtime can be used to perform the conversion. In other cases, the target modelling framework must be used to perform the conversion, such as when EMF enumeration literals are to be copied.
 
+\paragraph{Conservative Copy Example} An example is now used to illustrate the semantics of conservative copy. Consider the original and evolved metamodels shown in Figure~\ref{fig:cc_eg_mms}, which are simplifications of two versions of the metamodel from the MDE project described in Appendix~\ref{ProcessOriented}. 
 
+\begin{figure}
+	\centering
+	\subfigure[Original metamodel.]
+	{
+	    \label{fig:cc_eg_original}
+	    \includegraphics[width=8.5cm]{5.Implementation/images/cc_eg_original.pdf}
+	}
+	\subfigure[Evolved metamodel.]
+	{
+	    \label{fig:cc_eg_evolved}
+	    \includegraphics[width=8.5cm]{5.Implementation/images/cc_eg_evolved.pdf}
+	}
+	\caption{Exemplar Process-Oriented metamodel evolution}
+\label{fig:cc_eg_mms}
+\end{figure}
+
+The original metamodel, shown in Figure~\ref{fig:cc_eg_original}, has been evolved to distinguish between \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt}s that are a source for a \texttt{Ch\-an\-n\-el} and \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt}s that are a target for a \texttt{Ch\-an\-n\-el} by making \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} abstract and introducing two subtypes, \texttt{Re\-a\-di\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} and \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt}, as shown in Figure~\ref{fig:cc_eg_evolved}.
+
+Suppose that the model shown in Figure~\ref{fig:cc_eg_model}, which conforms to the original metamodel (Figure~\ref{fig:cc_eg_original}) is to be migrated. The model comprises thre \texttt{Pr\-oc\-e\-ss}es named \emph{delta}, \emph{prefix} and \emph{minus}; three \texttt{Ch\-an\-n\-el}s named \emph{a}, \emph{b} and \emph{c}; and six \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt}s named \emph{a?}, \emph{a!}, \emph{b?}, \emph{b!}, \emph{c?} and \emph{c!}.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[scale=0.5]{A.2.ProcessOriented/images/4_model.png}
+	\caption{Exemplar Process-Oriented model prior to migration}
+	\label{fig:cc_eg_model}
+\end{figure}
+
+Conservative copy takes as input the original model (Figure~\ref{fig:cc_eg_model}) and a set of equivalences over original and evolved metamodel types. The set of equivalences is derived from user-defined \texttt{mi\-gr\-a\-te} rules in the Flock source code, as described in Section~\ref{subsubsec:execution_semantics}. For now, let us assume that no user-defined \texttt{mi\-gr\-a\-te} rules have been provided and, consequently, equivalences are established using type names (i.e. the equivalent of \texttt{Pr\-oc\-e\-ss} is \texttt{Pr\-oc\-e\-ss}, the equivalent of \texttt{Ch\-an\-n\-el} is \texttt{Ch\-an\-n\-el}, etc).
+
+Conservative copy is executed once for each element of the original model, creating an equivalent element in the migrated model and copying values from original to migrated model. The metamodel evolution shown in Figure~\ref{fig:cc_eg_mms} has not affected the \texttt{Pr\-oc\-e\-ss} type, and hence for each \texttt{Pr\-oc\-e\-ss} in the original model, conservative copy will create a \texttt{Pr\-oc\-e\-ss} in the migrated model and copy the values of all features.
+
+For each \texttt{Ch\-an\-n\-el} in the original model, conservative copy will create an equivalent \texttt{Ch\-an\-n\-el} in the migrated model and copy the value of the \texttt{na\-me} feature from original to migrated model element. However, the values of the \texttt{re\-ad\-er} and \texttt{wr\-it\-er} features will not be copied by conservative copy because during metamodel evolution the type of these features has been changed (from \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} to \texttt{Re\-a\-di\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} and \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt}, respectively).
+
+The \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} type has become abstract during metamodel evolution and can no longer be instantiated. Therefore, for each \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} in the original model, conservative copy will not create an equivalent \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} in the migrated model.
+
+As described in Section~\ref{subsubsec:execution_semantics}, user-defined rules can control the set of equivalences used by conservative copy. Suppose the rules shown in Listing~\ref{lst:cc_eg_rules} are used to migrate the component model shown in Figure~\ref{fig:cc_eg_model}.
+
+\begin{lstlisting}[float=tbp, caption=Redefining equivalences for the Component model migration., label=lst:cc_eg_rules, language=Flock]
+migrate ConnectionPoint to ReadingConnectionPoint when: original.outgoing.isDefined()
+migrate ConnectionPoint to WritingConnectionPoint when: original.incoming.isDefined()
+\end{lstlisting}
+
+From these rules, Flock will suggest \texttt{Re\-a\-di\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} or \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} as an equivalent type for \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt}s in the original model. Consequently, conservative copy will create an \texttt{Re\-a\-di\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} or \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} for each \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} in the original model and copy the values of the \texttt{na\-me}, \texttt{in\-co\-mi\-ng} and \texttt{ou\-tg\-oi\-ng} features, which have not been affected by metamodel evolution.
+
+\emph{Ask Richard and Fiona: Would this section be clearer if I represented the set of equivalences as a relation? I think of it as set of triples: source, target and a guard (which defaults to true). Perhaps it might be easier to explain as a relation with a set of conditions?}
+ 
 \subsubsection{Development and User Tools}
 As discussed in Section~\ref{sec:analysing_existing_techniques}, models and metamodels are typically kept separate. Flock migration strategies can be distributed by the metamodel developer in two ways. An extension point defined by Flock provides a generic user interface for migration strategy execution. Alternatively, metamodel developers can elect to build their own interface, delegating execution responsibility to \texttt{FlockModule}. We anticipate the latter to be useful for production environments using model or source code management repositories.
 
@@ -114,7 +162,7 @@ migrate Transition {
 }
 \end{lstlisting}
 
-\subsubsection{Petri Nets in Flock}
+\subsubsection{UML Class Diagrams in Flock}
 Figure~\ref{fig:uml_mms} illustrates a subset of the changes made between UML 1.5 and UML 2.0. Only class diagrams are considered, and features that did not change are omitted. In Figure~\ref{fig:original_uml_mm}, association ends and attributes are specified explicitly and separately. In Figure~\ref{fig:evolved_uml_mm}, the \texttt{Pr\-op\-er\-ty} class is used instead. The Flock migration strategy (Listing~\ref{lst:flock-uml}) for Figure~\ref{fig:uml_mms} is now discussed.
 
 \begin{lstlisting}[caption=UML model migration in Flock, label=lst:flock-uml, language=Flock]

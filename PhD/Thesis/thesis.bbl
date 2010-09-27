@@ -402,6 +402,11 @@ Giovanna Guerrini, Marco Mesiti, and Daniele Rossi.
 \newblock In {\em Proc. Workshop on Web Information and Data Management}, pages
   39--44, 2005.
 
+\bibitem[Halstead 1977]{halstead77softwarescience}{$~$}
+Maurice~H. Halstead.
+\newblock {\em Elements of Software Science}.
+\newblock Elsevier Science Inc., 1977.
+
 \bibitem[Hearnden {\it et al.}\  2006]{hearnden06incremental}{$~$}
 David Hearnden, Michael Lawley, and Kerry Raymond.
 \newblock Incremental model transformation for the evolution of model-driven

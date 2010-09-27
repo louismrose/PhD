@@ -3,11 +3,18 @@
 \section{Migration Tool Comparison}
 \label{sec:collaborative_comparison}
 
-As discussed in Chapter~\ref{LiteratureReview}, several tools for managing co-evolution are described in the literature. Chapter~\ref{Implementation} proposes a further tool, Epsilon Flock. While each tool has strengths and weaknesses, little is known about how migration tools compare in practice, which makes tool selection more challenging. Consequently. Chapter~\ref{Analysis} identified the following thesis requirements: \emph{This thesis must compare and evaluate existing languages for specifying model migration strategies.} \emph{This thesis must implement and evaluate a domain-specific language for specifying and executing model migration strategies, \textbf{comparing it to existing languages for specifying model migration strategies}.}
+As discussed in Chapter~\ref{LiteratureReview}, several tools for managing co-evolution are described in the literature. Chapter~\ref{Implementation} introduces a further tool, Epsilon Flock. While each tool has strengths and weaknesses, little is known about how migration tools compare in practice, which makes tool selection more challenging. Consequently. Chapter~\ref{Analysis} identified the following thesis requirements:
 
-To approach these two requirements, this section describes work that compares Flock and three existing model migration that were selected from those described in Chapter~\ref{Analysis}. Following the process outlined in Section~\ref{sec:method}, the tools were applied to two co-evolution examples to facilitate their comparison. To improve the validity of the comparison, the developers of each tool were invited to participate. The remainder of this section reports our experiences with each tool (Section~\ref{sec:results}), and synthesises advice and guidelines for identifying the most appropriate model migration tool in different situations (Section~\ref{sec:discussion}).
+\begin{itemize}
+	\item \emph{This thesis must compare and evaluate existing languages for specifying model migration strategies.}
+	\item \emph{This thesis must implement and evaluate a domain-specific language for specifying and executing model migration strategies, \textbf{comparing it to existing languages for specifying model migration strategies}.}
+\end{itemize}
 
+To approach these two requirements, this section describes work that compares Flock and three existing model migration that were selected from those described in Chapter~\ref{Analysis}. Following the process outlined in Section~\ref{sec:method}, the tools were applied to two co-evolution examples. To improve the validity of the comparison, the developers of each tool were invited to participate. The remainder of this section reports our experiences with each tool (Section~\ref{sec:results}), and synthesises advice and guidelines for identifying the most appropriate model migration tool in different situations (Section~\ref{sec:discussion}).
+
+\begin{framed}
 This section is based on joint work with Markus Herrmannsd\"{o}erfer (a research student at Technische Universit\"at M\"unchen), James Williams (a research student in this department), Dimitrios Kolovos (a lecturer in this department) and Kelly Garc\'{e}s (a research student at EMN-INRIA / LINA-INRIA in Nantes), and has been published in \cite{rose10comparison}. Garc\'{e}s provided assistance with installing and configuration one of the migration tools, and commented on a draft of the paper. Herrmannsd\"{o}erfer, Williams and Kolovos played a larger role in the comparison. Here, the work is narrated to make clear their contributions.
+\end{framed}
 
 \subsection{Comparison Method}
 \label{sec:method}
@@ -17,7 +24,7 @@ The comparison described in this section is based on practical application of th
 
 \subsubsection{Co-Evolution Examples}
 \label{subsec:method_examples}
-To compare migration tools, two examples of co-evolution were used. The first is a well-known problem in the model migration literature and was used to test the installation and configuration of the migration tools, as discussed in Section~\ref{subsec:method_process}. The second is a larger example taken from a real-world model-driven development project, and was identified as a potentially useful example for co-evolution case studies in Chapter~\ref{Analysis} and in \cite{herrmannsdoerfer09gmf}.
+To compare migration tools, two examples of co-evolution were used. The first, Petri nets, is a well-known problem in the model migration literature and was used to test the installation and configuration of the migration tools. The second, GMF, is a larger example taken from a real-world model-driven development project, and was identified as a potentially useful example for co-evolution case studies in Chapter~\ref{Analysis} and in \cite{herrmannsdoerfer09gmf}.
 
 \paragraph{Petri Nets.}
 The first example is an evolution of a Petri net metamodel, previously used to describe the implementation of Epsilon Flock (Section~\ref{sec:flock}), and in \cite{cicchetti08automating,garces09managing,wachsmuth07metamodel} to discuss co-evolution and model migration.
@@ -38,18 +45,34 @@ The first example is an evolution of a Petri net metamodel, previously used to d
 \label{fig:petri_nets_mms_repeated}
 \end{figure}
 
-In Figure~\ref{fig:petri_nets_original_mm_repeated}, a Petri \mm{Net} comprises \mm{Place}s and \mm{Transition}s. A \mm{Place} has any number of \mm{src} or \mm{dst} \mm{Transition}s. Similarly, a \mm{Transition} has at least one \mm{src} and \mm{dst} \mm{Place}. In this example, the metamodel in Figure~\ref{fig:petri_nets_original_mm_repeated} is to be evolved to support weighted connections between \mm{Place}s and \mm{Transition}s and between \mm{Transition}s and \mm{Place}s.
+In Figure~\ref{fig:petri_nets_original_mm_repeated}, a Petri \mm{Net} comprises \mm{Place}s and \mm{Transition}s. A \mm{Place} has any number of \mm{src} or \mm{dst} \mm{Transition}s. Similarly, a \mm{Transition} has at least one \mm{src} and \mm{dst} \mm{Place}. In this example, the metamodel in Figure~\ref{fig:petri_nets_original_mm_repeated} is evolved to support weighted connections between \mm{Place}s and \mm{Transition}s and between \mm{Transition}s and \mm{Place}s.
 
 The evolved metamodel is shown in Figure~\ref{fig:petri_nets_evolved_mm_repeated}. \mm{Place}s are connected to \mm{Transition}s via instances of \mm{PTArc}. Likewise, \mm{Transition}s are connected to \mm{Place}s via \mm{TPArc}. Both \mm{PTArc} and \mm{TPArc} inherit from \mm{Arc}, and therefore can be used to specify a \mm{weight}.
 
 \paragraph{GMF.}
-The second example is taken from the Graphical Modeling Framework (GMF) \cite{gronback09emp}, an Eclipse project for generating graphical editors for models. The development of GMF is model-driven and utilises four domain-specific metamodels. Here, we consider one of those metamodels, GMF Graph, and its evolution between GMF versions 1.0 and 2.0. 
+The second example is taken from GMF \cite{gronback09emp}, an Eclipse project for generating graphical editors for models. The development of GMF is model-driven and utilises four domain-specific metamodels. Here, we consider one of those metamodels, GMF Graph, and its evolution between GMF versions 1.0 and 2.0. 
 
-The GMF Graph metamodel (not illustrated) describes the appearance of the generated graphical model editor. The metaclasses \mm{Ca\-nv\-as}, \mm{Fi\-gu\-re}, \mm{No\-de}, \mm{Di\-ag\-r\-amLa\-b\-el}, \mm{Co\-nn\-ec\-ti\-on}, and \mm{Co\-mp\-ar\-tm\-e\-nt} are used to represent components of the graphical model editor to be generated. The evolution in the GMF Graph metamodel was driven by analysing the usage of the \mm{Fi\-gu\-re\#re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference, which relates \mm{Fi\-gu\-res} to the \mm{Di\-ag\-ramEl\-em\-en\-ts} that use them. As described in the GMF Graph documentation\footnote{\url{http://wiki.eclipse.org/GMFGraph_Hints}}, the \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference increased the effort required to re-use figures, a common activity for users of GMF. Furthermore, \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} was used only by the GMF code generator to determine whether an accessor
+\begin{figure}[htbp]
+	\centering
+	\subfigure[Original metamodel.]
+	{
+	    \label{fig:gmf_graph_mm_original}
+	    \includegraphics[width=10cm]{6.Evaluation/images/gmf1.pdf}
+	}
+	\subfigure[Evolved metamodel.]
+	{
+	    \label{fig:gmf_graph_mm_evolved}
+	    \includegraphics[width=10cm]{6.Evaluation/images/gmf2.pdf}
+	}
+	\caption{GMF graph metamodel evolution}
+\label{fig:gmf_graph_mms}
+\end{figure}
+
+The GMF Graph metamodel (Figure~\ref{fig:gmf_graph_mms}) describes the appearance of the generated graphical model editor. The metaclasses \mm{Ca\-nv\-as}, \mm{Fi\-gu\-re}, \mm{No\-de}, \mm{Di\-ag\-r\-amLa\-b\-el}, \mm{Co\-nn\-ec\-ti\-on}, and \mm{Co\-mp\-ar\-tm\-e\-nt} are used to represent components of the graphical model editor to be generated. The evolution in the GMF Graph metamodel was driven by analysing the usage of the \mm{Fi\-gu\-re\#re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference, which relates \mm{Fi\-gu\-res} to the \mm{Di\-ag\-ramEl\-em\-en\-ts} that use them. As described in the GMF Graph documentation\footnote{\url{http://wiki.eclipse.org/GMFGraph_Hints}}, the \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference increased the effort required to re-use figures, a common activity for users of GMF. Furthermore, \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} was used only by the GMF code generator to determine whether an accessor
 %\footnote{Colloquially known as a ``getter''.}
 should be generated for nested \mm{Fi\-gu\-re}s.
 
-In GMF 2.0, the Graph metamodel was evolved to make re-using figures more straightforward by introducing a proxy~\cite{gamma95patterns} for \mm{Fi\-gu\-re}, termed \mm{Fi\-gu\-reDe\-sc\-ri\-pt\-or}. The original \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference was removed, and an extra metaclass, \mm{Ch\-il\-dAc\-ce\-ss}, was added to make more explicit the original purpose of \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} (accessing nested \mm{Fi\-gu\-re}s).
+During the development of GMF 2.0, the Graph metamodel from GMF 1.0 was evolved -- as shown in Figure~\ref{fig:gmf_graph_mm_evolved} -- to facilitate greater re-use of figures by introducing a proxy~\cite{gamma95patterns} for \mm{Fi\-gu\-re}, termed \mm{Fi\-gu\-reDe\-sc\-ri\-pt\-or}. The original \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference was removed, and an extra metaclass, \mm{Ch\-il\-dAc\-ce\-ss}, was added to make more explicit the original purpose of \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} (accessing nested \mm{Fi\-gu\-re}s).
 
 GMF provides a migrating algorithm that produces a model conforming to the evolved Graph metamodel from a model conforming to the original Graph metamodel. In GMF, migration is implemented using Java. The GMF source code includes two example editors, for which the source code management system contains versions conforming to GMF 1.0 and GMF 2.0. For the comparison of migration tools described in this paper, the migrating algorithm and example editors provided by GMF were used to determine the correctness of the migration strategies produced by using each model migration tool. 
 
