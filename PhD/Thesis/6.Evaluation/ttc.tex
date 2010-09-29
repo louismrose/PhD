@@ -2,11 +2,11 @@
 
 \section{Transformation Tools Contest}
 \label{sec:ttc}
-The Transformation Tools Contest (TTC) is a workshop series that seeks to compare and contrast tools for performing model and graph transformation. At TTC 2010\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?Itemid=132}}, two rounds of submissions were invited: cases (transformation problems, three of which are selected by the workshop organisers) and solutions to the selected cases. In addition, TTC 2010 include a \emph{live contest}: during the workshop a further transformation problem was announced and solutions submitted.
+In contrast to the previous section, which compared Flock to three co-evolution tools, the evaluation performed in this section compares Flock with model-to-model transformation tools. As discussed in Chapter~\ref{Analysis}, model migration can be regarded as a specialisation of model-to-model transformation. Chapter~\ref{Implementation} introduces Flock, a language tailored for model migration. This section assess the suitability of Flock for specifying model migration and for specifying model-to-model transformation by comparison to other model-to-model transformation languages. 
 
-Participation in TTC 2010 facilitated further evaluation of Flock. Flock and 8 other transformation tools were assessed for a model migration problem based on a real-world example of metamodel evolution from the UML \cite{uml22}. As part of the live contest, Flock was also assessed along with 13 transformation tools for a model transformation problem. Compared to the evaluation described in Section~\ref{sec:collaborative_comparison}, the evaluation in this section compares Flock to a wider range of tools (model and graph transformation tools, and not just model migration tools), and investigates the suitability of Flock for specifying model transformation (and not just model migration).
+To this end, the author participated in the 2010 edition of the Transformation Tools Contest (TTC), a workshop series that seeks to compare and contrast tools for performing model and graph transformation. At TTC 2010\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?Itemid=132}}, two rounds of submissions were invited: cases (transformation problems, three of which are selected by the workshop organisers) and solutions to the selected cases. Nine transformation tools, including Flock, were assessed for a model migration problem based on a real-world example of metamodel evolution from the UML \cite{uml22}. In addition, TTC 2010 included a \emph{live contest} in which a further transformation problem was announced and solutions submitted during the workshop. Fourteen transformation tools, including Flock, were compared in the live contest. 
 
-The remainder of this section describes the model migration problem (Section~\ref{subsec:ttc_case}) and Flock solution (Section~\ref{subsec:ttc_solution}), and the use of Flock for specifying a model transformation in the live contest (Section~\ref{subsec:ttc_live_contest}).
+Compared to the evaluation described in Section~\ref{sec:collaborative_comparison}, the evaluation in this section compares Flock to a wider range of tools (model and graph transformation tools, and not just model migration tools), and investigates the suitability of Flock for specifying model transformation (and not just model migration). The remainder of this section describes the model migration problem (Section~\ref{subsec:ttc_case}) and Flock solution (Section~\ref{subsec:ttc_solution}), and the use of Flock for specifying a model transformation in the live contest (Section~\ref{subsec:ttc_live_contest}).
 
 \subsection{Model Migration Case}
 \label{subsec:ttc_case}
@@ -63,21 +63,42 @@ To further distinguish between solutions, three extensions to the core task were
 \label{sub:object_flow_states}
 Following the submission of the case, discussion on the TTC forums\footnote{\url{http://planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewgroup&groupid=4&Itemid=150} (registration required)} revealed an ambiguity in the UML 2.2 specification indicating that the migration semantics for the ObjectFlowState UML 1.4 concept are not clear from the UML 2.2 specification. The case was revised to incorporate both the original semantics (suggested by the author and described above) and an alternative semantics (suggested by a workshop participant via the TTC forums) for migrating ObjectFlowStates. The alternative semantics are now described.
 
-\textbf{In the core task} described above, instances of ObjectFlowState were migrated to instances of ObjectNode. Any instances of Transition that had an ObjectFlowState as their source or target were migrated to instances of ObjectFlow. Listing~\ref{lst:ofs_to_node} shows an example application of this migration semantics. The top line of Listing~\ref{lst:ofs_to_node} shows instances of UML 1.4 metaclasses, include an instance of ObjectFlowState. The bottom line of Listing~\ref{lst:ofs_to_node} shows the equivalent UML 2.2 instances according to this migration semantics. Note that the Transitions, t1 and t2, are migrated to an instance of ObjectFlow. Likewise, the instance of ObjectFlowState, s2, is migrated to an instance of ObjectFlow.
+\textbf{In the core task} described above, instances of \texttt{Ob\-je\-ctFl\-owSt\-a\-te} were migrated to instances of \texttt{Ob\-je\-ctNo\-de}. Any instances of \texttt{Tr\-an\-si\-ti\-on} that had an \texttt{Ob\-je\-ctFl\-owSt\-a\-te} as their source or target were migrated to instances of \texttt{Ob\-je\-ctFl\-ow}. Figure~\ref{fig:ofs_to_node} shows an example application of this migration semantics. Structures such as the one shown in Figure~\ref{fig:ofs_to_node_before} are migrated to an equivalent structure shown in Figure~\ref{fig:ofs_to_node_after}. The \texttt{Tr\-an\-si\-ti\-on}s, \texttt{t1} and \texttt{t2}, are migrated to instances of \texttt{Ob\-je\-ctFl\-ow}. Likewise, the instance of \texttt{Ob\-je\-ctFl\-owSt\-a\-te}, \texttt{s2}, is migrated to an instance of \texttt{Ob\-je\-ctNo\-de}.
 
-\begin{lstlisting}[caption=Migrating Actions, label=lst:ofs_to_node]
-s1:State <- t1:Transition -> s2:ObjectFlowState <- t2:Transition -> s3:State
+\begin{figure}[htbp]
+	\centering
+	\subfigure[ObjectFlowState structure in UML 1.4]
+	{
+	    \label{fig:ofs_to_node_before}
+	    \includegraphics[height=2.5cm]{6.Evaluation/images/ttc/core_before.pdf}
+	}
+	\subfigure[Equivalent ObjectNode structure in UML 2.2]
+	{
+	    \label{fig:ofs_to_node_after}
+	    \includegraphics[height=2.5cm]{6.Evaluation/images/ttc/core_after.pdf}
+	}
+	\caption{Migrating Actions for the Core Task}
+\label{fig:ofs_to_node}
+\end{figure}
 
-s1:ActivityNode <- t1:ObjectFlow -> s2:ObjectNode <- t2:ObjectFlow -> s3:ActivityNode
-\end{lstlisting}
 
-\textbf{This extension} considered an alternative migration semantics for ObjectFlowState. For this extension, instances of ObjectFlowState (and any connected Transitions) were migrated to instances ObjectFlow, as shown by the example in Listing~\ref{lst:ofs_to_flow} in which the UML 2.2 ObjectFlow, f1, replaces t1, t2 and s2.
+\textbf{This extension} considered an alternative migration semantics for ObjectFlowState. For this extension, instances of \texttt{Ob\-je\-ctFl\-owSt\-a\-te} (and any connected \texttt{Tr\-an\-si\-ti\-on}s) were migrated to instances of  \texttt{Ob\-je\-ctFl\-ow}, as shown in Figure~\ref{fig:ofs_to_flow} in which the UML 2.2 \texttt{Ob\-je\-ctFl\-ow}, \texttt{f1}, replaces \texttt{t1}, \texttt{t2} and \texttt{s2}.
 
-\begin{lstlisting}[caption=Migrating Actions, label=lst:ofs_to_flow]
-s1:State <- t1:Transition -> s2:ObjectFlowState <- t2:Transition -> s3:State
-
-s1:ActivityNode <- f1:ObjectFlow -> s3:ActivityNode
-\end{lstlisting}
+\begin{figure}[htbp]
+	\centering
+	\subfigure[ObjectFlowState structure in UML 1.4]
+	{
+	    \label{fig:ofs_to_flow_before}
+	    \includegraphics[height=2.5cm]{6.Evaluation/images/ttc/core_before.pdf}
+	}
+	\subfigure[Equivalent ObjectFlow structure in UML 2.2]
+	{
+	    \label{fig:ofs_to_flow_after}
+	    \includegraphics[height=2.5cm]{6.Evaluation/images/ttc/ext_after.pdf}
+	}
+	\caption{Migrating Actions for Extension 1}
+\label{fig:ofs_to_flow}
+\end{figure}
 
 The alternative semantics were proposed on the TTC 2010 forums, and agreed as an extension to the core task by consensus between the solution authors and the workshop organisers. 
 
