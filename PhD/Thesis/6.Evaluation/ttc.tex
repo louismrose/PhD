@@ -4,9 +4,9 @@
 \label{sec:ttc}
 In contrast to the previous section, which compared Flock to three co-evolution tools, the evaluation performed in this section compares Flock with model-to-model transformation tools. As discussed in Chapter~\ref{Analysis}, model migration can be regarded as a specialisation of model-to-model transformation. Chapter~\ref{Implementation} introduces Flock, a language tailored for model migration. This section assess the suitability of Flock for specifying model migration and for specifying model-to-model transformation by comparison to other model-to-model transformation languages. 
 
-To this end, the author participated in the 2010 edition of the Transformation Tools Contest (TTC), a workshop series that seeks to compare and contrast tools for performing model and graph transformation. At TTC 2010\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?Itemid=132}}, two rounds of submissions were invited: cases (transformation problems, three of which are selected by the workshop organisers) and solutions to the selected cases. Nine transformation tools, including Flock, were assessed for a model migration problem based on a real-world example of metamodel evolution from the UML \cite{uml22}. In addition, TTC 2010 included a \emph{live contest} in which a further transformation problem was announced and solutions submitted during the workshop. Fourteen transformation tools, including Flock, were compared in the live contest. 
+To this end, the author participated in the 2010 edition of the Transformation Tools Contest (TTC), a workshop series that seeks to compare and contrast tools for performing model and graph transformation. At TTC 2010\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?Itemid=132}}, two rounds of submissions were invited: cases (transformation problems, three of which are selected by the workshop organisers) and solutions to the selected cases. Nine transformation tools, including Flock, were assessed for a model migration problem based on a real-world example of metamodel evolution from the UML \cite{uml22}.
 
-Compared to the evaluation described in Section~\ref{sec:collaborative_comparison}, the evaluation in this section compares Flock to a wider range of tools (model and graph transformation tools, and not just model migration tools), and investigates the suitability of Flock for specifying model transformation (and not just model migration). The remainder of this section describes the model migration problem (Section~\ref{subsec:ttc_case}) and Flock solution (Section~\ref{subsec:ttc_solution}), and the use of Flock for specifying a model transformation in the live contest (Section~\ref{subsec:ttc_live_contest}).
+Compared to the evaluation described in Section~\ref{sec:collaborative_comparison}, the evaluation in this section compares Flock to a wider range of tools (model and graph transformation tools, and not just model migration tools), and investigates the suitability of Flock for specifying model transformation (and not just model migration). The remainder of this section describes the model migration problem (Section~\ref{subsec:ttc_case}) and Flock solution (Section~\ref{subsec:ttc_solution}).
 
 \subsection{Model Migration Case}
 \label{subsec:ttc_case}
@@ -239,46 +239,9 @@ The opposition statements highlighted two weaknesses of Flock. Firstly, there is
 
 Secondly, the body of Flock rules are specified in an imperative manner. Consequently, reasoning about the correctness of the a migration strategy is arguably more difficult than in languages that use a purely declarative syntax. This point is discussed further in Section~\ref{sec:limitations}, which considers the limitations of the thesis. 
 
-\subsection{Epsilon Flock in the Live Contest}
-\label{subsec:ttc_live_contest}
-TTC 2010 also invited the workshop participants to take part in a live contest. A problem was announced at the start of the workshop, and participants developed their solutions during the first day. The solutions were presented in the workshop and assessed in four categories. Flock was awarded first position for the \emph{exogenous transformation} category. The remainder of this section discusses the parts of the problem that relate to the exogenous transformation category and the Flock solution. 
-
-The live contest problem required several model management operations be combined to perform beta-reduction of a simplified lambda calculus. Flock was used to specify one of the model management operations: model transformation between two similar (but not identical) metamodels. Flock was chosen rather than a new-target transformation language because the metamodels shared several classes and features. Using Flock allowed automatic copying of the model elements conforming to the classes common to both source and target metamodel. In other words, transformation rules were specified only for those parts of the metamodels that differed.
-
-Flock was awarded first position by the workshop participants and organisers for the category in which it was entered. Participation in the live contest highlighted that, in addition to model migration, Flock can be used for specifying model transformation. In particular, Flock was appropriate because the source and target metamodels were similar (having several classes and features in common) and the conservative copy strategy reduced the number of rules required to specify the transformation.
-
-
-% \begin{lstlisting}[caption=Flock migration strategy for the TTC 2010 live contest, label=lst:live_contest_flock, language=Flock]
-% migrate Abstr {
-% 	migrated.boundVar = new BoundVar;
-% 	migrated.boundVar.name = original.bound;
-% }
-% 
-% migrate Var to Ref {
-% 	var migrated_var : Two!Var;
-% 	
-% 	if (original.isBound()) {
-% 		migrated_var = original.bindingContext().equivalent().boundVar;
-% 	} else {
-% 		migrated_var = new Two!FreeVar;
-% 		migrated_var.name = original.name;
-% 	}
-% 	
-% 	migrated.refersTo = migrated_var;
-% }
-% 
-% operation One!Var isBound() : Boolean {
-% 	return self.bindingContext().isDefined();
-% }
-% 
-% operation One!Var bindingContext() : One!Abstr {
-% 	return One!Abstr.all.selectOne(a|a.bound == self.name);
-% }
-% \end{lstlisting}
-
 
 \subsection{Summary}
-This section has discussed the way in which Flock was evaluated by participating in the 2010 edition of the Transformation Tools Contest (TTC). Flock was assessed by application to an example of migration from the UML and comparison with eight other model and graph transformation tools. Flock was awarded first prize by the workshop participants and organisers. Additionally, Flock was used as part of a solution to a live contest developed during the workshop. The live contest highlighted that Flock is suitable for specifying some types of model transformation (in particular, those in which the source and target metamodel have common classes and features), as Flock was awarded first prize in the exogenous transformation category.
+This section has discussed the way in which Flock was evaluated by participating in the 2010 edition of the Transformation Tools Contest (TTC). Flock was assessed by application to an example of migration from the UML and comparison with eight other model and graph transformation tools. Flock was awarded first prize by the workshop participants and organisers. 
 
 In addition to evaluating Flock, the work described in this section provides three further contributions. Firstly, the migration case submitted to TTC 2010, described in Section~\ref{subsec:ttc_case} provides a real-world example of co-evolution for use in future comparisons of model migration tools. The case is based on the evolution of UML, between versions 1.4 and 2.2. The migration strategy was devised by analysis of the UML specification, and by discussion between workshop participants.
 
