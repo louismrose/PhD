@@ -1,0 +1,30 @@
+module ExtractPerson;
+
+create Migrated : After from Original : Before;
+
+rule Newsgroups {
+	from
+		o : Before!Newsgroup
+	to
+		m : After!Newsgroup (
+%\highlight%			articles <- o.articles
+		)
+}
+
+rule Articles {
+	from
+		o : Before!Article
+	to
+		m : After!Article (
+%\highlight%			articleId  <- o.articleId,
+%\highlight%			subject    <- o.subject,
+%\highlight%			newsgroups <- o.newsgroups,
+%\highlight%			inReplyTo  <- o.inReplyTo,
+%\highlight%			date       <- o.date,
+%\highlight%			sender     <- p
+		),
+		p : After!Person (
+%\highlight%			name  <- o.sender.toName(),
+%\highlight%			email <- o.sender.toEmail()
+		)
+}

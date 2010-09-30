@@ -1,0 +1,30 @@
+%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+
+\newcommand{\mmfigure}[3]{
+	\begin{figure}
+		\centering
+		\subfigure[Original metamodel.]
+		{
+		    \label{fig:#1_#2_original_mm}
+		    \includegraphics[scale=0.66]{A.3.MigrationStrategies/images/#1/#2_before.pdf}
+		}
+		\subfigure[Evolved metamodel.]
+		{
+		    \label{fig:#1_#2_evolved_mm}
+		    \includegraphics[scale=0.66]{A.3.MigrationStrategies/images/#1/#2_after.pdf}
+		}
+		\caption{#3}
+	\label{fig:#1_#2}
+	\end{figure}
+}
+
+\newcommand{\miglistings}[3]{
+	\lstinputlisting[float=tbp, caption=#3 in ATL, label=lst:#1_#2_atl, language=ATL]
+	{A.3.MigrationStrategies/code/#1/#2.atl}
+
+	\lstinputlisting[float=tbp, caption=#3 in COPE, label=lst:#1_#2_cope, language=COPE]
+	{A.3.MigrationStrategies/code/#1/#2.cope}
+
+	\lstinputlisting[float=tbp, caption=#3 in Flock, label=lst:#1_#2_flock, language=Flock]
+	{A.3.MigrationStrategies/code/#1/#2.flock}
+}

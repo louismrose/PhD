@@ -269,10 +269,6 @@ Table~\ref{tab:model_operations_results_analysis_examples} shows the total numbe
 		\hline
 		(Literature) PetriNets        & 12  & 10   & 6  \\
 		\hline
-		(Newsgroup) Extract Person    & 9  & 6   & 5  \\
-		\hline
-		(Newsgroup) Resolve Replies   & 8  & 3   & 2  \\
-		\hline
 		(Process-Oriented) Split CP   & 8  & 1   & 1  \\
 		\hline
 		(Refactor) Cont to Ref        & 4  & 5   & 3  \\
@@ -311,7 +307,7 @@ The comparison hypothesis stated that \emph{specifying a migration strategy with
 		(Project) Example             & New & Existing & Conservative \\
 		\hline
 		\hline
-		(Newsgroup) Extract Person    & 9  &  6  &  5  \\
+		(Newsgroup) Extract Person    & 9  &  4  &  3  \\
 		\hline                       
 		(Newsgroup) Resolve Replies   &  8  &  3  &  2  \\
 		\hline                       
@@ -375,7 +371,7 @@ Two conclusions can be drawn from this discussion. Firstly, in general, fewer mo
 \subsubsection{Limitation 1: Duplication when migrating subtypes}
 For the GMF Graph example (Table~\ref{tab:model_operations_results}), conservative copy requires more model operations than existing-target. Investigation of this result revealed a limitation of the conservative copy implementation provided by Flock, which is now described and illustrated using a simplification of the GMF Graph co-evolution example.
 
-Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolution. In the real metamodel, the \texttt{figure} and \texttt{accessor} features are references to other metamodel classes, rather than attributes. When the metamodel evolved, the types of the \texttt{figure} and \texttt{accessor} features were changed. Here, let us assume that their types were changed from a string to an integer. The actual metamodel changes are described in Appendix~\ref{MigrationStrategies}.
+Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolution. In the real metamodel, the \texttt{figure} and \texttt{accessor} features are references to other metamodel classes, rather than attributes. When the metamodel evolved, the types of the \texttt{figure} and \texttt{accessor} features were changed. Here, let us assume that their types were changed from a string to an integer. The actual metamodel changes are described in Appendix~\ref{CoevolutionExamples}.
 
 \begin{figure}[htbp]
   \centering
@@ -385,7 +381,7 @@ Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolut
 \end{figure}
 
 In response to re-typing of the \texttt{figure} and \texttt{accessor} features, the
-migration strategy derived new values for the \texttt{figure} and \texttt{accessor} features. In the real example, a new model element was created and used to decorate \cite{gamma95patterns} each old value. In the simplified example presented here, the new integer value will be derived from the old string value by using its length. Appendix~\ref{MigrationStrategies} includes the strategies used to perform migration for the actual metamodel changes.
+migration strategy derived new values for the \texttt{figure} and \texttt{accessor} features. In the real example, a new model element was created and used to decorate \cite{gamma95patterns} each old value. In the simplified example presented here, the new integer value will be derived from the old string value by using its length. Appendix~\ref{CoevolutionExamples} includes the strategies used to perform migration for the actual metamodel changes.
 
 As demonstrated below, ATL and Groovy-for-COPE provide mechanisms for re-using migration code between subtypes. Migration of the \texttt{figure} feature can be specified once and used for migrating all subtypes of \texttt{DiagramElement}. Currently, Flock does not provide a mechanism for re-using migration code between subtypes.
 

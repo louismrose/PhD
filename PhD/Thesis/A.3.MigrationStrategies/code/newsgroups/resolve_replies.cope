@@ -1,0 +1,5 @@
+for (article in extractperson.Article.allInstances) {
+%\highlight%	def replyToId = article.unset(replyTo)
+%\highlight%  article.replyToId = replyToId
+%\highlight%  article.replyTo = Article.allInstances.find { it.articledId = article.replyToId } 
+}

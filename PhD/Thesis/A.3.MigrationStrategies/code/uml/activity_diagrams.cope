@@ -1,0 +1,56 @@
+for (model in activities.Model.allInstances) {
+	model.migrate(activities.Package)
+%\highlight%	def ownedElement = model.unset(ownedElement)
+%\highlight%	model.packagedElement = ownedElement
+}
+
+for (activity in activities.ActivityGraph.allInstances) {
+	activity.migrate(activities.Activity)
+%\highlight%  def top = activity.unset(top)
+%\highlight%	activity.node = top.subvertex
+%\highlight%  def transitions = activity.unset(transitions)
+%\highlight%	activity.edge = transitions
+%\highlight%  def partition = activity.unset(partition)
+%\highlight%	activity.group = partition
+}
+
+for (partition in activities.ActivityGraph.allInstances) {
+%\highlight%	def contents = partition.unset(contents)
+%\highlight%	partition.edges = contents.findAll{it -> it instanceof activities.Transition}
+%\highlight%	partition.nodes = contents.findAll{it -> it instanceof activities.StateVertex and not (it instanceof activities.ObjectFlowState)}
+}
+
+for (action in activities.ActionState.allInstances) {
+	action.migrate(activities.OpaqueAction)
+}
+
+for (pseudostate in activities.Pseudeostate) {
+	switch ( pseudostate.kind.toString() ) {
+	    case "pk_initial":
+	        pseudeostate.migrate(activities.InitialNode); break
+		case "pk_junction"
+			pseudeostate.migrate(activities.DecisionNode); break
+		case "pk_fork"
+			pseudeostate.migrate(activities.ForkNode); break
+		case "pk_join"
+			pseudeostate.migrate(activities.JoinNode); break
+	}
+}
+
+for (finalstate in activities.FinalState.allInstances) {
+	finalstate.migrate(activities.ActivityFinalNode)
+}
+
+for (transition in activities.ObjectFlow.allInstances.findAll{it -> it.target instanceof activities.ObjectFlowState}) {
+%\highlight%	transition.target = transition.target.outgoing.first.target
+}
+
+for (transition in activities.Transition.allInstances) {
+	transition.migrate(activities.ControlFlow)
+}
+
+for (guard in activities.Guard.allInstances) {
+	transition.migrate(activities.OpaqueExpression)
+%\highlight%  def expression = transition.unset(expression)
+%\highlight%	transition.body = expression.body
+}

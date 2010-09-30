@@ -1,4 +1,55 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+\chapter{Co-evolution Examples}
+\label{CoevolutionExamples}
 
-\chapter[Migration Strategies used for Evaluation][Migration Strategies]{Migration Strategies used for Evaluation}
-\label{MigrationStrategies}
+\input{A.3.MigrationStrategies/commands.tex}
+
+
+This appendix describes the co-evolution examples used for evaluation in Chapter~\ref{Evaluation}. The examples were taken from real-world MDE projects and are distinct from the examples used for analysis in Chapter~\ref{Analysis}. Each section details examples from one project, describing metamodel changes and model migration strategies. In accordance with the evaluation performed in Section~\ref{sec:quantitive}, each model migration strategy is presented in three model migration languages. Lines of code that contain \emph{a model operation} (a statement that changes the migrated model) are highlighted. Section~\ref{sec:quantitive} describes model operation and the three model migration languages in more detail.
+
+
+\section{Newsgroups Examples}
+This section describes a program for performing statistical analysis of NNTP newsgroups, developed by Dimitris Kolovos, a lecturer in this department. The program comprises a metamodel to capture domain-specific concepts, a text-to-model transformation for parsing newsgroup messages, and a model-to-model transformation for analysing the messages.
+
+The metamodel and transformations were developed in an iterative and incremental manner. Five iterations of the metamodel and transformations were made available by Kolovos, two of which involved metamodel changes that affected the conformance of existing models. In the other three iterations, the metamodel changes were additive and did not lead to model migration.
+
+\subsection{Extract Person}
+The Extract Person iteration involved separating the domain concepts of authors and articles. At the start of the iteration, the \texttt{Ar\-ti\-c\-le} class defined a string attribute called \texttt{se\-nd\-er} as shown in Figure~\ref{fig:newsgroups_extract_person_original_mm}. To make it easier to recognise articles written by the same people, the \texttt{Pe\-rs\-on} class was introduced, and the \texttt{se\-nd\-er} attribute was replaced with a reference to the \texttt{Pe\-rs\-on} class as shown in Figure~\ref{fig:newsgroups_extract_person_evolved_mm}.
+
+\mmfigure{newsgroups}{extract_person}{Newsgroups metamodel during the Extract Person iteration}
+
+Existing models were migrated by deriving a \texttt{Pe\-rs\-on} object from the \texttt{se\-nd-\-er} feature of each \texttt{Ar\-ti\-c\-le}. The values of the \texttt{se\-nd-\-er} feature used one of two forms: \texttt{username@domain.com (Full Name)} or \texttt{"Full Name" username@domain.com}.
+
+Listings~\ref{lst:newsgroups_extract_person_atl}, \ref{lst:newsgroups_extract_person_cope} and~\ref{lst:newsgroups_extract_person_flock} show the model migration strategy in ATL, COPE and Flock respectively. The \texttt{toEmail()} and \texttt{toName()} operations are used to extract names and email addresses, are defined without using any model operations, and are omitted from the listings below.
+
+\miglistings{newsgroups}{extract_person}{The Newsgroup Extract Person model migration}
+
+\subsection{Resolve Replies}
+The Resolve Replies iteration made explicit the lineage of each article by moving replies to an article such that they were contained in the original article. At the start of the iteration (Figure~\ref{fig:newsgroups_resolve_replies_original_mm}), each \texttt{Article} was assigned a unique identifier in the \texttt{articleId} feature. The \texttt{inReplyTo} feature was specified for \texttt{Article}s written in reply to others. At the end of the iteration, the \texttt{inReplyTo} attribute was replaced with a reference of type \texttt{Article}. The \texttt{inReplyTo} attribute was renamed to \texttt{inReplyToId} (and, in a future iteration, was removed from the metamodel).
+
+\mmfigure{newsgroups}{resolve_replies}{Newsgroups metamodel during the Resolve Replies iteration}
+
+Listings~\ref{lst:newsgroups_resolve_replies_atl}, \ref{lst:newsgroups_resolve_replies_cope} and~\ref{lst:newsgroups_resolve_replies_flock} show the model migration strategy in ATL, COPE and Flock respectively. Migration involved dereferencing the \texttt{inReplyTo} value to determine a parent \texttt{Article}, and then setting the \texttt{inReplyTo} reference to the parent \texttt{Article}.
+
+\miglistings{newsgroups}{resolve_replies}{The Newsgroup Resolve Replies model migration}
+
+
+\section{UML Example}
+This section describes the co-evolution example taken from the evolution of the Unified Modeling Language (UML) between versions 1.4 \cite{uml14} and 2.2 \cite{uml22}. Activity diagrams, in particular, changed radically between UML versions 1.4 and 2.2. In the former, activities were defined as a special case of state machines, while in the latter they were defined atop a more general semantic base\footnote{A variant of generalised coloured Petri nets.} \cite{selic05uml2}.
+
+The UML 1.4 and 2.2 specifications are defined in different metamodelling languages. The former uses XMI 1.4 and the latter XMI 2.2. Of the co-evolution tools discussed in this thesis, only Epsilon Flock can be used with both XMI 1.4 and XMI 2.2. To enable the use of other co-evolution tools with the UML metamodel changes, the author reconstructed part of the UML 1.4 metamodel in XMI 2.2.
+
+The migration semantics were identified by comparing the UML 1.4 and UML 2.2 specifications, and by discussing the metamodel evolution with other UML experts. As described in Section~\ref{sec:ttc}, the UML 2.2 specification appears to be ambiguous with respect to the way in which UML 1.4 \texttt{ObjectFlowState}s should be migrated to conform to the UML 2.2 metamodel. The migration strategies presented here assume the semantics of the core task described in Section~\ref{sec:ttc}: \texttt{ObjectFlowState}s are replaced with \texttt{ObjectNode}s.
+
+\subsection{Activity Diagrams}
+Figures~\ref{fig:uml14} and \ref{fig:uml22} are simplifications of the activity diagram metamodels from versions 1.4 and 2.2 of the UML specification, respectively. In the interest of clarity, some features and abstract classes have been removed from Figures~\ref{fig:uml14} and \ref{fig:uml22}.
+
+\mmfigure{uml}{activity_diagrams}{Activities in UML 1.4 and UML 2.2}
+
+Some differences between Figures~\ref{fig:uml14} and \ref{fig:uml22} are: activities have been changed such that they comprise nodes and edges, actions replace states in UML 2.2, and the subtypes of control node replace pseudostates.
+
+Listings~\ref{lst:uml_activity_diagrams_atl}, \ref{lst:uml_activity_diagrams_cope} and~\ref{lst:uml_activity_diagrams_flock} show the model migration strategy in ATL, COPE and Flock respectively. Migration mostly involve restructuring data by storing values in features of a different name, and retyping \texttt{Pseudeostate}s.
+
+\miglistings{uml}{activity_diagrams}{UML activity diagram model migration}
+
+\section{GMF Examples}
