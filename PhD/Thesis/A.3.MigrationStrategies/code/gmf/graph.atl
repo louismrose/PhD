@@ -1,0 +1,505 @@
+module Graph;
+
+create Migrated : After from Original : Before;
+
+rule Canvas2Canvas extends Identity2Identity {
+  from
+    o : Before!Canvas
+  to
+    m : After!Canvas (
+%\highlight%      figures <- o.figures,
+%\highlight%      nodes <- o.nodes,
+%\highlight%      connections <- o.connections,
+%\highlight%      compartments <- o.compartments,
+%\highlight%      labels <- o.labels
+    )
+}
+rule FigureGallery2FigureGallery extends Identity2Identity {
+  from
+    o : Before!FigureGallery
+  to
+    m : After!FigureGallery (
+%\highlight%       implementationBundle <- o.implementationBundle
+    )
+}
+abstract rule Identity2Identity {
+  from
+    o : Before!Identity
+  to
+    m : After!Identity (
+%\highlight%       name <- o.name
+    )
+}
+abstract rule DiagramElement2DiagramElement extends Identity2Identity {
+  from
+    o : Before!DiagramElement
+  to
+    m : After!DiagramElement (
+%\highlight%       figure <- o.figure,
+%\highlight%       facets <- o.facets
+    )
+}
+rule Node2Node extends DiagramElement2DiagramElement {
+  from
+    o : Before!Node
+  to
+    m : After!Node (
+%\highlight%       resizeConstraint <- o.resizeConstraint,
+%\highlight%       affixedParentSide <- o.affixedParentSide
+    )
+}
+rule Connection2Connection extends DiagramElement2DiagramElement {
+  from
+    o : Before!Connection
+  to
+    m : After!Connection
+}
+rule Compartment2Compartment extends DiagramElement2DiagramElement {
+  from
+    o : Before!Compartment
+  to
+    m : After!Compartment (
+%\highlight%       collapsible <- o.collapsible,
+%\highlight%       needsTitle <- o.needsTitle
+    )
+}
+rule DiagramLabel2DiagramLabel extends Node2Node {
+  from
+    o : Before!DiagramLabel
+  to
+    m : After!DiagramLabel (
+%\highlight%       elementIcon <- o.elementIcon
+    )
+}
+abstract rule VisualFacet2VisualFacet {
+  from
+    o : Before!VisualFacet
+  to
+    m : After!VisualFacet
+}
+rule GeneralFacet2GeneralFacet extends VisualFacet2VisualFacet {
+  from
+    o : Before!GeneralFacet
+  to
+    m : After!GeneralFacet (
+%\highlight%       identifier <- o.identifier,
+%\highlight%       data <- o.data
+    )
+}
+rule AlignmentFacet2AlignmentFacet extends VisualFacet2VisualFacet {
+  from
+    o : Before!AlignmentFacet
+  to
+    m : After!AlignmentFacet (
+%\highlight%       alignment <- o.alignment
+    )
+}
+rule GradientFacet2GradientFacet extends VisualFacet2VisualFacet {
+  from
+    o : Before!GradientFacet
+  to
+    m : After!GradientFacet (
+%\highlight%       direction <- o.direction
+    )
+}
+rule LabelOffsetFacet2LabelOffsetFacet extends VisualFacet2VisualFacet {
+  from
+    o : Before!LabelOffsetFacet
+  to
+    m : After!LabelOffsetFacet (
+%\highlight%       x <- o.x,
+%\highlight%       y <- o.y
+    )
+}
+rule DefaultSizeFacet2DefaultSizeFacet extends VisualFacet2VisualFacet {
+  from
+    o : Before!DefaultSizeFacet
+  to
+    m : After!DefaultSizeFacet (
+%\highlight%       defaultSize <- o.defaultSize
+    )
+}
+abstract rule Figure2Figure extends Layoutable2Layoutable {
+  from
+    o : Before!Figure
+  to
+    m : After!Figure (
+%\highlight%       foregroundColor <- o.foregroundColor,
+%\highlight%       backgroundColor <- o.backgroundColor,
+%\highlight%       maximumSize <- o.maximumSize,
+%\highlight%       minimumSize <- o.minimumSize,
+%\highlight%       preferredSize <- o.preferredSize,
+%\highlight%       font <- o.font,
+%\highlight%       insets <- o.insets,
+%\highlight%       border <- o.border,
+%\highlight%       location <- o.location,
+%\highlight%       size <- o.size
+    )
+}
+rule FigureRef2FigureRef extends Layoutable2Layoutable {
+  from
+    o : Before!FigureRef
+  to
+    m : After!FigureRef (
+%\highlight%       figure <- o.figure
+    )
+}
+abstract rule Shape2Shape extends Figure2Figure {
+  from
+    o : Before!Shape
+  to
+    m : After!Shape (
+%\highlight%       outline <- o.outline,
+%\highlight%       fill <- o.fill,
+%\highlight%       lineWidth <- o.lineWidth,
+%\highlight%       lineKind <- o.lineKind,
+%\highlight%       xorFill <- o.xorFill,
+%\highlight%       xorOutline <- o.xorOutline,
+%\highlight%       resolvedChildren <- o.resolvedChildren
+    )
+}
+rule Label2Label extends Figure2Figure {
+  from
+    o : Before!Label
+  to
+    m : After!Label (
+%\highlight%       text <- o.text
+    )
+}
+rule LabeledContainer2LabeledContainer extends Figure2Figure {
+  from
+    o : Before!LabeledContainer
+  to
+    m : After!LabeledContainer
+}
+rule Rectangle2Rectangle extends Shape2Shape {
+  from
+    o : Before!Rectangle
+  to
+    m : After!Rectangle
+}
+rule RoundedRectangle2RoundedRectangle extends Shape2Shape {
+  from
+    o : Before!RoundedRectangle
+  to
+    m : After!RoundedRectangle (
+%\highlight%       cornerWidth <- o.cornerWidth,
+%\highlight%       cornerHeight <- o.cornerHeight
+    )
+}
+rule Ellipse2Ellipse extends Shape2Shape {
+  from
+    o : Before!Ellipse
+  to
+    m : After!Ellipse
+}
+rule Polyline2Polyline extends Shape2Shape {
+  from
+    o : Before!Polyline
+  to
+    m : After!Polyline (
+%\highlight%       template <- o.template
+    )
+}
+rule Polygon2Polygon extends Polyline2Polyline {
+  from
+    o : Before!Polygon
+  to
+    m : After!Polygon
+}
+rule ScalablePolygon2ScalablePolygon extends Polygon2Polygon {
+  from
+    o : Before!ScalablePolygon
+  to
+    m : After!ScalablePolygon
+}
+rule PolylineConnection2PolylineConnection extends Polyline2Polyline {
+  from
+    o : Before!PolylineConnection
+  to
+    m : After!PolylineConnection (
+%\highlight%       sourceDecoration <- o.sourceDecoration,
+%\highlight%       targetDecoration <- o.targetDecoration
+    )
+}
+rule PolylineDecoration2PolylineDecoration extends Polyline2Polyline {
+  from
+    o : Before!PolylineDecoration
+  to
+    m : After!PolylineDecoration
+}
+rule PolygonDecoration2PolygonDecoration extends Polygon2Polygon {
+  from
+    o : Before!PolygonDecoration
+  to
+    m : After!PolygonDecoration
+}
+abstract rule CustomClass2CustomClass {
+  from
+    o : Before!CustomClass
+  to
+    m : After!CustomClass (
+%\highlight%       qualifiedClassName <- o.qualifiedClassName,
+%\highlight%       attributes <- o.attributes
+    )
+}
+rule CustomAttribute2CustomAttribute {
+  from
+    o : Before!CustomAttribute
+  to
+    m : After!CustomAttribute (
+%\highlight%       name <- o.name,
+%\highlight%       value <- o.value,
+%\highlight%       directAccess <- o.directAccess,
+%\highlight%       multiStatementValue <- o.multiStatementValue
+    )
+}
+rule FigureAccessor2FigureAccessor {
+  from
+    o : Before!FigureAccessor
+  to
+    m : After!FigureAccessor (
+%\highlight%       accessor <- o.accessor,
+%\highlight%       typedFigure <- o.typedFigure
+    )
+}
+rule CustomFigure2CustomFigure extends Figure2Figure {
+  from
+    o : Before!CustomFigure
+  to
+    m : After!CustomFigure (
+%\highlight%       customChildren <- o.customChildren
+    )
+}
+rule CustomDecoration2CustomDecoration extends CustomFigure2CustomFigure {
+  from
+    o : Before!CustomDecoration
+  to
+    m : After!CustomDecoration
+}
+rule CustomConnection2CustomConnection extends CustomFigure2CustomFigure {
+  from
+    o : Before!CustomConnection
+  to
+    m : After!CustomConnection
+}
+abstract rule Color2Color {
+  from
+    o : Before!Color
+  to
+    m : After!Color
+}
+rule RGBColor2RGBColor extends Color2Color {
+  from
+    o : Before!RGBColor
+  to
+    m : After!RGBColor (
+%\highlight%       red <- o.red,
+%\highlight%       green <- o.green,
+%\highlight%       blue <- o.blue
+    )
+}
+rule ConstantColor2ConstantColor extends Color2Color {
+  from
+    o : Before!ConstantColor
+  to
+    m : After!ConstantColor (
+%\highlight%       value <- o.value
+    )
+}
+abstract rule Font2Font {
+  from
+    o : Before!Font
+  to
+    m : After!Font
+}
+rule BasicFont2BasicFont extends Font2Font {
+  from
+    o : Before!BasicFont
+  to
+    m : After!BasicFont (
+%\highlight%       faceName <- o.faceName,
+%\highlight%       height <- o.height,
+%\highlight%       style <- o.style
+    )
+}
+rule Point2Point {
+  from
+    o : Before!Point
+  to
+    m : After!Point (
+%\highlight%       x <- o.x,
+%\highlight%       y <- o.y
+    )
+}
+rule Dimension2Dimension {
+  from
+    o : Before!Dimension
+  to
+    m : After!Dimension (
+%\highlight%       dx <- o.dx,
+%\highlight%       dy <- o.dy
+    )
+}
+rule Insets2Insets {
+  from
+    o : Before!Insets
+  to
+    m : After!Insets (
+%\highlight%       top <- o.top,
+%\highlight%       left <- o.left,
+%\highlight%       bottom <- o.bottom,
+%\highlight%       right <- o.right
+    )
+}
+abstract rule Border2Border {
+  from
+    o : Before!Border
+  to
+    m : After!Border
+}
+rule LineBorder2LineBorder extends Border2Border {
+  from
+    o : Before!LineBorder
+  to
+    m : After!LineBorder (
+%\highlight%       color <- o.color,
+%\highlight%       width <- o.width
+    )
+}
+rule MarginBorder2MarginBorder extends Border2Border {
+  from
+    o : Before!MarginBorder
+  to
+    m : After!MarginBorder (
+%\highlight%       insets <- o.insets
+    )
+}
+rule CompoundBorder2CompoundBorder extends Border2Border {
+  from
+    o : Before!CompoundBorder
+  to
+    m : After!CompoundBorder (
+%\highlight%       outer <- o.outer,
+%\highlight%       inner <- o.inner
+    )
+}
+rule CustomBorder2CustomBorder extends Border2Border {
+  from
+    o : Before!CustomBorder
+  to
+    m : After!CustomBorder
+}
+abstract rule LayoutData2LayoutData {
+  from
+    o : Before!LayoutData
+  to
+    m : After!LayoutData (
+      owner <- o.owner
+    )
+}
+rule CustomLayoutData2CustomLayoutData extends LayoutData2LayoutData {
+  from
+    o : Before!CustomLayoutData
+  to
+    m : After!CustomLayoutData
+}
+rule GridLayoutData2GridLayoutData extends LayoutData2LayoutData {
+  from
+    o : Before!GridLayoutData
+  to
+    m : After!GridLayoutData (
+%\highlight%       grabExcessHorizontalSpace <- o.grabExcessHorizontalSpace,
+%\highlight%       grabExcessVerticalSpace <- o.grabExcessVerticalSpace,
+%\highlight%       verticalAlignment <- o.verticalAlignment,
+%\highlight%       horizontalAlignment <- o.horizontalAlignment,
+%\highlight%       verticalSpan <- o.verticalSpan,
+%\highlight%       horizontalSpan <- o.horizontalSpan,
+%\highlight%       horizontalIndent <- o.horizontalIndent,
+%\highlight%       sizeHint <- o.sizeHint
+    )
+}
+rule BorderLayoutData2BorderLayoutData extends LayoutData2LayoutData {
+  from
+    o : Before!BorderLayoutData
+  to
+    m : After!BorderLayoutData (
+%\highlight%       alignment <- o.alignment,
+%\highlight%       vertical <- o.vertical
+    )
+}
+abstract rule Layoutable2Layoutable {
+  from
+    o : Before!Layoutable
+  to
+    m : After!Layoutable (
+%\highlight%       layoutData <- o.layoutData,
+%\highlight%       layout <- o.layout
+    )
+}
+abstract rule Layout2Layout {
+  from
+    o : Before!Layout
+  to
+    m : After!Layout
+}
+rule CustomLayout2CustomLayout extends Layout2Layout {
+  from
+    o : Before!CustomLayout
+  to
+    m : After!CustomLayout
+}
+rule GridLayout2GridLayout extends Layout2Layout {
+  from
+    o : Before!GridLayout
+  to
+    m : After!GridLayout (
+%\highlight%       numColumns <- o.numColumns,
+%\highlight%       equalWidth <- o.equalWidth,
+%\highlight%       margins <- o.margins,
+%\highlight%       spacing <- o.spacing
+    )
+}
+rule BorderLayout2BorderLayout extends Layout2Layout {
+  from
+    o : Before!BorderLayout
+  to
+    m : After!BorderLayout (
+%\highlight%       spacing <- o.spacing
+    )
+}
+rule FlowLayout2FlowLayout extends Layout2Layout {
+  from
+    o : Before!FlowLayout
+  to
+    m : After!FlowLayout (
+%\highlight%       vertical <- o.vertical,
+%\highlight%       matchMinorSize <- o.matchMinorSize,
+%\highlight%       forceSingleLine <- o.forceSingleLine,
+%\highlight%       majorAlignment <- o.majorAlignment,
+%\highlight%       minorAlignment <- o.minorAlignment,
+%\highlight%       majorSpacing <- o.majorSpacing,
+%\highlight%       minorSpacing <- o.minorSpacing
+    )
+}
+rule XYLayout2XYLayout extends Layout2Layout {
+  from
+    o : Before!XYLayout
+  to
+    m : After!XYLayout
+}
+rule XYLayoutData2XYLayoutData extends LayoutData2LayoutData {
+  from
+    o : Before!XYLayoutData
+  to
+    m : After!XYLayoutData (
+%\highlight%       topLeft <- o.topLeft,
+%\highlight%       size <- o.size
+    )
+}
+rule StackLayout2StackLayout extends Layout2Layout {
+  from
+    o : Before!StackLayout
+  to
+    m : After!StackLayout
+}

@@ -1,0 +1,32 @@
+for (gallery in graph.FigureGallery.allInstances) {
+	while(not gallery.figures.isEmpty()) {
+		def figure = gallery.figures.first()
+		def descriptor = graph.FigureDescriptor.newInstance()
+
+%\highlight% 		descriptor.name = figure.name
+%\highlight% 		descriptor.actualFigure = figure
+		
+%\highlight% 		figure.set(descriptor, descriptor)
+
+		figure.children.findAll{ it -> it instanceof graph.Label}.each do |it|
+			def accessor = graph.ChildAccess.newInstance()
+
+%\highlight% 			accessor.figure = it
+%\highlight% 			descriptor.accessors.add(accessor)
+			
+%\highlight% 			it.set(accessor, accessor)
+		end
+
+		return descriptor;
+	}
+}
+
+for (diagramElement in graph.DiagramElement.allInstances()) {
+%\highlight%    diagramElement.figure.unset(descriptor)
+%\highlight% 	diagramElement.figure = descriptor
+}
+
+for (diagramLabel in graph.DiagramLabel.allInstances()) {
+%\highlight%    diagramElement.figure.unset(accessor)
+%\highlight% 	diagramElement.accessor = accessor
+}
