@@ -1,6 +1,7 @@
 \contentsline {chapter}{Contents}{vii}
 \contentsline {chapter}{List of Figures}{ix}
 \contentsline {chapter}{List of Tables}{xii}
+\contentsline {chapter}{Listings}{xiii}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Model-Driven Engineering}{1}
 \contentsline {section}{\numberline {1.2}Software Evolution}{2}
@@ -155,7 +156,7 @@
 \contentsline {subsection}{\numberline {5.3.1}Co-Evolution Example}{108}
 \contentsline {subsection}{\numberline {5.3.2}Existing Approaches}{109}
 \contentsline {subsubsection}{Manual Specification with Model-to-Model Transformation}{109}
-\contentsline {subsubsection}{Manual Specification with Ecore2Ecore Mapping}{111}
+\contentsline {subsubsection}{Manual Specification with Ecore2Ecore Mapping}{110}
 \contentsline {subsubsection}{Operator-based Co-evolution with COPE}{112}
 \contentsline {subsection}{\numberline {5.3.3}Requirements Identification}{113}
 \contentsline {subsubsection}{Source-Target Relationship}{114}
@@ -211,23 +212,23 @@
 \contentsline {subsubsection}{Co-Evolution Examples}{162}
 \contentsline {paragraph}{Petri Nets.}{162}
 \contentsline {paragraph}{GMF.}{163}
-\contentsline {subsubsection}{Compared Tools}{164}
-\contentsline {subsubsection}{Comparison Process}{165}
+\contentsline {subsubsection}{Compared Tools}{163}
+\contentsline {subsubsection}{Comparison Process}{164}
 \contentsline {subsection}{\numberline {6.3.2}Comparison Results}{165}
 \contentsline {subsubsection}{Constructing the migration strategy}{166}
 \contentsline {paragraph}{AML.}{166}
 \contentsline {paragraph}{COPE.}{166}
-\contentsline {paragraph}{Ecore2Ecore.}{167}
+\contentsline {paragraph}{Ecore2Ecore.}{166}
 \contentsline {paragraph}{Flock.}{167}
 \contentsline {subsubsection}{Changing the migration strategy}{167}
-\contentsline {paragraph}{AML.}{168}
-\contentsline {paragraph}{COPE.}{168}
+\contentsline {paragraph}{AML.}{167}
+\contentsline {paragraph}{COPE.}{167}
 \contentsline {paragraph}{Ecore2Ecore.}{168}
 \contentsline {paragraph}{Flock.}{168}
 \contentsline {subsubsection}{Extensibility}{168}
 \contentsline {paragraph}{AML.}{168}
 \contentsline {paragraph}{COPE}{168}
-\contentsline {subsubsection}{Re-use}{169}
+\contentsline {subsubsection}{Re-use}{168}
 \contentsline {paragraph}{AML.}{169}
 \contentsline {paragraph}{COPE.}{169}
 \contentsline {paragraph}{Ecore2Ecore.}{169}
@@ -235,7 +236,7 @@
 \contentsline {subsubsection}{Conciseness}{169}
 \contentsline {paragraph}{AML.}{169}
 \contentsline {paragraph}{COPE}{169}
-\contentsline {paragraph}{Ecore2Ecore.}{170}
+\contentsline {paragraph}{Ecore2Ecore.}{169}
 \contentsline {paragraph}{Flock.}{170}
 \contentsline {subsubsection}{Clarity}{170}
 \contentsline {paragraph}{AML.}{170}
@@ -243,27 +244,27 @@
 \contentsline {paragraph}{Ecore2Ecore.}{170}
 \contentsline {paragraph}{Flock}{170}
 \contentsline {subsubsection}{Expressiveness}{170}
-\contentsline {paragraph}{AML.}{171}
+\contentsline {paragraph}{AML.}{170}
 \contentsline {paragraph}{COPE.}{171}
 \contentsline {paragraph}{Ecore2Ecore.}{171}
 \contentsline {paragraph}{Flock.}{171}
 \contentsline {subsubsection}{Interoperability}{171}
 \contentsline {paragraph}{AML}{171}
-\contentsline {paragraph}{COPE}{172}
+\contentsline {paragraph}{COPE}{171}
 \contentsline {paragraph}{Ecore2Ecore}{172}
 \contentsline {paragraph}{Flock}{172}
 \contentsline {subsubsection}{Performance}{172}
 \contentsline {subsection}{\numberline {6.3.3}Discussion}{173}
 \contentsline {subsubsection}{Strengths and Weaknesses of Flock}{174}
-\contentsline {paragraph}{Strengths}{175}
-\contentsline {paragraph}{Weaknesses}{175}
+\contentsline {paragraph}{Strengths}{174}
+\contentsline {paragraph}{Weaknesses}{174}
 \contentsline {subsection}{\numberline {6.3.4}Summary}{175}
 \contentsline {section}{\numberline {6.4}Transformation Tools Contest}{175}
 \contentsline {subsection}{\numberline {6.4.1}Model Migration Case}{176}
 \contentsline {subsubsection}{Activity Diagrams in UML}{176}
 \contentsline {subsubsection}{Evolution of Activity Diagrams}{178}
-\contentsline {subsubsection}{Extension 1: Alternative Object Flow State Migration Semantics}{179}
-\contentsline {subsubsection}{Extension 2: Concrete Syntax}{180}
+\contentsline {subsubsection}{Extension 1: Alternative Object Flow State Migration Semantics}{180}
+\contentsline {subsubsection}{Extension 2: Concrete Syntax}{181}
 \contentsline {subsubsection}{Extension 3: XMI}{181}
 \contentsline {subsection}{\numberline {6.4.2}Model Migration Solution in Epsilon Flock}{182}
 \contentsline {subsubsection}{Actions, Transitions and Final States}{182}
@@ -272,40 +273,42 @@
 \contentsline {subsubsection}{Partitions}{184}
 \contentsline {subsubsection}{ObjectFlows}{184}
 \contentsline {subsubsection}{Alternative ObjectFlowState Migration Semantics}{185}
-\contentsline {subsubsection}{XMI}{185}
+\contentsline {subsubsection}{XMI}{186}
 \contentsline {subsubsection}{Comparison with other solutions}{186}
-\contentsline {subsection}{\numberline {6.4.3}Summary}{186}
+\contentsline {paragraph}{Opposition Statements}{186}
+\contentsline {paragraph}{Scoring}{187}
+\contentsline {subsection}{\numberline {6.4.3}Summary}{187}
 \contentsline {section}{\numberline {6.5}Limitations}{187}
-\contentsline {paragraph}{Generality}{187}
-\contentsline {paragraph}{Reproducibility}{187}
+\contentsline {paragraph}{Generality}{188}
+\contentsline {paragraph}{Reproducibility}{188}
 \contentsline {paragraph}{Formal semantics}{188}
 \contentsline {section}{\numberline {6.6}Summary}{188}
-\contentsline {chapter}{\chapternumberline {7}Conclusion}{189}
-\contentsline {section}{\numberline {7.1}Closing Remarks}{189}
-\contentsline {section}{\numberline {7.2}Future Work}{189}
-\contentsline {subsubsection}{Generalisation}{189}
-\contentsline {subsection}{\numberline {7.2.1}Extensions to Epsilon Flock}{189}
-\contentsline {appendix}{\chapternumberline {A}Experiments}{191}
-\contentsline {section}{\numberline {A.1}Metamodel-Independent Change}{191}
-\contentsline {subsection}{\numberline {A.1.1}Correctness}{192}
-\contentsline {subsection}{\numberline {A.1.2}Automation}{192}
-\contentsline {subsection}{\numberline {A.1.3}Customisation}{192}
-\contentsline {subsection}{\numberline {A.1.4}Extensibility}{193}
-\contentsline {appendix}{\chapternumberline {B}A Graphical Editor for Process-Oriented Programs}{195}
-\contentsline {section}{\numberline {B.1}Iteration 1: Processes and Channels}{196}
-\contentsline {section}{\numberline {B.2}Iteration 2: Interoperability with GMF}{197}
-\contentsline {section}{\numberline {B.3}Iteration 3: Shared Channels}{198}
-\contentsline {section}{\numberline {B.4}Iteration 4: Connection Points}{201}
-\contentsline {section}{\numberline {B.5}Iteration 5: Connection Point Types}{205}
-\contentsline {section}{\numberline {B.6}Iteration 6: Nested Processes and Channels}{209}
-\contentsline {section}{\numberline {B.7}Summary}{211}
-\contentsline {appendix}{\chapternumberline {C}Co-evolution Examples}{213}
-\contentsline {section}{\numberline {C.1}Newsgroups Examples}{213}
-\contentsline {subsection}{\numberline {C.1.1}Extract Person}{213}
-\contentsline {subsection}{\numberline {C.1.2}Resolve Replies}{214}
-\contentsline {section}{\numberline {C.2}UML Example}{216}
-\contentsline {subsection}{\numberline {C.2.1}Activity Diagrams}{218}
-\contentsline {section}{\numberline {C.3}GMF Examples}{220}
-\contentsline {subsection}{\numberline {C.3.1}GMF Graph}{220}
-\contentsline {subsection}{\numberline {C.3.2}GMF Generator}{220}
-\contentsline {chapter}{Bibliography}{229}
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{191}
+\contentsline {section}{\numberline {7.1}Closing Remarks}{191}
+\contentsline {section}{\numberline {7.2}Future Work}{191}
+\contentsline {subsubsection}{Generalisation}{191}
+\contentsline {subsection}{\numberline {7.2.1}Extensions to Epsilon Flock}{191}
+\contentsline {appendix}{\chapternumberline {A}Experiments}{193}
+\contentsline {section}{\numberline {A.1}Metamodel-Independent Change}{193}
+\contentsline {subsection}{\numberline {A.1.1}Correctness}{194}
+\contentsline {subsection}{\numberline {A.1.2}Automation}{194}
+\contentsline {subsection}{\numberline {A.1.3}Customisation}{194}
+\contentsline {subsection}{\numberline {A.1.4}Extensibility}{195}
+\contentsline {appendix}{\chapternumberline {B}A Graphical Editor for Process-Oriented Programs}{197}
+\contentsline {section}{\numberline {B.1}Iteration 1: Processes and Channels}{198}
+\contentsline {section}{\numberline {B.2}Iteration 2: Interoperability with GMF}{199}
+\contentsline {section}{\numberline {B.3}Iteration 3: Shared Channels}{200}
+\contentsline {section}{\numberline {B.4}Iteration 4: Connection Points}{203}
+\contentsline {section}{\numberline {B.5}Iteration 5: Connection Point Types}{207}
+\contentsline {section}{\numberline {B.6}Iteration 6: Nested Processes and Channels}{211}
+\contentsline {section}{\numberline {B.7}Summary}{213}
+\contentsline {appendix}{\chapternumberline {C}Co-evolution Examples}{215}
+\contentsline {section}{\numberline {C.1}Newsgroups Examples}{215}
+\contentsline {subsection}{\numberline {C.1.1}Extract Person}{215}
+\contentsline {subsection}{\numberline {C.1.2}Resolve Replies}{218}
+\contentsline {section}{\numberline {C.2}UML Example}{219}
+\contentsline {subsection}{\numberline {C.2.1}Activity Diagrams}{220}
+\contentsline {section}{\numberline {C.3}GMF Examples}{226}
+\contentsline {subsection}{\numberline {C.3.1}GMF Graph}{226}
+\contentsline {subsection}{\numberline {C.3.2}GMF Generator}{240}
+\contentsline {chapter}{Bibliography}{271}

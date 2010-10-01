@@ -47,7 +47,7 @@ In Figure~\ref{fig:petri_nets_original_mm_repeated}, a Petri \mm{Net} comprises 
 The evolved metamodel is shown in Figure~\ref{fig:petri_nets_evolved_mm_repeated}. \mm{Place}s are connected to \mm{Transition}s via instances of \mm{PTArc}. Likewise, \mm{Transition}s are connected to \mm{Place}s via \mm{TPArc}. Both \mm{PTArc} and \mm{TPArc} inherit from \mm{Arc}, and therefore can be used to specify a \mm{weight}.
 
 \paragraph{GMF.}
-The second example is taken from GMF \cite{gronback09emp}, an Eclipse project for generating graphical editors for models. The development of GMF is model-driven and utilises four domain-specific metamodels. Here, we consider one of those metamodels, GMF Graph, and its evolution between GMF versions 1.0 and 2.0. 
+The second example is taken from GMF \cite{gronback09emp}, an Eclipse project for generating graphical editors for models. The development of GMF is model-driven and utilises four domain-specific metamodels. Here, we consider one of those metamodels, GMF Graph, and its evolution between GMF versions 1.0 and 2.0. The GMF Graph example is now summarised, and more details can be found in Section~\ref{subsec:gmf_graph}.
 
 \begin{figure}[htbp]
 	\centering
@@ -65,13 +65,9 @@ The second example is taken from GMF \cite{gronback09emp}, an Eclipse project fo
 \label{fig:gmf_graph_mms}
 \end{figure}
 
-The GMF Graph metamodel (Figure~\ref{fig:gmf_graph_mms}) describes the appearance of the generated graphical model editor. The metaclasses \mm{Ca\-nv\-as}, \mm{Fi\-gu\-re}, \mm{No\-de}, \mm{Di\-ag\-r\-amLa\-b\-el}, \mm{Co\-nn\-ec\-ti\-on}, and \mm{Co\-mp\-ar\-tm\-e\-nt} are used to represent components of the graphical model editor to be generated. The evolution in the GMF Graph metamodel was driven by analysing the usage of the \mm{Fi\-gu\-re\#re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference, which relates \mm{Fi\-gu\-res} to the \mm{Di\-ag\-ramEl\-em\-en\-ts} that use them. As described in the GMF Graph documentation\footnote{\url{http://wiki.eclipse.org/GMFGraph_Hints}}, the \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference increased the effort required to re-use figures, a common activity for users of GMF. Furthermore, \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} was used only by the GMF code generator to determine whether an accessor
-%\footnote{Colloquially known as a ``getter''.}
-should be generated for nested \mm{Fi\-gu\-re}s.
+The GMF Graph metamodel (Figure~\ref{fig:gmf_graph_mms}) describes the appearance of the generated graphical model editor. As described in the GMF Graph documentation\footnote{\url{http://wiki.eclipse.org/GMFGraph_Hints}}, the Graph metamodel from GMF 1.0 was evolved -- as shown in Figure~\ref{fig:gmf_graph_mm_evolved} -- to facilitate greater re-use of figures by introducing a proxy~\cite{gamma95patterns} for \mm{Fi\-gu\-re}, termed \mm{Fi\-gu\-reDe\-sc\-ri\-pt\-or}. The original \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference was removed, and an extra metaclass, \mm{Ch\-il\-dAc\-ce\-ss} in its place. Section~\ref{subsec:gmf_graph} discusses the metamodel changes in more detail.
 
-During the development of GMF 2.0, the Graph metamodel from GMF 1.0 was evolved -- as shown in Figure~\ref{fig:gmf_graph_mm_evolved} -- to facilitate greater re-use of figures by introducing a proxy~\cite{gamma95patterns} for \mm{Fi\-gu\-re}, termed \mm{Fi\-gu\-reDe\-sc\-ri\-pt\-or}. The original \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference was removed, and an extra metaclass, \mm{Ch\-il\-dAc\-ce\-ss}, was added to make more explicit the original purpose of \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} (accessing nested \mm{Fi\-gu\-re}s).
-
-GMF provides a migrating algorithm that produces a model conforming to the evolved Graph metamodel from a model conforming to the original Graph metamodel. In GMF, migration is implemented using Java. The GMF source code includes two example editors, for which the source code management system contains versions conforming to GMF 1.0 and GMF 2.0. For the comparison of migration tools described in this paper, the migrating algorithm and example editors provided by GMF were used to determine the correctness of the migration strategies produced by using each model migration tool. 
+GMF provides a migrating algorithm that produces a model conforming to the evolved Graph metamodel from a model conforming to the original Graph metamodel. In GMF, migration is implemented using Java. The GMF source code includes two example editors, for which the source code management system contains versions conforming to GMF 1.0 and GMF 2.0. For the comparison of migration tools described in this paper, the migrating algorithm and example editors provided by GMF were used to determine the correctness of the migration strategies produced by using each model migration tool.
 
 \subsubsection{Compared Tools}
 \label{subsec:method_tools}

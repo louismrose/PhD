@@ -12,7 +12,7 @@ Compared to the evaluation described in Section~\ref{sec:collaborative_compariso
 \label{subsec:ttc_case}
 To compare Flock with other transformation tools for specifying model migration, the author submitted a case to TTC based on the evolution of the UML. The way in which activity diagrams are modelled in the UML changed significantly between versions 1.4 and 2.1 of the specification. In the former, activities were defined as a special case of state machines, while in the latter they are defined atop a more general semantic base\footnote{A variant of generalised coloured Petri nets.} \cite{selic05uml2}.
 
-The remainder of this section briefly introduces UML activity diagrams, describes their evolution, and discusses the way in which solutions were assessed. The work presented in this section is based on the case submitted to TTC 2010 \cite{rose10ttc_case}. 
+The remainder of this section briefly introduces UML activity diagrams, describes their evolution, and discusses the way in which solutions were assessed. Section~\ref{subsec:uml_activity_diagrams} describes the metamodel evolution in more detail. The work presented in this section is based on the case submitted to TTC 2010 \cite{rose10ttc_case}. 
 
 \subsubsection{Activity Diagrams in UML}
 Activity diagrams are used for modelling lower-level behaviours, emphasising sequencing and co-ordination conditions. They are used to model business processes and logic \cite{uml22}. Figure~\ref{fig:activity} shows an activity diagram for filling orders. The diagrams is partitioned into three \emph{swimlanes}, representing different organisational units. \emph{Activities} are represented with rounded rectangles and \emph{transitions} with directed arrows. \emph{Fork} and \emph{join} nodes are specified using a solid black rectangle. \emph{Decision} nodes are represented with a diamond. Guards on transitions are specified using square brackets. For example, in Figure~\ref{fig:activity} the transition to the restock activity is guarded by the condition \texttt{[not in stock]}. Text on transitions that is not enclosed in square brackets represents a trigger event. In Figure~\ref{fig:activity}, the transition from the restock activity occurs on receipt of the asynchronous signal called \texttt{receive stock}. Finally, the transitions between activities might involve interaction with objects. In Figure~\ref{fig:activity}, the Fill Order activity leads to an interaction with an object called \texttt{Filled Object}. 
@@ -222,6 +222,7 @@ migrate Partition to ActivityPartition {
 }
 \end{lstlisting}
 
+The complete source code listing for the Flock migration strategy is provided in Section~\ref{subsec:uml_activity_diagrams}.
 
 \subsubsection{XMI}
 \label{sec:xmi}
@@ -232,11 +233,15 @@ As discussed in Section~\ref{sec:flock}, Flock is built atop Epsilon, which incl
 Consequently, the migration strategy developed for the core task works for all of the types of model supported by EMC. To migrate a model encoded in XMI 1.2 rather than in XMI 2.1, the user must select a different option when executing the Flock migration strategy. Otherwise, no other changes are required.
 
 \subsubsection{Comparison with other solutions}
-At the workshop, solutions to the migration case described in Section~\ref{subsec:ttc_case} were presented. Each solution was allocated two opponents who highlighted weaknesses of each approach. Following the solution presentations and opposition statements, each solution was scored using the four criteria described above, correctness, clarity, conciseness and number of extensions solved. Every workshop participants scored each solution on clarity and conciseness. The workshop organisers scored each solution on correctness and number of extensions solved, as these criteria could be measured objectively. Epsilon Flock was awarded first position for the migration case.
+At the workshop, solutions to the migration case described in Section~\ref{subsec:ttc_case} were presented. Each solution was allocated two opponents who highlighted weaknesses of each approach. Following the solution presentations and opposition statements, each solution was scored using the four criteria described above, correctness, clarity, conciseness and number of extensions solved. Epsilon Flock was awarded first position for the migration case. The opposition statements for Flock and the solution scores are now discussed.
 
-The opposition statements highlighted two weaknesses of Flock. Firstly, there is some duplicated code in Listing~\ref{lst:pseudostates}: the \texttt{migrate Pseudostate to ...} statement appears several times. The duplication exists because Flock only allows one-to-one mappings between original and evolved metamodel types. The conservative copy algorithm would need to be extended to allow one-to-many mappings to remove this kind of duplication.
+\paragraph{Opposition Statements} The opposition statements highlighted two weaknesses of Flock. Firstly, there is some duplicated code in Listing~\ref{lst:pseudostates}: the \texttt{migrate Pseudostate to ...} statement appears several times. The duplication exists because Flock only allows one-to-one mappings between original and evolved metamodel types. The conservative copy algorithm would need to be extended to allow one-to-many mappings to remove this kind of duplication.
 
-Secondly, the body of Flock rules are specified in an imperative manner. Consequently, reasoning about the correctness of the a migration strategy is arguably more difficult than in languages that use a purely declarative syntax. This point is discussed further in Section~\ref{sec:limitations}, which considers the limitations of the thesis. 
+Secondly, the body of Flock rules are specified in an imperative manner. Consequently, reasoning about the correctness of the a migration strategy is arguably more difficult than in languages that use a purely declarative syntax. This point is discussed further in Section~\ref{sec:limitations}, which considers the limitations of the thesis.
+
+\paragraph{Scoring} Every workshop participants scored each solution on clarity and conciseness. The workshop organisers scored each solution on correctness and number of extensions solved, as these criteria could be measured objectively. Flock was awarded the most points by the workshop participants and organisers. The complete list of scores is shown in Table~TODO\footnote{TODO: Fill in when Pieter mails the spreadsheet}.
+
+\emph{TODO: Discuss the results: to what extent and in what regard is Flock ``better'' than the other solutions? Appraise the ranking system.}
 
 
 \subsection{Summary}
@@ -247,4 +252,3 @@ In addition to evaluating Flock, the work described in this section provides thr
 Secondly, the Flock solution to the migration case (Section~\ref{subsec:ttc_solution}) demonstrates the way in which a migration strategy can be constructed using Flock. In particular, Section~\ref{subsec:ttc_solution} describes an iterative and incremental development process and indicates that an empty Flock migration strategy can provide a useful starting point for development.
 
 Finally, Section~\ref{sec:flock} claims that Flock support several modelling technologies. The solution described in Section~\ref{subsec:ttc_solution} demonstrates the way in which Flock can be used to migrate models over two modelling technologies: MDR (XMI 1.x) and EMF (XMI 2.x), and hence supports the claim made in Section~\ref{sec:flock}.
-

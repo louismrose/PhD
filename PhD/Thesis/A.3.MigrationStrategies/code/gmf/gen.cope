@@ -1,0 +1,71 @@
+for (genLinkLabel in gen.GenLinkLabel.allInstances) {
+%\highlight%	genLinkLabel.unset(notationViewFactoryClassName)
+}
+
+for (genLink in gen.GenLink.allInstances) {
+%\highlight%	genLink.unset(notationViewFactoryClassName)
+}
+
+for (genEditorGenerator in gen.GenEditorGenerator.allInstances) {
+	def genContextMenu = gen.GenContextMenu.newInstance()
+%\highlight%	genEditorGenerator.contextMenus.add(genContextMenu)
+
+%\highlight%	genContextMenu.context.add(genEditorGenerator.diagram)
+%\highlight%	genContextMenu.items.add(gen.LoadResourceAction.newInstance())
+	
+	for (shortcutName in genContextMenu.diagram.containsShortcutsTo) {
+%\highlight%		genContextMenu.items.add(gen.CreateShorcutAction.newInstance())
+	}
+}
+
+for (genDiagram in gen.GenDiagram) {
+%\highlight%	genDiagram.validationProviderPriority = gen.ProviderPriority#Lowest
+}
+
+for (featureLabelModelFacet in gen.FeatureLabelModelFacet) {
+%\highlight%	def viewMethod = featureLabelModelFacet.unset(viewMethod)
+%\highlight%	def editMethod = featureLabelModelFacet.unset(editMethod)
+%\highlight%	featureLabelModelFacet.parser = createOrRetrievePredefinedParser(viewMethod, editMethod)
+}
+
+for (designLabelModelFacet in gen.DesignLabelModelFacet) {
+%\highlight%	designLabelModelFacet.parser = createOrRetrieveExternalParser()
+}
+
+
+createOrRetrievePredefinedParser = { viewMethod, editMethod ->
+	if (getPredefinedParser(viewMethod, editMethod) == null) {
+%\highlight%		createOrRetrieveGenParsers().implementations.add(createPredefinedParser(viewMethod, editMethod))
+	}
+
+	return getPredefinedParser(viewMethod, editMethod)
+}
+
+getPredefinedParser = { viewMethod, editMethod ->
+	return gen.PredefinedParser.allInstances.find{ it -> it.viewMethod == viewMethod &amp;&amp; p.editMethod == editMethod }
+}
+
+createPredefinedParser = { viewMethod, editMethod ->
+	def parser = gen.PredefinedParser.newInstance()
+%\highlight%	parser.viewMethod = viewMethod
+%\highlight%	parser.editMethod = editMethod
+	return parser
+}
+
+createOrRetrieveExternalParser = {
+	if (gen.ExternalParser.allInstances.size == 0) {
+%\highlight%		createOrRetrieveGenParsers().implementations.add(gen.ExternalParser.newInstance())
+	
+	}
+	
+	return gen.ExternalParser.first
+}
+
+createOrRetrieveGenParsers = {
+	if (gen.GenEditorGenerator.allInstances.first.labelParsers == null) {
+		gen.GenEditorGenerator.allInstances.first.labelParsers = gen.GenParsers.newInstance()
+%\highlight%		gen.GenEditorGenerator.allInstances.first.labelParsers.extensibleViaService = true
+	}
+	
+	return gen.GenEditorGenerator.allInstances.first.labelParsers
+}

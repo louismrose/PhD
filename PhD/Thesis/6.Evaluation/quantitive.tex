@@ -29,9 +29,9 @@ This thesis proposes a third style of source-target relationship termed \emph{co
 Five examples of co-evolution taken from three projects, and three reference implementations of source-target relationships were used to perform the comparison described in this section. The co-evolution examples and the selection process for the reference implementations are now discussed.
 
 \subsubsection{Co-evolution Examples}
-To reduce contamination of the comparison, the co-evolution examples used were distinct from those identified in Chapter~\ref{Analysis} and subsequently used in the design of Flock in Chapter~\ref{Implementation}.
+To reduce contamination of the comparison, the co-evolution examples used were distinct from those identified in Chapter~\ref{Analysis} and subsequently used in the design of Flock in Chapter~\ref{Implementation}. The examples used for evaluating conservative copy are now summarised, and more details can be found in Appendix~\ref{CoevolutionExamples}.
 
-The five examples used in this section are taken from three projects. Two examples were taken from the \emph{Newsgroup} project, which performs statistical analysis of NNTP newsgroups, developed by Dimitris Kolovos, a lecturer in this department. One example was taken from changes made to \emph{UML} (the Unified Modeling Language) between versions 1.4 \cite{uml14} and 2.2 \cite{uml22} of the specification. Two examples were taken from \emph{GMF} (Graphical Modeling Framework) \cite{gronback09emp}, an Eclipse project for generating graphical model editors.
+Five co-evolution examples taken from three projects were used for evaluating conservative copy.  Two examples were taken from the \emph{Newsgroup} project, which performs statistical analysis of NNTP newsgroups, developed by Dimitris Kolovos, a lecturer in this department. One example was taken from changes made to \emph{UML} (the Unified Modeling Language) between versions 1.4 \cite{uml14} and 2.2 \cite{uml22} of the specification. Two examples were taken from \emph{GMF} (Graphical Modeling Framework) \cite{gronback09emp}, an Eclipse project for generating graphical model editors.
 
 For the newsgroup and GMF projects, the co-evolution examples were identified from source code management systems. The revision history for each project was examined, and metamodel changes were located. The intended migration strategy was determined by speaking with the developer (for the Newsgroup project) and by examining examples and documentation (for GMF). For the UML project, the co-evolution example was identified from the list of changes in the UML 2.2 specification \cite{uml22}, and by discussion with other UML users as described in Section~\ref{sec:ttc}.
 
@@ -371,7 +371,8 @@ Two conclusions can be drawn from this discussion. Firstly, in general, fewer mo
 \subsubsection{Limitation 1: Duplication when migrating subtypes}
 For the GMF Graph example (Table~\ref{tab:model_operations_results}), conservative copy requires more model operations than existing-target. Investigation of this result revealed a limitation of the conservative copy implementation provided by Flock, which is now described and illustrated using a simplification of the GMF Graph co-evolution example.
 
-Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolution. In the real metamodel, the \texttt{figure} and \texttt{accessor} features are references to other metamodel classes, rather than attributes. When the metamodel evolved, the types of the \texttt{figure} and \texttt{accessor} features were changed. Here, let us assume that their types were changed from a string to an integer. The actual metamodel changes are described in Appendix~\ref{CoevolutionExamples}.
+Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolution. In the real metamodel, the \texttt{figure} and \texttt{accessor} features are references to other metamodel classes, rather than attributes. When the metamodel evolved, the types of the \texttt{figure} and \texttt{accessor} features were changed. Here, let us assume that their types were changed from a string to an integer. The actual metamodel changes are described in Section~\ref{subsec:gmf_graph}.
+
 
 \begin{figure}[htbp]
   \centering
@@ -381,7 +382,7 @@ Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolut
 \end{figure}
 
 In response to re-typing of the \texttt{figure} and \texttt{accessor} features, the
-migration strategy derived new values for the \texttt{figure} and \texttt{accessor} features. In the real example, a new model element was created and used to decorate \cite{gamma95patterns} each old value. In the simplified example presented here, the new integer value will be derived from the old string value by using its length. Appendix~\ref{CoevolutionExamples} includes the strategies used to perform migration for the actual metamodel changes.
+migration strategy derived new values for the \texttt{figure} and \texttt{accessor} features. In the real example, a new model element was created and used to decorate \cite{gamma95patterns} each old value. In the simplified example presented here, the new integer value will be derived from the old string value by using its length. Section~\ref{subsec:gmf_graph} presents the strategies used to perform migration for the actual metamodel changes.
 
 As demonstrated below, ATL and Groovy-for-COPE provide mechanisms for re-using migration code between subtypes. Migration of the \texttt{figure} feature can be specified once and used for migrating all subtypes of \texttt{DiagramElement}. Currently, Flock does not provide a mechanism for re-using migration code between subtypes.
 

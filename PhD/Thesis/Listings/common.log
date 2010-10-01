@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  7 SEP 2010 11:59
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  1 OCT 2010 11:34
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -110,45 +110,96 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 2--13
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--14
 []
  []
 
 
-Overfull \hbox (5.24995pt too wide) in paragraph at lines 2--13
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 2--14
 \OT1/cmtt/m/n/10 ,
  []
 
 
-Overfull \hbox (68.2494pt too wide) in paragraph at lines 2--13
+Overfull \hbox (68.2494pt too wide) in paragraph at lines 2--14
 \OT1/cmtt/m/n/10 lineskip=3pt,
  []
 
 
-Overfull \hbox (68.2494pt too wide) in paragraph at lines 2--13
+Overfull \hbox (68.2494pt too wide) in paragraph at lines 2--14
 \OT1/cmtt/m/n/10 numberstyle=,
  []
 
 
-Overfull \hbox (110.24904pt too wide) in paragraph at lines 2--13
+Overfull \hbox (110.24904pt too wide) in paragraph at lines 2--14
 \OT1/cmtt/m/n/10 flexiblecolumns=true,
  []
 
 
-Overfull \hbox (68.2494pt too wide) in paragraph at lines 2--13
+Overfull \hbox (68.2494pt too wide) in paragraph at lines 2--14
 \OT1/cmtt/m/n/10 numbers=left,
  []
 
 
-Overfull \hbox (57.7495pt too wide) in paragraph at lines 2--13
-\OT1/cmtt/m/n/10 nolol=true,
+Overfull \hbox (62.99945pt too wide) in paragraph at lines 2--14
+\OT1/cmtt/m/n/10 nolol=false,
  []
 
 
-Overfull \hbox (47.24959pt too wide) in paragraph at lines 2--13
-\OT1/cmtt/m/n/10 tabsize=2
+Overfull \hbox (52.49954pt too wide) in paragraph at lines 2--14
+\OT1/cmtt/m/n/10 tabsize=2,
  []
 
+
+Overfull \hbox (62.99945pt too wide) in paragraph at lines 2--14
+\OT1/cmtt/m/n/10 escapechar=%
+ []
+
+./common.tex:20: Undefined control sequence.
+l.20 \definecolor
+                 {highlighted}{RGB}{200,200,200}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./common.tex:20: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \definecolor{h
+                   ighlighted}{RGB}{200,200,200}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
 )
 ! Emergency stop.
 <*> common.tex
@@ -157,10 +208,10 @@ Overfull \hbox (47.24959pt too wide) in paragraph at lines 2--13
 
  
 Here is how much of TeX's memory you used:
- 8 strings out of 493886
- 144 string characters out of 1151098
+ 10 strings out of 493886
+ 158 string characters out of 1151098
  48889 words of memory out of 3000000
- 3380 multiletter control sequences out of 10000+50000
+ 3382 multiletter control sequences out of 10000+50000
  3808 words of font info for 15 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  12i,1n,9p,365b,57s stack positions out of 5000i,500n,10000p,200000b,50000s

@@ -6,7 +6,7 @@ A level-1 auxiliary file: 2.Background/background.aux
 A level-1 auxiliary file: 3.LiteratureReview/literature_review.aux
 A level-1 auxiliary file: 4.Analysis/analysis.aux
 Case mismatch error between cite keys VIATRA and viatra
----line 110 of file 4.Analysis/analysis.aux
+---line 111 of file 4.Analysis/analysis.aux
  : \citation{VIATRA
  :                 }
 I'm skipping whatever remains of this command

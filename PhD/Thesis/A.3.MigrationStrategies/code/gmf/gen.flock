@@ -1,0 +1,69 @@
+migrate GenLinkLabel {
+%\highlight%	migrated.notationViewFactoryClassName := null;
+}
+
+migrate GenLink {
+%\highlight%	migrated.notationViewFactoryClassName := null;
+}
+
+migrate GenEditorGenerator {
+%\highlight%	migrated.contextMenus.add(new Migrated!GenContextMenu);
+%\highlight%	migrated.contextMenus.first.context.add(migrated.diagram);
+	
+%\highlight%	migrated.contextMenus.first.items.add(new Migrated!LoadResourceAction);
+	
+	for (shortcutName in original.diagram.containsShortcutsTo) {
+%\highlight%		migrated.contextMenus.first.items.add(new Migrated!CreateShortcutAction);
+	}
+}
+
+
+migrate GenDiagram {
+%\highlight%	migrated.validationProviderPriority := Migrated!ProviderPriority#Lowest;
+}
+
+migrate FeatureLabelModelFacet {
+%\highlight%	migrated.parser := createOrRetrievePredefinedParser(migrated.viewMethod, migrated.editMethod);
+%\highlight%	migrated.viewMethod := null;
+%\highlight%	migrated.editMethod := null;
+}
+
+migrate DesignLabelModelFacet {
+%\highlight%	migrated.parser := createOrRetrieveExternalParser();
+}
+
+operation createOrRetrievePredefinedParser(viewMethod : Any, editMethod : Any) : Migrated!PredefinedParser {
+	if (getPredefinedParser(viewMethod, editMethod).isUndefined()) {
+%\highlight%		createOrRetrieveGenParsers().implementations.add(createPredefinedParser(viewMethod, editMethod));
+	}
+
+	return getPredefinedParser(viewMethod, editMethod);
+}
+
+operation getPredefinedParser(viewMethod : Any, editMethod : Any) : Migrated!PredefinedParser {
+	return Migrated!PredefinedParser.all.selectOne(p | p.viewMethod = viewMethod and p.editMethod = editMethod);
+}
+
+operation createPredefinedParser(viewMethod : Any, editMethod : Any) : Migrated!PredefinedParser {
+	var parser := new Migrated!PredefinedParser;
+%\highlight%	parser.viewMethod := viewMethod;
+%\highlight%	parser.editMethod := editMethod;
+	return parser;
+}
+
+operation createOrRetrieveExternalParser() : Migrated!ExternalParser {
+	if (Migrated!ExternalParser.all.isEmpty()) {
+%\highlight%		createOrRetrieveGenParsers().implementations.add(new Migrated!ExternalParser);
+	}
+
+	return Migrated!ExternalParser.all.first;
+}
+
+operation createOrRetrieveGenParsers() : Migrated!GenParsers {
+	if (Migrated!GenEditorGenerator.all.first.labelParsers.isUndefined()) {
+		Migrated!GenEditorGenerator.all.first.labelParsers := new Migrated!GenParsers;
+%\highlight%		Migrated!GenEditorGenerator.all.first.labelParsers.extensibleViaService := true;
+	}
+	
+	return Migrated!GenEditorGenerator.all.first.labelParsers;
+}
