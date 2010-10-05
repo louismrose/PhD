@@ -2,11 +2,11 @@
 
 \section{Evaluating Conservative Copy}
 \label{sec:quantitive}
-In contrast to the previous section, this section focuses on developer-driven migration, in which migration is specified in a programming language. As discussed in Chapter~\ref{Analysis}, the programming languages typically used to specify migration vary and, in particular, use different approaches to relating source and target model elements. This section evaluates the novel source-target relationship implemented in Flock (Section~\ref{sec:flock}), \emph{conservative copy}, by comparison to \emph{new-target} and \emph{existing-target} source-target relationships, which have been used for model migration in \cite{cicchetti08automating,garces09managing}) and \cite{herrmannsdoerfer09cope,hussey06advanced}) respectively.
+In contrast to the previous section, this section focuses not on \emph{user-driven} but rather on developer-driven migration, in which migration is specified in a programming language. As discussed in Chapter~\ref{Analysis}, often a model-to-model (M2M) transformation language is used to specify migration. The M2M languages typically used to specify migration vary and, in particular, use different approaches to relating source and target model elements. This section evaluates the novel source-target relationship implemented in Flock (Section~\ref{sec:flock}), \emph{conservative copy}, by comparison to \emph{new-target} and \emph{existing-target} source-target relationships, which have been used for model migration in \cite{cicchetti08automating,garces09managing}) and \cite{herrmannsdoerfer09cope,hussey06advanced}) respectively.
 
-The evaluation performed in this section aims to demonstrate that migration strategies are more concise when written with a migration language that uses conservative copy rather than when written with a new- or existing-target migration language. Arguably, more concise migration strategies lead to increased developer productivity (because less code is written to specify migration), and, moreover, to increased understandability of migration strategies (because less code must be read to comprehend a migration strategy).
+The evaluation performed in this section aims to demonstrate that migration strategies are more concise when written with a M2M language that uses conservative copy rather than when written with a M2M language that uses new- or existing-target. Arguably, more concise migration strategies lead to increased developer productivity (because less code is written to specify migration), and, moreover, to increased understandability of migration strategies (because less code must be read to comprehend a migration strategy).
 
-Conciseness might be measured in many ways. For instance, \cite{kolovos09thesis} counts lines of code to argue that more concise software components indicate a high degree of inter-component re-use. In that context, the number of lines of code is an appropriate measure because the software components were written in a single programming language. \cite{halstead77softwarescience} suggests ways in which the conciseness and understandability of programs might be approximated by determining the ratio of operators (language constructs) to operands (data). Halstead's Metrics are calculated from programming language constructs and, consequently, are affected by variations in programming languages. Here, counting lines of code and Halstead's metrics are inappropriate because no single language implements the three styles of source-target relationship that are to be compared.
+Conciseness might be measured in many ways. For instance, \cite{kolovos09thesis} counts lines of code to argue that more concise software components indicate a high degree of inter-component re-use. In that context, the number of lines of code is an appropriate measure because the software components were written in a single programming language. \cite{halstead77softwarescience} suggests ways in which the conciseness and understandability of programs might be approximated by determining the ratio of operators (language constructs) to operands (data). Halstead's Metrics are calculated from programming language constructs and, consequently, are affected by variations in programming languages. Here, counting lines of code and Halstead's Metrics are inappropriate because no single language implements the three styles of source-target relationship that are to be compared.
 
 Instead, conciseness was measured by counting the frequency of \emph{model operations}, program statements that are used to manipulate the target (migrated) model. Model operations were specified in a language-independent manner and then mapped onto language-specific constructs to perform the counting. Therefore, the hypothesis for the comparison was: \emph{specifying a migration strategy with conservative copy requires no more model operations than when new-target or when existing-target are used instead}. The results presented in Section~\ref{subsec:quantitive_results} corroborate the hypothesis and highlight some limitations of the implementation of conservative copy in Flock.
 
@@ -19,9 +19,9 @@ Two styles of source-target relationship, new-target and existing-target, are us
 
 With a \emph{new-target} source-target relationship, the migrated model is created afresh by the model migration strategy. The model migration language does not automatically copy any part of the original model to the migrated model. Consequently, any model elements that are not affected by metamodel evolution must be explicitly copied from original to migrated model.
 
-By contrast, the migrated model is initialised to be a copy of the original model in an \emph{existing-target} source-target relationship. Prior to execution of the migration strategy, the migrated and original models are identical. Elements that no longer conform to the evolved metamodel might have been copied automatically from original to migrated model and, consequently, the migration strategy may need to delete model elements.
+With an \emph{existing-target} source-target relationship, the migrated model is initialised as a copy of the original model. Prior to execution of the migration strategy, the migrated and original models are identical. Elements that no longer conform to the evolved metamodel might have been copied automatically from original to migrated model and, consequently, the migration strategy may need to delete model elements.
 
-This thesis proposes a third style of source-target relationship termed \emph{conservative copy}, which is a hybrid of new- and existing-target source-target relationships. Prior to the execution of the migration strategy, only those model elements that conform to the evolved metamodel are copied from original to migrated model. Conservative copy aims to reduce the amount of copying operations often required to specify migration with new-target, while also reducing the amount of delete operations used with existing-target.
+This thesis proposes a third style of source-target relationship termed \emph{conservative copy}, which is a hybrid of new- and existing-target source-target relationships. Prior to the execution of the migration strategy, only those model elements that conform to the evolved metamodel are copied from original to migrated model.
 
 
 \subsection{Equipment}\footnote{TODO: Need a more appropriate name for this section}
@@ -33,7 +33,7 @@ To reduce contamination of the comparison, the co-evolution examples used were d
 
 Five co-evolution examples taken from three projects were used for evaluating conservative copy.  Two examples were taken from the \emph{Newsgroup} project, which performs statistical analysis of NNTP newsgroups, developed by Dimitris Kolovos, a lecturer in this department. One example was taken from changes made to \emph{UML} (the Unified Modeling Language) between versions 1.4 \cite{uml14} and 2.2 \cite{uml22} of the specification. Two examples were taken from \emph{GMF} (Graphical Modeling Framework) \cite{gronback09emp}, an Eclipse project for generating graphical model editors.
 
-For the newsgroup and GMF projects, the co-evolution examples were identified from source code management systems. The revision history for each project was examined, and metamodel changes were located. The intended migration strategy was determined by speaking with the developer (for the Newsgroup project) and by examining examples and documentation (for GMF). For the UML project, the co-evolution example was identified from the list of changes in the UML 2.2 specification \cite{uml22}, and by discussion with other UML users as described in Section~\ref{sec:ttc}.
+For the newsgroup and GMF projects, the co-evolution examples were identified from source code management systems. The revision history for each project was examined, and metamodel changes were located. The intended migration strategy was determined by speaking with the developer (for the Newsgroup project) and by examining examples and documentation (for GMF). The co-evolution example taken from UML was identified from the list of changes in the UML 2.2 specification \cite{uml22}, and by discussion with other UML users as described in Section~\ref{sec:ttc}.
 
 For interoperability with the three reference implementations used in the comparison, the UML co-evolution was adapted. The original (UML 1.4 \cite{uml14}) metamodel is specified in XMI 1.2 \cite{xmi}, which is not supported by two of the reference implementations. The part of the UML 1.4 relating to activity graphs was reconstructed by the author in XMI 2.1 and used in place of the XMI 1.2 version. The reconstructed metamodel was checked by several UML users and was used in the expert evaluation described in Section~\ref{sec:ttc}, where the reconstructed metamodel is discussed further. 
 
@@ -49,7 +49,7 @@ In summary, the comparison described in this section uses ATL for investigating 
 
 \subsection{Method}
 \label{subsec:quantitive_method}
-The comparison method is now described. Following the selection of co-evolution examples and reference implementations, the author wrote a migration strategy for each co-evolution example in each of the reference implementations (ATL, Groovy-for-COPE and Flock). The intended migration strategy was determined from models available in the source code management system of the co-evolution example (Newsgroup and GMF projects), or (for the UML project) by referring to the UML specification and discussing ambiguities with other UML users, as described in Section~\ref{sec:ttc}.
+The comparison involved constructing migration strategies in each of the reference implementations, identifying and counting model operations, and analysing the results. Following the selection of co-evolution examples and reference implementations, the author wrote a migration strategy for each co-evolution example in each of the reference implementations (ATL, Groovy-for-COPE and Flock). The intended migration strategy was determined from models available in the source code management system of the co-evolution example (Newsgroup and GMF projects), or (for the UML example) by referring to the UML specification and discussing ambiguities with other UML users, as described in Section~\ref{sec:ttc}.
 
 Next, a set of model operations were identified in a language independent manner and then mapped onto language constructs in ATL, Groovy-for-COPE and Flock. The counting of model operations was then automated by implementing a counting program, which was tested and used to further develop the comparison technique. Finally, the counting program was executed on the evaluation examples and the results investigated (Section~\ref{subsec:quantitive_results}).
 
@@ -63,11 +63,11 @@ Creation and deletion operators are used to create or delete model elements in t
 
 Deletion and unassignment operators are not necessary when specifying model migration with new-target, because the migrated model is created afresh by the model migration strategy. Any deletion or unassignment would involve removing model elements or values created explicitly elsewhere in the migration strategy. By contrast, existing-target and conservative copy will automatically create model elements and assign model values prior to the execution of the model migration strategy and hence unassignment and deletion operators are required.
 
-Creation operators were not included in the comparison because, unlike the other operators, they are difficult to specify with regular expressions (and hence automatically count). Moreover, all of the co-evolution examples considered in the comparison assign values to model elements after they are created. Consequently, at least one assignment operator is used whenever a creation operator would have been used.
+Creation operators were not included in the comparison because, unlike the other operators, they are difficult to specify with regular expressions (and hence automatically count). Moreover, in all of the co-evolution examples considered in the comparison, values are assigned to model elements after they are created. Consequently, at least one assignment operator is used whenever a creation operator would have been used.
 
 \subsubsection{Model Operations in ATL, Groovy-for-COPE and Flock}
 \label{subsubsec:quantitive_model_operations_concrete}
-The concrete syntax of the deletion, assignment and unassignment model operations in each language is now introduced. First however, it is important to note that the languages considered provide loop constructs and consequently a single model operation might be executed several times during the execution of a migration strategy. Here, a model operation is counted only once even if it is contained in a loop because the comparison reasons about the conciseness of migration strategies, and not about the way in which model operations are executed.
+The concrete syntax of the deletion, assignment and unassignment model operations in each language is now introduced. First however, it is important to note that the languages considered provide loop constructs and consequently a single model operation might be executed several times during the execution of a migration strategy. Here, a model operation is counted only once even if it is contained in a loop because the comparison is used to reason about the conciseness of migration strategies, and not about the way in which model operations are executed.
 
 \paragraph{New-target in ATL}
 For new-target in ATL, the following model operation was counted:
@@ -111,7 +111,7 @@ For existing-target in Groovy-for-COPE, the following model operations were coun
 	\subitem \texttt{delete <element>}
 \end{itemize}
 
-Unlike ATL, Groovy-for-COPE provides distinct operators for assigning to single- and multi-valued features. The first assignment operator assigns to a single-valued feature, the second adds one value to a multi-valued feature, and the third adds multiple values to a multi-valued feature. The fourth form allows the feature name to be determined at runtime and, hence, facilitates reflective access to the model. 
+Unlike ATL, Groovy-for-COPE provides distinct operators for assigning to single- and multi-valued features. The first assignment operator assigns to a single-valued feature, the second adds one value to a multi-valued feature, and the third adds multiple values to a multi-valued feature. The fourth form allows the feature name to be determined at runtime and, hence, facilitates reflective access to models. 
 
 COPE provides two forms of unassignment. The first can be used to unassign any feature. The second form is used to remove one value from a multi-valued feature.
 
@@ -140,7 +140,7 @@ Flock does not provide a dedicated language construct for performing unassignmen
 
 \subsubsection{Development and Testing of Method}
 \label{subsubsec:quantitive_method_development}
-The method and a program for counting model operations were developed and tested by using the co-evolution examples described in Chapter~\ref{Analysis}, which were used to derive the thesis requirements. An example of model operation counting is given in the remainder of this section, along with the total number of model operations observed for each of the co-evolution examples described in Chapter~\ref{Analysis}.
+The comparison method and a program for counting model operations were developed and tested by using the co-evolution examples described in Chapter~\ref{Analysis}, which were used to derive the thesis requirements. An example of model operation counting is given in the remainder of this section, along with the total number of model operations observed for each of the co-evolution examples described in Chapter~\ref{Analysis}.
 
 Consider the example of metamodel-evolution shown in Figure~\ref{fig:quantitive_petri_nets_mms}. This is the Petri nets metamodel evolution described in Sections~\ref{sec:analyis_of_languages_used_for_migration} and~\ref{sec:flock}. The migration strategy replaces \texttt{Arc}s with \texttt{PTArc}s or \texttt{TPArc}s. In ATL, the migration strategy uses 12 model operations (Listing~\ref{lst:petri_nets_atl}). In Groovy-for-COPE, the migration strategy uses 10 model operations (Listing~\ref{lst:petri_nets_cope}) . In Flock, the migration strategy uses 6 model operations (Listing~\ref{lst:petri_nets_flock}). These results are also shown in the \emph{(Literature) PetriNets} row of Table~\ref{tab:model_operations_results_analysis_examples}.
 
@@ -207,14 +207,14 @@ lazy rule TPArcs {
 
 \begin{lstlisting}[float=tbp, caption=The Petri nets model migration in Groovy-for-COPE, label=lst:petri_nets_cope, language=COPE]
 for (transition in Transition.allInstances) {
-  for (source in transition.unset('src')) {
+%\highlight%  for (source in transition.unset('src')) {
     def arc = petrinets.PTArc.newInstance()
 %\highlight%    arc.src = source;
 %\highlight%		arc.dst = transition;
 %\highlight%    arc.net = transition.net
   }
 
-  for (destination in transition.unset('dst')) {
+%\highlight%  for (destination in transition.unset('dst')) {
     def arc = petrinets.TPArc.newInstance() 
 %\highlight%    arc.src = transition;
 %\highlight%		arc.dst = destination;
@@ -324,17 +324,15 @@ The comparison hypothesis stated that \emph{specifying a migration strategy with
 
 The comparison hypothesis did not consider differences between new-target and existing-target, but the results show that, for the most part, a migration strategy uses fewer model operations when using existing-target rather than new-target. For all of the examples in Table~\ref{tab:model_operations_results} and most of the examples in Table~\ref{tab:model_operations_results_analysis_examples}, no migration strategy specified with existing-target contained fewer model operations when specified with new-target. However, three of the Refactor examples in Table~\ref{tab:model_operations_results_analysis_examples} required more model operations when specified with existing-target than when specified with new-target.
 
-The results are now investigated, starting by discussing the way in which the results support the comparison hypothesis. Subsequently, results that contradict the hypothesis are analysed in more detail. The analysis led to the discovery of two limitations of the conservative copy implementation in Flock, which are also discussed below.
-
+The results are now investigated, starting by discussing the way in which the results support the comparison hypothesis. Subsequently, results that contradict the hypothesis are investigated. Two limitations of the conservative copy implementation in Flock were discovered via the investigation of results.
 
 \subsubsection{Investigation of results}
 As discussed in Section~\ref{subsec:styles_of_source-target_relationship}, new-target, existing-target and conservative copy initialise the migrated model in a different way. New-target initialises an empty model, while existing-target initialises a complete copy of the original model. Conservative copy initialises the migrated model by copying only those model elements from the original model that conform to the migrated metamodel.
 
-For four of the co-evolution examples, the results in Table~\ref{tab:model_operations_results} support the comparison hypothesis. Additionally, the results in Table~\ref{tab:model_operations_results} indicate that a migration strategy can be specified with fewer model operations when using existing-target rather than new-target. Three of the results for the Refactor examples in Table~\ref{tab:model_operations_results_analysis_examples} contradict this contention.
 
-In two of the co-evolution examples, a large proportion of metamodel features were not affected by evolution. These were the GMF examples shown in Table~\ref{tab:model_operations_results}, which involved evolution of a small part of the metamodels. For the GMF examples, the ATL (new-target) migration strategies use many more model operations than Groovy-for-COPE (existing-target) and Flock (conservative copy). It is likely that the same phenomenon would have been observed, had the actual UML 1.4 metamodel been used for the UML co-evolution example, but this was not possible for the reasons given in Section~\ref{subsec:quantitive_equipment}.
+For four of the co-evolution examples, the results in Table~\ref{tab:model_operations_results} support the comparison hypothesis, which stated that \emph{specifying a migration strategy with conservative copy requires no more model operations than when new-target or when existing-target are used instead}. Additionally, the results in Table~\ref{tab:model_operations_results} indicate that a migration strategy can be specified with fewer model operations when using existing-target rather than new-target. In particular, for the GMF examples shown in Table~\ref{tab:model_operations_results}, evolution affected only a small proportion of the metamodel, and the ATL (new-target) migration strategies use many more model operations than Groovy-for-COPE (existing-target) and Flock (conservative copy). 
 
-New-target initialises an empty model and, hence, every element of the migrated model must be derived from the original model. For model elements that do not need to be changed in response to metamodel evolution, the migration strategy must copy those elements without change. For instance, the new-target version of the GMF Graph and Gen migration strategies contain many transformation rules such as the one shown in Listing~\ref{lst:graph_atl_canvas_rule}, which exist only for copying model elements from the original to the migrated model. In Listing~\ref{lst:graph_atl_canvas_rule}, 5 model operations are used (all assignments) to copy values from the original to the migrated model. The features shown in Listing~\ref{lst:graph_atl_canvas_rule} (\texttt{fi\-gu\-r\-es}, \texttt{no\-d\-es}, \texttt{co\-nn\-ec\-ti\-o\-ns}, \texttt{co\-mp\-ar\-tm\-en\-ts} and \texttt{la\-be\-ls}) were not changed during metamodel evolution. Unlike new-target, existing-target and conservative copy do not require explicit copying of model elements from the original to migrated model due to the way in which they initialise the migrated model.
+This result can be explained by considering how new-target differs from exiting-target and conservative copy when the source (original) and target (evolved) metamodels are very similar. New-target initialises an empty model and, hence, every element of the migrated model must be derived from the original model. For model elements that do not need to be changed in response to metamodel evolution, the migration strategy must copy those elements without change. For instance, the new-target version of the GMF Graph and Gen migration strategies contain many transformation rules such as the one shown in Listing~\ref{lst:graph_atl_canvas_rule}, which exist only for copying model elements from the original to the migrated model. In Listing~\ref{lst:graph_atl_canvas_rule}, 5 model operations are used (all assignments) to copy values from the original to the migrated model. The features shown in Listing~\ref{lst:graph_atl_canvas_rule} (\texttt{fi\-gu\-r\-es}, \texttt{no\-d\-es}, \texttt{co\-nn\-ec\-ti\-o\-ns}, \texttt{co\-mp\-ar\-tm\-en\-ts} and \texttt{la\-be\-ls}) were not changed during metamodel evolution. Unlike new-target, existing-target and conservative copy do not require explicit copying of model elements from the original to migrated model due to the way in which they initialise the migrated model.
 
 \begin{lstlisting}[float=tbp, caption=An extract of the GMF Graph model migration in ATL, label=lst:graph_atl_canvas_rule, language=ATL]
 rule Canvas2Canvas {
@@ -349,9 +347,7 @@ rule Canvas2Canvas {
 }
 \end{lstlisting}
 
-In the UML co-evolution example (Table~\ref{tab:model_operations_results}) and the Refactor Inline Class (Table~\ref{tab:model_operations_results_analysis_examples}), a large proportion of metamodel features were renamed. For these examples, expressing migration with an existing-target transformation language requires more model operations than using a new-target transformation language.
-
-Existing-target requires two model operations be used when a feature is renamed, while new-target and conservative copy require only one model operation. For instance, the \texttt{transitions} feature of \texttt{ActivityGraph} was renamed to \texttt{edge} in the UML co-evolution example. The code used for migration in response to this change for new-target, existing-target and conservative copy is shown below. \\
+In the UML co-evolution example (Table~\ref{tab:model_operations_results}) and the Refactor Inline Class (Table~\ref{tab:model_operations_results_analysis_examples}), a large proportion of metamodel features were renamed. For these examples, expressing migration with an existing-target transformation language requires more model operations than using a new-target transformation language. Existing-target requires two model operations be used when a feature is renamed, while new-target and conservative copy require only one model operation. For instance, the \texttt{transitions} feature of \texttt{ActivityGraph} was renamed to \texttt{edge} in the UML co-evolution example. The code used for migration in response to this change for new-target, existing-target and conservative copy is shown below. \\
 
 \textbf{New-target:} \texttt{edge <- transitions}
 
@@ -363,15 +359,15 @@ Existing-target requires two model operations be used when a feature is renamed,
 As shown above, migration in response to feature renaming typically requires one model operation when using new-target and conservative copy (an assignment). When using existing-target, the equivalent migration strategy requires an additional model operation (an unassignment) that removes the value from the old feature. Note that, in Groovy-for-COPE, the \texttt{unset} function unassigns a feature and returns the (unassigned) value.
 
 
-The results in Table~\ref{tab:model_operations_results} corroborate the comparison hypothesis for four of the five examples. The five migration strategies required no more model operations when specified with conservative copy than when specified with new- and existing-target. When specified with conservative copy, the migration strategies did not contain explicit copying (which was required when using new-target for the GMF examples) and used one rather than two model operations for migration in response to feature renaming (which required two model operations when using existing-target). The GMF Graph co-evolution example does not support the hypothesis due to a limitation of the way in which conservative copy is implemented in Flock. This limitation is described below. 
+The results in Table~\ref{tab:model_operations_results} support the comparison hypothesis for four of the five examples. When specified with conservative copy, the migration strategies did not contain explicit copying (which was required when using new-target for the GMF examples) and used one rather than two model operations for migration in response to feature renaming (which required two model operations when using existing-target). However, the GMF Graph co-evolution example does not support the hypothesis due to a limitation of the way in which conservative copy is implemented in Flock. This limitation is described in the sequel. 
 
-Two conclusions can be drawn from this discussion. Firstly, in general, fewer model operations are used when specifying a migration strategy with a conservative copy migration language than when specifying the same migration strategy with a new- or existing-target migration language. Secondly, in the examples studied here, there are often more features unaffected by metamodel evolution than affected. Consequently, specifying model migration with a new-target migration language requires more model operations than in an existing-target migration language for the examples shown in Tables~\ref{tab:model_operations_results_analysis_examples} and~\ref{tab:model_operations_results}. \cite{sprinkle03thesis} suggests that metamodel evolution often involves changes to relatively few metamodel elements, and the results presented in this section support his contention.  
+Two conclusions can be drawn from investigating the results of the comparison. Firstly, in general, fewer model operations are used when specifying a migration strategy with a conservative copy migration language than when specifying the same migration strategy with a new- or existing-target migration language. Secondly, in the examples studied here, there are often more features unaffected by metamodel evolution than affected. Consequently, specifying model migration with a new-target migration language requires more model operations than in an existing-target migration language for the examples shown in Tables~\ref{tab:model_operations_results_analysis_examples} and~\ref{tab:model_operations_results}. \cite{sprinkle03thesis} suggests that metamodel evolution often involves changes to relatively few metamodel elements, and the results presented in this section support his contention.  
 
 
 \subsubsection{Limitation 1: Duplication when migrating subtypes}
 For the GMF Graph example (Table~\ref{tab:model_operations_results}), conservative copy requires more model operations than existing-target. Investigation of this result revealed a limitation of the conservative copy implementation provided by Flock, which is now described and illustrated using a simplification of the GMF Graph co-evolution example.
 
-Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolution. In the real metamodel, the \texttt{figure} and \texttt{accessor} features are references to other metamodel classes, rather than attributes. When the metamodel evolved, the types of the \texttt{figure} and \texttt{accessor} features were changed. Here, let us assume that their types were changed from a string to an integer. The actual metamodel changes are described in Section~\ref{subsec:gmf_graph}.
+Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolution, which has been simplified for illustrative purposes. In the real metamodel, the \texttt{figure} and \texttt{accessor} features are references to other metamodel classes, rather than attributes. When the metamodel evolved, the types of the \texttt{figure} and \texttt{accessor} features were changed. Here, let us assume that their types were changed from string to integer. The real metamodel changes are described in Section~\ref{subsec:gmf_graph}.
 
 
 \begin{figure}[htbp]
@@ -382,11 +378,11 @@ Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolut
 \end{figure}
 
 In response to re-typing of the \texttt{figure} and \texttt{accessor} features, the
-migration strategy derived new values for the \texttt{figure} and \texttt{accessor} features. In the real example, a new model element was created and used to decorate \cite{gamma95patterns} each old value. In the simplified example presented here, the new integer value will be derived from the old string value by using its length. Section~\ref{subsec:gmf_graph} presents the strategies used to perform migration for the actual metamodel changes.
+migration strategy derived new values for the \texttt{figure} and \texttt{accessor} features. In the real example, a new model element was created and used to decorate \cite{gamma95patterns} each old value. In the simplified example presented here, the new integer value will be derived from the old string value by using its length. Section~\ref{subsec:gmf_graph} presents the strategies used to perform migration for the real metamodel changes.
 
 As demonstrated below, ATL and Groovy-for-COPE provide mechanisms for re-using migration code between subtypes. Migration of the \texttt{figure} feature can be specified once and used for migrating all subtypes of \texttt{DiagramElement}. Currently, Flock does not provide a mechanism for re-using migration code between subtypes.
 
-In ATL (Listing~\ref{lst:graph_atl}), the GMF Graph migration strategy was expressed using two model operations: the two assignment operations on lines 3 and 23. For \texttt{Node}s, \texttt{Connection}s and \texttt{Compartment}s, migration of the \texttt{figure} feature is achieved by extending the \texttt{DiagramElement} transformation rule. Note the use of the \texttt{extends} keyword on lines 6, 11 and 16 for inheriting the rule on lines 1-4. For \texttt{DiagramLabel}s, the values of both the \texttt{accessor} and \texttt{figure} features must be migrated. On lines 21-24, the \texttt{DiagramLabels} extends \texttt{Nodes} and hence \texttt{DiagramElements} to inherit the body of the latter for migrating figures, and, in addition, the \texttt{DiagramLabels} rule defines the migration for the value of the \texttt{accessor} feature.
+In ATL (Listing~\ref{lst:graph_atl}), the GMF Graph migration strategy was expressed using two model operations: the two assignment operations on lines 4 and 26. For \texttt{Node}s, \texttt{Connection}s and \texttt{Compartment}s, migration of the \texttt{figure} feature is achieved by extending the \texttt{DiagramElement} transformation rule. Note the use of the \texttt{extends} keyword on lines 8, 13 and 18 for inheriting the rule on lines 1-4. For \texttt{DiagramLabel}s, the values of both the \texttt{accessor} and \texttt{figure} features must be migrated. On lines 23-28, the \texttt{DiagramLabels} rule extends the \texttt{Nodes} rule (and hence the \texttt{DiagramElements} rule) to inherit the body of the \texttt{DiagramElements} rule on line 4. In addition, the \texttt{DiagramLabels} rule defines the migration for the value of the \texttt{accessor} feature on line 26.
 
 \begin{lstlisting}[float=tbp, caption=Simplified GMF Graph model migration in ATL, label=lst:graph_atl, language=ATL, tabsize=2]
 abstract rule DiagramElements {
@@ -419,7 +415,7 @@ rule DiagramLabels extends Nodes {
 }
 \end{lstlisting}
 
-In Groovy-for-COPE (Listing~\ref{lst:graph_cope}), the migration is similar to ATL but is specified imperatively. In Listing~\ref{lst:graph_cope}, a loop iterates over each instance of \texttt{DiagramElement} (line 1), migrating the value of its figure feature (line 2). The \texttt{allInstances} function is used to locate every model element with the type \texttt{DiagramElement} or one of its subtypes. If the \texttt{DiagramElement} is also a \texttt{DiagramLabel} (line 4), the value of its accessor feature is also migrated (line 5). In Groovy-for-COPE, the migration strategy uses two model operations: the assignment statements on lines 2 and 5. 
+In Groovy-for-COPE (Listing~\ref{lst:graph_cope}), the migration is similar to ATL but is specified imperatively. In Listing~\ref{lst:graph_cope}, a loop iterates over each instance of \texttt{DiagramElement} (line 1), migrating the value of its \texttt{figure} feature (line 2). The \texttt{allInstances} function is used to locate every model element with the type \texttt{DiagramElement} or one of its subtypes. If the \texttt{DiagramElement} is also a \texttt{DiagramLabel} (line 4), the value of its accessor feature is also migrated (line 5). In Groovy-for-COPE, the migration strategy uses two model operations: the assignment statements on lines 2 and 5. 
 
 \begin{lstlisting}[float=tbp, caption=Simplified GMF Graph model migration in COPE, label=lst:graph_cope, language=COPE, tabsize=2]
 for (diagramElement in DiagramElement.allInstances()) {
@@ -452,7 +448,7 @@ migrate Node {
 }
 \end{lstlisting}
 
-In the current implementation of Flock, \texttt{migrate} rules are used for specifying two concerns and the limitation described here might be avoided if those concerns were specified using two distinct language constructs. Firstly, the \texttt{to} part of a \texttt{migrate} rule is used to establish type equivalences between the original and evolved metamodel. When a metaclass is renamed, for example, migration in Flock would typically use a rule of the form \texttt{migrate OldType to NewType}. Omitting the \texttt{to} part of a rule (\texttt{migrate X}) is a shorthand for \texttt{migrate X to X}. Secondly, the body of each rule specifies the way in which each model element should be migrated. Separating the two concerns using distinct language constructs might facilitate the re-use of migration code between subtypes, as is the case in ATL and Groovy-for-COPE. The extent to which greater re-use and increased conciseness can be addressed with changes to the implementation of Flock, and in general, is discussed in Section~\ref{sec:future_work}. This section now considers one further limitation of existing-target and conservative copy migration languages.
+In the current implementation of Flock, \texttt{migrate} rules are used for specifying two concerns and the limitation described here might be avoided if those concerns were specified using two distinct language constructs. The first concern relates to,the \texttt{to} part of a \texttt{migrate} rule, which is used to establish type equivalences between the original and evolved metamodel. When a metaclass is renamed, for example, migration in Flock would typically use a rule of the form \texttt{migrate OldType to NewType}. Omitting the \texttt{to} part of a rule (\texttt{migrate X}) is a shorthand for \texttt{migrate X to X}. The second concern relates to the body of each rule, which specifies the way in which each model element should be migrated. Separating the two concerns using distinct language constructs might facilitate the re-use of migration code between subtypes. The extent to which greater re-use and increased conciseness can be addressed with changes to the implementation of Flock is discussed in Section~\ref{sec:future_work}. The sequel considers one further limitation of existing-target and conservative copy migration languages.
 
 \subsubsection{Limitation 2: Side-effects during initialisation}
 The measurements observed for one of the examples of co-evolution from Chapter~\ref{Analysis}, Change Reference to Containment (Table~\ref{tab:model_operations_results_analysis_examples}), cannot be explained by the conceptual differences between source-target relationship. Instead, the way in which the source-target relationship is implemented must be considered.
@@ -501,33 +497,34 @@ lazy rule Ports {
 
 In existing-target and conservative copy migration languages, migration is less straightforward because, during the initialisation of the the migrated model from the original model, the value of a containment reference (\texttt{Signature\#ports}) is set. When a containment reference is set, the contained objects are removed from their previous containment reference (i.e. setting a containment reference has side-effects). Therefore, in a \texttt{System} where more than one \texttt{Signature} references the same \texttt{Port}, the migrated model cannot be formed by copying the contents of \texttt{Signature\#ports} from the original model. Attempting to do so causes each \texttt{Port} to be contained only in the last referencing \texttt{Signature} that was copied.
 
-In COPE, the containment nature of a reference is not enforced until after the migration strategy is executed. Hence, migration for the type of metamodel change considered here can be specified by unsetting the contents of the \texttt{ports} reference (line 4 of Listing~\ref{lst:ref2cont_cope}), and creating a copy of each referenced \texttt{Port} (lines 5-7 of Listing~\ref{lst:ref2cont_cope}). The migration strategy shown in Listing~\ref{lst:ref2cont_cope} uses 5 model operations: assignments on lines 8, 9 and 12; unassignment on line 10, and deletion on line 19. Note that the assignment on line 7 is to a temporary variable, and so is not counted as a model operation. 
-
-The ATL migration strategy copies ports as they are needed. By contrast, the Groovy-for-COPE migration strategy must account for the initial copy of every Port which is created prior to execution according to existing-target. The Groovy-for-COPE migration strategy must either clone only those ports that are referenced by more than one signature, or clone every referenced port, but delete all of the ports created by existing-target. The latter approach requires 1 more model operation (to delete the original ports) than the former (shown in Listing~\ref{lst:ref2cont_cope}).
-
-\begin{lstlisting}[float=tbp, caption=Migration for Change Reference to Containment in Groovy-for-COPE, label=lst:ref2cont_cope, language=COPE, tabsize=2]
-def contained = []
-
-for(signature in refactorings_changeRefToCont.Signature.allInstances) {
-  for(port in signature.ports)) {
-	  // when more than one Signature references this port
-	  if (contained.contains(port)) {
-      def clone = Port.newInstance()
-%\highlight%      clone.name = port.name
-%\highlight%      signature.ports.add(clone)
-%\highlight%      signature.ports.remove(port)
-		} else {
-%\highlight%			contained.add(port)
-		}
-  }
-}
-
-for(port in refactorings_changeRefToCont.Port.allInstances) {
-	if (not refactorings_changeRefToCont.Signature.allInstances.any { it.ports.contains(port) }) {
-%\highlight%	  	port.delete()
-	}
-}
-\end{lstlisting}
+% In COPE, the containment nature of a reference is not enforced until after the migration strategy is executed. Consequently, the migration can be specified in COPE by % TODO
+% The migration strategy shown in Listing~\ref{lst:ref2cont_cope} uses 5 model operations: assignments on lines 8, 9 and 12; unassignment on line 10, and deletion on line 19. Note that the assignment on line 7 is to a temporary variable, and so is not counted as a model operation. 
+% 
+% The ATL migration strategy copies ports as they are needed. By contrast, the Groovy-for-COPE migration strategy must account for the initial copy of every Port which is created prior to execution according to existing-target. The Groovy-for-COPE migration strategy must either clone only those ports that are referenced by more than one signature, or clone every referenced port, but delete all of the ports created by existing-target. The latter approach requires 1 more model operation (to delete the original ports) than the former (shown in Listing~\ref{lst:ref2cont_cope}).
+% 
+% \begin{lstlisting}[float=tbp, caption=Migration for Change Reference to Containment in Groovy-for-COPE, label=lst:ref2cont_cope, language=COPE, tabsize=2]
+% def contained = []
+% 
+% for(signature in refactorings_changeRefToCont.Signature.allInstances) {
+%   for(port in signature.ports)) {
+% 	  // when more than one Signature references this port
+% 	  if (contained.contains(port)) {
+%       def clone = Port.newInstance()
+% %\highlight%      clone.name = port.name
+% %\highlight%      signature.ports.add(clone)
+% %\highlight%      signature.ports.remove(port)
+% 		} else {
+% %\highlight%			contained.add(port)
+% 		}
+%   }
+% }
+% 
+% for(port in refactorings_changeRefToCont.Port.allInstances) {
+% 	if (not refactorings_changeRefToCont.Signature.allInstances.any { it.ports.contains(port) }) {
+% %\highlight%	  	port.delete()
+% 	}
+% }
+% \end{lstlisting}
 
 In Flock, the containment nature of the reference is enforced when the migrated model is initialised. Because changing the contents of a containment reference has side-effects, a \texttt{Port} that appears in the \texttt{ports} reference of a \texttt{Signature} in the original model may not have been automatically copied to the \texttt{ports} reference of the equivalent \texttt{Signature} in the migrated model during initialisation. Consequently, the migration strategy must check the \texttt{ports} reference of each migrated \texttt{Signature}, cloning only those \texttt{Port}s that have not be automatically copied during initialisation (see line 3 of Listing~\ref{lst:ref2cont_flock}). The Flock migration strategy uses 3 model operations: assignments on lines 5 and 6, and a deletion on 11.
 
@@ -546,15 +543,15 @@ migrate Signature {
 	not Original!Signature.all.exists(s|s.ports.includes(original))
 \end{lstlisting}
 
-The Groovy-for-COPE and Flock migration strategies must remove any \texttt{Port}s which are not referenced by any \texttt{Signature} (lines 17-21 of Listing~\ref{lst:ref2cont_cope}, and line 11 of Listing~\ref{lst:ref2cont_flock} respectively), whereas the ATL migration strategy, which initialises any empty migrated model, does not copy unreferenced \texttt{Port}s.
+The Flock migration strategy must also remove any \texttt{Port}s which are not referenced by any \texttt{Signature} (line 11 of Listing~\ref{lst:ref2cont_flock}), whereas the ATL migration strategy, which initialises any empty migrated model, does not copy unreferenced \texttt{Port}s.
 
 When a non-containment reference is changed to a containment reference, migration strategies written in Flock and Groovy-for-COPE must account for the side-effects that can occur during initialisation of the migrated model, resulting in less concise migration strategies. The existing-target and conservative copy implementations used in COPE and Flock might be changed to avoid this limitation by either automatically cloning values when a reference is changed to be a containment reference, or by allowing the user to specify features that should not be copied by the source-target relationship during initialisation. Section~\ref{sec:future_work} discusses this issue further. 
 
 \subsection{Summary}
-By counting uses of model operations, this section has compared, in the context of model migration, three approaches to relating source-target relationship: new-target, existing-target and conservative copy. The results have been analysed and the measurement method described.
+By counting model operations, this section has compared, in the context of model migration, three approaches to relating source-target relationship: new-target, existing-target and conservative copy. The results have been analysed and the measurement method described.
 
-The analysis of the measurements has shown that new- and existing-target migration languages are better suited to different contexts. New-target languages require fewer model operations than existing-target languages when metamodel evolution involves the renaming of features. Existing-target languages require fewer model operations than new-target languages when metamodel evolution does not affect most model elements. For the examples considered here, the latter context was more common. Conservative copy requires fewer model operations than both new- and existing-target in almost all of the examples considered here.
+The analysis of the measurements has shown that new- and existing-target migration languages are more concise in different situations. New-target languages require fewer model operations than existing-target languages when metamodel evolution involves the renaming of features. Existing-target languages require fewer model operations than new-target languages when metamodel evolution does not affect most model elements. For the examples considered here, the latter context was more common. Conservative copy requires fewer model operations than both new- and existing-target in almost all of the examples considered here.
 
-The comparison has highlighted two limitations of the conservative copy algorithm implemented in Epsilon Flock, and this section has shown how these limitations are problematic for specifying some types of migration strategy.
+The comparison has highlighted two limitations of the conservative copy algorithm implemented in Flock, and this section has shown how these limitations are problematic for specifying some types of migration strategy.
 
 The author is not aware of any existing quantitive comparisons of migration languages, and, as such, the best practices for conducting such comparisons are not clear. The method used in obtaining these measurements has been described to provide a foundation for future comparisons. 

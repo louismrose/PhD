@@ -5,20 +5,22 @@
 \input{A.3.MigrationStrategies/commands.tex}
 
 
-This appendix describes the co-evolution examples used for evaluation in Chapter~\ref{Evaluation}. The examples were taken from real-world MDE projects and are distinct from the examples used for analysis in Chapter~\ref{Analysis}. Each section details examples from one project, describing metamodel changes and model migration strategies. In accordance with the evaluation performed in Section~\ref{sec:quantitive}, each model migration strategy is presented in three model migration languages. Lines of code that contain \emph{a model operation} (a statement that changes the migrated model) are highlighted. Section~\ref{sec:quantitive} describes model operation and the three model migration languages in more detail.
+This appendix describes the co-evolution examples used for evaluation in Chapter~\ref{Evaluation}. The examples were taken from real-world MDE projects and are distinct from the examples used for analysis in Chapter~\ref{Analysis}.
+
+Below, each section details examples from one project, describing metamodel changes and model migration strategies. Each model migration strategy is presented in the three model migration languages used for evaluating conservative copy in Section~\ref{sec:quantitive}, and lines that contain \emph{a model operation} (a statement that changes the migrated model) are highlighted. Section~\ref{sec:quantitive} describes model operations and the three model migration languages in more detail.
 
 
 \section{Newsgroups Examples}
-This section describes a program for performing statistical analysis of NNTP newsgroups, developed by Dimitris Kolovos, a lecturer in this department. The program comprises a metamodel to capture domain-specific concepts, a text-to-model transformation for parsing newsgroup messages, and a model-to-model transformation for analysing the messages.
+The first set of examples were taken from a project that performed statistical analysis of NNTP newsgroups, developed by Dimitris Kolovos, a lecturer in this department. The analysis was implemented using a metamodel to capture domain-specific concepts, a text-to-model transformation for parsing newsgroup messages, and a model-to-model transformation for recording the results of the analysis.
 
-The metamodel and transformations were developed in an iterative and incremental manner. Five iterations of the metamodel and transformations were made available by Kolovos, two of which involved metamodel changes that affected the conformance of existing models. In the other three iterations, the metamodel changes were additive and did not lead to model migration.
+The metamodel and transformations were developed in an iterative and incremental manner. Five iterations of the metamodel and transformations were made available by Kolovos, two of which involved metamodel changes that affected the conformance of existing models and are described below. In the other three iterations, the metamodel changes were additive, did not lead to model migration, and are not described here.
 
 \subsection{Extract Person}
-The Extract Person iteration involved separating the domain concepts of authors and articles. At the start of the iteration, the \texttt{Ar\-ti\-c\-le} class defined a string attribute called \texttt{se\-nd\-er} as shown in Figure~\ref{fig:newsgroups_extract_person_original_mm}. To make it easier to recognise articles written by the same people, the \texttt{Pe\-rs\-on} class was introduced, and the \texttt{se\-nd\-er} attribute was replaced with a reference to the \texttt{Pe\-rs\-on} class as shown in Figure~\ref{fig:newsgroups_extract_person_evolved_mm}.
+At the start of the second iteration, the newsgroups metamodel, show in Figure~\ref{fig:newsgroups_extract_person_original_mm}, captured two domain concepts, newsgroups and articles. The iteration involved separating the domain concepts of authors and articles. At the start of the iteration, the \texttt{Ar\-ti\-c\-le} class defined a string attribute called \texttt{se\-nd\-er} as shown in Figure~\ref{fig:newsgroups_extract_person_original_mm}. To make it easier to recognise when several articles were written by the same person, the \texttt{Pe\-rs\-on} class was introduced, and the \texttt{se\-nd\-er} attribute was replaced with a reference to the \texttt{Pe\-rs\-on} class as shown in Figure~\ref{fig:newsgroups_extract_person_evolved_mm}.
 
 \mmfigure{newsgroups}{extract_person}{Newsgroups metamodel during the Extract Person iteration}
 
-Existing models were migrated by deriving a \texttt{Pe\-rs\-on} object from the \texttt{se\-nd-\-er} feature of each \texttt{Ar\-ti\-c\-le}. The values of the \texttt{se\-nd-\-er} feature used one of two forms: \texttt{username@domain.com (Full Name)} or \texttt{"Full Name" username@domain.com}.
+Existing models were migrated by deriving a \texttt{Pe\-rs\-on} object from the \texttt{se\-nd\-er} feature of each \texttt{Ar\-ti\-c\-le}. The values of the \texttt{se\-nd\-er} feature used one of two forms: \texttt{username@domain.com (Full Name)} or \texttt{"Full Name" username@domain.com}.
 
 Listings~\ref{lst:newsgroups_extract_person_atl}, \ref{lst:newsgroups_extract_person_cope} and~\ref{lst:newsgroups_extract_person_flock} show the model migration strategy in ATL, COPE and Flock respectively. The \texttt{toEmail()} and \texttt{toName()} operations are used to extract names and email addresses, are defined without using any model operations, and are omitted from the listings below.
 
@@ -37,7 +39,7 @@ Listings~\ref{lst:newsgroups_resolve_replies_atl}, \ref{lst:newsgroups_resolve_r
 \section{UML Example}
 This section describes the co-evolution example taken from the evolution of the Unified Modeling Language (UML) between versions 1.4 \cite{uml14} and 2.2 \cite{uml22}. Activity diagrams, in particular, changed radically between UML versions 1.4 and 2.2. In the former, activities were defined as a special case of state machines, while in the latter they were defined atop a more general semantic base\footnote{A variant of generalised coloured Petri nets.} \cite{selic05uml2}.
 
-The UML 1.4 and 2.2 specifications are defined in different metamodelling languages. The former uses XMI 1.4 and the latter XMI 2.2. Of the co-evolution tools discussed in this thesis, only Epsilon Flock can be used with both XMI 1.4 and XMI 2.2. To enable the use of other co-evolution tools with the UML metamodel changes, the author reconstructed part of the UML 1.4 metamodel in XMI 2.2.
+The UML 1.4 and 2.2 specifications are defined in different metamodelling languages. The former uses XMI 1.4 and the latter XMI 2.2. Of the co-evolution tools discussed in this thesis, only Epsilon Flock interoperates with XMI 1.4. To enable the use of other co-evolution tools with the UML metamodel changes, the author reconstructed part of the UML 1.4 metamodel in XMI 2.2.
 
 The migration semantics were identified by comparing the UML 1.4 and UML 2.2 specifications, and by discussing the metamodel evolution with other UML experts. As described in Section~\ref{sec:ttc}, the UML 2.2 specification appears to be ambiguous with respect to the way in which UML 1.4 \texttt{ObjectFlowState}s should be migrated to conform to the UML 2.2 metamodel. The migration strategies presented here assume the semantics of the core task described in Section~\ref{sec:ttc}: \texttt{ObjectFlowState}s are replaced with \texttt{ObjectNode}s.
 
@@ -56,10 +58,12 @@ Listings~\ref{lst:uml_activity_diagrams_atl}, \ref{lst:uml_activity_diagrams_cop
 
 
 \section{GMF Examples}
+Two co-evolution examples were located in the Graphical Modeling Framework (GMF) project \cite{gronback09emp}. GMF allows the specification of a graphical concrete syntax for metamodel and the generation of graphical model editors from a number of graphical concrete syntax models. GMF was discussed in Section~\ref{sec:mde_tools}, and used to implement the graphical editor described in Appendix~\ref{ProcessOriented}.
+
+GMF is implemented in a model-driven manner, and uses several metamodels to describe graphical concrete syntax and graphical model editors. During the development of GMF, two of its metamodels have evolved in a manner that has required models to be migrated. This section describes changes to the GMF Graph metamodel (used to describe the canvas of a graphical model editor) and the GMF Generator metamodel (used to describe the Java code generated for a graphical model editor).
 
 \subsection{GMF Graph}
 \label{subsec:gmf_graph}
-
 The GMF Graph metamodel comprises approximately 60 classes. For clarity, only those classes that were affected by the changes made between versions 1.0 and 2.0 of GMF are shown in Figure~\ref{fig:gmf_graph}. The migration strategies were specified on the complete metamodel, and not only the extract shown here.
 
 The GMF Graph metamodel (Figure~\ref{fig:gmf_graph}) describes the appearance of the generated graphical model editor. The metaclasses \mm{Ca\-nv\-as}, \mm{Fi\-gu\-re}, \mm{No\-de}, \mm{Di\-ag\-r\-amLa\-b\-el}, \mm{Co\-nn\-ec\-ti\-on}, and \mm{Co\-mp\-ar\-tm\-e\-nt} are used to represent components of the graphical model editor to be generated. The evolution in the GMF Graph metamodel was driven by analysing the usage of the \mm{Fi\-gu\-re\#re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference, which relates \mm{Fi\-gu\-res} to the \mm{Di\-ag\-ramEl\-em\-en\-ts} that use them. As described in the GMF Graph documentation\footnote{\url{http://wiki.eclipse.org/GMFGraph_Hints}}, the \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} reference increased the effort required to re-use figures, a common activity for users of GMF. Furthermore, \mm{re\-fe\-re\-nc\-in\-gEl\-em\-en\-ts} was used only by the GMF code generator to determine whether an accessor
@@ -76,7 +80,7 @@ Listings~\ref{lst:gmf_graph_atl}, \ref{lst:gmf_graph_cope} and~\ref{lst:gmf_grap
 
 
 \subsection{GMF Generator}
-During the development of GMF vX, the Generator metamodel evolved to make explicit the use of \texttt{Co\-nt\-e\-xtMe\-nu}s and \texttt{Pa\-rs\-er}s. In previous versions of GMF, \texttt{Co\-nt\-e\-xtMe\-nu}s and \texttt{Pa\-rs\-er}s were not customisable via the Generator metamodel. Instead, the GMF runtime created menus and parsers automatically at runtime. The GMF generator metamodel is too large to show here, comprising approximately 150 classes. The changes made between versions X and X of GMF affected at least 20 of those classes.
+During the development of GMF v2.2, the Generator metamodel evolved to make explicit the use of \texttt{Co\-nt\-e\-xtMe\-nu}s and \texttt{Pa\-rs\-er}s. In previous versions of GMF, \texttt{Co\-nt\-e\-xtMe\-nu}s and \texttt{Pa\-rs\-er}s were not customisable via the Generator metamodel. Instead, the GMF runtime created menus and parsers automatically at runtime. The GMF generator metamodel is too large to show here, as it comprises approximately 150 classes and the changes made between versions 2.1 and 2.2 of GMF directly affected 23 classes.
 
 Listings~\ref{lst:gmf_gen_atl}, \ref{lst:gmf_gen_atl} and~\ref{lst:gmf_gen_atl} show the model migration strategy in ATL, COPE and Flock respectively. Migration involved populating \texttt{Co\-nt\-e\-xtMe\-nu}s from existing diagram elements, and creating \texttt{Pa\-rs\-er}s for built-in and user-defined languages.
 

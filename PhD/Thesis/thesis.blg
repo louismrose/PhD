@@ -85,45 +85,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 179 entries,
+You've used 178 entries,
             2472 wiz_defined-function locations,
-            1373 strings with 30137 characters,
-and the built_in function-call counts, 69092 in all, are:
-= -- 6947
-> -- 2581
+            1368 strings with 30011 characters,
+and the built_in function-call counts, 68791 in all, are:
+= -- 6917
+> -- 2573
 < -- 77
-+ -- 830
-- -- 790
-* -- 4840
-:= -- 10737
-add.period$ -- 578
-call.type$ -- 179
-change.case$ -- 1076
-chr.to.int$ -- 158
-cite$ -- 180
-duplicate$ -- 3186
-empty$ -- 5700
-format.name$ -- 1025
-if$ -- 14768
++ -- 828
+- -- 788
+* -- 4823
+:= -- 10688
+add.period$ -- 575
+call.type$ -- 178
+change.case$ -- 1071
+chr.to.int$ -- 157
+cite$ -- 179
+duplicate$ -- 3168
+empty$ -- 5670
+format.name$ -- 1022
+if$ -- 14703
 int.to.chr$ -- 22
 int.to.str$ -- 0
-missing$ -- 160
-newline$ -- 899
-num.names$ -- 538
-pop$ -- 1275
+missing$ -- 159
+newline$ -- 894
+num.names$ -- 535
+pop$ -- 1267
 preamble$ -- 1
-purify$ -- 1290
+purify$ -- 1284
 quote$ -- 0
-skip$ -- 2593
+skip$ -- 2583
 stack$ -- 0
-substring$ -- 3323
-swap$ -- 895
+substring$ -- 3316
+swap$ -- 893
 text.length$ -- 77
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1316
+type$ -- 1308
 warning$ -- 1
-while$ -- 550
-width$ -- 184
-write$ -- 2316
+while$ -- 548
+width$ -- 183
+write$ -- 2303
 (There were 31 error messages)

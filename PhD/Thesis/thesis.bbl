@@ -380,11 +380,6 @@ Jack Greenfield, Keith Short, Steve Cook, and Stuart Kent.
   Models, Frameworks, and Tools}.
 \newblock Wiley, 2004.
 
-\bibitem[Gronback 2006]{gronback06gmf}{$~$}
-Richard Gronback.
-\newblock Introduction to the {Eclipse Graphical Modeling Framework}.
-\newblock In {\em Proc. EclipseCon}, Santa Clara, California, 2006.
-
 \bibitem[Gronback 2009]{gronback09emp}{$~$}
 R.C. Gronback.
 \newblock {\em {Eclipse Modeling Project}: A {Domain-Specific Language} (DSL)

@@ -3,15 +3,15 @@
 \chapter[A Graphical Editor for Process-Oriented Programs][An Exemplar Graphical Model Editor]{A Graphical Editor for Process-Oriented Programs}
 \label{ProcessOriented}
 
-This appendix describes the way in which a prototypical graphical editor for process-oriented programs was designed and implemented. User-driven co-evolution, the process identified in Chapter~\ref{Analysis}, was used to manage evolutionary change. The work presented here was conducted in collaboration with Adam Sampson, then a Research Associate at the University of Kent. The way in which the graphical editor changed throughout its development provided was used for evaluation of the thesis research in Section~\ref{sec:exemplar_user-driven_co-evo}.
+This appendix describes the design and implementation of a prototypical graphical editor for process-oriented programs. The work presented here was conducted in collaboration with Adam Sampson, then a Research Associate at the University of Kent. The way in which the graphical editor changed throughout its development provided was used for the evaluation presented in Section~\ref{sec:exemplar_user-driven_co-evo}.
 
-The purpose of the collaboration was to explore the suitability of MDE tools and techniques for designing a graphical notation and supporting tools for programs written in process-oriented programming languages, such as occam-$\pi$ \cite{occam_pi}. The collaboration resulted in the design and implementation of a prototypical graphical editor, which was used to construct examples of small process-oriented programs.
+The purpose of the collaboration was to explore the suitability of MDE  for designing a graphical notation -- and a graphical editor -- for programs written in process-oriented programming languages, such as occam-$\pi$ \cite{occam_pi}. The collaboration produced a prototypical graphical editor implemented atop the Eclipse Modeling Framework (EMF) \cite{steinberg09emf} and the Graphical Modeling Framework (GMF) \cite{gronback09emp}, which were introduced in Section~\ref{sec:mde_tools}.
 
 Process-oriented programs are specified in terms of three core concepts: processes, connection points and channels. Processes are the fundamental building blocks of a process-oriented program. Channels are the mechanism by which processes communicate, and are unidirectional. Connection points define the channels on which a process can communicate. Connection points are used to specify the way in which a process can communicate, and can optionally be bound to a channel. Because channels are unidirectional, connection points are either reading (consume messages from the channel) or writing (generate messages on the channel).
 
-MDE tools and techniques were used to design and implement a graphical notation and editor for process-oriented programs by Sampson and the thesis author. An iterative style of development was used. The abstract syntax of the domain was specified as a metamodel, captured in Ecore, which is the metamodelling language of arguably the most widely-used contemporary MDE development environment, the Eclipse Modeling Framework (EMF) \cite{steinberg09emf}. The graphical concrete syntax was specified with the Graphical Modeling Framework (GMF) \cite{gronback06gmf}, via EuGENia, \cite{kolovos09eugenia}. EMF and GMF are described more thoroughly in Section~\ref{sec:mde_tools}.
+The graphical notation and editor were implemented in an iterative and incremental manner. The abstract syntax of the domain was specified as a metamodel, captured in Ecore, which is the metamodelling language provided by EMF. The graphical concrete syntax was specified with GMF, using EuGENia \cite{kolovos09eugenia}. EMF and GMF are described more thoroughly in Section~\ref{sec:mde_tools}.
 
-The remainder of this appendix presents the six versions of the process-oriented metamodel constructed by Sampson and the thesis author during the iterative development of the graphical editor. In addition, several models are also shown, which were used to test the graphical editor throughout its development. 
+The remainder of this appendix describes the six iterations that took place during the development of the graphical editor for process-oriented programs. Each section describes the goal of the iteration, the changes made to the metamodel to meet the goal, and the impact of the changes on models that had been constructed in previous iterations. The way in which models were migrated with a user-driven co-evolution approach is also described.
 
 \section{Iteration 1: Processes and Channels}
 Development began by identifying two key concepts for modelling process-oriented programs. From examples of process-oriented programs, process and channel were identified as the most important concepts, and consequently the metamodel shown in Figure~\ref{fig:po_it1_mm} was constructed.
@@ -82,7 +82,7 @@ class Channel {
 }
 \end{lstlisting}
 
-EuGENia was invoked on the annotated metamodel shown in Listing~\ref{lst:po_it2_mm} to produce code for the graphical editor. Figure~\ref{fig:po_it2_model} shows a simplistic test model, which was constructed to test the generated editor. The model shown in Figure~\ref{fig:po_it2_model} comprises two processes, \texttt{P1} and \texttt{P2}, and one channel, \texttt{a}.
+EuGENia was invoked on the annotated metamodel shown in Listing~\ref{lst:po_it2_mm} to produce code for the graphical editor. Figure~\ref{fig:po_it2_model} shows a model that was constructed to test the generated editor and comprised two processes, \texttt{P1} and \texttt{P2}, and one channel, \texttt{a}.
 
 \begin{figure}[htbp]
 	\centering
@@ -103,7 +103,7 @@ In previous iterations, channels had been contained within their source process.
 
 No additional EuGENia annotations were added to the metamodel during this iteration. In other words, the graphical notation (concrete syntax) was not changed, and the resulting editor was identical in appearance to the previous one. However, the EMF tree editor showed just one level of nesting (everything is contained inside model).
 
-The existing models required migration because of the way in which XMI differentiates between reference and containment values. Each channel was instantiated in the new \texttt{ch\-an\-ne\-ls} reference of \texttt{Mo\-d\-el}, and existing values in the \texttt{ou\-tp\-u\-ts} reference of \texttt{Co\-nn\-ec\-ti\-onPo\-in\-t} were changed to use a reference rather than a containment value. Figure~\ref{fig:po_it3_pre} shows the HUTN for a model prior to migration, and Listing~\ref{fig:po_it3_post} shows the reconciled, migrated HUTN.
+The existing models required migration because of the way in which XMI differentiates between reference and containment values. Each channel was moved to the new \texttt{ch\-an\-ne\-ls} reference of \texttt{Mo\-d\-el}, and existing values in the \texttt{ou\-tp\-u\-ts} reference of \texttt{Co\-nn\-ec\-ti\-onPo\-in\-t} were changed to a reference value. Figure~\ref{fig:po_it3_pre} shows the HUTN for a model prior to migration, and Figure~\ref{fig:po_it3_post} shows the reconciled, migrated HUTN.
 
 \begin{figure}[htbp]
 	\centering
@@ -126,7 +126,7 @@ The existing models required migration because of the way in which XMI different
 \section{Iteration 4: Connection Points}
 The fourth iteration involved capturing a third domain concept, connection points, in the graphical notation. When a process is specified, the ways in which it can communicate are declared as connection points. When a process is instantiated, channels are connected to its connection points, and messages flow in and out of the process. The graphical notation was to be used to describe both instantiated processes and types of process, the metamodel was changed to model connection points.
 
-The iteration resulted in the metamodel shown in Figure~\ref{fig:po_it4_mm}. \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} was introduced as an association class between the \texttt{in\-pu\-ts} and \texttt{o\-ut\-pu\-ts} references.
+The iteration resulted in the metamodel shown in Figure~\ref{fig:po_it4_mm}. \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} was introduced as an association class for the references between \texttt{Pr\-oc\-e\-ss} and \texttt{Cha\-nn\-el}.
 
 \begin{figure}[htbp]
 	\centering
@@ -200,7 +200,7 @@ To migrate each existing model, two connection points were created for each chan
 
 \section{Iteration 5: Connection Point Types}
 \label{sec:po_it5}
-Channels are unidirectional, and so connection points are either \emph{reading} or \emph{writing}. A process uses the former to consume messages from a channel, and the latter to produce messages on a channel. Testing the graphical editor producing in the fourth iteration showed that it was not immediately obvious as to which connection points were reading and which were writing. The fifth iteration involved changing the graphical editor to better distinguish between reading and writing connection points.
+Channels are unidirectional, and so connection points are either \emph{reading} or \emph{writing}. A process uses the former to consume messages from a channel, and the latter to produce messages on a channel. Testing the graphical editor produced in the fourth iteration showed that it was not immediately obvious as to which connection points were reading and which were writing. The fifth iteration involved changing the graphical editor to better distinguish between reading and writing connection points.
 
 The iteration resulted in the metamodel shown in Figure~\ref{fig:po_it5_mm}. \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} was made abstract, and two subclass, \texttt{Re\-a\-di\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} and \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt}, were introduced. The four references to \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} were changed to reference one of the two subclasses.
 
@@ -251,7 +251,6 @@ class ReadingConnectionPoint extends ConnectionPoint {}
 class WritingConnectionPoint extends ConnectionPoint {}
 \end{lstlisting}
 
-A new version of the graphical editor was generated by invoking EuGENia on the annotated metamodel. All of the existing models required migration, because \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} was now an abstract class, and could no longer be instantiated. Section~\ref{sec:exemplar_user-driven_co-evo} describes the way in which models were migrated after the changes made during this iteration. Briefly, migration involved replacing every instantiation of \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} with an instantiation of either \texttt{Re\-a\-di\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} or \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt}. The former was used when a connection point was used as the value of a channel's \texttt{re\-ad\-er} feature and the latter when  when a connection point was used as the value of a channel's \texttt{wr\-it\-er} feature. Listing~\ref{fig:po_it5_pre} shows the HUTN for a model prior to migration, and Listing~\ref{fig:po_it5_post} shows the reconciled, migrated HUTN.
 
 \begin{figure}[htbp]
 	\centering
@@ -268,8 +267,7 @@ A new version of the graphical editor was generated by invoking EuGENia on the a
 	\caption{Exemplar migration between the fourth and fifth versions of the process-oriented metamodel}
 \end{figure}
 
-\clearpage
-
+A new version of the graphical editor was generated by invoking EuGENia on the annotated metamodel. All of the existing models required migration, because \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} was now an abstract class, and could no longer be instantiated. Section~\ref{sec:exemplar_user-driven_co-evo} describes the way in which models were migrated after the changes made during this iteration. Briefly, migration involved replacing every instantiation of \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} with an instantiation of either \texttt{Re\-a\-di\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} or \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt}. The former was used when a connection point was used as the value of a channel's \texttt{re\-ad\-er} feature and the latter when  when a connection point was used as the value of a channel's \texttt{wr\-it\-er} feature. Figure~\ref{fig:po_it5_pre} shows the HUTN for a model prior to migration, and Figure~\ref{fig:po_it5_post} shows the reconciled, migrated HUTN.
 
 \section{Iteration 6: Nested Processes and Channels}
 The final iteration involved changing the graphical editor such that processes and channels could be nested inside other processes. In some process-oriented languages, such as occam-$\pi$ \cite{occam_pi}, processes can be specified in terms of other, internal processes.

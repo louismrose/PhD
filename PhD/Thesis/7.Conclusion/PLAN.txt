@@ -1,0 +1,19 @@
+Tim Kelly's thesis:
+* Short paragraph summarising contribution, which then divides contribution into three areas:
+** definition & eval of a method for GSN
+** definition & eval of process for maintaining a safety argument
+** definition & eval of means for re-using successful safety arguments
+
+* Section on each of these contribution
+** short comparison to alternatives in the literature
+** highlights trade-offs between approaches
+** highlight novelties of work
+
+* Overalls conclusions
+** Summarise contributions and ethos of thesis.
+** Relate to overall goals of area. For example: "the presentation of a clear, comprehensive and compelling safety argument remains the prime objective of any safety case. It is for this reason that this thesis can claim to have addressed issues that are at the heart of safety case management process."
+
+* Further work
+
+* Coda
+** Outlook for thesis research in the future (interest, application to examples, future collaboration, etc)
