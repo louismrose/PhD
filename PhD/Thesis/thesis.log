@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  11 OCT 2010 11:18
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  11 OCT 2010 12:04
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -873,11 +873,14 @@ Underfull \vbox (badness 1596) has occurred while \output is active []
 File: 6.Evaluation/images/activity.pdf Graphic file (type pdf)
 
 <use 6.Evaluation/images/activity.pdf>
-Overfull \hbox (0.88582pt too wide) in paragraph at lines 22--23
+Overfull \hbox (0.88582pt too wide) in paragraph at lines 23--24
  [][] 
  []
 
-[178 <./6.Evaluation/images/activity.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [178 <./6.Evaluation/images/activity.pdf>]
 <A.3.MigrationStrategies/images/uml/activity_diagrams_before.pdf, id=948, 603.2
 5375pt x 372.39125pt>
 File: A.3.MigrationStrategies/images/uml/activity_diagrams_before.pdf Graphic f
@@ -891,13 +894,13 @@ le (type pdf)
 
 <use A.3.MigrationStrategies/images/uml/activity_diagrams_after.pdf> [179 <./A.
 3.MigrationStrategies/images/uml/activity_diagrams_before.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
 [][] [][]$\OT1/pcr/m/n/9 http : / / planet-[]research20 . org / ttc2010 / index
  . php ? option = com _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
 \OT1/pcr/m/n/9 community&view = groups&task = viewgroup&groupid = 4&Itemid = 15
 0$ \OT1/cmr/m/n/9 (reg-is-tra-
  []
@@ -922,57 +925,57 @@ e_before.pdf> <./6.Evaluation/images/ttc/core_after.pdf>]
 Missing character: There is no Â in font cmr10!
 Missing character: There is no   in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--116
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
 [][] [][]$\OT1/pcr/m/n/9 http : / / www . planet-[]research20 . org / ttc2010 /
  index . php ? option =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--116
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
 \OT1/pcr/m/n/9 com _ community&view = groups&task = viewdiscussion&groupid = 4&
 topicid =
  []
 
 [182 <./6.Evaluation/images/ttc/ext_after.pdf>]
-Overfull \hbox (10.05243pt too wide) in paragraph at lines 134--135
+Overfull \hbox (10.05243pt too wide) in paragraph at lines 135--136
 \OT1/cmr/m/n/10.95 con-tained \OT1/pcr/m/n/10.95 Pseudostates\OT1/cmr/m/n/10.95
  s and \OT1/pcr/m/n/10.95 Transition\OT1/cmr/m/n/10.95 s, but none of the \OT1/
 pcr/m/n/10.95 ActionState\OT1/cmr/m/n/10.95 s
  []
 
 
-Overfull \hbox (10.13367pt too wide) in paragraph at lines 134--135
+Overfull \hbox (10.13367pt too wide) in paragraph at lines 135--136
 \OT1/pcr/m/n/10.95 ActionState\OT1/cmr/m/n/10.95 s. List-ing 6.11[] shows the F
 lock code for chang-ing \OT1/pcr/m/n/10.95 ActionState\OT1/cmr/m/n/10.95 s
  []
 
-
-Overfull \hbox (16.33868pt too wide) in paragraph at lines 148--149
+[183]
+Overfull \hbox (16.33868pt too wide) in paragraph at lines 149--150
 \OT1/pcr/m/n/10.95 InitialNode\OT1/cmr/m/n/10.95 . List-ing 6.13[] shows the Fl
 ock code used to change \OT1/pcr/m/n/10.95 Pseudostate\OT1/cmr/m/n/10.95 s
  []
 
-[183] [184]
-Overfull \hbox (28.756pt too wide) in paragraph at lines 194--195
+[184]
+Overfull \hbox (28.756pt too wide) in paragraph at lines 195--196
 []\OT1/cmr/m/n/10.95 Listing 6.17[] shows the Flock rule used to mi-grate \OT1/
 pcr/m/n/10.95 Transiton\OT1/cmr/m/n/10.95 s to \OT1/pcr/m/n/10.95 ObjectFlow\OT
 1/cmr/m/n/10.95 s.
  []
 
 [185]
-Overfull \hbox (18.41435pt too wide) in paragraph at lines 207--208
+Overfull \hbox (18.41435pt too wide) in paragraph at lines 208--209
 []\OT1/cmr/m/n/10.95 Listing 6.18[] shows the Flock source code used to mi-grat
 e \OT1/pcr/m/n/10.95 ObjectFlowStates
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--229
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
 [][] [][]$\OT1/pcr/m/n/9 http : / / www . planet-[]research20 . org / ttc2010 /
  index . php ? option =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--229
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
 \OT1/pcr/m/n/9 com _ community&view = groups&task = viewdiscussion&groupid = 4&
 topicid =
  []
@@ -1387,7 +1390,7 @@ bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/c
 m/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.p
 fb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr
 /local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on thesis.pdf (154 pages, 2348634 bytes).
+Output written on thesis.pdf (154 pages, 2348862 bytes).
 PDF statistics:
  2164 PDF objects out of 2487 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
