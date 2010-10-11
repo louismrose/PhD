@@ -458,17 +458,19 @@ When a reference feature is changed to a containment reference during metamodel 
 In the Change Reference to Containment example, a \texttt{System} initially comprises \texttt{Port}s and \texttt{Signature}s (Figure~\ref{fig:ref2cont_original_mm}). A \texttt{Signature} references any number of \texttt{ports}. The metamodel is evolved to prevent the sharing of \texttt{Port}s between \texttt{Signature}s by changing the \texttt{ports} feature to a containment rather than a reference (Figure~\ref{fig:ref2cont_evolved_mm}). \texttt{Port}s are contained in \texttt{Signature}s rather than in \texttt{System}s, and consequently the \texttt{ports} is no longer a feature of \texttt{System}.
 
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[scale=0.75]{6.Evaluation/images/change_ref_to_cont_before.pdf}
-  \caption{Original metamodel.}
-  \label{fig:ref2cont_original_mm}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[scale=0.75]{6.Evaluation/images/change_ref_to_cont_after.pdf}
-  \caption{Evolved metamodel.}
-  \label{fig:ref2cont_evolved_mm}
+	\centering
+	\subfigure[Original metamodel.]
+	{
+	    \label{fig:ref2cont_original_mm}
+	    \includegraphics[scale=0.75]{6.Evaluation/images/change_ref_to_cont_before.pdf}
+	}
+	\subfigure[Evolved metamodel.]
+	{
+	    \label{fig:ref2cont_evolved_mm}
+	    \includegraphics[scale=0.75]{6.Evaluation/images/change_ref_to_cont_after.pdf}
+	}
+	\caption{Change Reference to Containment metamodel evolution}
+\label{fig:ref2cont_mms}
 \end{figure}
 
 Listing~\ref{lst:ref2cont_atl} shows the migration strategy using new-target in ATL. Three model operations are used: the assignment statements on lines 3, 8 and 14. The rules for migrating \texttt{System}s (lines 1-4) and \texttt{Port}s (13-15) copy values for the features unaffected by evolution (\texttt{signatures} and \texttt{name} respectively). The rule for migrating \texttt{Signature}s (lines 6-11) clones each member of the \texttt{ports} feature (using the \texttt{Port} rule on lines 13-15). Crucially, the \texttt{Ports} rule is marked as \texttt{lazy} and consequently is only executed when called from the \texttt{Signatures} rule. By contrast, the \texttt{Systems} and \texttt{Signatures} rules are executed automatically by ATL for each \texttt{System} and \texttt{Signature} in the original model, respectively. 

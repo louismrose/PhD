@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  11 OCT 2010 10:47
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  11 OCT 2010 11:18
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -799,17 +799,17 @@ File: 6.Evaluation/images/change_ref_to_cont_before.pdf Graphic file (type pdf)
 5pt>
 File: 6.Evaluation/images/change_ref_to_cont_after.pdf Graphic file (type pdf)
  <use 6.Evaluation/images/change_ref_to_cont_after.pdf>
-Overfull \hbox (54.7653pt too wide) in paragraph at lines 498--499
+Overfull \hbox (54.7653pt too wide) in paragraph at lines 500--501
 \OT1/cmr/m/n/10.95 model from the orig-i-nal model, the value of a con-tain-men
 t ref-er-ence (\OT1/pcr/m/n/10.95 Signature#ports\OT1/cmr/m/n/10.95 )
  []
 
 [158 <./6.Evaluation/images/change_ref_to_cont_before.pdf> <./6.Evaluation/imag
 es/change_ref_to_cont_after.pdf>] [159])
-(./6.Evaluation/collaborative_comparison.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(./6.Evaluation/collaborative_comparison.tex [160]
+Underfull \vbox (badness 1558) detected at line 15
+ []
 
- [160]
 [161]
 File: 5.Implementation/images/petri_nets_before.pdf Graphic file (type pdf)
  <use 5.Implementation/images/petri_nets_before.pdf>
@@ -1364,34 +1364,30 @@ Missing character: There is no ™ in font cmr10!
 (./4.Analysis/analysis.aux) (./5.Implementation/implementation.aux)
 (./6.Evaluation/evaluation.aux) (./7.Conclusion/conclusion.aux)
 (./A.1.Experiments/experiments.aux) (./A.2.ProcessOriented/process_oriented.aux
-) (./A.3.MigrationStrategies/migration_strategies.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) (./A.3.MigrationStrategies/migration_strategies.aux)) ) 
 Here is how much of TeX's memory you used:
- 7393 strings out of 493886
- 120455 string characters out of 1151098
- 351519 words of memory out of 3000000
- 10405 multiletter control sequences out of 10000+50000
+ 7396 strings out of 493886
+ 120532 string characters out of 1151098
+ 351677 words of memory out of 3000000
+ 10408 multiletter control sequences out of 10000+50000
  14337 words of font info for 50 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  37i,12n,44p,1479b,1640s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
-08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/font
-s/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bl
-uesky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
-r7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></us
-r/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr9.pfb></usr/local/tex
-live/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008
-/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-di
-st/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/
-type1/bluesky/cm/cmti8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/
-courier/ucrb8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/
-ucrr8a.pfb>
-Output written on thesis.pdf (154 pages, 2348449 bytes).
+{/usr/local/texlive/20
+08/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2008/texmf-dist/f
+onts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type
+1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky
+/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10
+.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/
+local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texli
+ve/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/tex
+mf-dist/fonts/type1/bluesky/cm/cmr9.pfb></usr/local/texlive/2008/texmf-dist/fon
+ts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/
+bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/c
+m/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.p
+fb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr
+/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on thesis.pdf (154 pages, 2348634 bytes).
 PDF statistics:
  2164 PDF objects out of 2487 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
