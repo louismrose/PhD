@@ -228,7 +228,6 @@ Table~\ref{tab:differences} illustrates several characterising differences betwe
 All of the approaches considered in Table~\ref{tab:differences} support EMF, arguably the most widely used modelling framework. The Ecore2Ecore approach, however, requires migration to be encoded at the level of the underlying model representation XMI. Both Flock and ATL support other modelling technologies, such as MDR and XML. However, ATL does not automatically copy model elements that have not been affected by metamodel changes. Therefore, migration between models of different technologies with ATL requires extra statements in the migration strategy to ensure that the conformance constraints of the target technology are satisfied. Because it delegates conformance checking to an EMC driver, Flock requires no such checks.
 
 \begin{table}[b]
-	\caption{Properties of model migration approaches}
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline
@@ -244,6 +243,7 @@ All of the approaches considered in Table~\ref{tab:differences} support EMF, arg
 		\hline
 	\end{tabular}
 	\label{tab:differences}
+	\caption{Properties of model migration approaches}
 \end{table}
 
 A more thorough examination of the similarities and differences between Flock and other migration strategy languages is provided in Chapter~\ref{Evaluation}.
