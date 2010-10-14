@@ -2,50 +2,34 @@
 
 \chapter{Conclusions}
 \label{Conclusion}
-% The conclusion will provide a summary of the challenges addressed by, and the objectives of, our research. We will summarise the way in which we have approached the challenges and met the objectives, concluding with a summary of the evaluation and discussion of future work. 
+% The conclusion will provide a summary of the challenges addressed by, and the objectives of, our research. We will summarise the way in which we have approached the challenges and met the objectives, concluding with a summary of the evaluation and discussion of future work.
 
-% Achievements:
-% analysed examples of co-evolution
-% - didn't find much data for model-trans co-evo
-% - identifed user-driven co-evo
-% - understood the way in which literature addresses co-evo
-% 
-% built tools
-% - HUTN for user-driven co-evo
-% - Flock: DSL for model migration
-% 
-% Provided a refernce implementation of an OMG standard
-% - facilitates evaluation of the standard
-% - standard is centered around usability, which can now be assessed
-%
-% evaluated tools
-% - Compared user-driven co-evo processes
-% - Showed Flock to be concise, 
-% - Compare Flock with other migration tools and transformation tools
-% - Applied Flock to a real-world example of co-evolution
+This thesis has investigated software evolution -- a key and costly development activity in software engineering \cite{moad90maintaining} -- in the context of model-driven engineering (MDE), a state-of-the art approach to software engineering. While MDE promises increased developer productivity \cite{watson08mdahistory} and increased portability of software systems \cite{frankel02mda}, it also poses several challenges that threaten its adoption. \cite{Mens07}, for example, suggest that identifying and managing evolutionary change in the context of MDE presents many open research challenges. The thesis research has contributed to the research challenges defined in \cite{Mens07} and has explored the following research hypothesis:
+
+\begin{quote}
+\emph{In existing MDE projects, the evolution of MDE development artefacts is typically managed in an ad-hoc manner with little regard for re-use. Dedicated structures and processes for managing evolutionary change can be designed by analysing evolution in existing MDE projects. Furthermore, supporting those dedicated structures and processes in contemporary MDE environments is beneficial in terms of increased productivity and understandability of software development.}
+\end{quote} 
+
+To explore the thesis hypothesis, the following research objectives were defined.
+
+\begin{enumerate}
+	\item Identify and analyse the evolution of MDE development artefacts in existing projects.
+	\item Investigate the extent to which existing structures and processes can be used to manage the evolution of MDE development artefacts. 
+	\item Propose and develop new structures and processes for managing the evolution of MDE development artefacts, and integrate those structures and processes with a contemporary MDE development environment.
+	\item Evaluate the proposed structures and processes for managing evolutionary change, particularly with respect to the productivity and understandability of software development.
+\end{enumerate}
+
+The remainder of this section summarises the contributions of the thesis in relation to the thesis hypothesis and research objectives, and gives a brief description of and motivation for several potential extensions to the thesis research.
 
 
-% Discuss the way in which the method differs from methods used in similar projects:
-% Identifying changes from existing projects has several benefits compared to the method typically used in managing software evolution, described above. Firstly, further research requirements can be identified from the solutions currently employed by existing projects. Secondly, related work can be more rigorously analysed and compared via application to existing projects. On the other hand, evaluating work produced by identifying changes from existing projects presents a challenge: more data may be required overall, as data used in the analysis should not be used in the evaluation.
+\input{7.Conclusion/contributions}
+\input{7.Conclusion/future_work}
 
-\section{Closing Remarks}
-- For software evolution research, need more data from industry.
-- Closer collaboration between industry and academia to study evolution in context.
-- More comprehensive assessment: for example, user studies.
 
-\section{Future Work}
-\label{sec:future_work}
-
-\subsubsection{Generalisation}
-Relate to section in limitations. Two dimensions:
--- Seek a unified approach to migrating all artefacts that might be affected by metamodel changes (models, model management operations, model editors, etc).
--- Re-use concepts from model-metamodel co-evolution to manage other types of co-evolution. Summarise paper with Anne.
-
-\subsection{Extensions to Epsilon Flock}
+\section{Coda}
+\textbf{To be completed} Some ideas:
 \begin{itemize}
-	\item Summarise limitations from Evaluation chapter.
-	\item Discuss extensions to Flock to reduce duplication when subtyping.
-	\subitem Try applying the changes suggested here\footnote{\url{http://lmr109.basecamphq.com/projects/1508853/posts/30822433/comments}} to the co-evo examples, and investigate whether they solve the subtyping problem / introduce other issues. 
-	\item Discuss extensions to conservative copy when a reference changes to a containment
-	\item Genericity for capturing migration patterns in a metamodel-independent manner and facilitating re-use
+	\item For software evolution research, need more data from industry.
+	\item Closer collaboration between industry and academia to study evolution in context.
+	\item More comprehensive assessment: for example, user studies.	
 \end{itemize}

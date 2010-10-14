@@ -17,3 +17,57 @@ Tim Kelly's thesis:
 
 * Coda
 ** Outlook for thesis research in the future (interest, application to examples, future collaboration, etc)
+
+
+David Pumfrey's thesis:
+
+* Substantiation of the thesis proposition
+** Restates the thesis hypothesis and aims
+** Discusses extent to which work supports hypothesis, highlighting a (partial) contradiction
+
+* Concluding remarks
+** Relates work back to field by highlighting the importance of safety engineering.
+** Refers to a well-known paper in the area.
+
+* Further work
+
+
+Zoe's thesis:
+* Enumerates key issues (e.g. some types of dependency not reflected in the interfaces within software and hence the accuracy of change impact analysis is reduced, for safety-critical software techniques that facilitate flexibility in software engineering cannot be used, changes typically affect many parts of the software)
+* Restates thesis hypothesis
+
+* Summarises findings of three major chapters, for example: review findings
+** Focus is on engineering single software products, not related families.
+** Traceability is integral to SE, but does not typically include links to contexts considered useful in embedded software domain.
+** No impact analysis techniques are designed for families of products
+** Motivate need for modelling contextual information, and highlight why existing work cannot be used for family models
+
+* Further work
+
+
+Rob's thesis:
+
+* Summarises contributions
+** Identifies key challenges for SoS hazard analysis, condensing them into a set of explicit requirements
+** Provides a systematic method for building multi-agent simulations for SoS
+** Defines a hazard analysis method that extracts and explains cause of accidents
+
+* Discusses contributions in each of the three core areas above
+
+
+
+Dimitris's thesis:
+* Enumerates key issues (e.g. MDE process involves many types of model management operation, each type of operation has individual requirements and hence is best addressed with task-specific languages, re-use, workflows)
+* Restates thesis hypothesis and objectives
+
+* Findings of background and literature review
+** Identified types of model management operation
+** Reviewed existing languages and tools for their specification
+** Motivated need for task-specific and interoperable languages (e.g. duplication, inconsistency between languages)
+
+* Summary of contributions
+** Implementation: model connectivity layer, object language, task specific languages, workflow layer, etc
+** Summary of evaluation: case study, re-use
+
+* Future work
+** Performance & scalability

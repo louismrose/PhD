@@ -18,16 +18,16 @@ A level-1 auxiliary file: A.2.ProcessOriented/process_oriented.aux
 A level-1 auxiliary file: A.3.MigrationStrategies/migration_strategies.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Repeated entry---line 1394 of file thesis.bib
+Repeated entry---line 1454 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1416 of file thesis.bib
+Repeated entry---line 1476 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
---line 1446 of file thesis.bib
+--line 1506 of file thesis.bib
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -85,45 +85,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 178 entries,
+You've used 187 entries,
             2472 wiz_defined-function locations,
-            1368 strings with 30011 characters,
-and the built_in function-call counts, 68791 in all, are:
-= -- 6917
-> -- 2573
-< -- 77
-+ -- 828
-- -- 788
-* -- 4823
-:= -- 10688
-add.period$ -- 575
-call.type$ -- 178
-change.case$ -- 1071
-chr.to.int$ -- 157
-cite$ -- 179
-duplicate$ -- 3168
-empty$ -- 5670
-format.name$ -- 1022
-if$ -- 14703
-int.to.chr$ -- 22
+            1404 strings with 31260 characters,
+and the built_in function-call counts, 72744 in all, are:
+= -- 7309
+> -- 2750
+< -- 85
++ -- 890
+- -- 846
+* -- 5127
+:= -- 11301
+add.period$ -- 606
+call.type$ -- 187
+change.case$ -- 1138
+chr.to.int$ -- 164
+cite$ -- 188
+duplicate$ -- 3352
+empty$ -- 5973
+format.name$ -- 1095
+if$ -- 15546
+int.to.chr$ -- 24
 int.to.str$ -- 0
-missing$ -- 159
-newline$ -- 894
-num.names$ -- 535
-pop$ -- 1267
+missing$ -- 166
+newline$ -- 939
+num.names$ -- 562
+pop$ -- 1338
 preamble$ -- 1
-purify$ -- 1284
+purify$ -- 1358
 quote$ -- 0
-skip$ -- 2583
+skip$ -- 2718
 stack$ -- 0
-substring$ -- 3316
-swap$ -- 893
-text.length$ -- 77
+substring$ -- 3467
+swap$ -- 954
+text.length$ -- 85
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1308
+type$ -- 1380
 warning$ -- 1
-while$ -- 548
-width$ -- 183
-write$ -- 2303
+while$ -- 576
+width$ -- 193
+write$ -- 2425
 (There were 31 error messages)

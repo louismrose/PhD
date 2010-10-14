@@ -1,0 +1,71 @@
+%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+
+\section{Research Contributions}
+The primary contributions of the thesis are summarised below, and the remainder of this section discusses each contribution in turn.
+
+\begin{itemize}
+	\item Chapter~\ref{Analysis} presented an investigation of evolution in existing MDE projects, which indicated ways in which models, metamodels and model management operations evolve, highlighted model-metamodel co-evolution as a commonly-occuring software evolution activity in MDE projects and led to a categorisation of existing approaches to managing model-metamodel co-evolution.
+	\item Chapter~\ref{Implementation} described the design and implementation of structures and processes for performing model-metamodel co-evolution, which included a metamodel-independent syntax for managing non-conformant models, a textual modelling notation for manually migrating models, and a model-to-model transformation language tailored for migration. The proposed structures and processes are interoperable with the Eclipse Modeling Framework \cite{steinberg09emf}, arguably the most widely-used contemporary MDE modelling framework.
+	\item Chapter~\ref{Evaluation} detailed the evaluation of the proposed structures and process using quantitive measurements, expert evaluation and application to large, independent examples of co-evolution and explored the extent to which the proposed structures and processes increase developer productivity and the understandability of model migration.
+\end{itemize}
+
+
+\subsection{Investigation of Evolution in MDE Projects}
+The way in which evolution occurs and is managed in existing MDE projects was analysed in Chapter~\ref{Analysis}. The analysis investigated two types of evolutionary change, model-metamodel co-evolution and model synchronisation, which were identified from the review presented in Chapter~\ref{LiteratureReview}. For the MDE projects considered in Chapter~\ref{Analysis}, several suitable model-metamodel co-evolution examples -- and no suitable model synchronisation examples -- were located, and consequently the remainder of the thesis focused on model-metamodel co-evolution.
+
+The co-evolution examples were used to identify the differences between existing approaches to managing model-metamodel co-evolution, and to investigate the way in which model-metamodel co-evolution is managed in existing MDE projects. The investigation led to the definition of two distinct approaches to managing model-metamodel co-evolution in MDE projects, \emph{user-driven} and \emph{developer-driven} and to a categorisation of existing approaches, which was published in \cite{rose09analysis} and has since been used and extended in several papers, including \cite{herrmannsdoerfer10extensive,jurack10towards,mendez10towards}.
+
+
+\subsection{Structures and Processes for Managing Co-evolution}
+The analysis of existing MDE projects presented in Chapter~\ref{Analysis} highlighted challenges for identifying and managing co-evolution. Managing co-evolution in a user-driven manner, for instance, is particularly challenging in contemporary MDE modelling environments because conformance is enforced implicitly and models and metamodels are kept separate. Similarly, the variation in programming and transformation languages typically used to specify model migration presents a challenge for comparing existing approaches to developer-driven co-evolution approaches. Moreover, none of the languages typically used have been tailored for the specific requirements of model migration. This thesis contribute structures and processes that seek to address the challenges summarised above.
+
+\subsubsection{Metamodel-Indepenent Syntax}
+Contemporary MDE modelling frameworks cannot be used to load non-conformant models. Consequently, model migration cannot be performed using the structures typically available in contemporary MDE modelling environments, such as model editors and model management operations. The metamodel-independent syntax, introduced in Chapter~\ref{Implementation}, is a proposed extension to contemporary MDE modelling frameworks that facilitates the loading of non-conformant models and provides services for reporting conformance problems.
+
+The metamodel-independent syntax underpins the implementation of two further structures, the textual modelling notation described below, and the automatic conformance checking service introduced in \cite{rose10concordance}. 
+
+
+\subsubsection{Textual Modelling Notation}
+When a small number of models are to be migrated, the effort required to specify an executable migration strategy might not be justifiable. Instead, models can be migrated by editing models by hand. The textual modelling notation, presented in Chapter~\ref{Implementation}, provides a notation for editing models in contemporary MDE development environments. The notation proposed in this thesis adopts the Human-Usable Textual Notation (HUTN) \cite{hutn}, a standard notation for textual modelling proposed by the Object Management Group (OMG) \cite{omg}. The implementation of HUTN introduced in Section~\ref{sec:notation}, Epsilon HUTN, is the sole reference implementation of the HUTN standard, and was published in \cite{rose08hutn}.
+
+During user-driven co-evolution, model editors cannot be used for migration and editing models in their underlying storage representation, which will not have been optimised for human use, can be error-prone and time consuming. The textual modelling notation introduced in Chapter~\ref{Implementation} provides an alternative to editing models in their underlying storage representation.
+
+
+\subsubsection{A Process for User-Driven Co-evolution}
+The analysis of existing MDE projects highlighted several projects in which model migration was performed using user-driven co-evolution techniques, and yet no existing work sought to address the specific requirements of user-driven co-evolution. Contemporary MDE modelling environments typically enforce conformance in an implicit manner, and cannot be used to load non-conformant models. Consequently, user-driven co-evolution is an iterative, error-prone and time-consuming task, because model editors and model management operations cannot be used to assist migration.
+
+A typical process for performing user-driven co-evolution involves performing model migration by repeatedly switching between a model editor (which reports conformance problems) a text editor (in which conformance is reconciled by the user). Chapter~\ref{Evaluation} proposes an alternative process in which conformance reporting and reconciliation occur in the same environment, using the metamodel-independent syntax and textual modelling notation described above. The alternative process was published in \cite{rose09enhanced}.
+
+
+\subsubsection{Epsilon Flock: A Model Migration Language}
+In addition to the structures and processes for performing user-driven co-evolution, the thesis also contributes a structure dedicated to developer-driven co-evolution, a model migration language termed \emph{Epsilon Flock}. The analysis performed in Chapter~\ref{Analysis} showed that model migration is often specified with a model-to-model transformation language or with a general purpose programming language, and that theses languages are not tailored to the specific requirements of model migration. The investigation presented in Chapter~\ref{Implementation}, highlighted that a language tailored for model migration would provide several benefits over repurposing an existing language to specify model migration. Flock was designed and implemented to explore the extent to which a language tailored for model migration might increase developer productivity and the understandability of model migration. The investigation of languages for model migration and the design and implementation of Flock were published in \cite{rose10flock}.
+
+Flock contributes a novel mechanism for relating source and target model elements termed \emph{conservative copy}, which is a hybrid of the two existing mechanisms used to relate source and target model elements in contemporary model-to-model transformation languages. Conservative copy automatically copies to the target model every source model element that conforms to the target metamodel, and does not copy to the target model source model elements that do not conform to the target metamodel.
+
+
+\subsection{Evaluation of Structures and Processes}
+The structures and processes introduced in this thesis have been evaluated using a variety of techniques, including a quantitive comparison, an expert evaluation and comparison to related processes and structures. Existing work on evolutionary change in MDE has typically been evaluated with a case study (such as in \cite{sprinkle03thesis}) or by demonstration (\cite{cicchetti08thesis}), and few papers in the area report the strengths and weaknesses proposed approaches, or seek to contextualise their contentions. The evaluation presented in Chapter~\ref{Evaluation} is a contribution in its own right as it presents several alternative evaluation techniques, including the first expert evaluation of model migration tools, and seeks to identify situations in which the proposed structures and processes are both effective and ineffective.
+
+% Achievements:
+% analysed examples of co-evolution
+% - didn't find much data for model-trans co-evo
+% - identifed user-driven co-evo
+% - understood the way in which literature addresses co-evo
+% 
+% built tools
+% - HUTN for user-driven co-evo
+% - Flock: DSL for model migration
+% 
+% Provided a refernce implementation of an OMG standard
+% - facilitates evaluation of the standard
+% - standard is centered around usability, which can now be assessed
+%
+% evaluated tools
+% - Compared user-driven co-evo processes
+% - Showed Flock to be concise, 
+% - Compare Flock with other migration tools and transformation tools
+% - Applied Flock to a real-world example of co-evolution
+
+
+% Discuss the way in which the method differs from methods used in similar projects:
+% Identifying changes from existing projects has several benefits compared to the method typically used in managing software evolution, described above. Firstly, further research requirements can be identified from the solutions currently employed by existing projects. Secondly, related work can be more rigorously analysed and compared via application to existing projects. On the other hand, evaluating work produced by identifying changes from existing projects presents a challenge: more data may be required overall, as data used in the analysis should not be used in the evaluation.

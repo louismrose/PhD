@@ -145,6 +145,13 @@ Antonio Cicchetti, Davide~Di Ruscio, Romina Eramo, and Alfonso Pierantonio.
 \newblock Automating co-evolution in model-driven engineering.
 \newblock In {\em Proc. {EDOC}}, pages 222--231. IEEE Computer Society, 2008.
 
+\bibitem[Cicchetti 2008]{cicchetti08thesis}{$~$}
+Antonio Cicchetti.
+\newblock {\em Difference Representation and Conflict Management in
+  {Model-Driven Engineering}}.
+\newblock PhD thesis, Universita' degli Studi dell'Aquila, L'Aquila, Italy,
+  2008.
+
 \bibitem[Clark {\it et al.}\  2008]{clark08superlanguages}{$~$}
 Tony Clark, Paul Sammut, and James Willians.
 \newblock Superlanguages: Developing languages and applications with {XMF}
@@ -437,6 +444,14 @@ Markus Herrmannsdoerfer, Sebastian Benz, and Elmar Juergens.
 \newblock In {\em Proc. {ECOOP}}, volume 5653 of {\em LNCS}, pages 52--76.
   Springer, 2009.
 
+\bibitem[Herrmannsdoerfer {\it et al.}\
+  2010]{herrmannsdoerfer10extensive}{$~$}
+Markus Herrmannsdoerfer, Sander Vermolen, and Guido Wachsmuth.
+\newblock An extensive catalog of operators for the coupled evolution of
+  metamodels and models.
+\newblock In {\em Proc. {SLE}}, volume TBC of {\em LNCS}, page TBC. Springer,
+  2010.
+
 \bibitem[Hussey \& Paternostro 2006]{hussey06advanced}{$~$}
 Kenn Hussey and Marcelo Paternostro.
 \newblock Advanced features of {EMF}.
@@ -494,6 +509,11 @@ Fr{\'e}d{\'e}ric Jouault and Ivan Kurtev.
 Fr{\'e}d{\'e}ric Jouault.
 \newblock Loosely coupled traceability for {ATL}.
 \newblock In {\em Proc. {ECMDA-FA} Workshop on Traceability}, 2005.
+
+\bibitem[Jurack \& Mantz 2010]{jurack10towards}{$~$}
+Stefan Jurack and Florian Mantz.
+\newblock Towards metamodel evolution of {EMF} models with {Henshin}.
+\newblock In {\em Proc. ME Workshop}, 2010.
 
 \bibitem[Kataoka {\it et al.}\  2001]{kataoka01automated}{$~$}
 Yoshio Kataoka, Michael~D. Ernst, William~G. Griswold, and David Notkin.
@@ -620,6 +640,12 @@ R.~L{\"a}mmel.
 \newblock In {\em Proc. ACM SIGPLAN Workshop on Rule-Based Programming}, pages
   15--28. ACM, 2002.
 
+\bibitem[Lara \& Guerra 2010]{delara10generic}{$~$}
+Juan de~Lara and Esther Guerra.
+\newblock Generic meta-modelling with concepts, templates and mixin layers.
+\newblock In {\em Proc. MoDELS (1)}, volume 6394 of {\em Lecture Notes in
+  Computer Science}, pages 16--30. Springer, 2010.
+
 \bibitem[Lehman 1969]{lehman69programming}{$~$}
 Meir~M. Lehman.
 \newblock The programming process.
@@ -661,6 +687,11 @@ Stephen~J. Mellor and Marc Balcer.
 Sergey Melnik.
 \newblock {\em Generic Model Management: Concepts and Algorithms}.
 \newblock PhD thesis, University of Leipzig, Germany, 2004.
+
+\bibitem[M\'{e}ndez {\it et al.}\  2010]{mendez10towards}{$~$}
+David M\'{e}ndez, Anne Etien, Alexis Muller, and Rubby Casallas.
+\newblock Towards transformation migration after metamodel evolution.
+\newblock In {\em Proc. ME Workshop}, 2010.
 
 \bibitem[Mens \& Demeyer 2007]{Mens07}{$~$}
 Tom Mens and Serge Demeyer.
@@ -711,6 +742,11 @@ Tien~Nhut Nguyen, Cheng Thao, and Ethan~V. Munson.
 \newblock On product versioning for hypertexts.
 \newblock In {\em Proc. International Workshop on Software Configuration
   Management (SCM)}, pages 113--132. ACM, 2005.
+
+\bibitem[Northrop 2006]{northrop06ulss}{$~$}
+L.~Northrop.
+\newblock Ultra-large scale systems: The software challenge of the future.
+\newblock Technical report, Carnegie Mellon, June 2006.
 
 \bibitem[Oldevik {\it et al.}\  2005]{oldevik05toward}{$~$}
 Jon Oldevik, Tor Neple, Roy Gr{\o}nmo, Jan~{\O}yvind Aagedal, and
@@ -845,6 +881,11 @@ Ivan Porres.
 \newblock In {\em Proc. UML}, volume 2863 of {\em LNCS}, pages 159--174.
   Springer, 2003.
 
+\bibitem[RAE \& BCS 2004]{rae04challenges}{$~$}
+The RAE and The BCS.
+\newblock The challenges of complex {IT} projects.
+\newblock Technical report, The Royal Academy of Engineering, April 2004.
+
 \bibitem[Ramil \& Lehman 2000]{ramil00cost}{$~$}
 Juan~F. Ramil and Meir~M. Lehman.
 \newblock Cost estimation and evolvability monitoring for software evolution
@@ -864,7 +905,14 @@ Linda Rising, editor.
 \newblock {\em Design patterns in communications software}.
 \newblock Cambridge University Press, 2001.
 
-\bibitem[Rose {\it et al.}\  2008]{rose08egl}{$~$}
+\bibitem[Rose {\it et al.}\  2008a]{rose08hutn}{$~$}
+Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
+\newblock Constructing models with the {Human-Usable Textual Notation}.
+\newblock In {\em Proc. International Conference on Model Driven Engineering
+  Languages and Systems}, volume 5301 of {\em LNCS}, pages 249--263. Springer,
+  2008.
+
+\bibitem[Rose {\it et al.}\  2008b]{rose08egl}{$~$}
 Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
 \newblock {The Epsilon Generation Language}.
 \newblock In {\em Proc. European Conference on Model Driven Architecture --
@@ -881,14 +929,20 @@ Louis~M. Rose, Richard~F. Paige, Dimitrios~S. Kolovos, and Fiona~A.C. Polack.
 \newblock An analysis of approaches to model migration.
 \newblock In {\em Proc. Joint {MoDSE-MCCM} Workshop}, 2009.
 
-\bibitem[Rose {\it et al.}\  2010a]{rose10comparison}{$~$}
+\bibitem[Rose {\it et al.}\  2010a]{rose10coevolution}{$~$}
+Louis~M. Rose, Anne Etien, David M\'{e}ndez, Dimitrios~S. Kolovos, Richard~F.
+  Paige, and Fiona~A.C. Polack.
+\newblock Comparing model-metamodel and transformation-metamodel co-evolution.
+\newblock In {\em Proc. ME Workshop}, 2010.
+
+\bibitem[Rose {\it et al.}\  2010b]{rose10comparison}{$~$}
 Louis~M. Rose, Markus Herrmannsdoerfer, James~R. Williams, Dimitrios~S.
   Kolovos, Kelly Garc\'{e}s, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock A comparison of model migration tools.
 \newblock In {\em Proc. MoDELS}, volume TBC of {\em Lecture Notes in Computer
   Science}, page TBC. Springer, 2010.
 
-\bibitem[Rose {\it et al.}\  2010b]{rose10concordance}{$~$}
+\bibitem[Rose {\it et al.}\  2010c]{rose10concordance}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Nicholas Drivalos, James.~R. Williams,
   Richard~F. Paige, Fiona~A.C. Polack, and Kiran~J. Fernandes.
 \newblock Concordance: An efficient framework for managing model integrity
@@ -896,17 +950,17 @@ Louis~M. Rose, Dimitrios~S. Kolovos, Nicholas Drivalos, James.~R. Williams,
 \newblock In {\em Proc. European Conference on Modelling Foundations and
   Applications}, volume 6138 of {\em LNCS}, pages 62--73. Springer, 2010.
 
-\bibitem[Rose {\it et al.}\  2010c]{rose10ttc_solution}{$~$}
+\bibitem[Rose {\it et al.}\  2010d]{rose10ttc_solution}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Migrating activity diagrams with {Epsilon Flock}.
 \newblock In {\em Proc. TTC}, 2010.
 
-\bibitem[Rose {\it et al.}\  2010d]{rose10ttc_case}{$~$}
+\bibitem[Rose {\it et al.}\  2010e]{rose10ttc_case}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model migration case.
 \newblock In {\em Proc. TTC}, 2010.
 
-\bibitem[Rose {\it et al.}\  2010e]{rose10flock}{$~$}
+\bibitem[Rose {\it et al.}\  2010f]{rose10flock}{$~$}
 Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
 \newblock Model migration with {Epsilon Flock}.
 \newblock In {\em Proc. ICMT}, volume 6142 of {\em Lecture Notes in Computer
@@ -949,13 +1003,6 @@ Jonathan Sprinkle.
 \newblock {\em Metamodel Driven Model Migration}.
 \newblock PhD thesis, Vanderbilt University, TN, USA, 2003.
 
-\bibitem[Sprinkle 2008]{cicchetti08thesis}{$~$}
-Jonathan Sprinkle.
-\newblock {\em Difference Representation and Conflict Management in
-  {Model-Driven Engineering}}.
-\newblock PhD thesis, Universita' degli Studi dell'Aquila, L'Aquila, Italy,
-  2008.
-
 \bibitem[Stahl {\it et al.}\  2006]{stahl06mdsd}{$~$}
 Thomas Stahl, Markus Voelter, and Krzysztof Czarnecki.
 \newblock {\em Model-Driven Software Development: Technology, Engineering,
@@ -977,6 +1024,13 @@ Hong Su, Diane Kramer, Li~Chen, Kajal~T. Claypool, and Elke~A. Rundensteiner.
 \newblock {XEM}: Managing the evolution of {XML} documents.
 \newblock In {\em Proc. Workshop on Research Issues in Data Engineering}, pages
   103--110, 2001.
+
+\bibitem[Tisi {\it et al.}\  2009]{tisi09hot}{$~$}
+Massimo Tisi, Fr{\'e}d{\'e}ric Jouault, Piero Fraternali, Stefano Ceri, and
+  Jean B{\'e}zivin.
+\newblock On the use of higher-order model transformations.
+\newblock In {\em Proc. ECMDA-FA}, volume 5562 of {\em Lecture Notes in
+  Computer Science}, pages 18--33. Springer, 2009.
 
 \bibitem[Tratt 2008]{tratt08change}{$~$}
 Laurence Tratt.
