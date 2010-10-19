@@ -1,0 +1,45 @@
+%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+\chapter{TTC Results}
+\label{TTCScores}
+This appendix describes the results of a model migration case submitted to the Tools Transformation Contest (TTC) 2010 workshop\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?Itemid=132}}. Nine solutions were submitted for the migration case and, during the workshop, the solutions were compared and awarded a score by the workshop participants and organisers. The results of the workshop are presented here, and were used for the evaluation of Epsilon Flock described in Section~\ref{sec:ttc}. 
+
+Below, each table presents scores for each of the nine solutions. The first seven tables show the score awarded to each tool for the criteria described in Section~\ref{sec:ttc}: correctness, conciseness, clarity, appropriateness, tool maturity, reproducibility and extensions. The final two tables show the total scores for each tool using an equal weight for each criterion, and using the weights determined by the workshop organisers. Each table shows the mean score (M column), variance between scores (V column), and the rank of each solution (R column). An \texttt{x} in a cell indicates a conflict of interest (no score awarded).
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c|c|c|c|c|c|c|c||c|c||c|}
+		\hline
+		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
+		\hline
+		\hline
+		GReTL         & 0          & x          & x          & 0          & 1          & x          & 0          & 1          &
+0          & 1           & 0           & 1           & 0.44       & 0.25       & 8  \\
+		\hline
+		Flock         & 0          & x          & x          & 1          & 1          & 1          & 0          & 0          &
+1          & 1           & 1           & 1           & 0.70       & 0.21       & 7  \\
+		\hline
+		RSDS          & 0          & 1          & x          & -1         & 0          & 0          & 0          & 0          &
+1          & 0           & 1           & 0           & 0.18       & 0.33       & 9  \\
+		\hline
+		Mola          & x          & 1          & x          & -1         & 0          & 1          & 1         & x          &
+1          & 2           & 1           & 1           & 0.78       & 0.62       & 6  \\
+		\hline
+		Fujaba        & 1          & x          & 2          & 1          & 0          & 1          & 1          & 1          &
+1          & x           & 1           & x           & 1.00       & 0.22       & 2  \\
+		\hline
+		GrGen         & 0          & 1          & 2          & 1          & 1          & 1          & x          & 1          &
+1          & 2           & 0           & 1           & 1.00       & 0.36       & 2  \\
+		\hline
+		COPE          & 0          & 1          & 2          & 1          & x          & 1          & 1          & 0          &
+1          & 2           & 1           & 1           & 1.00       & 0.36       & 2  \\
+		\hline
+		PETE          & 0          & 1          & 2          & 1          & x          & 1          & 1          & 1          &
+x          & 2           & 1           & 1           & 1.10       & 0.29       & 1  \\
+		\hline
+		A/J           & 0          & 1          & 1          & 1          & 1          & 1          & 1          & 1          &
+1          & 1           & 0           & 1           & 0.83       & 0.14       & 5  \\
+		\hline
+	\end{tabular}
+	\caption{Correctness scores (in the range -1 to 2).}
+	\label{tab:correctness_scores}
+\end{table}

@@ -11,14 +11,14 @@ The way in which Flock impacts productivity and understandability of model migra
 The remainder of this section describes the comparison method, reports results and tool selection guidance, and discusses the situations in which Flock was identified as stronger or weaker than the other co-evolution tools. Section~\ref{sec:method} describes the way in which the co-evolution tools were selected, comparison criteria were identified and the way in which the tools were applied to two co-evolution examples. The experts' experiences with each tool are reported in Section~\ref{sec:results}. Section~\ref{sec:discussion} presents the experts' guidance for identifying the most appropriate model migration tool in different situations, and the section concludes with a description of the strengths and weaknesses of Flock.
 
 \begin{framed}
-This section is based on joint work with Markus Herrmannsd\"{o}erfer (a research student at Technische Universit\"at M\"unchen), James Williams (a research student in this department), Dimitrios Kolovos (a lecturer in this department) and Kelly Garc\'{e}s (a research student at EMN-INRIA / LINA-INRIA in Nantes), and has been published in \cite{rose10comparison}. Garc\'{e}s provided assistance with installing and configuration one of the migration tools, and commented on a draft of the paper. Herrmannsd\"{o}erfer, Williams and Kolovos played a larger role in the comparison. Here, the work is narrated to make clear their contributions.
+This section is based on joint work with Markus Herrmannsd\"{o}rfer (a research student at Technische Universit\"at M\"unchen), James Williams (a research student in this department), Dimitrios Kolovos (a lecturer in this department) and Kelly Garc\'{e}s (a research student at EMN-INRIA / LINA-INRIA in Nantes), and has been published in \cite{rose10comparison}. Garc\'{e}s provided assistance with installing and configuration one of the migration tools, and commented on a draft of the paper. Herrmannsd\"{o}rfer, Williams and Kolovos played a larger role in the comparison. Here, the work is narrated to make clear their contributions.
 \end{framed}
 
 \subsection{Comparison Method}
 \label{sec:method}
 
 \newcommand{\mm}[1]{\texttt{#1}}
-The comparison described in this section is based on practical application of the tools to the co-evolution examples described below. This section also discusses the tool selection and comparison processes. Herrmannsd\"{o}erfer and the author identified the co-evolution examples, and formulated the comparison process.
+The comparison described in this section is based on practical application of the tools to the co-evolution examples described below. This section also discusses the tool selection and comparison processes. Herrmannsd\"{o}rfer and the author identified the co-evolution examples, and formulated the comparison process.
 
 \subsubsection{Co-Evolution Examples}
 \label{subsec:method_examples}
@@ -117,7 +117,7 @@ The comparison was conducted in three phases. In the first phase, criteria again
 \label{sec:results}
 This section reports the similarities and differences of each tool, using the nine criteria described above. The migration strategies formulated with each tool are available online\footnote{\url{http://github.com/louismrose/migration_comparison}}. 
 
-Each subsection below considers one criterion. This section reports the experiences of the developer to which each tool was allocated. As such, this section contains the work of others. Specifically, Herrmannsd\"{o}erfer described Epsilon Flock, Williams described COPE and Kolovos described Ecore2Ecore. (The author described AML, and introduced each criterion). 
+Each subsection below considers one criterion. This section reports the experiences of the developer to which each tool was allocated. As such, this section contains the work of others. Specifically, Herrmannsd\"{o}rfer described Epsilon Flock, Williams described COPE and Kolovos described Ecore2Ecore. (The author described AML, and introduced each criterion). 
 
 \subsubsection{Constructing the migration strategy}
 \label{subsec:constructing}
@@ -252,7 +252,7 @@ To measure performance, five sets of Petri net models were generated at random. 
 
 \subsection{Discussion}
 \label{sec:discussion}
-The comparison described above highlights similarities and differences between a representative sample of model migration approaches. From this comparison, guidance for selecting between tools was synthesised. The guidance is presented below, and was produced by all four participants in the comparison (Herrmannsd\"{o}erfer, Williams, Kolovos and the author). 
+The comparison described above highlights similarities and differences between a representative sample of model migration approaches. From this comparison, guidance for selecting between tools was synthesised. The guidance is presented below, and was produced by all four participants in the comparison (Herrmannsd\"{o}rfer, Williams, Kolovos and the author). 
 
 COPE captures co-evolution patterns (which apply to both model and metamodel), while Ecore2Ecore, AML and Flock capture only model migration patterns (which apply just to models). Because of this, COPE facilitates a greater degree of re-use in model migration than other approaches. However, the order in which the user applies patterns with COPE impacts on both metamodel evolution and model migration, which can complicate pattern selection particularly when a large amount of evolution occurs at once. The re-usable co-evolution patterns in COPE make it well suited to migration problems in which metamodel evolution is frequent and in small steps.
 

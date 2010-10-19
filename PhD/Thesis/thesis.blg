@@ -16,6 +16,7 @@ A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.1.Experiments/experiments.aux
 A level-1 auxiliary file: A.2.ProcessOriented/process_oriented.aux
 A level-1 auxiliary file: A.3.MigrationStrategies/migration_strategies.aux
+A level-1 auxiliary file: A.4.TTCScores/ttc_scores.aux
 The style file: longname.bst
 Database file #1: thesis.bib
 Repeated entry---line 1454 of file thesis.bib
@@ -28,6 +29,7 @@ Repeated entry---line 1476 of file thesis.bib
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
 --line 1506 of file thesis.bib
+Warning--I didn't find a database entry for "CitationNeeded"
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -87,7 +89,7 @@ Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 You've used 187 entries,
             2472 wiz_defined-function locations,
-            1404 strings with 31260 characters,
+            1407 strings with 31316 characters,
 and the built_in function-call counts, 72744 in all, are:
 = -- 7309
 > -- 2750

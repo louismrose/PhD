@@ -6,11 +6,14 @@
 \addvspace {10pt}
 \contentsline {table}{\numberline {5.1}{\ignorespaces Properties of model migration approaches}}{124}
 \addvspace {10pt}
-\contentsline {table}{\numberline {6.1}{\ignorespaces Model operation frequency (analysis examples).}}{148}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Model operation frequency (analysis examples).}}{151}
 \contentsline {table}{\numberline {6.2}{\ignorespaces Model operation frequency (evaluation examples).}}{151}
 \contentsline {table}{\numberline {6.3}{\ignorespaces Summary of comparison criteria.}}{165}
 \contentsline {table}{\numberline {6.4}{\ignorespaces Summary of tool selection advice}}{174}
+\contentsline {table}{\numberline {6.5}{\ignorespaces TTC scores for Epsilon Flock (unweighted).}}{188}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
+\addvspace {10pt}
+\contentsline {table}{\numberline {D.1}{\ignorespaces TTC scores for Epsilon Flock (unweighted).}}{277}

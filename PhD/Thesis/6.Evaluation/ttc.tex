@@ -54,6 +54,9 @@ Submissions were evaluated using the following four criteria, which were decided
 	\item \textbf{Correctness}: Does the transformation produce a model equivalent to the migrated UML 2.2. model included in the case resources?
 	\item \textbf{Conciseness}: How much code is required to specify the transformation? (In \cite{sprinkle04domain} et al. propose that the amount of effort required to codify migration should be directly proportional to the number of changes between original and evolved metamodel).
 		\item \textbf{Clarity}: How easy is it to read and understand the used transformation? (For example, is a well-known or standardised language?)
+		\item \textbf{Appropriateness}: How much effort is required to adapt the tool in providing a solution?
+		\item \textbf{Tool maturity}: To what extent can the tool be used by people other than the developer? 
+		\item \textbf{Reproducibility}: Can the solution be reproduced on another machine?\footnote{Participants were invited to install their tools and solutions on virtual machines, which would later be made accessible via the workshop proceedings.}
 		\item \textbf{Extensions}: Which of the case extensions (described below) were implemented in the solution?
 \end{itemize}
 
@@ -233,20 +236,76 @@ As discussed in Section~\ref{sec:flock}, Flock is built atop Epsilon, which incl
 
 Consequently, the migration strategy developed for the core task works for all of the types of model supported by EMC. To migrate a model encoded in XMI 1.2 rather than in XMI 2.1, the user must select a different option when executing the Flock migration strategy. Otherwise, no other changes are required.
 
-\subsubsection{Comparison with other solutions}
-At the workshop, solutions to the migration case described in Section~\ref{subsec:ttc_case} were presented. Each solution was allocated two opponents who highlighted weaknesses of each approach. Following the solution presentations and opposition statements, each solution was scored using the four criteria described above, correctness, clarity, conciseness and number of extensions solved. Epsilon Flock was awarded first position for the migration case. The opposition statements for Flock and the solution scores are now discussed.
+\subsection{Comparison with other solutions}
+At the workshop, solutions to the migration case described in Section~\ref{subsec:ttc_case} were presented. Each solution was allocated two opponents who highlighted weaknesses of each approach. Following the solution presentations and opposition statements, each solution was scored using the criteria described above: correctness, clarity, conciseness, appropriateness, tool maturity, reproducibility and number of extensions solved. Flock scored the highest average marks for four of seven criteria, and awarded overall first prize. The remainder of this section discusses the scores in more detail, and summarises the opposition statements for Flock.
 
-\paragraph{Opposition Statements} The opposition statements highlighted two weaknesses of Flock. Firstly, there is some duplicated code in Listing~\ref{lst:pseudostates}: the \texttt{migrate Pseudostate to ...} statement appears several times. The duplication exists because Flock only allows one-to-one mappings between original and evolved metamodel types. The conservative copy algorithm would need to be extended to allow one-to-many mappings to remove this kind of duplication.
+\subsubsection{Opposition Statements}
+The opposition statements highlighted two weaknesses of Flock. Firstly, there is some duplicated code in Listing~\ref{lst:pseudostates}: the \texttt{migrate Pseudostate to ...} statement appears several times. The duplication exists because Flock only allows one-to-one mappings between original and evolved metamodel types. The conservative copy algorithm would need to be extended to allow one-to-many mappings to remove this kind of duplication.
 
 Secondly, the body of Flock rules are specified in an imperative manner. Consequently, reasoning about the correctness of the a migration strategy is arguably more difficult than in languages that use a purely declarative syntax. This point is discussed further in Section~\ref{sec:limitations}, which considers the limitations of the thesis.
 
-\paragraph{Scoring} Every workshop participants scored each solution on clarity and conciseness. The workshop organisers scored each solution on correctness and number of extensions solved, as these criteria could be measured objectively. Flock was awarded the most points by the workshop participants and organisers. The complete list of scores is shown in Table~TODO\footnote{TODO: Fill in when Pieter mails the spreadsheet}.
+\subsubsection{Scoring}
+Flock was awarded the overall first prize and scored the highest average marks for five of the seven criteria outlined above. The overall ranking process is first described, and the remainder of the section discusses the score awarded to Flock for each of the criteria.
 
-\emph{TODO: Discuss the results: to what extent and in what regard is Flock ``better'' than the other solutions? Appraise the ranking system.}
+During the workshop, each tool developer presented their solution. The workshop participants and organisers awarded each solution an individual score for each of the seven criteria outlined above, and a total score (by summing the seven criteria scores). The overall ranking for each solution was calculated by taking the mean of the total scores. For example, Flock was awarded the scores shown in Table~\ref{tab:flock_scores}. Participants \#2 and \#3 (the thesis author and Markus Herrmansd\"{o}rfer, who used Flock for the evaluation presented in Section~\ref{sec:collaborative_comparison}) did not award scores to Flock due to a conflict of interest. The complete set of results are presented in Appendix~\ref{TTCScores}.
 
+Although Flock was awarded the overall first prize, few conclusions can be drawn from the overall rankings. The scores for each criteria were awarded on different scales (e.g. -2 to 2 for conciseness, and 0 to 2 for extensions) and the workshop organisers applied a weight to each criterion before calculating the totals (5 for correctness, 3 for conciseness, 3 for clarity, 3 for extensions, 3 for appropriateness, 4 for tool maturity and 2 for reproducibility). Clearly, the relative importance of each criterion may vary between migration cases, and between organisations. Therefore, the remainder of the discussion focusses on the per-criteria scores awarded to Flock and the other tools.
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Response \#} & \textbf{1} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{Mean} \\
+		\hline
+		\hline
+		Correctness          & 0          & 1          & 1          & 1          & 0          & 0          & 1          & 1     
+		        & 1           & 1           & \\
+		\hline                                                                                                     
+		Conciseness          & 1          & 2          & 2          & 1          & 1          & 1          & 0          & 1
+		        & 2           & 1           & \\
+		\hline                                                                                                     
+		Clarity              & 1          & 1          & 1          & 0          & 1          & 1          & 1          & 1
+		        & 1           & 1           & \\
+		\hline                                                                                                     
+		Extensions           & 2          & 2          & 2          & 1          & 2          & 2          & 2          & 2
+		        & 2           & 1           & \\
+		\hline                                                                                                     
+		Appropriateness      & 1         & 2          & 2          & 1          & 2          & 1           & 1          & 2 
+		        & 2           & 2           & \\
+		\hline                                                                                                     
+		Tool Maturity        & 0         & 0          & 0          & 1          & 0          & 0           & 1          & 1
+		        & 0           & 1           & \\
+		\hline                                                                                                     
+		Reproducibility      & 1         & 1          & 1          & 1          & 1          & 1          & 1          & 1 
+		        & 1           & 1           & \\
+		\hline                                                                                                     
+		\hline                                                                                                     
+		Total                & 6         & 9          & 9          & 6          & 7          & 6          & 7          & 9 
+		        & 9           & 8           & 7.6 \\
+		\hline
+	\end{tabular}
+	\caption{TTC scores for Epsilon Flock (unweighted).}
+	\label{tab:flock_scores}
+\end{table}
+
+\paragraph{Correctness} Each tool developer demonstrated the extent to which their solution performed a correct migration of activity diagrams according to the migration semantics described in the case description (Section~\ref{subsec:ttc_case}). The following scores could be awarded: -1 (probably doesn't work at all), 0 (cannot judges), 1 (works for one model), and 2 (works for more than one model). Flock received a mean score of 0.7, and was ranked seventh out of the nine solutions. Unlike several of the other solutions, migration with Flock is specified with both imperative and declarative language constructs. Many of the other solutions used only declarative language constructs to specify the migration of UML activity diagrams and, hence, more could be said about the correctness of the solutions written in those languages. This point is discussed further in Section~\ref{sec:limitations}, which considers the limitations of the thesis research.
+
+\paragraph{Conciseness} Solutions were awarded one of the following scores for the conciseness of their migration strategies: -2 (very verbose), -1 (quite verbose), 0 (cannot judges), 1 (quite concise), and 2 (very concise). Flock received a mean score of 1.2, and was ranked first out of the nine solutions. Three of the solutions used general purpose languages (such as Java and Prolog), and these were ranked sixth, seventh and ninth. The other solutions used graph or model transformation languages, and, in general, scored more highly than those written in general-purpose languages.
+
+\paragraph{Clarity} The extent to which the intention of the migration could be determined from the migration strategy was scored on the following scale: -1 (no idea how it works), 0 (some idea how it works), 1 (fully understand how it works). Flock received a mean score of 0.9, was ranked first out of the nine solutions, and there was little variation in the scores awarded to Flock (a score of 1 from eleven of the twelve responses, and a score of 0 from the remaining respondent). Tools tailored to model migration, such as Flock and COPE \cite{herrmannsdoerfer09cope}, and graph transformation languages, such as GrGen \cite{CitationNeeded} and MOLA \cite{CitationNeeded}, were ranked the highest in this category.
+
+\paragraph{Appropriateness} The suitability of the tool for migrating activity diagrams was assessed on the following scale: -2 (totally inappropriate), -1 (inappropriate), 0 (neutral), 1 (somewhat appropriate), 2 (perfect fit). Flock received a mean score of 1.6, and was ranked first out of the nine solutions. Again, tools tailored to model migration, such as Flock and COPE \cite{herrmannsdoerfer09cope}, and graph transformation languages, such as GrGen \cite{CitationNeeded} and MOLA \cite{CitationNeeded}, were ranked the highest in this category.
+
+\paragraph{Tool maturity} The maturity of each tool was discussed during the solution presentations, and the workshop participants were able to use eight of the nine solutions via a virtual machine. Scores were awarded on the following scale: -1 (prototype), 0 (average), 1 (good). Flock received a mean score of 1, and was ranked third out of the nine solutions. Fujaba \cite{CitationNeeded} and GrGen \cite{CitationNeeded} were ranked first in this category, and have been used for .. 
+
+\paragraph{Reproducibility} Each developer was invited to configure a virtual machine with their tool and solution, and the workshop participants were invited to use each of the tools. A score of 1 was awarded if a working virtual machine image was provided by the tool developer, and 0 otherwise. Flock had a mean score of 1, and ranked joint first along with seven of the other tools. The virtual machine image for one of the tools did not work, and it was awarded a mean score of 0.
+
+\paragraph{Extensions} Three extensions to the core task were described in Section~\ref{}, and a point was awarded for approaching each additional task. Flock was awarded a mean score of 5.4, and ranked first of the nine solutions. The variation in scores is difficult to explain. For instance, the Flock solution (Section~\ref{}) approached two of the three extensions, but some of the participants awarded Flock only 1 point. It is perhaps more interesting to note that the Flock solution was the only one to approach the XMI extension, and the Fujaba solution \cite{CitationNeeded} the concrete syntax extension. This might indicate that contemporary migration tools can be used to manage realistic metamodel changes, but lack some features that would be desirable in an industrial setting (namely, interoperability with several modelling technologies and co-migration of abstract and concrete syntax).
+
+% TODO - put all of the per-criteria scores and overall weighted and unweighted scores in an appendix
 
 \subsection{Summary}
-This section has discussed the way in which Flock was evaluated by participating in the 2010 edition of the Transformation Tools Contest (TTC). Flock was assessed by application to an example of migration from the UML and comparison with eight other model and graph transformation tools. Flock was awarded first prize by the workshop participants and organisers. 
+This section has discussed the way in which Flock was evaluated by participating in the 2010 edition of the Transformation Tools Contest (TTC). Flock was assessed by application to an example of migration from the UML and comparison with eight other model and graph transformation tools. Flock was awarded the overall first prize and ranked first in five of seven categories by the workshop participants and organisers. 
 
 In addition to evaluating Flock, the work described in this section provides three further contributions. Firstly, the migration case submitted to TTC 2010, described in Section~\ref{subsec:ttc_case} provides a real-world example of co-evolution for use in future comparisons of model migration tools. The case is based on the evolution of UML, between versions 1.4 and 2.2. The migration strategy was devised by analysis of the UML specification, and by discussion between workshop participants.
 

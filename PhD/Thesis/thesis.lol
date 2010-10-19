@@ -23,43 +23,42 @@
 \contentsline {lstlisting}{\numberline {5.19}Redefining equivalences for the Component model migration.}{121}
 \contentsline {lstlisting}{\numberline {5.20}Petri nets model migration in Flock}{122}
 \contentsline {lstlisting}{\numberline {5.21}UML model migration in Flock}{122}
-\contentsline {lstlisting}{\numberline {6.1}Assignment operators in ATL}{145}
+\contentsline {lstlisting}{\numberline {6.1}Assignment operators in ATL}{146}
 \contentsline {lstlisting}{\numberline {6.2}The Petri nets model migration in ATL}{149}
 \contentsline {lstlisting}{\numberline {6.3}The Petri nets model migration in Groovy-for-COPE}{150}
 \contentsline {lstlisting}{\numberline {6.4}Petri nets model migration in Flock}{150}
-\contentsline {lstlisting}{\numberline {6.5}An extract of the GMF Graph model migration in ATL}{152}
-\contentsline {lstlisting}{\numberline {6.6}Simplified GMF Graph model migration in ATL}{155}
+\contentsline {lstlisting}{\numberline {6.5}An extract of the GMF Graph model migration in ATL}{153}
+\contentsline {lstlisting}{\numberline {6.6}Simplified GMF Graph model migration in ATL}{156}
 \contentsline {lstlisting}{\numberline {6.7}Simplified GMF Graph model migration in COPE}{156}
-\contentsline {lstlisting}{\numberline {6.8}Simplified GMF Graph model migration in Flock}{156}
-\contentsline {lstlisting}{\numberline {6.9}Migration for Change Reference to Containment in ATL}{158}
-\contentsline {lstlisting}{\numberline {6.10}Migration for Change Reference to Containment in Groovy-for-COPE}{159}
-\contentsline {lstlisting}{\numberline {6.11}Migration for Change Reference to Containment in Flock}{160}
-\contentsline {lstlisting}{\numberline {6.12}Migrating Actions}{183}
-\contentsline {lstlisting}{\numberline {6.13}Migrating FinalStates and Transitions}{183}
-\contentsline {lstlisting}{\numberline {6.14}Migrating Pseudostates}{183}
-\contentsline {lstlisting}{\numberline {6.15}Migrating ActivityGraphs}{183}
-\contentsline {lstlisting}{\numberline {6.16}Migrating Guards}{184}
-\contentsline {lstlisting}{\numberline {6.17}Migrating Partitions}{184}
-\contentsline {lstlisting}{\numberline {6.18}Migrating ObjectFlows}{185}
-\contentsline {lstlisting}{\numberline {6.19}Migrating ObjectFlowStates to a single ObjectFlow}{185}
-\contentsline {lstlisting}{\numberline {6.20}Migrating Partitions without ObjectFlowStates}{185}
-\contentsline {lstlisting}{\numberline {B.1}The annotated process-oriented metamodel after the first iteration}{198}
-\contentsline {lstlisting}{\numberline {B.2}The annotated process-oriented metamodel after the second iteration}{199}
-\contentsline {lstlisting}{\numberline {B.3}The annotated process-oriented metamodel after the fourth iteration}{203}
-\contentsline {lstlisting}{\numberline {B.4}The annotated process-oriented metamodel after the fifth iteration}{207}
-\contentsline {lstlisting}{\numberline {B.5}The annotated process-oriented metamodel after the final iteration}{211}
-\contentsline {lstlisting}{\numberline {C.1}The Newsgroup Extract Person model migration in ATL}{216}
-\contentsline {lstlisting}{\numberline {C.2}The Newsgroup Extract Person model migration in COPE}{217}
-\contentsline {lstlisting}{\numberline {C.3}The Newsgroup Extract Person model migration in Flock}{217}
-\contentsline {lstlisting}{\numberline {C.4}The Newsgroup Resolve Replies model migration in ATL}{218}
-\contentsline {lstlisting}{\numberline {C.5}The Newsgroup Resolve Replies model migration in COPE}{219}
-\contentsline {lstlisting}{\numberline {C.6}The Newsgroup Resolve Replies model migration in Flock}{219}
-\contentsline {lstlisting}{\numberline {C.7}UML activity diagram model migration in ATL}{220}
-\contentsline {lstlisting}{\numberline {C.8}UML activity diagram model migration in COPE}{224}
-\contentsline {lstlisting}{\numberline {C.9}UML activity diagram model migration in Flock}{225}
-\contentsline {lstlisting}{\numberline {C.10}GMF Graph model migration in ATL}{228}
-\contentsline {lstlisting}{\numberline {C.11}GMF Graph model migration in COPE}{239}
-\contentsline {lstlisting}{\numberline {C.12}GMF Graph model migration in Flock}{239}
-\contentsline {lstlisting}{\numberline {C.13}GMF Generator model migration in ATL}{241}
-\contentsline {lstlisting}{\numberline {C.14}GMF Generator model migration in COPE}{265}
-\contentsline {lstlisting}{\numberline {C.15}GMF Generator model migration in Flock}{267}
+\contentsline {lstlisting}{\numberline {6.8}Simplified GMF Graph model migration in Flock}{157}
+\contentsline {lstlisting}{\numberline {6.9}Migration for Change Reference to Containment in ATL}{159}
+\contentsline {lstlisting}{\numberline {6.10}Migration for Change Reference to Containment in Flock}{160}
+\contentsline {lstlisting}{\numberline {6.11}Migrating Actions}{184}
+\contentsline {lstlisting}{\numberline {6.12}Migrating FinalStates and Transitions}{184}
+\contentsline {lstlisting}{\numberline {6.13}Migrating Pseudostates}{184}
+\contentsline {lstlisting}{\numberline {6.14}Migrating ActivityGraphs}{184}
+\contentsline {lstlisting}{\numberline {6.15}Migrating Guards}{185}
+\contentsline {lstlisting}{\numberline {6.16}Migrating Partitions}{185}
+\contentsline {lstlisting}{\numberline {6.17}Migrating ObjectFlows}{186}
+\contentsline {lstlisting}{\numberline {6.18}Migrating ObjectFlowStates to a single ObjectFlow}{186}
+\contentsline {lstlisting}{\numberline {6.19}Migrating Partitions without ObjectFlowStates}{186}
+\contentsline {lstlisting}{\numberline {B.1}The annotated process-oriented metamodel after the first iteration}{206}
+\contentsline {lstlisting}{\numberline {B.2}The annotated process-oriented metamodel after the second iteration}{207}
+\contentsline {lstlisting}{\numberline {B.3}The annotated process-oriented metamodel after the fourth iteration}{211}
+\contentsline {lstlisting}{\numberline {B.4}The annotated process-oriented metamodel after the fifth iteration}{215}
+\contentsline {lstlisting}{\numberline {B.5}The annotated process-oriented metamodel after the final iteration}{219}
+\contentsline {lstlisting}{\numberline {C.1}The Newsgroup Extract Person model migration in ATL}{222}
+\contentsline {lstlisting}{\numberline {C.2}The Newsgroup Extract Person model migration in Groovy-for-COPE}{223}
+\contentsline {lstlisting}{\numberline {C.3}The Newsgroup Extract Person model migration in Flock}{223}
+\contentsline {lstlisting}{\numberline {C.4}The Newsgroup Resolve Replies model migration in ATL}{224}
+\contentsline {lstlisting}{\numberline {C.5}The Newsgroup Resolve Replies model migration in Groovy-for-COPE}{225}
+\contentsline {lstlisting}{\numberline {C.6}The Newsgroup Resolve Replies model migration in Flock}{225}
+\contentsline {lstlisting}{\numberline {C.7}UML activity diagram model migration in ATL}{226}
+\contentsline {lstlisting}{\numberline {C.8}UML activity diagram model migration in Groovy-for-COPE}{230}
+\contentsline {lstlisting}{\numberline {C.9}UML activity diagram model migration in Flock}{231}
+\contentsline {lstlisting}{\numberline {C.10}GMF Graph model migration in ATL}{233}
+\contentsline {lstlisting}{\numberline {C.11}GMF Graph model migration in Groovy-for-COPE}{245}
+\contentsline {lstlisting}{\numberline {C.12}GMF Graph model migration in Flock}{246}
+\contentsline {lstlisting}{\numberline {C.13}GMF Generator model migration in ATL}{247}
+\contentsline {lstlisting}{\numberline {C.14}GMF Generator model migration in Groovy-for-COPE}{272}
+\contentsline {lstlisting}{\numberline {C.15}GMF Generator model migration in Flock}{274}
