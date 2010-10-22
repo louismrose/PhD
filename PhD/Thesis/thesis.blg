@@ -29,7 +29,6 @@ Repeated entry---line 1476 of file thesis.bib
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
 --line 1506 of file thesis.bib
-Warning--I didn't find a database entry for "CitationNeeded"
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -87,45 +86,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 187 entries,
+You've used 188 entries,
             2472 wiz_defined-function locations,
-            1407 strings with 31316 characters,
-and the built_in function-call counts, 72744 in all, are:
-= -- 7309
-> -- 2750
-< -- 85
-+ -- 890
-- -- 846
-* -- 5127
-:= -- 11301
-add.period$ -- 606
-call.type$ -- 187
-change.case$ -- 1138
-chr.to.int$ -- 164
-cite$ -- 188
-duplicate$ -- 3352
-empty$ -- 5973
-format.name$ -- 1095
-if$ -- 15546
+            1411 strings with 31479 characters,
+and the built_in function-call counts, 73282 in all, are:
+= -- 7366
+> -- 2769
+< -- 87
++ -- 896
+- -- 852
+* -- 5170
+:= -- 11377
+add.period$ -- 610
+call.type$ -- 188
+change.case$ -- 1145
+chr.to.int$ -- 165
+cite$ -- 189
+duplicate$ -- 3378
+empty$ -- 6016
+format.name$ -- 1102
+if$ -- 15667
 int.to.chr$ -- 24
 int.to.str$ -- 0
-missing$ -- 166
-newline$ -- 939
-num.names$ -- 562
-pop$ -- 1338
+missing$ -- 167
+newline$ -- 944
+num.names$ -- 565
+pop$ -- 1345
 preamble$ -- 1
-purify$ -- 1358
+purify$ -- 1366
 quote$ -- 0
-skip$ -- 2718
+skip$ -- 2738
 stack$ -- 0
-substring$ -- 3467
-swap$ -- 954
-text.length$ -- 85
+substring$ -- 3498
+swap$ -- 966
+text.length$ -- 87
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1380
+type$ -- 1388
 warning$ -- 1
-while$ -- 576
-width$ -- 193
-write$ -- 2425
+while$ -- 581
+width$ -- 194
+write$ -- 2440
 (There were 31 error messages)

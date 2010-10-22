@@ -515,6 +515,13 @@ Stefan Jurack and Florian Mantz.
 \newblock Towards metamodel evolution of {EMF} models with {Henshin}.
 \newblock In {\em Proc. ME Workshop}, 2010.
 
+\bibitem[Kalnins {\it et al.}\  2005]{mola}{$~$}
+Audris Kalnins, Janis Barzdins, and Edgars Celms.
+\newblock Model transformation language {MOLA}.
+\newblock In {\em Proc. Model Driven Architecture, European MDA Workshops:
+  Foundations and Applications MDAFA}, volume 3599 of {\em Lecture Notes in
+  Computer Science}, pages 62--76. Springer, 2005.
+
 \bibitem[Kataoka {\it et al.}\  2001]{kataoka01automated}{$~$}
 Yoshio Kataoka, Michael~D. Ernst, William~G. Griswold, and David Notkin.
 \newblock Automated support for program refactoring using invariants.

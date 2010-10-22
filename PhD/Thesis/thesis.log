@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  22 OCT 2010 11:01
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  22 OCT 2010 12:15
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -443,6 +443,14 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
+(/usr/local/texlive/2008/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Landscape pages in PDF (HO)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 75.
+)
 \@input{university_regulations.aux}
 \openout2 = `university_regulations.aux'.
 
@@ -487,18 +495,18 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 (./A.4.TTCScores/ttc_scores.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 \c@lstlisting=\count146
 
 (/usr/local/texlive/2008/texmf-dist/tex/context/base/supp-pdf.tex
@@ -982,92 +990,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--233
 topicid =
  []
 
-[186] [187] [188]
+[186] [187] [188] [189]
+Overfull \hbox (2.74794pt too wide) in paragraph at lines 303--304
+\OT1/cmr/bx/n/10.95 Ex-ten-sions[] \OT1/cmr/m/n/10.95 Three ex-ten-sions to the
+ core task were de-scribed in Sec-tion 6.4.1[],
+ []
 
-LaTeX Warning: Citation `CitationNeeded' on page 189 undefined on input line 29
-5.
-
-
-LaTeX Warning: Citation `CitationNeeded' on page 189 undefined on input line 29
-5.
-
-
-LaTeX Warning: Citation `CitationNeeded' on page 189 undefined on input line 29
-7.
-
-
-LaTeX Warning: Citation `CitationNeeded' on page 189 undefined on input line 29
-7.
-
-
-LaTeX Warning: Citation `CitationNeeded' on page 189 undefined on input line 29
-9.
-
-
-LaTeX Warning: Citation `CitationNeeded' on page 189 undefined on input line 29
-9.
-
-[189]
-
-LaTeX Warning: Reference `' on page 190 undefined on input line 303.
-
-
-LaTeX Warning: Reference `' on page 190 undefined on input line 303.
-
-
-LaTeX Warning: Citation `CitationNeeded' on page 190 undefined on input line 30
-3.
-
-) (./6.Evaluation/limitations.tex [190]) [191]) [192]
+[190]) (./6.Evaluation/limitations.tex) [191]) [192]
 \openout2 = `A.4.TTCScores/ttc_scores.aux'.
 
 
-(./A.4.TTCScores/ttc_scores.tex
-Overfull \hbox (18.92137pt too wide) in paragraph at lines 10--43
- [][] 
- []
-
-
-Overfull \hbox (42.37294pt too wide) in paragraph at lines 50--83
- [][] 
- []
-
-
-Overfull \hbox (28.22896pt too wide) in paragraph at lines 90--123
- [][] 
- []
-
-
-Overfull \hbox (24.57896pt too wide) in paragraph at lines 130--163
- [][] 
- []
-
-
-Overfull \hbox (45.20174pt too wide) in paragraph at lines 170--203
- [][] 
- []
-
-
-Overfull \hbox (8.57957pt too wide) in paragraph at lines 210--243
- [][] 
- []
-
-
-Overfull \hbox (16.09258pt too wide) in paragraph at lines 252--285
- [][] 
- []
-
-
-Overfull \hbox (36.71535pt too wide) in paragraph at lines 292--325
- [][] 
- []
-
-
-Overfull \hbox (76.22685pt too wide) in paragraph at lines 331--364
- [][] 
- []
-
-) [277
+(./A.4.TTCScores/ttc_scores.tex [277
 
 
 
@@ -1075,25 +1008,28 @@ Overfull \hbox (76.22685pt too wide) in paragraph at lines 331--364
 
 
 
-] [278] [279] [280] (./thesis.bbl
+] [278] [279] [280] [281] [282])
+(./thesis.bbl
 bibitemlist
-[281
+[283
 
 
 
-] [282] [283]
+
+
+] [284] [285]
 Underfull \hbox (badness 1694) in paragraph at lines 219--225
 []$ []$ \OT1/cmr/m/n/10.95 Sergey Dmitriev.  Lan-guage ori-ented pro-gram-ming:
 
  []
 
-[284]
+[286]
 Underfull \hbox (badness 1939) in paragraph at lines 325--331
 []$ []$ \OT1/cmr/m/n/10.95 Mar-tin Fowler.  Lan-guage work-benches: The killer-
 
  []
 
-[285] [286]
+[287] [288]
 Underfull \hbox (badness 1436) in paragraph at lines 435--440
 []$ []$ \OT1/cmr/m/n/10.95 M. Her-rmanns-do-er-fer, D. Ratiu, and
  []
@@ -1109,88 +1045,84 @@ Underfull \hbox (badness 1137) in paragraph at lines 455--460
 /m/n/10.95 http : / / www .
  []
 
-[287]
-Underfull \hbox (badness 2080) in paragraph at lines 546--551
+[289]
+Underfull \hbox (badness 2080) in paragraph at lines 553--558
+[]$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
+ []
+
+[290]
+Underfull \hbox (badness 1990) in paragraph at lines 559--565
 []$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 552--558
-[]$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
- []
-
-[288]
-Underfull \hbox (badness 2165) in paragraph at lines 559--564
+Underfull \hbox (badness 2165) in paragraph at lines 566--571
 []$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 583--589
+Underfull \hbox (badness 1990) in paragraph at lines 590--596
 []$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 590--595
+Underfull \hbox (badness 2165) in paragraph at lines 597--602
 []$ []$ \OT1/cmr/m/n/10.95 Dim-itrios S. Kolovos, Richard F. Paige, and
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 596--603
+Underfull \hbox (badness 1558) in paragraph at lines 603--610
 \OT1/cmr/m/n/10.95 mit Eu-rope, Oc-to-ber 2009, Lud-wigs-burg, Ger-many. Avail-
 able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 596--603
+Underfull \hbox (badness 10000) in paragraph at lines 603--610
 \OT1/pcr/m/n/10.95 https : / / www . eclipsecon . org / submissions / ese2009 /
  view _
  []
 
-[289] [290] [291]
+[291] [292] [293]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
- [292] [293] [294]
+ [294] [295] [296]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [295]) [296] (./thesis.aux
+ [297] [298]) [299] (./thesis.aux
 (./0.FrontMatter/front_matter.aux) (./1.Introduction/introduction.aux)
 (./2.Background/background.aux) (./3.LiteratureReview/literature_review.aux)
 (./4.Analysis/analysis.aux) (./5.Implementation/implementation.aux)
 (./6.Evaluation/evaluation.aux) (./7.Conclusion/conclusion.aux)
 (./A.1.Experiments/experiments.aux) (./A.2.ProcessOriented/process_oriented.aux
 ) (./A.3.MigrationStrategies/migration_strategies.aux)
-(./A.4.TTCScores/ttc_scores.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(./A.4.TTCScores/ttc_scores.aux)) ) 
 Here is how much of TeX's memory you used:
- 6434 strings out of 493886
- 96007 string characters out of 1151098
- 354276 words of memory out of 3000000
- 9507 multiletter control sequences out of 10000+50000
+ 6468 strings out of 493886
+ 96702 string characters out of 1151098
+ 354855 words of memory out of 3000000
+ 9534 multiletter control sequences out of 10000+50000
  14337 words of font info for 50 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  34i,12n,44p,1479b,1625s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/20
-08/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texlive/2008/texmf-
-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/font
-s/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bl
-uesky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
-r7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></us
-r/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr9.pfb></usr/local/tex
-live/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl10.pfb></usr/local/texlive/2008
-/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-di
-st/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/texlive/2008/texmf-dist/fonts/
-type1/bluesky/cm/cmti8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/
-courier/ucrb8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/courier/
-ucrr8a.pfb>
-Output written on thesis.pdf (88 pages, 1435127 bytes).
+{/usr/local/texlive/2008/texmf-dist/fonts/en
+c/dvips/base/8r.enc}</usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/
+cmbx10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pf
+b></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/l
+ocal/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texli
+ve/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/2008/tex
+mf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dist/fon
+ts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bl
+uesky/cm/cmr9.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
+sl10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb>
+</usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/loc
+al/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.pfb></usr/local/texlive
+/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2008/te
+xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on thesis.pdf (91 pages, 1438180 bytes).
 PDF statistics:
- 1449 PDF objects out of 1728 (max. 8388607)
+ 1459 PDF objects out of 1728 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  144 words of extra memory for PDF output out of 10000 (max. 10000000)
 
