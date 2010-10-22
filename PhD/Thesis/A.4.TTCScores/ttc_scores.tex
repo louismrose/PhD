@@ -12,34 +12,355 @@ Below, each table presents scores for each of the nine solutions. The first seve
 		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
 		\hline
 		\hline
-		GReTL         & 0          & x          & x          & 0          & 1          & x          & 0          & 1          &
-0          & 1           & 0           & 1           & 0.44       & 0.25       & 8  \\
+		PETE          & 0          & 1          & 2          & 1          & x          & 1          & 1          & 1          &
+x          & 2           & 1           & 1           & 1.10       & 0.29       & 1  \\
 		\hline
-		Flock         & 0          & x          & x          & 1          & 1          & 1          & 0          & 0          &
-1          & 1           & 1           & 1           & 0.70       & 0.21       & 7  \\
-		\hline
-		RSDS          & 0          & 1          & x          & -1         & 0          & 0          & 0          & 0          &
-1          & 0           & 1           & 0           & 0.18       & 0.33       & 9  \\
-		\hline
-		Mola          & x          & 1          & x          & -1         & 0          & 1          & 1         & x          &
-1          & 2           & 1           & 1           & 0.78       & 0.62       & 6  \\
-		\hline
+		COPE          & 0          & 1          & 2          & 1          & x          & 1          & 1          & 0          &
+		1          & 2           & 1           & 1           & 1.00       & 0.36       & 2  \\
+				\hline
 		Fujaba        & 1          & x          & 2          & 1          & 0          & 1          & 1          & 1          &
 1          & x           & 1           & x           & 1.00       & 0.22       & 2  \\
 		\hline
 		GrGen         & 0          & 1          & 2          & 1          & 1          & 1          & x          & 1          &
 1          & 2           & 0           & 1           & 1.00       & 0.36       & 2  \\
 		\hline
-		COPE          & 0          & 1          & 2          & 1          & x          & 1          & 1          & 0          &
-1          & 2           & 1           & 1           & 1.00       & 0.36       & 2  \\
-		\hline
-		PETE          & 0          & 1          & 2          & 1          & x          & 1          & 1          & 1          &
-x          & 2           & 1           & 1           & 1.10       & 0.29       & 1  \\
-		\hline
 		A/J           & 0          & 1          & 1          & 1          & 1          & 1          & 1          & 1          &
 1          & 1           & 0           & 1           & 0.83       & 0.14       & 5  \\
+		\hline
+		Mola          & x          & 1          & x          & -1         & 0          & 1          & 1         & x          &
+1          & 2           & 1           & 1           & 0.78       & 0.62       & 6  \\
+		\hline
+		\textbf{Flock}         & 0          & x          & x          & 1          & 1          & 1          & 0          & 0          &
+1          & 1           & 1           & 1           & 0.70       & 0.21       & 7  \\
+		\hline
+		GReTL         & 0          & x          & x          & 0          & 1          & x          & 0          & 1          &
+0          & 1           & 0           & 1           & 0.44       & 0.25       & 8  \\
+		\hline
+		RSDS          & 0          & 1          & x          & -1         & 0          & 0          & 0          & 0          &
+1          & 0           & 1           & 0           & 0.18       & 0.33       & 9  \\
 		\hline
 	\end{tabular}
 	\caption{Correctness scores (in the range -1 to 2).}
 	\label{tab:correctness_scores}
+\end{table}
+
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c|c|c|c|c|c|c|c||c|c||c|}
+		\hline
+		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
+		\hline
+		\hline
+		\textbf{Flock}         & 1          & x          & x          & 2          & 2          & 1          & 1          & 1          &
+0          & 1           & 2           & 1           & 1.20       & 0.36       & 1  \\
+		\hline
+		COPE          & 1          & 1          & 1          & 1          & x          & 1          & 0          & 1          &
+1          & -1           & 2           & 1           & 0.82       & 0.51       & 2  \\
+		\hline
+		GrGen         & 0          & 2          & 1          & 1          & 1          & 0          & x          & 1          &
+0          & 1           & 1           & 1           & 0.82       & 0.33       & 2  \\
+		\hline
+		Fujaba        & 1          & x          & 1          & 0          & -1          & 0          & 0          & 0          &
+-1          & x           & 1           & x           & 0.11       & 0.54       & 4  \\
+		\hline
+		Mola          & x          & 0          & x          & -2          & 0          & 0          & 0          & x          &
+-1          & 1           & 1           & 1           & 0.00       & 0.89       & 5  \\
+		\hline
+		A/J           & -1          & -1          & 1          & 0          & -1          & 0          & 0          & 0          &
+0          & -1           & 0           & 0           & -0.25       & 0.35       & 6  \\
+		\hline
+		PETE          & -2          & -1          & 1          & 1          & x          & -1          & -1          & 0          &
+x          & 0           & 1           & -1           & -0.30       & 1.01       & 7  \\
+		\hline
+		GReTL         & -1          & x          & x          & 1          & -1          & x          & 0          & 0          &
+		-1          & -1           & 0           & 0           & -0.33       & 0.56       & 8  \\
+		\hline
+		RSDS          & 0          & -1          & x          & -1          & -1          & 0          & 0          & -1          &
+-1          & 0           & -1           & 0           & -0.55       & 0.25       & 9  \\
+		\hline
+	\end{tabular}
+	\caption{Conciseness scores (in the range -2 to 2).}
+	\label{tab:conciseness_scores}
+\end{table}
+
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c|c|c|c|c|c|c|c||c|c||c|}
+		\hline
+		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
+		\hline
+		\hline
+		\textbf{Flock}         & 1          & x          & x          & 1          & 1          & 0          & 1          & 1          &
+1          & 1           & 1           & 1           & 0.90       & 0.09       & 1  \\
+		\hline
+		COPE          & 1          & 1          & 1          & 0          & x          & 1          & 0          & 0          &
+1          & 1           & 1           & 1           & 0.73       & 0.20       & 2  \\
+		\hline
+		GrGen         & 0          & 0          & 0          & 1          & 0          & 1          & x          & 0          &
+1          & 1           & 0           & 1           & 0.45       & 0.25       & 3  \\
+		\hline
+		Mola          & x          & 1          & x          & 1          & 0          & 1          & -1          & x          &
+0          & 1           & 0           & 1           & 0.44       & 0.47       & 4  \\
+		\hline
+		Fujaba        & 1          & x          & 0          & 1          & 0          & 0          & 0          & 0          &
+0          & x           & 1           & x           & 0.33       & 0.22       & 5  \\
+		\hline
+		A/J           & -1          & 0          & 1          & 0          & 1          & 1          & 0          & 0          &
+0          & 1           & 0           & 0           & 0.25       & 0.35       & 6  \\
+		\hline
+		GReTL         & 0          & x          & x          & 0          & 0          & x          & 1          & 0          &
+0          & 0           & 0           & 0           & 0.15       & 0.10       & 7  \\
+		\hline
+		PETE          & 0          & 1          & 0          & 0          & x          & 0          & 0          & 0          &
+x          & 0           & 0           & 0           & 0.10       & 0.09       & 8  \\
+		\hline
+		RSDS          & -1          & 1          & x          & 0          & 0          & 0          & -1          & -1          &
+0          & -1           & 1           & 0           & -0.18       & 0.51       & 9  \\
+		\hline
+	\end{tabular}
+	\caption{Clarity scores (in the range -1 to 1).}
+	\label{tab:clarity_scores}
+\end{table}
+
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c|c|c|c|c|c|c|c||c|c||c|}
+		\hline
+		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
+		\hline
+		\hline
+		\textbf{Flock}         & 1          & x          & x          & 2          & 2          & 1          & 2          & 1          &
+1          & 2           & 2           & 2           & 1.60       & 0.24       & 1  \\
+		\hline
+		COPE          & 2          & 2          & 2          & 1          & x          & 2          & 0          & 1          &
+2          & 2           & 1           & 2           & 1.55       & 0.43       & 2  \\
+		\hline
+		GrGen         & 0          & 1          & 1          & 1          & 0          & 1          & x          & 1          &
+1          & 1           & 0           & 1           & 0.73       & 0.20       & 3  \\
+		\hline
+		Mola          & x          & 1          & x          & 0          & 0          & 1          & 0          & x          &
+0          & 1           & 1           & 2           & 0.67       & 0.44       & 4  \\
+		\hline
+		Fujaba        & 1          & x          & 1          & 0          & 0          & 1          & 0          & 0          &
+0          & x           & 0           & x           & 0.33       & 0.22       & 5  \\
+		\hline
+		GReTL         & 0          & x          & x          & 0          & 0          & x          & 1          & 1          &
+0          & 0           & 0           & 0           & 0.30       & 0.18       & 6  \\
+		\hline
+		PETE          & -1          & 1          & 1          & 0          & x          & 0          & 0          & 0          &
+x          & 0           & 0           & 1           & 0.20       & 0.36       & 7  \\
+		\hline
+		A/J           & 0          & 1          & 0          & 0          & 0          & 0          & 0          & -1          &
+0          & 1           & 0           & 1           & 0.17       & 0.31       & 8  \\
+		\hline
+		RSDS          & 0          & 0          & x          & -1          & 0          & 1          & 0          & 0          &
+0          & 0           & 0           & 1           & 0.09       & 0.26       & 9  \\
+		\hline
+	\end{tabular}
+	\caption{Appropriateness scores (in the range -2 to 2).}
+	\label{tab:appropriateness_scores}
+\end{table}
+
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c|c|c|c|c|c|c|c||c|c||c|}
+		\hline
+		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
+		\hline
+		\hline
+		Fujaba        & 1          & x          & 1          & 1          & 1          & 1          & 1          & 1          &
+1          & x           & 0           & x           & 0.89       & 0.10       & 1  \\
+		\hline
+		GrGen         & 0          & 0          & 1          & 1          & 1          & 0          & x          & 0          &
+0          & 1           & 1           & 1           & 0.55       & 0.25       & 2  \\
+		\hline
+		\textbf{Flock}         & 0          & x          & x          & 0          & 0          & 1          & 0          & 0          &
+1          & 1           & 0           & 1           & 0.40       & 0.24       & 3  \\
+		\hline
+		Mola          & x          & 1          & x          & 0          & -1          & 1          & 0          & x          &
+1          & 0           & 0           & 1           & 0.33       & 0.44       & 4  \\
+		\hline
+		COPE          & 0          & 0          & 1          & 0          & x          & 0          & 0          & -1          &
+0          & 0           & 1           & 1           & 0.18       & 0.33       & 5  \\
+		\hline
+		PETE          & -1          & 0          & 1          & 0          & x          & 1          & 0          & -1          &
+x          & 0           & 0           & 0           & 0.00        & 0.40       & 6  \\
+		\hline
+		GReTL         & -1          & x          & x          & -1          & 0          & x          & 0          & -1          &
+0          & 0           & 0           & 0           & -0.28       & 0.23       & 7  \\
+		\hline
+		A/J           & -1          & -1          & -1          & -1          & -1          & 0          & 0          & 0          &
+0          & -1           & 0           & -1           & -0.58       & 0.24       & 8  \\
+		\hline
+		RSDS          & -1          & -1          & x          & -1          & -1          & -1          & -1          & -1          &
+-1          & -1           & 0           & 0           & -0.82       & 0.15       & 9  \\
+		\hline
+	\end{tabular}
+	\caption{Tool maturity scores (in the range -1 to 1).}
+	\label{tab:maturity_scores}
+\end{table}
+
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c|c|c|c|c|c|c|c||c|c||c|}
+		\hline
+		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
+		\hline
+		\hline
+		A/J           & 1          & 1          & 1          & 1          & 1          & 1          & 1          & 1          &
+1          & 1           & 1           & 1           & 1       & 0.00       & 1  \\
+		\hline
+		COPE          & 1          & 1          & 1          & 1          & x          & 1          & 1          & 1          &
+1          & 1           & 1           & 1           & 1       & 0.00       & 1  \\
+		\hline
+		\textbf{Flock}         & 1          & x          & x          & 1          & 1          & 1          & 1          & 1          &
+1          & 1           & 1           & 1           & 1       & 0.00       & 1  \\
+		\hline
+		Fujaba        & 1          & x          & 1          & 1          & 1          & 1          & 1          & 1          &
+1          & x           & 1           & x           & 1       & 0.00       & 1  \\
+		\hline
+		GReTL         & 1          & x          & x          & 1          & 1          & x          & 1          & 1          &
+1          & 1           & 1           & 1           & 1       & 0.00       & 1  \\
+		\hline
+		GrGen         & 1          & 1          & 1          & 1          & 1          & 1          & x          & 1          &
+1          & 1           & 1           & 1           & 1       & 0.00       & 1  \\
+		\hline
+		Mola          & x          & 1          & x          & 1          & 1          & 1          & 1          & x          &
+1          & 1           & 1           & 1           & 1       & 0.00       & 1  \\
+		\hline
+		PETE          & 1          & 1          & 1          & 1          & x          & 1          & 1          & 1          &
+x          & 1           & 1           & 1           & 1       & 0.00       & 1  \\
+		\hline
+		RSDS          & 0          & 0          & x          & 0          & 0          & 0          & 0          & 0          &
+0          & 0           & 0           & 0           & 0       & 0.00       & 9  \\
+		\hline
+	\end{tabular}
+	\caption{Reproducibility scores (in the range 0 to 1).}
+	\label{tab:reproducibility_scores}
+\end{table}
+
+
+
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c|c|c|c|c|c|c|c||c|c||c|}
+		\hline
+		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
+		\hline
+		\hline
+		\textbf{Flock}         & 2          & x          & x          & 2          & 2          & 1          & 2          & 2          &
+2          & 2           & 2           & 1           & 1.80       & 0.16       & 1  \\
+		\hline
+		Fujaba        & 1          & x          & 2          & 2          & 2          & 2          & 2          & 1          &
+1          & x           & 1           & x           & 1.56       & 0.25       & 2  \\
+		\hline
+		A/J           & 1          & 2          & 2          & 2          & 0          & 2          & 2          & 2          &
+2          & 1           & 0           & 2           & 1.50       & 0.58       & 3  \\
+		\hline
+		COPE          & 1          & 1          & 1          & 1          & x          & 1          & 1          & 1          &
+1          & 1           & 1           & 1           & 1.00       & 0.00       & 4  \\
+		\hline
+		GReTL         & 1          & x          & x          & 1          & 1          & x          & 1          & 1          &
+1          & 1           & 1           & 1           & 1.00        & 0.00       & 4  \\
+		\hline
+		GrGen         & 1          & 1          & 1          & 1          & 2          & 1          & x          & 1          &
+1          & 1           & 0           & 1           & 1.00       & 0.18       & 4  \\
+		\hline
+		PETE          & 1          & 1          & 1          & 1          & x          & 1          & 1          & 1          &
+x          & 1           & 0           & 0           & 0.80       & 0.16       & 7  \\
+		\hline
+		Mola          & x          & 0          & x          & 0          & 0          & 0          & 0          & x          &
+0          & 0           & 1           & 0           & 0.11       & 0.10       & 8  \\
+		\hline
+		RSDS          & 0          & 0          & x          & 0          & 0          & 0          & 0          & 0          &
+0          & 0           & 0           & 0           & 0.00       & 0.00       & 9  \\
+		\hline
+	\end{tabular}
+	\caption{Extensions scores (in the range 0 to 2).}
+	\label{tab:extensions_scores}
+\end{table}
+
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c|c|c|c|c|c|c|c||c|c||c|}
+		\hline
+		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
+		\hline
+		\hline
+		\textbf{Flock}         & 6          & x          & x          & 9          & 9          & 6          & 7          & 6          &
+7          & 9           & 9           & 8           & 7.60       & 1.64       & 1  \\
+		\hline
+		COPE          & 6          & 7          & 9          & 5          & x          & 7          & 3          & 3          &
+7          & 6           & 8           & 8           & 6.27       & 3.47       & 2  \\
+		\hline
+		GrGen         & 2          & 6          & 7          & 7          & 6          & 5          & x          & 5          &
+5          & 8           & 4           & 7           & 5.64       & 2.60       & 3  \\
+		\hline
+		Fujaba        & 7          & x          & 8          & 6          & 3          & 6          & 5          & 4          &
+3          & x           & 5           & x           & 5.22       & 2.62       & 4  \\
+		\hline
+		Mola          & x          & 5          & x          & -1          & 0          & 5          & 2          & x          &
+2          & 6           & 5           & 7           & 3.44       & 6.91       & 5  \\
+		\hline
+		A/J           & -1          & 3          & 5          & 3          & 1          & 5          & 4          & 3          &
+4          & 3           & 2           & 4           & 3.00       & 2.67       & 6  \\
+		\hline
+		PETE          & -2          & 4          & 7          & 4          & x          & 3          & 2          & 2          &
+x          & 4           & 3           & 2           & 2.90       & 4.69       & 7  \\
+		\hline
+		GReTL         & 0          & x          & x          & 2          & 2          & x          & 4          & x          &
+1          & 6           & 2           & 3           & 2.50       & 3.00       & 8  \\
+		\hline
+		RSDS          & -2          & 0          & x          & -4          & -2          & 0          & -2          & -3          &
+-1          & -2           & 1           & 1           & -1.27       & 2.38       & 9  \\
+		\hline
+	\end{tabular}
+	\caption{Total (equally weighted) scores (in the range -7 to 11).}
+	\label{tab:unweighted_scores}
+\end{table}
+
+\begin{table}[tbp]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c|c|c|c|c|c|c|c||c|c||c|}
+		\hline
+		\textbf{Tool} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{M} & \textbf{V} & \textbf{R} \\
+		\hline
+		\hline
+		\textbf{Flock}         & 17          & x          & x          & 28          & 28          & 20          & 20          & 17          &
+23          & 29           & 28           & 26           & 23.60       & 20.64       & 1  \\
+		\hline
+		COPE          & 17          & 22          & 31          & 16          & x          & 22          & 10          & 7          &
+22          & 21           & 26           & 26           & 20.00       & 45.45       & 2  \\
+		\hline
+		GrGen         & 5          & 19          & 25          & 23          & 20          & 16          & x          & 16          &
+16          & 28           & 12           & 23           & 18.45       & 38.07       & 3  \\
+		\hline
+		Fujaba        & 23          & x          & 28          & 20          & 9          & 20          & 17          & 14          &
+11          & x           & 16           & x           & 17.56       & 31.36       & 4  \\
+		\hline
+		Mola          & x          & 17          & x          & -6          & -2          & 17          & 7          & x          &
+8          & 21           & 16           & 23           & 11.22       & 91.51       & 5  \\
+		\hline
+		PETE          & -8          & 13          & 25          & 13          & x          & 11          & 7          & 6          &
+x          & 15           & 10           & 7           & 9.90       & 62.69       & 6  \\
+		\hline
+		A/J           & -5          & 9          & 15          & 9          & 3          & 16          & 13          & 10          &
+13          & 9           & 5           & 12           & 9.08       & 31.24       & 7  \\
+		\hline
+		GReTL         & -2          & x          & x          & 4          & 7          & x          & 11          & 9          &
+2          & 12           & 5           & 10           & 6.44       & 18.91       & 8  \\
+		\hline
+		RSDS          & -7          & 1          & x          & -15          & -7          & -1          & -7          & -10          &
+-2          & -7           & 5           & 3           & -4.27       & 32.74       & 9  \\
+		\hline
+	\end{tabular}
+	\caption{Total (weighted) scores (in the range -24 to 37).}
+	\label{tab:weighted_scores}
 \end{table}
