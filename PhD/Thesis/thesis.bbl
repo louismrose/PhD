@@ -371,6 +371,14 @@ Kelly Garc{\'e}s, Fr{\'e}d{\'e}ric Jouault, Pierre Cointe, and Jean
 \newblock In {\em Proc. ECMDA-FA}, volume 5562 of {\em LNCS}, pages 34--49.
   Springer, 2009.
 
+\bibitem[Gei{\ss} \& Kroll 2007]{grgen}{$~$}
+Rubino Gei{\ss} and Moritz Kroll.
+\newblock Grgen.net: A fast, expressive, and general purpose graph rewrite
+  tool.
+\newblock In {\em Proc. Applications of Graph Transformations with Industrial
+  Relevance (AGTIVE)}, volume 5088 of {\em Lecture Notes in Computer Science},
+  pages 568--569. Springer, 2007.
+
 \bibitem[Gosling {\it et al.}\  2005]{java}{$~$}
 James Gosling, Bill Joy, Guy Steele, and Gilad Bracha.
 \newblock {\em The Java\texttrademark\ Language Specification}.
@@ -749,6 +757,12 @@ Tien~Nhut Nguyen, Cheng Thao, and Ethan~V. Munson.
 \newblock On product versioning for hypertexts.
 \newblock In {\em Proc. International Workshop on Software Configuration
   Management (SCM)}, pages 113--132. ACM, 2005.
+
+\bibitem[Nickel {\it et al.}\  2000]{fujaba}{$~$}
+Ulrich Nickel, J{\"o}rg Niere, and Albert Z{\"u}ndorf.
+\newblock The {FUJABA} environment.
+\newblock In {\em Proc. International Conference on Software Engineering
+  (ICSE)}, pages 742--745, New York, NY, USA, 2000. ACM.
 
 \bibitem[Northrop 2006]{northrop06ulss}{$~$}
 L.~Northrop.

@@ -29,6 +29,12 @@ Repeated entry---line 1476 of file thesis.bib
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
 --line 1506 of file thesis.bib
+Warning--I'm ignoring grgen's extra "year" field
+--line 1535 of file thesis.bib
+Repeated entry---line 1538 of file thesis.bib
+ : @inproceedings{grgen
+ :                     ,
+I'm skipping whatever remains of this entry
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -86,45 +92,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 188 entries,
+You've used 190 entries,
             2472 wiz_defined-function locations,
-            1411 strings with 31479 characters,
-and the built_in function-call counts, 73282 in all, are:
-= -- 7366
-> -- 2769
-< -- 87
-+ -- 896
-- -- 852
-* -- 5170
-:= -- 11377
-add.period$ -- 610
-call.type$ -- 188
-change.case$ -- 1145
-chr.to.int$ -- 165
-cite$ -- 189
-duplicate$ -- 3378
-empty$ -- 6016
-format.name$ -- 1102
-if$ -- 15667
+            1423 strings with 31846 characters,
+and the built_in function-call counts, 74390 in all, are:
+= -- 7489
+> -- 2801
+< -- 90
++ -- 907
+- -- 862
+* -- 5250
+:= -- 11530
+add.period$ -- 618
+call.type$ -- 190
+change.case$ -- 1158
+chr.to.int$ -- 167
+cite$ -- 191
+duplicate$ -- 3433
+empty$ -- 6105
+format.name$ -- 1116
+if$ -- 15920
 int.to.chr$ -- 24
 int.to.str$ -- 0
-missing$ -- 167
-newline$ -- 944
-num.names$ -- 565
-pop$ -- 1345
+missing$ -- 169
+newline$ -- 954
+num.names$ -- 571
+pop$ -- 1359
 preamble$ -- 1
-purify$ -- 1366
+purify$ -- 1381
 quote$ -- 0
-skip$ -- 2738
+skip$ -- 2784
 stack$ -- 0
-substring$ -- 3498
-swap$ -- 966
-text.length$ -- 87
+substring$ -- 3577
+swap$ -- 991
+text.length$ -- 90
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1388
+type$ -- 1404
 warning$ -- 1
-while$ -- 581
-width$ -- 194
-write$ -- 2440
-(There were 31 error messages)
+while$ -- 591
+width$ -- 196
+write$ -- 2470
+(There were 32 error messages)
