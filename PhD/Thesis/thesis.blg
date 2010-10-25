@@ -6,7 +6,7 @@ A level-1 auxiliary file: 2.Background/background.aux
 A level-1 auxiliary file: 3.LiteratureReview/literature_review.aux
 A level-1 auxiliary file: 4.Analysis/analysis.aux
 Case mismatch error between cite keys VIATRA and viatra
----line 111 of file 4.Analysis/analysis.aux
+---line 121 of file 4.Analysis/analysis.aux
  : \citation{VIATRA
  :                 }
 I'm skipping whatever remains of this command
@@ -35,6 +35,7 @@ Repeated entry---line 1538 of file thesis.bib
  : @inproceedings{grgen
  :                     ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "ProcessOriented"
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -94,7 +95,7 @@ Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 You've used 190 entries,
             2472 wiz_defined-function locations,
-            1423 strings with 31846 characters,
+            1425 strings with 31876 characters,
 and the built_in function-call counts, 74390 in all, are:
 = -- 7489
 > -- 2801
