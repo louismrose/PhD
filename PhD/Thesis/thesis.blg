@@ -5,11 +5,6 @@ A level-1 auxiliary file: 1.Introduction/introduction.aux
 A level-1 auxiliary file: 2.Background/background.aux
 A level-1 auxiliary file: 3.LiteratureReview/literature_review.aux
 A level-1 auxiliary file: 4.Analysis/analysis.aux
-Case mismatch error between cite keys VIATRA and viatra
----line 121 of file 4.Analysis/analysis.aux
- : \citation{VIATRA
- :                 }
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: 5.Implementation/implementation.aux
 A level-1 auxiliary file: 6.Evaluation/evaluation.aux
 A level-1 auxiliary file: 7.Conclusion/conclusion.aux
@@ -19,23 +14,22 @@ A level-1 auxiliary file: A.3.MigrationStrategies/migration_strategies.aux
 A level-1 auxiliary file: A.4.TTCScores/ttc_scores.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Repeated entry---line 1454 of file thesis.bib
+Repeated entry---line 1456 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1476 of file thesis.bib
+Repeated entry---line 1478 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
---line 1506 of file thesis.bib
+--line 1508 of file thesis.bib
 Warning--I'm ignoring grgen's extra "year" field
---line 1535 of file thesis.bib
-Repeated entry---line 1538 of file thesis.bib
+--line 1537 of file thesis.bib
+Repeated entry---line 1540 of file thesis.bib
  : @inproceedings{grgen
  :                     ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "ProcessOriented"
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -93,45 +87,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 190 entries,
+You've used 189 entries,
             2472 wiz_defined-function locations,
-            1425 strings with 31876 characters,
-and the built_in function-call counts, 74390 in all, are:
-= -- 7489
-> -- 2801
+            1422 strings with 31848 characters,
+and the built_in function-call counts, 74120 in all, are:
+= -- 7462
+> -- 2793
 < -- 90
-+ -- 907
-- -- 862
-* -- 5250
-:= -- 11530
-add.period$ -- 618
-call.type$ -- 190
-change.case$ -- 1158
-chr.to.int$ -- 167
-cite$ -- 191
-duplicate$ -- 3433
-empty$ -- 6105
-format.name$ -- 1116
-if$ -- 15920
++ -- 905
+- -- 860
+* -- 5237
+:= -- 11487
+add.period$ -- 615
+call.type$ -- 189
+change.case$ -- 1153
+chr.to.int$ -- 166
+cite$ -- 190
+duplicate$ -- 3422
+empty$ -- 6079
+format.name$ -- 1113
+if$ -- 15862
 int.to.chr$ -- 24
 int.to.str$ -- 0
 missing$ -- 169
-newline$ -- 954
-num.names$ -- 571
-pop$ -- 1359
+newline$ -- 949
+num.names$ -- 568
+pop$ -- 1351
 preamble$ -- 1
-purify$ -- 1381
+purify$ -- 1375
 quote$ -- 0
-skip$ -- 2784
+skip$ -- 2772
 stack$ -- 0
-substring$ -- 3577
-swap$ -- 991
+substring$ -- 3570
+swap$ -- 989
 text.length$ -- 90
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1404
+type$ -- 1396
 warning$ -- 1
-while$ -- 591
-width$ -- 196
-write$ -- 2470
-(There were 32 error messages)
+while$ -- 589
+width$ -- 195
+write$ -- 2458
+(There were 31 error messages)

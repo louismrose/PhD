@@ -2,7 +2,7 @@
 
 \section{Evaluating Conservative Copy}
 \label{sec:quantitive}
-In contrast to the previous section, this section focuses not on \emph{user-driven} but rather on developer-driven migration, in which migration is specified in a programming language. As discussed in Chapter~\ref{Analysis}, often a model-to-model (M2M) transformation language is used to specify migration. The M2M languages typically used to specify migration vary and, in particular, use different approaches to relating source and target model elements. This section evaluates the novel source-target relationship implemented in Flock (Section~\ref{sec:flock}), \emph{conservative copy}, by comparison to \emph{new-target} and \emph{existing-target} source-target relationships, which have been used for model migration in \cite{cicchetti08automating,garces09managing}) and \cite{herrmannsdoerfer09cope,hussey06advanced}) respectively.
+In contrast to the previous section, this section focuses not on \emph{user-driven} but rather on developer-driven co-evolution, in which migration is specified in a programming language. As discussed in Chapter~\ref{Analysis}, often a model-to-model (M2M) transformation language is used to specify migration. The M2M languages typically used to specify migration vary and, in particular, use different approaches to relating source and target model elements. This section evaluates the novel source-target relationship implemented in Flock (Section~\ref{sec:flock}), \emph{conservative copy}, by comparison to \emph{new-target} and \emph{existing-target} source-target relationships, which have been used for model migration in \cite{cicchetti08automating,garces09managing}) and \cite{herrmannsdoerfer09cope,hussey06advanced}) respectively.
 
 The evaluation performed in this section aims to demonstrate that migration strategies are more concise when written with a M2M language that uses conservative copy rather than when written with a M2M language that uses new- or existing-target. Arguably, more concise migration strategies lead to increased developer productivity (because less code is written to specify migration), and, moreover, to increased understandability of migration strategies (because less code must be read to comprehend a migration strategy).
 
@@ -83,9 +83,9 @@ The assignment operator is used to copy values from the original to the migrated
 rule Person2Employee {
 	from o : Before!Person
 	to m : After!Employee (
-%\highlight%			role <- "Unknown",
-%\highlight%			id   <- o.id,
-%\highlight%			name <- o.forename + " " + o.surname
+$\highlight$			role <- "Unknown",
+$\highlight$			id   <- o.id,
+$\highlight$			name <- o.forename + " " + o.surname
 		)
 }
 \end{lstlisting}
@@ -164,42 +164,42 @@ Consider the example of metamodel-evolution shown in Figure~\ref{fig:quantitive_
 rule Nets {
 	from o : Before!Net
 	to m : After!Net (
-%\highlight%		places <- o.places,
-%\highlight%		transitions <- o.transitions
+$\highlight$		places <- o.places,
+$\highlight$		transitions <- o.transitions
 	)
 }
 
 rule Places {
 	from o : Before!Place
 	to m : After!Place (
-%\highlight%		name <- o.name
+$\highlight$		name <- o.name
 	)
 }
 
 rule Transitions {
 	from o : Before!Transition
 	to m : After!Transition (
-%\highlight%			name <- o.name,
-%\highlight%			"in" <- o.src->collect(p | thisModule.PTArcs(p,o)),
-%\highlight%			out  <- o.dst->collect(p | thisModule.TPArcs(o,p))
+$\highlight$			name <- o.name,
+$\highlight$			"in" <- o.src->collect(p | thisModule.PTArcs(p,o)),
+$\highlight$			out  <- o.dst->collect(p | thisModule.TPArcs(o,p))
 		)
 }
 
 lazy rule PTArcs {
 	from place : Before!Place, destination : Before!Transition
 	to ptarcs : After!PTArc (
-%\highlight%			src <- place,
-%\highlight%			dst <- destination,
-%\highlight%			net <- destination.net
+$\highlight$			src <- place,
+$\highlight$			dst <- destination,
+$\highlight$			net <- destination.net
 		)
 }
 
 lazy rule TPArcs {
 	from transition  : Before!Transition, destination : Before!Place
 	to tparcs : After!TPArc (
-%\highlight%			src <- transition,
-%\highlight%			dst <- destination,
-%\highlight%			net <- transition.net
+$\highlight$			src <- transition,
+$\highlight$			dst <- destination,
+$\highlight$			net <- transition.net
 		)
 }
 \end{lstlisting}
@@ -207,24 +207,24 @@ lazy rule TPArcs {
 
 \begin{lstlisting}[float=tbp, caption=The Petri nets model migration in Groovy-for-COPE, label=lst:petri_nets_cope, language=COPE]
 for (transition in Transition.allInstances) {
-%\highlight%  for (source in transition.unset('src')) {
+$\highlight$  for (source in transition.unset('src')) {
     def arc = petrinets.PTArc.newInstance()
-%\highlight%    arc.src = source;
-%\highlight%		arc.dst = transition;
-%\highlight%    arc.net = transition.net
+$\highlight$    arc.src = source;
+$\highlight$		arc.dst = transition;
+$\highlight$    arc.net = transition.net
   }
 
-%\highlight%  for (destination in transition.unset('dst')) {
+$\highlight$  for (destination in transition.unset('dst')) {
     def arc = petrinets.TPArc.newInstance() 
-%\highlight%    arc.src = transition;
-%\highlight%		arc.dst = destination;
-%\highlight%    arc.net = transition.net
+$\highlight$    arc.src = transition;
+$\highlight$		arc.dst = destination;
+$\highlight$    arc.net = transition.net
   }
 }
 
 for (place in Place.allInstances) {
-%\highlight%  place.unset('src');
-%\highlight%  place.unset('dst');
+$\highlight$  place.unset('src');
+$\highlight$  place.unset('dst');
 }
 \end{lstlisting}
 
@@ -232,16 +232,16 @@ for (place in Place.allInstances) {
 migrate Transition {
   for (source in original.src) {
     var arc := new Migrated!PTArc;
-%\highlight%    arc.src := source.equivalent();
-%\highlight%    arc.dst := migrated;
-%\highlight%    arc.net := original.net.equivalent();
+$\highlight$    arc.src := source.equivalent();
+$\highlight$    arc.dst := migrated;
+$\highlight$    arc.net := original.net.equivalent();
   }
 
   for (destination in original.dst) {
     var arc := new Migrated!TPArc;
-%\highlight%    arc.src := migrated;
-%\highlight%    arc.dst := destination.equivalent();
-%\highlight%    arc.net := original.net.equivalent();
+$\highlight$    arc.src := migrated;
+$\highlight$    arc.dst := destination.equivalent();
+$\highlight$    arc.net := original.net.equivalent();
   }
 }
 \end{lstlisting}
@@ -338,11 +338,11 @@ This result can be explained by considering how new-target differs from exiting-
 rule Canvas2Canvas {
   from o : Before!Canvas
   to m : After!Canvas (
-%\highlight%    figures <- o.figures,
-%\highlight%    nodes <- o.nodes,
-%\highlight%    connections <- o.connections,
-%\highlight%    compartments <- o.compartments,
-%\highlight%    labels <- o.labels
+$\highlight$    figures <- o.figures,
+$\highlight$    nodes <- o.nodes,
+$\highlight$    connections <- o.connections,
+$\highlight$    compartments <- o.compartments,
+$\highlight$    labels <- o.labels
   )
 }
 \end{lstlisting}
@@ -388,7 +388,7 @@ In ATL (Listing~\ref{lst:graph_atl}), the GMF Graph migration strategy was expre
 abstract rule DiagramElements {
 	from o : Before!DiagramElement
   to   m : After!DiagramElement (
-%\highlight% 		figure <- o.figure.length()
+$\highlight$ 		figure <- o.figure.length()
 	)
 }
 
@@ -410,7 +410,7 @@ rule Compartments extends DiagramElements {
 rule DiagramLabels extends Nodes {
 	from o : Before!DiagramLabel
   to   m : After!DiagramLabel (
-%\highlight%		accessor <- o.accessor.length()
+$\highlight$		accessor <- o.accessor.length()
 	)
 }
 \end{lstlisting}
@@ -419,10 +419,10 @@ In Groovy-for-COPE (Listing~\ref{lst:graph_cope}), the migration is similar to A
 
 \begin{lstlisting}[float=tbp, caption=Simplified GMF Graph model migration in COPE, label=lst:graph_cope, language=COPE, tabsize=2]
 for (diagramElement in DiagramElement.allInstances()) {
-%\highlight%	diagramElement.figure = diagramElement.figure.length()
+$\highlight$	diagramElement.figure = diagramElement.figure.length()
 	
 	if (DiagramLabel.allInstances.contains(diagramElement)) {
-%\highlight%		diagramElement.accessor = diagramElement.accessor.length()
+$\highlight$		diagramElement.accessor = diagramElement.accessor.length()
 	}
 }
 \end{lstlisting}
@@ -431,20 +431,20 @@ In both ATL and Groovy-for-COPE, only 2 model operations are required for this m
 
 \begin{lstlisting}[float=tbp, caption=Simplified GMF Graph model migration in Flock, label=lst:graph_flock, language=Flock, tabsize=2]
 migrate Compartment {
-%\highlight%	migrated.figure := original.figure.length();
+$\highlight$	migrated.figure := original.figure.length();
 }
 
 migrate Connection {
-%\highlight%	migrated.figure := original.figure.length();
+$\highlight$	migrated.figure := original.figure.length();
 }
 
 migrate DiagramLabel {
-%\highlight%	migrated.figure   := original.figure.length();
-%\highlight%	migrated.accessor := original.accessor.length();
+$\highlight$	migrated.figure   := original.figure.length();
+$\highlight$	migrated.accessor := original.accessor.length();
 }
 
 migrate Node {
-%\highlight%	migrated.figure := original.figure.length();
+$\highlight$	migrated.figure := original.figure.length();
 }
 \end{lstlisting}
 
@@ -479,21 +479,21 @@ Listing~\ref{lst:ref2cont_atl} shows the migration strategy using new-target in 
 rule Systems {
 	from o : Before!System
 	to m : After!System (
-%\highlight%		signatures <- o.signatures
+$\highlight$		signatures <- o.signatures
 	)
 }
 
 rule Signatures {
 	from o : Before!Signature
 	to m : After!Signature (
-%\highlight%		ports <- o.ports->collect(p | thisModule.Ports(p))
+$\highlight$		ports <- o.ports->collect(p | thisModule.Ports(p))
 	)
 }
 
 lazy rule Ports {
 	from o : Before!Port
 	to m : After!Port (
-%\highlight%		name <- o.name
+$\highlight$		name <- o.name
 	)
 \end{lstlisting}
 
@@ -512,18 +512,18 @@ In existing-target and conservative copy migration languages, migration is less 
 % 	  // when more than one Signature references this port
 % 	  if (contained.contains(port)) {
 %       def clone = Port.newInstance()
-% %\highlight%      clone.name = port.name
-% %\highlight%      signature.ports.add(clone)
-% %\highlight%      signature.ports.remove(port)
+% $\highlight$      clone.name = port.name
+% $\highlight$      signature.ports.add(clone)
+% $\highlight$      signature.ports.remove(port)
 % 		} else {
-% %\highlight%			contained.add(port)
+% $\highlight$			contained.add(port)
 % 		}
 %   }
 % }
 % 
 % for(port in refactorings_changeRefToCont.Port.allInstances) {
 % 	if (not refactorings_changeRefToCont.Signature.allInstances.any { it.ports.contains(port) }) {
-% %\highlight%	  	port.delete()
+% $\highlight$	  	port.delete()
 % 	}
 % }
 % \end{lstlisting}
@@ -535,13 +535,13 @@ migrate Signature {
 	for (port in original.ports) {
 		if (migrated.ports.excludes(port.equivalent())) {
 			var clone := new Migrated!Port;
-%\highlight%			clone.name := port.name;
-%\highlight%			migrated.ports.add(clone);
+$\highlight$			clone.name := port.name;
+$\highlight$			migrated.ports.add(clone);
 		}
 	}
 }
 
-%\highlight%delete Port when:
+$\highlight$delete Port when:
 	not Original!Signature.all.exists(s|s.ports.includes(original))
 \end{lstlisting}
 

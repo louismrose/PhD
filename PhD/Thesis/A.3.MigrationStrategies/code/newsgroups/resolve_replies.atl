@@ -7,7 +7,7 @@ rule Newsgroups {
 		o : Before!Newsgroup
 	to
 		m : After!Newsgroup (
-%\highlight%			articles <- o.articles
+$\highlight$			articles <- o.articles
 		)
 }
 
@@ -16,16 +16,16 @@ rule Articles {
 		o : Before!Article
 	to
 		m : After!Article (
-%\highlight%			articleId   <- o.articleId,
-%\highlight%			subject     <- o.subject,
-%\highlight%			newsgroups  <- o.newsgroups,
-%\highlight%			inReplyToId <- o.inReplyTo,
-%\highlight%			date        <- o.date,
-%\highlight%			sender      <- o.sender
+$\highlight$			articleId   <- o.articleId,
+$\highlight$			subject     <- o.subject,
+$\highlight$			newsgroups  <- o.newsgroups,
+$\highlight$			inReplyToId <- o.inReplyTo,
+$\highlight$			date        <- o.date,
+$\highlight$			sender      <- o.sender
 		)
 	do {
 		if (not o.inReplyTo.oclIsUndefined() and After!Article.allInstances()->exists(a|a.articleId = o.inReplyTo)) {
-%\highlight%			After!Article.allInstances()->select(a|a.articleId = o.inReplyTo)->first().replies <- m;
+$\highlight$			After!Article.allInstances()->select(a|a.articleId = o.inReplyTo)->first().replies <- m;
 		}
 	}
 }

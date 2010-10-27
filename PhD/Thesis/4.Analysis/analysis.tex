@@ -156,7 +156,7 @@ The examples of metamodel evolution based on Fowler's refactorings provided addi
 However, object-oriented refactorings are used to improve the maintainability of existing systems. In other words, they represent only one of the three reasons for evolutionary change defined by \cite{sjoberg93quantifying}. The two other types of change -- for addressing new requirements and facilitating interoperability with other systems -- are equally relevant for deriving research requirements, and so object-oriented refactorings alone are not sufficient for reasoning about metamodel evolution.
 
 \subsubsection{Research collaborations}
-As well as the example data located from object-oriented system, collaboration on projects using MDE with two colleagues provided several examples of evolution. A graphical editor for process-oriented programs was developed with Adam Sampson, then a Research Associate at the University of Kent, and is described in Appendix~\cite{ProcessOriented}. Additionally, the feasibility of a tool for generating story-worlds for interactive narratives was investigated with Heather Barber, then a postdoctoral researcher in this department.
+As well as the example data located from object-oriented system, collaboration on projects using MDE with two colleagues provided several examples of evolution. A graphical editor for process-oriented programs was developed with Adam Sampson, then a Research Associate at the University of Kent, and is described in Appendix~\ref{ProcessOriented}. Additionally, the feasibility of a tool for generating story-worlds for interactive narratives was investigated with Heather Barber, then a postdoctoral researcher in this department.
 
 In both cases, a metamodel was constructed for describing concepts in the domain. The metamodels were developed incrementally and changed over time. The collaborations with Sampson and Barber did not involve constructing model-to-model transformations, but did provide data suitable for a study of co-evolution.
 
@@ -281,7 +281,7 @@ The following example was observed during the development of the Epsilon FPTC to
 	}
 	\subfigure[Evolved metamodel with Connection metaclass]
 	{
-	    \label{fig:emf_refactor_rhs}
+	    \label{fig:mm_after}
 	    \includegraphics[scale=0.75]{4.Analysis/fptc_after.pdf}
 	}
 	\caption[Metamodel evolution in the Epsilon FPTC tool]{Metamodel evolution in the Epsilon FPTC tool. Taken from \cite{rose09analysis}.}
@@ -349,7 +349,7 @@ Manual specification affords the metamodel developer more flexibility in the spe
 \label{sec:requirements_identification}
 % The analysis of existing techniques will lead to requirements for our research. We will conclude the chapter by enumerating these requirements, refining the high-level research objectives from the literature review chapter into lower-level research objectives.
 
-The analysis presented throughout this chapter has highlighted a number of challenges for identifying and managing model-metamodel co-evolution. Several factors affect and restrict the way in which co-evolution is performed in practice. The way in which modelling frameworks are implemented affect the ways in which the impact analysis and propagation of metamodel changes can be performed. Existing co-evolution approaches are developer-driven rather than user-driven (i.e. assume that the metamodel developer will provide a migration strategy), which was not the case for several of the examples identified in Section~\ref{sec:locating_date}. Additionally, the languages used to specify model migration vary over existing co-evolution approaches, which inhibits the conceptual and practical re-use of model migration patterns. This section contributes requirements for structures and processes that seek to address these challenges.
+The analysis presented throughout this chapter has highlighted a number of challenges for identifying and managing model-metamodel co-evolution. Several factors affect and restrict the way in which co-evolution is performed in practice. The way in which modelling frameworks are implemented affect the ways in which the impact analysis and propagation of metamodel changes can be performed. Existing co-evolution approaches are developer-driven rather than user-driven (i.e. assume that the metamodel developer will provide a migration strategy), which was not the case for several of the examples identified in Section~\ref{sec:locating_data}. Additionally, the languages used to specify model migration vary over existing co-evolution approaches, which inhibits the conceptual and practical re-use of model migration patterns. This section contributes requirements for structures and processes that seek to address these challenges.
 
 Below, the thesis requirements are presented in three parts. The first identifies requirements that seek to extend and enhance support for managing model and metamodel co-evolution with modelling frameworks. The second summarises and identifies requirements for enhancing the user-driven co-evolution process discussed in Section~\ref{subsec:user-driven_co-evolution}. Finally, the third identifies requirements that seek to improve the spectrum of existing developer-driven co-evolution techniques.
 

@@ -4,16 +4,24 @@
 \addvspace {10pt}
 \contentsline {table}{\numberline {4.1}{\ignorespaces Candidates for study of evolution in existing MDE projects}}{71}
 \addvspace {10pt}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Properties of model migration approaches}}{124}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Properties of model migration approaches}}{129}
 \addvspace {10pt}
-\contentsline {table}{\numberline {6.1}{\ignorespaces Model operation frequency (analysis examples).}}{151}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Model operation frequency (evaluation examples).}}{151}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Summary of comparison criteria.}}{165}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Summary of tool selection advice}}{174}
-\contentsline {table}{\numberline {6.5}{\ignorespaces TTC scores for Epsilon Flock (unweighted).}}{188}
-\addvspace {10pt}
-\addvspace {10pt}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Model operation frequency (analysis examples).}}{157}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Model operation frequency (evaluation examples).}}{157}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Summary of comparison criteria.}}{171}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Summary of tool selection advice}}{180}
+\contentsline {table}{\numberline {6.5}{\ignorespaces TTC scores for Epsilon Flock (unweighted).}}{194}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {D.1}{\ignorespaces TTC scores for Epsilon Flock (unweighted).}}{277}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {table}{\numberline {D.1}{\ignorespaces Correctness scores (in the range -1 to 2).}}{284}
+\contentsline {table}{\numberline {D.2}{\ignorespaces Conciseness scores (in the range -2 to 2).}}{284}
+\contentsline {table}{\numberline {D.3}{\ignorespaces Clarity scores (in the range -1 to 1).}}{285}
+\contentsline {table}{\numberline {D.4}{\ignorespaces Appropriateness scores (in the range -2 to 2).}}{285}
+\contentsline {table}{\numberline {D.5}{\ignorespaces Tool maturity scores (in the range -1 to 1).}}{286}
+\contentsline {table}{\numberline {D.6}{\ignorespaces Reproducibility scores (in the range 0 to 1).}}{286}
+\contentsline {table}{\numberline {D.7}{\ignorespaces Extensions scores (in the range 0 to 2).}}{287}
+\contentsline {table}{\numberline {D.8}{\ignorespaces Total (equally weighted) scores (in the range -7 to 11).}}{287}
+\contentsline {table}{\numberline {D.9}{\ignorespaces Total (weighted) scores (in the range -24 to 37).}}{288}

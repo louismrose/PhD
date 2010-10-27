@@ -7,13 +7,13 @@ rule ActivityGraph {
 		o : Before!ActivityGraph
 	to
 		p : After!Package (
-%\highlight%			packagedElement <- m
+$\highlight$			packagedElement <- m
 		),
 		m : After!Activity (
-%\highlight%			name <- o.name,
-%\highlight%			node <- o.top.subvertex,
-%\highlight%			edge <- o.transitions,
-%\highlight%			group <- o.partition
+$\highlight$			name <- o.name,
+$\highlight$			node <- o.top.subvertex,
+$\highlight$			edge <- o.transitions,
+$\highlight$			group <- o.partition
 		)
 }
 
@@ -22,9 +22,9 @@ rule Partitions {
 		o : Before!Partition
 	to
 		p : After!ActivityPartition (
-%\highlight%			name <- o.name,
-%\highlight%			edge <- o.contents->select(c|c.oclIsKindOf(Before!Transition)),
-%\highlight%			node <- o.contents->reject(c|c.oclIsKindOf(Before!ObjectFlowState))
+$\highlight$			name <- o.name,
+$\highlight$			edge <- o.contents->select(c|c.oclIsKindOf(Before!Transition)),
+$\highlight$			node <- o.contents->reject(c|c.oclIsKindOf(Before!ObjectFlowState))
 		)
 }
 
@@ -33,7 +33,7 @@ rule ActionState2OpaqueAction {
 		o : Before!ActionState
 	to
 		p : After!OpaqueAction (
-%\highlight%			name <- o.name
+$\highlight$			name <- o.name
 		)
 }
 
@@ -87,8 +87,8 @@ rule ObjectFlows {
 		)
 	to
 		p : After!ObjectFlow (
-%\highlight%			source <- o.source,
-%\highlight%			target <- o.target.outgoing->first().target
+$\highlight$			source <- o.source,
+$\highlight$			target <- o.target.outgoing->first().target
 		)
 }
 
@@ -100,9 +100,9 @@ rule ControlFlows {
 		)
 	to
 		p : After!ControlFlow (
-%\highlight%			guard <- o.guard,
-%\highlight%			source <- o.source,
-%\highlight%			target <- o.target
+$\highlight$			guard <- o.guard,
+$\highlight$			source <- o.source,
+$\highlight$			target <- o.target
 		)
 }
 
@@ -111,6 +111,6 @@ rule Guards {
 		o : Before!Guard
 	to
 		p : After!OpaqueExpression (
-%\highlight%			body <- o.expression.body
+$\highlight$			body <- o.expression.body
 		)
 }

@@ -1,15 +1,15 @@
 migrate Model to Package {
-%\highlight%	migrated.packagedElement := original.ownedElement.equivalent();
+$\highlight$	migrated.packagedElement := original.ownedElement.equivalent();
 }
 
 migrate ActivityGraph to Activity {
-%\highlight%	migrated.node := original.top.subvertex.equivalent();
-%\highlight%	migrated.edge := original.transitions.equivalent();
+$\highlight$	migrated.node := original.top.subvertex.equivalent();
+$\highlight$	migrated.edge := original.transitions.equivalent();
 }
 
 migrate Partition to ActivityPartition {
-%\highlight%	migrated.edges := original.contents.collect(e : Transition | e.equivalent());
-%\highlight%	migrated.nodes := original.contents.reject(ofs : ObjectFlowState | true).collect(n : StateVertex | n.equivalent());	
+$\highlight$	migrated.edges := original.contents.collect(e : Transition | e.equivalent());
+$\highlight$	migrated.nodes := original.contents.reject(ofs : ObjectFlowState | true).collect(n : StateVertex | n.equivalent());	
 }
 
 migrate ActionState to OpaqueAction
@@ -22,12 +22,12 @@ migrate Pseudostate to JoinNode     when: original.kind.toString() = 'pk_join'
 migrate FinalState to ActivityFinalNode
 
 migrate Transition to ObjectFlow when: original.target.isTypeOf(ObjectFlowState) {
-%\highlight%	migrated.source := original.source.equivalent();
-%\highlight%	migrated.target := original.target.outgoing.first.target.equivalent();
+$\highlight$	migrated.source := original.source.equivalent();
+$\highlight$	migrated.target := original.target.outgoing.first.target.equivalent();
 }
 
 migrate Transition to ControlFlow
 
 migrate Guard to OpaqueExpression {
-%\highlight%	migrated.body.add(original.expression.body);
+$\highlight$	migrated.body.add(original.expression.body);
 }

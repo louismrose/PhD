@@ -2,21 +2,19 @@
 
 \section{Textual Modelling Notation}
 \label{sec:notation}
-% The Human-Usable Textual Notation is an OMG standard textual concrete syntax for the MOF metamodelling architecture. The notation is metamodel-independent -- it can be used with any model that conforms to any MOF-based metamodel. HUTN provides a human-usable means for visualising and specifying models, even when those models are inconsistent with their metamodel.
-The analysis of co-evolution examples in Chapter~\ref{Analysis} highlighted two categories of process for managing co-evolution, developer-driven and user-driven. In the former, migration strategies are executable, while in the latter they are not. Performing user-driven co-evolution with modelling frameworks presents two key challenges that have not been explored by existing research. Firstly, user-driven co-evolution frequently involves editing the storage representation of the model, such as XMI. Model storage representations are typically not optimised for human use and hence user-driven co-evolution can be error-prone. Secondly, non-conformant model elements must be identified during user-driven co-evolution. When a multi-pass parser is used to load models, as is the case with EMF, not all conformance problems are reported at once, and user-driven co-evolution is an iterative process. In Section~\ref{sec:requirements_identification}, these challenges lead to the identification of the following requirement: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a sound and complete conformance report for the original model and evolved metamodel.}
+The analysis of co-evolution examples in Chapter~\ref{Analysis} highlighted two ways in which co-evolution is managed. In \emph{developer-driven} co-evolution, migration is specified by the metamodel developer in an executable format; while in \emph{user-driven co-evolution} migration is specified by the metamodel developer in prose or not at all. Performing user-driven co-evolution with modelling frameworks presents two key challenges that have not been explored by existing research. Firstly, user-driven co-evolution frequently involves editing the storage representation of the model, such as XMI. Model storage representations are typically not optimised for human use and hence user-driven co-evolution can be error-prone. Secondly, non-conformant model elements must be identified during user-driven co-evolution. When a multi-pass parser is used to load models, as is the case with EMF, not all conformance problems are reported at once, and user-driven co-evolution is an iterative process. In Section~\ref{sec:requirements_identification}, these challenges lead to the identification of the following requirement: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a sound and complete conformance report for the original model and evolved metamodel.}
 
 The remainder of this section describes a textual notation for models, which has been implemented for EMF, and discusses the way in which the notation has been integrated with the metamodel independent syntax described in Section~\ref{sec:mmi_syntax} to produce conformance reports. 
 
 
 \subsection{Human-Usable Textual Notation}
 \label{subsec:hutn}
-The OMG's Human-Usable Textual Notation (HUTN) \cite{hutn} defines a textual modelling notation, which aims to conform to human-usability criteria \cite{hutn}. There is no current reference implementation of HUTN: the Distributed Systems Technology Centre's TokTok project (an implementation of the HUTN specification) is inactive (and the source code can no longer be found), whilst work on implementing the HUTN specification by Muller and Hassenforder \cite{muller05hutn} has been abandoned in favour of Sintaks \cite{sintaks}, which operates on domain-specific concrete syntax.
+The OMG's Human-Usable Textual Notation (HUTN) \cite{hutn} defines a textual modelling notation, which aims to conform to human-usability criteria \cite{hutn}. There is no current reference implementation of HUTN: the Distributed Systems Technology Centre's TokTok project (an implementation of the HUTN specification) is inactive (and the source code can no longer be found), whilst implementation of HUTN described in \cite{muller05hutn} has been abandoned in favour of Sintaks\footnote{\url{http://www.kermeta.org/sintaks/}}, which operates on domain-specific concrete syntax.
 
-Model storage representations are often optimised to reduce storage space or to increase the speed of random access, rather than for human usability. By contrast, the HUTN specification states its primary design goal as human-usability and ``this is achieved through consideration of the successes and failures of common programming languages'' \cite[Section 2.2]{hutn}. The HUTN specification refers to two studies of programming language usability to justify design decisions. Because no reference implementation exists, the specification does not evaluate the human-usability of the notation. This thesis proposes that HUTN be used instead of XMI for user-driven co-evolution. Further discussion of the human-usability of HUTN is deferred to Chapter~\ref{Evaluation}.
+Model storage representations are often optimised for reducing storage space or increasing the speed of random access, rather than for human usability. By contrast, the HUTN specification states its primary design goal as human-usability and ``this is achieved through consideration of the successes and failures of common programming languages'' \cite[Section 2.2]{hutn}. The HUTN specification refers to two studies of programming language usability to justify design decisions, but, because no reference implementation exists, the specification does not evaluate the human-usability of the notation. As HUTN is optimised for human-usability, using HUTN rather than XMI for user-driven co-evolution might lead to increased developer productivity. This claim is explored in Chapter~\ref{Evaluation}.
 
 Like the generic metamodel presented in Section~\ref{sec:mmi_syntax}, HUTN is a metamodel-independent syntax for 
-MOF. In this section, the core syntax and key features of HUTN are introduced. The complete definition is available
-in \cite{hutn}. To illustrate usage of the notation, the MOF-based metamodel of families in Figure \ref{fig:example-mm} is used. (A nuclear family ``consists only of a father, a mother, and children.'' \cite{nucleardef}).
+MOF. However, the HUTN specification focuses on concrete syntax, whereas the metamodel-independent syntax presented in Section~\ref{sec:mmi_syntax} focuses on abstract syntax. In this section, the key features of HUTN are introduced, and the sequel introduces a reference implementation of HUTN. To illustrate the notation, the MOF-based metamodel of families in Figure \ref{fig:example-mm} is used. The \texttt{nu\-cl\-e\-ar} attribute on the \texttt{Fa\-mi\-ly} class is used to indicate that the family ``comprises only a father, a mother, and children.'' \cite{nucleardef}.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -29,7 +27,7 @@ in \cite{hutn}. To illustrate usage of the notation, the MOF-based metamodel of 
 
 
 \subsubsection{Basic Notation}
-Listing \ref{lst:attributes} shows the construction of an \emph{object} in HUTN, here an instance of the Family class from Figure \ref{fig:example-mm}. Line 1 specifies the package containing the classes to be constructed (\texttt{FamilyPackage}) and a corresponding identifier (\texttt{families}), used for fully-qualifying references to objects (Section \ref{subsubsec:inter-package_references}). Line 2 names the class (\texttt{Family}) and gives an identifier for the object (\texttt{The Smiths}). Lines 3 to 7 define \emph{attribute values}; in each case, the data value is assigned to the attribute with the specified name. The encoding of the value depends on its type: strings are delimited by any form of quotation mark; multi-valued attributes use comma separators, etc.
+Listing \ref{lst:attributes} shows the construction of an \emph{object} in HUTN, here an instance of the Family class from Figure \ref{fig:example-mm}. Line 1 specifies the package containing the classes to be constructed (\texttt{FamilyPackage}) and a corresponding identifier (\texttt{families}), used in fully-qualified references to objects (Section \ref{subsubsec:inter-package_references}). Line 2 names the class (\texttt{Family}) and gives an identifier for the object (\texttt{The Smiths}). Lines 3 to 7 define \emph{attribute values}; in each case, the data value is assigned to the attribute with the specified name. The encoding of the value depends on its type: strings are delimited by any form of quotation mark; multi-valued attributes use comma separators, etc.
 
 The metamodel in Figure \ref{fig:example-mm} defines a \emph{simple reference} (familyFriends) and two \emph{containment references} (adoptedChildren; naturalChildren). The HUTN representation embeds a contained object directly in the parent object, as shown in Listing \ref{lst:containment}. A simple reference can be specified using the type and identifier of the referred object, as shown in Listing \ref{lst:non-contained}. Like attribute values, both styles of reference are preceded by the name of the meta-feature.
 
@@ -100,7 +98,7 @@ VehiclePackage "vehicles" {
 
 To reference objects between separate package instances in the same document, the package identifier is used to construct a fully-qualified name. Suppose a second package is introduced to the metamodel in Figure \ref{fig:example-mm}. Among other concepts, this package introduces a Vehicle class, which defines an owner reference of type Family. Listing \ref{lst:fullyqualified} illustrates the way in which the owner feature can be populated. Note that the fully-qualified form of the class utilises the names of elements of the metamodel, while the fully-qualified form of the object utilises only HUTN identifiers defined in the current document.
 
-The HUTN specification defines name scope optimisation rules, which allow the definition above to be simplified to: \texttt{owner: Family "The Smiths"}, assuming that the VehiclePackage does not define a Family class, and that the identifier ``The Smiths'' is not used in the VehiclePackage block, or this HUTN document is configured to require unique identifiers over the entire document.
+The HUTN specification defines name scope optimisation rules, which allow the definition above to be simplified to: \texttt{owner: Family "The Smiths"}, assuming that the VehiclePackage does not define a Family class, and that the identifier ``The Smiths'' is not used in the VehiclePackage block.
 
 
 \subsubsection{Alternative Reference Syntax}
@@ -136,15 +134,15 @@ The reference block (Listing~\ref{lst:assocblock}) and infix (Listing~\ref{lst:a
 
 
 \subsubsection{Customisation via Configuration}
-Some limited customisation of HUTN for particular metamodels can be achieved using \emph{configuration files}. Customisations permitted include a parametric form of object instantiation (not yet implemented); renaming of metamodel elements; giving default values for attributes; and stating an attribute whose values are used to infer a default identifier.
+Some limited customisation of HUTN for particular metamodels can be achieved using \emph{configuration files}. Customisations permitted include a parametric form of object instantiation; renaming of metamodel elements; specifying the default value of a feature; and providing a default identifier for classes of object.
 
 
 \subsection{Epsilon HUTN}
 \label{subsec:epsilon_hutn}
-To investigate the extent to which HUTN can be used during user-driven co-evolution, an implementation, Epsilon HUTN, was constructed. This section describes the way in which Epsilon HUTN was implemented using a combination of model-management operations. From text conforming to the HUTN syntax (described above), Epsilon HUTN produces an equivalent model that can be managed with the Eclipse Modeling Framework \cite{steinberg09emf}. The sequel demonstrates the way in which Epsilon HUTN can be used for user-driven co-evolution.
+To investigate the extent to which HUTN can be used during user-driven co-evolution, an implementation, Epsilon HUTN, was constructed. This section describes the way in which Epsilon HUTN was implemented using a combination of model-management operations. From text conforming to the HUTN syntax (described above), Epsilon HUTN produces an equivalent model that can be managed with the Eclipse Modeling Framework (EMF) \cite{steinberg09emf}. The sequel demonstrates the way in which Epsilon HUTN can be used for user-driven co-evolution.
 
 \subsubsection{Implementation of Epsilon HUTN}
-Epsilon HUTN, makes extensive use of the Epsilon model management platform, which was introduced in Section~\ref{subsec:epsilon}. Epsilon provides infrastructure for implementing uniform and interoperable model management languages, for performing tasks such as model merging, model transformation and inter-model consistency checking. Epsilon HUTN is implemented using the model-to-model transformation, model-to-text transformation and model validation languages of Epsilon. Although any languages for model-to-model transformation 
+Epsilon HUTN, makes extensive use of the Epsilon model management platform, which was introduced in Section~\ref{subsec:epsilon}. Epsilon provides infrastructure for implementing uniform and interoperable model management languages, for performing tasks such as model merging, model transformation and inter-model consistency checking. Epsilon HUTN is implemented using the model-to-model transformation (ETL), model-to-text transformation (EGL) and model validation (EVL) languages of Epsilon. Although any languages for model-to-model transformation 
 (M2M), model-to-text transformation (M2T) and model validation could have been used, Epsilon's existing domain-specific languages are tightly integrated and inter-operable, making it feasible to chain model management operations together to implement Epsilon HUTN.
 
 \begin{figure}[htbp]
@@ -156,7 +154,7 @@ Epsilon HUTN, makes extensive use of the Epsilon model management platform, whic
   \label{fig:architecture}
 \end{figure}
 
-Figure \ref{fig:architecture} outlines the workflow through Epsilon HUTN, from HUTN source text to instantiated target model. The HUTN model specification is parsed to an abstract syntax tree using a HUTN parser specified in ANTLR \cite{parr07antlr}. From this, a Java postprocessor is used to construct an instance of a simple AST metamodel (which comprises two meta-classes, Tree and Node). Using ETL, M2M transformations are then applied to produce an instance of the generic metamodel discussed in Section~\ref{sec:mmi_syntax}. Finally, a M2T transformation on the target metamodel, specified in EGL, produces a further M2M transformation, from the generic metamodel to the target model.
+Figure \ref{fig:architecture} outlines the workflow through Epsilon HUTN, from HUTN source text to instantiated target model. The HUTN model specification is parsed to an abstract syntax tree using a HUTN parser specified in ANTLR \cite{parr07antlr}. From this, a Java postprocessor is used to construct an instance of a simple AST metamodel (which comprises two meta-classes, Tree and Node). Using ETL, M2M transformations are then applied to produce an intermediate model, which is an instance of the generic metamodel discussed in Section~\ref{sec:mmi_syntax}. Finally, a M2T transformation on the target metamodel, specified in EGL, produces a further M2M transformation, which consumes the intermediate model and produces the target model.
 
 The workflow uses an extension of the generic metamodel defined in Section~\ref{sec:mmi_syntax}. Because the HUTN specification allows the use of packages, an extra element, \texttt{PackageObject}, was added to the generic metamodel. A \texttt{PackageObject} has a type, an optional identifier and contains any number of \texttt{Object}s. To avoid confusion with \texttt{PackageObjects}, the \texttt{Object} class in the generic metamodel was renamed to \texttt{ClassObject}.
 
@@ -165,7 +163,7 @@ Using two M2M transformation stages with the (extended) generic metamodel as an 
 Throughout the remainder of this section, instances of the generic metamodel producing during the execution of the HUTN workflow are termed an \textit{intermediate model}. The two M2M transformations are now discussed in depth, along with a model validation phase which is performed prior to the second transformation.
 
 \paragraph{AST Model to Intermediate Model}
-Epsilon HUTN uses ETL for specifying M2M transformation. One of the transformation rules from Epsilon HUTN is shown in Listing \ref{lst:m2m}. The rule transforms a name node in the AST model (which could represent a package or a class object) to a package object in the intermediate model. The guard (line 5) specifies that a name node will only be transformed to a package object if the node has no parent (i.e. it is a top-level node, and hence a package rather than a class). The body of the rule states that the type, line number and column number of the package are determined from the text, line and column attributes of the node object. On line 11, a containment slot is instantiated to hold the children of this package object. The children of the node object are transformed to the intermediate model (using a built-in method, \verb|equivalent()|), and added to the containment slot.
+Epsilon HUTN uses ETL \cite{kolovos08etl} for specifying M2M transformation. One of the transformation rules from Epsilon HUTN is shown in Listing \ref{lst:m2m}. The rule transforms a name node in the AST model (which could represent a package or a class object) to a package object in the intermediate model. The guard (line 5) specifies that a name node will only be transformed to a package object if the node has no parent (i.e. it is a top-level node, and hence a package rather than a class). The body of the rule states that the type, line number and column number of the package are determined from the text, line and column attributes of the node object. On line 11, a containment slot is instantiated to hold the children of this package object. The children of the node object are transformed to the intermediate model (using a built-in method, \verb|equivalent()|), and added to the containment slot.
 
 \begin{lstlisting}[caption=Transformation rule (in ETL) to convert AST nodes to package objects., label=lst:m2m, language=ETL]
 rule NameNode2PackageObject
@@ -195,7 +193,7 @@ An advantage of the two-stage transformation is that contextual analysis can be 
 context ClassObject {
     constraint IdentifiersMustBeUnique {
         guard: self.id.isDefined()
-        check: ClassObject.allInstances()
+        check: ClassObject.all
                    .select(c|c.id = self.id).size() = 1;
         message: `Duplicate identifier: ' + self.id
     }
@@ -204,14 +202,14 @@ context ClassObject {
 
 Epsilon HUTN uses EVL \cite{kolovos08evl} to specify verification, resulting in highly expressive syntactic constraints. An EVL constraint comprises a guard, the logic that specifies the constraint, and a message to be displayed if the constraint is not met. For example, Listing \ref{lst:constraint} specifies the constraint that every HUTN class object has a unique identifier.
 
-In addition to the syntactic constraints defined in the HUTN specification, the conformance constraints described in Section~\ref{sec:mmi_syntax} are executed on the model at this stage. For this purpose, the conformance constraints are specified in EVL.
+In addition to the syntactic constraints defined in the HUTN specification, the conformance constraints described in Section~\ref{sec:mmi_syntax} are also specified in EVL and are also executed on the model at this stage.
 
 \paragraph{Intermediate Model to Target Model}
-Because the contextual analysis is performed on the intermediate model, models conform to the target metamodel. In generating the target model from the intermediate model (Figure \ref{fig:architecture}), the transformation uses information from the target metamodel, such as the names of classes and features. A typical approach to this category of problem is to use a higher-order transformation on the target metamodel to generate the desired transformation. Epsilon HUTN uses a different approach: the transformation to the target model is produced by executing an EGL template on the target metamodel. EGL is a template-based text generation language. \verb|[% %]| tag pairs are used to denote dynamic sections, which may produce text when executed. Any code not enclosed in a \verb|[% %]| tag pair is included verbatim in the generated text.
+When the intermediate model conforms to the target metamodel, the intermediate model can be transformed to an instance of the target metamodel. In generating the target model from the intermediate model (Figure \ref{fig:architecture}), the transformation uses information from the target metamodel, such as the names of classes and features. A typical approach to this category of problem is to use a higher-order transformation on the target metamodel to generate the desired transformation. Epsilon HUTN uses a different approach: the transformation to the target model is produced by executing a M2T transformation on the target metamodel. EGL \cite{rose08egl} is a template-based M2T language. \verb|[% %]| tag pairs are used to denote dynamic sections, which may produce text when executed. Any code not enclosed in a \verb|[% %]| tag pair is included verbatim in the generated text.
 
-Listing \ref{lst:generate} is the EGL template for a M2T transformation on the target metamodel; it generates the M2M transformation used for generating the target model. The loop beginning on line 1 iterates over each meta-class in the metamodel, producing a transformation rule to generate target model instances of that meta-class from class objects in the intermediate model. The template guard (line 6) specifies that only class objects of the same type as the meta-class be transformed by the current rule. For the body of the rule the template iterates over each structural feature of the current meta-class, and generates appropriate transformation code for populating the values of each structural feature from the slots on the class object in the intermediate model. The template body is omitted in Listing~\ref{lst:generate} because it contains a large amount of code for interacting with EMF, which is not relevant to this discussion.
+Listing \ref{lst:generate} shows part of the M2T transformation used by HUTN. The M2T transformation generates a M2M transformation which specifies the way in which the intermediate model is transformed to the target model. The loop beginning on line 1 of Listing \ref{lst:generate} iterates over each meta-class in the target metamodel, producing a M2M transformation rule. The generated transformation rule consumes a class objects in the intermediate model and produces an element of the target model. The guard of the generated transformation rule (line 6) ensures that only class objects with a type equal to the current meta-class are transformed by the generated rule. To generate the body of the rule, the M2T transformation iterates over each structural feature of the current meta-class, and generates appropriate transformation code for populating the values of each structural feature from the slots on the class object in the intermediate model. The part of the M2T transformation that generates the body of M2M transformation rule is omitted in Listing~\ref{lst:generate} because it contains a large amount of code for interacting with EMF, which is not relevant to this discussion.
 
-\begin{lstlisting}[caption= Initial sections of the template (in EGL) for generating  rules (in ETL) to instantiate classes of the target metamodel., label=lst:generate, language=EOL]
+\begin{lstlisting}[caption=Part of the M2T transformation (in EGL) for generating the intermediate model to target model transformation (in ETL)., label=lst:generate, language=EGL]
 [% for (class in EClass.allInstances()) { %]
 rule Object2[%=class.name%]
   transform o : Intermediate!ClassObject
@@ -224,12 +222,48 @@ rule Object2[%=class.name%]
 [% } %]
 \end{lstlisting}
 
-Presently, Epsilon HUTN can be used only to generate EMF models. Support for other modelling languages, such as MDR, would require different transformations between intermediate and target model. In other words, for each target modelling language, a new EGL template would be required. The transformation from AST to intermediate model is independent of the target modelling language and would not need to change.
+For example, executing the M2T transformation in Listing \ref{lst:generate} on the Families metamodel (Figure~\ref{fig:example-mm}) generates the two M2M transformation rules shown in Listing~\ref{lst:hutn_generated_transformation}. The rules produce instances of Family and Person from instances of ClassObject in the intermediate model. The body of each rule copies the values from the slots of the ClassObject to the Family or Person in the target model. Lines 7-9, for example, copy the value of the name slot (if one is specified) to the target Family.
+
+\begin{lstlisting}[caption=The M2M transformation generated by HUTN for the Families metamodel, label=lst:hutn_generated_transformation, language=ETL]
+rule Object2Family
+  transform o : Intermediate!ClassObject
+  to t : Model!Family {
+
+    guard: o.type = `Family'
+
+    if (o.hasSlot(`name')) {
+			t.name := o.findSlot(`name').values.first;
+		}
+		
+		if (o.hasSlot(`address')) {
+			for (value in o.findSlot(`address').values) {
+				t.address.add(value);
+			}
+		}
+		
+		-- remainder of body omitted
+  }
+
+rule Object2Person
+  transform o : Intermediate!ClassObject
+  to t : Model!Person {
+
+    guard: o.type = `Person'
+
+    if (o.hasSlot(`name')) {
+			t.name := o.findSlot(`name').values.first;
+		}
+		
+		-- remainder of body omitted
+  }
+\end{lstlisting}
+
+Presently, Epsilon HUTN can be used only to generate EMF models. Support for other modelling languages would require different transformations between intermediate and target model. In other words, for each target modelling language, a new EGL template would be required. The transformation from AST to intermediate model is independent of the target modelling language and would not need to change.
 
 
 \subsection{Migration with HUTN}
 \label{subsec:migration_with_hutn}
-Epsilon HUTN uses the generic metamodel (from Section~\ref{sec:mmi_syntax}) as an intermediary, facilitating transformation from XMI to HUTN (i.e. the inverse of the transformation discussed above): XMI is parsed to produce an instance of the generic metamodel, and an unparser (implemented using the visitor design pattern \cite{gamma95patterns}) generates HUTN source. In this manner, HUTN can be generated for any XMI document, regardless of whether the model described by the XMI conforms to its metamodel.\footnote{TODO: Somewhere, I need to discuss loss of information. (e.g. model element type information when a metaclass is removed)}
+Migrating non-conformant models with HUTN involves transforming the XMI of the non-conformant model to HUTN, reconciling the conformance problems in the HUTN source by hand, and transforming the reconciled HUTN back to XMI. The transformations to and from XMI can be automated, and the way in which Epsilon HUTN transforms from HUTN to XMI was described above. Because Epsilon HUTN uses the metamodel-independent syntax (from Section~\ref{sec:mmi_syntax}) as an intermediary, transformation from XMI to HUTN is implemented as follows: the metamodel-independent syntax is used to parse the XMI and produce an intermediate model. Subsequently, an unparser (implemented using the visitor design pattern \cite{gamma95patterns}) generates HUTN source for each element of the intermediate model. In this manner, HUTN can be generated for any XMI document, regardless of whether the model described by the XMI conforms to its metamodel.
 
 To demonstrate the way in which HUTN can be used to perform migration, the exemplar XMI shown in Listing~\ref{lst:xmi} is represented using HUTN in Listing~\ref{lst:non-conformant_hutn}. Recall that the XMI describes three Persons, Franz, Julie and Hermann. Julie and Hermann are the mother and father of Franz.
 
@@ -272,6 +306,9 @@ Persons "kafkas" {
 
 
 \subsection{Limitations}
+During the development of Epsilon HUTN, two primary limitations of the notation became apparent. The first relates to the nature of a metamodel-independent syntax, and the latter to the suitability of HUTN for performing user-driven co-evolution.
+
+\subsubsection{Generic vs specific concrete syntax}
 Notwithstanding the power of genericity, there are situations where a metamodel-specific concrete syntax is preferable. An example of where HUTN is unhelpful arose when developing a metamodel for the recording of failure behaviour of components in complex systems, based on the work of \cite{wallace05modular}.
 
 Failure behaviours comprise a number of expressions that specify how each component reacts to system faults, and there is an established concrete syntax for expressing failure behaviours. The failure syntax allows various shortcuts, such as the use of underscore to denote a wildcard. For example, the syntax for a possible failure behaviour of a component that receives input from two other components (on the left-hand side of the expression), and produces output for a single component is denoted:
@@ -297,7 +334,10 @@ Behaviour {
 
 The domain-specific syntax exploits two characteristics of failure expressions to achieve a compact notation. Firstly, structural domain concepts are mapped to symbols: tuples to parentheses and identifier sets to braces. Secondly, little syntactic sugar is needed for many domain concepts, as they define only one feature: a fault is referred to only by its name, the contents of identifier sets and tuples are separated using only commas.
 
-In general, HUTN is less concise than a domain-specific syntax for metamodels containing a large number of classes with few attributes, and in cases where most attributes are used to define structural relationships among concepts. However, there might still be benefits from using HUTN in such cases, if the metamodel is likely to be modified frequently, of it the model does not yet have a formal metamodel.
+In general, HUTN is less concise than a domain-specific syntax for metamodels containing a large number of classes with few attributes, and in cases where most attributes are used to define structural relationships among concepts. However, a domain-specific syntax is specified using metamodel concepts and hence can be affected by metamodel evolution.
+
+\subsubsection{Optimised XMI omits type information}
+When HUTN is used for user-driven co-evolution, non-conformant models (represented in XMI) are transformed to HUTN source. The default EMF serialisation mechanism is configure to reduce the size of models on disk and consequently the XMI produced by EMF omits type information when it may be inferred from a metamodel. This is problematic for managing co-evolution because, when a metamodel evolves, type information might be erased. The implementation of Epsilon HUTN has been extended to account for optimised XMI, and reports type inference errors along with conformance problems. 
 
 \subsection{Summary}
 In this section, HUTN was introduced and its syntax described. An implementation of HUTN for EMF, built atop Epsilon, was discussed. Integration of HUTN for the metamodel-independent syntax discussed in Section~\ref{sec:mmi_syntax} facilitates user-driven co-evolution with a textual modelling notation other than XMI, as demonstrated by the example above. The remainder of this chapter focuses on developer-driven co-evolution, in which model migration strategies are executable.

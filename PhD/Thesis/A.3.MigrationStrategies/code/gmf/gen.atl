@@ -7,26 +7,26 @@ rule GenEditorGenerator2GenEditorGenerator {
     o : Before!GenEditorGenerator
   to
     m : After!GenEditorGenerator (
-%\highlight%      audits <- o.audits,
-%\highlight%      metrics <- o.metrics,
-%\highlight%      diagram <- o.diagram,
-%\highlight%      plugin <- o.plugin,
-%\highlight%      editor <- o.editor,
-%\highlight%      navigator <- o.navigator,
-%\highlight%      diagramUpdater <- o.diagramUpdater,
-%\highlight%      propertySheet <- o.propertySheet,
-%\highlight%      application <- o.application,
-%\highlight%      domainGenModel <- o.domainGenModel,
-%\highlight%      packageNamePrefix <- o.packageNamePrefix,
-%\highlight%      modelID <- o.modelID,
-%\highlight%      sameFileForDiagramAndModel <- o.sameFileForDiagramAndModel,
-%\highlight%      diagramFileExtension <- o.diagramFileExtension,
-%\highlight%      domainFileExtension <- o.domainFileExtension,
-%\highlight%      dynamicTemplates <- o.dynamicTemplates,
-%\highlight%      templateDirectory <- o.templateDirectory,
-%\highlight%      copyrightText <- o.copyrightText,
-%\highlight%      expressionProviders <- o.expressionProviders,
-%\highlight%      modelAccess <- o.modelAccess
+$\highlight$      audits <- o.audits,
+$\highlight$      metrics <- o.metrics,
+$\highlight$      diagram <- o.diagram,
+$\highlight$      plugin <- o.plugin,
+$\highlight$      editor <- o.editor,
+$\highlight$      navigator <- o.navigator,
+$\highlight$      diagramUpdater <- o.diagramUpdater,
+$\highlight$      propertySheet <- o.propertySheet,
+$\highlight$      application <- o.application,
+$\highlight$      domainGenModel <- o.domainGenModel,
+$\highlight$      packageNamePrefix <- o.packageNamePrefix,
+$\highlight$      modelID <- o.modelID,
+$\highlight$      sameFileForDiagramAndModel <- o.sameFileForDiagramAndModel,
+$\highlight$      diagramFileExtension <- o.diagramFileExtension,
+$\highlight$      domainFileExtension <- o.domainFileExtension,
+$\highlight$      dynamicTemplates <- o.dynamicTemplates,
+$\highlight$      templateDirectory <- o.templateDirectory,
+$\highlight$      copyrightText <- o.copyrightText,
+$\highlight$      expressionProviders <- o.expressionProviders,
+$\highlight$      modelAccess <- o.modelAccess
     )
 }
 rule GenDiagram2GenDiagram extends GenContainerBase2GenContainerBase {
@@ -34,15 +34,15 @@ rule GenDiagram2GenDiagram extends GenContainerBase2GenContainerBase {
     o : Before!GenDiagram
   to
     m : After!GenDiagram (
-%\highlight%      domainDiagramElement <- o.domainDiagramElement,
-%\highlight%      childNodes <- o.childNodes,
-%\highlight%      topLevelNodes <- o.topLevelNodes,
-%\highlight%      links <- o.links,
-%\highlight%      compartments <- o.compartments,
-%\highlight%      palette <- o.palette,
-%\highlight%      synchronized <- o.synchronized,
-%\highlight%      preferences <- o.preferences,
-%\highlight%      preferencePages <- o.preferencePages
+$\highlight$      domainDiagramElement <- o.domainDiagramElement,
+$\highlight$      childNodes <- o.childNodes,
+$\highlight$      topLevelNodes <- o.topLevelNodes,
+$\highlight$      links <- o.links,
+$\highlight$      compartments <- o.compartments,
+$\highlight$      palette <- o.palette,
+$\highlight$      synchronized <- o.synchronized,
+$\highlight$      preferences <- o.preferences,
+$\highlight$      preferencePages <- o.preferencePages
     )
 }
 rule GenEditorView2GenEditorView {
@@ -50,13 +50,13 @@ rule GenEditorView2GenEditorView {
     o : Before!GenEditorView
   to
     m : After!GenEditorView (
-%\highlight%      packageName <- o.packageName,
-%\highlight%      actionBarContributorClassName <- o.actionBarContributorClassName,
-%\highlight%      className <- o.className,
-%\highlight%      iconPath <- o.iconPath,
-%\highlight%      iD <- o.iD,
-%\highlight%      eclipseEditor <- o.eclipseEditor,
-%\highlight%      contextID <- o.contextID
+$\highlight$      packageName <- o.packageName,
+$\highlight$      actionBarContributorClassName <- o.actionBarContributorClassName,
+$\highlight$      className <- o.className,
+$\highlight$      iconPath <- o.iconPath,
+$\highlight$      iD <- o.iD,
+$\highlight$      eclipseEditor <- o.eclipseEditor,
+$\highlight$      contextID <- o.contextID
     )
 }
 abstract rule GenPreferencePage2GenPreferencePage {
@@ -64,9 +64,9 @@ abstract rule GenPreferencePage2GenPreferencePage {
     o : Before!GenPreferencePage
   to
     m : After!GenPreferencePage (
-%\highlight%      iD <- o.iD,
-%\highlight%      name <- o.name,
-%\highlight%      children <- o.children
+$\highlight$      iD <- o.iD,
+$\highlight$      name <- o.name,
+$\highlight$      children <- o.children
     )
 }
 rule GenCustomPreferencePage2GenCustomPreferencePage extends GenPreferencePage2GenPreferencePage {
@@ -74,7 +74,7 @@ rule GenCustomPreferencePage2GenCustomPreferencePage extends GenPreferencePage2G
     o : Before!GenCustomPreferencePage
   to
     m : After!GenCustomPreferencePage (
-%\highlight%      qualifiedClassName <- o.qualifiedClassName
+$\highlight$      qualifiedClassName <- o.qualifiedClassName
     )
 }
 rule GenStandardPreferencePage2GenStandardPreferencePage extends GenPreferencePage2GenPreferencePage {
@@ -82,7 +82,7 @@ rule GenStandardPreferencePage2GenStandardPreferencePage extends GenPreferencePa
     o : Before!GenStandardPreferencePage
   to
     m : After!GenStandardPreferencePage (
-%\highlight%      kind <- o.kind
+$\highlight$      kind <- o.kind
     )
 }
 rule GenDiagramPreferences2GenDiagramPreferences {
@@ -90,29 +90,29 @@ rule GenDiagramPreferences2GenDiagramPreferences {
     o : Before!GenDiagramPreferences
   to
     m : After!GenDiagramPreferences (
-%\highlight%      lineStyle <- o.lineStyle,
-%\highlight%      defaultFont <- o.defaultFont,
-%\highlight%      fontColor <- o.fontColor,
-%\highlight%      fillColor <- o.fillColor,
-%\highlight%      lineColor <- o.lineColor,
-%\highlight%      noteFillColor <- o.noteFillColor,
-%\highlight%      noteLineColor <- o.noteLineColor,
-%\highlight%      showConnectionHandles <- o.showConnectionHandles,
-%\highlight%      showPopupBars <- o.showPopupBars,
-%\highlight%      promptOnDelFromModel <- o.promptOnDelFromModel,
-%\highlight%      promptOnDelFromDiagram <- o.promptOnDelFromDiagram,
-%\highlight%      enableAnimatedLayout <- o.enableAnimatedLayout,
-%\highlight%      enableAnimatedZoom <- o.enableAnimatedZoom,
-%\highlight%      enableAntiAlias <- o.enableAntiAlias,
-%\highlight%      showGrid <- o.showGrid,
-%\highlight%      showRulers <- o.showRulers,
-%\highlight%      snapToGrid <- o.snapToGrid,
-%\highlight%      snapToGeometry <- o.snapToGeometry,
-%\highlight%      gridInFront <- o.gridInFront,
-%\highlight%      rulerUnits <- o.rulerUnits,
-%\highlight%      gridSpacing <- o.gridSpacing,
-%\highlight%      gridLineColor <- o.gridLineColor,
-%\highlight%      gridLineStyle <- o.gridLineStyle
+$\highlight$      lineStyle <- o.lineStyle,
+$\highlight$      defaultFont <- o.defaultFont,
+$\highlight$      fontColor <- o.fontColor,
+$\highlight$      fillColor <- o.fillColor,
+$\highlight$      lineColor <- o.lineColor,
+$\highlight$      noteFillColor <- o.noteFillColor,
+$\highlight$      noteLineColor <- o.noteLineColor,
+$\highlight$      showConnectionHandles <- o.showConnectionHandles,
+$\highlight$      showPopupBars <- o.showPopupBars,
+$\highlight$      promptOnDelFromModel <- o.promptOnDelFromModel,
+$\highlight$      promptOnDelFromDiagram <- o.promptOnDelFromDiagram,
+$\highlight$      enableAnimatedLayout <- o.enableAnimatedLayout,
+$\highlight$      enableAnimatedZoom <- o.enableAnimatedZoom,
+$\highlight$      enableAntiAlias <- o.enableAntiAlias,
+$\highlight$      showGrid <- o.showGrid,
+$\highlight$      showRulers <- o.showRulers,
+$\highlight$      snapToGrid <- o.snapToGrid,
+$\highlight$      snapToGeometry <- o.snapToGeometry,
+$\highlight$      gridInFront <- o.gridInFront,
+$\highlight$      rulerUnits <- o.rulerUnits,
+$\highlight$      gridSpacing <- o.gridSpacing,
+$\highlight$      gridLineColor <- o.gridLineColor,
+$\highlight$      gridLineStyle <- o.gridLineStyle
     )
 }
 abstract rule GenFont2GenFont {
@@ -126,7 +126,7 @@ rule GenStandardFont2GenStandardFont extends GenFont2GenFont {
     o : Before!GenStandardFont
   to
     m : After!GenStandardFont (
-%\highlight%      name <- o.name
+$\highlight$      name <- o.name
     )
 }
 rule GenCustomFont2GenCustomFont extends GenFont2GenFont {
@@ -134,9 +134,9 @@ rule GenCustomFont2GenCustomFont extends GenFont2GenFont {
     o : Before!GenCustomFont
   to
     m : After!GenCustomFont (
-%\highlight%      name <- o.name,
-%\highlight%      height <- o.height,
-%\highlight%      style <- o.style
+$\highlight$      name <- o.name,
+$\highlight$      height <- o.height,
+$\highlight$      style <- o.style
     )
 }
 abstract rule GenColor2GenColor {
@@ -150,9 +150,9 @@ rule GenRGBColor2GenRGBColor extends GenColor2GenColor {
     o : Before!GenRGBColor
   to
     m : After!GenRGBColor (
-%\highlight%      red <- o.red,
-%\highlight%      green <- o.green,
-%\highlight%      blue <- o.blue
+$\highlight$      red <- o.red,
+$\highlight$      green <- o.green,
+$\highlight$      blue <- o.blue
     )
 }
 rule GenConstantColor2GenConstantColor extends GenColor2GenColor {
@@ -160,7 +160,7 @@ rule GenConstantColor2GenConstantColor extends GenColor2GenColor {
     o : Before!GenConstantColor
   to
     m : After!GenConstantColor (
-%\highlight%      name <- o.name
+$\highlight$      name <- o.name
     )
 }
 rule GenDiagramUpdater2GenDiagramUpdater {
@@ -168,11 +168,11 @@ rule GenDiagramUpdater2GenDiagramUpdater {
     o : Before!GenDiagramUpdater
   to
     m : After!GenDiagramUpdater (
-%\highlight%      diagramUpdaterClassName <- o.diagramUpdaterClassName,
-%\highlight%      nodeDescriptorClassName <- o.nodeDescriptorClassName,
-%\highlight%      linkDescriptorClassName <- o.linkDescriptorClassName,
-%\highlight%      updateCommandClassName <- o.updateCommandClassName,
-%\highlight%      updateCommandID <- o.updateCommandID
+$\highlight$      diagramUpdaterClassName <- o.diagramUpdaterClassName,
+$\highlight$      nodeDescriptorClassName <- o.nodeDescriptorClassName,
+$\highlight$      linkDescriptorClassName <- o.linkDescriptorClassName,
+$\highlight$      updateCommandClassName <- o.updateCommandClassName,
+$\highlight$      updateCommandID <- o.updateCommandID
     )
 }
 rule GenPlugin2GenPlugin {
@@ -180,13 +180,13 @@ rule GenPlugin2GenPlugin {
     o : Before!GenPlugin
   to
     m : After!GenPlugin (
-%\highlight%      iD <- o.iD,
-%\highlight%      name <- o.name,
-%\highlight%      provider <- o.provider,
-%\highlight%      version <- o.version,
-%\highlight%      printingEnabled <- o.printingEnabled,
-%\highlight%      requiredPlugins <- o.requiredPlugins,
-%\highlight%      activatorClassName <- o.activatorClassName
+$\highlight$      iD <- o.iD,
+$\highlight$      name <- o.name,
+$\highlight$      provider <- o.provider,
+$\highlight$      version <- o.version,
+$\highlight$      printingEnabled <- o.printingEnabled,
+$\highlight$      requiredPlugins <- o.requiredPlugins,
+$\highlight$      activatorClassName <- o.activatorClassName
     )
 }
 rule DynamicModelAccess2DynamicModelAccess {
@@ -194,8 +194,8 @@ rule DynamicModelAccess2DynamicModelAccess {
     o : Before!DynamicModelAccess
   to
     m : After!DynamicModelAccess (
-%\highlight%      packageName <- o.packageName,
-%\highlight%      className <- o.className
+$\highlight$      packageName <- o.packageName,
+$\highlight$      className <- o.className
     )
 }
 abstract rule GenCommonBase2GenCommonBase {
@@ -203,15 +203,15 @@ abstract rule GenCommonBase2GenCommonBase {
     o : Before!GenCommonBase
   to
     m : After!GenCommonBase (
-%\highlight%      diagramRunTimeClass <- o.diagramRunTimeClass,
-%\highlight%      visualID <- o.visualID,
-%\highlight%      elementType <- o.elementType,
-%\highlight%      editPartClassName <- o.editPartClassName,
-%\highlight%      itemSemanticEditPolicyClassName <- o.itemSemanticEditPolicyClassName,
-%\highlight%      notationViewFactoryClassName <- o.notationViewFactoryClassName,
-%\highlight%      viewmap <- o.viewmap,
-%\highlight%      styles <- o.styles,
-%\highlight%      behaviour <- o.behaviour
+$\highlight$      diagramRunTimeClass <- o.diagramRunTimeClass,
+$\highlight$      visualID <- o.visualID,
+$\highlight$      elementType <- o.elementType,
+$\highlight$      editPartClassName <- o.editPartClassName,
+$\highlight$      itemSemanticEditPolicyClassName <- o.itemSemanticEditPolicyClassName,
+$\highlight$      notationViewFactoryClassName <- o.notationViewFactoryClassName,
+$\highlight$      viewmap <- o.viewmap,
+$\highlight$      styles <- o.styles,
+$\highlight$      behaviour <- o.behaviour
     )
 }
 abstract rule Behaviour2Behaviour {
@@ -225,8 +225,8 @@ rule CustomBehaviour2CustomBehaviour extends Behaviour2Behaviour {
     o : Before!CustomBehaviour
   to
     m : After!CustomBehaviour (
-%\highlight%      key <- o.key,
-%\highlight%      editPolicyQualifiedClassName <- o.editPolicyQualifiedClassName
+$\highlight$      key <- o.key,
+$\highlight$      editPolicyQualifiedClassName <- o.editPolicyQualifiedClassName
     )
 }
 rule SharedBehaviour2SharedBehaviour extends Behaviour2Behaviour {
@@ -234,7 +234,7 @@ rule SharedBehaviour2SharedBehaviour extends Behaviour2Behaviour {
     o : Before!SharedBehaviour
   to
     m : After!SharedBehaviour (
-%\highlight%      delegate <- o.delegate
+$\highlight$      delegate <- o.delegate
     )
 }
 rule OpenDiagramBehaviour2OpenDiagramBehaviour extends Behaviour2Behaviour {
@@ -242,10 +242,10 @@ rule OpenDiagramBehaviour2OpenDiagramBehaviour extends Behaviour2Behaviour {
     o : Before!OpenDiagramBehaviour
   to
     m : After!OpenDiagramBehaviour (
-%\highlight%      editPolicyClassName <- o.editPolicyClassName,
-%\highlight%      diagramKind <- o.diagramKind,
-%\highlight%      editorID <- o.editorID,
-%\highlight%      openAsEclipseEditor <- o.openAsEclipseEditor
+$\highlight$      editPolicyClassName <- o.editPolicyClassName,
+$\highlight$      diagramKind <- o.diagramKind,
+$\highlight$      editorID <- o.editorID,
+$\highlight$      openAsEclipseEditor <- o.openAsEclipseEditor
     )
 }
 abstract rule GenContainerBase2GenContainerBase extends GenCommonBase2GenCommonBase {
@@ -253,7 +253,7 @@ abstract rule GenContainerBase2GenContainerBase extends GenCommonBase2GenCommonB
     o : Before!GenContainerBase
   to
     m : After!GenContainerBase (
-%\highlight%      canonicalEditPolicyClassName <- o.canonicalEditPolicyClassName
+$\highlight$      canonicalEditPolicyClassName <- o.canonicalEditPolicyClassName
     )
 }
 abstract rule GenChildContainer2GenChildContainer extends GenContainerBase2GenContainerBase {
@@ -261,7 +261,7 @@ abstract rule GenChildContainer2GenChildContainer extends GenContainerBase2GenCo
     o : Before!GenChildContainer
   to
     m : After!GenChildContainer (
-%\highlight%      childNodes <- o.childNodes
+$\highlight$      childNodes <- o.childNodes
     )
 }
 abstract rule GenNode2GenNode extends GenChildContainer2GenChildContainer {
@@ -269,12 +269,12 @@ abstract rule GenNode2GenNode extends GenChildContainer2GenChildContainer {
     o : Before!GenNode
   to
     m : After!GenNode (
-%\highlight%      modelFacet <- o.modelFacet,
-%\highlight%      labels <- o.labels,
-%\highlight%      compartments <- o.compartments,
-%\highlight%      primaryDragEditPolicyQualifiedClassName <- o.primaryDragEditPolicyQualifiedClassName,
-%\highlight%      graphicalNodeEditPolicyClassName <- o.graphicalNodeEditPolicyClassName,
-%\highlight%      createCommandClassName <- o.createCommandClassName
+$\highlight$      modelFacet <- o.modelFacet,
+$\highlight$      labels <- o.labels,
+$\highlight$      compartments <- o.compartments,
+$\highlight$      primaryDragEditPolicyQualifiedClassName <- o.primaryDragEditPolicyQualifiedClassName,
+$\highlight$      graphicalNodeEditPolicyClassName <- o.graphicalNodeEditPolicyClassName,
+$\highlight$      createCommandClassName <- o.createCommandClassName
     )
 }
 rule GenTopLevelNode2GenTopLevelNode extends GenNode2GenNode {
@@ -294,7 +294,7 @@ rule GenChildSideAffixedNode2GenChildSideAffixedNode extends GenChildNode2GenChi
     o : Before!GenChildSideAffixedNode
   to
     m : After!GenChildSideAffixedNode (
-%\highlight%      preferredSideName <- o.preferredSideName
+$\highlight$      preferredSideName <- o.preferredSideName
     )
 }
 rule GenChildLabelNode2GenChildLabelNode extends GenChildNode2GenChildNode {
@@ -302,9 +302,9 @@ rule GenChildLabelNode2GenChildLabelNode extends GenChildNode2GenChildNode {
     o : Before!GenChildLabelNode
   to
     m : After!GenChildLabelNode (
-%\highlight%      labelReadOnly <- o.labelReadOnly,
-%\highlight%      labelElementIcon <- o.labelElementIcon,
-%\highlight%      labelModelFacet <- o.labelModelFacet
+$\highlight$      labelReadOnly <- o.labelReadOnly,
+$\highlight$      labelElementIcon <- o.labelElementIcon,
+$\highlight$      labelModelFacet <- o.labelModelFacet
     )
 }
 rule GenCompartment2GenCompartment extends GenChildContainer2GenChildContainer {
@@ -312,12 +312,12 @@ rule GenCompartment2GenCompartment extends GenChildContainer2GenChildContainer {
     o : Before!GenCompartment
   to
     m : After!GenCompartment (
-%\highlight%      title <- o.title,
-%\highlight%      canCollapse <- o.canCollapse,
-%\highlight%      hideIfEmpty <- o.hideIfEmpty,
-%\highlight%      needsTitle <- o.needsTitle,
-%\highlight%      node <- o.node,
-%\highlight%      listLayout <- o.listLayout
+$\highlight$      title <- o.title,
+$\highlight$      canCollapse <- o.canCollapse,
+$\highlight$      hideIfEmpty <- o.hideIfEmpty,
+$\highlight$      needsTitle <- o.needsTitle,
+$\highlight$      node <- o.node,
+$\highlight$      listLayout <- o.listLayout
     )
 }
 rule GenLink2GenLink extends GenCommonBase2GenCommonBase {
@@ -325,15 +325,15 @@ rule GenLink2GenLink extends GenCommonBase2GenCommonBase {
     o : Before!GenLink
   to
     m : After!GenLink (
-%\highlight%      modelFacet <- o.modelFacet,
-%\highlight%      labels <- o.labels,
-%\highlight%      outgoingCreationAllowed <- o.outgoingCreationAllowed,
-%\highlight%      incomingCreationAllowed <- o.incomingCreationAllowed,
-%\highlight%      viewDirectionAlignedWithModel <- o.viewDirectionAlignedWithModel,
-%\highlight%      creationConstraints <- o.creationConstraints,
-%\highlight%      createCommandClassName <- o.createCommandClassName,
-%\highlight%      reorientCommandClassName <- o.reorientCommandClassName,
-%\highlight%      treeBranch <- o.treeBranch
+$\highlight$      modelFacet <- o.modelFacet,
+$\highlight$      labels <- o.labels,
+$\highlight$      outgoingCreationAllowed <- o.outgoingCreationAllowed,
+$\highlight$      incomingCreationAllowed <- o.incomingCreationAllowed,
+$\highlight$      viewDirectionAlignedWithModel <- o.viewDirectionAlignedWithModel,
+$\highlight$      creationConstraints <- o.creationConstraints,
+$\highlight$      createCommandClassName <- o.createCommandClassName,
+$\highlight$      reorientCommandClassName <- o.reorientCommandClassName,
+$\highlight$      treeBranch <- o.treeBranch
     )
 }
 abstract rule GenLabel2GenLabel extends GenCommonBase2GenCommonBase {
@@ -341,9 +341,9 @@ abstract rule GenLabel2GenLabel extends GenCommonBase2GenCommonBase {
     o : Before!GenLabel
   to
     m : After!GenLabel (
-%\highlight%      readOnly <- o.readOnly,
-%\highlight%      elementIcon <- o.elementIcon,
-%\highlight%      modelFacet <- o.modelFacet
+$\highlight$      readOnly <- o.readOnly,
+$\highlight$      elementIcon <- o.elementIcon,
+$\highlight$      modelFacet <- o.modelFacet
     )
 }
 rule GenNodeLabel2GenNodeLabel extends GenLabel2GenLabel {
@@ -363,8 +363,8 @@ rule GenLinkLabel2GenLinkLabel extends GenLabel2GenLabel {
     o : Before!GenLinkLabel
   to
     m : After!GenLinkLabel (
-%\highlight%      link <- o.link,
-%\highlight%      alignment <- o.alignment
+$\highlight$      link <- o.link,
+$\highlight$      alignment <- o.alignment
     )
 }
 abstract rule ElementType2ElementType {
@@ -372,10 +372,10 @@ abstract rule ElementType2ElementType {
     o : Before!ElementType
   to
     m : After!ElementType (
-%\highlight%      diagramElement <- o.diagramElement,
-%\highlight%      uniqueIdentifier <- o.uniqueIdentifier,
-%\highlight%      displayName <- o.displayName,
-%\highlight%      definedExternally <- o.definedExternally
+$\highlight$      diagramElement <- o.diagramElement,
+$\highlight$      uniqueIdentifier <- o.uniqueIdentifier,
+$\highlight$      displayName <- o.displayName,
+$\highlight$      definedExternally <- o.definedExternally
     )
 }
 rule MetamodelType2MetamodelType extends ElementType2ElementType {
@@ -383,7 +383,7 @@ rule MetamodelType2MetamodelType extends ElementType2ElementType {
     o : Before!MetamodelType
   to
     m : After!MetamodelType (
-%\highlight%      editHelperClassName <- o.editHelperClassName
+$\highlight$      editHelperClassName <- o.editHelperClassName
     )
 }
 rule SpecializationType2SpecializationType extends ElementType2ElementType {
@@ -391,8 +391,8 @@ rule SpecializationType2SpecializationType extends ElementType2ElementType {
     o : Before!SpecializationType
   to
     m : After!SpecializationType (
-%\highlight%      metamodelType <- o.metamodelType,
-%\highlight%      editHelperAdviceClassName <- o.editHelperAdviceClassName
+$\highlight$      metamodelType <- o.metamodelType,
+$\highlight$      editHelperAdviceClassName <- o.editHelperAdviceClassName
     )
 }
 rule NotationType2NotationType extends ElementType2ElementType {
@@ -424,11 +424,11 @@ rule TypeModelFacet2TypeModelFacet extends ModelFacet2ModelFacet {
     o : Before!TypeModelFacet
   to
     m : After!TypeModelFacet (
-%\highlight%      metaClass <- o.metaClass,
-%\highlight%      containmentMetaFeature <- o.containmentMetaFeature,
-%\highlight%      childMetaFeature <- o.childMetaFeature,
-%\highlight%      modelElementSelector <- o.modelElementSelector,
-%\highlight%      modelElementInitializer <- o.modelElementInitializer
+$\highlight$      metaClass <- o.metaClass,
+$\highlight$      containmentMetaFeature <- o.containmentMetaFeature,
+$\highlight$      childMetaFeature <- o.childMetaFeature,
+$\highlight$      modelElementSelector <- o.modelElementSelector,
+$\highlight$      modelElementInitializer <- o.modelElementInitializer
     )
 }
 rule TypeLinkModelFacet2TypeLinkModelFacet extends TypeModelFacet2TypeModelFacet {
@@ -436,8 +436,8 @@ rule TypeLinkModelFacet2TypeLinkModelFacet extends TypeModelFacet2TypeModelFacet
     o : Before!TypeLinkModelFacet
   to
     m : After!TypeLinkModelFacet (
-%\highlight%      sourceMetaFeature <- o.sourceMetaFeature,
-%\highlight%      targetMetaFeature <- o.targetMetaFeature
+$\highlight$      sourceMetaFeature <- o.sourceMetaFeature,
+$\highlight$      targetMetaFeature <- o.targetMetaFeature
     )
 }
 rule FeatureLinkModelFacet2FeatureLinkModelFacet extends LinkModelFacet2LinkModelFacet {
@@ -445,7 +445,7 @@ rule FeatureLinkModelFacet2FeatureLinkModelFacet extends LinkModelFacet2LinkMode
     o : Before!FeatureLinkModelFacet
   to
     m : After!FeatureLinkModelFacet (
-%\highlight%      metaFeature <- o.metaFeature
+$\highlight$      metaFeature <- o.metaFeature
     )
 }
 rule FeatureLabelModelFacet2FeatureLabelModelFacet extends LabelModelFacet2LabelModelFacet {
@@ -453,12 +453,12 @@ rule FeatureLabelModelFacet2FeatureLabelModelFacet extends LabelModelFacet2Label
     o : Before!FeatureLabelModelFacet
   to
     m : After!FeatureLabelModelFacet (
-%\highlight%      metaFeatures <- o.metaFeatures,
-%\highlight%      viewPattern <- o.viewPattern,
-%\highlight%      editorPattern <- o.editorPattern,
-%\highlight%      editPattern <- o.editPattern,
-%\highlight%      viewMethod <- o.viewMethod,
-%\highlight%      editMethod <- o.editMethod
+$\highlight$      metaFeatures <- o.metaFeatures,
+$\highlight$      viewPattern <- o.viewPattern,
+$\highlight$      editorPattern <- o.editorPattern,
+$\highlight$      editPattern <- o.editPattern,
+$\highlight$      viewMethod <- o.viewMethod,
+$\highlight$      editMethod <- o.editMethod
     )
 }
 rule DesignLabelModelFacet2DesignLabelModelFacet extends LabelModelFacet2LabelModelFacet {
@@ -478,8 +478,8 @@ rule ColorAttributes2ColorAttributes extends Attributes2Attributes {
     o : Before!ColorAttributes
   to
     m : After!ColorAttributes (
-%\highlight%      foregroundColor <- o.foregroundColor,
-%\highlight%      backgroundColor <- o.backgroundColor
+$\highlight$      foregroundColor <- o.foregroundColor,
+$\highlight$      backgroundColor <- o.backgroundColor
     )
 }
 rule StyleAttributes2StyleAttributes extends Attributes2Attributes {
@@ -487,9 +487,9 @@ rule StyleAttributes2StyleAttributes extends Attributes2Attributes {
     o : Before!StyleAttributes
   to
     m : After!StyleAttributes (
-%\highlight%      fixedFont <- o.fixedFont,
-%\highlight%      fixedForeground <- o.fixedForeground,
-%\highlight%      fixedBackground <- o.fixedBackground
+$\highlight$      fixedFont <- o.fixedFont,
+$\highlight$      fixedForeground <- o.fixedForeground,
+$\highlight$      fixedBackground <- o.fixedBackground
     )
 }
 rule ResizeConstraints2ResizeConstraints extends Attributes2Attributes {
@@ -497,8 +497,8 @@ rule ResizeConstraints2ResizeConstraints extends Attributes2Attributes {
     o : Before!ResizeConstraints
   to
     m : After!ResizeConstraints (
-%\highlight%      resizeHandles <- o.resizeHandles,
-%\highlight%      nonResizeHandles <- o.nonResizeHandles
+$\highlight$      resizeHandles <- o.resizeHandles,
+$\highlight$      nonResizeHandles <- o.nonResizeHandles
     )
 }
 rule DefaultSizeAttributes2DefaultSizeAttributes extends Attributes2Attributes {
@@ -506,8 +506,8 @@ rule DefaultSizeAttributes2DefaultSizeAttributes extends Attributes2Attributes {
     o : Before!DefaultSizeAttributes
   to
     m : After!DefaultSizeAttributes (
-%\highlight%      width <- o.width,
-%\highlight%      height <- o.height
+$\highlight$      width <- o.width,
+$\highlight$      height <- o.height
     )
 }
 rule LabelOffsetAttributes2LabelOffsetAttributes extends Attributes2Attributes {
@@ -515,8 +515,8 @@ rule LabelOffsetAttributes2LabelOffsetAttributes extends Attributes2Attributes {
     o : Before!LabelOffsetAttributes
   to
     m : After!LabelOffsetAttributes (
-%\highlight%      x <- o.x,
-%\highlight%      y <- o.y
+$\highlight$      x <- o.x,
+$\highlight$      y <- o.y
     )
 }
 abstract rule Viewmap2Viewmap {
@@ -524,9 +524,9 @@ abstract rule Viewmap2Viewmap {
     o : Before!Viewmap
   to
     m : After!Viewmap (
-%\highlight%      attributes <- o.attributes,
-%\highlight%      requiredPluginIDs <- o.requiredPluginIDs,
-%\highlight%      layoutType <- o.layoutType
+$\highlight$      attributes <- o.attributes,
+$\highlight$      requiredPluginIDs <- o.requiredPluginIDs,
+$\highlight$      layoutType <- o.layoutType
     )
 }
 rule FigureViewmap2FigureViewmap extends Viewmap2Viewmap {
@@ -534,7 +534,7 @@ rule FigureViewmap2FigureViewmap extends Viewmap2Viewmap {
     o : Before!FigureViewmap
   to
     m : After!FigureViewmap (
-%\highlight%      figureQualifiedClassName <- o.figureQualifiedClassName
+$\highlight$      figureQualifiedClassName <- o.figureQualifiedClassName
     )
 }
 rule SnippetViewmap2SnippetViewmap extends Viewmap2Viewmap {
@@ -542,7 +542,7 @@ rule SnippetViewmap2SnippetViewmap extends Viewmap2Viewmap {
     o : Before!SnippetViewmap
   to
     m : After!SnippetViewmap (
-%\highlight%      body <- o.body
+$\highlight$      body <- o.body
     )
 }
 rule InnerClassViewmap2InnerClassViewmap extends Viewmap2Viewmap {
@@ -550,8 +550,8 @@ rule InnerClassViewmap2InnerClassViewmap extends Viewmap2Viewmap {
     o : Before!InnerClassViewmap
   to
     m : After!InnerClassViewmap (
-%\highlight%      className <- o.className,
-%\highlight%      classBody <- o.classBody
+$\highlight$      className <- o.className,
+$\highlight$      classBody <- o.classBody
     )
 }
 rule ParentAssignedViewmap2ParentAssignedViewmap extends Viewmap2Viewmap {
@@ -559,9 +559,9 @@ rule ParentAssignedViewmap2ParentAssignedViewmap extends Viewmap2Viewmap {
     o : Before!ParentAssignedViewmap
   to
     m : After!ParentAssignedViewmap (
-%\highlight%      getterName <- o.getterName,
-%\highlight%      setterName <- o.setterName,
-%\highlight%      figureQualifiedClassName <- o.figureQualifiedClassName
+$\highlight$      getterName <- o.getterName,
+$\highlight$      setterName <- o.setterName,
+$\highlight$      figureQualifiedClassName <- o.figureQualifiedClassName
     )
 }
 rule ValueExpression2ValueExpression {
@@ -569,7 +569,7 @@ rule ValueExpression2ValueExpression {
     o : Before!ValueExpression
   to
     m : After!ValueExpression (
-%\highlight%      body <- o.body
+$\highlight$      body <- o.body
     )
 }
 rule GenConstraint2GenConstraint extends ValueExpression2ValueExpression {
@@ -583,10 +583,10 @@ rule Palette2Palette {
     o : Before!Palette
   to
     m : After!Palette (
-%\highlight%      flyout <- o.flyout,
-%\highlight%      groups <- o.groups,
-%\highlight%      packageName <- o.packageName,
-%\highlight%      factoryClassName <- o.factoryClassName
+$\highlight$      flyout <- o.flyout,
+$\highlight$      groups <- o.groups,
+$\highlight$      packageName <- o.packageName,
+$\highlight$      factoryClassName <- o.factoryClassName
     )
 }
 abstract rule EntryBase2EntryBase {
@@ -594,11 +594,11 @@ abstract rule EntryBase2EntryBase {
     o : Before!EntryBase
   to
     m : After!EntryBase (
-%\highlight%      title <- o.title,
-%\highlight%      description <- o.description,
-%\highlight%      largeIconPath <- o.largeIconPath,
-%\highlight%      smallIconPath <- o.smallIconPath,
-%\highlight%      createMethodName <- o.createMethodName
+$\highlight$      title <- o.title,
+$\highlight$      description <- o.description,
+$\highlight$      largeIconPath <- o.largeIconPath,
+$\highlight$      smallIconPath <- o.smallIconPath,
+$\highlight$      createMethodName <- o.createMethodName
     )
 }
 abstract rule AbstractToolEntry2AbstractToolEntry extends EntryBase2EntryBase {
@@ -606,9 +606,9 @@ abstract rule AbstractToolEntry2AbstractToolEntry extends EntryBase2EntryBase {
     o : Before!AbstractToolEntry
   to
     m : After!AbstractToolEntry (
-%\highlight%      default <- o.default,
-%\highlight%      qualifiedToolName <- o.qualifiedToolName,
-%\highlight%      properties <- o.properties
+$\highlight$      default <- o.default,
+$\highlight$      qualifiedToolName <- o.qualifiedToolName,
+$\highlight$      properties <- o.properties
     )
 }
 rule ToolEntry2ToolEntry extends AbstractToolEntry2AbstractToolEntry {
@@ -616,8 +616,8 @@ rule ToolEntry2ToolEntry extends AbstractToolEntry2AbstractToolEntry {
     o : Before!ToolEntry
   to
     m : After!ToolEntry (
-%\highlight%      genNodes <- o.genNodes,
-%\highlight%      genLinks <- o.genLinks
+$\highlight$      genNodes <- o.genNodes,
+$\highlight$      genLinks <- o.genLinks
     )
 }
 rule StandardEntry2StandardEntry extends AbstractToolEntry2AbstractToolEntry {
@@ -625,7 +625,7 @@ rule StandardEntry2StandardEntry extends AbstractToolEntry2AbstractToolEntry {
     o : Before!StandardEntry
   to
     m : After!StandardEntry (
-%\highlight%      kind <- o.kind
+$\highlight$      kind <- o.kind
     )
 }
 abstract rule ToolGroupItem2ToolGroupItem {
@@ -645,10 +645,10 @@ rule ToolGroup2ToolGroup extends EntryBase2EntryBase {
     o : Before!ToolGroup
   to
     m : After!ToolGroup (
-%\highlight%      palette <- o.palette,
-%\highlight%      stack <- o.stack,
-%\highlight%      collapse <- o.collapse,
-%\highlight%      entries <- o.entries
+$\highlight$      palette <- o.palette,
+$\highlight$      stack <- o.stack,
+$\highlight$      collapse <- o.collapse,
+$\highlight$      entries <- o.entries
     )
 }
 abstract rule GenElementInitializer2GenElementInitializer {
@@ -662,8 +662,8 @@ rule GenFeatureSeqInitializer2GenFeatureSeqInitializer extends GenElementInitial
     o : Before!GenFeatureSeqInitializer
   to
     m : After!GenFeatureSeqInitializer (
-%\highlight%      initializers <- o.initializers,
-%\highlight%      elementClass <- o.elementClass
+$\highlight$      initializers <- o.initializers,
+$\highlight$      elementClass <- o.elementClass
     )
 }
 rule GenFeatureValueSpec2GenFeatureValueSpec extends GenFeatureInitializer2GenFeatureInitializer {
@@ -671,7 +671,7 @@ rule GenFeatureValueSpec2GenFeatureValueSpec extends GenFeatureInitializer2GenFe
     o : Before!GenFeatureValueSpec
   to
     m : After!GenFeatureValueSpec (
-%\highlight%      value <- o.value
+$\highlight$      value <- o.value
     )
 }
 rule GenReferenceNewElementSpec2GenReferenceNewElementSpec extends GenFeatureInitializer2GenFeatureInitializer {
@@ -679,7 +679,7 @@ rule GenReferenceNewElementSpec2GenReferenceNewElementSpec extends GenFeatureIni
     o : Before!GenReferenceNewElementSpec
   to
     m : After!GenReferenceNewElementSpec (
-%\highlight%      newElementInitializers <- o.newElementInitializers
+$\highlight$      newElementInitializers <- o.newElementInitializers
     )
 }
 abstract rule GenFeatureInitializer2GenFeatureInitializer {
@@ -687,7 +687,7 @@ abstract rule GenFeatureInitializer2GenFeatureInitializer {
     o : Before!GenFeatureInitializer
   to
     m : After!GenFeatureInitializer (
-%\highlight%      feature <- o.feature
+$\highlight$      feature <- o.feature
     )
 }
 rule GenLinkConstraints2GenLinkConstraints {
@@ -695,9 +695,9 @@ rule GenLinkConstraints2GenLinkConstraints {
     o : Before!GenLinkConstraints
   to
     m : After!GenLinkConstraints (
-%\highlight%      link <- o.link,
-%\highlight%      sourceEnd <- o.sourceEnd,
-%\highlight%      targetEnd <- o.targetEnd
+$\highlight$      link <- o.link,
+$\highlight$      sourceEnd <- o.sourceEnd,
+$\highlight$      targetEnd <- o.targetEnd
     )
 }
 rule GenAuditRoot2GenAuditRoot {
@@ -705,9 +705,9 @@ rule GenAuditRoot2GenAuditRoot {
     o : Before!GenAuditRoot
   to
     m : After!GenAuditRoot (
-%\highlight%      categories <- o.categories,
-%\highlight%      rules <- o.rules,
-%\highlight%      clientContexts <- o.clientContexts
+$\highlight$      categories <- o.categories,
+$\highlight$      rules <- o.rules,
+$\highlight$      clientContexts <- o.clientContexts
     )
 }
 rule GenAuditContainer2GenAuditContainer {
@@ -715,11 +715,11 @@ rule GenAuditContainer2GenAuditContainer {
     o : Before!GenAuditContainer
   to
     m : After!GenAuditContainer (
-%\highlight%      id <- o.id,
-%\highlight%      name <- o.name,
-%\highlight%      description <- o.description,
-%\highlight%      path <- o.path,
-%\highlight%      audits <- o.audits
+$\highlight$      id <- o.id,
+$\highlight$      name <- o.name,
+$\highlight$      description <- o.description,
+$\highlight$      path <- o.path,
+$\highlight$      audits <- o.audits
     )
 }
 abstract rule GenRuleBase2GenRuleBase {
@@ -727,8 +727,8 @@ abstract rule GenRuleBase2GenRuleBase {
     o : Before!GenRuleBase
   to
     m : After!GenRuleBase (
-%\highlight%      name <- o.name,
-%\highlight%      description <- o.description
+$\highlight$      name <- o.name,
+$\highlight$      description <- o.description
     )
 }
 rule GenAuditRule2GenAuditRule extends GenRuleBase2GenRuleBase {
@@ -736,13 +736,13 @@ rule GenAuditRule2GenAuditRule extends GenRuleBase2GenRuleBase {
     o : Before!GenAuditRule
   to
     m : After!GenAuditRule (
-%\highlight%      id <- o.id,
-%\highlight%      rule <- o.rule,
-%\highlight%      target <- o.target,
-%\highlight%      message <- o.message,
-%\highlight%      severity <- o.severity,
-%\highlight%      useInLiveMode <- o.useInLiveMode,
-%\highlight%      category <- o.category
+$\highlight$      id <- o.id,
+$\highlight$      rule <- o.rule,
+$\highlight$      target <- o.target,
+$\highlight$      message <- o.message,
+$\highlight$      severity <- o.severity,
+$\highlight$      useInLiveMode <- o.useInLiveMode,
+$\highlight$      category <- o.category
     )
 }
 abstract rule GenRuleTarget2GenRuleTarget {
@@ -756,7 +756,7 @@ rule GenDomainElementTarget2GenDomainElementTarget extends GenAuditable2GenAudit
     o : Before!GenDomainElementTarget
   to
     m : After!GenDomainElementTarget (
-%\highlight%      element <- o.element
+$\highlight$      element <- o.element
     )
 }
 rule GenDiagramElementTarget2GenDiagramElementTarget extends GenAuditable2GenAuditable {
@@ -764,7 +764,7 @@ rule GenDiagramElementTarget2GenDiagramElementTarget extends GenAuditable2GenAud
     o : Before!GenDiagramElementTarget
   to
     m : After!GenDiagramElementTarget (
-%\highlight%      element <- o.element
+$\highlight$      element <- o.element
     )
 }
 rule GenDomainAttributeTarget2GenDomainAttributeTarget extends GenAuditable2GenAuditable {
@@ -772,8 +772,8 @@ rule GenDomainAttributeTarget2GenDomainAttributeTarget extends GenAuditable2GenA
     o : Before!GenDomainAttributeTarget
   to
     m : After!GenDomainAttributeTarget (
-%\highlight%      attribute <- o.attribute,
-%\highlight%      nullAsError <- o.nullAsError
+$\highlight$      attribute <- o.attribute,
+$\highlight$      nullAsError <- o.nullAsError
     )
 }
 rule GenNotationElementTarget2GenNotationElementTarget extends GenAuditable2GenAuditable {
@@ -781,7 +781,7 @@ rule GenNotationElementTarget2GenNotationElementTarget extends GenAuditable2GenA
     o : Before!GenNotationElementTarget
   to
     m : After!GenNotationElementTarget (
-%\highlight%      element <- o.element
+$\highlight$      element <- o.element
     )
 }
 rule GenMetricContainer2GenMetricContainer {
@@ -789,7 +789,7 @@ rule GenMetricContainer2GenMetricContainer {
     o : Before!GenMetricContainer
   to
     m : After!GenMetricContainer (
-%\highlight%      metrics <- o.metrics
+$\highlight$      metrics <- o.metrics
     )
 }
 rule GenMetricRule2GenMetricRule extends GenRuleBase2GenRuleBase {
@@ -797,12 +797,12 @@ rule GenMetricRule2GenMetricRule extends GenRuleBase2GenRuleBase {
     o : Before!GenMetricRule
   to
     m : After!GenMetricRule (
-%\highlight%      key <- o.key,
-%\highlight%      rule <- o.rule,
-%\highlight%      target <- o.target,
-%\highlight%      lowLimit <- o.lowLimit,
-%\highlight%      highLimit <- o.highLimit,
-%\highlight%      container <- o.container
+$\highlight$      key <- o.key,
+$\highlight$      rule <- o.rule,
+$\highlight$      target <- o.target,
+$\highlight$      lowLimit <- o.lowLimit,
+$\highlight$      highLimit <- o.highLimit,
+$\highlight$      container <- o.container
     )
 }
 rule GenAuditedMetricTarget2GenAuditedMetricTarget extends GenAuditable2GenAuditable {
@@ -810,8 +810,8 @@ rule GenAuditedMetricTarget2GenAuditedMetricTarget extends GenAuditable2GenAudit
     o : Before!GenAuditedMetricTarget
   to
     m : After!GenAuditedMetricTarget (
-%\highlight%      metric <- o.metric,
-%\highlight%      metricValueContext <- o.metricValueContext
+$\highlight$      metric <- o.metric,
+$\highlight$      metricValueContext <- o.metricValueContext
     )
 }
 abstract rule GenAuditable2GenAuditable extends GenRuleTarget2GenRuleTarget {
@@ -819,7 +819,7 @@ abstract rule GenAuditable2GenAuditable extends GenRuleTarget2GenRuleTarget {
     o : Before!GenAuditable
   to
     m : After!GenAuditable (
-%\highlight%      contextSelector <- o.contextSelector
+$\highlight$      contextSelector <- o.contextSelector
     )
 }
 rule GenAuditContext2GenAuditContext {
@@ -827,10 +827,10 @@ rule GenAuditContext2GenAuditContext {
     o : Before!GenAuditContext
   to
     m : After!GenAuditContext (
-%\highlight%      root <- o.root,
-%\highlight%      id <- o.id,
-%\highlight%      className <- o.className,
-%\highlight%      ruleTargets <- o.ruleTargets
+$\highlight$      root <- o.root,
+$\highlight$      id <- o.id,
+$\highlight$      className <- o.className,
+$\highlight$      ruleTargets <- o.ruleTargets
     )
 }
 abstract rule GenMeasurable2GenMeasurable extends GenRuleTarget2GenRuleTarget {
@@ -844,9 +844,9 @@ rule GenExpressionProviderContainer2GenExpressionProviderContainer {
     o : Before!GenExpressionProviderContainer
   to
     m : After!GenExpressionProviderContainer (
-%\highlight%      expressionsPackageName <- o.expressionsPackageName,
-%\highlight%      abstractExpressionClassName <- o.abstractExpressionClassName,
-%\highlight%      providers <- o.providers
+$\highlight$      expressionsPackageName <- o.expressionsPackageName,
+$\highlight$      abstractExpressionClassName <- o.abstractExpressionClassName,
+$\highlight$      providers <- o.providers
     )
 }
 abstract rule GenExpressionProviderBase2GenExpressionProviderBase {
@@ -854,7 +854,7 @@ abstract rule GenExpressionProviderBase2GenExpressionProviderBase {
     o : Before!GenExpressionProviderBase
   to
     m : After!GenExpressionProviderBase (
-%\highlight%      expressions <- o.expressions
+$\highlight$      expressions <- o.expressions
     )
 }
 rule GenJavaExpressionProvider2GenJavaExpressionProvider extends GenExpressionProviderBase2GenExpressionProviderBase {
@@ -862,8 +862,8 @@ rule GenJavaExpressionProvider2GenJavaExpressionProvider extends GenExpressionPr
     o : Before!GenJavaExpressionProvider
   to
     m : After!GenJavaExpressionProvider (
-%\highlight%      throwException <- o.throwException,
-%\highlight%      injectExpressionBody <- o.injectExpressionBody
+$\highlight$      throwException <- o.throwException,
+$\highlight$      injectExpressionBody <- o.injectExpressionBody
     )
 }
 rule GenExpressionInterpreter2GenExpressionInterpreter extends GenExpressionProviderBase2GenExpressionProviderBase {
@@ -871,8 +871,8 @@ rule GenExpressionInterpreter2GenExpressionInterpreter extends GenExpressionProv
     o : Before!GenExpressionInterpreter
   to
     m : After!GenExpressionInterpreter (
-%\highlight%      language <- o.language,
-%\highlight%      className <- o.className
+$\highlight$      language <- o.language,
+$\highlight$      className <- o.className
     )
 }
 abstract rule GenDomainModelNavigator2GenDomainModelNavigator {
@@ -880,14 +880,14 @@ abstract rule GenDomainModelNavigator2GenDomainModelNavigator {
     o : Before!GenDomainModelNavigator
   to
     m : After!GenDomainModelNavigator (
-%\highlight%      generateDomainModelNavigator <- o.generateDomainModelNavigator,
-%\highlight%      domainContentExtensionID <- o.domainContentExtensionID,
-%\highlight%      domainContentExtensionName <- o.domainContentExtensionName,
-%\highlight%      domainContentExtensionPriority <- o.domainContentExtensionPriority,
-%\highlight%      domainContentProviderClassName <- o.domainContentProviderClassName,
-%\highlight%      domainLabelProviderClassName <- o.domainLabelProviderClassName,
-%\highlight%      domainModelElementTesterClassName <- o.domainModelElementTesterClassName,
-%\highlight%      domainNavigatorItemClassName <- o.domainNavigatorItemClassName
+$\highlight$      generateDomainModelNavigator <- o.generateDomainModelNavigator,
+$\highlight$      domainContentExtensionID <- o.domainContentExtensionID,
+$\highlight$      domainContentExtensionName <- o.domainContentExtensionName,
+$\highlight$      domainContentExtensionPriority <- o.domainContentExtensionPriority,
+$\highlight$      domainContentProviderClassName <- o.domainContentProviderClassName,
+$\highlight$      domainLabelProviderClassName <- o.domainLabelProviderClassName,
+$\highlight$      domainModelElementTesterClassName <- o.domainModelElementTesterClassName,
+$\highlight$      domainNavigatorItemClassName <- o.domainNavigatorItemClassName
     )
 }
 rule GenNavigator2GenNavigator extends GenDomainModelNavigator2GenDomainModelNavigator {
@@ -895,23 +895,23 @@ rule GenNavigator2GenNavigator extends GenDomainModelNavigator2GenDomainModelNav
     o : Before!GenNavigator
   to
     m : After!GenNavigator (
-%\highlight%      contentExtensionID <- o.contentExtensionID,
-%\highlight%      contentExtensionName <- o.contentExtensionName,
-%\highlight%      contentExtensionPriority <- o.contentExtensionPriority,
-%\highlight%      linkHelperExtensionID <- o.linkHelperExtensionID,
-%\highlight%      sorterExtensionID <- o.sorterExtensionID,
-%\highlight%      actionProviderID <- o.actionProviderID,
-%\highlight%      contentProviderClassName <- o.contentProviderClassName,
-%\highlight%      labelProviderClassName <- o.labelProviderClassName,
-%\highlight%      linkHelperClassName <- o.linkHelperClassName,
-%\highlight%      sorterClassName <- o.sorterClassName,
-%\highlight%      actionProviderClassName <- o.actionProviderClassName,
-%\highlight%      abstractNavigatorItemClassName <- o.abstractNavigatorItemClassName,
-%\highlight%      navigatorGroupClassName <- o.navigatorGroupClassName,
-%\highlight%      navigatorItemClassName <- o.navigatorItemClassName,
-%\highlight%      uriInputTesterClassName <- o.uriInputTesterClassName,
-%\highlight%      packageName <- o.packageName,
-%\highlight%      childReferences <- o.childReferences
+$\highlight$      contentExtensionID <- o.contentExtensionID,
+$\highlight$      contentExtensionName <- o.contentExtensionName,
+$\highlight$      contentExtensionPriority <- o.contentExtensionPriority,
+$\highlight$      linkHelperExtensionID <- o.linkHelperExtensionID,
+$\highlight$      sorterExtensionID <- o.sorterExtensionID,
+$\highlight$      actionProviderID <- o.actionProviderID,
+$\highlight$      contentProviderClassName <- o.contentProviderClassName,
+$\highlight$      labelProviderClassName <- o.labelProviderClassName,
+$\highlight$      linkHelperClassName <- o.linkHelperClassName,
+$\highlight$      sorterClassName <- o.sorterClassName,
+$\highlight$      actionProviderClassName <- o.actionProviderClassName,
+$\highlight$      abstractNavigatorItemClassName <- o.abstractNavigatorItemClassName,
+$\highlight$      navigatorGroupClassName <- o.navigatorGroupClassName,
+$\highlight$      navigatorItemClassName <- o.navigatorItemClassName,
+$\highlight$      uriInputTesterClassName <- o.uriInputTesterClassName,
+$\highlight$      packageName <- o.packageName,
+$\highlight$      childReferences <- o.childReferences
     )
 }
 rule GenNavigatorChildReference2GenNavigatorChildReference {
@@ -919,12 +919,12 @@ rule GenNavigatorChildReference2GenNavigatorChildReference {
     o : Before!GenNavigatorChildReference
   to
     m : After!GenNavigatorChildReference (
-%\highlight%      parent <- o.parent,
-%\highlight%      child <- o.child,
-%\highlight%      referenceType <- o.referenceType,
-%\highlight%      groupName <- o.groupName,
-%\highlight%      groupIcon <- o.groupIcon,
-%\highlight%      hideIfEmpty <- o.hideIfEmpty
+$\highlight$      parent <- o.parent,
+$\highlight$      child <- o.child,
+$\highlight$      referenceType <- o.referenceType,
+$\highlight$      groupName <- o.groupName,
+$\highlight$      groupIcon <- o.groupIcon,
+$\highlight$      hideIfEmpty <- o.hideIfEmpty
     )
 }
 rule GenNavigatorPath2GenNavigatorPath {
@@ -932,7 +932,7 @@ rule GenNavigatorPath2GenNavigatorPath {
     o : Before!GenNavigatorPath
   to
     m : After!GenNavigatorPath (
-%\highlight%      segments <- o.segments
+$\highlight$      segments <- o.segments
     )
 }
 rule GenNavigatorPathSegment2GenNavigatorPathSegment {
@@ -940,8 +940,8 @@ rule GenNavigatorPathSegment2GenNavigatorPathSegment {
     o : Before!GenNavigatorPathSegment
   to
     m : After!GenNavigatorPathSegment (
-%\highlight%      from <- o.from,
-%\highlight%      to <- o.to
+$\highlight$      from <- o.from,
+$\highlight$      to <- o.to
     )
 }
 rule GenPropertySheet2GenPropertySheet {
@@ -949,11 +949,11 @@ rule GenPropertySheet2GenPropertySheet {
     o : Before!GenPropertySheet
   to
     m : After!GenPropertySheet (
-%\highlight%      tabs <- o.tabs,
-%\highlight%      packageName <- o.packageName,
-%\highlight%      readOnly <- o.readOnly,
-%\highlight%      needsCaption <- o.needsCaption,
-%\highlight%      labelProviderClassName <- o.labelProviderClassName
+$\highlight$      tabs <- o.tabs,
+$\highlight$      packageName <- o.packageName,
+$\highlight$      readOnly <- o.readOnly,
+$\highlight$      needsCaption <- o.needsCaption,
+$\highlight$      labelProviderClassName <- o.labelProviderClassName
     )
 }
 abstract rule GenPropertyTab2GenPropertyTab {
@@ -961,8 +961,8 @@ abstract rule GenPropertyTab2GenPropertyTab {
     o : Before!GenPropertyTab
   to
     m : After!GenPropertyTab (
-%\highlight%      iD <- o.iD,
-%\highlight%      label <- o.label
+$\highlight$      iD <- o.iD,
+$\highlight$      label <- o.label
     )
 }
 rule GenStandardPropertyTab2GenStandardPropertyTab extends GenPropertyTab2GenPropertyTab {
@@ -976,8 +976,8 @@ rule GenCustomPropertyTab2GenCustomPropertyTab extends GenPropertyTab2GenPropert
     o : Before!GenCustomPropertyTab
   to
     m : After!GenCustomPropertyTab (
-%\highlight%      className <- o.className,
-%\highlight%      filter <- o.filter
+$\highlight$      className <- o.className,
+$\highlight$      filter <- o.filter
     )
 }
 abstract rule GenPropertyTabFilter2GenPropertyTabFilter {
@@ -991,8 +991,8 @@ rule TypeTabFilter2TypeTabFilter extends GenPropertyTabFilter2GenPropertyTabFilt
     o : Before!TypeTabFilter
   to
     m : After!TypeTabFilter (
-%\highlight%      types <- o.types,
-%\highlight%      generatedTypes <- o.generatedTypes
+$\highlight$      types <- o.types,
+$\highlight$      generatedTypes <- o.generatedTypes
     )
 }
 rule CustomTabFilter2CustomTabFilter extends GenPropertyTabFilter2GenPropertyTabFilter {
@@ -1000,7 +1000,7 @@ rule CustomTabFilter2CustomTabFilter extends GenPropertyTabFilter2GenPropertyTab
     o : Before!CustomTabFilter
   to
     m : After!CustomTabFilter (
-%\highlight%      className <- o.className
+$\highlight$      className <- o.className
     )
 }
 abstract rule GenContributionItem2GenContributionItem {
@@ -1014,7 +1014,7 @@ rule GenSharedContributionItem2GenSharedContributionItem extends GenContribution
     o : Before!GenSharedContributionItem
   to
     m : After!GenSharedContributionItem (
-%\highlight%      actualItem <- o.actualItem
+$\highlight$      actualItem <- o.actualItem
     )
 }
 rule GenGroupMarker2GenGroupMarker extends GenContributionItem2GenContributionItem {
@@ -1022,7 +1022,7 @@ rule GenGroupMarker2GenGroupMarker extends GenContributionItem2GenContributionIt
     o : Before!GenGroupMarker
   to
     m : After!GenGroupMarker (
-%\highlight%      groupName <- o.groupName
+$\highlight$      groupName <- o.groupName
     )
 }
 rule GenSeparator2GenSeparator extends GenContributionItem2GenContributionItem {
@@ -1030,7 +1030,7 @@ rule GenSeparator2GenSeparator extends GenContributionItem2GenContributionItem {
     o : Before!GenSeparator
   to
     m : After!GenSeparator (
-%\highlight%      groupName <- o.groupName
+$\highlight$      groupName <- o.groupName
     )
 }
 rule GenActionFactoryContributionItem2GenActionFactoryContributionItem extends GenContributionItem2GenContributionItem {
@@ -1038,7 +1038,7 @@ rule GenActionFactoryContributionItem2GenActionFactoryContributionItem extends G
     o : Before!GenActionFactoryContributionItem
   to
     m : After!GenActionFactoryContributionItem (
-%\highlight%      name <- o.name
+$\highlight$      name <- o.name
     )
 }
 abstract rule GenContributionManager2GenContributionManager extends GenContributionItem2GenContributionItem {
@@ -1046,8 +1046,8 @@ abstract rule GenContributionManager2GenContributionManager extends GenContribut
     o : Before!GenContributionManager
   to
     m : After!GenContributionManager (
-%\highlight%      iD <- o.iD,
-%\highlight%      items <- o.items
+$\highlight$      iD <- o.iD,
+$\highlight$      items <- o.items
     )
 }
 rule GenMenuManager2GenMenuManager extends GenContributionManager2GenContributionManager {
@@ -1055,7 +1055,7 @@ rule GenMenuManager2GenMenuManager extends GenContributionManager2GenContributio
     o : Before!GenMenuManager
   to
     m : After!GenMenuManager (
-%\highlight%      name <- o.name
+$\highlight$      name <- o.name
     )
 }
 rule GenToolBarManager2GenToolBarManager extends GenContributionManager2GenContributionManager {
@@ -1069,14 +1069,14 @@ rule GenApplication2GenApplication {
     o : Before!GenApplication
   to
     m : After!GenApplication (
-%\highlight%      iD <- o.iD,
-%\highlight%      title <- o.title,
-%\highlight%      packageName <- o.packageName,
-%\highlight%      className <- o.className,
-%\highlight%      perspectiveId <- o.perspectiveId,
-%\highlight%      supportFiles <- o.supportFiles,
-%\highlight%      sharedContributionItems <- o.sharedContributionItems,
-%\highlight%      mainMenu <- o.mainMenu,
-%\highlight%      mainToolBar <- o.mainToolBar
+$\highlight$      iD <- o.iD,
+$\highlight$      title <- o.title,
+$\highlight$      packageName <- o.packageName,
+$\highlight$      className <- o.className,
+$\highlight$      perspectiveId <- o.perspectiveId,
+$\highlight$      supportFiles <- o.supportFiles,
+$\highlight$      sharedContributionItems <- o.sharedContributionItems,
+$\highlight$      mainMenu <- o.mainMenu,
+$\highlight$      mainToolBar <- o.mainToolBar
     )
 }

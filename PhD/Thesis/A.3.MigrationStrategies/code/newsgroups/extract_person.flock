@@ -1,12 +1,12 @@
 migrate Article {
-%\highlight%	migrated.sender := original.sender.toPerson();
+$\highlight$	migrated.sender := original.sender.toPerson();
 }
 
 operation String toPerson() : Migrated!Person {
 	var person := new Migrated!Person;
 
-%\highlight%	person.name := self.toName();
-%\highlight%	person.email := self.toEmail();
+$\highlight$	person.name := self.toName();
+$\highlight$	person.email := self.toEmail();
 		
 	return person;
 }

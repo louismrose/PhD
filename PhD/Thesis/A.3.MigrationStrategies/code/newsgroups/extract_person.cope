@@ -1,13 +1,13 @@
 toPerson = { str ->
   def person = personClass.newInstance();
 
-%\highlight%  person.email = str.toEmail()
-%\highlight%  person.name  = str.toName()
+$\highlight$  person.email = str.toEmail()
+$\highlight$  person.name  = str.toName()
 
   return person
 }
 
 for (article in extractperson.Article.allInstances) {
-%\highlight%	def sender = article.unset(sender)
-%\highlight%  article.sender = toPerson(sender)
+$\highlight$	def sender = article.unset(sender)
+$\highlight$  article.sender = toPerson(sender)
 }

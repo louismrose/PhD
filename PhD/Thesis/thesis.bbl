@@ -478,11 +478,6 @@ IBM.
 \newblock [Accessed 30 June 2008] Available at:
   \url{http://wiki.eclipse.org/AMMA}, 2007.
 
-\bibitem[IRISA 2007]{sintaks}{$~$}
-IRISA.
-\newblock {Sintaks}.
-\newblock \url{http://www.kermeta.org/sintaks/}, 2007.
-
 \bibitem[ISO/IEC 1996]{ebnf}{$~$}
 Information~Technology ISO/IEC.
 \newblock {Syntactic metalanguage -- Extended BNF}.
@@ -1058,7 +1053,7 @@ Laurence Tratt.
 \newblock A change propagating model transformation language.
 \newblock {\em Journal of Object Technology}, 7(3):107--124, 2008.
 
-\bibitem[Varr\'{o} \& Balogh 2007]{viatra}{$~$}
+\bibitem[Varr\'{o} \& Balogh 2007]{VIATRA}{$~$}
 D\'{a}niel Varr\'{o} and Andr\'{a}s Balogh.
 \newblock The model transformation language of the {VIATRA2} framework.
 \newblock {\em Science of Computer Programming}, 68(3):187--207, 2007.

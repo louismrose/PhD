@@ -1,33 +1,33 @@
 migrate FigureGallery {
 	while (not migrated.figures.isEmpty()) {
-%\highlight%		migrated.descriptors.add(migrated.figures.first.createDescriptor());
+$\highlight$		migrated.descriptors.add(migrated.figures.first.createDescriptor());
 	}
 }
 
 migrate Compartment {
-%\highlight%	migrated.figure := original.figure.equivalent().~descriptor;
+$\highlight$	migrated.figure := original.figure.equivalent().~descriptor;
 }
 
 migrate Connection {
-%\highlight%	migrated.figure := original.figure.equivalent().~descriptor;
+$\highlight$	migrated.figure := original.figure.equivalent().~descriptor;
 }
 
 migrate DiagramLabel {
-%\highlight%	migrated.figure   := original.figure.equivalent().~descriptor;
-%\highlight%	migrated.accessor := original.figure.equivalent().~accessor;
+$\highlight$	migrated.figure   := original.figure.equivalent().~descriptor;
+$\highlight$	migrated.accessor := original.figure.equivalent().~accessor;
 }
 
 migrate Node {
-%\highlight%	migrated.figure := original.figure.equivalent().~descriptor;
+$\highlight$	migrated.figure := original.figure.equivalent().~descriptor;
 }
 
 operation Migrated!Figure createDescriptor() : Migrated!FigureDescriptor {
 	var descriptor := new Migrated!FigureDescriptor;
 	
-%\highlight%	descriptor.name := self.name;
-%\highlight%	descriptor.actualFigure := self;
+$\highlight$	descriptor.name := self.name;
+$\highlight$	descriptor.actualFigure := self;
 	
-%\highlight%	self.~descriptor := descriptor;
+$\highlight$	self.~descriptor := descriptor;
 	
 	self.children.forAll(l : Migrated!Label | l.addAccessor(descriptor));
 	
@@ -37,8 +37,8 @@ operation Migrated!Figure createDescriptor() : Migrated!FigureDescriptor {
 operation Migrated!Label addAccessor(descriptor : Migrated!FigureDescriptor) {
 	var accessor := new Migrated!ChildAccess;
 	
-%\highlight%	accessor.figure := self;
-%\highlight%	self.~descriptor := descriptor;
-%\highlight%	self.~accessor   := accessor;
-%\highlight%	descriptor.accessors.add(accessor);
+$\highlight$	accessor.figure := self;
+$\highlight$	self.~descriptor := descriptor;
+$\highlight$	self.~accessor   := accessor;
+$\highlight$	descriptor.accessors.add(accessor);
 }

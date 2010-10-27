@@ -7,7 +7,7 @@ rule Newsgroups {
 		o : Before!Newsgroup
 	to
 		m : After!Newsgroup (
-%\highlight%			articles <- o.articles
+$\highlight$			articles <- o.articles
 		)
 }
 
@@ -16,15 +16,15 @@ rule Articles {
 		o : Before!Article
 	to
 		m : After!Article (
-%\highlight%			articleId  <- o.articleId,
-%\highlight%			subject    <- o.subject,
-%\highlight%			newsgroups <- o.newsgroups,
-%\highlight%			inReplyTo  <- o.inReplyTo,
-%\highlight%			date       <- o.date,
-%\highlight%			sender     <- p
+$\highlight$			articleId  <- o.articleId,
+$\highlight$			subject    <- o.subject,
+$\highlight$			newsgroups <- o.newsgroups,
+$\highlight$			inReplyTo  <- o.inReplyTo,
+$\highlight$			date       <- o.date,
+$\highlight$			sender     <- p
 		),
 		p : After!Person (
-%\highlight%			name  <- o.sender.toName(),
-%\highlight%			email <- o.sender.toEmail()
+$\highlight$			name  <- o.sender.toName(),
+$\highlight$			email <- o.sender.toEmail()
 		)
 }
