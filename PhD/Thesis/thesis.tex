@@ -10,6 +10,13 @@
 \usepackage{color}
 \usepackage{pdflscape}
 
+% When the following error is reported, comment out
+% the appendices, recompile, comment in the appendices,
+% and then recompile:
+%  "Paragraph ended before \Hy@setref@link was complete"
+\usepackage{hyperref}
+
+
 \include{university_regulations}
 \include{front_matter_commands}
 \include{Listings/listings}
@@ -17,7 +24,6 @@
 
 \include{title}
 
-\includeonly{4.Analysis/analysis,5.Implementation/implementation}
 % \includeonly{6.Evaluation/evaluation,A.4.TTCScores/ttc_scores}
 
 \begin{document}
@@ -37,7 +43,7 @@
 
 
 \appendix
-\include{A.1.Experiments/experiments}
+% \include{A.1.Experiments/experiments}
 \include{A.2.ProcessOriented/process_oriented}
 \include{A.3.MigrationStrategies/migration_strategies}
 \include{A.4.TTCScores/ttc_scores}

@@ -1,5 +1,17 @@
 \relax 
 \providecommand*{\memsetcounter}[2]{}
+\ifx\hyper@anchor\@undefined
+\global \let \oldcontentsline\contentsline
+\gdef \contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global \let \oldnewlabel\newlabel
+\gdef \newlabel#1#2{\newlabelxx{#1}#2}
+\gdef \newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\let \contentsline\oldcontentsline
+\let \newlabel\oldnewlabel}
+\else
+\global \let \hyper@last\relax 
+\fi
+
 \@input{0.FrontMatter/front_matter.aux}
 \@input{1.Introduction/introduction.aux}
 \@input{2.Background/background.aux}
@@ -8,7 +20,6 @@
 \@input{5.Implementation/implementation.aux}
 \@input{6.Evaluation/evaluation.aux}
 \@input{7.Conclusion/conclusion.aux}
-\@input{A.1.Experiments/experiments.aux}
 \@input{A.2.ProcessOriented/process_oriented.aux}
 \@input{A.3.MigrationStrategies/migration_strategies.aux}
 \@input{A.4.TTCScores/ttc_scores.aux}
@@ -24,7 +35,7 @@
 \bibcite{backus78history}{Backus 1978}
 \bibcite{balazinska00advanced}{Balazinska {\it  et al.}\ 2000}
 \bibcite{banerjee87semantics}{Banerjee {\it  et al.}\ 1987}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{289}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{287}{section*.198}}
 \bibcite{beck89constructing}{Beck \& Cunningham 1989}
 \bibcite{bezivin01definition}{B{\'e}zivin \& Gerb{\'e} 2001}
 \bibcite{bezivin05unification}{B{\'e}zivin 2005}
@@ -204,5 +215,5 @@
 \bibcite{occam_pi}{Welch \& Barnes 2005}
 \bibcite{winkler09survey}{Winkler \& Pilgrim 2009}
 \bibstyle{longname}
-\memsetcounter{lastsheet}{323}
-\memsetcounter{lastpage}{305}
+\memsetcounter{lastsheet}{321}
+\memsetcounter{lastpage}{303}

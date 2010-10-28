@@ -8,7 +8,6 @@ A level-1 auxiliary file: 4.Analysis/analysis.aux
 A level-1 auxiliary file: 5.Implementation/implementation.aux
 A level-1 auxiliary file: 6.Evaluation/evaluation.aux
 A level-1 auxiliary file: 7.Conclusion/conclusion.aux
-A level-1 auxiliary file: A.1.Experiments/experiments.aux
 A level-1 auxiliary file: A.2.ProcessOriented/process_oriented.aux
 A level-1 auxiliary file: A.3.MigrationStrategies/migration_strategies.aux
 A level-1 auxiliary file: A.4.TTCScores/ttc_scores.aux
@@ -89,7 +88,7 @@ Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 You've used 189 entries,
             2472 wiz_defined-function locations,
-            1422 strings with 31848 characters,
+            1421 strings with 31817 characters,
 and the built_in function-call counts, 74120 in all, are:
 = -- 7462
 > -- 2793
