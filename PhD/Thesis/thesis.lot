@@ -15,12 +15,12 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {C.1}{\ignorespaces Correctness scores (in the range -1 to 2).}}{282}{table.C.1}
-\contentsline {table}{\numberline {C.2}{\ignorespaces Conciseness scores (in the range -2 to 2).}}{282}{table.C.2}
-\contentsline {table}{\numberline {C.3}{\ignorespaces Clarity scores (in the range -1 to 1).}}{283}{table.C.3}
-\contentsline {table}{\numberline {C.4}{\ignorespaces Appropriateness scores (in the range -2 to 2).}}{283}{table.C.4}
-\contentsline {table}{\numberline {C.5}{\ignorespaces Tool maturity scores (in the range -1 to 1).}}{284}{table.C.5}
-\contentsline {table}{\numberline {C.6}{\ignorespaces Reproducibility scores (in the range 0 to 1).}}{284}{table.C.6}
-\contentsline {table}{\numberline {C.7}{\ignorespaces Extensions scores (in the range 0 to 2).}}{285}{table.C.7}
-\contentsline {table}{\numberline {C.8}{\ignorespaces Total (equally weighted) scores (in the range -7 to 11).}}{285}{table.C.8}
-\contentsline {table}{\numberline {C.9}{\ignorespaces Total (weighted) scores (in the range -24 to 37).}}{286}{table.C.9}
+\contentsline {table}{\numberline {C.1}{\ignorespaces Correctness scores}}{282}{table.C.1}
+\contentsline {table}{\numberline {C.2}{\ignorespaces Conciseness scores}}{282}{table.C.2}
+\contentsline {table}{\numberline {C.3}{\ignorespaces Clarity scores}}{283}{table.C.3}
+\contentsline {table}{\numberline {C.4}{\ignorespaces Appropriateness scores}}{283}{table.C.4}
+\contentsline {table}{\numberline {C.5}{\ignorespaces Tool maturity scores}}{284}{table.C.5}
+\contentsline {table}{\numberline {C.6}{\ignorespaces Reproducibility scores}}{284}{table.C.6}
+\contentsline {table}{\numberline {C.7}{\ignorespaces Extensions scores}}{285}{table.C.7}
+\contentsline {table}{\numberline {C.8}{\ignorespaces Total (equally weighted) scores}}{285}{table.C.8}
+\contentsline {table}{\numberline {C.9}{\ignorespaces Total (weighted) scores}}{286}{table.C.9}

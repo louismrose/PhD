@@ -20,13 +20,13 @@ Development began by identifying two key concepts for modelling process-oriented
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[scale=0.75]{A.2.ProcessOriented/images/1_mm.pdf}
-	\caption{The process-oriented metamodel after the first iteration.}
+	\caption{The process-oriented metamodel after one iteration.}
 	\label{fig:po_it1_mm}
 \end{figure}
 
 Additionally, a graphical concrete syntax was chosen for processes and channels. The former were represented as boxes, and the latter as lines. EuGENia annotations were added to the metamodel, resulting in the metamodel shown in Listing~\ref{lst:po_it1_mm}. Line 1 of Listing~\ref{lst:po_it1_mm} uses the ``@gmf.node'' EuGENia annotation to indicate that processes are to be represented as boxes with a label equal to the value of the \texttt{name} feature. Line 9 uses the ``@gmf.link'' EuGENia annotation to indicate that channels are to be represented as lines between \texttt{source} and \texttt{target} processes with a label equal to the value of the \texttt{name} feature. 
 
-\begin{lstlisting}[caption=The annotated process-oriented metamodel after the first iteration, label=lst:po_it1_mm, language=Emfatic]
+\begin{lstlisting}[caption=The annotated process-oriented metamodel after one iteration, label=lst:po_it1_mm, language=Emfatic]
 @gmf.node(label="name")
 class Process {
    attr String name;
@@ -53,13 +53,13 @@ In the second iteration, an additional metaclass, \texttt{Model}, was added to t
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[scale=0.75]{A.2.ProcessOriented/images/2_mm.pdf}
-	\caption{The process-oriented metamodel after the second iteration.}
+	\caption{The process-oriented metamodel after two iterations.}
 	\label{fig:po_it2_mm}
 \end{figure}
 
 As shown in Listing~\ref{lst:po_it1_mm}, the \texttt{Model} metaclass was annotated with ``@gmf.diagram'' to indicate that it should be used as the diagram's root element. Root elements do not have a concrete syntax and do not appear in the graphical editor.
 
-\begin{lstlisting}[caption=The annotated process-oriented metamodel after the second iteration, label=lst:po_it2_mm, language=Emfatic]
+\begin{lstlisting}[caption=The annotated process-oriented metamodel after two iterations, label=lst:po_it2_mm, language=Emfatic]
 @gmf.diagram
 class Model {
    val Process[*] processes;
@@ -97,7 +97,7 @@ In previous iterations, channels had been contained within their source process.
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[scale=0.75]{A.2.ProcessOriented/images/3_mm.pdf}
-	\caption{The process-oriented metamodel after the third iteration.}
+	\caption{The process-oriented metamodel after three iterations.}
 	\label{fig:po_it3_mm}
 \end{figure}
 
@@ -137,7 +137,7 @@ The iteration resulted in the metamodel shown in Figure~\ref{fig:po_it4_mm}. \te
 
 To specify concrete syntax for connection points, additional EuGENia annotations were added to the metamodel as shown in Listing~\ref{lst:po_it4_mm}. The \texttt{Co\-nn\-ec\-ti\-o\-nP\-oi\-nt} class was annotated with a ``@gmf.node'' to specify that connections points were to be represented as circles, labelled with the value of the \texttt{name} attribute. The circles were to be affixed to the boxes used to represent processes, and, hence, ``@gmf.affixed'' annotations are used on lines 12 and 15.
 
-\begin{lstlisting}[caption=The annotated process-oriented metamodel after the fourth iteration, label=lst:po_it4_mm, language=Emfatic]
+\begin{lstlisting}[caption=The annotated process-oriented metamodel after four iterations, label=lst:po_it4_mm, language=Emfatic]
 @gmf.diagram
 class Model {
    val Process[*] processes;
@@ -207,13 +207,13 @@ The iteration resulted in the metamodel shown in Figure~\ref{fig:po_it5_mm}. \te
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[scale=0.75]{A.2.ProcessOriented/images/5_mm.pdf}
-	\caption{The process-oriented metamodel after the fifth iteration.}
+	\caption{The process-oriented metamodel after five iterations.}
 	\label{fig:po_it5_mm}
 \end{figure}
 
 The graphical notation was changed, as shown in Listing~\ref{lst:po_it5_mm}. The \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nP\-oi\-nt} class was annotated with an additional colour attribute to specify that writing connection points were to be represented with a black circle. White is the default colour for a ``@gmf.node'' annotation, and so reading connection points were represented as white circles.
 
-\begin{lstlisting}[caption=The annotated process-oriented metamodel after the fifth iteration, label=lst:po_it5_mm, language=Emfatic]
+\begin{lstlisting}[caption=The annotated process-oriented metamodel after five iterations, label=lst:po_it5_mm, language=Emfatic]
 @gmf.diagram
 class Model {
    val Process[*] processes;
@@ -277,13 +277,13 @@ To support the decomposition of processes into other processes and channels, the
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[scale=0.75]{A.2.ProcessOriented/images/6_mm.pdf}
-	\caption{The process-oriented metamodel after the final iteration.}
+	\caption{The process-oriented metamodel after six iterations.}
 	\label{fig:po_it6_mm}
 \end{figure}
 
 As shown in Listing~\ref{lst:po_it6_mm}, the ``@gmf.compartment'' annotation was added to the \texttt{ne\-st\-edPr\-oc\-e\-ss} to indicate that processes can be placed inside other processes in the graphical editor.
 
-\begin{lstlisting}[caption=The annotated process-oriented metamodel after the final iteration, label=lst:po_it6_mm, language=Emfatic]
+\begin{lstlisting}[caption=The annotated process-oriented metamodel after six iterations, label=lst:po_it6_mm, language=Emfatic]
 @gmf.diagram
 class Model {
    val Process[*] processes;

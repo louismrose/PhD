@@ -85,7 +85,7 @@
 \contentsline {paragraph}{Co-evolution approaches}{62}{section*.43}
 \contentsline {paragraph}{Summary}{64}{section*.44}
 \contentsline {subsubsection}{Visualisation}{64}{section*.45}
-\contentsline {section}{\numberline {3.3}Summary}{64}{section.3.3}
+\contentsline {section}{\numberline {3.3}Chapter Summary}{64}{section.3.3}
 \contentsline {paragraph}{Model Refactoring Challenges}{65}{section*.46}
 \contentsline {paragraph}{Model Synchronisation Challenges}{66}{section*.47}
 \contentsline {paragraph}{Model-Metamodel Co-evolution Challenges}{66}{section*.48}
@@ -150,7 +150,7 @@
 \contentsline {paragraph}{AST Model to Intermediate Model}{105}{section*.82}
 \contentsline {paragraph}{Intermediate Model Validation}{106}{section*.83}
 \contentsline {paragraph}{Intermediate Model to Target Model}{106}{section*.84}
-\contentsline {subsection}{\numberline {5.2.3}Migration with HUTN}{109}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.3}Migration with HUTN}{108}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Limitations}{110}{subsection.5.2.4}
 \contentsline {subsubsection}{Generic vs specific concrete syntax}{110}{section*.85}
 \contentsline {subsubsection}{Optimised XMI omits type information}{111}{section*.86}
@@ -159,7 +159,7 @@
 \contentsline {subsection}{\numberline {5.3.1}Co-Evolution Example}{112}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Existing Approaches}{113}{subsection.5.3.2}
 \contentsline {subsubsection}{Manual Specification with Model-to-Model Transformation}{113}{section*.87}
-\contentsline {subsubsection}{Manual Specification with Ecore2Ecore Mapping}{115}{section*.88}
+\contentsline {subsubsection}{Manual Specification with Ecore2Ecore Mapping}{114}{section*.88}
 \contentsline {subsubsection}{Operator-based Co-evolution with COPE}{116}{section*.89}
 \contentsline {subsection}{\numberline {5.3.3}Requirements Identification}{118}{subsection.5.3.3}
 \contentsline {subsubsection}{Source-Target Relationship}{118}{section*.90}
@@ -295,7 +295,7 @@
 \contentsline {paragraph}{Generality}{199}{section*.190}
 \contentsline {paragraph}{Reproducibility}{199}{section*.191}
 \contentsline {paragraph}{Formal semantics}{199}{section*.192}
-\contentsline {section}{\numberline {6.6}Summary}{200}{section.6.6}
+\contentsline {section}{\numberline {6.6}Chapter Summary}{200}{section.6.6}
 \contentsline {chapter}{\chapternumberline {7}Conclusions}{201}{chapter.7}
 \contentsline {section}{\numberline {7.1}Research Contributions}{202}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Investigation of Evolution in MDE Projects}{202}{subsection.7.1.1}
@@ -315,7 +315,7 @@
 \contentsline {appendix}{\chapternumberline {A}A Graphical Editor for Process-Oriented Programs}{209}{appendix.A}
 \contentsline {section}{\numberline {A.1}Iteration 1: Processes and Channels}{210}{section.A.1}
 \contentsline {section}{\numberline {A.2}Iteration 2: Interoperability with GMF}{211}{section.A.2}
-\contentsline {section}{\numberline {A.3}Iteration 3: Shared Channels}{212}{section.A.3}
+\contentsline {section}{\numberline {A.3}Iteration 3: Shared Channels}{213}{section.A.3}
 \contentsline {section}{\numberline {A.4}Iteration 4: Connection Points}{215}{section.A.4}
 \contentsline {section}{\numberline {A.5}Iteration 5: Connection Point Types}{219}{section.A.5}
 \contentsline {section}{\numberline {A.6}Iteration 6: Nested Processes and Channels}{222}{section.A.6}
