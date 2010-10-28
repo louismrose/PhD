@@ -256,13 +256,13 @@
 \contentsline {paragraph}{Flock.}{179}{section*.159}
 \contentsline {subsubsection}{Interoperability}{179}{section*.160}
 \contentsline {paragraph}{AML}{179}{section*.161}
-\contentsline {paragraph}{COPE}{180}{section*.162}
+\contentsline {paragraph}{COPE}{179}{section*.162}
 \contentsline {paragraph}{Ecore2Ecore}{180}{section*.163}
 \contentsline {paragraph}{Flock}{180}{section*.164}
 \contentsline {subsubsection}{Performance}{180}{section*.165}
-\contentsline {subsection}{\numberline {6.3.3}Discussion}{181}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}Discussion}{180}{subsection.6.3.3}
 \contentsline {subsubsection}{Strengths and Weaknesses of Flock}{182}{section*.166}
-\contentsline {paragraph}{Strengths}{183}{section*.167}
+\contentsline {paragraph}{Strengths}{182}{section*.167}
 \contentsline {paragraph}{Weaknesses}{183}{section*.168}
 \contentsline {subsection}{\numberline {6.3.4}Summary}{184}{subsection.6.3.4}
 \contentsline {section}{\numberline {6.4}Transformation Tools Contest}{184}{section.6.4}
