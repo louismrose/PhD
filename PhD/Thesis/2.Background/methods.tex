@@ -7,7 +7,7 @@ For performing MDE, new engineering practices and processes have been proposed. 
 \subsection{Model-Driven Architecture (MDA)}
 Model-Driven Architecture (MDA) is a software engineering framework defined by the OMG. MDA provides guidelines for MDE. For instance, MDA prescribes the use of a Platform Independent Model (PIM) and one or more Platform Specific Models (PSMs).
 
-A PIM provides an abstract, implementation-agnostic view of the solution. Successive PSMs provide increasingly more implementation detail. Inter-model mappings are used to forward- and reverse-engineer these models, as depicted in
+A PIM provides an abstract, implementation-agnostic view of a system. Successive PSMs provide increasingly more implementation detail. Inter-model mappings are used to forward- and reverse-engineer these models, as depicted in
 Figure \ref{fig:mda}.
 
 \begin{figure}[htbp]
@@ -22,7 +22,7 @@ Figure \ref{fig:mda}.
 A key difference between MDA and related approaches, such as round-trip engineering (in which models and code are co-evolved to develop a system), is that MDA prescribes automated transformations between PIM and PSMs, whereas other approaches use some manual transformations.
 
 \subsubsection{Standards for MDA}
-As part of the guidelines for MDE, the MDA prescribes a set of standards. The standards are allocated to one of four tiers, and each tier represents a different levels of model abstraction. Members of one tier conform to a member of the tier above. The four tiers described in the MDA are shown in Figure \ref{fig:mda-pyramid}, and a short discussion based on \cite[Section 8.2]{kleppe03mda} follows.
+As part of the guidelines for MDE, the MDA prescribes a set of standards. The standards are allocated to one of four tiers, and each tier represents a different level of model abstraction. Members of one tier conform to a member of the tier above. The four tiers described in the MDA are shown in Figure \ref{fig:mda-pyramid}, and a short discussion based on \cite[Section 8.2]{kleppe03mda} follows.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -45,7 +45,7 @@ The base of the pyramid, tier M0, contains the domain (real-world). When modelli
 
 Translationists must encode behaviour in their PIMs \cite{mellor02executable}, whereas elaborationists have a choice, frequently electing to specify behaviour in PSMs or in code \cite{kleppe03mda}.
 
-The difference between translationist and elaborationist approaches to MDE is related to a difference in the way in which models are viewed in traditional approaches to software engineering. For example, \cite{evans04domain} proposes the use of models throughout the development process, and the way in which code is structured is driven by the model. By contrast, \cite[ch14]{martin06agile} prescribes modelling only for communicating and reasoning about a design, and not ``as a long-term replacement for real, working software''. Rather \cite{martin06agile} advocates using models to quickly compare different ways in which a system might be structured and then to disregard those models in favour of working code.
+The difference between translationist and elaborationist approaches to MDE is related to a difference in the way in which models are viewed in traditional approaches to software engineering. For example, \cite{evans04domain} proposes the use of models throughout the development process, and the way in which code is structured is driven by the model. By contrast, \cite[ch14]{martin06agile} prescribes modelling only for communicating and reasoning about a design, and not ``as a long-term replacement for real, working software''. Rather \cite{martin06agile} advocate using models to quickly compare different ways in which a system might be structured and then to disregard those models in favour of working code.
 
 % \subsection{Models in Software Engineering}
 % 
@@ -79,7 +79,7 @@ The difference between translationist and elaborationist approaches to MDE is re
 Several methods for MDE are prevalent today. In this section, three of the most established MDE methods are discussed: Architecture-Centric Model-Driven Software Development \cite{stahl06mdsd}, Domain-Specific Modelling \cite{kelly08dsm} and Microsoft's Software Factories \cite{greenfield04software}. All three methods have been defined by MDE practitioners, and have been used repeatedly to solve problems in industry. The methods vary in the extent to which they follow the guidelines set out by MDA.
 
 \subsubsection{Architecture-Centric Model-Driven Software Development}
-Model-Driven Software Development is the term given to MDE by in \cite{stahl06mdsd}. The style of MDE that \cite{stahl06mdsd} describes, \textit{architecture-centric model-driven software development} (AC-MDSD), focuses on generating the infrastructure of large-scale applications. For example, a typical J2EE application contains concepts (such as EJBs, descriptors, home and remote interfaces) that ``admittedly contain domain-related information such as method signatures, but which also exhibit a high degree of redundancy'' \cite{stahl06mdsd}. It is this redundancy that AC-MDSD seeks to remove by using code generators, requiring only the domain-related information to be specified.
+Model-Driven Software Development is the term given to MDE by \cite{stahl06mdsd}. The style of MDE that \cite{stahl06mdsd} describes, \textit{architecture-centric model-driven software development} (AC-MDSD), focuses on generating the infrastructure of large-scale applications. For example, a typical J2EE application contains concepts (such as EJBs, descriptors, home and remote interfaces) that ``admittedly contain domain-related information such as method signatures, but which also exhibit a high degree of redundancy'' \cite{stahl06mdsd}. It is this redundancy that AC-MDSD seeks to remove by using code generators, requiring only the domain-related information to be specified.
 
 AC-MDSD applies more of the MDA guidelines than the other methods discussed below. For instance, AC-MDSD supports the use of a general-purpose modelling language for specifying models. \cite{stahl06mdsd} utilise UML in many of their examples, which demonstrate how AC-MDSD may be used to enhance the productivity, efficiency and understandability of software development. In these examples, models are annotated using UML profiles to describe domain-specific concepts.
 
