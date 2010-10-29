@@ -182,58 +182,58 @@
 \contentsline {section}{\numberline {5.5}Chapter Summary}{130}{section.5.5}
 \contentsline {chapter}{\chapternumberline {6}Evaluation}{133}{chapter.6}
 \contentsline {section}{\numberline {6.1}Evaluating User-Driven Co-Evolution}{134}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Challenges for Performing User-Driven Co-Evolution}{134}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.1}Challenges for Performing User-Driven Co-Evolution}{135}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Co-Evolution Example}{135}{subsection.6.1.2}
-\contentsline {subsubsection}{Aim of Iteration 5}{137}{section*.104}
+\contentsline {subsubsection}{Aim of Iteration 5}{136}{section*.104}
 \contentsline {subsubsection}{Implementation during Iteration 5}{138}{section*.105}
 \contentsline {subsubsection}{Testing during Iteration 5}{139}{section*.106}
 \contentsline {subsection}{\numberline {6.1.3}User-Driven Co-Evolution with EMF}{140}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}User-Driven Co-Evolution with Dedicated Structures}{143}{subsection.6.1.4}
-\contentsline {subsection}{\numberline {6.1.5}Comparison}{146}{subsection.6.1.5}
-\contentsline {subsubsection}{Differences in modelling notation}{147}{section*.107}
-\contentsline {subsubsection}{Differences in conformance reports}{147}{section*.108}
+\contentsline {subsection}{\numberline {6.1.4}User-Driven Co-Evolution with Dedicated Structures}{144}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}Comparison}{145}{subsection.6.1.5}
+\contentsline {subsubsection}{Differences in modelling notation}{146}{section*.107}
+\contentsline {subsubsection}{Differences in conformance reports}{148}{section*.108}
 \contentsline {subsection}{\numberline {6.1.6}Towards a more thorough comparison}{148}{subsection.6.1.6}
-\contentsline {subsection}{\numberline {6.1.7}Summary}{148}{subsection.6.1.7}
+\contentsline {subsection}{\numberline {6.1.7}Summary}{149}{subsection.6.1.7}
 \contentsline {section}{\numberline {6.2}Evaluating Conservative Copy}{149}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Styles of Source-Target Relationship}{150}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Equipment}{150}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.2}Equipment}{151}{subsection.6.2.2}
 \contentsline {subsubsection}{Co-evolution Examples}{151}{section*.109}
-\contentsline {subsubsection}{Reference Implementations Used in the Comparison}{151}{section*.110}
-\contentsline {paragraph}{New-target}{151}{section*.111}
+\contentsline {subsubsection}{Reference Implementations Used in the Comparison}{152}{section*.110}
+\contentsline {paragraph}{New-target}{152}{section*.111}
 \contentsline {paragraph}{Existing-target}{152}{section*.112}
-\contentsline {subsection}{\numberline {6.2.3}Method}{152}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.3}Method}{153}{subsection.6.2.3}
 \contentsline {subsubsection}{Language-Independent Model Operations}{153}{section*.113}
-\contentsline {subsubsection}{Model Operations in ATL, Groovy-for-COPE and Flock}{153}{section*.114}
+\contentsline {subsubsection}{Model Operations in ATL, Groovy-for-COPE and Flock}{154}{section*.114}
 \contentsline {paragraph}{New-target in ATL}{154}{section*.115}
-\contentsline {paragraph}{Existing-target in Groovy-for-COPE}{154}{section*.116}
+\contentsline {paragraph}{Existing-target in Groovy-for-COPE}{155}{section*.116}
 \contentsline {paragraph}{Conservative Copy in Epsilon Flock}{155}{section*.117}
-\contentsline {subsubsection}{Development and Testing of Method}{155}{section*.118}
-\contentsline {subsection}{\numberline {6.2.4}Results}{156}{subsection.6.2.4}
+\contentsline {subsubsection}{Development and Testing of Method}{156}{section*.118}
+\contentsline {subsection}{\numberline {6.2.4}Results}{159}{subsection.6.2.4}
 \contentsline {subsubsection}{Investigation of results}{160}{section*.119}
 \contentsline {subsubsection}{Limitation 1: Duplication when migrating subtypes}{162}{section*.120}
 \contentsline {subsubsection}{Limitation 2: Side-effects during initialisation}{165}{section*.121}
 \contentsline {subsection}{\numberline {6.2.5}Summary}{168}{subsection.6.2.5}
-\contentsline {section}{\numberline {6.3}Evaluating Co-evolution Tools}{168}{section.6.3}
+\contentsline {section}{\numberline {6.3}Evaluating Co-evolution Tools}{169}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Comparison Method}{170}{subsection.6.3.1}
 \contentsline {subsubsection}{Co-Evolution Examples}{170}{section*.122}
 \contentsline {paragraph}{Petri Nets.}{170}{section*.123}
 \contentsline {paragraph}{GMF.}{171}{section*.124}
 \contentsline {subsubsection}{Compared Tools}{171}{section*.125}
 \contentsline {subsubsection}{Comparison Process}{172}{section*.126}
-\contentsline {subsection}{\numberline {6.3.2}Comparison Results}{173}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Comparison Results}{174}{subsection.6.3.2}
 \contentsline {subsubsection}{Constructing the migration strategy}{174}{section*.127}
 \contentsline {paragraph}{AML.}{174}{section*.128}
 \contentsline {paragraph}{COPE.}{174}{section*.129}
 \contentsline {paragraph}{Ecore2Ecore.}{175}{section*.130}
 \contentsline {paragraph}{Flock.}{175}{section*.131}
 \contentsline {subsubsection}{Changing the migration strategy}{175}{section*.132}
-\contentsline {paragraph}{AML.}{175}{section*.133}
+\contentsline {paragraph}{AML.}{176}{section*.133}
 \contentsline {paragraph}{COPE.}{176}{section*.134}
 \contentsline {paragraph}{Ecore2Ecore.}{176}{section*.135}
 \contentsline {paragraph}{Flock.}{176}{section*.136}
 \contentsline {subsubsection}{Extensibility}{176}{section*.137}
 \contentsline {paragraph}{AML.}{176}{section*.138}
-\contentsline {paragraph}{COPE}{176}{section*.139}
+\contentsline {paragraph}{COPE}{177}{section*.139}
 \contentsline {subsubsection}{Re-use}{177}{section*.140}
 \contentsline {paragraph}{AML.}{177}{section*.141}
 \contentsline {paragraph}{COPE.}{177}{section*.142}
@@ -241,7 +241,7 @@
 \contentsline {paragraph}{Flock.}{177}{section*.144}
 \contentsline {subsubsection}{Conciseness}{177}{section*.145}
 \contentsline {paragraph}{AML.}{177}{section*.146}
-\contentsline {paragraph}{COPE}{177}{section*.147}
+\contentsline {paragraph}{COPE}{178}{section*.147}
 \contentsline {paragraph}{Ecore2Ecore.}{178}{section*.148}
 \contentsline {paragraph}{Flock.}{178}{section*.149}
 \contentsline {subsubsection}{Clarity}{178}{section*.150}
@@ -249,20 +249,20 @@
 \contentsline {paragraph}{COPE.}{178}{section*.152}
 \contentsline {paragraph}{Ecore2Ecore.}{178}{section*.153}
 \contentsline {paragraph}{Flock}{178}{section*.154}
-\contentsline {subsubsection}{Expressiveness}{178}{section*.155}
+\contentsline {subsubsection}{Expressiveness}{179}{section*.155}
 \contentsline {paragraph}{AML.}{179}{section*.156}
 \contentsline {paragraph}{COPE.}{179}{section*.157}
 \contentsline {paragraph}{Ecore2Ecore.}{179}{section*.158}
 \contentsline {paragraph}{Flock.}{179}{section*.159}
 \contentsline {subsubsection}{Interoperability}{179}{section*.160}
-\contentsline {paragraph}{AML}{179}{section*.161}
-\contentsline {paragraph}{COPE}{179}{section*.162}
+\contentsline {paragraph}{AML}{180}{section*.161}
+\contentsline {paragraph}{COPE}{180}{section*.162}
 \contentsline {paragraph}{Ecore2Ecore}{180}{section*.163}
 \contentsline {paragraph}{Flock}{180}{section*.164}
 \contentsline {subsubsection}{Performance}{180}{section*.165}
-\contentsline {subsection}{\numberline {6.3.3}Discussion}{180}{subsection.6.3.3}
-\contentsline {subsubsection}{Strengths and Weaknesses of Flock}{182}{section*.166}
-\contentsline {paragraph}{Strengths}{182}{section*.167}
+\contentsline {subsection}{\numberline {6.3.3}Discussion}{181}{subsection.6.3.3}
+\contentsline {subsubsection}{Strengths and Weaknesses of Flock}{183}{section*.166}
+\contentsline {paragraph}{Strengths}{183}{section*.167}
 \contentsline {paragraph}{Weaknesses}{183}{section*.168}
 \contentsline {subsection}{\numberline {6.3.4}Summary}{184}{subsection.6.3.4}
 \contentsline {section}{\numberline {6.4}Transformation Tools Contest}{184}{section.6.4}
@@ -281,20 +281,20 @@
 \contentsline {subsubsection}{Alternative ObjectFlowState Migration Semantics}{194}{section*.179}
 \contentsline {subsubsection}{XMI}{195}{section*.180}
 \contentsline {subsection}{\numberline {6.4.3}Comparison with other solutions}{195}{subsection.6.4.3}
-\contentsline {subsubsection}{Opposition Statements}{195}{section*.181}
+\contentsline {subsubsection}{Opposition Statements}{196}{section*.181}
 \contentsline {subsubsection}{Scoring}{196}{section*.182}
 \contentsline {paragraph}{Correctness}{196}{section*.183}
 \contentsline {paragraph}{Conciseness}{197}{section*.184}
 \contentsline {paragraph}{Clarity}{197}{section*.185}
 \contentsline {paragraph}{Appropriateness}{197}{section*.186}
-\contentsline {paragraph}{Tool maturity}{197}{section*.187}
+\contentsline {paragraph}{Tool maturity}{198}{section*.187}
 \contentsline {paragraph}{Reproducibility}{198}{section*.188}
 \contentsline {paragraph}{Extensions}{198}{section*.189}
 \contentsline {subsection}{\numberline {6.4.4}Summary}{198}{subsection.6.4.4}
 \contentsline {section}{\numberline {6.5}Limitations}{199}{section.6.5}
 \contentsline {paragraph}{Generality}{199}{section*.190}
 \contentsline {paragraph}{Reproducibility}{199}{section*.191}
-\contentsline {paragraph}{Formal semantics}{199}{section*.192}
+\contentsline {paragraph}{Formal semantics}{200}{section*.192}
 \contentsline {section}{\numberline {6.6}Chapter Summary}{200}{section.6.6}
 \contentsline {chapter}{\chapternumberline {7}Conclusions}{201}{chapter.7}
 \contentsline {section}{\numberline {7.1}Research Contributions}{202}{section.7.1}

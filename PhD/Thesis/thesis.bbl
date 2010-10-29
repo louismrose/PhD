@@ -28,6 +28,14 @@ Jos\'{e} \'{A}lvarez, Andy Evans, and Paul Sammut.
 \newblock {MML} and the metamodel architecture.
 \newblock In {\em Proc. Workshop on Transformation in {UML}}, 2001.
 
+\bibitem[Amyot {\it et al.}\  2006]{amyot06evaluation}{$~$}
+D.~Amyot, H.~Farah, and J.-F. Roy.
+\newblock Evaluation of development tools for domain-specific modeling
+  languages.
+\newblock In {\em Proc. International Workshop on System Analysis and
+  Modeling}, volume 4320 of {\em LNCS}, page 183–197. Springer, Heidelberg,
+  2006.
+
 \bibitem[Apostel 1960]{apostel60models}{$~$}
 Leo Apostel.
 \newblock Towards the formal study of models in the non-formal sciences.

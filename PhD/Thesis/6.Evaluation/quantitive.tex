@@ -8,7 +8,7 @@ The evaluation performed in this section aims to demonstrate that migration stra
 
 Conciseness might be measured in many ways. For instance, \cite{kolovos09thesis} counts lines of code to argue that more concise software components indicate a high degree of inter-component re-use. In that context, the number of lines of code is an appropriate measure because the software components were written in a single programming language. \cite{halstead77softwarescience} suggests ways in which the conciseness and understandability of programs might be approximated by determining the ratio of operators (language constructs) to operands (data). Halstead's Metrics are calculated from programming language constructs and, consequently, are affected by variations in programming languages. Here, counting lines of code and Halstead's Metrics are inappropriate because no single language implements the three styles of source-target relationship that are to be compared.
 
-Instead, conciseness was measured by counting the frequency of \emph{model operations}, program statements that are used to manipulate the target (migrated) model. Model operations were specified in a language-independent manner and then mapped onto language-specific constructs to perform the counting. Therefore, the hypothesis for the comparison was: \emph{specifying a migration strategy with conservative copy requires no more model operations than when new-target or when existing-target are used instead}. The results presented in Section~\ref{subsec:quantitive_results} corroborate the hypothesis and highlight some limitations of the implementation of conservative copy in Flock.
+Instead, conciseness was measured by counting the frequency of \emph{model operations}, atomic program statements that are used to manipulate the target (migrated) model. Model operations were specified in a language-independent manner and then mapped onto language-specific constructs to perform the counting. Therefore, the hypothesis for the comparison was: \emph{specifying a migration strategy with conservative copy requires no more model operations than when new-target or when existing-target are used instead}. The results presented in Section~\ref{subsec:quantitive_results} corroborate the hypothesis and highlight some limitations of the implementation of conservative copy in Flock.
 
 The remainder of this section briefly recaps the theoretical differences between the three styles of source-target relationship (Section~\ref{subsec:styles_of_source-target_relationship}), describes the co-evolution examples and languages used in the comparison (Section~\ref{subsec:quantitive_equipment}), and details the comparison method (Section~\ref{subsec:quantitive_method}). Finally, the results of the comparison (Section~\ref{subsec:quantitive_results}) are used to support the claims made above, and to highlight limitations of the conservative copy implementation provided by Flock.
 
@@ -24,7 +24,7 @@ With an \emph{existing-target} source-target relationship, the migrated model is
 This thesis proposes a third style of source-target relationship termed \emph{conservative copy}, which is a hybrid of new- and existing-target source-target relationships. Prior to the execution of the migration strategy, only those model elements that conform to the evolved metamodel are copied from original to migrated model.
 
 
-\subsection{Equipment}\footnote{TODO: Need a more appropriate name for this section}
+\subsection{Artefacts}
 \label{subsec:quantitive_equipment}
 Five examples of co-evolution taken from three projects, and three reference implementations of source-target relationships were used to perform the comparison described in this section. The co-evolution examples and the selection process for the reference implementations are now discussed.
 
@@ -40,9 +40,9 @@ For interoperability with the three reference implementations used in the compar
 \subsubsection{Reference Implementations Used in the Comparison}
 A formal semantics has not been specified for new-target, existing-target and conservative copy, and therefore the comparison reported in this section was performed using a reference implementation of each source-target relationship. Reference implementations for new- and existing-target were selected from the implementations used by existing approaches to model migration and compared to the implementation of conservative copy provided by Flock.
 
-\paragraph{New-target} The Atlas Transformation Language (ATL) is a model-to-model transformation language that has been used in \cite{cicchetti08automating,garces09managing} for model migration. ATL can be used to specify model migration with new-target, but not with existing-target as discussed in Section~\ref{subsec:existing_migration_languages}. For the comparison described in this section, ATL was selected as the new-target language because the author is not aware of any further approaches to model migration that use an alternative implementation of new-target.
+\paragraph{New-target} The Atlas Transformation Language (ATL) is the M2M transformation language used in \cite{cicchetti08automating,garces09managing} for model migration. ATL can be used to specify model migration with new-target, but not with existing-target as discussed in Section~\ref{subsec:existing_migration_languages}. For the comparison described in this section, ATL was selected as the new-target language because the author is not aware of any further approaches to model migration that use an alternative implementation of new-target.
 
-\paragraph{Existing-target} The author is aware of two approaches to migration that use existing-target transformations. In COPE \cite{herrmannsdoerfer09cope}, migration strategies can be hand-written in Groovy when no co-evolutionary operator is applicable. COPE provides six Groovy functions for interacting with model elements, such as \texttt{set}, for changing the value of a feature, and \texttt{unset}, for removing all values from a feature. In the remainder of this section, the term \emph{Groovy-for-COPE} is used to refer to the combination of the Groovy programming language and the functions provided by COPE for use in hand-written migration strategies. In Ecore2Ecore \cite{hussey06advanced}, migration is performed when the original model is loaded, effectively an existing-target approach. For the comparison performed in this section, Groovy-for-COPE was preferred to Ecore2Ecore because the latter is not as expressive\footnote{Communication with Ed Merks, Eclipse Modeling Project leader, 2009, available at \url{http://www.eclipse.org/forums/index.php?t=tree&goto=486690&S=b1fdb2853760c9ce6b6b48d3a01b9aac}} and cannot be used for migration in the co-evolution examples considered here.
+\paragraph{Existing-target} Analysis of the literature highlighted two approaches to migration that use existing-target transformations. In COPE \cite{herrmannsdoerfer09cope}, migration strategies can be hand-written in Groovy when no co-evolutionary operator is applicable. COPE provides six Groovy functions for interacting with model elements, such as \texttt{set}, for changing the value of a feature, and \texttt{unset}, for removing all values from a feature. In the remainder of this section, the term \emph{Groovy-for-COPE} is used to refer to the combination of the Groovy programming language and the functions provided by COPE for use in hand-written migration strategies. In Ecore2Ecore \cite{hussey06advanced}, migration is performed when the original model is loaded, effectively an existing-target approach. For the comparison performed in this section, Groovy-for-COPE was preferred to Ecore2Ecore because the latter is not as expressive\footnote{Communication with Ed Merks, Eclipse Modeling Project leader, 2009, available at \url{http://www.eclipse.org/forums/index.php?t=tree&goto=486690&S=b1fdb2853760c9ce6b6b48d3a01b9aac}} and cannot be used for migration in the co-evolution examples considered here.
 
 In summary, the comparison described in this section uses ATL for investigating new-target, Groovy-for-COPE for existing-target, and Flock for conservative copy. 
 
@@ -117,7 +117,7 @@ COPE provides two forms of unassignment. The first can be used to unassign any f
 
 
 \paragraph{Conservative Copy in Epsilon Flock}
-Epsilon Flock, a transformation language tailored for model migration, was developed in this thesis and discussed in Chapter~\ref{Implementation}. For Flock, the following model operations were counted:
+Epsilon Flock, a transformation language tailored for model migration, was developed in this thesis and discussed in Chapter~\ref{Implementation}. The following model operations were counted:
 
 \begin{itemize}
 	\item \textbf{Assignment:}
@@ -132,6 +132,8 @@ Epsilon Flock, a transformation language tailored for model migration, was devel
 	\item \textbf{Deleting:}
 	\subitem \texttt{delete <element>}
 \end{itemize}
+
+The model operation listed above are the only mechanisms for changing the values or deleting model elements from the migrated model in a Flock migration strategy.
 
 Like Groovy-for-COPE, Flock distinguishes between assignment to single- and multi-valued features and, hence, provides three assignment operators. Unlike Groovy-for-COPE, Flock does not provide a form of assignment that allows the name of the assigned feature to be determined at runtime.
 
@@ -149,12 +151,12 @@ Consider the example of metamodel-evolution shown in Figure~\ref{fig:quantitive_
 	\subfigure[Original metamodel.]
 	{
 	    \label{fig:petri_nets_original_mm}
-	    \includegraphics[width=4.75cm]{5.Implementation/images/petri_nets_before.pdf}
+	    \includegraphics[scale=0.8]{5.Implementation/images/petri_nets_before.pdf}
 	}
 	\subfigure[Evolved metamodel.]
 	{
 	    \label{fig:petri_nets_evolved_mm}
-	    \includegraphics[width=6.25cm]{5.Implementation/images/petri_nets_after.pdf}
+	    \includegraphics[scale=0.8]{5.Implementation/images/petri_nets_after.pdf}
 	}
 	\caption[Exemplar metamodel evolution (Petri nets)]{Exemplar metamodel evolution. Taken from \cite{rose10flock}.}
 \label{fig:quantitive_petri_nets_mms}
@@ -380,7 +382,7 @@ Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolut
 In response to re-typing of the \texttt{figure} and \texttt{accessor} features, the
 migration strategy derived new values for the \texttt{figure} and \texttt{accessor} features. In the real example, a new model element was created and used to decorate \cite{gamma95patterns} each old value. In the simplified example presented here, the new integer value will be derived from the old string value by using its length. Section~\ref{subsec:gmf_graph} presents the strategies used to perform migration for the real metamodel changes.
 
-As demonstrated below, ATL and Groovy-for-COPE provide mechanisms for re-using migration code between subtypes. Migration of the \texttt{figure} feature can be specified once and used for migrating all subtypes of \texttt{DiagramElement}. Currently, Flock does not provide a mechanism for re-using migration code between subtypes.
+As demonstrated below, ATL and Groovy-for-COPE provide mechanisms for re-using migration code between subtypes. Migration of the \texttt{figure} feature can be specified once and used for migrating all subtypes of \texttt{Di\-ag\-ramEl\-em\-e\-nt}. Currently, Flock does not provide a mechanism for re-using migration code between subtypes.
 
 In ATL (Listing~\ref{lst:graph_atl}), the GMF Graph migration strategy was expressed using two model operations: the two assignment operations on lines 4 and 26. For \texttt{Node}s, \texttt{Connection}s and \texttt{Compartment}s, migration of the \texttt{figure} feature is achieved by extending the \texttt{DiagramElement} transformation rule. Note the use of the \texttt{extends} keyword on lines 8, 13 and 18 for inheriting the rule on lines 1-4. For \texttt{DiagramLabel}s, the values of both the \texttt{accessor} and \texttt{figure} features must be migrated. On lines 23-28, the \texttt{DiagramLabels} rule extends the \texttt{Nodes} rule (and hence the \texttt{DiagramElements} rule) to inherit the body of the \texttt{DiagramElements} rule on line 4. In addition, the \texttt{DiagramLabels} rule defines the migration for the value of the \texttt{accessor} feature on line 26.
 
@@ -497,7 +499,7 @@ $\highlight$		name <- o.name
 	)
 \end{lstlisting}
 
-In existing-target and conservative copy migration languages, migration is less straightforward because, during the initialisation of the the migrated model from the original model, the value of a containment reference (\texttt{Signature\#ports}) is set. When a containment reference is set, the contained objects are removed from their previous containment reference (i.e. setting a containment reference has side-effects). Therefore, in a \texttt{System} where more than one \texttt{Signature} references the same \texttt{Port}, the migrated model cannot be formed by copying the contents of \texttt{Signature\#ports} from the original model. Attempting to do so causes each \texttt{Port} to be contained only in the last referencing \texttt{Signature} that was copied.
+In existing-target and conservative copy migration languages, migration is less straightforward because, during the initialisation of the the migrated model from the original model, the value of a containment reference (\texttt{Si\-gn\-at\-ure\#po\-r\-ts}) is set. When a containment reference is set, the contained objects are removed from their previous containment reference (i.e. setting a containment reference has side-effects). Therefore, in a \texttt{System} where more than one \texttt{Signature} references the same \texttt{Port}, the migrated model cannot be formed by copying the contents of \texttt{Signature\#ports} from the original model. Attempting to do so causes each \texttt{Port} to be contained only in the last referencing \texttt{Signature} that was copied.
 
 % In COPE, the containment nature of a reference is not enforced until after the migration strategy is executed. Consequently, the migration can be specified in COPE by % TODO
 % The migration strategy shown in Listing~\ref{lst:ref2cont_cope} uses 5 model operations: assignments on lines 8, 9 and 12; unassignment on line 10, and deletion on line 19. Note that the assignment on line 7 is to a temporary variable, and so is not counted as a model operation. 

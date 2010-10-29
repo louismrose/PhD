@@ -195,7 +195,7 @@ migrate Partition to ActivityPartition {
 \subsubsection{ObjectFlows}
 Finally, two rules were written for migrating model elements relating to object flows. In UML 1.4 activity diagrams, object flows are specified using \texttt{ObjectFlowState}, a subtype of \texttt{St\-at\-eVe\-rt\-ex}. In UML 2.2 activity diagrams, object flows are modelled using a subtype of \texttt{ObjectNode}. In UML 2.2 flows that connect to and from \texttt{ObjectNode}s must be represented with \texttt{ObjectFlow}s rather than \texttt{ControlFlow}s.
 
-Listing~\ref{lst:objectflows} shows the Flock rule used to migrate \texttt{Transiton}s to \texttt{ObjectFlow}s. The rule applies for \texttt{Transition}s whose source or target \texttt{St\-at\-eVe\-rt\-ex} is of type \texttt{ObjectFlowState}.
+Listing~\ref{lst:objectflows} shows the Flock rule used to migrate \texttt{Transiton}s to \texttt{Ob\-je\-ctFl\-ow}s. The rule applies for \texttt{Transition}s whose source or target \texttt{St\-at\-eVe\-rt\-ex} is of type \texttt{Ob\-je\-ctFl\-owSt\-ate}.
 
 \begin{lstlisting}[caption=Migrating ObjectFlows, label=lst:objectflows, language=Flock]
 migrate ObjectFlowState to ActivityParameterNode

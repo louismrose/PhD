@@ -13,19 +13,21 @@ A level-1 auxiliary file: A.3.MigrationStrategies/migration_strategies.aux
 A level-1 auxiliary file: A.4.TTCScores/ttc_scores.aux
 The style file: longname.bst
 Database file #1: thesis.bib
-Repeated entry---line 1456 of file thesis.bib
+Warning--I'm ignoring amyot06evaluation's extra "year" field
+--line 664 of file thesis.bib
+Repeated entry---line 1469 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1478 of file thesis.bib
+Repeated entry---line 1491 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
---line 1508 of file thesis.bib
+--line 1521 of file thesis.bib
 Warning--I'm ignoring grgen's extra "year" field
---line 1537 of file thesis.bib
-Repeated entry---line 1540 of file thesis.bib
+--line 1550 of file thesis.bib
+Repeated entry---line 1553 of file thesis.bib
  : @inproceedings{grgen
  :                     ,
 I'm skipping whatever remains of this entry
@@ -55,12 +57,22 @@ Name 4 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A.
 while executing---line 1187 of file longname.bst
 Name 5 in "Louis M. Rose and Markus Herrmannsdoerfer and James R. Williams and Dimitrios S. Kolovos and Kelly Garc\'{e}s, and Richard F. Paige and Fiona A.C. Polack" has a comma at the end for entry rose10comparison
 while executing---line 1187 of file longname.bst
+Name 1 in "Amyot, D., and Farah, H., and Roy, J.-F." has a comma at the end for entry amyot06evaluation
+while executing---line 1187 of file longname.bst
+Name 1 in "Amyot, D., and Farah, H., and Roy, J.-F." has a comma at the end for entry amyot06evaluation
+while executing---line 1187 of file longname.bst
+Name 2 in "Amyot, D., and Farah, H., and Roy, J.-F." has a comma at the end for entry amyot06evaluation
+while executing---line 1187 of file longname.bst
 Name 1 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
 while executing---line 1187 of file longname.bst
 Name 1 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
 while executing---line 1187 of file longname.bst
 Name 2 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
 while executing---line 1187 of file longname.bst
+Name 1 in "Amyot, D., and Farah, H., and Roy, J.-F." has a comma at the end for entry amyot06evaluation
+while executing---line 1253 of file longname.bst
+Name 2 in "Amyot, D., and Farah, H., and Roy, J.-F." has a comma at the end for entry amyot06evaluation
+while executing---line 1253 of file longname.bst
 Warning--can't use both volume and number fields in banerjee87semantics
 Name 1 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1253 of file longname.bst
@@ -86,45 +98,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 189 entries,
+You've used 190 entries,
             2472 wiz_defined-function locations,
-            1421 strings with 31817 characters,
-and the built_in function-call counts, 74120 in all, are:
-= -- 7462
-> -- 2793
-< -- 90
-+ -- 905
-- -- 860
-* -- 5237
-:= -- 11487
-add.period$ -- 615
-call.type$ -- 189
-change.case$ -- 1153
-chr.to.int$ -- 166
-cite$ -- 190
-duplicate$ -- 3422
-empty$ -- 6079
-format.name$ -- 1113
-if$ -- 15862
+            1428 strings with 32037 characters,
+and the built_in function-call counts, 74717 in all, are:
+= -- 7528
+> -- 2812
+< -- 92
++ -- 911
+- -- 866
+* -- 5274
+:= -- 11562
+add.period$ -- 619
+call.type$ -- 190
+change.case$ -- 1160
+chr.to.int$ -- 167
+cite$ -- 191
+duplicate$ -- 3460
+empty$ -- 6122
+format.name$ -- 1120
+if$ -- 16006
 int.to.chr$ -- 24
 int.to.str$ -- 0
-missing$ -- 169
-newline$ -- 949
-num.names$ -- 568
-pop$ -- 1351
+missing$ -- 170
+newline$ -- 954
+num.names$ -- 571
+pop$ -- 1359
 preamble$ -- 1
-purify$ -- 1375
+purify$ -- 1383
 quote$ -- 0
-skip$ -- 2772
+skip$ -- 2809
 stack$ -- 0
-substring$ -- 3570
-swap$ -- 989
-text.length$ -- 90
+substring$ -- 3595
+swap$ -- 1013
+text.length$ -- 92
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1396
+type$ -- 1404
 warning$ -- 1
-while$ -- 589
-width$ -- 195
-write$ -- 2458
-(There were 31 error messages)
+while$ -- 592
+width$ -- 196
+write$ -- 2473
+(There were 36 error messages)
