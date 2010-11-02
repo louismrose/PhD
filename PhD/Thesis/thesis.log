@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  2 NOV 2010 13:39
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  2 NOV 2010 17:31
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -761,69 +761,57 @@ Overfull \hbox (5.25914pt too wide) in paragraph at lines 27--27
 
 [18])) (./thesis.bbl
 bibitemlist
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 48.
-(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+[287
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 91.
+ (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [287
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-] [288]
-[289] [290]
-Underfull \hbox (badness 2245) in paragraph at lines 322--328
-[]$ []$ \OT1/cmr/m/n/10.95 M. Fowler.  Lan-guage work-benches: The killer-app
- []
-
-
-Underfull \hbox (badness 3803) in paragraph at lines 322--328
-\OT1/cmr/m/n/10.95 for do-main spe-cific lan-guages? [on-line].  [Ac-cessed 30 
-June
- []
-
-[291] [292]
-Underfull \hbox (badness 1348) in paragraph at lines 444--449
+) [288]
+[289] [290] [291] [292]
+Underfull \hbox (badness 1348) in paragraph at lines 403--410
 []$ []$ \OT1/cmr/m/n/10.95 M. Her-rmanns-do-er-fer, D. Ratiu, and
  []
 
 [293]
-Underfull \hbox (badness 1314) in paragraph at lines 523--528
+Underfull \hbox (badness 1314) in paragraph at lines 464--469
 []$ []$ \OT1/cmr/m/n/10.95 Y. Kataoka, M.D. Ernst, W.G. Gris-wold, and
  []
 
 [294]
-Underfull \hbox (badness 10000) in paragraph at lines 601--608
+Underfull \hbox (badness 10000) in paragraph at lines 543--550
 \OT1/pcr/m/n/10.95 org / submissions / ese2009 / view _ talk . php ? id = 979$[
 ] \OT1/cmr/m/n/10.95 [Ac-cessed
  []
 
-[295] [296] [297]
+[295] [296]
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no  in font cmr10!
- [298] [299]
-Underfull \hbox (badness 1297) in paragraph at lines 940--945
+ [297] [298]
+Underfull \hbox (badness 1297) in paragraph at lines 882--887
 []$ []$ \OT1/cmr/m/n/10.95 L.M. Rose, A. Etien, D. M^^Sendez, D.S. Kolovos,
  []
 
+[299]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-[300] [301]) [302]
+ [300] [301]) [302]
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
@@ -842,17 +830,21 @@ Missing character: There is no ™ in font cmr10!
 (./5.Implementation/implementation.aux) (./6.Evaluation/evaluation.aux)
 (./7.Conclusion/conclusion.aux) (./A.2.ProcessOriented/process_oriented.aux)
 (./A.3.MigrationStrategies/migration_strategies.aux)
-(./A.4.TTCScores/ttc_scores.aux)) ) 
+(./A.4.TTCScores/ttc_scores.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 9594 strings out of 493886
- 141184 string characters out of 1151098
- 280085 words of memory out of 3000000
- 12191 multiletter control sequences out of 10000+50000
+ 9564 strings out of 493886
+ 140859 string characters out of 1151098
+ 278489 words of memory out of 3000000
+ 12176 multiletter control sequences out of 10000+50000
  11714 words of font info for 40 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  40i,12n,32p,727b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{lstlisting.B.15}
- has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{lstlisting.B.15} has been referenced but does not
+ exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{lstlisting.B.14} has been referenced but does not e
 xist, replaced by a fixed one
@@ -1494,9 +1486,9 @@ ky/cm/cmr17.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsl
 usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></usr/local
 /texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti8.pfb></usr/local/texlive/2
 008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on thesis.pdf (34 pages, 266250 bytes).
+Output written on thesis.pdf (34 pages, 260273 bytes).
 PDF statistics:
- 993 PDF objects out of 1000 (max. 8388607)
- 443 named destinations out of 1000 (max. 131072)
+ 952 PDF objects out of 1000 (max. 8388607)
+ 428 named destinations out of 1000 (max. 131072)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

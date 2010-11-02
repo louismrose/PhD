@@ -5,6 +5,16 @@
   institution = {{IBM Res. Rep. RC 2722}}
 }
 
+@article{brooks86nosilverbullet,
+  author    = {Brooks Jr., F.P.},
+  title     = {No Silver Bullet - Essence and Accidents of Software Engineering},
+  journal   = {IEEE Computer},
+  volume    = {20},
+  number    = {4},
+  year      = {1987},
+  pages     = {10-19},
+}
+
 @article{VIATRA,
  author    = {Varr\'{o}, D. and Balogh, A.},
  title     = {The model transformation language of the {VIATRA2} framework},
@@ -24,7 +34,7 @@
    publisher = {Springer Netherlands},
    pages     = {125--161},
    volume    = {12},
-   issue     = {2},
+   number    = {2},
    year      = {1960}
 }
 
@@ -127,10 +137,11 @@
 
 @article{biermann06refactoring,
   author    = {Biermann, E. and Ehrig, K. and K{\"o}hler, C. and Kuhns, G. and Taentzer, G. and Weiss, E.},
-  title     = {EMF Model Refactoring based on Graph Transformation Concepts},
-  journal   = {ECEASST},
+  title     = {{EMF} Model Refactoring based on Graph Transformation Concepts},
+  journal   = {Electronic Communications of the European Association for the Study of Science and Technology [online]},
   volume    = {3},
-  year      = {2006}
+  year      = {2006},
+  note      = {Available at \url{http://eceasst.cs.tu-berlin.de/index.php/eceasst/article/view/34} [Accessed 2 November 2010]}
 }
 
 @article{lammel01semiautomatic,
@@ -149,6 +160,7 @@
     journal = {{ACM} Transactions on Software Engineering Methodology},
     year    = {2003},
     volume  = {14},
+    number  = {3},
     pages   = {331--380}
 }
 
@@ -169,16 +181,6 @@
   number    = {3},
   year      = {2006},
   pages     = {621-646},
-}
-
-@article{dmitriev04lop,
-  author  = {Dmitriev, S.},
-  title   = {Language Oriented Programming: The Next Programming Paradigm},
-  journal = {{JetBrains onBoard} [online]},
-  volume  = {1},
-  year    = {2004},
-  note    = {[Accessed 30 June 2008] Available at:
-             \url{http://www.onboard.jetbrains.com/is1/articles/04/10/lop/}}
 }
 
 @article{griffin02usingemf,
@@ -313,10 +315,10 @@
 
 @article{deursen00dslbib,
   author  = {van Deursen, A. and Klint, P. and Visser, J.},
-  journal = {{SIGPLAN} Notices},
+  journal = {Special Interest Group on Programming Languages (SIGPLAN) Notices},
   number  = {6},
   pages   = {26--36},
-  title   = {Domain-Specific Languages: An Annotated Bibliography},
+  title   = {{Domain-Specific Languages}: An Annotated Bibliography},
   volume  = {35},
   year    = {2000}
 }
@@ -389,6 +391,16 @@
   number    = {2},
   year      = {2006},
   pages     = {83--107},
+}
+
+@book{clark08superlanguages,
+  author       = {Clark, T. and Sammut, P. and Willians, J.},
+  title        = {Superlanguages: Developing Languages and Applications with {XMF} [online]},
+  publisher    = {Ceteva},
+  address      = {Sheffield},
+  year         = 2008,
+  note         = {Available at:
+                  \url{http://itcentre.tvu.ac.uk/~clark/Papers/Superlanguages.pdf} [Accessed 02 November 2010]}
 }
 
 @book{feathers04working,
@@ -674,11 +686,12 @@
 @inproceedings{amyot06evaluation,
   author    = {Amyot, D., and Farah, H., and Roy, J.-F.},
   title     = {Evaluation of Development Tools for Domain-Specific Modeling Languages},
-  booktitle = {Proc. International Workshop on System Analysis and Modeling},
+  booktitle = {System Analysis and Modeling: Language Profiles},
+  editor    = {Gotzhein, R. and Reed, R.},
   year      = {2006},
-  pages     = {183–197},
+  pages     = {183--197},
   publisher = {Springer, Heidelberg},
-  series    = {LNCS},
+  series    = {Lecture Notes in Computer Science},
   volume    = {4320},
   year      = {2006},
 }
@@ -694,22 +707,24 @@
 @inproceedings{heidenreich09derivation,
   author    = {Heidenreich, F. and Johannes, J. and Karol, S. and Seifert, M. and Wende, C.},
   title     = {Derivation and Refinement of Textual Syntax for Models},
-  booktitle = {Proc. ECMDA-FA},
-  pages     = {114-129},
+  booktitle = {Proc. European Conference on Model-Driven Architecture - Foundations and Applications (ECMDA-FA)},
+  pages     = {114--129},
   publisher = {Springer},
-  series    = {LNCS},
+  series    = {Lecture Notes in Computer Science},
   volume    = {5562},
   year      = {2009},
-  location  = {Enschede, The Netherlands}
+  location  = {Enschede, The Netherlands},
+  editor    = {Paige, R.F. and Hartman, A. and Rensink, A.},
 }
 
 @inproceedings{bezivin01definition,
   author    = {B{\'e}zivin, J. and Gerb{\'e}, O.},
   title     = {Towards a Precise Definition of the {OMG/MDA} Framework},
-  booktitle = {Proc. ASE},
+  booktitle = {Proc. International Conference on Automated Software Engineering (ASE)},
   pages     = {273--280},
   publisher = {IEEE Computer Society},
   year      = {2001},
+  location  = {San Diego, California, USA}
 }
 
 @inproceedings{rath08live,
@@ -725,10 +740,11 @@
 
 @inproceedings{fritzsche08tracing,
   author    = {Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A.},
-  title     = {Application of tracing techniques in {Model-Driven Performance Engineering}},
+  title     = {Application of tracing techniques in Model-Driven Performance Engineering},
   year      = {2008},
-  pages     = {111-120},
-  booktitle = {Proc. ECMDA Traceability Workshop (ECMDA-TW)},
+  pages     = {111--120},
+  booktitle = {Proc.Traceability Workshop, co-located with the European Conference on Model-Driven Architecture (ECMDA)},
+  location  = {Berlin, Germany},
 }
 @inproceedings{porres03refactoring,
   author    = {Porres, I.},
@@ -778,31 +794,37 @@
   location  = {Toulouse, France},
 }
 
-@inproceedings{kolovos06ecl,
-  author    = {Kolovos, D.S. and Paige, R.F. and Polack, F.A.C.},
-  title     = {Model comparison: a foundation for model composition and model transformation testing},
-  booktitle = {{Proc. Workshop on Global Integrated Model Management}},
-  year      = {2006},
-  pages     = {13--20},
-  location  = {Shanghai, China},
+@inproceedings{kolovos09ecl,
+  author    = {Kolovos, D.S.},
+  title     = {Establishing Correspondences between Models with the {Epsilon
+               Comparison Language}},
+  booktitle = {Proc. European Conference on Model-Driven Architecture - Foundations and Applications (ECMDA-FA)},
+  year      = {2009},
+  pages     = {146--157},
+  editor    = {Paige, R.F. and Hartman, A. and Rensink, A.},
+  location  = {Enschede, The Netherlands},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {5562},
 }
 
 @inproceedings{kolovos07eml,
   author    = {Kolovos, D.S. and Paige, R.F. and Polack, F.A.C.},
-  title     = {Merging Models with the Epsilon Merging Language (EML)},
-  booktitle = {Proc. MoDELS},
+  title     = {Merging Models with the {Epsilon Merging Language} ({EML})},
+  booktitle = {Proc. International Conference on Model Driven Engineering Languages and Systems (MoDELS)},
   year      = {2006},
   pages     = {215--229},
   publisher = {Springer},
   series    = {Lecture Notes in Computer Science},
   volume    = {4199},
   location  = {Genova, Italy},
+  editor    = {Nierstrasz, O. and Whittle, J. and Harel, D. and Reggio, G.},
 }
 
 @inproceedings{alvarez01mml,
   title     = {{MML} and the Metamodel Architecture},
   author    = {\'{A}lvarez, J. and Evans, A. and Sammut, P.},
-  booktitle = {Proc. Workshop on Transformation in {UML}},
+  booktitle = {Proc. Workshop on Transformation in {UML}, co-located with the European Joint Conferences on Theory and Practice of Software (ETAPS)},
   year      = {2001},
   location  = {Genova, Italy},
 } 
@@ -832,16 +854,18 @@
 @inproceedings{cicchetti08automating,
   author    = {Cicchetti, A. and Di Ruscio, D. and Eramo, R. and Pierantonio, A.},
   title     = {Automating Co-evolution in Model-Driven Engineering},
-  booktitle = {Proc. {EDOC}},
+  booktitle = {Proc. International IEEE Enterprise Distributed Object Computing
+               Conference (EDOC)},
   year      = {2008},
   pages     = {222--231},
-  publisher = {IEEE Computer Society}
+  publisher = {IEEE Computer Society},
+  location  = {Munich, Germany},
 }
 
 @inproceedings{fuhrer07refactoring,
   author    = {Fuhrer, R.M. and Kiezun, A. and Keller, M.},
   title	    = {Refactoring in the {Eclipse JDT}: Past, Present, and Future},
-  booktitle = {Proc. Workshop on Refactoring Tools},
+  booktitle = {Proc. Workshop on Refactoring Tools (WRT), co-located with European Conference on Object-Oriented Programming (ECOOP)},
   year	    = {2007},
   location  = {Berlin, Germany},
 }
@@ -849,7 +873,7 @@
 @inproceedings{aizenbud05operational,
   author    = {Aizenbud-Reshef, N. and Paige, R.F. and Rubin, J. and Shaham-Gafni, Y. and Kolovos, D.S.},
   title	    = {Operational semantics for traceability},
-  booktitle = {Proc. {ECMDA-FA} Workshop on Traceability},
+  booktitle = {Proc. Workshop on Traceability, co-located with the European Conference on Model-Driven Architecture (ECMDA)},
   pages     = {8--14},
   year	    = {2005},
   location  = {Nuremberg, Germany},
@@ -869,7 +893,7 @@
 @inproceedings{costa2007rtmdd,
   author    = {Costa, M. and da Silva, A.R.},
   title	    = {{RT-MDD} framework -- a practical approach},
-  booktitle = {Proc. {ECMDA-FA} Workshop on Traceability},
+  booktitle = {Proc. Workshop on Traceability, co-located with the European Conference on Model-Driven Architecture (ECMDA)},
   pages     = {17--26},
   year	    = {2007},
   location  = {Haifa, Israel},
@@ -887,7 +911,7 @@
 @inproceedings{jouault05loosely,
   author    = {Jouault, F.},
   title	    = {Loosely Coupled Traceability for {ATL}},
-  booktitle = {Proc. {ECMDA-FA} Workshop on Traceability},
+  booktitle = {Proc. Workshop on Traceability, co-located with the European Conference on Model-Driven Architecture (ECMDA)},
   year	    = {2005},
   location  = {Nuernberg, Germany},
 }
@@ -895,19 +919,20 @@
 @inproceedings{jouault05transforming,
   author    = {Jouault, F. and Kurtev, I.},
   title     = {Transforming Models with {ATL}},
-  booktitle = {Proc. Satellite Events at the International Conference on Model Driven Engineering Languages and Systems},
+  booktitle = {Proc. Satellite Events at the International Conference on Model Driven Engineering Languages and Systems (MoDELS), International Workshops, Doctoral Symposium, Educators Symposium, Revised Selected Papers},
   year      = {2005},
-  series    = {LNCS},
+  series    = {Lecture Notes in Computer Science},
   volume    = {3844},
   publisher = {Springer},
   location  = {Jamaica},
-  pages     = {128-138},
+  pages     = {128--138},
+  editor    = {Bruel, J-M.},
 }
 
 @inproceedings{drivalos08rigorously,
   author    = {Drivalos, N. and Paige, R.F. and Fernandes, K.J. and Kolovos, D.S.},
   title	    = {Towards Rigorously Defined Model-to-Model Traceability},
-  booktitle = {Proc. European Conference on the Model Driven Architecture Workshop on Traceability},
+  booktitle = {Proc. Workshop on Traceability, co-located with the European Conference on Model Driven Architecture (ECMDA)},
   year	    = {2008},
   location  = {Berlin, Germany},
 }
@@ -915,21 +940,27 @@
 @inproceedings{kolovos08etl,
   author    = {Kolovos, D.S. and Paige, R.F. and Polack, F.A.C},
   title     = {{The Epsilon Transformation Language}},
-  booktitle = {Proc. {ICMT}},
+  booktitle = {Proc. International Conference on the Theory and Practice of Model Transformations (ICMT)},
   year      = {2008},
-  pages     = {46-60},
-  series    = {LNCS},
+  pages     = {46--60},
+  series    = {Lecture Notes in Computer Science},
   volume    = {5063},
   publisher = {Springer},
   location  = {Z{\"u}rich, Switzerland},
+  editor    = {Vallecillo, A. and Gray, J. and Pierantonio, A.},
 }
 
 @inproceedings{kolovos08scalability,
   author    = {Kolovos, D.S. and Paige, R.F. and Polack, F.A.C.},
-  title	    = {Scalability : The Holy Grail of Model Driven Engineering},
-  booktitle = {Proc. Workshop on Challenges in Model Driven Engineering},
+  title	    = {The Grand Challenge of Scalability for Model Driven Engineering},
+  booktitle = {Models in Software Engineering: Workshops and Symposia at MoDELS 2008, Reports and Revised Selected Papers},
   year	    = {2008},
   location  = {Toulouse, France},
+  editor    = {Chaudron, M.R.},
+  pages     = {48--53},
+  publisher = {Springer-Verlag},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {5421},
 }
 
 @inproceedings{briand03impactanalysis,
@@ -939,6 +970,7 @@
   year      = {2003},
   pages     = {256--265},
   publisher = {IEEE Computer Society},
+  location  = {Amsterdam, The Netherlands},
 }
 
 @inproceedings{bohner02impactanalysis,
@@ -948,8 +980,8 @@
   year      = {2002},
   pages     = {263--272},
   publisher = {IEEE Computer Society},
+  location  = {Montreal, Canada},
 }
-
 
 @inproceedings{mens07modelrefactoring,
   author    = {Mens, T. and Taentzer, G. and M\"{u}ller, D.},
@@ -968,67 +1000,50 @@
   year      = {2005},
 }
 
-@inproceedings{herrmannsdoerfer10extensive,
- title     = {An Extensive Catalog of Operators for the Coupled Evolution of Metamodels and Models},
- author    = {Herrmannsdoerfer, M. and Vermolen, S. and Wachsmuth, G.},
- booktitle = {Proc. {SLE}},
- publisher = {Springer},
- volume    = {TBC},
- series    = {LNCS},
- year      = {2010},
- pages     = {TBC},
- location  = {Eindhoven, The Netherlands},
-}
-
 @inproceedings{herrmannsdoerfer09cope,
  title     = {{COPE} - Automating Coupled Evolution of Metamodels and Models},
  author    = {Herrmannsdoerfer, M. and Benz, S. and Juergens, E.},
- booktitle = {Proc. {ECOOP}},
+ booktitle = {Proc. European Conference on Object-Oriented Programming (ECOOP)},
  publisher = {Springer},
  volume    = {5653},
- series    = {LNCS},
+ series    = {Lecture Notes in Computer Science},
  year      = {2009},
  pages     = {52-76},
  location  = {Genova, Italy},
-}
-
-@inproceedings{herrmannsdoerfer08cope,
-  author    = {Herrmannsdoerfer, M. and Benz, S. and Juergens, E.},
-  title	    = {{COPE}: A Language for the Coupled Evolution of Metamodels and Models},
-  booktitle = {Proc. Workshop on Model Co-Evolution and Consistency Management},
-  year	    = {2008},
-  location  = {Toulouse, France},
+ editor    = {Drossopoulou, S.},
 }
 
 @inproceedings{herrmannsdoerfer08automatability,
   author    = {Herrmannsdoerfer, M. and Benz, S. and Juergens, E.},
   title     = {Automatability of Coupled Evolution of Metamodels and Models
                in Practice},
-  booktitle = {Proc. International Conference on Model Driven Engineering Languages and Systems},
+  booktitle = {Proc. International Conference on Model Driven Engineering Languages and Systems (MoDELS)},
   year      = {2008},
   series    = {LNCS},
   volume    = {5301},
   publisher = {Springer},
   location  = {Toulouse, France},
-  pages     = {645-659},
+  pages     = {645--659},
+  editor    = {Czarnecki, K. and Ober, I. and Bruel, J. and Uhl, A. and V{\"o}lter, M.},
 }
 
 @inproceedings{garces09managing,
   author    = {Garc{\'e}s, K. and Jouault, F. and Cointe, P. and B{\'e}zivin, J.},
   title     = {Managing Model Adaptation by Precise Detection of Metamodel Changes},
-  booktitle = {Proc. ECMDA-FA},
+  booktitle = {Proc. European Conference on Model Driven Architecture - Foundations and Applications (ECMDA-FA)},
   year      = {2009},
-  series    = {LNCS},
+  series    = {Lecture Notes in Computer Science},
   volume    = {5562},
   pages     = {34-49},
   publisher = {Springer},
   location  = {Enschede, The Netherlands},
+  editor    = {Paige, R.F. and Hartman, A. and Rensink, A.},
 }
 
 @inproceedings{deursen07mdse,
   author    = {van Deursen, A. and Visser, E. and Warmer, J.},
   title	    = {Model-Driven Software Evolution: A Research Agenda},
-  booktitle = {Proc. Workshop on Model-Driven Software Evolution},
+  booktitle = {Proc. Workshop on Model-Driven Software Evolution, co-located with the European Conference on Software Maintenance and Reengineering (CSMR)},
   year	    = {2007},
   pages	    = {41--49},
   location  = {Amsterdam, The Netherlands},
@@ -1037,13 +1052,12 @@
 @inproceedings{banerjee87semantics,
   author    = {Banerjee, J. and Kim, W. and Kim, H. and Korth, H.F.},
   title     = {Semantics and implementation of schema evolution in object-oriented databases},
-  booktitle = {Proc. Special Interest Group on Management of Data},
+  booktitle = {Proc. Special Interest Group on Management of Data (SIGMOD) Conference},
+  editor    = {Dayal, U. and Traiger, I.L.},
   year      = {1987},
   pages     = {311--322},
   location  = {San Francisco, California, United States},
-  volume    = {16},
-  number    = {3},
-  publisher = {ACM}
+  publisher = {ACM Press}
 }
 
 @inproceedings{lehman96laws,
@@ -1066,47 +1080,58 @@
 @inproceedings{cervelle06tatoo,
   author    = {Cervelle, J. and Forax, R. and Roussel, G.},
   title     = {Tatoo: an innovative parser generator},
-  booktitle = {Principles and Practice of Programming in Java},
+  booktitle = {Proc. International Symposium on Principles and Practice of Programming in Java (PPPJ)},
   year      = {2006},
   pages     = {13--20},
   location  = {Mannheim, Germany},
   publisher = {ACM},
+  editor    = {Ralf Gitzel and
+               Markus Aleksy and
+               Martin Schader},
+  series    = {ACM International Conference Proceeding Series},
+  volume    = {178},
+  year      = {2006},
 }
 
 @inproceedings{guerrini05impact,
   author    = {Guerrini, G. and Mesiti, M. and Rossi, D.},
   title     = {Impact of {XML} schema evolution on valid documents},
-  booktitle = {Proc. Workshop on Web Information and Data Management},
+  booktitle = {Proc. International Workshop on Web Information and Data Management (WIDM), },
   year      = {2005},
   pages     = {39--44},
   location  = {Bremen, Germany},
+  publisher = {ACM},
+  editor    = {Bonifati, A. and Lee, D.},
 }
 
 @inproceedings{ferrandina95schema,
   author    = {Ferrandina, F. and Meyer, T. and Zicari, R. and Ferran, G. and Madec, J.},
   title     = {Schema and Database Evolution in the {O2} Object Database System},
-  booktitle = {Very Large Data Bases},
+  booktitle = {Proc. International Conference on Very Large Data Bases (VLDB)},
   year      = {1995},
   pages     = {170--181},
   location  = {Zurich, Switzerland},
   publisher = {Morgan Kaufmann},
+  editor    = {Dayal, U. and Gray, P.M.D. and Nishio, S.},
 }
 
 @inproceedings{hearnden06incremental,
   author    = {Hearnden, D. and Lawley, M. and Raymond, K.},
   title     = {Incremental Model Transformation for the Evolution of Model-Driven Systems},
-  booktitle = {Model Driven Engineering Languages and Systems},
+  booktitle = {Proc. International Conference on Model Driven Engineering Languages and Systems (MoDELS)},
   year      = {2006},
   pages     = {321--335},
-  series    = {LNCS},
+  series    = {Lecture Notes in Computer Science},
   volume    = {4199},
-  publisher = {Springer}
+  publisher = {Springer},
+  editor    = {Nierstrasz, O. and Whittle, J. and Harel, D. and Reggio, G.},
+  location  = {Genova, Italy}
 }
 
 @inproceedings{kataoka01automated,
    author    = {Kataoka, Y. and Ernst, M.D. and Griswold, W.G. and Notkin, D.},
    title     = {Automated support for program refactoring using invariants},
-   booktitle = {Proc. International Conference on Software Maintenance},
+   booktitle = {Proc. International Conference on Software Maintenance (ICSM)},
    pages     = {736--743},
    location  = {Florence, Italy},
    year      = {2001},
@@ -1126,17 +1151,34 @@
 }
 
 @inproceedings{kolovos08evl,
-  author    = {Kolovos, D.S. and Paige, R.F. and Polack, F.A.C},
-  title     = {On the Evolution of {OCL} for Capturing Structural Constraints in Modelling Languages},
-  booktitle = {Proc. Workshop on Rigorous Methods for Software Construction and Analysis},
-  year      = {2008},
-  location  = {Dagstuhl, Germany}
+  author    = {Kolovos, D.S. and Paige, R.F. and Polack, F.A.C.},
+  title     = {On the Evolution of {OCL} for Capturing Structural Constraints
+               in Modelling Languages},
+  booktitle = {Rigorous Methods for Software Construction and Analysis},
+  year      = {2009},
+  pages     = {204--218},
+  editor    = {Abrial, J. and Gl{\"a}sser, U.},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {5115},
+}
+
+@inproceedings{kolovos09eugenia,
+  author    = {Kolovos, D.S. and Rose, L.M. and bin Abid, S. and Paige, R.F. and Polack, F.A.C. and Botterweck, G.},
+  title     = {Taming {EMF} and {GMF} Using Model Transformation},
+  booktitle = {Proc. Model Driven Engineering Languages and System (MoDELS), Part I},
+  year      = {2010},
+  pages     = {211--225},
+  editor    = {Petriu, D.C. and Rouquette, N. and Haugen, {\O}.},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {6394},
 }
 
 @inproceedings{balazinska00advanced,
   author    = {Balazinska, M. and Merlo, E. and Dagenais, M. and Lag\"{u}e, B. and Kontogiannis, K.},
   title     = {Advanced Clone-Analysis to Support Object-Oriented System Refactoring},
-  booktitle = {Proc. Working Conference on Reverse Engineering},
+  booktitle = {Proc. Working Conference on Reverse Engineering (WCRE)},
   year      = {2000},
   pages     = {98--107},
   location  = {Brisbane, Australia},
@@ -1146,19 +1188,11 @@
 @inproceedings{ducasse99language,
   author     = {Ducasse, S. and Rieger, M. and Demeyer, S.},
   title      = {A Language Independent Approach for Detecting Duplicated Code},
-  booktitle  = {Proc. International Conference on Software Maintenance},
+  booktitle  = {Proc. International Conference on Software Maintenance (ICSM)},
   year       = {1999},
   pages      = {109--118},
   location   = {Oxford, England, UK},
-  publisher = {IEEE Computer Society},
-}
-
-@inproceedings{kolovos07ewlgmf,
-  author    = {Kolovos, D.S. and Paige, R.F. and Rose, L.M. and Polack, F.A.C},
-  title     = {Bridging the {Epsilon Wizard Language} and the {Eclipse Graphical Modeling Framework}},
-  booktitle = {Proc. Eclipse Summit},
-  year      = {2007},
-  address   = {Ludwigsburg, Germany}
+  publisher  = {IEEE Computer Society},
 }
 
 @inproceedings{gronback06gmf,
@@ -1180,8 +1214,8 @@
 @inproceedings{gruschko07towards,
   author    = {Gruschko, B. and Kolovos, D.S. and Paige, R.F.},
   title     = {Towards Synchronizing Models with Evolving Metamodels},
-  booktitle = {Proc. Workshop on Model-Driven Software Evolution},
-  year      = {2007},
+  booktitle = {Proc. Workshop on Model-Driven Software Evolution, co-located with the European Conference on Software Maintenance and Reengineering (CSMR)},
+  year	    = {2007},
   location  = {Amsterdam, The Netherlands},
 }
 
@@ -1197,7 +1231,7 @@
 @inproceedings{dig07cms,
   author    = {Dig, D. and Manzoor, K. and Johnson, R. and Nguyen, T.N.},
   title     = {Refactoring-Aware Configuration Management for Object-Oriented Programs},
-  booktitle = {Proc. International Conference on Software Engineering},
+  booktitle = {Proc. International Conference on Software Engineering (ICSE)},
   year      = {2007},
   pages     = {427--436},
   location  = {Minneapolis, Minnesota, USA},
@@ -1276,7 +1310,7 @@
 @inproceedings{jurack10towards,
   author    = {Jurack, S. and Mantz, F.},
   title	    = {Towards Metamodel Evolution of {EMF} Models with {Henshin}},
-  booktitle = {Proc. ME Workshop},
+  booktitle = {Proc. Models and Evolution Workshop, co-located with the International Conference on Model Driven Engineering Languages and Systems (MoDELS)},
   year	    = {2010},
   location  = {Oslo, Norway},
 }
@@ -1322,56 +1356,50 @@
 }
 
 @inproceedings{herrmannsdoerfer09gmf,
-  author = {Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G.},
-  title = {Language Evolution in Practice},
-  booktitle = {Proc. SLE},
-  year = {2009},
-  volume = {5696},
-  series = {LNCS},
-  pages = {3--22},
+  author    = {Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G.},
+  title     = {Language Evolution in Practice},
+  booktitle = {Proc. International Conference on Software Language Engineering (SLE), Revised Selected Papers},
+  year      = {2009},
+  volume    = {5696},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {3--22},
   publisher = {Springer},
-  location = {Denver, USA}
+  location  = {Denver, Colorado, USA},
+  editor    = {van den Brand, M. and Gasevic, D. and Gray, J.},
 }
 
 @inproceedings{arendt09refactoring,
   author    = {Arendt, T. and Mantz, F. and Schneider, L. and Taentzer, G.},
-  title	    = {Model Refactoring in Eclipse by {LTK}, {EWL}, and {EMF Refactor}: A Case Study},
-  booktitle = {Proc. Joint {MoDSE-MCCM} Workshop},
+  title	    = {Model Refactoring in {Eclipse} by {LTK}, {EWL}, and {EMF Refactor}: A Case Study},
+  booktitle = {Proc. Joint Model-Driven Software Evolution and Model Co-evolution and Consistency Management ({MoDSE-MCCM}) Workshop, co-located with the International Conference on Model-Driven Engineering Languages and Systems (MoDELS)},
   year	    = {2009},
   location  = {Denver, United States of America},
-}
-
-@inproceedings{brooks86nosilverbullet,
-  author    = {Brooks, F.P.},
-  title     = {No Silver Bullet -- Essence and Accident in Software Engineering (Invited Paper)},
-  booktitle = {Proc. International Federation for Information Processing},
-  year      = {1986},
-  pages     = {1069--1076},
-  location  = {Dublin, Ireland},
 }
 
 @inproceedings{kolovos06eol,
   author    = {Kolovos, D.S. and Paige, R.F. and Polack, F.A.},
   title     = {{The Epsilon Object Language (EOL)}},
-  booktitle = {Proc. {ECMDA-FA}},
+  booktitle = {Proc. European Conference on Model-Driven Architecture - Foundations and Applications (ECMDA-FA)},
   year      = {2006},
   pages     = {128--142},
   location  = {Bilbao, Spain},
-  series    = {LNCS},
+  series    = {Lecture Notes in Computer Science},
   volume    = {4066},
   publisher = {Springer},
+  editor    = {Rensink, A. and Warmer, J.},
 }
 
 @inproceedings{dig06detection,
   author    = {Dig, D. and Comertoglu, C. and Marinov, D. and Johnson, R.},
   title     = {Automated Detection of Refactorings in Evolving Components},
-  booktitle = {Proc. European Conference on Object-Oriented Programming},
+  booktitle = {Proc. European Conference on Object-Oriented Programming (ECOOP)},
   year      = {2006},
   pages     = {404--428},
   location  = {Nantes, France},
-  series    = {LNCS},
+  series    = {Lecture Notes in Computer Science},
   volume    = {4067},
   publisher = {Springer},
+  editor    = {Thomas, D.}
 }
 
 @inproceedings{gabriel90lisp,
@@ -1401,16 +1429,18 @@
 @inproceedings{dig06automatic,
   author    = {Dig, D. and Johnson, R.},
   title     = {Automated upgrading of component-based applications},
-  booktitle = {OOPSLA Companion},
+  booktitle = {Companion to the ACM SIGPLAN Conference on Object-Oriented
+               Programming, Systems, Languages, and Applications (OOPSLA)},
   year      = {2006},
   pages     = {675--676},
-  location  = {Portland, Oregon, USA}
+  location  = {Portland, Oregon, USA},
+  editor    = {Tarr, P.L. and Cook, W.R.},
 }
 
 @inproceedings{rose08hutn,
   author       = {Rose, L.M. and Paige, R.F. and Kolovos, D.S. and Polack, F.A.C.},
   title        = {Constructing Models with the {Human-Usable Textual Notation}},
-  booktitle    = {Proc. International Conference on Model Driven Engineering Languages and Systems},
+  booktitle    = {Proc. International Conference on Model Driven Engineering Languages and Systems (MoDELS)},
   pages        = {249--263},
   year         = {2008},
   series       = {LNCS},
@@ -1491,16 +1521,6 @@
   location  = {Pittsburgh, USA}
 }
 
-@inproceedings{lammel02towards,
-  author    = {L{\"a}mmel, R.},
-  title     = {Towards generic refactoring},
-  booktitle = {Proc. ACM SIGPLAN Workshop on Rule-Based Programming},
-  year      = {2002},
-  publisher = {ACM},
-  pages     = {15--28},
-  location  = {Pittsburgh, USA}
-}
-
 @inproceedings{pizka07automating,
   author    = {Pizka, M. and J{\"u}rgens, E.},
   title     = {Automating Language Evolution},
@@ -1529,25 +1549,28 @@
   author    = {Kalnins, A. and Barzdins, J. and Celms, E.},
   title     = {Model Transformation Language {MOLA}},
   booktitle = {Proc. Model Driven Architecture, European MDA Workshops: Foundations
-               and Applications MDAFA},
+               and Applications, MDAFA 2003 and MDAFA 2004, Revised Selected Papers},
   pages     = {62--76},
   publisher = {Springer},
   series    = {Lecture Notes in Computer Science},
   volume    = {3599},
   year      = {2005},
+  editor    = {A{\ss}mann, U. and Aksit, M. and Rensink, A.},
 }
 
 @inproceedings{grgen,
   author    = {Gei{\ss}, R. and Kroll, M.},
   title     = {GrGen.NET: A Fast, Expressive, and General Purpose Graph
                Rewrite Tool},
-  booktitle = {Proc. Applications of Graph Transformations with Industrial Relevance (AGTIVE)},
+  booktitle = {Proc. International Symposium on Applications of Graph Transformations with Industrial Relevance (AGTIVE), Revised Selected and Invited Papers},
   year      = {2007},
   pages     = {568--569},
   publisher = {Springer},
   series    = {Lecture Notes in Computer Science},
   volume    = {5088},
   year      = {2008},
+  editor    = {Sch{\"u}rr, A. and Nagl, M. and Z{\"u}ndorf, A.},
+  location  = {Kassel, Germany}
 }
 
 @inproceedings{fujaba,
@@ -1640,21 +1663,12 @@
 	year        = {2006}
 }
 
-Online Resources:
-@misc{kolovos09eugenia,
-  author       = {Kolovos, D.S. and Paige, R.F. and Rose, L.M.},
-  title        = {{EuGENia}: {GMF} for mortals},
-  year         = 2009,
-  howpublished = {Long talk at Eclipse Summit Europe, October 2009, Ludwigsburg, Germany. Available at:
-                \url{https://www.eclipsecon.org/submissions/ese2009/view_talk.php?id=979} [Accessed 12 April 2010]}
-}
-
 @misc{bloch05apis,
   author       = {Bloch, J.},
   title        = {How to Design a Good {API} and Why it Matters [online]},
   year         = 2005,
-  howpublished = {Keynote address to the LCSD Workshop at OOPSLA, October 2005, San Diego, United States of America. [Accessed 23 July 2009] Available at:
-                \url{http://lcsd05.cs.tamu.edu/slides/keynote.pdf}}
+  howpublished = {Keynote address to the LCSD Workshop at OOPSLA, October 2005, San Diego, United States of America. Available at:
+                \url{http://lcsd05.cs.tamu.edu/slides/keynote.pdf} [Accessed 2 November 2010]}
 }
 
 @misc{hussey06advanced,
@@ -1665,31 +1679,12 @@ Online Resources:
                   \url{http://www.eclipsecon.org/2006/Sub.do?id=171}}
 }
 
-@misc{clark08superlanguages,
-  author       = {Clark, T. and Sammut, P. and Willians, J.},
-  title        = {Superlanguages: Developing Languages and Applications with {XMF} [online]},
-  year         = 2008,
-  howpublished = {[Accessed 30 June 2008] Available at:
-                  \url{http://www.ceteva.com/docs/Superlanguages.pdf}}
-}
-
 @misc{mcneile03mda,
   author       = {McNeile, A.},
   title        = {{MDA}: The Vision with the Hole?},
   year         = 2003,
   howpublished = {[Accessed 30 June 2008] Available at:
                   \url{http://www.metamaxim.com/download/documents/MDAv1.pdf }}
-}
-
-
-Web pages:
-
-@misc{fowler05language,
-  author       = {Fowler, M.},
-  title        = {Language Workbenches: The Killer-App for Domain Specific Languages? [online]},
-  year         = 2005,
-  howpublished = {[Accessed 30 June 2008] Available at:
-                  \url{http://www.martinfowler.com/articles/languageWorkbench.html}}
 }
 
 Websites:
@@ -1710,15 +1705,6 @@ Websites:
                  \url{http://www.w3.org/}}
 }
 
-@misc{eclipse,
-  author       = {Eclipse},
-  title        = {Eclipse Project [online]},
-  year         = {2008},
-  howpublished = {[Accessed 20 January 2009] Available at:
-                 \url{http://www.eclipse.org}}
-}
-
-
 Standards, Specs and Technologies:
 
 @misc{z,
@@ -1731,64 +1717,8 @@ Standards, Specs and Technologies:
 @misc{ebnf,
   author       = {ISO/IEC, Information Technology},
   title        = {{Syntactic metalanguage -- Extended BNF}},
-  year         = 1996,
-  howpublished = {{ISO 14977:1996 International Standard}}
-}
-
-@misc{emf,
-  author       = {Eclipse},
-  title        = {{Eclipse Modeling Framework} Project [online]},
-  year         = {2008},
-  howpublished = {[Accessed 22 January 2009] Available at:
-                 \url{http://www.eclipse.org/modeling/emf/}}
-}
-
-@misc{gmf,
-  author       = {Eclipse},
-  title        = {{Graphical Modelling Framework} Project [online]},
-  year         = {2008},
-  howpublished = {[Accessed 19 September 2008] Available at:
-                 \url{http://www.eclipse.org/modeling/gmf/}}
-}
-
-@misc{cdo,
-  author       = {Eclipse},
-  title        = {{Connected Data Objects Model Repository Project Website} [online]},
-  year         = 2010,
-  howpublished = {[Accessed 15 February 2010] Available at:
-                 \url{http://www.eclipse.org/modeling/emf/?project=cdo#cdo}}
-}
-
-@misc{gmt,
-  author       = {Eclipse},
-  title        = {{Generative Modelling Technologies} Project [online]},
-  year         = {2008},
-  howpublished = {[Accessed 30 June 2008] Available at:
-                 \url{http://www.eclipse.org/gmt}}
-}
-
-@misc{mdt,
-  author       = {Eclipse},
-  title        = {{Model Development Tools} Project [online]},
-  year         = {2009},
-  howpublished = {[Accessed 6 January 2008] Available at:
-                 \url{http://www.eclipse.org/modeling/mdt/}}
-}
-
-@misc{mdt_uml2,
-  author       = {Eclipse},
-  title        = {{UML2} {Model Development Tools} Project [online]},
-  year         = {2009},
-  howpublished = {[Accessed 7 September 2009] Available at:
-                 \url{http://www.eclipse.org/modeling/mdt/uml2}}
-}
-
-@misc{epsilon,
-  author       = {Eclipse},
-  title        = {{Epsilon} Home page [online]},
-  year         = {2008},
-  howpublished = {[Accessed 30 June 2008] Available at:
-                 \url{http://www.eclipse.org/gmt/epsilon/}}
+  year         = {1996},
+  howpublished = {ISO 14977:1996 International Standard},
 }
 
 @misc{mda,
@@ -1864,52 +1794,12 @@ Standards, Specs and Technologies:
                  \url{http://www.omg.org/mof}}
 }
 
-@misc{emfatic,
-  author       = {IBM},
-  title        = {{Emfatic Language for EMF Development} [online]},
-  year         = 2005,
-  howpublished = {[Accessed 30 June 2008] Available at:
-                 \url{http://www.alphaworks.ibm.com/tech/emfatic}}
-}
-
 @misc{xmlschema,
   author       = {W3C},
   title        = {{W3C XML Schema 1.1 Specification} [online]},
   year         = 2007,
   howpublished = {[Accessed 30 June 2008] Available at:
                  \url{http://www.w3.org/XML/Schema}}
-}
-
-@misc{xmf,
-  author       = {Ceteva},
-  title        = {{XMF} -- The Extensible Programming Language [online]},
-  year         = 2008,
-  howpublished = {[Accessed 30 June 2008] Available at:
-                 \url{http://www.ceteva.com/xmf.html}}
-}
-
-@misc{mps,
-  author       = {JetBrains},
-  title        = {{MPS -- Meta Programming System} [online]},
-  year         = {2008},
-  howpublished = {[Accessed 30 June 2008] Available at:
-                 \url{http://www.jetbrains.com/mps/index.html}}
-}
-
-@misc{atl,
-  author       = {ATLAS},
-  title        = {{Atlas Transformation Language Project Website} [online]},
-  year         = 2007,
-  howpublished = {[Accessed 30 June 2008] Available at:
-                 \url{http://www.eclipse.org/m2m/atl/}}
-}
-
-@misc{ltk,
-  author       = {Frenzel, L.},
-  title        = {The Language Toolkit: An {API} for Automated Refactorings in Eclipse-based {IDE}s [online]},
-  year         = 2006,
-  howpublished = {[Accessed 02 August 2010] Available at:
-                 \url{http://www.eclipse.org/articles/Article-LTK/ltk.html}}
 }
 
 @misc{qvt,
@@ -1933,14 +1823,6 @@ Standards, Specs and Technologies:
   title        = {{XPand Language Reference} [online]},
   year         = 2008,
   howpublished = {[Accessed 18 August 2010] Available at:
-                 \url{http://wiki.eclipse.org/AMMA}}
-}
-
-@misc{amma,
-  author       = {{INRIA}},
-  title        = {{AMMA} project page [online]},
-  year         = 2007,
-  howpublished = {[Accessed 30 June 2008] Available at:
                  \url{http://wiki.eclipse.org/AMMA}}
 }
 

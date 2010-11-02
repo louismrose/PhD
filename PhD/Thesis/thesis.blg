@@ -14,20 +14,33 @@ A level-1 auxiliary file: A.4.TTCScores/ttc_scores.aux
 The style file: longname.bst
 Database file #1: thesis.bib
 Warning--I'm ignoring amyot06evaluation's extra "year" field
---line 669 of file thesis.bib
-Repeated entry---line 1458 of file thesis.bib
+--line 695 of file thesis.bib
+Warning--I'm ignoring cervelle06tatoo's extra "year" field
+--line 1079 of file thesis.bib
+Repeated entry---line 1478 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1480 of file thesis.bib
- : @inproceedings{lammel02towards
- :                               ,
-I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
---line 1510 of file thesis.bib
+--line 1520 of file thesis.bib
 Warning--I'm ignoring grgen's extra "year" field
---line 1536 of file thesis.bib
+--line 1546 of file thesis.bib
+Warning--I didn't find a database entry for "emf"
+Warning--I didn't find a database entry for "epsilon"
+Warning--I didn't find a database entry for "atl"
+Warning--I didn't find a database entry for "amma"
+Warning--I didn't find a database entry for "eclipse"
+Warning--I didn't find a database entry for "emfatic"
+Warning--I didn't find a database entry for "gmt"
+Warning--I didn't find a database entry for "fowler05language"
+Warning--I didn't find a database entry for "dmitriev04lop"
+Warning--I didn't find a database entry for "xmf"
 Warning--I didn't find a database entry for "ror"
+Warning--I didn't find a database entry for "ltk"
+Warning--I didn't find a database entry for "mdt"
+Warning--I didn't find a database entry for "cdo"
+Warning--I didn't find a database entry for "mdt_uml2"
+Warning--I didn't find a database entry for "herrmannsdoerfer10extensive"
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -86,7 +99,6 @@ Name 1 in "Amyot, D., and Farah, H., and Roy, J.-F." has a comma at the end for 
 while executing---line 1253 of file longname.bst
 Name 2 in "Amyot, D., and Farah, H., and Roy, J.-F." has a comma at the end for entry amyot06evaluation
 while executing---line 1253 of file longname.bst
-Warning--can't use both volume and number fields in banerjee87semantics
 Name 1 in "Brown, W.J., and Malveau, R.C., and McCormick III, H.W., and Mowbray, T.J." has a comma at the end for entry brown98antipatterns
 while executing---line 1253 of file longname.bst
 Name 2 in "Brown, W.J., and Malveau, R.C., and McCormick III, H.W., and Mowbray, T.J." has a comma at the end for entry brown98antipatterns
@@ -115,45 +127,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 189 entries,
+You've used 174 entries,
             2472 wiz_defined-function locations,
-            1432 strings with 31113 characters,
-and the built_in function-call counts, 74489 in all, are:
-= -- 7512
-> -- 2804
-< -- 92
-+ -- 909
-- -- 864
-* -- 5272
-:= -- 11527
-add.period$ -- 616
-call.type$ -- 189
-change.case$ -- 1156
-chr.to.int$ -- 166
-cite$ -- 190
-duplicate$ -- 3449
-empty$ -- 6096
-format.name$ -- 1117
-if$ -- 15959
-int.to.chr$ -- 24
+            1420 strings with 31255 characters,
+and the built_in function-call counts, 70841 in all, are:
+= -- 7100
+> -- 2810
+< -- 89
++ -- 906
+- -- 867
+* -- 5177
+:= -- 11036
+add.period$ -- 572
+call.type$ -- 174
+change.case$ -- 1079
+chr.to.int$ -- 155
+cite$ -- 174
+duplicate$ -- 3248
+empty$ -- 5700
+format.name$ -- 1105
+if$ -- 15113
+int.to.chr$ -- 20
 int.to.str$ -- 0
 missing$ -- 170
-newline$ -- 949
-num.names$ -- 568
-pop$ -- 1341
+newline$ -- 875
+num.names$ -- 551
+pop$ -- 1205
 preamble$ -- 1
-purify$ -- 1377
+purify$ -- 1285
 quote$ -- 0
-skip$ -- 2798
+skip$ -- 2584
 stack$ -- 0
-substring$ -- 3588
-swap$ -- 1011
-text.length$ -- 92
+substring$ -- 3476
+swap$ -- 949
+text.length$ -- 89
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1396
-warning$ -- 1
-while$ -- 590
-width$ -- 194
-write$ -- 2471
-(There were 45 error messages)
+type$ -- 1272
+warning$ -- 0
+while$ -- 576
+width$ -- 178
+write$ -- 2305
+(There were 44 error messages)
