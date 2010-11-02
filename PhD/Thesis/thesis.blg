@@ -14,20 +14,20 @@ A level-1 auxiliary file: A.4.TTCScores/ttc_scores.aux
 The style file: longname.bst
 Database file #1: thesis.bib
 Warning--I'm ignoring amyot06evaluation's extra "year" field
---line 664 of file thesis.bib
-Repeated entry---line 1469 of file thesis.bib
+--line 662 of file thesis.bib
+Repeated entry---line 1467 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1491 of file thesis.bib
+Repeated entry---line 1489 of file thesis.bib
  : @inproceedings{lammel02towards
  :                               ,
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
---line 1521 of file thesis.bib
+--line 1519 of file thesis.bib
 Warning--I'm ignoring grgen's extra "year" field
---line 1550 of file thesis.bib
-Repeated entry---line 1553 of file thesis.bib
+--line 1548 of file thesis.bib
+Repeated entry---line 1551 of file thesis.bib
  : @inproceedings{grgen
  :                     ,
 I'm skipping whatever remains of this entry
@@ -44,6 +44,20 @@ while executing---line 1187 of file longname.bst
 Name 2 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
 while executing---line 1187 of file longname.bst
 Name 3 in "Nentwich, C., and Emmerich, W., and Finkelstein, A., and Ellmer, E." has a comma at the end for entry nentwich2003flexible
+while executing---line 1187 of file longname.bst
+Name 1 in "Alexander, C., and Ishikawa, S., and Silverstein, M." has a comma at the end for entry alexander77pattern
+while executing---line 1187 of file longname.bst
+Name 1 in "Alexander, C., and Ishikawa, S., and Silverstein, M." has a comma at the end for entry alexander77pattern
+while executing---line 1187 of file longname.bst
+Name 2 in "Alexander, C., and Ishikawa, S., and Silverstein, M." has a comma at the end for entry alexander77pattern
+while executing---line 1187 of file longname.bst
+Name 1 in "Brown, W.J., and Malveau, R.C., and McCormick III, H.W., and Mowbray, T.J." has a comma at the end for entry brown98antipatterns
+while executing---line 1187 of file longname.bst
+Name 1 in "Brown, W.J., and Malveau, R.C., and McCormick III, H.W., and Mowbray, T.J." has a comma at the end for entry brown98antipatterns
+while executing---line 1187 of file longname.bst
+Name 2 in "Brown, W.J., and Malveau, R.C., and McCormick III, H.W., and Mowbray, T.J." has a comma at the end for entry brown98antipatterns
+while executing---line 1187 of file longname.bst
+Name 3 in "Brown, W.J., and Malveau, R.C., and McCormick III, H.W., and Mowbray, T.J." has a comma at the end for entry brown98antipatterns
 while executing---line 1187 of file longname.bst
 Name 1 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1187 of file longname.bst
@@ -69,11 +83,21 @@ Name 1 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma a
 while executing---line 1187 of file longname.bst
 Name 2 in "Herrmannsdoerfer, M., and Ratiu, D., and Wachsmuth, G." has a comma at the end for entry herrmannsdoerfer09gmf
 while executing---line 1187 of file longname.bst
+Name 1 in "Alexander, C., and Ishikawa, S., and Silverstein, M." has a comma at the end for entry alexander77pattern
+while executing---line 1253 of file longname.bst
+Name 2 in "Alexander, C., and Ishikawa, S., and Silverstein, M." has a comma at the end for entry alexander77pattern
+while executing---line 1253 of file longname.bst
 Name 1 in "Amyot, D., and Farah, H., and Roy, J.-F." has a comma at the end for entry amyot06evaluation
 while executing---line 1253 of file longname.bst
 Name 2 in "Amyot, D., and Farah, H., and Roy, J.-F." has a comma at the end for entry amyot06evaluation
 while executing---line 1253 of file longname.bst
 Warning--can't use both volume and number fields in banerjee87semantics
+Name 1 in "Brown, W.J., and Malveau, R.C., and McCormick III, H.W., and Mowbray, T.J." has a comma at the end for entry brown98antipatterns
+while executing---line 1253 of file longname.bst
+Name 2 in "Brown, W.J., and Malveau, R.C., and McCormick III, H.W., and Mowbray, T.J." has a comma at the end for entry brown98antipatterns
+while executing---line 1253 of file longname.bst
+Name 3 in "Brown, W.J., and Malveau, R.C., and McCormick III, H.W., and Mowbray, T.J." has a comma at the end for entry brown98antipatterns
+while executing---line 1253 of file longname.bst
 Name 1 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
 while executing---line 1253 of file longname.bst
 Name 2 in "Fritzsche, M., and Johannes, J., and Zschaler, S., and Zherebtsov, A., and Terekhov, A." has a comma at the end for entry fritzsche08tracing
@@ -100,15 +124,15 @@ Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 You've used 190 entries,
             2472 wiz_defined-function locations,
-            1428 strings with 32037 characters,
-and the built_in function-call counts, 74717 in all, are:
-= -- 7528
+            1429 strings with 31882 characters,
+and the built_in function-call counts, 74727 in all, are:
+= -- 7531
 > -- 2812
 < -- 92
 + -- 911
 - -- 866
-* -- 5274
-:= -- 11562
+* -- 5277
+:= -- 11563
 add.period$ -- 619
 call.type$ -- 190
 change.case$ -- 1160
@@ -117,17 +141,17 @@ cite$ -- 191
 duplicate$ -- 3460
 empty$ -- 6122
 format.name$ -- 1120
-if$ -- 16006
+if$ -- 16009
 int.to.chr$ -- 24
 int.to.str$ -- 0
 missing$ -- 170
 newline$ -- 954
 num.names$ -- 571
-pop$ -- 1359
+pop$ -- 1356
 preamble$ -- 1
 purify$ -- 1383
 quote$ -- 0
-skip$ -- 2809
+skip$ -- 2810
 stack$ -- 0
 substring$ -- 3595
 swap$ -- 1013
@@ -137,6 +161,6 @@ top$ -- 0
 type$ -- 1404
 warning$ -- 1
 while$ -- 592
-width$ -- 196
-write$ -- 2473
-(There were 36 error messages)
+width$ -- 195
+write$ -- 2476
+(There were 48 error messages)

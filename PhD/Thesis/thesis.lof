@@ -18,12 +18,12 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Attribute to association end refactoring in EMF Refactor}}{56}{figure.3.2}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left-hand side matching rule.}}}{56}{figure.3.2}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right-hand side production rule.}}}{56}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Approaches to incremental transformation}}{58}{figure.3.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Re-transformation.}}}{58}{figure.3.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Live transformation.}}}{58}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Exemplar impact analysis pattern}}{60}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces An exemplar co-evolution process}}{63}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Visualising a transformation chain}}{65}{figure.3.6}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Approaches to incremental transformation}}{57}{figure.3.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Re-transformation.}}}{57}{figure.3.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Live transformation.}}}{57}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Exemplar impact analysis pattern}}{59}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces An exemplar co-evolution process}}{62}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Visualising a transformation chain}}{64}{figure.3.6}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Analysis chapter overview.}}{69}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Refactoring a reference to a value}}{75}{figure.4.2}
@@ -66,29 +66,29 @@
 \contentsline {figure}{\numberline {6.8}{\ignorespaces User-driven co-evolution with dedicated structures}}{145}{figure.6.8}
 \contentsline {figure}{\numberline {6.9}{\ignorespaces HUTN source prior to migration}}{146}{figure.6.9}
 \contentsline {figure}{\numberline {6.10}{\ignorespaces HUTN source part way through migration}}{147}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Exemplar metamodel evolution (Petri nets)}}{156}{figure.6.11}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{156}{figure.6.11}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{156}{figure.6.11}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Exemplar metamodel evolution (Petri nets)}}{159}{figure.6.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{159}{figure.6.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{159}{figure.6.11}
 \contentsline {figure}{\numberline {6.12}{\ignorespaces Simplified fragment of the GMF Graph metamodel.}}{163}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Change Reference to Containment metamodel evolution}}{166}{figure.6.13}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{166}{figure.6.13}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{166}{figure.6.13}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Change Reference to Containment metamodel evolution}}{167}{figure.6.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{167}{figure.6.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{167}{figure.6.13}
 \contentsline {figure}{\numberline {6.14}{\ignorespaces Exemplar metamodel evolution (Petri nets)}}{171}{figure.6.14}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{171}{figure.6.14}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{171}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces GMF graph metamodel evolution}}{172}{figure.6.15}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{172}{figure.6.15}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{172}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Migration tool performance comparison.}}{181}{figure.6.16}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Exemplar activity model.}}{186}{figure.6.17}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces UML 1.4 Activity Graphs}}{187}{figure.6.18}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces UML 2.2 Activity Diagrams}}{188}{figure.6.19}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Migrating Actions for the Core Task}}{189}{figure.6.20}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ObjectFlowState structure in UML 1.4}}}{189}{figure.6.20}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Equivalent ObjectNode structure in UML 2.2}}}{189}{figure.6.20}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Migrating Actions for Extension 1}}{190}{figure.6.21}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ObjectFlowState structure in UML 1.4}}}{190}{figure.6.21}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Equivalent ObjectFlow structure in UML 2.2}}}{190}{figure.6.21}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces GMF graph metamodel evolution}}{173}{figure.6.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{173}{figure.6.15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{173}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Migration tool performance comparison.}}{182}{figure.6.16}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Exemplar activity model.}}{187}{figure.6.17}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces UML 1.4 Activity Graphs}}{188}{figure.6.18}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces UML 2.2 Activity Diagrams}}{189}{figure.6.19}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Migrating Actions for the Core Task}}{190}{figure.6.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ObjectFlowState structure in UML 1.4}}}{190}{figure.6.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Equivalent ObjectNode structure in UML 2.2}}}{190}{figure.6.20}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Migrating Actions for Extension 1}}{191}{figure.6.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ObjectFlowState structure in UML 1.4}}}{191}{figure.6.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Equivalent ObjectFlow structure in UML 2.2}}}{191}{figure.6.21}
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {A.1}{\ignorespaces The process-oriented metamodel after one iteration.}}{210}{figure.A.1}

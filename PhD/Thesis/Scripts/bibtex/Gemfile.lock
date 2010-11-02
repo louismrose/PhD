@@ -1,0 +1,31 @@
+GEM
+  remote: http://gemcutter.org/
+  specs:
+    diff-lcs (1.1.2)
+    nokogiri (1.4.3.1)
+    rack (1.2.1)
+    rack-test (0.5.6)
+      rack (>= 1.0)
+    rspec (2.0.0.beta.19)
+      rspec-core (= 2.0.0.beta.19)
+      rspec-expectations (= 2.0.0.beta.19)
+      rspec-mocks (= 2.0.0.beta.19)
+    rspec-core (2.0.0.beta.19)
+    rspec-expectations (2.0.0.beta.19)
+      diff-lcs (>= 1.1.2)
+    rspec-mocks (2.0.0.beta.19)
+    rspec-rails (2.0.0.beta.19)
+      rspec (= 2.0.0.beta.19)
+      webrat (>= 0.7.2.beta.1)
+    syntax (1.0.0)
+    webrat (0.7.2)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rspec-rails (= 2.0.0.beta.19)
+  syntax

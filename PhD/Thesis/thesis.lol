@@ -28,21 +28,21 @@
 \contentsline {lstlisting}{\numberline {6.2}The Petri nets model migration in ATL}{157}{lstlisting.6.2}
 \contentsline {lstlisting}{\numberline {6.3}The Petri nets model migration in Groovy-for-COPE}{158}{lstlisting.6.3}
 \contentsline {lstlisting}{\numberline {6.4}Petri nets model migration in Flock}{158}{lstlisting.6.4}
-\contentsline {lstlisting}{\numberline {6.5}An extract of the GMF Graph model migration in ATL}{161}{lstlisting.6.5}
-\contentsline {lstlisting}{\numberline {6.6}Simplified GMF Graph model migration in ATL}{164}{lstlisting.6.6}
-\contentsline {lstlisting}{\numberline {6.7}Simplified GMF Graph model migration in COPE}{164}{lstlisting.6.7}
-\contentsline {lstlisting}{\numberline {6.8}Simplified GMF Graph model migration in Flock}{165}{lstlisting.6.8}
-\contentsline {lstlisting}{\numberline {6.9}Migration for Change Reference to Containment in ATL}{167}{lstlisting.6.9}
-\contentsline {lstlisting}{\numberline {6.10}Migration for Change Reference to Containment in Flock}{168}{lstlisting.6.10}
-\contentsline {lstlisting}{\numberline {6.11}Migrating Actions}{192}{lstlisting.6.11}
-\contentsline {lstlisting}{\numberline {6.12}Migrating FinalStates and Transitions}{192}{lstlisting.6.12}
-\contentsline {lstlisting}{\numberline {6.13}Migrating Pseudostates}{192}{lstlisting.6.13}
+\contentsline {lstlisting}{\numberline {6.5}An extract of the GMF Graph model migration in ATL}{162}{lstlisting.6.5}
+\contentsline {lstlisting}{\numberline {6.6}Simplified GMF Graph model migration in ATL}{165}{lstlisting.6.6}
+\contentsline {lstlisting}{\numberline {6.7}Simplified GMF Graph model migration in COPE}{165}{lstlisting.6.7}
+\contentsline {lstlisting}{\numberline {6.8}Simplified GMF Graph model migration in Flock}{166}{lstlisting.6.8}
+\contentsline {lstlisting}{\numberline {6.9}Migration for Change Reference to Containment in ATL}{168}{lstlisting.6.9}
+\contentsline {lstlisting}{\numberline {6.10}Migration for Change Reference to Containment in Flock}{169}{lstlisting.6.10}
+\contentsline {lstlisting}{\numberline {6.11}Migrating Actions}{193}{lstlisting.6.11}
+\contentsline {lstlisting}{\numberline {6.12}Migrating FinalStates and Transitions}{193}{lstlisting.6.12}
+\contentsline {lstlisting}{\numberline {6.13}Migrating Pseudostates}{193}{lstlisting.6.13}
 \contentsline {lstlisting}{\numberline {6.14}Migrating ActivityGraphs}{193}{lstlisting.6.14}
-\contentsline {lstlisting}{\numberline {6.15}Migrating Guards}{193}{lstlisting.6.15}
-\contentsline {lstlisting}{\numberline {6.16}Migrating Partitions}{193}{lstlisting.6.16}
-\contentsline {lstlisting}{\numberline {6.17}Migrating ObjectFlows}{194}{lstlisting.6.17}
-\contentsline {lstlisting}{\numberline {6.18}Migrating ObjectFlowStates to a single ObjectFlow}{194}{lstlisting.6.18}
-\contentsline {lstlisting}{\numberline {6.19}Migrating Partitions without ObjectFlowStates}{194}{lstlisting.6.19}
+\contentsline {lstlisting}{\numberline {6.15}Migrating Guards}{194}{lstlisting.6.15}
+\contentsline {lstlisting}{\numberline {6.16}Migrating Partitions}{194}{lstlisting.6.16}
+\contentsline {lstlisting}{\numberline {6.17}Migrating ObjectFlows}{195}{lstlisting.6.17}
+\contentsline {lstlisting}{\numberline {6.18}Migrating ObjectFlowStates to a single ObjectFlow}{195}{lstlisting.6.18}
+\contentsline {lstlisting}{\numberline {6.19}Migrating Partitions without ObjectFlowStates}{195}{lstlisting.6.19}
 \contentsline {lstlisting}{\numberline {A.1}The annotated process-oriented metamodel after one iteration}{210}{lstlisting.A.1}
 \contentsline {lstlisting}{\numberline {A.2}The annotated process-oriented metamodel after two iterations}{211}{lstlisting.A.2}
 \contentsline {lstlisting}{\numberline {A.3}The annotated process-oriented metamodel after four iterations}{215}{lstlisting.A.3}

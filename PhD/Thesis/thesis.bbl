@@ -7,9 +7,9 @@
   \url{http://www.rubyonrails.org/}, 2008.
 
 \bibitem[Ackoff 1962]{ackoff62scientific}{$~$}
-Russell~L. Ackoff.
+R.L. Ackoff.
 \newblock {\em Scientific Method: Optimizing Applied Research Decisions}.
-\newblock John Wiley and Sons, 1962.
+\newblock John Wiley and Sons, New York, 1962.
 
 \bibitem[Aizenbud-Reshef {\it et al.}\  2005]{aizenbud05operational}{$~$}
 N.~Aizenbud-Reshef, R.F. Paige, J.~Rubin, Y.~Shaham-Gafni, and D.S. Kolovos.
@@ -18,10 +18,10 @@ N.~Aizenbud-Reshef, R.F. Paige, J.~Rubin, Y.~Shaham-Gafni, and D.S. Kolovos.
   2005.
 
 \bibitem[Alexander {\it et al.}\  1977]{alexander77pattern}{$~$}
-Christopher Alexander, Sara Ishikawa, and Murray Silverstein.
+C.~Alexander, S.~Ishikawa, and M.~Silverstein.
 \newblock {\em A Pattern Language: Towns, Buildings, Construction (Center for
   Environmental Structure Series)}.
-\newblock Oxford University Press, 1977.
+\newblock Oxford University Press, New York, 1977.
 
 \bibitem[\'{A}lvarez {\it et al.}\  2001]{alvarez01mml}{$~$}
 Jos\'{e} \'{A}lvarez, Andy Evans, and Paul Sammut.
@@ -37,7 +37,7 @@ D.~Amyot, H.~Farah, and J.-F. Roy.
   2006.
 
 \bibitem[Apostel 1960]{apostel60models}{$~$}
-Leo Apostel.
+L.~Apostel.
 \newblock Towards the formal study of models in the non-formal sciences.
 \newblock {\em Synthese}, 12:125--161, 1960.
 
@@ -74,7 +74,7 @@ Jay Banerjee, Won Kim, Hyoung-Joo Kim, and Henry~F. Korth.
   volume~16, pages 311--322. ACM, 1987.
 
 \bibitem[Beck \& Cunningham 1989]{beck89constructing}{$~$}
-Kent Beck and Ward Cunningham.
+K.~Beck and W.~Cunningham.
 \newblock Constructing abstractions for object-oriented applications.
 \newblock {\em Journal of Object Oriented Programming}, 2, 1989.
 
@@ -84,13 +84,12 @@ Jean B{\'e}zivin and Olivier Gerb{\'e}.
 \newblock In {\em Proc. ASE}, pages 273--280. IEEE Computer Society, 2001.
 
 \bibitem[B{\'e}zivin 2005]{bezivin05unification}{$~$}
-Jean B{\'e}zivin.
+J.~B{\'e}zivin.
 \newblock On the unification power of models.
 \newblock {\em Software and System Modeling}, 4(2):171--188, 2005.
 
 \bibitem[Biermann {\it et al.}\  2006]{biermann06refactoring}{$~$}
-Enrico Biermann, Karsten Ehrig, Christian K{\"o}hler, G{\"u}nter Kuhns,
-  Gabriele Taentzer, and Eduard Weiss.
+E.~Biermann, K.~Ehrig, C.~K{\"o}hler, G.~Kuhns, G.~Taentzer, and E.~Weiss.
 \newblock Emf model refactoring based on graph transformation concepts.
 \newblock {\em ECEASST}, 3, 2006.
 
@@ -126,10 +125,9 @@ Frederick~P. Brooks.
   pages 1069--1076, 1986.
 
 \bibitem[Brown {\it et al.}\  1998]{brown98antipatterns}{$~$}
-William~J. Brown, Raphael~C. Malveau, Hays W.~McCormick III, and Thomas~J.
-  Mowbray.
+W.J. Brown, R.C. Malveau, H.W. McCormick~III, and T.J. Mowbray.
 \newblock {\em Anti Patterns}.
-\newblock Wiley, 1998.
+\newblock Wiley, New York, 1998.
 
 \bibitem[Cervelle {\it et al.}\  2006]{cervelle06tatoo}{$~$}
 Julien Cervelle, R\'{e}mi Forax, and Gilles Roussel.
@@ -168,7 +166,7 @@ Tony Clark, Paul Sammut, and James Willians.
   \url{http://www.ceteva.com/docs/Superlanguages.pdf}, 2008.
 
 \bibitem[Cleland-Huang {\it et al.}\  2003]{cleland03eventbased}{$~$}
-Jane Cleland-Huang, Carl~K. Chang, and Mark Christensen.
+J.~Cleland-Huang, C.K. Chang, and M.~Christensen.
 \newblock Event-based traceability for managing evolutionary change.
 \newblock {\em IEEE Transactions on Software Engineering}, 29(9):796--810,
   2003.
@@ -180,7 +178,7 @@ M.~Costa and A.R. da~Silva.
   2007.
 
 \bibitem[Czarnecki \& Helsen 2006]{czarnecki06survey}{$~$}
-Krzysztof Czarnecki and Simon Helsen.
+K.~Czarnecki and S.~Helsen.
 \newblock Feature-based survey of model transformation approaches.
 \newblock {\em IBM Systems Journal}, 45(3):621--646, 2006.
 
@@ -225,7 +223,7 @@ Daniel Dig.
 \newblock PhD thesis, University of Illinois at Urbana-Champaign, USA, 2007.
 
 \bibitem[Dmitriev 2004]{dmitriev04lop}{$~$}
-Sergey Dmitriev.
+S.~Dmitriev.
 \newblock Language oriented programming: The next programming paradigm.
 \newblock {\em {JetBrains onBoard} [online]}, 1, 2004.
 \newblock [Accessed 30 June 2008] Available at:
@@ -286,8 +284,8 @@ Eclipse.
 \newblock [Accessed 15 February 2010] Available at:
   \url{http://www.eclipse.org/modeling/emf/?project=cdo#cdo}, 2010.
 
-\bibitem[Edelweiss \& Freitas~Moreira 2005]{edelweiss05temporal}{$~$}
-Nina Edelweiss and \'{A}lvaro Freitas~Moreira.
+\bibitem[Edelweiss \& Moreira 2005]{edelweiss05temporal}{$~$}
+N.~Edelweiss and \'{A}.F. Moreira.
 \newblock Temporal and versioning model for schema evolution in object-oriented
   databases.
 \newblock {\em Data \& Knowledge Engineering}, 53(2):99--128, 2005.
@@ -636,7 +634,7 @@ Ivan Kurtev.
 \newblock PhD thesis, University of Twente, Netherlands, 2004.
 
 \bibitem[Lago {\it et al.}\  2009]{lago09scoped}{$~$}
-Patricia Lago, Henry Muccini, and Hans van Vliet.
+P.~Lago, H.~Muccini, and H.~van Vliet.
 \newblock A scoped approach to traceability management.
 \newblock {\em Systems and Software}, 82(1):168--182, 2009.
 
@@ -665,12 +663,12 @@ Juan de~Lara and Esther Guerra.
   Computer Science}, pages 16--30. Springer, 2010.
 
 \bibitem[Lehman 1969]{lehman69programming}{$~$}
-Meir~M. Lehman.
+M.M. Lehman.
 \newblock The programming process.
 \newblock Technical report, {IBM Res. Rep. RC 2722}, 1969.
 
 \bibitem[Lerner 2000]{lerner00model}{$~$}
-Barbara~Staudt Lerner.
+B.S. Lerner.
 \newblock A model for compound type changes encountered in schema evolution.
 \newblock {\em ACM Transactions on Database Systems}, 25(1):83--127, 2000.
 
@@ -686,7 +684,7 @@ R.C. Martin and M.~Martin.
 \newblock Prentice Hall, Upper Saddle River, NJ, USA, 2006.
 
 \bibitem[McCarthy 1978]{mcarthy78lisp}{$~$}
-John McCarthy.
+J.~McCarthy.
 \newblock History of {L}isp.
 \newblock {\em History of Programming Languages}, 1:217--223, 1978.
 
@@ -734,7 +732,7 @@ Merriam-Webster.
   2010.
 
 \bibitem[Moad 1990]{moad90maintaining}{$~$}
-J~Moad.
+J.~Moad.
 \newblock Maintaining the competitive edge.
 \newblock {\em Datamation}, 36(4):61--66, 1990.
 
@@ -863,7 +861,7 @@ openArchitectureWare.
   \url{http://wiki.eclipse.org/AMMA}, 2008.
 
 \bibitem[Paige {\it et al.}\  2007]{paige07metamodel}{$~$}
-Richard~F. Paige, Phillip~J. Brooke, and Jonathan~S. Ostroff.
+R.F. Paige, P.J. Brooke, and J.S. Ostroff.
 \newblock Metamodel-based model conformance and multiview consistency checking.
 \newblock {\em ACM Transactions on Software Engineering and Methodology},
   16(3), 2007.
@@ -991,17 +989,17 @@ Louis~M. Rose, Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
   Science}, pages 184--198. Springer, 2010.
 
 \bibitem[Selic 2003]{selic03pragmatics}{$~$}
-Bran Selic.
+B.~Selic.
 \newblock The pragmatics of {Model-Driven Development}.
 \newblock {\em IEEE Software}, 20(5):19--25, 2003.
 
 \bibitem[Selic 2005]{selic05uml2}{$~$}
-Bran Selic.
+B.~Selic.
 \newblock What’s new in {UML} 2.0?
 \newblock {\em {IBM Rational} software}, 2005.
 
 \bibitem[Sendall \& Kozaczynski 2003]{sendall03heart}{$~$}
-Shane Sendall and Wojtek Kozaczynski.
+S.~Sendall and W.~Kozaczynski.
 \newblock Model transformation: The heart and soul of model-driven software
   development.
 \newblock {\em IEEE Software}, 20:42--45, 2003.
@@ -1057,12 +1055,12 @@ Massimo Tisi, Fr{\'e}d{\'e}ric Jouault, Piero Fraternali, Stefano Ceri, and
   Computer Science}, pages 18--33. Springer, 2009.
 
 \bibitem[Tratt 2008]{tratt08change}{$~$}
-Laurence Tratt.
+L.~Tratt.
 \newblock A change propagating model transformation language.
 \newblock {\em Journal of Object Technology}, 7(3):107--124, 2008.
 
 \bibitem[Varr\'{o} \& Balogh 2007]{VIATRA}{$~$}
-D\'{a}niel Varr\'{o} and Andr\'{a}s Balogh.
+D.~Varr\'{o} and A.~Balogh.
 \newblock The model transformation language of the {VIATRA2} framework.
 \newblock {\em Science of Computer Programming}, 68(3):187--207, 2007.
 
@@ -1090,7 +1088,7 @@ Guido Wachsmuth.
   Springer, 2007.
 
 \bibitem[Wallace 2005]{wallace05modular}{$~$}
-Malcolm Wallace.
+M.~Wallace.
 \newblock Modular architectural representation and analysis of fault
   propagation and transformation.
 \newblock {\em Electronic Notes in Theoretical Computer Science},
@@ -1102,7 +1100,7 @@ Martin~P. Ward.
 \newblock {\em Software --- Concepts and Tools}, 15(4):147--161, 1994.
 
 \bibitem[Watson 2008]{watson08mdahistory}{$~$}
-Andrew Watson.
+A.~Watson.
 \newblock A brief history of {MDA}.
 \newblock {\em Upgrade}, 9(2), 2008.
 
@@ -1114,7 +1112,7 @@ Peter~H. Welch and Fred R.~M. Barnes.
   Springer, 2005.
 
 \bibitem[Winkler \& Pilgrim 2009]{winkler09survey}{$~$}
-Stefan Winkler and Jens von Pilgrim.
+S.~Winkler and J.~von Pilgrim.
 \newblock A survey of traceability in requirements engineering and model-driven
   development.
 \newblock {\em Software and Systems Modeling}, December 2009.
