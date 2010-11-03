@@ -2,6 +2,7 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
+\addvspace {10pt}
 \contentsline {table}{\numberline {4.1}{\ignorespaces Candidates for study of evolution in existing MDE projects}}{71}{table.4.1}
 \addvspace {10pt}
 \contentsline {table}{\numberline {5.1}{\ignorespaces Properties of model migration approaches}}{129}{table.5.1}
@@ -10,17 +11,17 @@
 \contentsline {table}{\numberline {6.2}{\ignorespaces Model operation frequency (evaluation examples).}}{160}{table.6.2}
 \contentsline {table}{\numberline {6.3}{\ignorespaces Summary of comparison criteria.}}{174}{table.6.3}
 \contentsline {table}{\numberline {6.4}{\ignorespaces Summary of tool selection advice}}{183}{table.6.4}
-\contentsline {table}{\numberline {6.5}{\ignorespaces TTC scores for Epsilon Flock (unweighted).}}{197}{table.6.5}
+\contentsline {table}{\numberline {6.5}{\ignorespaces TTC scores for Epsilon Flock (unweighted).}}{198}{table.6.5}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {C.1}{\ignorespaces Correctness scores}}{282}{table.C.1}
-\contentsline {table}{\numberline {C.2}{\ignorespaces Conciseness scores}}{282}{table.C.2}
-\contentsline {table}{\numberline {C.3}{\ignorespaces Clarity scores}}{283}{table.C.3}
-\contentsline {table}{\numberline {C.4}{\ignorespaces Appropriateness scores}}{283}{table.C.4}
-\contentsline {table}{\numberline {C.5}{\ignorespaces Tool maturity scores}}{284}{table.C.5}
-\contentsline {table}{\numberline {C.6}{\ignorespaces Reproducibility scores}}{284}{table.C.6}
-\contentsline {table}{\numberline {C.7}{\ignorespaces Extensions scores}}{285}{table.C.7}
-\contentsline {table}{\numberline {C.8}{\ignorespaces Total (equally weighted) scores}}{285}{table.C.8}
-\contentsline {table}{\numberline {C.9}{\ignorespaces Total (weighted) scores}}{286}{table.C.9}
+\contentsline {table}{\numberline {C.1}{\ignorespaces Correctness scores}}{284}{table.C.1}
+\contentsline {table}{\numberline {C.2}{\ignorespaces Conciseness scores}}{284}{table.C.2}
+\contentsline {table}{\numberline {C.3}{\ignorespaces Clarity scores}}{285}{table.C.3}
+\contentsline {table}{\numberline {C.4}{\ignorespaces Appropriateness scores}}{285}{table.C.4}
+\contentsline {table}{\numberline {C.5}{\ignorespaces Tool maturity scores}}{286}{table.C.5}
+\contentsline {table}{\numberline {C.6}{\ignorespaces Reproducibility scores}}{286}{table.C.6}
+\contentsline {table}{\numberline {C.7}{\ignorespaces Extensions scores}}{287}{table.C.7}
+\contentsline {table}{\numberline {C.8}{\ignorespaces Total (equally weighted) scores}}{287}{table.C.8}
+\contentsline {table}{\numberline {C.9}{\ignorespaces Total (weighted) scores}}{288}{table.C.9}

@@ -14,33 +14,21 @@ A level-1 auxiliary file: A.4.TTCScores/ttc_scores.aux
 The style file: longname.bst
 Database file #1: thesis.bib
 Warning--I'm ignoring amyot06evaluation's extra "year" field
---line 695 of file thesis.bib
+--line 728 of file thesis.bib
 Warning--I'm ignoring cervelle06tatoo's extra "year" field
---line 1079 of file thesis.bib
-Repeated entry---line 1478 of file thesis.bib
+--line 1139 of file thesis.bib
+Warning--I'm ignoring vries04facilitating's extra "year" field
+--line 1280 of file thesis.bib
+Warning--I'm ignoring rose10comparison's extra "year" field
+--line 1400 of file thesis.bib
+Repeated entry---line 1576 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
---line 1520 of file thesis.bib
+--line 1619 of file thesis.bib
 Warning--I'm ignoring grgen's extra "year" field
---line 1546 of file thesis.bib
-Warning--I didn't find a database entry for "emf"
-Warning--I didn't find a database entry for "epsilon"
-Warning--I didn't find a database entry for "atl"
-Warning--I didn't find a database entry for "amma"
-Warning--I didn't find a database entry for "eclipse"
-Warning--I didn't find a database entry for "emfatic"
-Warning--I didn't find a database entry for "gmt"
-Warning--I didn't find a database entry for "fowler05language"
-Warning--I didn't find a database entry for "dmitriev04lop"
-Warning--I didn't find a database entry for "xmf"
-Warning--I didn't find a database entry for "ror"
-Warning--I didn't find a database entry for "ltk"
-Warning--I didn't find a database entry for "mdt"
-Warning--I didn't find a database entry for "cdo"
-Warning--I didn't find a database entry for "mdt_uml2"
-Warning--I didn't find a database entry for "herrmannsdoerfer10extensive"
+--line 1647 of file thesis.bib
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -127,45 +115,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 174 entries,
+You've used 169 entries,
             2472 wiz_defined-function locations,
-            1420 strings with 31255 characters,
-and the built_in function-call counts, 70841 in all, are:
-= -- 7100
-> -- 2810
-< -- 89
-+ -- 906
-- -- 867
-* -- 5177
-:= -- 11036
-add.period$ -- 572
-call.type$ -- 174
-change.case$ -- 1079
-chr.to.int$ -- 155
-cite$ -- 174
-duplicate$ -- 3248
-empty$ -- 5700
-format.name$ -- 1105
-if$ -- 15113
-int.to.chr$ -- 20
+            1406 strings with 32311 characters,
+and the built_in function-call counts, 72199 in all, are:
+= -- 7174
+> -- 3057
+< -- 98
++ -- 971
+- -- 935
+* -- 5439
+:= -- 11308
+add.period$ -- 566
+call.type$ -- 169
+change.case$ -- 1053
+chr.to.int$ -- 154
+cite$ -- 169
+duplicate$ -- 3247
+empty$ -- 5690
+format.name$ -- 1170
+if$ -- 15360
+int.to.chr$ -- 16
 int.to.str$ -- 0
-missing$ -- 170
-newline$ -- 875
-num.names$ -- 551
-pop$ -- 1205
+missing$ -- 172
+newline$ -- 851
+num.names$ -- 594
+pop$ -- 1138
 preamble$ -- 1
-purify$ -- 1285
+purify$ -- 1254
 quote$ -- 0
-skip$ -- 2584
+skip$ -- 2583
 stack$ -- 0
-substring$ -- 3476
-swap$ -- 949
-text.length$ -- 89
+substring$ -- 3657
+swap$ -- 988
+text.length$ -- 98
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1272
+type$ -- 1232
 warning$ -- 0
-while$ -- 576
-width$ -- 178
-write$ -- 2305
+while$ -- 618
+width$ -- 173
+write$ -- 2264
 (There were 44 error messages)

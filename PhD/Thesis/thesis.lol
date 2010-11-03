@@ -43,23 +43,23 @@
 \contentsline {lstlisting}{\numberline {6.17}Migrating ObjectFlows}{195}{lstlisting.6.17}
 \contentsline {lstlisting}{\numberline {6.18}Migrating ObjectFlowStates to a single ObjectFlow}{195}{lstlisting.6.18}
 \contentsline {lstlisting}{\numberline {6.19}Migrating Partitions without ObjectFlowStates}{195}{lstlisting.6.19}
-\contentsline {lstlisting}{\numberline {A.1}The annotated process-oriented metamodel after one iteration}{210}{lstlisting.A.1}
-\contentsline {lstlisting}{\numberline {A.2}The annotated process-oriented metamodel after two iterations}{211}{lstlisting.A.2}
-\contentsline {lstlisting}{\numberline {A.3}The annotated process-oriented metamodel after four iterations}{215}{lstlisting.A.3}
-\contentsline {lstlisting}{\numberline {A.4}The annotated process-oriented metamodel after five iterations}{219}{lstlisting.A.4}
-\contentsline {lstlisting}{\numberline {A.5}The annotated process-oriented metamodel after six iterations}{222}{lstlisting.A.5}
-\contentsline {lstlisting}{\numberline {B.1}The Newsgroup Extract Person model migration in ATL}{226}{lstlisting.B.1}
-\contentsline {lstlisting}{\numberline {B.2}The Newsgroup Extract Person model migration in Groovy-for-COPE}{227}{lstlisting.B.2}
-\contentsline {lstlisting}{\numberline {B.3}The Newsgroup Extract Person model migration in Flock}{227}{lstlisting.B.3}
-\contentsline {lstlisting}{\numberline {B.4}The Newsgroup Resolve Replies model migration in ATL}{228}{lstlisting.B.4}
-\contentsline {lstlisting}{\numberline {B.5}The Newsgroup Resolve Replies model migration in Groovy-for-COPE}{229}{lstlisting.B.5}
-\contentsline {lstlisting}{\numberline {B.6}The Newsgroup Resolve Replies model migration in Flock}{229}{lstlisting.B.6}
-\contentsline {lstlisting}{\numberline {B.7}UML activity diagram model migration in ATL}{230}{lstlisting.B.7}
-\contentsline {lstlisting}{\numberline {B.8}UML activity diagram model migration in Groovy-for-COPE}{234}{lstlisting.B.8}
-\contentsline {lstlisting}{\numberline {B.9}UML activity diagram model migration in Flock}{235}{lstlisting.B.9}
-\contentsline {lstlisting}{\numberline {B.10}GMF Graph model migration in ATL}{237}{lstlisting.B.10}
-\contentsline {lstlisting}{\numberline {B.11}GMF Graph model migration in Groovy-for-COPE}{249}{lstlisting.B.11}
-\contentsline {lstlisting}{\numberline {B.12}GMF Graph model migration in Flock}{250}{lstlisting.B.12}
-\contentsline {lstlisting}{\numberline {B.13}GMF Generator model migration in ATL}{251}{lstlisting.B.13}
-\contentsline {lstlisting}{\numberline {B.14}GMF Generator model migration in Groovy-for-COPE}{276}{lstlisting.B.14}
-\contentsline {lstlisting}{\numberline {B.15}GMF Generator model migration in Flock}{278}{lstlisting.B.15}
+\contentsline {lstlisting}{\numberline {A.1}The annotated process-oriented metamodel after one iteration}{212}{lstlisting.A.1}
+\contentsline {lstlisting}{\numberline {A.2}The annotated process-oriented metamodel after two iterations}{213}{lstlisting.A.2}
+\contentsline {lstlisting}{\numberline {A.3}The annotated process-oriented metamodel after four iterations}{217}{lstlisting.A.3}
+\contentsline {lstlisting}{\numberline {A.4}The annotated process-oriented metamodel after five iterations}{221}{lstlisting.A.4}
+\contentsline {lstlisting}{\numberline {A.5}The annotated process-oriented metamodel after six iterations}{224}{lstlisting.A.5}
+\contentsline {lstlisting}{\numberline {B.1}The Newsgroup Extract Person model migration in ATL}{228}{lstlisting.B.1}
+\contentsline {lstlisting}{\numberline {B.2}The Newsgroup Extract Person model migration in Groovy-for-COPE}{229}{lstlisting.B.2}
+\contentsline {lstlisting}{\numberline {B.3}The Newsgroup Extract Person model migration in Flock}{229}{lstlisting.B.3}
+\contentsline {lstlisting}{\numberline {B.4}The Newsgroup Resolve Replies model migration in ATL}{230}{lstlisting.B.4}
+\contentsline {lstlisting}{\numberline {B.5}The Newsgroup Resolve Replies model migration in Groovy-for-COPE}{231}{lstlisting.B.5}
+\contentsline {lstlisting}{\numberline {B.6}The Newsgroup Resolve Replies model migration in Flock}{231}{lstlisting.B.6}
+\contentsline {lstlisting}{\numberline {B.7}UML activity diagram model migration in ATL}{232}{lstlisting.B.7}
+\contentsline {lstlisting}{\numberline {B.8}UML activity diagram model migration in Groovy-for-COPE}{236}{lstlisting.B.8}
+\contentsline {lstlisting}{\numberline {B.9}UML activity diagram model migration in Flock}{237}{lstlisting.B.9}
+\contentsline {lstlisting}{\numberline {B.10}GMF Graph model migration in ATL}{239}{lstlisting.B.10}
+\contentsline {lstlisting}{\numberline {B.11}GMF Graph model migration in Groovy-for-COPE}{251}{lstlisting.B.11}
+\contentsline {lstlisting}{\numberline {B.12}GMF Graph model migration in Flock}{252}{lstlisting.B.12}
+\contentsline {lstlisting}{\numberline {B.13}GMF Generator model migration in ATL}{253}{lstlisting.B.13}
+\contentsline {lstlisting}{\numberline {B.14}GMF Generator model migration in Groovy-for-COPE}{278}{lstlisting.B.14}
+\contentsline {lstlisting}{\numberline {B.15}GMF Generator model migration in Flock}{280}{lstlisting.B.15}
