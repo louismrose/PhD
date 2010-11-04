@@ -14,21 +14,21 @@ A level-1 auxiliary file: A.4.TTCScores/ttc_scores.aux
 The style file: longname.bst
 Database file #1: thesis.bib
 Warning--I'm ignoring amyot06evaluation's extra "year" field
---line 728 of file thesis.bib
+--line 753 of file thesis.bib
 Warning--I'm ignoring cervelle06tatoo's extra "year" field
---line 1139 of file thesis.bib
+--line 1164 of file thesis.bib
 Warning--I'm ignoring vries04facilitating's extra "year" field
---line 1280 of file thesis.bib
+--line 1305 of file thesis.bib
 Warning--I'm ignoring rose10comparison's extra "year" field
---line 1400 of file thesis.bib
-Repeated entry---line 1576 of file thesis.bib
+--line 1425 of file thesis.bib
+Repeated entry---line 1601 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
---line 1619 of file thesis.bib
+--line 1644 of file thesis.bib
 Warning--I'm ignoring grgen's extra "year" field
---line 1647 of file thesis.bib
+--line 1672 of file thesis.bib
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -115,45 +115,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 169 entries,
+You've used 171 entries,
             2472 wiz_defined-function locations,
-            1406 strings with 32311 characters,
-and the built_in function-call counts, 72199 in all, are:
-= -- 7174
-> -- 3057
+            1415 strings with 32528 characters,
+and the built_in function-call counts, 72832 in all, are:
+= -- 7232
+> -- 3084
 < -- 98
-+ -- 971
-- -- 935
-* -- 5439
-:= -- 11308
-add.period$ -- 566
-call.type$ -- 169
-change.case$ -- 1053
-chr.to.int$ -- 154
-cite$ -- 169
-duplicate$ -- 3247
-empty$ -- 5690
-format.name$ -- 1170
-if$ -- 15360
++ -- 981
+- -- 943
+* -- 5484
+:= -- 11415
+add.period$ -- 572
+call.type$ -- 171
+change.case$ -- 1065
+chr.to.int$ -- 156
+cite$ -- 171
+duplicate$ -- 3279
+empty$ -- 5742
+format.name$ -- 1180
+if$ -- 15489
 int.to.chr$ -- 16
 int.to.str$ -- 0
-missing$ -- 172
-newline$ -- 851
-num.names$ -- 594
-pop$ -- 1138
+missing$ -- 176
+newline$ -- 861
+num.names$ -- 600
+pop$ -- 1153
 preamble$ -- 1
-purify$ -- 1254
+purify$ -- 1268
 quote$ -- 0
-skip$ -- 2583
+skip$ -- 2604
 stack$ -- 0
-substring$ -- 3657
-swap$ -- 988
+substring$ -- 3673
+swap$ -- 992
 text.length$ -- 98
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1232
+type$ -- 1240
 warning$ -- 0
-while$ -- 618
-width$ -- 173
-write$ -- 2264
+while$ -- 622
+width$ -- 175
+write$ -- 2291
 (There were 44 error messages)

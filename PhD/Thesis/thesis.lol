@@ -29,11 +29,11 @@
 \contentsline {lstlisting}{\numberline {6.3}The Petri nets model migration in Groovy-for-COPE}{158}{lstlisting.6.3}
 \contentsline {lstlisting}{\numberline {6.4}Petri nets model migration in Flock}{158}{lstlisting.6.4}
 \contentsline {lstlisting}{\numberline {6.5}An extract of the GMF Graph model migration in ATL}{162}{lstlisting.6.5}
-\contentsline {lstlisting}{\numberline {6.6}Simplified GMF Graph model migration in ATL}{165}{lstlisting.6.6}
+\contentsline {lstlisting}{\numberline {6.6}Simplified GMF Graph model migration in ATL}{164}{lstlisting.6.6}
 \contentsline {lstlisting}{\numberline {6.7}Simplified GMF Graph model migration in COPE}{165}{lstlisting.6.7}
 \contentsline {lstlisting}{\numberline {6.8}Simplified GMF Graph model migration in Flock}{166}{lstlisting.6.8}
-\contentsline {lstlisting}{\numberline {6.9}Migration for Change Reference to Containment in ATL}{168}{lstlisting.6.9}
-\contentsline {lstlisting}{\numberline {6.10}Migration for Change Reference to Containment in Flock}{169}{lstlisting.6.10}
+\contentsline {lstlisting}{\numberline {6.9}Migration for Change Reference to Containment in ATL}{167}{lstlisting.6.9}
+\contentsline {lstlisting}{\numberline {6.10}Migration for Change Reference to Containment in Flock}{168}{lstlisting.6.10}
 \contentsline {lstlisting}{\numberline {6.11}Migrating Actions}{193}{lstlisting.6.11}
 \contentsline {lstlisting}{\numberline {6.12}Migrating FinalStates and Transitions}{193}{lstlisting.6.12}
 \contentsline {lstlisting}{\numberline {6.13}Migrating Pseudostates}{193}{lstlisting.6.13}

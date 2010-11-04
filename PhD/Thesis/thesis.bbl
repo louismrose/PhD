@@ -66,6 +66,11 @@ J.~Banerjee, W.~Kim, H.~Kim, and H.F. Korth.
   Group on Management of Data (SIGMOD) Conference}, pages 311--322. ACM Press,
   1987.
 
+\bibitem[Beattie {\it et al.}\  2007]{beattie07economics}{$~$}
+B.R. Beattie, C.R. Taylor, and M.J. Watts.
+\newblock {\em The Economics of Production}.
+\newblock Krieger Publishing Company, 2nd edition, 2007.
+
 \bibitem[Beck \& Cunningham 1989]{beck89constructing}{$~$}
 K.~Beck and W.~Cunningham.
 \newblock Constructing abstractions for object-oriented applications.
@@ -120,6 +125,12 @@ L.C. Briand, Y.~Labiche, and L.~O'Sullivan.
 F.P. Brooks~Jr.
 \newblock No silver bullet - essence and accidents of software engineering.
 \newblock {\em IEEE Computer}, 20(4):10--19, 1987.
+
+\bibitem[Brooks~Jr. 1995]{brooks95mythical}{$~$}
+F.P. Brooks~Jr.
+\newblock {\em The mythical man-month}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, Massachusetts,
+  25th anniversary edition, 1995.
 
 \bibitem[Brown {\it et al.}\  1998]{brown98antipatterns}{$~$}
 W.J. Brown, R.C. Malveau, H.W. McCormick~III, and T.J. Mowbray.
