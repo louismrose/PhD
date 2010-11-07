@@ -501,35 +501,6 @@ $\highlight$		name <- o.name
 
 In existing-target and conservative copy migration languages, migration is less straightforward because, during the initialisation of the the migrated model from the original model, the value of a containment reference (\texttt{Si\-gn\-at\-ure\#po\-r\-ts}) is set. When a containment reference is set, the contained objects are removed from their previous containment reference (i.e. setting a containment reference has side-effects). Therefore, in a \texttt{System} where more than one \texttt{Signature} references the same \texttt{Port}, the migrated model cannot be formed by copying the contents of \texttt{Signature\#ports} from the original model. Attempting to do so causes each \texttt{Port} to be contained only in the last referencing \texttt{Signature} that was copied.
 
-% In COPE, the containment nature of a reference is not enforced until after the migration strategy is executed. Consequently, the migration can be specified in COPE by % TODO
-% The migration strategy shown in Listing~\ref{lst:ref2cont_cope} uses 5 model operations: assignments on lines 8, 9 and 12; unassignment on line 10, and deletion on line 19. Note that the assignment on line 7 is to a temporary variable, and so is not counted as a model operation. 
-% 
-% The ATL migration strategy copies ports as they are needed. By contrast, the Groovy-for-COPE migration strategy must account for the initial copy of every Port which is created prior to execution according to existing-target. The Groovy-for-COPE migration strategy must either clone only those ports that are referenced by more than one signature, or clone every referenced port, but delete all of the ports created by existing-target. The latter approach requires 1 more model operation (to delete the original ports) than the former (shown in Listing~\ref{lst:ref2cont_cope}).
-% 
-% \begin{lstlisting}[float=tbp, caption=Migration for Change Reference to Containment in Groovy-for-COPE, label=lst:ref2cont_cope, language=COPE, tabsize=2]
-% def contained = []
-% 
-% for(signature in refactorings_changeRefToCont.Signature.allInstances) {
-%   for(port in signature.ports)) {
-% 	  // when more than one Signature references this port
-% 	  if (contained.contains(port)) {
-%       def clone = Port.newInstance()
-% $\highlight$      clone.name = port.name
-% $\highlight$      signature.ports.add(clone)
-% $\highlight$      signature.ports.remove(port)
-% 		} else {
-% $\highlight$			contained.add(port)
-% 		}
-%   }
-% }
-% 
-% for(port in refactorings_changeRefToCont.Port.allInstances) {
-% 	if (not refactorings_changeRefToCont.Signature.allInstances.any { it.ports.contains(port) }) {
-% $\highlight$	  	port.delete()
-% 	}
-% }
-% \end{lstlisting}
-
 In Flock, the containment nature of the reference is enforced when the migrated model is initialised. Because changing the contents of a containment reference has side-effects, a \texttt{Port} that appears in the \texttt{ports} reference of a \texttt{Signature} in the original model may not have been automatically copied to the \texttt{ports} reference of the equivalent \texttt{Signature} in the migrated model during initialisation. Consequently, the migration strategy must check the \texttt{ports} reference of each migrated \texttt{Signature}, cloning only those \texttt{Port}s that have not be automatically copied during initialisation (see line 3 of Listing~\ref{lst:ref2cont_flock}). The Flock migration strategy uses 3 model operations: assignments on lines 5 and 6, and a deletion on 11.
 
 \begin{lstlisting}[float=tbp, caption=Migration for Change Reference to Containment in Flock, label=lst:ref2cont_flock, language=Flock, tabsize=2]
