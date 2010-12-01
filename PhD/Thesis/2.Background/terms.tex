@@ -6,7 +6,7 @@ Software engineers using MDE construct and manipulate artefacts familiar from tr
 
 \subsection{Models}
 \label{subsec:models}
-Models are fundamental to MDE. \cite{kurtev04thesis} identifies many definitions of the term model, such as: ``any subject using a system A that is neither directly nor indirectly interacting with a system B to obtain information about the system B, is using A as a model for B.'' \cite{apostel60models}, ``a model is a representation of a concept. The representation is purposeful and used to abstract from reality the irrelevant details.'' \cite{starfield90model}, and ``a model is a simplification of a system written in a well-defined language.'' \cite{bezivin01definition}. 
+Models are fundamental to MDE. \cite{kurtev04thesis} identifies many definitions of the term model, including the following: ``any subject using a system A that is neither directly nor indirectly interacting with a system B to obtain information about the system B, is using A as a model for B'' \cite{apostel60models}. ``A model is a representation of a concept. The representation is purposeful and used to abstract from reality the irrelevant details,'' \cite{starfield90model}. ``A model is a simplification of a system written in a well-defined language,'' \cite{bezivin01definition}. 
 
 While there are many definitions of the term model, a common notion is that a model is a representation of the real-world \cite[pg12]{kurtev04thesis}. The part of the real-world represented by a model is termed the \emph{domain}, the \emph{object system} or, simply the \emph{system}. A further commonality is noted by \cite{kolovos06eol}: a model may have either a textual or graphical representation.
 
@@ -53,18 +53,20 @@ Because MOF is a modelling language for describing modelling languages, it is so
  \item Modelling constructs are drawn as boxes. The name of each modelling construct is emboldened. The name of abstract (uninstantiable) constructs are italicised.
  \item Attributes are contained within the box of their modelling construct. Each attribute has a name, a type (prefixed with a colon) and may define a default value (prefixed with an equals sign).
  \item Generalisation is represented using a line with an open arrow-head.
- \item References are specified using a line. An arrow illustrates the direction in which the reference may be traversed (no arrow indicates bi-directionality). Labels are used to name and define the multiplicity of references.
+ \item References are specified using a line. An arrow illustrates the direction in which the reference may be traversed. Labels are used to name and define the multiplicity of references.
  \item Containment references are specified by including a solid diamond on the containing end.
 \end{itemize}
 
-\begin{figure}[htbp]
-  \begin{center}
-    \leavevmode
-    \includegraphics[scale=0.33]{2.Background/images/mof.png}
-  \end{center}
-  \caption[A fragment of the UML metamodel defined in MOF]{A fragment of the UML metamodel defined in MOF, from \cite{uml212}.}
-  \label{fig:mof}
-\end{figure}
+\begin{landscape}	
+	\begin{figure}[htbp]
+	  \begin{center}
+	    \leavevmode
+	    \includegraphics[scale=0.5]{2.Background/images/mof.png}
+	  \end{center}
+	  \caption[A fragment of the UML metamodel defined in MOF]{A fragment of the UML metamodel defined in MOF, from \cite{uml212}.}
+	  \label{fig:mof}
+	\end{figure}
+\end{landscape}
 
 Specifying modelling languages with a common metamodelling language, such as MOF, ensures consistency in the way in which modelling constructs are specified. MOF has facilitated the construction of interoperable MDE tools that can be used with a range of modelling languages. Without a standardised metamodelling language, modelling tools were specific to one modelling language, such as UML. In contemporary MDE environments, any number of modelling languages can be used together and manipulated in a uniform manner.
 
@@ -81,7 +83,7 @@ Model transformation is a development activity in which software artefacts are d
 \paragraph{Common characteristics of model transformations}
 The input to a transformation is termed its \emph{source}, and the output its \emph{target}. In theory, a transformation can have more than one source and more than one target, but not all transformation languages support multiple sources and targets. Consequently, much of the model transformation literature considers single source and target transformations.
 
-\cite{czarnecki06survey} describes a feature model for distinguishing and categorising model transformation approaches. Two of the features are relevant to the research presented in this thesis, and are now discussed. 
+\cite{czarnecki06survey} describe a feature model for distinguishing and categorising model transformation approaches. Two of the features are relevant to the research presented in this thesis, and are now discussed. 
 
 \subparagraph{Source-target relationship} A \emph{new-target} transformation creates the target model afresh on each invocation, while an \emph{existing-target} transformation updates an existing model. Existing target transformations are used for partial (incremental) transformation and for preserving parts of the target model that are not derived from the source model.
 
@@ -105,7 +107,7 @@ An exemplar M2M transformation, written in the hybrid M2M transformation languag
 \begin{figure}[htbp]
   \begin{center}
     \leavevmode
-    \includegraphics[width=5cm]{2.Background/images/StateMachines.pdf}
+    \includegraphics[scale=0.9]{2.Background/images/StateMachines.pdf}
   \end{center}
   \caption{Exemplar State Machine metamodel.}
   \label{fig:state_machine_mm}
@@ -114,7 +116,7 @@ An exemplar M2M transformation, written in the hybrid M2M transformation languag
 \begin{figure}[htbp]
   \begin{center}
     \leavevmode
-    \includegraphics[width=8.5cm]{2.Background/images/OO.pdf}
+    \includegraphics[scale=0.9]{2.Background/images/OO.pdf}
   \end{center}
   \caption{Exemplar Object-Oriented metamodel.}
   \label{fig:object_oriented_mm}
@@ -155,16 +157,16 @@ Because M2T transformation is used to produce unstructured rather than structure
 An exemplar M2T transformation, written in EGL, is shown in Listing~\ref{lst:exemplar_m2t}. The source of the transformation is an object-oriented model conforming to the metamodel shown in Figure~\ref{fig:object_oriented_mm}, and the target is Java source code. The template assumes that an instance of \texttt{Class} is stored in the \texttt{class} variable.
 
 \begin{lstlisting}[caption={[M2T transformation in EGL]M2T transformation in the Epsilon Generation Language \cite{rose08egl}}, label=lst:exemplar_m2t, language=EGL]
-package [%=class.package.name];
+package [%=class.package.name%];
 
-public class [%=class.name] {
+public class [%=class.name%] {
 	[% for(attribute in class.attributes) { %]
-	  private [%=attribute.type%] [%=attribute.name];
+	  private [%=attribute.type%] [%=attribute.name%];
 	[% } %]
 }
 \end{lstlisting}
 
-In EGL, dynamic sections are contained within \texttt{[\%} and \texttt{\%]}. \emph{Dynamic output} sections are a specialisation of dynamic sections contained within \texttt{[\%=} and \texttt{\%]}. The result of evaluating a dynamic output section is included in the generated text. Line 1 of Listing~\ref{lst:exemplar_m2t} contains two static sections (\texttt{package}' and \texttt{;}) and a dynamic output section (\texttt{[\%=class.package.name]}), and will generate a package declaration when executed.  Similarly, line 3 will generate a class declaration. Lines 4 to 6 iterate over every \texttt{attribute} of the \texttt{class}, outputting a field declaration for each \texttt{attribute}.
+In EGL, dynamic sections are contained within \texttt{[\%} and \texttt{\%]}. \emph{Dynamic output} sections are a specialisation of dynamic sections contained within \texttt{[\%=} and \texttt{\%]}. The result of evaluating a dynamic output section is included in the generated text. Line 1 of Listing~\ref{lst:exemplar_m2t} contains two static sections (`\texttt{package}' and `\texttt{;}') and a dynamic output section (\texttt{[\%=class.package.name\%]}), and will generate a package declaration when executed.  Similarly, line 3 will generate a class declaration. Lines 4 to 6 iterate over every \texttt{attribute} of the \texttt{class}, outputting a field declaration for each \texttt{attribute}.
 
 
 \paragraph{Text-to-Model (T2M) Transformation} T2M transformation is most often implemented as a parser that generates a model rather than object code. Parser generators such as ANTLR \cite{parr07antlr} can be used to produce a structured artefact (such as an abstract syntax tree) from text. T2M tools are built atop parser generators and post-process the structured artefacts to produce a model that can be managed with a particular modelling framework.
