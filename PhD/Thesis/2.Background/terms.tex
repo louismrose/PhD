@@ -120,7 +120,7 @@ An exemplar M2M transformation, written in the hybrid M2M transformation languag
   \label{fig:object_oriented_mm}
 \end{figure}
 
-\begin{lstlisting}[caption={[Exemplar M2M transformation in ETL]Exemplar M2M transformation in the Epsilon Transformation Language \cite{kolovos08etl}}, label=lst:exemplar_m2m, language=ETL]
+\begin{lstlisting}[caption={[M2M transformation in ETL]M2M transformation in the Epsilon Transformation Language \cite{kolovos08etl}}, label=lst:exemplar_m2m, language=ETL]
 rule Machine2Package
 	transform m : StateMachine!Machine
 	to        p : ObjectOriented!Package {
@@ -154,7 +154,7 @@ Because M2T transformation is used to produce unstructured rather than structure
 
 An exemplar M2T transformation, written in EGL, is shown in Listing~\ref{lst:exemplar_m2t}. The source of the transformation is an object-oriented model conforming to the metamodel shown in Figure~\ref{fig:object_oriented_mm}, and the target is Java source code. The template assumes that an instance of \texttt{Class} is stored in the \texttt{class} variable.
 
-\begin{lstlisting}[caption={[Exemplar M2T transformation in EGL]Exemplar M2T transformation in the Epsilon Generation Language \cite{rose08egl}}, label=lst:exemplar_m2t, language=EGL]
+\begin{lstlisting}[caption={[M2T transformation in EGL]M2T transformation in the Epsilon Generation Language \cite{rose08egl}}, label=lst:exemplar_m2t, language=EGL]
 package [%=class.package.name];
 
 public class [%=class.name] {
@@ -173,7 +173,7 @@ Xtext\footnote{\url{http://www.eclipse.org/Xtext/}} and EMFtext \cite{heidenreic
 
 An exemplar T2M transformation, written in EMFtext, is shown in Listing~\ref{lst:exemplar_t2m}. From the transformation shown in Listing~\ref{lst:exemplar_t2m}, EMFtext can be used to generate a parser that, when executed, will produce state machine models. For the input, \texttt{lift[stationary up down stopping emergency]}, the parser will produce a model containing one \texttt{Machine} with \texttt{lift} as its \texttt{id}, and five \texttt{State}s with the \texttt{name}s, \texttt{stationary}, \texttt{up}, \texttt{down}, \texttt{stopping}, and \texttt{emergency}.
 
-\begin{lstlisting}[caption=Exemplar T2M transformation in EMFtext, label=lst:exemplar_t2m, language=EMFtext]
+\begin{lstlisting}[caption=T2M transformation in EMFtext, label=lst:exemplar_t2m, language=EMFtext]
 SYNTAXDEF statemachine
 FOR <statemachine>
 START Machine
@@ -201,7 +201,7 @@ Model validation provides a mechanism for managing the integrity of the software
 
 An exemplar model validation constraint, written in EVL, is shown in Listing~\ref{lst:exemplar_validation}. The constraint validates state machine models that conform to the metamodel shown in Figure~\ref{fig:state_machine_mm}. The constraint shown in Listing~\ref{lst:exemplar_validation} is defined for \texttt{State}s (line 1), and checks that there exists some transition whose source or target is the current state (line 4). When the check part (line 4) is not satisfied, the message part (line 6) is displayed. When executed, the EVL constraint will be invoked once for every \texttt{State} in the model. The keyword \texttt{self} is used to refer to the particular \texttt{State} on which the constraint is currently being invoked.
 
-\begin{lstlisting}[caption={[Exemplar model validation in EVL]Exemplar model validation in the Epsilon Validation Language}, label=lst:exemplar_validation, language=EVL]
+\begin{lstlisting}[caption={[Model validation in EVL]Model validation in the Epsilon Validation Language}, label=lst:exemplar_validation, language=EVL]
 context State {
 	constraint NoStateIsAnIsland {
 		check:

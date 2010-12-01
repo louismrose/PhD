@@ -1,7 +1,7 @@
-\contentsline {lstlisting}{\numberline {2.1}Exemplar M2M transformation in ETL}{17}{lstlisting.2.1}
-\contentsline {lstlisting}{\numberline {2.2}Exemplar M2T transformation in EGL}{19}{lstlisting.2.2}
-\contentsline {lstlisting}{\numberline {2.3}Exemplar T2M transformation in EMFtext}{20}{lstlisting.2.3}
-\contentsline {lstlisting}{\numberline {2.4}Exemplar model validation in EVL}{21}{lstlisting.2.4}
+\contentsline {lstlisting}{\numberline {2.1}M2M transformation in ETL}{17}{lstlisting.2.1}
+\contentsline {lstlisting}{\numberline {2.2}M2T transformation in EGL}{19}{lstlisting.2.2}
+\contentsline {lstlisting}{\numberline {2.3}T2M transformation in EMFtext}{20}{lstlisting.2.3}
+\contentsline {lstlisting}{\numberline {2.4}Model validation in EVL}{21}{lstlisting.2.4}
 \contentsline {lstlisting}{\numberline {4.1}Migration strategy for the refactoring in pseudo code.}{75}{lstlisting.4.1}
 \contentsline {lstlisting}{\numberline {5.1}Exemplar person model in XMI}{96}{lstlisting.5.1}
 \contentsline {lstlisting}{\numberline {5.2}Specifying attributes with HUTN.}{103}{lstlisting.5.2}
