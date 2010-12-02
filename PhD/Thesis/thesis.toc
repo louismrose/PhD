@@ -314,7 +314,7 @@
 \contentsline {subsection}{\numberline {7.2.3}Unifying Co-evolution Approaches}{210}{subsection.7.2.3}
 \contentsline {subsection}{\numberline {7.2.4}Higher-Order Migration}{211}{subsection.7.2.4}
 \contentsline {subsection}{\numberline {7.2.5}Genericity}{211}{subsection.7.2.5}
-\contentsline {section}{\numberline {7.3}Coda}{211}{section.7.3}
+\contentsline {section}{\numberline {7.3}Closing Remarks}{211}{section.7.3}
 \contentsline {appendix}{\chapternumberline {A}A Graphical Editor for Process-Oriented Programs}{213}{appendix.A}
 \contentsline {section}{\numberline {A.1}Iteration 1: Processes and Channels}{214}{section.A.1}
 \contentsline {section}{\numberline {A.2}Iteration 2: Interoperability with GMF}{215}{section.A.2}
