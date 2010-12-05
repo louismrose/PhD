@@ -163,174 +163,174 @@
 \contentsline {subsection}{\numberline {5.3.2}Existing Approaches}{115}{subsection.5.3.2}
 \contentsline {subsubsection}{Manual Specification with Model-to-Model Transformation}{115}{section*.87}
 \contentsline {subsubsection}{Manual Specification with Ecore2Ecore Mapping}{117}{section*.88}
-\contentsline {subsubsection}{Operator-based Co-evolution with COPE}{119}{section*.89}
-\contentsline {subsection}{\numberline {5.3.3}Requirements Identification}{120}{subsection.5.3.3}
-\contentsline {subsubsection}{Source-Target Relationship}{121}{section*.90}
-\contentsline {subsubsection}{Model Representation}{121}{section*.91}
-\contentsline {section}{\numberline {5.4}Epsilon Flock: A Model Migration Language}{122}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Design and Implementation}{122}{subsection.5.4.1}
-\contentsline {subsubsection}{Abstract Syntax}{122}{section*.92}
-\contentsline {subsubsection}{Concrete Syntax}{123}{section*.93}
-\contentsline {subsubsection}{Execution Semantics}{123}{section*.94}
-\contentsline {paragraph}{Rule Selection}{123}{section*.95}
-\contentsline {paragraph}{Equivalence Establishment}{124}{section*.96}
-\contentsline {paragraph}{Rule Execution}{124}{section*.97}
-\contentsline {subsubsection}{Conservative Copy}{125}{section*.98}
-\contentsline {subsubsection}{Development and User Tools}{126}{section*.99}
-\contentsline {subsection}{\numberline {5.4.2}Examples}{126}{subsection.5.4.2}
-\contentsline {subsubsection}{Process-Oriented Example}{126}{section*.100}
-\contentsline {subsubsection}{Petri Nets in Flock}{129}{section*.101}
-\contentsline {subsubsection}{UML Class Diagrams in Flock}{130}{section*.102}
-\contentsline {subsubsection}{Summary}{132}{section*.103}
-\contentsline {section}{\numberline {5.5}Chapter Summary}{132}{section.5.5}
-\contentsline {chapter}{\chapternumberline {6}Evaluation}{135}{chapter.6}
-\contentsline {section}{\numberline {6.1}Evaluating User-Driven Co-Evolution}{136}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Challenges for Performing User-Driven Co-Evolution}{137}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Co-Evolution Example}{137}{subsection.6.1.2}
-\contentsline {subsubsection}{Aim of Iteration 5}{139}{section*.104}
-\contentsline {subsubsection}{Implementation during Iteration 5}{140}{section*.105}
-\contentsline {subsubsection}{Testing during Iteration 5}{141}{section*.106}
-\contentsline {subsection}{\numberline {6.1.3}User-Driven Co-Evolution with EMF}{142}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}User-Driven Co-Evolution with Dedicated Structures}{146}{subsection.6.1.4}
-\contentsline {subsection}{\numberline {6.1.5}Comparison}{148}{subsection.6.1.5}
-\contentsline {subsubsection}{Differences in modelling notation}{149}{section*.107}
-\contentsline {subsubsection}{Differences in conformance reports}{150}{section*.108}
-\contentsline {subsection}{\numberline {6.1.6}Towards a more thorough comparison}{150}{subsection.6.1.6}
-\contentsline {subsection}{\numberline {6.1.7}Summary}{151}{subsection.6.1.7}
-\contentsline {section}{\numberline {6.2}Evaluating Conservative Copy}{151}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Styles of Source-Target Relationship}{153}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Artefacts}{153}{subsection.6.2.2}
-\contentsline {subsubsection}{Co-evolution Examples}{153}{section*.109}
-\contentsline {subsubsection}{Reference Implementations Used in the Comparison}{154}{section*.110}
-\contentsline {paragraph}{New-target}{154}{section*.111}
-\contentsline {paragraph}{Existing-target}{154}{section*.112}
-\contentsline {subsection}{\numberline {6.2.3}Method}{155}{subsection.6.2.3}
-\contentsline {subsubsection}{Language-Independent Model Operations}{155}{section*.113}
-\contentsline {subsubsection}{Model Operations in ATL, Groovy-for-COPE and Flock}{156}{section*.114}
-\contentsline {paragraph}{New-target in ATL}{156}{section*.115}
-\contentsline {paragraph}{Existing-target in Groovy-for-COPE}{157}{section*.116}
-\contentsline {paragraph}{Conservative Copy in Epsilon Flock}{158}{section*.117}
-\contentsline {subsubsection}{Development and Testing of Method}{158}{section*.118}
-\contentsline {subsection}{\numberline {6.2.4}Results}{162}{subsection.6.2.4}
-\contentsline {subsubsection}{Investigation of results}{163}{section*.119}
-\contentsline {subsubsection}{Limitation 1: Duplication when migrating subtypes}{165}{section*.120}
-\contentsline {subsubsection}{Limitation 2: Side-effects during initialisation}{168}{section*.121}
-\contentsline {subsection}{\numberline {6.2.5}Summary}{171}{subsection.6.2.5}
-\contentsline {section}{\numberline {6.3}Evaluating Co-evolution Tools}{172}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Comparison Method}{173}{subsection.6.3.1}
-\contentsline {subsubsection}{Co-Evolution Examples}{173}{section*.122}
-\contentsline {paragraph}{Petri Nets.}{173}{section*.123}
-\contentsline {paragraph}{GMF.}{173}{section*.124}
-\contentsline {subsubsection}{Compared Tools}{174}{section*.125}
-\contentsline {subsubsection}{Comparison Process}{175}{section*.126}
-\contentsline {subsection}{\numberline {6.3.2}Comparison Results}{176}{subsection.6.3.2}
-\contentsline {subsubsection}{Constructing the migration strategy}{177}{section*.127}
-\contentsline {paragraph}{AML.}{177}{section*.128}
-\contentsline {paragraph}{COPE.}{177}{section*.129}
-\contentsline {paragraph}{Ecore2Ecore.}{178}{section*.130}
-\contentsline {paragraph}{Flock.}{178}{section*.131}
-\contentsline {subsubsection}{Changing the migration strategy}{178}{section*.132}
-\contentsline {paragraph}{AML.}{179}{section*.133}
-\contentsline {paragraph}{COPE.}{179}{section*.134}
-\contentsline {paragraph}{Ecore2Ecore.}{179}{section*.135}
-\contentsline {paragraph}{Flock.}{179}{section*.136}
-\contentsline {subsubsection}{Extensibility}{179}{section*.137}
-\contentsline {paragraph}{AML.}{179}{section*.138}
-\contentsline {paragraph}{COPE}{179}{section*.139}
-\contentsline {subsubsection}{Re-use}{180}{section*.140}
-\contentsline {paragraph}{AML.}{180}{section*.141}
-\contentsline {paragraph}{COPE.}{180}{section*.142}
-\contentsline {paragraph}{Ecore2Ecore.}{180}{section*.143}
-\contentsline {paragraph}{Flock.}{180}{section*.144}
-\contentsline {subsubsection}{Conciseness}{180}{section*.145}
-\contentsline {paragraph}{AML.}{180}{section*.146}
-\contentsline {paragraph}{COPE}{180}{section*.147}
-\contentsline {paragraph}{Ecore2Ecore.}{181}{section*.148}
-\contentsline {paragraph}{Flock.}{181}{section*.149}
-\contentsline {subsubsection}{Clarity}{181}{section*.150}
-\contentsline {paragraph}{AML.}{181}{section*.151}
-\contentsline {paragraph}{COPE.}{181}{section*.152}
-\contentsline {paragraph}{Ecore2Ecore.}{181}{section*.153}
-\contentsline {paragraph}{Flock}{181}{section*.154}
-\contentsline {subsubsection}{Expressiveness}{181}{section*.155}
-\contentsline {paragraph}{AML.}{182}{section*.156}
-\contentsline {paragraph}{COPE.}{182}{section*.157}
-\contentsline {paragraph}{Ecore2Ecore.}{182}{section*.158}
-\contentsline {paragraph}{Flock.}{182}{section*.159}
-\contentsline {subsubsection}{Interoperability}{182}{section*.160}
-\contentsline {paragraph}{AML}{182}{section*.161}
-\contentsline {paragraph}{COPE}{182}{section*.162}
-\contentsline {paragraph}{Ecore2Ecore}{183}{section*.163}
-\contentsline {paragraph}{Flock}{183}{section*.164}
-\contentsline {subsubsection}{Performance}{183}{section*.165}
-\contentsline {subsection}{\numberline {6.3.3}Discussion}{183}{subsection.6.3.3}
-\contentsline {subsubsection}{Strengths and Weaknesses of Flock}{185}{section*.166}
-\contentsline {paragraph}{Strengths}{185}{section*.167}
-\contentsline {paragraph}{Weaknesses}{186}{section*.168}
-\contentsline {subsection}{\numberline {6.3.4}Summary}{186}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Transformation Tools Contest}{187}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Model Migration Case}{188}{subsection.6.4.1}
-\contentsline {subsubsection}{Activity Diagrams in UML}{188}{section*.169}
-\contentsline {subsubsection}{Evolution of Activity Diagrams}{190}{section*.170}
-\contentsline {subsubsection}{Extension 1: Alternative Object Flow State Migration Semantics}{192}{section*.171}
-\contentsline {subsubsection}{Extension 2: Concrete Syntax}{193}{section*.172}
-\contentsline {subsubsection}{Extension 3: XMI}{194}{section*.173}
-\contentsline {subsection}{\numberline {6.4.2}Model Migration Solution in Epsilon Flock}{194}{subsection.6.4.2}
-\contentsline {subsubsection}{Actions, Transitions and Final States}{195}{section*.174}
-\contentsline {subsubsection}{Pseudostates}{195}{section*.175}
-\contentsline {subsubsection}{Activities}{195}{section*.176}
-\contentsline {subsubsection}{Partitions}{196}{section*.177}
-\contentsline {subsubsection}{ObjectFlows}{197}{section*.178}
-\contentsline {subsubsection}{Alternative ObjectFlowState Migration Semantics}{197}{section*.179}
-\contentsline {subsubsection}{XMI}{198}{section*.180}
-\contentsline {subsection}{\numberline {6.4.3}Comparison with other solutions}{198}{subsection.6.4.3}
-\contentsline {subsubsection}{Opposition Statements}{199}{section*.181}
-\contentsline {subsubsection}{Scoring}{199}{section*.182}
-\contentsline {paragraph}{Correctness}{199}{section*.183}
-\contentsline {paragraph}{Conciseness}{200}{section*.184}
-\contentsline {paragraph}{Clarity}{200}{section*.185}
-\contentsline {paragraph}{Appropriateness}{200}{section*.186}
-\contentsline {paragraph}{Tool maturity}{201}{section*.187}
-\contentsline {paragraph}{Reproducibility}{201}{section*.188}
-\contentsline {paragraph}{Extensions}{201}{section*.189}
-\contentsline {subsection}{\numberline {6.4.4}Summary}{201}{subsection.6.4.4}
-\contentsline {section}{\numberline {6.5}Limitations}{202}{section.6.5}
-\contentsline {paragraph}{Generality}{202}{section*.190}
-\contentsline {paragraph}{Reproducibility}{202}{section*.191}
-\contentsline {paragraph}{Formal semantics}{203}{section*.192}
-\contentsline {section}{\numberline {6.6}Chapter Summary}{203}{section.6.6}
-\contentsline {chapter}{\chapternumberline {7}Conclusions}{205}{chapter.7}
-\contentsline {section}{\numberline {7.1}Research Contributions}{206}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Investigation of Evolution in MDE Projects}{206}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Structures and Processes for Managing Co-evolution}{207}{subsection.7.1.2}
-\contentsline {subsubsection}{Metamodel-Indepenent Syntax}{207}{section*.193}
-\contentsline {subsubsection}{Textual Modelling Notation}{207}{section*.194}
-\contentsline {subsubsection}{A Process for User-Driven Co-evolution}{208}{section*.195}
-\contentsline {subsubsection}{Epsilon Flock: A Model Migration Language}{208}{section*.196}
-\contentsline {subsection}{\numberline {7.1.3}Evaluation of Structures and Processes}{209}{subsection.7.1.3}
-\contentsline {section}{\numberline {7.2}Future Work}{209}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Further Evaluation}{209}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Extensions to the Model Migration Language}{210}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}Unifying Co-evolution Approaches}{210}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Higher-Order Migration}{211}{subsection.7.2.4}
-\contentsline {subsection}{\numberline {7.2.5}Genericity}{211}{subsection.7.2.5}
-\contentsline {section}{\numberline {7.3}Closing Remarks}{211}{section.7.3}
-\contentsline {appendix}{\chapternumberline {A}A Graphical Editor for Process-Oriented Programs}{213}{appendix.A}
-\contentsline {section}{\numberline {A.1}Iteration 1: Processes and Channels}{214}{section.A.1}
-\contentsline {section}{\numberline {A.2}Iteration 2: Interoperability with GMF}{215}{section.A.2}
-\contentsline {section}{\numberline {A.3}Iteration 3: Shared Channels}{217}{section.A.3}
-\contentsline {section}{\numberline {A.4}Iteration 4: Connection Points}{219}{section.A.4}
-\contentsline {section}{\numberline {A.5}Iteration 5: Connection Point Types}{223}{section.A.5}
-\contentsline {section}{\numberline {A.6}Iteration 6: Nested Processes and Channels}{226}{section.A.6}
-\contentsline {section}{\numberline {A.7}Summary}{228}{section.A.7}
-\contentsline {appendix}{\chapternumberline {B}Co-evolution Examples}{229}{appendix.B}
-\contentsline {section}{\numberline {B.1}Newsgroups Examples}{229}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}Extract Person}{229}{subsection.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}Resolve Replies}{232}{subsection.B.1.2}
-\contentsline {section}{\numberline {B.2}UML Example}{234}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Activity Diagrams}{234}{subsection.B.2.1}
-\contentsline {section}{\numberline {B.3}GMF Examples}{240}{section.B.3}
-\contentsline {subsection}{\numberline {B.3.1}GMF Graph}{241}{subsection.B.3.1}
-\contentsline {subsection}{\numberline {B.3.2}GMF Generator}{255}{subsection.B.3.2}
-\contentsline {appendix}{\chapternumberline {C}TTC Results}{285}{appendix.C}
-\contentsline {chapter}{Bibliography}{291}{section*.198}
+\contentsline {subsubsection}{Operator-based Co-evolution with COPE}{118}{section*.89}
+\contentsline {subsection}{\numberline {5.3.3}Requirements Identification}{119}{subsection.5.3.3}
+\contentsline {subsubsection}{Source-Target Relationship}{120}{section*.90}
+\contentsline {subsubsection}{Model Representation}{120}{section*.91}
+\contentsline {section}{\numberline {5.4}Epsilon Flock: A Model Migration Language}{121}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Design and Implementation}{121}{subsection.5.4.1}
+\contentsline {subsubsection}{Abstract Syntax}{121}{section*.92}
+\contentsline {subsubsection}{Concrete Syntax}{122}{section*.93}
+\contentsline {subsubsection}{Execution Semantics}{122}{section*.94}
+\contentsline {paragraph}{Rule Selection}{122}{section*.95}
+\contentsline {paragraph}{Equivalence Establishment}{123}{section*.96}
+\contentsline {paragraph}{Rule Execution}{123}{section*.97}
+\contentsline {subsubsection}{Conservative Copy}{123}{section*.98}
+\contentsline {subsubsection}{Development and User Tools}{124}{section*.99}
+\contentsline {subsection}{\numberline {5.4.2}Examples}{124}{subsection.5.4.2}
+\contentsline {subsubsection}{Process-Oriented Example}{125}{section*.100}
+\contentsline {subsubsection}{Petri Nets in Flock}{126}{section*.101}
+\contentsline {subsubsection}{UML Class Diagrams in Flock}{127}{section*.102}
+\contentsline {subsubsection}{Summary}{128}{section*.103}
+\contentsline {section}{\numberline {5.5}Chapter Summary}{129}{section.5.5}
+\contentsline {chapter}{\chapternumberline {6}Evaluation}{137}{chapter.6}
+\contentsline {section}{\numberline {6.1}Evaluating User-Driven Co-Evolution}{138}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Challenges for Performing User-Driven Co-Evolution}{139}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Co-Evolution Example}{139}{subsection.6.1.2}
+\contentsline {subsubsection}{Aim of Iteration 5}{140}{section*.104}
+\contentsline {subsubsection}{Metamodel changes during Iteration 5}{142}{section*.105}
+\contentsline {subsubsection}{Testing during Iteration 5}{143}{section*.106}
+\contentsline {subsection}{\numberline {6.1.3}User-Driven Co-Evolution with EMF}{144}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}User-Driven Co-Evolution with Dedicated Structures}{148}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}Comparison}{149}{subsection.6.1.5}
+\contentsline {subsubsection}{Differences in modelling notation}{150}{section*.107}
+\contentsline {subsubsection}{Differences in conformance reports}{152}{section*.108}
+\contentsline {subsection}{\numberline {6.1.6}Towards a more thorough comparison}{152}{subsection.6.1.6}
+\contentsline {subsection}{\numberline {6.1.7}Summary}{153}{subsection.6.1.7}
+\contentsline {section}{\numberline {6.2}Evaluating Conservative Copy}{153}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Styles of Source-Target Relationship}{154}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Artefacts}{155}{subsection.6.2.2}
+\contentsline {subsubsection}{Co-evolution Examples}{155}{section*.109}
+\contentsline {subsubsection}{Reference Implementations Used in the Comparison}{156}{section*.110}
+\contentsline {paragraph}{New-target}{156}{section*.111}
+\contentsline {paragraph}{Existing-target}{156}{section*.112}
+\contentsline {subsection}{\numberline {6.2.3}Method}{157}{subsection.6.2.3}
+\contentsline {subsubsection}{Language-Independent Model Operations}{157}{section*.113}
+\contentsline {subsubsection}{Model Operations in ATL, Groovy-for-COPE and Flock}{158}{section*.114}
+\contentsline {paragraph}{New-target in ATL}{158}{section*.115}
+\contentsline {paragraph}{Existing-target in Groovy-for-COPE}{159}{section*.116}
+\contentsline {paragraph}{Conservative Copy in Epsilon Flock}{159}{section*.117}
+\contentsline {subsubsection}{Development and Testing of Method}{160}{section*.118}
+\contentsline {subsection}{\numberline {6.2.4}Results}{163}{subsection.6.2.4}
+\contentsline {subsubsection}{Investigation of results}{165}{section*.119}
+\contentsline {subsubsection}{Limitation 1: Duplication when migrating subtypes}{167}{section*.120}
+\contentsline {subsubsection}{Limitation 2: Side-effects during initialisation}{170}{section*.121}
+\contentsline {subsection}{\numberline {6.2.5}Summary}{173}{subsection.6.2.5}
+\contentsline {section}{\numberline {6.3}Evaluating Co-evolution Tools}{173}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Comparison Method}{175}{subsection.6.3.1}
+\contentsline {subsubsection}{Co-Evolution Examples}{175}{section*.122}
+\contentsline {paragraph}{Petri Nets.}{175}{section*.123}
+\contentsline {paragraph}{GMF.}{175}{section*.124}
+\contentsline {subsubsection}{Compared Tools}{176}{section*.125}
+\contentsline {subsubsection}{Comparison Process}{177}{section*.126}
+\contentsline {subsection}{\numberline {6.3.2}Comparison Results}{178}{subsection.6.3.2}
+\contentsline {subsubsection}{Constructing the migration strategy}{179}{section*.127}
+\contentsline {paragraph}{AML.}{179}{section*.128}
+\contentsline {paragraph}{COPE.}{179}{section*.129}
+\contentsline {paragraph}{Ecore2Ecore.}{179}{section*.130}
+\contentsline {paragraph}{Flock.}{180}{section*.131}
+\contentsline {subsubsection}{Changing the migration strategy}{180}{section*.132}
+\contentsline {paragraph}{AML.}{180}{section*.133}
+\contentsline {paragraph}{COPE.}{180}{section*.134}
+\contentsline {paragraph}{Ecore2Ecore.}{181}{section*.135}
+\contentsline {paragraph}{Flock.}{181}{section*.136}
+\contentsline {subsubsection}{Extensibility}{181}{section*.137}
+\contentsline {paragraph}{AML.}{181}{section*.138}
+\contentsline {paragraph}{COPE}{181}{section*.139}
+\contentsline {subsubsection}{Re-use}{181}{section*.140}
+\contentsline {paragraph}{AML.}{181}{section*.141}
+\contentsline {paragraph}{COPE.}{182}{section*.142}
+\contentsline {paragraph}{Ecore2Ecore.}{182}{section*.143}
+\contentsline {paragraph}{Flock.}{182}{section*.144}
+\contentsline {subsubsection}{Conciseness}{182}{section*.145}
+\contentsline {paragraph}{AML.}{182}{section*.146}
+\contentsline {paragraph}{COPE}{182}{section*.147}
+\contentsline {paragraph}{Ecore2Ecore.}{182}{section*.148}
+\contentsline {paragraph}{Flock.}{182}{section*.149}
+\contentsline {subsubsection}{Clarity}{183}{section*.150}
+\contentsline {paragraph}{AML.}{183}{section*.151}
+\contentsline {paragraph}{COPE.}{183}{section*.152}
+\contentsline {paragraph}{Ecore2Ecore.}{183}{section*.153}
+\contentsline {paragraph}{Flock}{183}{section*.154}
+\contentsline {subsubsection}{Expressiveness}{183}{section*.155}
+\contentsline {paragraph}{AML.}{183}{section*.156}
+\contentsline {paragraph}{COPE.}{184}{section*.157}
+\contentsline {paragraph}{Ecore2Ecore.}{184}{section*.158}
+\contentsline {paragraph}{Flock.}{184}{section*.159}
+\contentsline {subsubsection}{Interoperability}{184}{section*.160}
+\contentsline {paragraph}{AML}{184}{section*.161}
+\contentsline {paragraph}{COPE}{184}{section*.162}
+\contentsline {paragraph}{Ecore2Ecore}{185}{section*.163}
+\contentsline {paragraph}{Flock}{185}{section*.164}
+\contentsline {subsubsection}{Performance}{185}{section*.165}
+\contentsline {subsection}{\numberline {6.3.3}Discussion}{186}{subsection.6.3.3}
+\contentsline {subsubsection}{Strengths and Weaknesses of Flock}{187}{section*.166}
+\contentsline {paragraph}{Strengths}{187}{section*.167}
+\contentsline {paragraph}{Weaknesses}{188}{section*.168}
+\contentsline {subsection}{\numberline {6.3.4}Summary}{188}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Transformation Tools Contest}{189}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Model Migration Case}{190}{subsection.6.4.1}
+\contentsline {subsubsection}{Activity Diagrams in UML}{190}{section*.169}
+\contentsline {subsubsection}{Evolution of Activity Diagrams}{192}{section*.170}
+\contentsline {subsubsection}{Extension 1: Alternative Object Flow State Migration Semantics}{194}{section*.171}
+\contentsline {subsubsection}{Extension 2: Concrete Syntax}{195}{section*.172}
+\contentsline {subsubsection}{Extension 3: XMI}{195}{section*.173}
+\contentsline {subsection}{\numberline {6.4.2}Model Migration Solution in Epsilon Flock}{196}{subsection.6.4.2}
+\contentsline {subsubsection}{Actions, Transitions and Final States}{196}{section*.174}
+\contentsline {subsubsection}{Pseudostates}{197}{section*.175}
+\contentsline {subsubsection}{Activities}{197}{section*.176}
+\contentsline {subsubsection}{Partitions}{198}{section*.177}
+\contentsline {subsubsection}{ObjectFlows}{198}{section*.178}
+\contentsline {subsubsection}{Alternative ObjectFlowState Migration Semantics}{199}{section*.179}
+\contentsline {subsubsection}{XMI}{200}{section*.180}
+\contentsline {subsection}{\numberline {6.4.3}Comparison with other solutions}{200}{subsection.6.4.3}
+\contentsline {subsubsection}{Opposition Statements}{200}{section*.181}
+\contentsline {subsubsection}{Scoring}{201}{section*.182}
+\contentsline {paragraph}{Correctness}{201}{section*.183}
+\contentsline {paragraph}{Conciseness}{202}{section*.184}
+\contentsline {paragraph}{Clarity}{202}{section*.185}
+\contentsline {paragraph}{Appropriateness}{202}{section*.186}
+\contentsline {paragraph}{Tool maturity}{202}{section*.187}
+\contentsline {paragraph}{Reproducibility}{203}{section*.188}
+\contentsline {paragraph}{Extensions}{203}{section*.189}
+\contentsline {subsection}{\numberline {6.4.4}Summary}{203}{subsection.6.4.4}
+\contentsline {section}{\numberline {6.5}Limitations}{204}{section.6.5}
+\contentsline {paragraph}{Generality}{204}{section*.190}
+\contentsline {paragraph}{Reproducibility}{204}{section*.191}
+\contentsline {paragraph}{Formal semantics}{204}{section*.192}
+\contentsline {section}{\numberline {6.6}Chapter Summary}{205}{section.6.6}
+\contentsline {chapter}{\chapternumberline {7}Conclusions}{207}{chapter.7}
+\contentsline {section}{\numberline {7.1}Research Contributions}{208}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Investigation of Evolution in MDE Projects}{208}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Structures and Processes for Managing Co-evolution}{209}{subsection.7.1.2}
+\contentsline {subsubsection}{Metamodel-Indepenent Syntax}{209}{section*.193}
+\contentsline {subsubsection}{Textual Modelling Notation}{209}{section*.194}
+\contentsline {subsubsection}{A Process for User-Driven Co-evolution}{210}{section*.195}
+\contentsline {subsubsection}{Epsilon Flock: A Model Migration Language}{210}{section*.196}
+\contentsline {subsection}{\numberline {7.1.3}Evaluation of Structures and Processes}{211}{subsection.7.1.3}
+\contentsline {section}{\numberline {7.2}Future Work}{211}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Further Evaluation}{211}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Extensions to the Model Migration Language}{212}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Unifying Co-evolution Approaches}{212}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Higher-Order Migration}{213}{subsection.7.2.4}
+\contentsline {subsection}{\numberline {7.2.5}Genericity}{213}{subsection.7.2.5}
+\contentsline {section}{\numberline {7.3}Closing Remarks}{213}{section.7.3}
+\contentsline {appendix}{\chapternumberline {A}A Graphical Editor for Process-Oriented Programs}{215}{appendix.A}
+\contentsline {section}{\numberline {A.1}Iteration 1: Processes and Channels}{216}{section.A.1}
+\contentsline {section}{\numberline {A.2}Iteration 2: Interoperability with GMF}{217}{section.A.2}
+\contentsline {section}{\numberline {A.3}Iteration 3: Shared Channels}{219}{section.A.3}
+\contentsline {section}{\numberline {A.4}Iteration 4: Connection Points}{221}{section.A.4}
+\contentsline {section}{\numberline {A.5}Iteration 5: Connection Point Types}{225}{section.A.5}
+\contentsline {section}{\numberline {A.6}Iteration 6: Nested Processes and Channels}{228}{section.A.6}
+\contentsline {section}{\numberline {A.7}Summary}{230}{section.A.7}
+\contentsline {appendix}{\chapternumberline {B}Co-evolution Examples}{231}{appendix.B}
+\contentsline {section}{\numberline {B.1}Newsgroups Examples}{231}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Extract Person}{231}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Resolve Replies}{234}{subsection.B.1.2}
+\contentsline {section}{\numberline {B.2}UML Example}{236}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Activity Diagrams}{236}{subsection.B.2.1}
+\contentsline {section}{\numberline {B.3}GMF Examples}{242}{section.B.3}
+\contentsline {subsection}{\numberline {B.3.1}GMF Graph}{243}{subsection.B.3.1}
+\contentsline {subsection}{\numberline {B.3.2}GMF Generator}{257}{subsection.B.3.2}
+\contentsline {appendix}{\chapternumberline {C}TTC Results}{287}{appendix.C}
+\contentsline {chapter}{Bibliography}{293}{section*.198}

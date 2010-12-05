@@ -43,86 +43,86 @@
 \contentsline {figure}{\numberline {5.6}{\ignorespaces The architecture of Epsilon HUTN.}}{106}{figure.5.6}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces User-driven co-evolution with dedicated structures}}{111}{figure.5.7}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Conformance problem reporting in Epsilon HUTN.}}{112}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Exemplar metamodel evolution (Petri nets)}}{115}{figure.5.9}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{115}{figure.5.9}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{115}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Mappings between the original and evolved Petri nets metamodels}}{118}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces The metamodel-independent representation used by COPE}}{120}{figure.5.11}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces The abstract syntax of Flock.}}{123}{figure.5.12}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Exemplar Process-Oriented metamodel evolution}}{127}{figure.5.13}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{127}{figure.5.13}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{127}{figure.5.13}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Exemplar Process-Oriented model prior to migration}}{128}{figure.5.14}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Exemplar UML metamodel evolution}}{131}{figure.5.15}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{131}{figure.5.15}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{131}{figure.5.15}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Exemplar metamodel evolution (Petri nets)}}{131}{figure.5.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{131}{figure.5.9}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{131}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Mappings between the original and evolved Petri nets metamodels}}{132}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces The metamodel-independent representation used by COPE}}{132}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces The abstract syntax of Flock.}}{132}{figure.5.12}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Exemplar Process-Oriented metamodel evolution}}{133}{figure.5.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{133}{figure.5.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{133}{figure.5.13}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Exemplar Process-Oriented model prior to migration}}{134}{figure.5.14}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Exemplar UML metamodel evolution}}{135}{figure.5.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{135}{figure.5.15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{135}{figure.5.15}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Final version of the prototypical graphical model editor.}}{139}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The graphical editor at the start of the iteration.}}{140}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces The graphical editor at the end of the iteration.}}{141}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Process-oriented metamodel evolution.}}{142}{figure.6.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Part of the original metamodel.}}}{142}{figure.6.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Part of the evolved metamodel.}}}{142}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces User-driven co-evolution with EMF}}{143}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces XMI prior to migration}}{144}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces XMI after migration}}{145}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces User-driven co-evolution with dedicated structures}}{147}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces HUTN source prior to migration}}{148}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces HUTN source part way through migration}}{149}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Exemplar metamodel evolution (Petri nets)}}{161}{figure.6.11}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{161}{figure.6.11}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{161}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Simplified fragment of the GMF Graph metamodel.}}{165}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Change Reference to Containment metamodel evolution}}{169}{figure.6.13}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{169}{figure.6.13}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{169}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Exemplar metamodel evolution (Petri nets)}}{174}{figure.6.14}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{174}{figure.6.14}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{174}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces GMF graph metamodel evolution}}{175}{figure.6.15}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{175}{figure.6.15}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{175}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Migration tool performance comparison.}}{184}{figure.6.16}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Exemplar activity model.}}{189}{figure.6.17}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces UML 1.4 Activity Graphs}}{190}{figure.6.18}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces UML 2.2 Activity Diagrams}}{191}{figure.6.19}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Migrating Actions for the Core Task}}{192}{figure.6.20}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ObjectFlowState structure in UML 1.4}}}{192}{figure.6.20}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Equivalent ObjectNode structure in UML 2.2}}}{192}{figure.6.20}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Migrating Actions for Extension 1}}{193}{figure.6.21}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ObjectFlowState structure in UML 1.4}}}{193}{figure.6.21}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Equivalent ObjectFlow structure in UML 2.2}}}{193}{figure.6.21}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Final version of the prototypical graphical model editor.}}{141}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The graphical editor at the start of the iteration.}}{142}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces The graphical editor at the end of the iteration.}}{143}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Process-oriented metamodel evolution.}}{144}{figure.6.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Part of the original metamodel.}}}{144}{figure.6.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Part of the evolved metamodel.}}}{144}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces User-driven co-evolution with EMF}}{145}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces XMI prior to migration}}{146}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces XMI after migration}}{147}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces User-driven co-evolution with dedicated structures}}{149}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces HUTN source prior to migration}}{150}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces HUTN source part way through migration}}{151}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Exemplar metamodel evolution (Petri nets)}}{163}{figure.6.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{163}{figure.6.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{163}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Simplified fragment of the GMF Graph metamodel.}}{167}{figure.6.12}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Change Reference to Containment metamodel evolution}}{171}{figure.6.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{171}{figure.6.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{171}{figure.6.13}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Exemplar metamodel evolution (Petri nets)}}{176}{figure.6.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{176}{figure.6.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{176}{figure.6.14}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces GMF graph metamodel evolution}}{177}{figure.6.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{177}{figure.6.15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{177}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Migration tool performance comparison.}}{185}{figure.6.16}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Activity model in UML 1.4.}}{191}{figure.6.17}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces UML 1.4 Activity Graphs}}{192}{figure.6.18}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces UML 2.2 Activity Diagrams}}{193}{figure.6.19}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Migrating Actions for the Core Task}}{194}{figure.6.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ObjectFlowState structure in UML 1.4}}}{194}{figure.6.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Equivalent ObjectNode structure in UML 2.2}}}{194}{figure.6.20}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Migrating Actions for Extension 1}}{195}{figure.6.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ObjectFlowState structure in UML 1.4}}}{195}{figure.6.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Equivalent ObjectFlow structure in UML 2.2}}}{195}{figure.6.21}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces The process-oriented metamodel after one iteration.}}{214}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces The process-oriented metamodel after two iterations.}}{215}{figure.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Exemplar diagram after the second iteration.}}{216}{figure.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces The process-oriented metamodel after three iterations.}}{217}{figure.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Exemplar migration between the second and third versions of the process-oriented metamodel}}{218}{figure.A.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {HUTN prior to migration}}}{218}{figure.A.5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HUTN after migration}}}{218}{figure.A.5}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces The process-oriented metamodel after the fourth iteration.}}{219}{figure.A.6}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Exemplar diagram after the fourth iteration.}}{221}{figure.A.7}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Exemplar migration between the third and fourth versions of the process-oriented metamodel}}{222}{figure.A.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {HUTN prior to migration}}}{222}{figure.A.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HUTN after migration}}}{222}{figure.A.8}
-\contentsline {figure}{\numberline {A.9}{\ignorespaces The process-oriented metamodel after five iterations.}}{223}{figure.A.9}
-\contentsline {figure}{\numberline {A.10}{\ignorespaces Exemplar migration between the fourth and fifth versions of the process-oriented metamodel}}{225}{figure.A.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {HUTN prior to migration}}}{225}{figure.A.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HUTN after migration}}}{225}{figure.A.10}
-\contentsline {figure}{\numberline {A.11}{\ignorespaces The process-oriented metamodel after six iterations.}}{226}{figure.A.11}
-\contentsline {figure}{\numberline {A.12}{\ignorespaces Exemplar diagram after the final iteration.}}{228}{figure.A.12}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces The process-oriented metamodel after one iteration.}}{216}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces The process-oriented metamodel after two iterations.}}{217}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Exemplar diagram after the second iteration.}}{218}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces The process-oriented metamodel after three iterations.}}{219}{figure.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Exemplar migration between the second and third versions of the process-oriented metamodel}}{220}{figure.A.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {HUTN prior to migration}}}{220}{figure.A.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HUTN after migration}}}{220}{figure.A.5}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces The process-oriented metamodel after the fourth iteration.}}{221}{figure.A.6}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Exemplar diagram after the fourth iteration.}}{223}{figure.A.7}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Exemplar migration between the third and fourth versions of the process-oriented metamodel}}{224}{figure.A.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {HUTN prior to migration}}}{224}{figure.A.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HUTN after migration}}}{224}{figure.A.8}
+\contentsline {figure}{\numberline {A.9}{\ignorespaces The process-oriented metamodel after five iterations.}}{225}{figure.A.9}
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Exemplar migration between the fourth and fifth versions of the process-oriented metamodel}}{227}{figure.A.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {HUTN prior to migration}}}{227}{figure.A.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HUTN after migration}}}{227}{figure.A.10}
+\contentsline {figure}{\numberline {A.11}{\ignorespaces The process-oriented metamodel after six iterations.}}{228}{figure.A.11}
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Exemplar diagram after the final iteration.}}{230}{figure.A.12}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Newsgroups metamodel during the Extract Person iteration}}{230}{figure.B.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{230}{figure.B.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{230}{figure.B.1}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Newsgroups metamodel during the Resolve Replies iteration}}{232}{figure.B.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{232}{figure.B.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{232}{figure.B.2}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Activities in UML 1.4 and UML 2.2}}{235}{figure.B.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{235}{figure.B.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{235}{figure.B.3}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces The Graph metamodel in GMF 1.0 and GMF 2.0}}{242}{figure.B.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{242}{figure.B.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{242}{figure.B.4}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Newsgroups metamodel during the Extract Person iteration}}{232}{figure.B.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{232}{figure.B.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{232}{figure.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Newsgroups metamodel during the Resolve Replies iteration}}{234}{figure.B.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{234}{figure.B.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{234}{figure.B.2}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Activities in UML 1.4 and UML 2.2}}{237}{figure.B.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{237}{figure.B.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{237}{figure.B.3}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces The Graph metamodel in GMF 1.0 and GMF 2.0}}{244}{figure.B.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{244}{figure.B.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{244}{figure.B.4}
 \addvspace {10pt}

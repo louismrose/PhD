@@ -2,16 +2,16 @@
 
 \section{Evaluating Co-evolution Tools}
 \label{sec:collaborative_comparison}
-This section assesses the extent to which Epsilon Flock (Section~\ref{sec:flock}) can be used for automating developer-driven co-evolution. To this end, Flock is compared to three further co-evolution tools. The comparison identified strengths and weaknesses of the co-evolution tools, and led to the synthesis of a set of recommendations for selecting a co-evolution tool. While Chapter~\ref{Analysis} highlighted theoretical differences between co-evolution tools, this section explores the way in which migration tools compare in practice.
+This section assesses the extent to which Epsilon Flock (Section~\ref{sec:flock}) can be used for automating developer-driven co-evolution. To this end, Flock is compared to three co-evolution tools using an expert evaluation. While Chapter~\ref{Analysis} highlighted theoretical differences between co-evolution tools, the expert evaluation explored the ways in which migration tools compare in practice.
 
-Flock, introduced in Section~\ref{sec:flock}, is a transformation language tailored for model migration. One aspect of the language, conciseness, was evaluated in Section~\ref{sec:quantitive}, and the evaluation performed in this section compares manual specification of model migration in Flock, with three further approaches to automating co-evolution. The results of the comparison, described in Section~\ref{sec:discussion}, suggest situations in which using Flock leads to increased productivity of model migration, and, conversely, situations in which the other co-evolution tools provide benefits over using Flock. Additionally, the comparison and guidance presented in this section aim to simplify tool selection by recommending tools for particular situations or requirements. The advice presented in this section recommends tools that are suitable, for example, when scalability is a concern (many large models are to be migrated).
+One aspect of Flock, conciseness, was evaluated in Section~\ref{sec:quantitive}. The evaluation performed in this section evaluates several further aspects of model migration tools. The results of the comparison, described in Section~\ref{sec:discussion}, suggest situations in which using Flock leads to increased productivity of model migration, and, conversely, situations in which the other co-evolution tools provide benefits over using Flock. Additionally, the expert evaluation aimed to  simplify the selection of migration tools by recommending tools for particular situations or requirements. Tool selection advice was synthesised from the expert evaluation, and recommends tools that are suitable, for example, when scalability is a concern (many large models are to be migrated).
 
-The way in which Flock affects the productivity of model migration might have been explored using a comprehensive user-study, involving hundreds of users. However, locating a large number of participants with expertise in model-driven engineering was not possible given the time constraints of the research. Alternatively, Flock and several further co-evolution tools might have been applied, by the author, to a large, independent co-evolution example in a case study. However, exploring the variations in productivity of the co-evolution tools would likely have been challenging as the author is obviously more familiar with Flock than the other tools. Instead, the comparison of co-evolution tools was performed using an expert evaluation. Flock and three further co-evolution tools, selected from those described in Chapter~\ref{Analysis}, were compared by MDE experts.
+The way in which Flock affects the productivity of model migration might have been explored using a comprehensive user-study, involving hundreds of users. However, locating a large number of participants with expertise in model-driven engineering was not possible given the time constraints of the research. Alternatively, Flock and several further co-evolution tools might have been applied, by the author, to a large, independent co-evolution example in a case study. However, exploring the variations in productivity of the co-evolution tools would likely have been challenging as the author is obviously more familiar with Flock than the other tools. Instead, the comparison of co-evolution tools was performed using an expert evaluation.
 
 The remainder of this section describes the comparison method, reports results and tool selection guidance, and discusses the situations in which Flock was identified as stronger or weaker than the other co-evolution tools. Section~\ref{sec:method} describes the way in which the co-evolution tools were selected, comparison criteria were identified and the way in which the tools were applied to two co-evolution examples. The experts' experiences with each tool are reported in Section~\ref{sec:results}. Section~\ref{sec:discussion} presents the experts' guidance for identifying the most appropriate model migration tool in different situations, and the section concludes with a description of the strengths and weaknesses of Flock.
 
 \begin{framed}
-This section is based on joint work with Markus Herrmannsd\"{o}rfer (a research student at Technische Universit\"at M\"unchen), James Williams (a research student in this department), Dimitrios Kolovos (a lecturer in this department) and Kelly Garc\'{e}s (a research student at EMN-INRIA / LINA-INRIA in Nantes), and has been published in \cite{rose10comparison}. Garc\'{e}s provided assistance with installing and configuration one of the migration tools, and commented on a draft of the paper. Herrmannsd\"{o}rfer, Williams and Kolovos played a larger role in the comparison. Here, the work is narrated to make clear their contributions.
+Section~\ref{sec:collaborative_comparison} is based on joint work with Markus Herrmannsd\"{o}rfer (a research student at Technische Universit\"at M\"unchen), James Williams (a research student in this department), Dimitrios Kolovos (a lecturer in this department) and Kelly Garc\'{e}s (a research student at EMN-INRIA / LINA-INRIA in Nantes), and has been published in \cite{rose10comparison}. Garc\'{e}s provided assistance with installing and configuration one of the migration tools, and commented on a draft of the paper. Herrmannsd\"{o}rfer, Williams and Kolovos played a larger role in the comparison.
 \end{framed}
 
 \subsection{Comparison Method}
@@ -22,30 +22,26 @@ The comparison described in this section is based on practical application of th
 
 \subsubsection{Co-Evolution Examples}
 \label{subsec:method_examples}
-To compare migration tools, two examples of co-evolution were used. The first, Petri nets, is a well-known problem in the model migration literature and was used to test the installation and configuration of the migration tools. The second, GMF, is a larger example taken from a real-world model-driven development project, and was identified as a potentially useful example for co-evolution case studies in Chapter~\ref{Analysis} and in \cite{herrmannsdoerfer09gmf}.
+To compare migration tools, two examples of co-evolution were used. The first, Petri nets, was first described in Section~\ref{sec:analyis_of_languages_used_for_migration} and is a well-known problem in the model migration literature. The Petri nets example was used to test the installation and configuration of the migration tools. The second, GMF, is a larger example taken from a real-world model-driven development project, and was identified as a potentially useful example for co-evolution case studies in Chapter~\ref{Analysis} and in \cite{herrmannsdoerfer09gmf}.
 
 \paragraph{Petri Nets.}
-The first example is an evolution of a Petri net metamodel, previously used to describe the implementation of Flock in Section~\ref{sec:flock}, and in \cite{cicchetti08automating,garces09managing,wachsmuth07metamodel} to discuss co-evolution and model migration.
+The first example is the Petri nets example, which was described in Section~\ref{sec:analyis_of_languages_used_for_migration}, and is repeated in Figure~\ref{fig:petri_nets_mms_repeated}. During metamodel evolution, the \mm{PTArc} and \mm{TPArc} classes are introduced to allow the specification of weighted arcs.
 
 \begin{figure}[htbp]
 	\centering
 	\subfigure[Original metamodel.]
 	{
 	    \label{fig:petri_nets_original_mm_repeated}
-	    \includegraphics[width=4.75cm]{5.Implementation/images/petri_nets_before.pdf}
+	    \includegraphics[scale=0.75]{5.Implementation/images/petri_nets_before.pdf}
 	}
 	\subfigure[Evolved metamodel.]
 	{
 	    \label{fig:petri_nets_evolved_mm_repeated}
-	    \includegraphics[width=6.25cm]{5.Implementation/images/petri_nets_after.pdf}
+	    \includegraphics[scale=0.75]{5.Implementation/images/petri_nets_after.pdf}
 	}
-	\caption[Exemplar metamodel evolution (Petri nets)]{Petri nets metamodel evolution (taken from \cite{rose10flock}).}
+	\caption[Exemplar metamodel evolution (Petri nets)]{Petri nets metamodel evolution (taken from \cite{rose10flock}, and from Section~\ref{sec:analyis_of_languages_used_for_migration}).}
 \label{fig:petri_nets_mms_repeated}
 \end{figure}
-
-In Figure~\ref{fig:petri_nets_original_mm_repeated}, a Petri \mm{Net} comprises \mm{Place}s and \mm{Transition}s. A \mm{Place} has any number of \mm{src} or \mm{dst} \mm{Transition}s. Similarly, a \mm{Transition} has at least one \mm{src} and \mm{dst} \mm{Place}. In this example, the metamodel in Figure~\ref{fig:petri_nets_original_mm_repeated} is evolved to support weighted connections between \mm{Place}s and \mm{Transition}s and between \mm{Transition}s and \mm{Place}s.
-
-The evolved metamodel is shown in Figure~\ref{fig:petri_nets_evolved_mm_repeated}. \mm{Place}s are connected to \mm{Transition}s via instances of \mm{PTArc}. Likewise, \mm{Transition}s are connected to \mm{Place}s via \mm{TPArc}. Both \mm{PTArc} and \mm{TPArc} inherit from \mm{Arc}, and therefore can be used to specify a \mm{weight}.
 
 \paragraph{GMF.}
 The second example is taken from GMF \cite{gronback09emp}, an Eclipse project for generating graphical editors for models. The development of GMF is model-driven and utilises four domain-specific metamodels. Here, we consider one of those metamodels, GMF Graph, and its evolution between GMF versions 1.0 and 2.0. The GMF Graph example is now summarised, and more details can be found in Section~\ref{subsec:gmf_graph}.
@@ -72,16 +68,16 @@ GMF provides a migrating algorithm that produces a model conforming to the evolv
 
 \subsubsection{Compared Tools}
 \label{subsec:method_tools}
-The comparison described in this section included one tool from each of the three categories identified in Chapter~\ref{Analysis} -- \emph{manual specification}, \emph{operator-based} and \emph{inference} approaches. The tools selected were Epsilon Flock, COPE \cite{herrmannsdoerfer09cope} and the AtlanMod Matching Language (AML) \cite{garces09managing}, respectively. A further tool from the manual specification category, Ecore2Ecore, was included because it is distributed with the Eclipse Modeling Framework (EMF), arguably the most widely used modelling framework. AML, COPE and Ecore2Ecore were discussed in Chapter~\ref{Analysis}, and Epsilon Flock in Chapter~\ref{Implementation}.
+The expert evaluation compares Flock (a manual specification tool), COPE (an operator-based tool) and AML (an inference tool). A further tool from the manual specification category, Ecore2Ecore, was included because it is distributed with the Eclipse Modeling Framework (EMF), arguably the most widely used modelling framework. AML, COPE and Ecore2Ecore were discussed in Chapter~\ref{Analysis}, and Flock in Chapter~\ref{Implementation}.
 
 
 \subsubsection{Comparison Process}
 \label{subsec:method_process}
 The comparison of migration tools was conducted by applying each of the four tools (Ecore2Ecore, AML, COPE and Flock) to the two examples of co-evolution (Petri nets and GMF). The developers of each tool were invited to participate in the comparison. The authors of COPE and Flock were able to participate fully, while the authors of Ecore2Ecore and AML were available for guidance, advice, and to comment on preliminary results.
 
-Each tool developer was assigned a migration tool to apply to the two co-evolution examples. Because the authors of Ecore2Ecore and AML were not able to participate fully in the comparison, two colleagues experienced in model transformation and migration, James Williams and Dimitrios Kolovos, stood in. To improve the validity of the comparison, each tool was used by someone other than its developer. Other than this restriction, the tools were allocated arbitrarily.
+Each tool developer was assigned a migration tool to apply to the two co-evolution examples. Because the authors of Ecore2Ecore and AML could not participate fully in the comparison, two colleagues experienced in model transformation and migration, James Williams and Dimitrios Kolovos, took part. To improve the validity of the comparison, each tool was used by someone other than its developer.
 
-The comparison was conducted in three phases. In the first phase, criteria against which the tools would be compared were identified by discussion between the tool developers. In the second phase, the first example of co-evolution (Petri nets) was used for familiarisation with the migration tools and to assess the suitability of the comparison criteria. In the third phase, the tools were applied to the larger example of co-evolution (GMF) and results were drawn from the experiences of the tool developers. Table~\ref{tab:criteria} summarises the comparison criteria used, which provide a foundation for future comparisons. The next section presents, for each criterion, observations from applying the migration tools to the co-evolution examples.
+The comparison was conducted in three phases. In the first phase, criteria against which the tools would be compared were identified by discussion between the tool developers. In the second phase, co-evolution of Petri nets was used for familiarisation with the migration tools and to assess the suitability of the comparison criteria. In the third phase, the tools were applied to the larger co-evolution (GMF) and results were drawn from the experiences of the tool developers. Table~\ref{tab:criteria} summarises the comparison criteria used, which provide a foundation for future comparisons. The next section presents, for each criterion, observations from applying the migration tools to the co-evolution examples.
 
 \begin{table}[hbtp]
 	\centering
@@ -125,7 +121,7 @@ Facilitating the specification and execution of migration strategies is the prim
 
 \paragraph{AML.} An AML user specifies a combination of match heuristics from which AML infers a migrating transformation by comparing original and evolved metamodels. Matching strategies are written in a textual syntax, which AML compiles to produce an executable workflow. The workflow is invoked to generate the migrating transformation, codified in the Atlas Transformation Language (ATL) \cite{jouault05transforming}.
 %
-Devising correct matching strategies was difficult, as AML lacks documentation that describes the input, output and effects of each heuristic. Papers describing AML (such as \cite{garces09managing}) discuss each heuristic, but mostly in a high-level manner. A semantically invalid combination of heuristics can cause a runtime error, while an incorrect combination results in the generation of an incorrect migration transformation. However, once a matching strategy is specified, it can be re-used for similar cases of metamodel evolution. To devise the matching strategies used in this paper, AML's author provided considerable guidance.
+Devising correct matching strategies is difficult, as AML lacks documentation that describes the input, output and effects of each heuristic. Papers describing AML (such as \cite{garces09managing}) discuss each heuristic, but mostly in a high-level manner. A semantically invalid combination of heuristics can cause a runtime error, while an incorrect combination results in the generation of an incorrect migration transformation. However, once a matching strategy is specified, it can be re-used for similar cases of metamodel evolution. To devise the matching strategies used in this paper, AML's author provided considerable guidance.
 
 \paragraph{COPE.} A COPE user applies \emph{coupled operations} to the original metamodel to form the evolved metamodel. Each coupled operation specifies a metamodel evolution along with a corresponding fragment of the model migration strategy. A history of applied operations is later used to generate a complete migration strategy.
 %
@@ -146,17 +142,17 @@ Migration strategies can change in at least two ways. Firstly, as a migration st
 
 \paragraph{AML.}  Because AML automatically generates migrating transformations, changing the transformation, for example after discovering an error in the matching strategy, is trivial. To migrate models over several versions of a metamodel at once, the migrating transformations generated by AML can be composed by the user. AML provides no tool support for composing transformations.
 
-\paragraph{COPE.} As mentioned previously, COPE provides an undo feature,
+\paragraph{COPE.} COPE's undo feature
 % operation might be intepreted as coupled operation for COPE, so let's use "undo feature" instead
-meaning that any incorrect migrations can be easily fixed. COPE stores a history of \emph{releases} -- a set of operations that has been applied between versions of the metamodel. Because the migration code generated from the release history can migrate models conforming to any previous metamodel release, COPE provides a comprehensive means for chaining migration strategies. 
+means that incorrect migrations can be easily fixed. COPE stores a history of \emph{releases} -- a set of operations that has been applied between versions of the metamodel. Because the migration code generated from the release history can migrate models conforming to any previous metamodel release, COPE provides a comprehensive means for chaining migration strategies. 
 
-\paragraph{Ecore2Ecore.} Migrations specified using Ecore2Ecore can be modified via the graphical mapping editor and the Java code in the custom model parser. Therefore, developers can use the features of the Eclipse Java IDE to modify and debug migrations. Ecore2Ecore provides no tool support for composing migrations, but composition can be achieved by modifying the resource handler.
+\paragraph{Ecore2Ecore.} Migrations specified using Ecore2Ecore can be modified via the graphical mapping editor and the Java code in the custom model parser. Therefore, developers can use the features of the Eclipse Java IDE to modify and debug migrations. Ecore2Ecore provides no dedicated tool support for composing migrations.
 
-\paragraph{Flock.} There is comprehensive support for fixing errors. A migration strategy can easily be re-executed using a launch configuration, and migration errors are linked to the line in the migration strategy that caused the error to occur. If the metamodel is further evolved, the original migration strategy has to be extended, since there is no explicit support to chain migration strategies. The full migration strategy may need to be read to know where to extend it.
+\paragraph{Flock.} There is comprehensive support in Flock for fixing errors. A migration strategy can easily be re-executed using a launch configuration, and migration errors are linked to the line in the migration strategy that caused the error to occur. If the metamodel is further evolved, the original migration strategy has to be extended, since there is no explicit support to chain migration strategies. The full migration strategy may need to be read to know where to extend it.
 
 
 \subsubsection{Extensibility}
-The fundamental constructs used for specifying migration in COPE and AML (operators and match heuristics, respectively) are extensible. Flock and Ecore2E\-core use a more imperative (rather than declarative) approach, and as such do not provide extensible constructs.
+The fundamental constructs used for specifying migration in COPE and AML (operators and match heuristics, respectively) are extensible. Flock and Ecore2E\-core use a more imperative (than declarative) approach, and as such do not provide extensible constructs.
 
 \paragraph{AML.} An AML user can specify additional matching heuristics. This requires understanding of AML's domain-specific language for manipulating the data structures from which migrating transformations are generated.
 
@@ -164,7 +160,7 @@ The fundamental constructs used for specifying migration in COPE and AML (operat
 
 
 \subsubsection{Re-use}
-Each migration tool capture patterns that commonly occur in model migration. This section considers the extent to which the patterns captured by each tool facilitate re-use between migration strategies.
+Each migration tool captures patterns that commonly occur in model migration. This section considers the extent to which the patterns captured by each tool facilitate re-use between migration strategies.
 
 \paragraph{AML.} Once a matching strategy is specified, it can potentially be re-used for further cases of metamodel evolution. Match heuristics provide a re-usable and extensible mechanism for capturing metamodel change and model migration patterns.
 
@@ -177,7 +173,7 @@ Each migration tool capture patterns that commonly occur in model migration. Thi
 
 
 \subsubsection{Conciseness}
-A concise migration strategy is arguably more readable and requires less effort to write than a verbose migration strategy. This section comments on the conciseness of migration strategies produced with each tool, and reports the lines of code (without comments and blank lines) used.
+A concise migration strategy is arguably more readable and requires less effort to write than a verbose migration strategy. This section comments on the conciseness of migration strategies produced with each tool, and reports the lines of code (without comments and blank lines) used. % Table~\ref{tab:collaborative_conciseness} summarises the findings of the expert evaluation with respect to conciseness.
 
 \paragraph{AML.} 117 lines were automatically generated for the Petri nets example. 563 lines were automatically generated for the GMF Graph example, and a further 63 lines of code were added by hand to complete the transformation. Approximately 10 lines of the user-defined code could be removed by restructuring the generated transformation. 
 
@@ -187,6 +183,26 @@ A concise migration strategy is arguably more readable and requires less effort 
 
 \paragraph{Flock.} 16 lines of code were necessary to encode the Petri nets example, and 140 lines of code were necessary to encode the GMF Graph example.
 In the GMF Graph example, approximately 60 lines of code implement missing built-in support for rule inheritance, even after duplication was removed by extracting and re-using a subroutine.
+
+% \begin{table}[tbp]
+% 	\centering
+% 	\begin{tabular}{|r|c|c|}
+% 		\hline
+% 		\textbf{Tool / Example} & Petri nets & GMF \\
+% 		\hline
+% 		\hline
+% 		\textbf{AML}         & 117 & 563 (+ 63 hand-written)  \\
+% 		\hline
+% 		\textbf{COPE}        & 11 ops  & 76 ops (+ 73 hand-written lines of code) \\
+% 		\hline
+% 		\textbf{Ecore2Ecore} & 57 (+ 78 hand-written)  & n/a  \\
+% 		\hline
+% 		\textbf{Flock}       & 16  & 60  \\
+% 		\hline
+% 	\end{tabular}
+% 	\caption{Expert evaluation: conciseness of migration strategies.}
+% 	\label{tab:collaborative_conciseness}
+% \end{table}
 
 
 \subsubsection{Clarity}

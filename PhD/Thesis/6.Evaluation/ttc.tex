@@ -4,7 +4,7 @@
 \label{sec:ttc}
 In contrast to the previous section, which compared Flock to three co-evolution tools, the evaluation performed in this section compares Flock with model-to-model transformation tools. As discussed in Chapter~\ref{Analysis}, model migration can be regarded as a specialisation of model-to-model transformation. Chapter~\ref{Implementation} introduces Flock, a language tailored for model migration. This section compares Flock with other model-to-model transformation languages, and explores the benefits and drawbacks of treating model migration and model-to-model transformation as separate model management operations, as proposed in this thesis and by \cite{sprinkle03thesis}.
 
-To this end, the author participated in the 2010 edition of the Transformation Tools Contest (TTC), a workshop series that seeks to compare and contrast tools for performing model and graph transformation. At TTC 2010\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?Itemid=132}}, two rounds of submissions were invited: cases (transformation problems, three of which are selected by the workshop organisers) and solutions to the selected cases. The author submitted a case based on a model migration problem from a real-world example of metamodel evolution. Nine solutions were submitted for the case, including one by the author, which used Flock.
+The author participated in the 2010 edition of the Transformation Tools Contest (TTC), a workshop series that seeks to compare and contrast tools for performing model and graph transformation. At TTC 2010\footnote{\url{http://www.planet-research20.org/ttc2010/index.php?Itemid=132}}, two rounds of submissions were invited: cases (transformation problems, three of which are selected by the workshop organisers) and solutions to the selected cases. The author submitted a case based on a model migration problem from a real-world example of metamodel evolution. Nine solutions were submitted for the case, including one by the author, which used Flock.
 
 Compared to the evaluation described in Section~\ref{sec:collaborative_comparison}, the evaluation in this section compares Flock to a wider range of tools (model and graph transformation tools, and not just model migration tools). The remainder of this section describes the model migration case (Section~\ref{subsec:ttc_case}), the Flock solution (Section~\ref{subsec:ttc_solution}), and reports the results of the workshop in which the solutions were compared and scored by the organisers and participants.
 
@@ -21,7 +21,7 @@ Activity diagrams are used for modelling lower-level behaviours, emphasising seq
 \begin{figure}[htbp]
   \centering
   \includegraphics*[viewport=75 230 585 800,width=13cm]{6.Evaluation/images/activity.pdf}
-  \caption{Exemplar activity model.}
+  \caption[Activity model in UML 1.4.]{Activity model in UML 1.4, taken from \cite{rose10ttc_case} and based on \cite[pg3-165]{uml14}.}
   \label{fig:activity}
 \end{figure}
 
@@ -46,7 +46,7 @@ Some differences between Figures~\ref{fig:uml14} and \ref{fig:uml22} are: activi
   \label{fig:uml22}
 \end{figure}
 
-To facilitate the comparison of solutions, the model shown in Figure~\ref{fig:activity} was used. Figure~\ref{fig:activity} is based on \cite[pg3-165]{uml14}. Solutions migrated the activity diagram shown in Figure~\ref{fig:activity} -- which conforms to UML 1.4 -- to conform to UML 2.2. The UML 1.4 model, the migrated UML 2.2 model, and the UML 1.4 and 2.2 metamodels are available from\footnote{\url{http://www.cs.york.ac.uk/~louis/ttc/}}.
+To facilitate the comparison of solutions, the model shown in Figure~\ref{fig:activity} was used. Solutions migrated the activity diagram shown in Figure~\ref{fig:activity} -- which conforms to UML 1.4 -- to conform to UML 2.2. The UML 1.4 model, the migrated UML 2.2 model, and the UML 1.4 and 2.2 metamodels are available from\footnote{\url{http://www.cs.york.ac.uk/~louis/ttc/}}.
 
 Submissions were evaluated using the following four criteria, which were decided in advance by the author and the workshop organisers:
 
@@ -64,7 +64,7 @@ To further distinguish between solutions, three extensions to the core task were
 
 \subsubsection{Extension 1: Alternative Object Flow State Migration Semantics}
 \label{sub:object_flow_states}
-Following the submission of the case, discussion on the TTC forums\footnote{\url{http://planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewgroup&groupid=4&Itemid=150} (registration required)} revealed an ambiguity in the UML 2.2 specification indicating that the migration semantics for the ObjectFlowState UML 1.4 concept are not clear from the UML 2.2 specification. The case was revised to incorporate both the original semantics (suggested by the author and described above) and an alternative semantics (suggested by a workshop participant via the TTC forums) for migrating ObjectFlowStates. The alternative semantics are now described.
+Following the submission of the case to the competition, discussion on the TTC forums\footnote{\url{http://planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewgroup&groupid=4&Itemid=150} (registration required)} revealed an ambiguity in the UML 2.2 specification indicating that the migration semantics for the ObjectFlowState UML 1.4 concept are not clear from the UML 2.2 specification. The case was revised to incorporate both the original semantics (suggested by the author and described above) and an alternative semantics (suggested by a workshop participant via the TTC forums) for migrating ObjectFlowStates. The alternative semantics are now described.
 
 \textbf{In the core task} described above, instances of \texttt{Ob\-je\-ctFl\-owSt\-a\-te} were migrated to instances of \texttt{Ob\-je\-ctNo\-de}. Any instances of \texttt{Tr\-an\-si\-ti\-on} that had an \texttt{Ob\-je\-ctFl\-owSt\-a\-te} as their source or target were migrated to instances of \texttt{Ob\-je\-ctFl\-ow}. Figure~\ref{fig:ofs_to_node} shows an example application of this migration semantics. Structures such as the one shown in Figure~\ref{fig:ofs_to_node_before} are migrated to an equivalent structure shown in Figure~\ref{fig:ofs_to_node_after}. The \texttt{Tr\-an\-si\-ti\-on}s, \texttt{t1} and \texttt{t2}, are migrated to instances of \texttt{Ob\-je\-ctFl\-ow}. Likewise, the instance of \texttt{Ob\-je\-ctFl\-owSt\-a\-te}, \texttt{s2}, is migrated to an instance of \texttt{Ob\-je\-ctNo\-de}.
 
@@ -102,8 +102,6 @@ Following the submission of the case, discussion on the TTC forums\footnote{\url
 	\caption{Migrating Actions for Extension 1}
 \label{fig:ofs_to_flow}
 \end{figure}
-
-The alternative semantics were proposed on the TTC 2010 forums, and agreed as an extension to the core task by consensus between the solution authors and the workshop organisers. 
 
 \subsubsection{Extension 2: Concrete Syntax}
 \label{sub:concrete_syntax}
@@ -249,7 +247,7 @@ Flock was awarded the overall first prize and scored the highest average marks f
 
 During the workshop, each tool developer presented their solution. The workshop participants and organisers awarded each solution an individual score for each of the seven criteria outlined above, and a total score (by summing the seven criteria scores). The overall ranking for each solution was calculated by taking the mean of the total scores. For example, Flock was awarded the scores shown in Table~\ref{tab:flock_scores}. (Note that Participants \#2 and \#3 did not award scores to Flock due to a conflict of interest). Appendix~\ref{TTCScores} presents the complete set of results.
 
-Although Flock was awarded the overall first prize, few conclusions can be drawn from the overall rankings. The scores for each criteria were awarded on different scales (e.g. -2 to 2 for conciseness, and 0 to 2 for extensions) and the workshop organisers applied a weight to each criterion before calculating the totals (5 for correctness; 4 for tool maturity; 3 for conciseness, clarity, extensions, and appropriateness; and 2 for reproducibility). Clearly, the relative importance of each criterion may vary between migration cases, and between organisations. Therefore, the remainder of the discussion focusses on the per-criteria scores awarded to Flock and the other tools.
+Although Flock was awarded the overall first prize, few conclusions can be drawn from the rankings. The scores for each criterion were awarded on different scales (e.g. -2 to 2 for conciseness, and 0 to 2 for extensions) and the workshop organisers applied a weight to each criterion before calculating the totals (5 for correctness; 4 for tool maturity; 3 for conciseness, clarity, extensions, and appropriateness; and 2 for reproducibility). Clearly, the relative importance of each criterion may vary between migration cases, and between organisations. Therefore, the remainder of the discussion focusses on the per-criteria scores awarded to Flock and the other tools.
 
 \begin{table}[tbp]
 	\centering
@@ -300,7 +298,7 @@ Although Flock was awarded the overall first prize, few conclusions can be drawn
 
 \paragraph{Reproducibility} Each developer was invited to configure a virtual machine with their tool and solution, and the workshop participants were invited to use each of the tools. A score of 1 was awarded if a working virtual machine image was provided by the tool developer, and 0 otherwise. Flock had a mean score of 1, and ranked joint first along with seven of the other tools. The virtual machine image for one of the tools did not work, and it was awarded a mean score of 0.
 
-\paragraph{Extensions} Three extensions to the core task were described in Section~\ref{subsec:ttc_case}, and a point was awarded for approaching each additional task. Flock was awarded a mean score of 5.4, and ranked first of the nine solutions. For some of the tools, the variance of the scores is greater than zero, which is difficult to explain. For instance, the Flock solution (Section~\ref{subsec:ttc_solution}) approached two of the three extensions, but some of the participants awarded Flock only 1 point. Rather than analysing the scores, it is perhaps more interesting to note that the Flock solution was the only solution to approach the XMI extension, and similarly for Fujaba \cite{fujaba} and the concrete syntax extension. This might indicate that contemporary migration tools can be used to manage realistic metamodel changes, but lack some features that would be desirable in an industrial setting (namely, interoperability with several modelling technologies and co-migration of abstract and concrete syntax).
+\paragraph{Extensions} Three extensions to the core task were described in Section~\ref{subsec:ttc_case}, and a point was awarded for approaching each additional task. Flock was awarded a mean score of 5.4, and ranked first of the nine solutions. Determining which extensions a solution approached seems an objective task, but some tools were awarded different scores for the extensions criterion which is difficult to explain. For instance, the Flock solution (Section~\ref{subsec:ttc_solution}) approached two of the three extensions, but some of the participants awarded Flock only 1 point. Rather than analysing the scores, it is perhaps more interesting to note that the Flock solution was the only solution to approach the XMI extension, and similarly for Fujaba \cite{fujaba} and the concrete syntax extension. This might indicate that contemporary migration tools can be used to manage realistic metamodel changes, but lack some features that would be desirable in an industrial setting (namely, interoperability with several modelling technologies and co-migration of abstract and concrete syntax).
 
 \subsection{Summary}
 This section has discussed the way in which Flock was evaluated by participating in the 2010 edition of the Transformation Tools Contest (TTC). Flock was assessed by application to an example of migration from the UML and comparison with eight other model and graph transformation tools. Flock was awarded the overall first prize and ranked first in five of seven categories by the workshop participants and organisers. 
