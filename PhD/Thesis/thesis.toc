@@ -65,29 +65,29 @@
 \contentsline {subsection}{\numberline {3.1.2}Evolutionary Development Activities}{42}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}Refactoring}{43}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}Patterns and anti-patterns}{44}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Traceability}{44}{subsection.3.1.5}
-\contentsline {section}{\numberline {3.2}Software Evolution in Practice}{46}{section.3.2}
+\contentsline {subsection}{\numberline {3.1.5}Traceability}{45}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}Software Evolution in Practice}{47}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Programming Language Evolution}{47}{subsection.3.2.1}
 \contentsline {subsubsection}{Reduction}{47}{section*.30}
 \contentsline {subsubsection}{Revolution}{47}{section*.31}
 \contentsline {subsection}{\numberline {3.2.2}Schema Evolution}{48}{subsection.3.2.2}
-\contentsline {subsubsection}{XML Schema Evolution}{48}{section*.32}
+\contentsline {subsubsection}{XML Schema Evolution}{49}{section*.32}
 \contentsline {subsubsection}{Relational Database Schema Evolution}{50}{section*.33}
 \contentsline {subsection}{\numberline {3.2.3}Grammar Evolution}{52}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Evolution of MDE Artefacts}{52}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.4}Evolution of MDE Artefacts}{53}{subsection.3.2.4}
 \contentsline {subsubsection}{Model Refactoring}{54}{section*.34}
 \contentsline {subsubsection}{Model Synchronisation}{56}{section*.35}
-\contentsline {paragraph}{Incremental Transformation}{56}{section*.36}
+\contentsline {paragraph}{Incremental Transformation}{57}{section*.36}
 \contentsline {paragraph}{Towards automated model synchronisation}{58}{section*.37}
 \contentsline {paragraph}{Synchronisation of models with text and trace links}{60}{section*.38}
-\contentsline {subsubsection}{Model-metamodel Co-Evolution}{60}{section*.39}
+\contentsline {subsubsection}{Model-metamodel Co-Evolution}{61}{section*.39}
 \contentsline {paragraph}{Co-evolution theory}{61}{section*.40}
 \contentsline {paragraph}{Co-evolution patterns}{61}{section*.41}
 \contentsline {paragraph}{Co-evolution approaches}{62}{section*.42}
-\contentsline {paragraph}{Summary}{63}{section*.43}
-\contentsline {subsubsection}{Visualisation}{64}{section*.44}
-\contentsline {section}{\numberline {3.3}Research Challenges}{64}{section.3.3}
-\contentsline {paragraph}{Model Refactoring Challenges}{64}{section*.45}
+\contentsline {subsubsection}{Visualisation}{63}{section*.43}
+\contentsline {paragraph}{Summary}{64}{section*.44}
+\contentsline {section}{\numberline {3.3}Research Challenges}{65}{section.3.3}
+\contentsline {paragraph}{Model Refactoring Challenges}{65}{section*.45}
 \contentsline {paragraph}{Model Synchronisation Challenges}{65}{section*.46}
 \contentsline {paragraph}{Model-Metamodel Co-evolution Challenges}{65}{section*.47}
 \contentsline {paragraph}{General Challenges for Evolution in MDE}{66}{section*.48}
