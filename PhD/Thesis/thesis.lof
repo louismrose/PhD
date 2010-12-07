@@ -27,13 +27,14 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Visualising a transformation chain}}{64}{figure.3.6}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Analysis chapter overview.}}{69}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Refactoring a reference to a value}}{75}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Co-evolution activities}}{78}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces User-driven co-evolution with EMF}}{80}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Metamodel evolution in the Epsilon FPTC tool}}{86}{figure.4.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel, prior to evolution}}}{86}{figure.4.5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel with Connection metaclass}}}{86}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Spectrum of developer-driven co-evolution approaches}}{89}{figure.4.6}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Refactoring a reference to a value}}{76}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Co-evolution activities}}{79}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces User-driven co-evolution with EMF}}{81}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces COPE's Make Reference Containment operation.}}{85}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Metamodel evolution in the Epsilon FPTC tool}}{87}{figure.4.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel, prior to evolution}}}{87}{figure.4.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel with Connection metaclass}}}{87}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Spectrum of developer-driven co-evolution approaches}}{90}{figure.4.7}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Implementation chapter overview.}}{95}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces A generic metamodel.}}{97}{figure.5.2}

@@ -491,6 +491,12 @@ S.~Kelly and J.P. Tolvanen.
 \newblock {\em Domain-Specific Modelling}.
 \newblock Wiley and IEEE Computer Society, 2008.
 
+\bibitem[Kelly 1999]{kelly99thesis}{$~$}
+T.P. Kelly.
+\newblock {\em Arguing Safety -- A Systematic Approach to Safety Case
+  Management}.
+\newblock PhD thesis, University of York, United Kingdom, 1999.
+
 \bibitem[Kerievsky 2004]{kerievsky04refactoring}{$~$}
 J.~Kerievsky.
 \newblock {\em Refactoring to Patterns}.
@@ -882,6 +888,15 @@ I.~R{\'a}th, G.~Bergmann, A.~{\"O}kr{\"o}s, and D.~Varr{\'o}.
   International Conference on the Theory and Practice of Model Transformations
   (ICMT)}, volume 5063 of {\em Lecture Notes in Computer Science}, pages
   107--121. Springer, 2008.
+
+\bibitem[Rios {\it et al.}\  2006]{rios06mdd_maturity}{$~$}
+E.~Rios, T.~Bozheva, A.~Bediaga, and N.~Guilloreau.
+\newblock {MDD} maturity model: A roadmap for introducing {Model-Driven
+  Development}.
+\newblock In A.~Rensink and J.~Warmer, editors, {\em Proc. European Conference
+  on Model Driven Architecture – Foundations and Applications (ECMDA-FA)},
+  volume 4066 of {\em Lecture Notes in Computer Science}, pages 78--89.
+  Springer Berlin / Heidelberg, 2006.
 
 \bibitem[Rising 2001]{rising01designpatterns}{$~$}
 L.~Rising, editor.

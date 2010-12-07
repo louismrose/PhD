@@ -16,19 +16,19 @@ Database file #1: thesis.bib
 Warning--I'm ignoring amyot06evaluation's extra "year" field
 --line 753 of file thesis.bib
 Warning--I'm ignoring cervelle06tatoo's extra "year" field
---line 1175 of file thesis.bib
+--line 1188 of file thesis.bib
 Warning--I'm ignoring vries04facilitating's extra "year" field
---line 1316 of file thesis.bib
+--line 1329 of file thesis.bib
 Warning--I'm ignoring rose10comparison's extra "year" field
---line 1436 of file thesis.bib
-Repeated entry---line 1612 of file thesis.bib
+--line 1449 of file thesis.bib
+Repeated entry---line 1625 of file thesis.bib
  : @inproceedings{lammel01semiautomatic
  :                                     ,
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring occam_pi's extra "year" field
---line 1655 of file thesis.bib
+--line 1668 of file thesis.bib
 Warning--I'm ignoring grgen's extra "year" field
---line 1683 of file thesis.bib
+--line 1696 of file thesis.bib
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1187 of file longname.bst
 Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
@@ -115,45 +115,45 @@ Name 1 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the end for entry starfield90model
 while executing---line 1253 of file longname.bst
-You've used 172 entries,
+You've used 174 entries,
             2472 wiz_defined-function locations,
-            1421 strings with 32716 characters,
-and the built_in function-call counts, 73342 in all, are:
-= -- 7284
-> -- 3103
-< -- 99
-+ -- 987
-- -- 948
-* -- 5518
-:= -- 11491
-add.period$ -- 576
-call.type$ -- 172
-change.case$ -- 1070
-chr.to.int$ -- 157
-cite$ -- 172
-duplicate$ -- 3304
-empty$ -- 5785
-format.name$ -- 1186
-if$ -- 15604
+            1429 strings with 33060 characters,
+and the built_in function-call counts, 74212 in all, are:
+= -- 7372
+> -- 3143
+< -- 101
++ -- 999
+- -- 960
+* -- 5586
+:= -- 11631
+add.period$ -- 583
+call.type$ -- 174
+change.case$ -- 1082
+chr.to.int$ -- 159
+cite$ -- 174
+duplicate$ -- 3343
+empty$ -- 5847
+format.name$ -- 1200
+if$ -- 15787
 int.to.chr$ -- 16
 int.to.str$ -- 0
-missing$ -- 177
-newline$ -- 866
-num.names$ -- 605
-pop$ -- 1159
+missing$ -- 178
+newline$ -- 876
+num.names$ -- 613
+pop$ -- 1170
 preamble$ -- 1
-purify$ -- 1274
+purify$ -- 1289
 quote$ -- 0
-skip$ -- 2625
+skip$ -- 2657
 stack$ -- 0
-substring$ -- 3705
-swap$ -- 1002
-text.length$ -- 99
+substring$ -- 3743
+swap$ -- 1016
+text.length$ -- 101
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1248
+type$ -- 1264
 warning$ -- 0
-while$ -- 628
-width$ -- 176
-write$ -- 2305
+while$ -- 636
+width$ -- 178
+write$ -- 2333
 (There were 44 error messages)

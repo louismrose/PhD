@@ -2,7 +2,7 @@
 \contentsline {lstlisting}{\numberline {2.2}M2T transformation in EGL}{20}{lstlisting.2.2}
 \contentsline {lstlisting}{\numberline {2.3}T2M transformation in EMFtext}{20}{lstlisting.2.3}
 \contentsline {lstlisting}{\numberline {2.4}Model validation in EVL}{22}{lstlisting.2.4}
-\contentsline {lstlisting}{\numberline {4.1}Migration strategy for the refactoring in pseudo code.}{75}{lstlisting.4.1}
+\contentsline {lstlisting}{\numberline {4.1}Pseudo code migration strategy for the refactoring in Figure\nobreakspace {}\ref {fig:refactoring}.}{76}{lstlisting.4.1}
 \contentsline {lstlisting}{\numberline {5.1}Exemplar person model in XMI}{96}{lstlisting.5.1}
 \contentsline {lstlisting}{\numberline {5.2}Specifying attributes with HUTN.}{103}{lstlisting.5.2}
 \contentsline {lstlisting}{\numberline {5.3}Specifying a containment reference with HUTN.}{103}{lstlisting.5.3}
