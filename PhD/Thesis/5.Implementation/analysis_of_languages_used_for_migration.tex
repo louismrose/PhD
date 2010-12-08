@@ -2,11 +2,11 @@
 
 \section{Analysis of Languages used for Migration}
 \label{sec:analyis_of_languages_used_for_migration}
-In contrast to the previous two sections, this section focuses not on \emph{user-driven} but rather on \emph{developer-driven} co-evolution, in which migration is specified in a programming language. Section~\ref{subsec:co-evolution_categorisation} discussed existing approaches to model migration, highlighting variation in the languages used for specifying migration strategies. In this section, migration strategy languages are compared, using the example of metamodel evolution given in Section~\ref{subsec:co-evo_example}. From this comparison, requirements for a domain-specific language for specifying and executing model migration strategies are derived (Section~\ref{subsec:analysis}). The sequel describes an implementation of a model model migration language based on the analysis presented here. The work described in this section has been published in \cite{rose10flock}.
+In contrast to the previous two sections, this section focuses on \emph{developer-driven} co-evolution, in which migration is specified as a program that metamodel users execute to migrate their models. Section~\ref{subsec:co-evolution_categorisation} discussed existing approaches to model migration, highlighting variation in the languages used for specifying migration strategies. In this section, the results of comparing migration strategy languages are described, using a new example of metamodel evolution (Section~\ref{subsec:co-evo_example}). From the comparison, requirements for a domain-specific language for specifying and executing model migration strategies are derived (Section~\ref{subsec:analysis}). The sequel describes an implementation of a model migration language based on the analysis presented here. The work described in this section has been published in \cite{rose10flock}.
 
 \subsection{Co-Evolution Example}
 \label{subsec:co-evo_example}
-Throughout this section, the following exemplar evolution of a Petri net metamodel is used to compare model migration languages. The same example has been used previously in co-evolution literature \cite{cicchetti08automating,garces09managing,wachsmuth07metamodel}.
+This section uses the Petri net metamodel evolution to compare model migration languages. The example is also used in co-evolution literature \cite{cicchetti08automating,garces09managing,wachsmuth07metamodel}.
 
 \begin{figure}[bp]
 	\centering
@@ -24,11 +24,9 @@ Throughout this section, the following exemplar evolution of a Petri net metamod
 \label{fig:petri_nets_mms}
 \end{figure}
 
-In Figure~\ref{fig:original_mm}, a Petri \texttt{Net} comprises \texttt{Place}s and \texttt{Transition}s. A \texttt{Place} has any number of \texttt{src} or \texttt{dst} \texttt{Transition}s. Similarly, a \texttt{Transition} has at least one \texttt{src} and \texttt{dst} \texttt{Place}. In this example, the metamodel in Figure~\ref{fig:original_mm} is to be evolved so as to support weighted connections between \texttt{Place}s and \texttt{Transition}s and between \texttt{Transition}s and \texttt{Place}s.
+In Figure~\ref{fig:original_mm}, a Petri \texttt{Net} is defined to comprise \texttt{Place}s and \texttt{Transition}s. A \texttt{Place} has any number of \texttt{src} or \texttt{dst} \texttt{Transition}s. Similarly, a \texttt{Transition} has at least one \texttt{src} and \texttt{dst} \texttt{Place}. The metamodel is to be evolved to support weighted connections between \texttt{Place}s and \texttt{Transition}s and between \texttt{Transition}s and \texttt{Place}s, as shown in Figure~\ref{fig:evolved_mm}. \texttt{Place}s are connected to \texttt{Transition}s via instances of \texttt{PTArc}. Likewise, \texttt{Transition}s are connected to \texttt{Place}s via \texttt{TPArc}. Both \texttt{PTArc} and \texttt{TPArc} inherit from \texttt{Arc}, and therefore can be used to specify a \texttt{weight}.
 
-The evolved metamodel is shown in Figure~\ref{fig:evolved_mm}. \texttt{Place}s are connected to \texttt{Transition}s via instances of \texttt{PTArc}. Likewise, \texttt{Transition}s are connected to \texttt{Place}s via \texttt{TPArc}. Both \texttt{PTArc} and \texttt{TPArc} inherit from \texttt{Arc}, and therefore can be used to specify a \texttt{weight}.
-
-Models that conformed to the original metamodel might not conform to the evolved metamodel. The following strategy can be used to migrate models from the original to the evolved metamodel:
+Models that conform to the original metamodel might not conform to the evolved metamodel. The following strategy can be used to migrate models from the original to the evolved metamodel:
 
 \begin{enumerate}
 	\item For every instance, t, of \texttt{Transition}: 
@@ -47,20 +45,19 @@ Models that conformed to the original metamodel might not conform to the evolved
 	\item And nothing else changes.
 \end{enumerate}
 
-\subsection{Existing Approaches}
+\subsection{Existing Model Migration Languages}
 \label{subsec:existing_migration_languages}
 Using the above example, the existing approaches for specifying and executing model migration strategies are now compared. From this comparison, the strengths and weakness of each approach are highlighted and requirements for a model migration language are synthesised in the sequel.
 
-\subsubsection{Manual Specification with Model-to-Model Transformation}
+\subsubsection{Manual Specification with M2M Transformation}
 \label{subsubsec:m2m}
-
-A model-to-model transformation specified between original and evolved metamodel can be used for performing model migration. Part of the model migration for the Petri nets metamodel is codified with the Atlas Transformation Language (ATL) \cite{jouault05transforming} in Listing~\ref{lst:atl}. Rules for migrating \texttt{Places} and \texttt{TPArcs} have been omitted for brevity, but are similar to the \texttt{Nets} and \texttt{PTArcs} rules.
+Model migration can be specified using M2M transformation. For example, the Petri net migration has been specified in the Atlas Transformation Language (ATL) \cite{jouault05transforming}. This is reproduced in Listing~\ref{lst:atl}. Rules for migrating \texttt{Places} and \texttt{TPArcs} have been omitted for brevity, but are similar to the \texttt{Nets} and \texttt{PTArcs} rules.
 
 Model transformation in ATL is specified using \texttt{rule}s, which transform source model elements (specified using the \texttt{fr\-om} keyword) to target model elements (specified using \texttt{to} keyword). For example, the \texttt{Nets} rule on line 1 of Listing~\ref{lst:atl} transforms an instance of \texttt{Net} from the original (source) model to an instance of \texttt{Net} in the evolved (target) model. The source model element (the variable \texttt{o} in the \texttt{Net} rule) is used to populate the target model element (the variable \texttt{m}). ATL allows rules to be specified as \emph{lazy} (not scheduled automatically and applied only when called by other rules).
 
 The \texttt{Transitions} rule in Listing~\ref{lst:atl} codifies in ATL the migration strategy described previously. The rule is executed for each \texttt{Transition} in the original model, \texttt{o}, and constructs a \texttt{PTArc} (\texttt{TPArc}) for each reference to a \texttt{Place} in \texttt{o.src} (\texttt{o.dst}). Lazy rules must be used to produce the arcs to prevent circular dependencies with the \texttt{Transitions} and \texttt{Places} rules. Here, ATL, a typical rule-based transformation language, is considered and model migration would be similar in QVT. With Kermeta, migration would be specified in an imperative style using statements for copying \texttt{Net}s, \texttt{Place}s and \texttt{Transition}s, and for creating \texttt{PTArc}s and \texttt{TPArc}s.
 
-\begin{lstlisting}[caption=Fragment of the Petri nets model migration in ATL, label=lst:atl, language=ATL]
+\begin{lstlisting}[caption={[Fragment of the Petri nets model migration in ATL]Fragment of the Petri nets model migration in ATL, taken from \cite{rose10flock}}, label=lst:atl, language=ATL]
 rule Nets {
 	from o : Before!Net
 	to m : After!Net ( places <- o.places, transitions <- o.transitions )
@@ -83,27 +80,26 @@ unique lazy rule PTArcs {
 }
 \end{lstlisting}
 
-In model transformation, \cite{czarnecki06survey} identifies two common categories of relationship between source and target model, \emph{new-target} and \emph{existing-target}. In the former, the target model is constructed afresh by the execution of the transformation, while in the latter, the target model contains the same data as the source model before the transformation is executed. ATL supports both new- and existing-target relationships (the latter is termed a refinement transformation). However, ATL refinement transformations may only be used when the source and target metamodel are the same, as is typical for existing-target transformations. 
+In model transformation, \cite{czarnecki06survey} identifies two common categories of relationship between source and target model, \emph{new-target} and \emph{existing-target}. In the former, the target model is constructed afresh by the execution of the transformation, while in the latter, the target model contains the same data as the source model before the transformation is executed. M2M transformation languages typically support new-target transformations. Some M2M transformation languages also support existing-target transformations, but typically require the source and target metamodel to be identical.
 
 In model migration, source and target metamodels differ, and hence existing-target transformations cannot be used to specify model migration strategies. Consequently, model migration strategies are specified with new-target model-to-model transformation languages, and often contain sections for copying from original to migrated model those model elements that have not been affected by metamodel evolution. For the Petri nets example, the \texttt{Nets} rule (in Listing~\ref{lst:atl}) and the \texttt{Places} rule (not shown) exist only for this reason.
 
 
-\subsubsection{Manual Specification with Ecore2Ecore Mapping}
+\subsubsection{Manual Specification with a Metamodel Mapping}
 \label{subsubsec:ecore2ecore}
-\cite{hussey06advanced} explain the way in which integration with the model loading mechanisms of the Eclipse Modeling Framework (EMF) \cite{steinberg09emf} can be used to perform model migration. In this approach, the default metamodel loading strategy is augmented with model migration code.
+Model migration can be undertaken using the model loading mechanisms of EMF \cite{hussey06advanced}, with a tool that is termed \emph{Ecore2Ecore} here. The default model loading mechanism provided by EMF binds models to their metamodel (Section~\ref{subsec:modelling_framework_characteristics}), and hence cannot be used to load models that have been affected by metamodel evolution. Therefore, Ecore2Ecore requires the metamodel developer to provide a mapping between the metamodelling language of EMF (Ecore) and the concrete syntax used to persist models (XMI). Mappings are specified using Hussey and Paternostro's tool, which can suggest relationships between source and target metamodel elements by comparing names and types. For the Petri nets example, Figure~\ref{fig:petri_nets_ecore2ecore} shows mappings between the original and evolved metamodels.
 
-Because EMF binds models to their metamodel (discussed in Section~\ref{subsec:modelling_framework_characteristics}), EMF cannot use an evolved metamodel to load an instance of the original metamodel. Therefore, Hussey and Paternostro's approach requires the metamodel developer to provide a mapping between the metamodelling language of EMF, Ecore, and the concrete syntax used to persist models, XMI. Mappings are specified using a tool that can suggest relationships between source and target metamodel elements by comparing names and types. For the Petri nets example, the mappings shown in Figure~\ref{fig:petri_nets_ecore2ecore} were defined between the original and evolved metamodels.
-
-\begin{figure}[htbp]
+\begin{figure}[htb]
 	\centering
 		\includegraphics[scale=0.75]{5.Implementation/images/petri_nets_ecore2ecore.png}
-	\caption{Mappings between the original and evolved Petri nets metamodels}
+	\caption[Mappings between the original and evolved Petri nets metamodels]{Mappings between the original and evolved Petri nets metamodels, constructed with the tool described in \cite{hussey06advanced}}
 	\label{fig:petri_nets_ecore2ecore}
 \end{figure}
 
-The mappings are used by the EMF XMI parser to determine the metamodel types to which pieces of the XMI will be bound. When a type or feature is not bound, the user must specify a custom migration strategy in Java. For the Petri nets metamodel, the \texttt{src} and \texttt{dst} features of \texttt{Place} and \texttt{Transition} are not bound, because migration is more complicated than a one-to-one mapping. Instead, the migration of the \texttt{src} and \texttt{dst} features is specified with Java.
 
-Model migration is specified on the XMI representation of the model and hence presumes some knowledge of the XMI standard. For example, in XMI, references to other model elements are serialised as a space delimited collection of URI fragments \cite{steinberg09emf}. Listing~\ref{lst:java} shows a section of the Ecore2Ecore model migration for the Petri net example presented above. The method shown converts a \texttt{String} containing URI fragments to a \texttt{Collection} of \texttt{Place}s. The method is used to access the \texttt{src} and \texttt{dst} features of \texttt{Transition}, which no longer exist in the evolved metamodel and hence are not loaded automatically by EMF. To specify the migration strategy for the Petri nets example, the metamodel developer must know the way in which the \texttt{src} and \texttt{dst} features are represented in XMI. The complete listing, not shown here, exceeds 200 lines of code.
+The mappings are used by the EMF XMI parser to determine the metamodel types to which pieces of the XMI will be bound. When a type or feature is not bound, the user must specify a custom migration strategy in Java. For the Petri nets metamodel, the \texttt{src} and \texttt{dst} features of \texttt{Place} and \texttt{Transition} are not bound, because migration is more complicated than a one-to-one mapping.
+
+In Ecore2Ecore, model migration is specified on the XMI representation of the model and requires some knowledge of the XMI standard. For example, in XMI, references to other model elements are serialised as a space delimited collection of URI fragments \cite{steinberg09emf}. Listing~\ref{lst:java} shows a fragment of the code used to migrate Petri net models with Ecore2Ecore. The method shown converts a \texttt{String} containing URI fragments to a \texttt{Collection} of \texttt{Place}s. The method is used to access the \texttt{src} and \texttt{dst} features of \texttt{Transition}, which no longer exist in the evolved metamodel and hence are not loaded automatically by EMF. To specify the migration strategy for the Petri nets example, the metamodel developer must know the way in which the \texttt{src} and \texttt{dst} features are represented in XMI. The complete listing, not shown here, exceeds 200 lines of code.
 
 \begin{lstlisting}[basicstyle=\ttfamily\footnotesize, flexiblecolumns=true, numbers=left, nolol=true, caption=Java method for deserialising a reference., label=lst:java, language=Java, tabsize=2]
 private Collection<Place> toCollectionOfPlaces
@@ -133,50 +129,51 @@ Operator-based approaches to managing co-evolution, such as COPE \cite{herrmanns
 
 To perform metamodel evolution using an operator-based approach, the library of co-evolutionary operators must be integrated with tools for editing metamodels. COPE provides integration with the EMF tree-based metamodel editor. Operators may be applied to an EMF metamodel, and COPE tracks their application. Once metamodel evolution is complete, a migration strategy can be generated automatically from the record of changes maintained by COPEs. The migration strategy is distributed along with the updated metamodel, and metamodel users choose when to execute the migration strategy on their models.
 
-To be effective, operator-based approaches must provide a rich yet navigable library of co-evolutionary operators, as discussed in Section~\ref{subsec:co-evolution_categorisation}. To this end, COPE allows model migration strategies to be specified manually when no co-evolutionary operator is appropriate. Rather than use either of the two manual specification approaches discussed above (model-to-model transformation and Ecore2Ecore mapping), COPE employs a fundamentally different approach using an existing-target transformation.
+To be effective, operator-based approaches must provide a rich yet navigable library of co-evolutionary operators (Section~\ref{subsec:co-evolution_categorisation}). COPE allows model migration strategies to be specified manually when no co-evolutionary operator is appropriate. COPE employs a fundamentally different approach to M2M transformation and Ecore2Ecore, using an existing-target transformation. As discussed above, existing-target transformations cannot be used for specifying model migration strategies as the source (original) and target (evolved) metamodels differ. However, models can be structured independently of their metamodel using a metamodel-independent syntax (such as the one introduced in Section~\ref{sec:mmi_syntax}).
 
-As discussed above, existing-target transformations cannot be used for specifying model migration strategies as the source (original) and target (evolved) metamodels differ. However, models can be structured independently of their metamodel using a metamodel-independent syntax, such as the one introduced in Section~\ref{sec:mmi_syntax}. Figure~\ref{fig:cope_mmi} shows a simplification of the metamodel-independent syntax used by COPE. By using a metamodel-independent syntax as an intermediary, an existing-target transformation can be used for performing model migration. Further details of this technique are given in \cite{herrmannsdoerfer09cope}.
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[scale=0.75]{5.Implementation/cope_mm.pdf}
-  \caption[The metamodel-independent representation used by COPE]{Simplification of the metamodel-independent representation used by COPE, based on \cite{herrmannsdoerfer09cope}.}
-  \label{fig:cope_mmi}
-\end{figure}
-
-Listing~\ref{lst:cope} shows the COPE model migration strategy for the Petri net example given above\footnote{In Listing~\ref{lst:cope}, some of the concrete syntax has been changed in the interest of readability.}. Most notably, slots for features that no longer exist must be explicitly \texttt{unset}. In Listing~\ref{lst:cope}, slots are \texttt{unset} on four occasions (on lines 2, 8 and 16), once for each feature that exists in the original metamodel but not the evolved metamodel. Namely, these features are: \texttt{src} and \texttt{dst} of \texttt{Transition} and of \texttt{Place}. Failing to \texttt{unset} slots that do not conform with the evolved metamodel causes migration to fail with an error.
+Listing~\ref{lst:cope} shows the COPE model migration strategy for the Petri net example given above\footnote{In Listing~\ref{lst:cope}, some of the concrete syntax has been changed in the interest of readability.}. Most notably, slots for features that no longer exist must be explicitly \texttt{unset}. In Listing~\ref{lst:cope}, slots are \texttt{unset} on four occasions (on lines 2, 9, 18 and 19), once for each feature that is in the original metamodel but not in the evolved metamodel. These features are: \texttt{src} and \texttt{dst} of \texttt{Transition} and of \texttt{Place}. Failing to \texttt{unset} slots that do not conform with the evolved metamodel causes migration to fail with an error.
 
 \begin{lstlisting}[caption=Petri nets model migration in COPE, label=lst:cope, language=COPE]
-for (transition in Transition.allInstances) {
-  for (source in transition.unset(`src')) {
+for (transition in petrinets.Transition.allInstances) {
+  for (source in transition.unset('src')) {
     def arc = petrinets.PTArc.newInstance()
-    arc.src = source;  arc.dst = transition;
+    arc.src = source
+    arc.dst = transition
     arc.net = transition.net
   }
-
-  for (destination in transition.unset(`dst')) {
+  
+  for (destination in transition.unset('dst')) {
     def arc = petrinets.TPArc.newInstance() 
-    arc.src = transition; arc.dst = destination;
+    arc.src = transition
+    arc.dst = destination
     arc.net = transition.net
   }
 }
 
-for (place in Place.allInstances) {
-  place.unset(`src');  place.unset(`dst');
+for (place in petrinets.Place.allInstances) {
+  place.unset('src')
+  place.unset('dst')
 }
 \end{lstlisting}
 
-
 \subsection{Requirements Identification}
 \label{subsec:analysis}
-By analysing the languages used for model migration in existing approaches to managing developer-driven co-evolution, requirements were derived for a domain-specific language for specifying and executing model migration. The derivation of the requirements is now summarised, by considering two orthogonal concerns: the source-target relationship of the language used for specifying migration strategies and the way in which models are represented during migration. %and the structures provided by the language for specifying and re-using migration strategies.
+Requirements for a domain-specific for model migration were identified from the review of existing languages (Section~\ref{subsec:existing_migration_languages}). The derivation of the requirements is now summarised, by considering two orthogonal concerns: the source-target relationship of the language used for specifying migration strategies and the way in which models are represented during migration. %and the structures provided by the language for specifying and re-using migration strategies.
 
 
-\subsubsection{Source-Target Relationship}
-When migration is specified as a new-target transformation, as was the case for the ATL transformation shown in Listing~\ref{lst:atl}, model elements that have not been affected by metamodel evolution must be explicitly copied from the original to the migrated model. When migration is specified as an existing-target transformation, as was the case for the COPE transformation shown in Listing~\ref{lst:cope}, model elements and values that no longer conform to the target metamodel must be explicitly removed from the migrated model. By contrast, the Ecore2Ecore approach does not require explicit copying or unsetting code. Instead, the relationship between original and evolved metamodel elements is captured in a mapping model specified by the metamodel developer. The mapping model can be derived automatically and customised by the metamodel developer. To explore the appropriateness for model migration of an alternative to new- and existing-target transformations, the following requirement was derived: \emph{The migration language must \textbf{automatically} copy every model element that conforms to the evolved metamodel from original to migrated model, and must not automatically copy any model element that does not conform to the evolved metamodel from original to migrated model.}
+\subsubsection{Source-Target Relationship Requirements}
+When migration is specified as a new-target transformation, as in ATL (Listing~\ref{lst:atl}), model elements that have not been affected by metamodel evolution must be explicitly copied from the original to the migrated model. When migration is specified as an existing-target transformation, as in COPE (Listing~\ref{lst:cope}), model elements and values that no longer conform to the target metamodel must be explicitly removed from the migrated model. Ecore2Ecore does not require explicit copying or unsetting code; instead, the relationship between original and evolved metamodel elements is captured in a mapping model specified by the metamodel developer. The mapping model can be derived automatically and customised by the metamodel developer. To explore the appropriateness for model migration of an alternative to new- and existing-target transformations, the following requirement was derived:
+
+\emph{The migration language must \textbf{automatically} copy every model element that conforms to the evolved metamodel from original to migrated model, and must automatically not copy any model element that does not conform to the evolved metamodel from original to migrated model.}
 
 
-\subsubsection{Model Representation}
-When using the Ecore2Ecore approach, model elements that do not conform to the evolved metamodel are accessed by maniuplating XMI. Consequently, the metamodel developer must be familiar with XMI and must perform tasks such as dereferencing URI fragments (Listing~\ref{lst:java}) and type conversion. Transformation languages abstract away from the underlying storage representation of models (such as XMI) by using a modelling framework to load, store and access models. Consequently, migration strategies written in a transformation language need not manage details specific to XMI, such as dereferencing URI fragments. Furthermore, decoupling a transformation language from the model representation facilitates interoperability with more than one modelling technology, as demonstrated by the languages of the Epsilon platform \cite{kolovos09thesis}. Consequently, the following requirement was identified: \emph{The migration language must not expose the underlying representation of original or migrated models.}
+\subsubsection{Model Representation Requirements}
+With Ecore2Ecore, migration is achieved by manipulating XMI. Consequently, the metamodel developer must be familiar with XMI and must perform tasks such as dereferencing URI fragments (Listing~\ref{lst:java}) and type conversion. Transformation languages abstract away from the underlying storage representation of models (such as XMI) by using a modelling framework to load, store and access models. Decoupling a transformation language from the model representation facilitates interoperability with more than one modelling technology, as demonstrated by the languages of the Epsilon platform \cite{kolovos09thesis}. Consequently, the following requirement was identified:
 
-To apply co-evolution operators, COPE requires the metamodel developer to use a specialised metamodel editor, which can manipulate only metamodels defined with EMF. Similarly, the mapping tool used in the Ecore2Ecore approach can be used only with metamodels defined with EMF. Although EMF is arguably the most widely-used modelling framework, other frameworks are used today. Adapting to interoperate with new systems is recognised as a common reason for software evolution \cite{sjoberg93quantifying}, and as such migration between modelling frameworks should be regarded as a possible use case for a model migration language. To better support integration with modelling frameworks other than EMF, the following requirement was derived: \emph{The migration language must be loosely coupled with modelling frameworks and must not assume that models and metamodels will be represented in EMF.}
+\emph{The migration language must not expose the underlying representation of original or migrated models.}
+
+\vspace{5mm}
+
+To apply co-evolution operators, COPE requires the metamodel developer to use a specialised metamodel editor. The editor can manipulate only metamodels defined with EMF. Similarly, the mapping tool used in the Ecore2Ecore approach can be used only with metamodels defined with EMF. Although EMF is arguably very widely-used, other modelling frameworks exist. Adapting to interoperate with new systems is recognised as a common reason for software evolution \cite{sjoberg93quantifying}, and migration between modelling frameworks is as a possible use case for a model migration language. To better support integration with modelling frameworks other than EMF, the following requirement was derived:
+
+\emph{The migration language must be loosely coupled with modelling frameworks and must not assume that models and metamodels will be represented in EMF.}

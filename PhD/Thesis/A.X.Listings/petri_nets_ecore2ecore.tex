@@ -1,0 +1,189 @@
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, flexiblecolumns=true, numbers=left, nolol=true, caption=Resource handler for migrating Petri net models., label=lst:petri_nets_resource_handler, language=Java, tabsize=2]
+package lit_petriNets.resources;
+
+import java.io.InputStream;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import lit_petriNets.Lit_petriNetsFactory;
+import lit_petriNets.Lit_petriNetsPackage;
+import lit_petriNets.PTArc;
+import lit_petriNets.Place;
+import lit_petriNets.TPArc;
+import lit_petriNets.Transition;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.util.FeatureMap;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.BasicResourceHandler;
+import org.eclipse.emf.ecore.xml.type.AnyType;
+
+public class PetriNetsResourceHandler extends BasicResourceHandler {
+
+	@Override
+	public void postLoad(XMLResource resource, InputStream inputStream, Map<?, ?> options) {
+		final Map<EObject, AnyType> extMap = resource.getEObjectToExtensionMap();
+		
+		for(Entry<EObject, AnyType> entry : extMap.entrySet()) {
+			handleUnknownData(entry.getKey(), entry.getValue());
+		}
+	}
+
+	private void handleUnknownData(EObject eObj, AnyType unknownData) {
+		handleUnknownFeatures(eObj, unknownData.getMixed());
+		handleUnknownFeatures(eObj, unknownData.getAnyAttribute());
+	}
+
+	private void handleUnknownFeatures(EObject owner, FeatureMap featureMap) {
+		for (Iterator<FeatureMap.Entry> iter = featureMap.iterator(); iter.hasNext();) {
+			final FeatureMap.Entry entry = iter.next();
+			
+			if (isTransition(owner)) {
+				if (isCollectionOfPlaces(entry.getValue(), owner.eResource())) {
+					final Transition transition    = (Transition)owner;
+					final Collection<Place> places = toCollectionOfPlaces(entry.getValue(), owner.eResource());
+					
+					if (isSrc(entry.getEStructuralFeature())) {
+						migrateSrc(transition, places);
+						
+					} else if (isDst(entry.getEStructuralFeature())) {
+						migrateDest(transition, places);
+					}
+					
+					iter.remove();
+				
+				} else {
+					System.err.println("Not a collection of places: " + entry.getValue());
+				}
+			} else {
+				System.err.println("Not a transition: " + owner);
+			}
+		}
+	}
+
+	private boolean isTransition(EObject eObject) {
+		return Lit_petriNetsPackage.eINSTANCE.getTransition().isInstance(eObject);
+	}
+	
+	private boolean isSrc(EStructuralFeature feature) {
+		return "src".equals(feature.getName());
+	}
+	
+	private boolean isDst(EStructuralFeature feature) {
+		return "dst".equals(feature.getName());
+	}
+	
+	private boolean isCollectionOfPlaces(Object value, Resource resource) {
+		final String[] uriFragments = ((String)value).split(" ");
+		
+		for (String uriFragment : uriFragments) {
+			final EObject eObject = resource.getEObject(uriFragment);
+			
+			if (eObject == null || !Lit_petriNetsPackage.eINSTANCE.getPlace().isInstance(eObject))
+				return false;
+		}
+		
+		return true;
+	}
+	
+	private Collection<Place> toCollectionOfPlaces(Object value, Resource resource) {
+		final String[] uriFragments = ((String)value).split(" ");
+		
+		final Collection<Place> places = new LinkedList<Place>();
+		
+		for (String uriFragment : uriFragments) {
+			places.add((Place)resource.getEObject(uriFragment));
+		}
+		
+		return places;
+	}
+	
+	private void migrateSrc(Transition owner, Collection<Place> sources) {
+		for (Place source : sources) {
+			final PTArc arc = Lit_petriNetsFactory.eINSTANCE.createPTArc();
+			arc.setSrc(source);
+			arc.setDst(owner);
+			arc.setNet(owner.getNet());
+		}
+	}
+	
+	private void migrateDest(Transition owner, Collection<Place> destinations) {
+		for (Place destination : destinations) {
+			final TPArc arc = Lit_petriNetsFactory.eINSTANCE.createTPArc();
+			arc.setSrc(owner);
+			arc.setDst(destination);
+			arc.setNet(owner.getNet());
+		}
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, flexiblecolumns=true, numbers=left, nolol=true, caption=Resource factory for migrating Petri net models., label=lst:petri_nets_resource_factory, language=Java, tabsize=2]
+package lit_petriNets.resources;
+
+import java.util.Map;
+
+import lit_petriNets.Lit_petriNetsPackage;
+
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.ExtendedMetaData;
+import org.eclipse.emf.ecore.xmi.XMIResource;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.mapping.ecore2xml.Ecore2XMLPackage;
+import org.eclipse.emf.mapping.ecore2xml.Ecore2XMLRegistry;
+import org.eclipse.emf.mapping.ecore2xml.impl.Ecore2XMLRegistryImpl;
+import org.eclipse.emf.mapping.ecore2xml.util.Ecore2XMLExtendedMetaData;
+
+public class PetriNetsFactoryImpl extends XMIResourceFactoryImpl {
+
+	public static final String BEFORE_NS_URI       = "lit_petriNets";
+	public static final String AFTER_PLATFORM_URI  = "platform:/plugin/petrinets/model/After.ecore";
+	public static final String BEFORE_PLATFORM_URI = "platform:/plugin/petrinets/model/Before_2_After.ecore2xml";
+
+	private ExtendedMetaData extendedMetaData;
+	
+	
+	public Resource createResource(URI uri) {
+		final XMIResource resource = (XMIResource) super.createResource(uri);
+
+		final Map<Object, Object> defaultLoadOptions = resource.getDefaultLoadOptions();
+		defaultLoadOptions.put(XMLResource.OPTION_EXTENDED_META_DATA,     getExtendedMetaData());
+		defaultLoadOptions.put(XMLResource.OPTION_RECORD_UNKNOWN_FEATURE, Boolean.TRUE);
+		defaultLoadOptions.put(XMLResource.OPTION_RESOURCE_HANDLER,       new PetriNetsResourceHandler());
+		
+		return resource;
+	}
+	
+	private ExtendedMetaData getExtendedMetaData() {
+		if(extendedMetaData == null) {
+			final ResourceSet resourceSet = new ResourceSetImpl();
+			final EPackage.Registry ePackageRegistry = resourceSet.getPackageRegistry();
+			
+			ePackageRegistry.put(BEFORE_NS_URI,      Lit_petriNetsPackage.eINSTANCE);
+			ePackageRegistry.put(AFTER_PLATFORM_URI, Lit_petriNetsPackage.eINSTANCE);
+			
+			Ecore2XMLRegistry ecore2xmlRegistry = new Ecore2XMLRegistryImpl(Ecore2XMLRegistry.INSTANCE);
+			ecore2xmlRegistry.put(BEFORE_NS_URI,
+					EcoreUtil.getObjectByType(
+							resourceSet.getResource(URI.createURI(BEFORE_PLATFORM_URI), 
+									true).getContents(),
+									Ecore2XMLPackage.Literals.XML_MAP));
+			
+			extendedMetaData = new Ecore2XMLExtendedMetaData(ePackageRegistry, ecore2xmlRegistry);			
+		}
+		return extendedMetaData;
+	}
+}
+
+\end{lstlisting}
