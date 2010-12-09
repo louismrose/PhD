@@ -6,26 +6,6 @@ A level-1 auxiliary file: 2.Background/background.aux
 A level-1 auxiliary file: 3.LiteratureReview/literature_review.aux
 A level-1 auxiliary file: 4.Analysis/analysis.aux
 A level-1 auxiliary file: 5.Implementation/implementation.aux
-Case mismatch error between cite keys MOF and mof
----line 20 of file 5.Implementation/implementation.aux
- : \citation{MOF
- :              }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MOF and mof
----line 22 of file 5.Implementation/implementation.aux
- : \citation{MOF
- :              }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MOF and mof
----line 24 of file 5.Implementation/implementation.aux
- : \citation{MOF
- :              }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys MOF and mof
----line 26 of file 5.Implementation/implementation.aux
- : \citation{MOF
- :              }
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: 6.Evaluation/evaluation.aux
 A level-1 auxiliary file: 7.Conclusion/conclusion.aux
 A level-1 auxiliary file: A.2.ProcessOriented/process_oriented.aux
@@ -176,4 +156,4 @@ warning$ -- 0
 while$ -- 638
 width$ -- 179
 write$ -- 2345
-(There were 48 error messages)
+(There were 44 error messages)

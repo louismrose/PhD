@@ -16,8 +16,6 @@ Figure~\ref{fig:analysis_overview} summarises the objectives of this chapter. in
   \label{fig:analysis_overview}
 \end{figure}
 
-Earlier in this thesis, the term \emph{modelling framework} has meant an implementation of a set of abstractions for defining, checking and otherwise managing models. The remainder of this thesis focuses on modelling frameworks used for MDE, and, more specifically, contemporary MDE modelling frameworks such as EMF \cite{steinberg09emf}. Throughout the remainder of this thesis, the term \emph{modelling framework} is used to mean contemporary MDE modelling frameworks, unless otherwise stated.
-
 
 \section{Locating Data}
 \label{sec:locating_data}
@@ -185,7 +183,7 @@ The examples of co-evolution identified in the Section~\ref{sec:locating_data} w
 
 \subsection{Modelling Framework Characteristics}
 \label{subsec:modelling_framework_characteristics}
-The co-evolution examples identified in Section~\ref{sec:locating_data} were examined to understand the ways in which co-evolution is managed in practice. The examination of co-evolution examples highlighted characteristics of modern MDE modelling development environments that affect the way in which co-evolution can be managed. The characteristics are now described.
+The co-evolution examples identified in Section~\ref{sec:locating_data} were examined to understand the ways in which co-evolution is managed in practice. The examination of co-evolution examples highlighted characteristics of MDE development environments that affect the way in which co-evolution can be managed. The characteristics are now described.
 
 \subsubsection{Model-Metamodel Separation}
 In MDE development environments, \emph{models and metamodels are separated}. Metamodels are developed and distributed to users. Metamodels are installed, configured and combined to form a customised MDE development environment. Metamodel developers have no programmatic access to instance models, which reside in a different workspace and potentially on a different machine. Consequently, metamodel evolution occurs independently to model migration. Figure~\ref{fig:co-evo_activities} shows the activities typically involved in co-evolution. First, the metamodel developer evolves the metamodel and may create a migration strategy. Subsequently, the metamodel users discover conformance problems after installing the new version of the metamodel, and migrate their models.
@@ -201,7 +199,7 @@ Because of model and metamodel separation, co-evolution is either \emph{develope
 
 
 \subsubsection{Implicit Conformance}
-Modern MDE development environments \emph{implicitly enforce conformance}. A model is \emph{bound} to its metamodel, typically by constructing a representation in the underlying programming language for each model element and data value. Frequently, binding is strongly-typed: each metamodel type is mapped to a corresponding type in the underlying programming language using mappings defined by the metamodel. Consequently, modelling frameworks do not permit changes to a model that would cause it to no longer conform to its metamodel. Loading a model that does not conform to its metamodel causes an error. In short, MDE modelling frameworks cannot be used to manage models that do not conform to their metamodel.
+MDE development environments \emph{implicitly enforce conformance}. A model is \emph{bound} to its metamodel, typically by constructing a representation in the underlying programming language for each model element and data value. Frequently, binding is strongly-typed: each metamodel type is mapped to a corresponding type in the underlying programming language using mappings defined by the metamodel. Consequently, modelling frameworks do not permit changes to a model that would cause it to no longer conform to its metamodel. Loading a model that does not conform to its metamodel causes an error. In short, MDE modelling frameworks cannot be used to manage models that do not conform to their metamodel.
 
 Because modelling frameworks can only load models that conform to their metamodel, user-driven co-evolution is always a manual process, in which models are migrated without using the modelling framework. Typically then, the metamodel user can only perform migration by editing the model directly, normally manipulating its underlying representation (e.g. XMI). Model editors and model management operations, which are ordinarily integral to MDE, cannot be used to manage models that do not conform to their metamodel and hence, cannot be used during model migration.
 
@@ -362,7 +360,7 @@ The choice between these two possibilities can only made by the metamodel develo
 \subsection{Summary}
 Analysis of existing co-evolution techniques has led to a deeper understanding of modelling frameworks characteristics that are relevant for co-evolution, to the identification of user-driven co-evolution and to a categorisation of developer-driven co-evolution techniques.
 
-Modern MDE modelling frameworks separate models and metamodels and, hence, co-evolution is a two-step process. To facilitate model migration, metamodel developers may codify an executable migration strategy and distribute it along with the evolved metamodel (developer-driven co-evolution). When no executable migration strategy is provided, models must be migrated by hand (user-driven co-evolution). Because modelling frameworks implicitly enforce conformance, user-driven co-evolution is performed by editing the underlying storage representation of models, which is error-prone and tedious.
+Modelling frameworks separate models and metamodels and, hence, co-evolution is a two-step process. To facilitate model migration, metamodel developers may codify an executable migration strategy and distribute it along with the evolved metamodel (developer-driven co-evolution). When no executable migration strategy is provided, models must be migrated by hand (user-driven co-evolution). Because modelling frameworks implicitly enforce conformance, user-driven co-evolution is performed by editing the underlying storage representation of models, which is error-prone and tedious.
 
 User-driven co-evolution, which has not been explored in the literature, was observed in several of the co-evolution examples discussed in Section~\ref{sec:locating_data}. In situations where the metamodel developer has not specified or cannot specify an executable migration strategy, user-driven co-evolution is required.
 

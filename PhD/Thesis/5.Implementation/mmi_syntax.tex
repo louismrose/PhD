@@ -37,7 +37,7 @@ For situations when a model does not conform to its metamodel, this thesis propo
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=3.3in]{5.Implementation/slot_model.pdf}
-  \caption[A generic metamodel for MOF]{A generic metamodel for MOF, based on \cite{MOF} and taken from \cite{rose09enhanced}.}
+  \caption[A generic metamodel for MOF]{A generic metamodel for MOF, based on \cite{mof} and taken from \cite{rose09enhanced}.}
   \label{fig:slot_model}
 \end{figure}
 
@@ -46,7 +46,7 @@ Using the metamodel in Figure~\ref{fig:slot_model} in conjunction with MOF, conf
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=3.3in]{5.Implementation/mof.pdf}
-  \caption[Minimal MOF metamodel]{Minimal MOF metamodel, based on \cite{MOF} and taken from \cite{rose09enhanced}.}
+  \caption[Minimal MOF metamodel]{Minimal MOF metamodel, based on \cite{mof} and taken from \cite{rose09enhanced}.}
   \label{fig:minimal_mof}
 \end{figure}
 
@@ -89,10 +89,7 @@ In addition to these uses, the metamodel-independent syntax is potentially usefu
 
 % TODO - Consider discussing the number of revisions of say, UML (and other metamodels), in Chapter 2. This will allow the reader to get a sense of the scale of the problem.
 
-To enable conformance checking as part of metamodel installation in EMF, the metamodel-independent syntax has been integrated with Concordance in \cite{rose10concordance}. Concordance provides a mechanism for resolving inter-model references (such as those between models and their metamodels), and can be used to efficiently determine the instances of a metamodel. Without Concordance, determining the the instances of a metamodel is possible only by checking every model in the workspace.
-
-Integrating Concordance and the metamodel-independent syntax resulted in a service, executed after the installation of a metamodel, which identifies the models that are affected by the metamodel changes. All models that conform to the old version of the metamodel are checked for conformance with the new metamodel. As such, conformance checking occurs automatically and immediately after metamodel installation. Conformance problems are detected and reported immediately, rather than when the user next attempts to load an affected model.
-
+To enable conformance checking as part of metamodel installation in EMF, the metamodel-independent syntax has been integrated with Concordance in \cite{rose10concordance}. The work was conducted outside of the scope of the thesis, and is summarised here to indicate the usefulness of the metamodel-independent syntax for supporting the automation of co-evolution activities. Concordance provides a mechanism for resolving inter-model references (such as those between models and their metamodels). Without Concordance, determining the the instances of a metamodel is possible only by checking every model in the workspace. Integrating Concordance and the metamodel-independent syntax resulted in a service, which Epsilon (Section~\ref{subsec:epsilon}) executes after the installation of a metamodel to identify the models that are affected by the metamodel changes. All models that conform to the old version of the metamodel are checked for conformance with the new metamodel. As such, conformance checking occurs automatically and immediately after metamodel installation. Conformance problems are detected and reported immediately, rather than when an affected model is next used.
 
 \subsubsection{Summary}
 Modelling frameworks implicitly enforce conformance, which presents challenges for managing co-evolution. In particular, detecting and reconciling conformance problems involves managing non-conformant models, which cannot be loaded by modelling frameworks and hence cannot be used with model editors or model management operations. The metamodel-independent syntax proposed in this section enables modelling frameworks to load non-conformant models by binding models to a generic metamodel. The metamodel-independent syntax has been integrated with Concordance \cite{rose10concordance} to facilitate the reporting of conformance problems during metamodel installation, and underpins the implementation of the textual modelling notation presented in Sections~\ref{sec:notation}. The benefits and drawbacks of the metamodel-independent syntax in the context of user-driven co-evolution are explored in Chapter~\ref{Evaluation}. 
