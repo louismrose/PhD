@@ -403,7 +403,7 @@ F.~Heidenreich, J.~Johannes, S.~Karol, M.~Seifert, and C.~Wende.
   Science}, pages 114--129. Springer, 2009.
 
 \bibitem[Herrmannsdoerfer {\it et al.}\
-  2008]{herrmannsdoerfer08automatability}{$~$}
+  2008a]{herrmannsdoerfer08automatability}{$~$}
 M.~Herrmannsdoerfer, S.~Benz, and E.~Juergens.
 \newblock Automatability of coupled evolution of metamodels and models in
   practice.
@@ -411,6 +411,14 @@ M.~Herrmannsdoerfer, S.~Benz, and E.~Juergens.
   editors, {\em Proc. International Conference on Model Driven Engineering
   Languages and Systems (MoDELS)}, volume 5301 of {\em Lecture Notes in
   Computer Science}, pages 645--659. Springer, 2008.
+
+\bibitem[Herrmannsdoerfer {\it et al.}\  2008b]{herrmannsdoerfer08cope}{$~$}
+M.~Herrmannsdoerfer, S.~Benz, and E.~Juergens.
+\newblock {COPE}: A language for the coupled evolution of metamodels and
+  models.
+\newblock In {\em Proc. International Workshop on Model Co-Evolution and
+  Consistency Management (MCCM), co-located with the International Conference
+  on Model-Driven Engineering Languages and Systems (MoDELS)}, 2008.
 
 \bibitem[Herrmannsdoerfer {\it et al.}\  2009a]{herrmannsdoerfer09cope}{$~$}
 M.~Herrmannsdoerfer, S.~Benz, and E.~Juergens.

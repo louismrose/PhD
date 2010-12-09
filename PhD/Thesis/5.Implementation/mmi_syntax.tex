@@ -2,21 +2,22 @@
 
 \section{Metamodel-Independent Syntax}
 \label{sec:mmi_syntax}
-Section~\ref{subsec:modelling_framework_characteristics} discussed the way in which modelling frameworks implicitly enforce conformance, and hence cannot be used to load non-conformant models. Additionally, modelling frameworks provide little support for checking the conformance of a model with other versions of a metamodel, which is potentially useful during metamodel installation. In Section~\ref{sec:requirements_identification}, these concerns lead to the identification of the following requirement: \emph{This thesis must investigate the extension of existing modelling frameworks to support the loading of non-conformant models and conformance checking of models against other metamodels.}
+Section~\ref{subsec:modelling_framework_characteristics} discussed the way in which modelling frameworks implicitly enforce conformance, and hence prevent the loading of non-conformant models. Additionally, modelling frameworks provide little support for checking the conformance of a model with other versions of a metamodel, which is potentially useful during metamodel installation. In Section~\ref{sec:requirements_identification}, these concerns lead to the identification of the following requirement: \emph{This thesis must investigate the extension of existing modelling frameworks to support the loading of non-conformant models and conformance checking of models against other metamodels.}
 
-This section describes the way in which existing modelling frameworks load and store models using a metamodel-specific syntax. An alternative syntax is motivated by highlighting the problems that a metamodel-specific syntax poses for managing and automating co-evolution. The way in which automatic consistency checking can be performed using the alternative syntax is demonstrated. The work presented in this section has been published in \cite{rose09enhanced}.
+This section describes the way in which existing modelling frameworks load and store models using a metamodel-specific syntax, proposes an alternative syntax and demonstrates how this facilitates automatic consistency checking. The work presented in this section has been published in \cite{rose09enhanced}.
+
+% TODO - intro example
+% TODO - consistent formatting of metamodel elements and model elements
+% TODO - present MM independent syntax. Make clear that it is an ABSTRACT syntax.
 
 
-\subsection{Model Storage Representation}
-Throughout a model-driven development process, modelling frameworks are used to load and store models. XML Metadata Interchange (XMI) \cite{xmi}, the OMG standard for exchanging MOF-based models, is the canonical model representation used by many contemporary modelling frameworks. XMI specifies the way in which models should be represented in XML.
+\subsection{Binding to a specific metamodel}
+\label{subsec:binding_specific}
+XMI (Section~\ref{}) is the canonical model storage representation used by many contemporary modelling frameworks. Because models and metamodels are kept separate (Section~\ref{subsec:modelling_framework_characteristics}), XMI provides a mechanism for referring to metamodel types from a model. In the preamble of an XMI document, metamodels are imported using namespaces. In the body of an XMI document, namespaces are used to refer to metamodel types. In Listing~\ref{lst:xmi}, line 2 imports two metamodels to the namespaces \texttt{xmi} and \texttt{families}. The former is used to reference types provided by the modelling framework, and the latter to reference types provided by the metamodel in Figure~\ref{fig:x}.
 
-An XMI document defines one or more namespaces from which type information is drawn. For example, XMI itself provides a namespace for specifying the version of XMI being used. Metamodels are referenced via namespaces, allowing the specification of elements that instantiate metamodel types.
+Modelling frameworks bind a model to its metamodel using the underlying programming language (Section~\ref{subsec:modelling_framework_characteristics}). The metamodel defines the way in which model elements will be bound, and binding is often strongly-typed: each metamodel type is mapped to a corresponding type in the underlying programming language. The XMI in Listing~\ref{lst:xmi} contains three \texttt{Person}s, Franz (line 3), Julie (line 4) and Hermann (line 5). Line 3 indicates that Julie is the mother and Hermann is the father of Franz. The mothers and fathers of Julie and Hermann are not specified. Each person defines an XMI ID (a universally unique identifier), and a name. The IDs are used for inter-element references, such as for the values of the mother and father features.
 
-As discussed in Section~\ref{subsec:modelling_framework_characteristics}, modelling frameworks bind a model to its metamodel using the underlying programming language. The metamodel defines the way in which model elements will be bound, and frequently, binding is strongly-typed: each metamodel type is mapped to a corresponding type in the underlying programming language.
-
-Listing~\ref{lst:xmi} shows XMI for an exemplar model conforming to a metamodel that defines \texttt{Person} as a metaclass with three features: a string-valued \texttt{name}, an optional reference to a \texttt{Person}, \texttt{mother}, and another optional reference to a \texttt{Person}, \texttt{father}.
-
-\begin{lstlisting}[caption=Exemplar person model in XMI, label=lst:xmi, language=XML]
+\begin{lstlisting}[caption=Person model in XMI, label=lst:xmi, language=XML]
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:families="http://www.cs.york.ac.uk/families">
 	<families:Person xmi:id="_xNSb8KfZEd,0dNl1iq3EdQ" name="Franz" mother="_6ef33ff010b31df8a39080" father="_F520cDaa0jN,i10s8xZp2a" />
@@ -25,19 +26,18 @@ Listing~\ref{lst:xmi} shows XMI for an exemplar model conforming to a metamodel 
 </xmi:XMI>
 \end{lstlisting}
 
-The model shown in Listing~\ref{lst:xmi} contains three \texttt{Person}s, Franz, Julie and Hermann. Julie is the mother and Hermann is the father of Franz. The mothers and fathers of Julie and Hermann are not specified. On line 2, the XMI document specifies that the families namespace will be used to refer to types defined by the metamodel with the identifier: \url{http://www.cs.york.ac.uk/families}. Each person defines an XMI ID (a universally unique identifier), and a name. The IDs are used for inter-element references, such as for the values of the mother and father features.
+Binding a model element involves instantiating, in the underlying programming language, the metamodel type, and populating the attributes of the instantiated object with values that correspond to those specified in the model. Figure~\ref{fig:y} shows the (Java) objects that would be created by EMF when loading the XMI in Listing~\ref{lst:xmi}.
 
-Binding a model element involves instantiating, in the underlying programming language, the metamodel type, and populating the attributes of the instantiated object with values that correspond to those specified in the model. Because an XMI document refers to metamodel types and features by name, binding fails when a model does not conform to its metamodel. 
-
+When a metamodel changes, existing models might reference types and features that no longer exist, and, hence, binding fails when a model does not conform to its metamodel. For example, suppose that the mother and father reference are removed from the metamodel in Figure~\ref{fig:x}, and are replaced by a unifying parents reference. Binding (i.e. constructing the objects in Figure~\ref{fig:y}) would now fail, as the Person class does not define mother and father features. XMI refers to metamodel types and features by name, and, hence, binding can fail following metamodel evolution.
 
 \subsection{Binding to a generic metamodel}
 \label{subsec:binding}
-For situations when a model does not conform to its metamodel, this thesis proposes an alternative deserialisation mechanism, which binds a model to a \emph{generic} metamodel. A generic metamodel reflects the characteristics of the metamodelling language and consequently every model conforms to the generic metamodel. Figure~\ref{fig:slot_model} shows a minimal version of a generic metamodel for MOF. Model elements are bound to \texttt{Object}, data values to \texttt{Slot}.
+For situations when a model does not conform to its metamodel, this thesis proposes an alternative to the binding mechanism described in Section~\ref{subsec:binding_specific}, which binds a model to a \emph{generic} metamodel. A generic metamodel reflects the characteristics of the metamodelling language and consequently every model conforms to the generic metamodel. Figure~\ref{fig:slot_model} shows a minimal generic metamodel for MOF, which is based on the MOF metamodel \cite{mof}. Model elements are bound to \texttt{Object}, data values to \texttt{Slot}.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=3.3in]{5.Implementation/slot_model.pdf}
-  \caption{A generic metamodel.}
+  \caption[A generic metamodel for MOF]{A generic metamodel for MOF, based on \cite{MOF} and taken from \cite{rose09enhanced}.}
   \label{fig:slot_model}
 \end{figure}
 
@@ -46,7 +46,7 @@ Using the metamodel in Figure~\ref{fig:slot_model} in conjunction with MOF, conf
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=3.3in]{5.Implementation/mof.pdf}
-  \caption{Minimal MOF metamodel.}
+  \caption[Minimal MOF metamodel]{Minimal MOF metamodel, based on \cite{MOF} and taken from \cite{rose09enhanced}.}
   \label{fig:minimal_mof}
 \end{figure}
 
@@ -60,16 +60,16 @@ The following constraints between metamodels (e.g. instances of MOF, Figure~\ref
   \item Each slot must be type-compatible with its feature.
 \end{enumerate}
 
-The way in which type-compatibility is checked depends on the way in which the modelling framework is implemented, and on its underlying programming language. The Eclipse Modeling Framework (EMF) \cite{steinberg09emf}, for example, is implemented in a strongly-typed language (Java) and exposes some services for checking the type compatibility of model data with metamodel features. Metamodel features are typed. EMF provide methods for determining the underlying programming language representation, which can be used to implement type compatibility checks.
+% TODO illustrate for person (think I do this in the next section, maybe move to here)
 
-Conformance constraints vary over modelling languages. For example, Ecore, the modelling language of EMF, is similar to but not the same as MOF. For example, metamodel features defined in Ecore can be marked as transient (not stored to disk) and unchangeable (read-only). In EMF, extra conformance constraints are required which restrict the feature value of slots to only non-transient, changeable features.
+The way in which type-compatibility is checked depends on the way in which the modelling framework is implemented. In EMF, for example, model values conform either to types defined in a metamodel, or to types defined in the underlying programming language, Java. EMF provides programmatic access to a metamodel's type system, which can be used to implement type-compatibility checks.
+
+Conformance constraints vary over modelling languages. For example, Ecore, the modelling language of EMF, is similar to but not the same as MOF. Metamodel features defined in Ecore can be marked as transient (not stored to disk) or unchangeable (read-only). Consequently in EMF, conformance constraints are required to restrict the feature value of slots to only non-transient, changeable features.
 
 
 \subsection{Example}
 \label{subsec:mmi_syntax_example}
-By binding a model not to the underlying programming languages types defined in its metamodel but to the generic metamodel presented in Figure~\ref{fig:slot_model}, conformance can be checked using the above constraints. Binding the exemplar XMI in Listing~\ref{lst:xmi} to the generic metamodel shown in Figure~\ref{fig:slot_model} produces three instances of Object. A UML object diagram for this instantiation of the generic metamodel is shown in Figure~\ref{fig:generic_binding}. Instances of Object are shaded, while instances of Slot are not.
-
-Binding the XMI in Listing~\ref{lst:xmi} to the generic metamodel yields three Objects, each containing a slot whose feature is ``name''. The value of each slot varies: one has the value ``Franz'', another the value ``Julie'' and yet another the value ``Hermann''. The object containing the slot with value ``Franz'' contains two further slots: one whose feature is ``mother'' and whose value is a reference to the object that contains the name slot with the value ``Julie''\footnote{Reference values in the generic metamodel are implemented using the proxy design pattern \cite{gamma95patterns}.} and one whose feature is ``father'' and whose value is a reference to the object containing ``Hermann''. 
+By binding a model to the generic metamodel presented in Figure~\ref{fig:slot_model} rather than to the underlying programming languages types defined in its metamodel, conformance can be checked using the above constraints. Binding the XMI in Listing~\ref{lst:xmi} to the generic metamodel shown in Figure~\ref{fig:slot_model} produces three instances of Object, illustrated as a UML object diagram in Figure~\ref{fig:generic_binding}. For clarity, instances of Object are shaded, and instances of Slot are unshaded. Each of the three Objects, has a slot whose feature is ``name''. The value of each slot varies: one has the value ``Franz'', another has the value ``Julie'' and another has the value ``Hermann''. The object containing the slot with value ``Franz'' contains two further slots: one whose feature is ``mother'' and whose value is a reference to the object that contains the name slot with the value ``Julie''\footnote{Reference values in the generic metamodel are implemented using the proxy design pattern \cite{gamma95patterns}.} and one whose feature is ``father'' and whose value is a reference to the object containing ``Hermann''. 
 
 \begin{figure}[htbp]
   \centering
@@ -78,21 +78,18 @@ Binding the XMI in Listing~\ref{lst:xmi} to the generic metamodel yields three O
   \label{fig:generic_binding}
 \end{figure}
 
-After binding to the generic metamodel, the conformance of a model can be checked against any metamodel. Suppose the metamodel used to construct the XMI shown in Figure~\ref{fig:slot_model} has now evolved. The mother and father references have been removed, and replaced by a unifying parents reference. Conformance checking for the object representing Franz will fail because it defines slots for features ``mother'' and ``father'', which are no longer defined for the metamodel class ``Person''. More specifically, the model element representing Franz does not satisfy conformance constraint 4 from Section~\ref{subsec:binding}, which states: \emph{each slot's feature must be the name of a metamodel feature. That metamodel feature must belong to the slot's owning object's type}. 
+After binding to the generic metamodel, the conformance of a model can be checked against any specific metamodel. To illustrate the value of the generic metamodel, consider what happens when the specific metamodel evolves. The mother and father references have been removed, and replaced by a unifying parents reference. Conformance checking for the object representing Franz would now fail because it defines slots for features ``mother'' and ``father'', which are no longer defined for the metamodel class ``Person''. Specifically, the model element representing Franz does not satisfy conformance constraint 4 (Section~\ref{subsec:binding}), which states: \emph{each slot's feature must be the name of a metamodel feature. That metamodel feature must belong to the slot's owning object's type}. 
 
-\subsection{Applications}
-As this section has shown, binding to a metamodel independent syntax is an alternative model deserialisation mechanism that can be used when a model no longer conforms to its metamodel and to check the conformance of a model with any metamodel. The metamodel independent syntax described in this section is used throughout this chapter to support other structures and processes for co-evolution.
+\subsection{Structures built atop the metamodel-independent syntax}
+There are many potential uses for the metamodel-independent syntax described in this section. Section~\ref{sec:notation} describes a textual modelling notation integrated with the metamodel-independent syntax to achieve live conformance checking. The migration language presented in Section~\ref{sec:flock} can be used with the metamodel independent syntax to perform partial migration (i.e. to produce models that conform to a generic metamodel rather than their evolved metamodel), but implementation of this work is not complete\footnote{The current version does not support metamodels that contain non-containment references and enumeration types.}.
 
-In Section~\ref{sec:notation}, a textual modelling notation is integrated with the metamodel-independent syntax. In Section~\ref{sec:flock}, a domain-specific language for migration uses metamodel independent syntax to perform partial migration by producing models that conform to a generic metamodel rather than their evolved metamodel.
+One of the model migration tools discussed in Section~\ref{sec:analyis_of_languages_used_for_migration}, COPE \cite{herrmannsdoerfer09cope}, uses a metamodel-independent syntax similar to the one presented in this section. The metamodel-independent syntax presented here was developed independently of the metamodel-independent syntax developed for COPE. The two syntaxes were first published in 2008 (\cite{rose08hutn,herrmannsdoerfer08cope}), and are both conceptually similar to the metamodel for UML Object diagrams \cite{uml14}.
 
-One of the model migration tools discussed in Section~\ref{sec:analyis_of_languages_used_for_migration}, COPE \cite{herrmannsdoerfer09cope}, uses a metamodel-independent syntax. The strengths and weaknesses of using a metamodel-independent syntax in that context are described in Sections~\ref{subsubsec:cope} and~\ref{subsec:analysis}.
+In addition to these uses, the metamodel-independent syntax is potentially useful during metamodel installation. As discussed in Section~\ref{subsec:modelling_framework_characteristics}, metamodel developers do not have access to downstream models, and conformance is implicitly enforced by modelling frameworks. Consequently, the conformance of models may be affected by the installation of a new version of a metamodel, and the conformance of models cannot be checked during installation. Typically, installing a new version of a metamodel can result in models that no longer conform to their metamodel and cannot be used with the modelling framework. Moreover, a user discovers conformance problems only when attempting to use a model after installation has completed, and not as part of the installation process.
 
+% TODO - Consider discussing the number of revisions of say, UML (and other metamodels), in Chapter 2. This will allow the reader to get a sense of the scale of the problem.
 
-\subsubsection{Automatic Consistency Checking}
-\label{subsec:automatic_checking}
-In addition to the applications outlined above, a metamodel-independent syntax is potentially useful during metamodel installation. As discussed in Section~\ref{subsec:modelling_framework_characteristics}, metamodel developers do not have access to downstream models, and conformance is implicitly enforced by modelling frameworks. Consequently, the conformance of models may be affected by the installation of a new version of a metamodel, and the conformance of models cannot be checked during installation. Typically, installing a new version of a metamodel can result in models that no longer conform to their metamodel and cannot be used with the modelling framework. Moreover, a user discovers conformance problems only when attempting to use a model after installation has completed, and not as part of the installation process.
-
-To enable conformance checking as part of metamodel installation in EMF, the metamodel-independent syntax has been integrated with Concordance \cite{rose10concordance} in joint work with Dimitrios Kolovos, a lecturer in this department, Nicholas Drivalos, a Research Associate in this department and James Williams, a research student in this department. Concordance provides a mechanism for resolving inter-model references (such as those between models and their metamodels), and can be used to efficiently determine the instances of a metamodel. Without Concordance, determining the the instances of a metamodel is possible only by checking every model in the workspace.
+To enable conformance checking as part of metamodel installation in EMF, the metamodel-independent syntax has been integrated with Concordance in \cite{rose10concordance}. Concordance provides a mechanism for resolving inter-model references (such as those between models and their metamodels), and can be used to efficiently determine the instances of a metamodel. Without Concordance, determining the the instances of a metamodel is possible only by checking every model in the workspace.
 
 Integrating Concordance and the metamodel-independent syntax resulted in a service, executed after the installation of a metamodel, which identifies the models that are affected by the metamodel changes. All models that conform to the old version of the metamodel are checked for conformance with the new metamodel. As such, conformance checking occurs automatically and immediately after metamodel installation. Conformance problems are detected and reported immediately, rather than when the user next attempts to load an affected model.
 

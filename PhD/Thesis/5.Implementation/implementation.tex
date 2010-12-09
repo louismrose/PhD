@@ -1,8 +1,8 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
 
-\chapter{Implementation}
+\chapter{Design and Implementation}
 \label{Implementation}
-Section~\ref{sec:requirements_identification} presented requirements for structures and processes for identifying and managing co-evolution. This chapter describes the way in which the requirements have been addressed. Several related structures have been implemented, using domain-specific languages, metamodelling and model management operations. Figure~\ref{fig:implementation_overview} summarises the contents of the chapter. To facilitate the management of non-conformant models with existing modelling frameworks, a metamodel-independent syntax was devised and implemented (Section~\ref{sec:mmi_syntax}). To address some of the challenges faced in user-driven co-evolution, an OMG specification for a textual modelling notation was implemented (Section~\ref{sec:notation}). To determine their merits and drawbacks, existing languages for specifying model migration were identified, analysed and compared (Section~\ref{sec:analyis_of_languages_used_for_migration}). Finally, a model transformation language -- tailored for model migration and centred around a novel approach to relating source and target model elements -- was designed and implemented (Section~\ref{sec:flock}). 
+Section~\ref{sec:requirements_identification} presented requirements for structures and processes for identifying and managing co-evolution. This chapter describes the way in which the requirements have been addressed. Several related structures have been implemented, using domain-specific languages, metamodelling and model management operations. Figure~\ref{fig:implementation_overview} summarises the contents of the chapter. To facilitate the management of non-conformant models with existing modelling frameworks, a metamodel-independent syntax was devised and implemented (Section~\ref{sec:mmi_syntax}). To address some of the challenges faced in user-driven co-evolution, an OMG specification for a textual modelling notation was implemented (Section~\ref{sec:notation}). Finally, a model transformation language -- tailored for model migration and centred around a novel approach to relating source and target model elements -- was designed and implemented (Sections~\ref{sec:analyis_of_languages_used_for_migration} and~\ref{sec:flock}). 
 
 \begin{figure}[htbp]
   \begin{center}
@@ -13,6 +13,55 @@ Section~\ref{sec:requirements_identification} presented requirements for structu
   \label{fig:implementation_overview}
 \end{figure}
 
+The structures presented in this chapter are interoperable as shown in Figure~\ref{fig:implementation_structure}. In particular, the modelling framework extensions provided by the metamodel-independent syntax are used to provide conformance checking for the textual modelling notation, and to enable partial migration for the model migration language. The structures were separated to facilitate re-use of the conformance checking services provided by the metamodel-independent syntax. Table~\ref{tab:implementation_to_requirements} shows the relationship between the proposed structures and the thesis requirements (Section~\ref{sec:requirements_identification}).
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics*[viewport=0 400 800 800,height=5cm]{5.Implementation/images/implementation_structure.pdf}
+	\caption{The relationships between the proposed structures}
+	\label{fig:implementation_structure}
+\end{figure}
+
+\begin{table}[tbhp]
+	\centering
+	\begin{tabular}{|c|l|}
+		\hline
+		\textbf{Structure (Section)} & \textbf{Requirement} \\
+		\hline
+		\multirow{6}{*}{Metamodel-independent syntax (\ref{sec:mmi_syntax})} & This thesis must investigate the \\
+		& extension of existing modelling \\ 
+		& frameworks to support the loading \\
+		& of non-conformant models and \\
+		& conformance checking of models \\
+		& against other metamodels. \\
+		\hline
+		\multirow{9}{*}{Textual Modelling Notation (\ref{sec:notation})} & This thesis must demonstrate a \\
+		& user-driven co-evolution process \\
+		& that enables the editing of \\
+		& non-conformant models without \\
+		& directly manipulating the \\
+		& underlying storage representation \\
+		& and provides a conformance report \\
+		& for the original model and \\
+		& evolved metamodel. \\
+		\hline
+		\multirow{4}{*}{Model Migration Language (\ref{sec:analyis_of_languages_used_for_migration})} & This thesis must compare and \\
+    & evaluate existing languages \\
+		& for specifying model   \\
+		& migration strategies.  \\
+		\hline
+		\multirow{7}{*}{Model Migration Language (\ref{sec:flock})} & This thesis must implement and \\
+		& evaluate a domain-specific \\
+		& language for specifying and \\
+		& executing model migration \\
+		& strategies, comparing it to \\
+		& existing languages for specifying \\ 
+		& model migration strategies. \\
+		\hline
+	\end{tabular}
+	\label{tab:implementation_to_requirements}
+	\caption{The relationship between the thesis requirements and the proposed structures.}
+\end{table}
 
 \input{5.Implementation/mmi_syntax}
 \input{5.Implementation/textual_modelling_notation}
