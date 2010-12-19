@@ -1,12 +1,14 @@
 %!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
 
+% TODO - present MM independent syntax. Make clear that it is an ABSTRACT syntax.
+
+% TODO - Consider discussing the number of revisions of say, UML (and other metamodels), in Chapter 2. This will allow the reader to get a sense of the scale of the problem.
+
 \section{Metamodel-Independent Syntax}
 \label{sec:mmi_syntax}
 Section~\ref{subsec:modelling_framework_characteristics} discussed the way in which modelling frameworks implicitly enforce conformance, and hence prevent the loading of non-conformant models. Additionally, modelling frameworks provide little support for checking the conformance of a model with other versions of a metamodel, which is potentially useful during metamodel installation. In Section~\ref{sec:requirements_identification}, these concerns lead to the identification of the following requirement: \emph{This thesis must investigate the extension of existing modelling frameworks to support the loading of non-conformant models and conformance checking of models against other metamodels.}
 
-This section describes the way in which existing modelling frameworks load and store models using a metamodel-specific binding mechanisms, proposes an alternative binding mechanism using a metamodel-independent representation, and demonstrates how this facilitates automatic consistency checking. The work presented in this section has been published in \cite{rose09enhanced}.
-
-% TODO - present MM independent syntax. Make clear that it is an ABSTRACT syntax.
+This section describes the way in which existing modelling frameworks load and store models using metamodel-specific binding mechanisms, proposes an alternative binding mechanism using a metamodel-independent syntax, and demonstrates how this facilitates automatic consistency checking. The work presented in this section has been published in \cite{rose09enhanced}.
 
 \begin{figure}[htbp]
 	\centering
@@ -20,22 +22,22 @@ This section describes the way in which existing modelling frameworks load and s
 	    \label{fig:evolved_families_mm}
 	    \includegraphics[scale=0.9]{5.Implementation/images/families_evolved.pdf}
 	}
-	\caption{Evolution of a families metamodel.}
+	\caption{Evolution of a families metamodel, based on the metamodel in \cite{hutn}.}
 \label{fig:families_mms}
 \end{figure}
 
 \subsection{Metamodel Evolution Example: Families}
 \label{subsec:families_example}
-This section uses the example of metamodel evolution in Figure~\ref{fig:families_mms}, which illustrates changes to a metamodel for describing families. In Figure~\ref{fig:original_families_mm}, \texttt{na\-tu\-r\-alCh\-il\-dr\-en} and \texttt{ad\-op\-t\-edCh\-il\-dr\-en} are modelled as separate features, and, in Figure~\ref{fig:evolved_families_mm}, they are modelled as a single feature, \texttt{ch\-il\-dr\-en}.
+This section uses the example of metamodel evolution in Figure~\ref{fig:families_mms}. In Figure~\ref{fig:original_families_mm}, \texttt{na\-tu\-r\-alCh\-il\-dr\-en} and \texttt{ad\-op\-t\-edCh\-il\-dr\-en} are modelled as separate features, and, in Figure~\ref{fig:evolved_families_mm}, they are modelled as a single feature, \texttt{ch\-il\-dr\-en}.
 
-A model that conforms to the original metamodel, such as the one in Figure~\ref{fig:families_model},  might not conform to the evolved metamodel. Specifically, models that specify values for the \texttt{na\-tu\-r\-alCh\-il\-dr\-en} or \texttt{ad\-op\-t\-edCh\-il\-dr\-en} features do not conform to the evolved metamodel. The model in Figure~\ref{fig:families_model} represents a \texttt{Fa\-mi\-ly} comprising two \texttt{Pe\-rs\-on}s, and does not conform to the evolved metamodel. Using the families metamodel and model, the sequel explains why existing modelling frameworks cannot be used to load non-conformant models.
+Models that specify values for the \texttt{na\-tu\-r\-alCh\-il\-dr\-en} or \texttt{ad\-op\-t\-edCh\-il\-dr\-en} features do not conform to the evolved metamodel. For example, the model in Figure~\ref{fig:families_model} represents a \texttt{Fa\-mi\-ly} comprising two \texttt{Pe\-rs\-on}s, conforms to the original metamodel, and does not conform to the evolved metamodel. Using the families metamodel and model, the sequel explains why existing modelling frameworks cannot be used to load non-conformant models.
 
 \begin{figure}[htbp]
   \begin{center}
     \leavevmode
     \includegraphics[width=10cm]{5.Implementation/images/family_model.png}
   \end{center}
-  \caption[A family model]{A family model, conforming to Figure~\ref{fig:original_families_mm}}
+  \caption[A family model]{A family model, which conforms to the metamodel in Figure~\ref{fig:original_families_mm}}
   \label{fig:families_model}
 \end{figure}
 
@@ -62,17 +64,17 @@ Two potential approaches to binding (and hence loading) non-conformant models ha
 Presently, modelling frameworks are used to store only the latest version of a metamodel, and hence binding fails for models that conform to a previous version of the metamodel. If modelling frameworks could access old versions of a metamodel, models that do not conform to the current version of the metamodel could be loaded by binding to a previous version of the metamodel.
 
 \subsubsection{A metamodel-independent syntax}
-Binding to a metamodel-specific representation fails for non-conformant models. An alternative, therefore, is to bind models to a \emph{metamodel-independent} representation in the underlying programming language, such as the one shown in Figure~\ref{fig:minimal_generic_metamodel}. Binding each model element would result in the instantiation of a metamodel-independent type (\texttt{Ob\-je\-ct} in Figure~\ref{fig:minimal_generic_metamodel}) rather than of types defined in the metamodel, such as \texttt{Fa\-mi\-ly} or \texttt{Pe\-rs\-on}. Therefore binding is independent of the types defined in metamodels, and will succeed for non-conformant models.
+Models can always be successfully bound to a \emph{metamodel-independent} representation, such as the one shown in Figure~\ref{fig:minimal_generic_metamodel}. Binding each model element results in the instantiation of a metamodel-independent type (\texttt{Ob\-je\-ct} in Figure~\ref{fig:minimal_generic_metamodel}) rather than of types defined in a specific metamodel, such as \texttt{Fa\-mi\-ly} or \texttt{Pe\-rs\-on}. Hence, binding is independent of the types defined in metamodels, and will succeed for non-conformant models.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=3.3in]{5.Implementation/slot_model.pdf}
-  \caption[A minimal generic metamodel for MOF]{A minimal generic metamodel for MOF, based on \cite{mof} and taken from \cite{rose09enhanced}.}
+  \includegraphics[width=12cm]{5.Implementation/images/slot_model_design.pdf}
+  \caption[A minimal generic metamodel for MOF]{A minimal generic metamodel for MOF in Ecore, based on \cite{mof} and taken from \cite{rose09enhanced}.}
   \label{fig:minimal_generic_metamodel}
 \end{figure}
    
 \subsubsection{Benefits and drawbacks of the potential solutions}
-The two potential solutions for loading non-conformant models have different benefits and drawbacks, which are now discussed. Storing metamodel histories would use the binding and conformance checking services provided by existing modelling frameworks, and therefore require less implementation effort than a metamodel-independent syntax, which would use require bespoke binding and conformance checking services. Furthermore, structures for managing metamodel histories might be integrated with existing approaches to managing co-evolution, such as metamodel differencing approaches (Sections~\ref{subsec:inference}), for switching between different versions of a MDE workflow.
+The two potential solutions for loading non-conformant models have different benefits and drawbacks, which are now discussed. Storing metamodel histories would use the binding and conformance checking services provided by existing modelling frameworks, and therefore require less implementation effort than a metamodel-independent syntax, which would require bespoke binding and conformance checking services. Furthermore, structures for managing metamodel histories might be integrated with existing approaches to managing co-evolution, such as metamodel differencing approaches (Sections~\ref{subsec:inference}), for switching between different versions of a MDE workflow.
 
 Storing metamodel histories relies on the metamodel developer to enable model migration: if the metamodel developer does not provide a metamodel that contains historical data, then binding will fail for non-conformant models. Conversely, models can be bound to a metamodel-independent syntax irrespective of the actions of the metamodel developer.
 
@@ -81,23 +83,23 @@ A metamodel-independent syntax has been chosen because it makes fewer assumption
 
 \subsection{Proposed Solution: A Metamodel-Independent Syntax}
 \label{subsec:binding}
-This section discusses the design and implementation of a metamodel-independent syntax, and of the binding and conformance checking services that are used to load non-conformant models. As discussed below, the design of the metamodel-independent syntax and conformance checking service is inspired by \cite{uml212} and \cite{paige07metamodel}, respectively. As such, the primary contribution of this section is the implementation and integration of the syntax and services with EMF, which is described in Section~\ref{subsubsec:mmi_impl}. Additionally, the syntax and services have been designed to be re-usable, and hence have been used to simplify the implementation of a textual modelling notation (Section~\ref{sec:notation}) and a model migration language (Section~\ref{sec:flock}).
+This section discusses the design and implementation of a metamodel-independent syntax, and of the binding and conformance checking services that are used to load non-conformant models. As discussed below, the design of the metamodel-independent syntax and conformance checking service is inspired by \cite{uml212} and \cite{paige07metamodel}, respectively. As such, the primary contribution of this section is the implementation and integration of the syntax and services with EMF. In addition, the syntax and services have been designed to be re-usable, and hence have been used to simplify the implementation of a textual modelling notation (Section~\ref{sec:notation}) and a model migration language (Section~\ref{sec:flock}).
 
 \subsubsection{Design}
-A high-level design for the way in which the metamodel-independent syntax, binding service and conformance checking service load models is shown in Figure~\ref{fig:mmi_workflow}. The \textbf{binding service} parses XMI (the canonical storage representation of models, Section~\ref{subsec:mof}) and produces a set of objects that conform to the \textbf{metamodel-independent syntax}. The \textbf{conformance checking service} is used to explicitly check the conformance of a bound model represented in the metamodel-independent syntax.
+A high-level design for the way in which the metamodel-independent syntax, binding service and conformance checking service load models is shown in Figure~\ref{fig:mmi_workflow}. The \textbf{binding service} parses XMI (the canonical storage representation of models, Section~\ref{subsec:mof}) and produces a model that conforms to the \textbf{metamodel-independent syntax}. The \textbf{conformance checking service} is used to explicitly check the conformance of a model conforming to the metamodel-independent syntax.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics*[viewport=10 590 990 760,width=11.5cm]{5.Implementation/images/mmi_workflow.pdf}
+	\caption{Loading models with the metamodel-independent syntax}
+	\label{fig:mmi_workflow}
+\end{figure}
 
 Binding and conformance checking were split into separate services to facilitate re-use. For example, the textual modelling notation in Section~\ref{sec:notation} re-uses the metamodel-independent syntax and conformance checking service, in conjunction with a different binding service.
 
-\paragraph{Metamodel-independent syntax} The metamodel-independent syntax is used to represent a model without instantiating types defined by its metamodel. Its design was inspired by the metamodel for UML 2 \cite{uml212} object diagram, which describes objects in a generic, class-independent manner. UML 2 object diagrams are specified in terms of an abstract syntax (comprising, for example, \texttt{InstanceSpecification} and \texttt{Link} classes) and a concrete syntax (comprising, for example, boxes and lines). The metamodel-independent syntax proposed here is abstract. It is not used directly by metamodel developers or users and hence a concrete syntax was not required.
+\paragraph{Metamodel-independent syntax} The metamodel-independent syntax is used to represent a model without instantiating types defined by its metamodel. Its design was inspired by the metamodel for UML 2 \cite{uml212} object diagrams, which describes objects in a generic, class-independent manner. UML 2 object diagrams are specified in terms of an abstract syntax (comprising, for example, \texttt{InstanceSpecification} and \texttt{Link} classes) and a concrete syntax (comprising, for example, boxes and lines). The metamodel-independent syntax proposed here is abstract. It is not used directly by metamodel developers or users and hence a concrete syntax was not required.
 
-Abstract syntax is typically represented as a metamodel (Section~\ref{subsec:modelling_languages}), and the metamodel that was designed for the metamodel-independent syntax is shown in Figure~\ref{fig:mmi_syntax_design}. \texttt{Ob\-je\-ct}s are used to represent each element of a model, and the \texttt{ty\-pe} attribute is used to indicate the name of the metaclass that the \texttt{Ob\-je\-ct} intends to instantiate. Similarly, \texttt{Sl\-ot}s are used to represent values in the model, and the \texttt{feature} attribute indicates the metafeature to which the value belongs. The metamodel was designed to capture the information needed to perform conformance checking (described below), and implementing the conformance checking service led to a refactored metamodel, which is presented in the sequel.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=12cm]{5.Implementation/images/slot_model_design.pdf}
-  \caption{Initial design for the metamodel-independent syntax, in Ecore}
-  \label{fig:mmi_syntax_design}
-\end{figure}
+Abstract syntax is typically represented as a metamodel (Section~\ref{subsec:modelling_languages}). The metamodel in Figure~\ref{fig:minimal_generic_metamodel} was used as an initial design for the metamodel-independent syntax. \texttt{Ob\-je\-ct}s are used to represent each element of a model, and the \texttt{ty\-pe} attribute is used to indicate the name of the metaclass that the \texttt{Ob\-je\-ct} intends to instantiate. Similarly, \texttt{Sl\-ot}s are used to represent values in the model, and the \texttt{feature} attribute indicates the metafeature that the \texttt{Sl\-ot} intends to instantiate. The metamodel was designed to capture the information needed to perform conformance checking (described below), and implementing the conformance checking service led to a refactored metamodel, which is presented in the sequel.
 
 COPE (Section~\ref{subsec:operator-based_co-evolution}) is also built atop a metamodel-independent syntax. However, the metamodel-independent syntaxes used by COPE and proposed here were developed independently, and both were first published in 2008 (in \cite{rose08hutn,herrmannsdoerfer08cope}).
 
@@ -159,13 +161,13 @@ The conformance checking service must be interoperable with the metamodel-indepe
   \label{fig:conformance_checking_constraints}
 \end{figure}
 
-After binding to the metamodel-independent syntax, the conformance of a model can be checked against any specific metamodel. To illustrate the value of the conformance checking service, consider again the metamodel evolution in Figure~\ref{fig:families_mms} and the bound model in Figure~\ref{fig:generic_binding}. For the evolved metamodel (Figure~\ref{fig:evolved_families_mm}), conformance checking for the model element representing the \texttt{Fa\-mi\-ly} would now fail. As illustrated in Figure~\ref{fig:generic_binding}, the \texttt{Fa\-mi\-ly} \texttt{Ob\-je\-ct} defines slots for features named  \texttt{na\-tu\-r\-alCh\-il\-dr\-en} and \texttt{ad\-op\-t\-edCh\-il\-dr\-en}, which are not defined the metaclass \texttt{Fa\-mi\-ly} in Figure~\ref{fig:evolved_families_mm}. Specifically, the model element representing the \texttt{Fa\-mi\-ly} does not satisfy conformance constraint 3, which states: \emph{each \texttt{Sl\-ot}'s \texttt{fe\-at\-u\-re} must be the name of a metamodel \texttt{Pr\-op\-er\-ty}. That \texttt{Pr\-op\-er\-ty} must belong to the \texttt{Sl\-ot}'s \texttt{ow\-n\-er}'s \texttt{ty\-pe}}.
+After binding to the metamodel-independent syntax, the conformance of a model can be checked against any specific metamodel. To illustrate the value of the conformance checking service, consider again the metamodel evolution in Figure~\ref{fig:families_mms} and the bound model in Figure~\ref{fig:generic_binding}. For the evolved metamodel (Figure~\ref{fig:evolved_families_mm}), conformance checking for the model element representing the \texttt{Fa\-mi\-ly} would fail. As illustrated in Figure~\ref{fig:generic_binding}, the \texttt{Fa\-mi\-ly} \texttt{Ob\-je\-ct} defines slots for features named  \texttt{na\-tu\-r\-alCh\-il\-dr\-en} and \texttt{ad\-op\-t\-edCh\-il\-dr\-en}, which are not defined the metaclass \texttt{Fa\-mi\-ly} in Figure~\ref{fig:evolved_families_mm}. Specifically, the model element representing the \texttt{Fa\-mi\-ly} does not satisfy conformance constraint 3, which states: \emph{each \texttt{Sl\-ot}'s \texttt{fe\-at\-u\-re} must be the name of a metamodel \texttt{Pr\-op\-er\-ty}. That \texttt{Pr\-op\-er\-ty} must belong to the \texttt{Sl\-ot}'s \texttt{ow\-n\-er}'s \texttt{ty\-pe}}.
 
 \subsubsection{Reference implementation in Java, EMF and Epsilon}
 \label{subsubsec:mmi_impl}
 Reference implementations of the three components were constructed with Java, EMF and Epsilon (Section~\ref{sec:mde_tools}). The way in which each component was implemented is now discussed.
 
-\paragraph{Metamodel-independent syntax} Ecore, the metamodelling language of EMF, was used to implement the metamodel-independent syntax. The final metamodel is shown in Figure~\ref{fig:mmi_syntax_impl}, which differs slightly to the initial design (Figure~\ref{fig:mmi_syntax_design}). Specifically, \texttt{Sl\-ot} is abstract, has a generic type (\texttt{T}), and is the superclass of \texttt{Att\-ri\-bu\-teSl\-ot}, \texttt{Re\-fe\-re\-n\-ceSl\-ot} and \texttt{Co\-nt\-ai\-nm\-entSl\-ot}. The three subclass of \texttt{Sl\-ot} were introduced to simplify the implementation of the abstract \texttt{ty\-peCo\-mp\-at\-ib\-i\-leWi\-th} method, which is used by the conformance service. The \texttt{ty\-peCo\-mp\-at\-ib\-i\-leWi\-th} method returns \texttt{true} if and only if every element of the \texttt{va\-lu\-es} attribute is type compatible with the \texttt{EC\-la\-ss\-if\-ier} parameter, which represents a metamodel type.  
+\paragraph{Metamodel-independent syntax} Ecore, the metamodelling language of EMF, was used to implement the metamodel-independent syntax. The final metamodel is shown in Figure~\ref{fig:mmi_syntax_impl}, which differs slightly to the initial design (Figure~\ref{fig:minimal_generic_metamodel}). Specifically, \texttt{Sl\-ot} is abstract, has a generic type (\texttt{T}), and is the superclass of \texttt{Att\-ri\-bu\-teSl\-ot}, \texttt{Re\-fe\-re\-n\-ceSl\-ot} and \texttt{Co\-nt\-ai\-nm\-entSl\-ot}. These changes simplified the implementation of the (abstract) \texttt{ty\-peCo\-mp\-at\-ib\-i\-leWi\-th} method, which is used by the conformance checking service, and returns \texttt{true} if and only if every element of the \texttt{va\-lu\-es} attribute is type compatible with the \texttt{EC\-la\-ss\-if\-ier} parameter (a metamodel type).  
 
 \begin{figure}[htbp]
   \centering
@@ -187,40 +189,37 @@ private void processAttributes(Attributes atts) {
 			final String feature = atts.getLocalName(index);
 			final String value   = atts.getValue(index);
 			
-			generator.addAttributeValue(feature, value, getCurrentLineNumber());
+			generator.addAttributeValue(feature, value);
 		}
 	}
 }
 \end{lstlisting}
 
-\paragraph{Conformance checking service} The conformance constraints were specified in EVL \cite{kolovos08evl}, a language tailored to specifying model verification, and hence suitable for rapid prototyping of consistency constraints. Listing~\ref{lst:conformance_constraint} shows the EVL that checks that each \texttt{ClassObject}'s type is a non-abstract class (constraint 1, above). The check part (line 3) verifies that a particular \texttt{ClassObject} (\texttt{self}) refers to a metamodel type that is not abstract. When the check fails, the message (line 4) is automatically added to a set of unsatisfied constraints by EVL. The \texttt{toClass} operation (lines 8-10) is used to determine the metamodel class (an instance of \texttt{EClass}) to which the \texttt{type} attribute (a String) of a \texttt{ClassObject} refers.
+\paragraph{Conformance checking service} The conformance constraints (Figure~\ref{fig:conformance_checking_constraints}) were implemented with EVL (Section~\ref{subsubsec:model_validation}), a language tailored for (inter-)model verification and hence suitable for rapid prototyping of consistency constraints. Listing~\ref{lst:conformance_constraint} shows the EVL constraint that checks whether each \texttt{Ob\-je\-ct}'s \texttt{ty\-pe} is a non-abstract class (constraint 1 in Figure~\ref{fig:conformance_checking_constraints}). The \texttt{ch\-e\-ck} part (line 3) verifies that a particular \texttt{Ob\-je\-ct} (referenced via the \texttt{se\-lf} keyword) refers to a metamodel type that is not abstract. When the check fails, the message (line 4) is automatically added to a set of unsatisfied constraints. The \texttt{toCl\-a\-ss} operation (lines 8-10) is used to determine the metamodel class (an instance of \texttt{EClass}) to which the \texttt{type} attribute (a String) of an \texttt{Ob\-je\-ct} refers. The conformance checking service returns a report of unsatisfied constraints.
 
 \begin{lstlisting}[caption=A constraint (in EVL) to check that only concrete metamodel types are instantiated., label=lst:conformance_constraint, language=EVL]
-context ClassObject {
+context Object {
 	constraint ClassMustNotBeAbstract {
 		check: not self.toClass().isAbstract()
 		message: 'Cannot instantiate the abstract class: ' + self.type
 	}
 }
 
-operation ClassObject toClass() : EClass {
+operation Object toClass() : EClass {
 	return Metamodel!EClass.all.selectOne(c|c.name == self.type);
 }
 \end{lstlisting}
 
-Type-compatibility has been implemented by delegating to the type-checking methods provided by EMF. The EVL constraints call methods on the \texttt{Slot} class (defined in the metamodel-independent syntax), which in turn call methods defined by EMF.
-% TODO - resinstate this?
-% In EMF, for example, model values conform either to types defined in a metamodel, or to types defined in the underlying programming language, Java. The sequel describes the way in type-compatibility checking has been implemented for the conformance checking service.
-		%Conformance constraints vary over modelling languages. For example, Ecore, the modelling language of EMF, is similar to but not the same as MOF. Metamodel features defined in Ecore can be marked as transient (not stored to disk) or unchangeable (read-only). Consequently in EMF, conformance constraints are required to restrict the feature value of slots to only non-transient, changeable features.
+Type-compatibility has been implemented by delegating to the type-checking methods provided by EMF. The EVL constraints call the \texttt{isTy\-peCo\-mp\-at\-ib\-leWi\-th} method on the \texttt{Sl\-ot} class. Each subclass of \texttt{Sl\-ot} provides an implementation of \texttt{isTy\-peCo\-mp\-at\-ib\-leWi\-th}, which delegates to EMF to perform type-checking.
+
+% Conformance constraints vary over modelling languages. For example, Ecore, the modelling language of EMF, is similar to but not the same as MOF. Metamodel features defined in Ecore can be marked as transient (not stored to disk) or unchangeable (read-only). Consequently in EMF, conformance constraints are required to restrict the feature value of slots to only non-transient, changeable features.
 
 \subsection{Structures Built atop the Metamodel-Independent Syntax}
-There are many potential uses for the components described in this section. Section~\ref{sec:notation} describes a textual modelling notation integrated with the metamodel-independent syntax to achieve live conformance checking. The migration language presented in Section~\ref{sec:flock} can be used with the metamodel independent syntax to perform partial migration (i.e. to produce models that conform to a generic metamodel rather than their evolved metamodel), but implementation of this work is not complete\footnote{The current version does not support partial migration of non-containment references and enumeration types.}.
+There are many potential uses for the components described in this section. Section~\ref{sec:notation} describes a textual modelling notation integrated with the metamodel-independent syntax to achieve live conformance checking. The migration language presented in Section~\ref{sec:flock} can be used with the metamodel independent syntax to perform partial migration.
 
 In addition to these uses, the metamodel-independent syntax is potentially useful during metamodel installation. As discussed in Section~\ref{subsec:modelling_framework_characteristics}, metamodel developers do not have access to downstream models, and conformance is implicitly enforced by modelling frameworks. Consequently, the conformance of models may be affected by the installation of a new version of a metamodel, and the conformance of models cannot be checked during installation. Typically, installing a new version of a metamodel can result in models that no longer conform to their metamodel and cannot be used with the modelling framework. Moreover, a user discovers conformance problems only when attempting to use a model after installation has completed, and not as part of the installation process.
-
-% TODO - Consider discussing the number of revisions of say, UML (and other metamodels), in Chapter 2. This will allow the reader to get a sense of the scale of the problem.
 
 To enable conformance checking as part of metamodel installation in EMF, the metamodel-independent syntax has been integrated with Concordance in \cite{rose10concordance}. The work was conducted outside of the scope of the thesis, and is now summarised to indicate the usefulness of the metamodel-independent syntax for supporting the automation of co-evolution activities. Concordance provides a mechanism for resolving inter-model references (such as those between models and their metamodels). Without Concordance, determining the the instances of a metamodel is possible only by checking every model in the workspace. Integrating Concordance and the metamodel-independent syntax resulted in a service, which Epsilon (Section~\ref{subsec:epsilon}) executes after the installation of a metamodel to identify the models that are affected by the metamodel changes. All models that conform to the old version of the metamodel are checked for conformance with the new metamodel. As such, conformance checking occurs automatically and immediately after metamodel installation. Conformance problems are detected and reported immediately, rather than when an affected model is next used.
 
 \subsubsection{Summary}
-Modelling frameworks implicitly enforce conformance, which presents challenges for managing co-evolution. In particular, detecting and reconciling conformance problems involves managing non-conformant models, which cannot be loaded by modelling frameworks and hence cannot be used with model editors or model management operations. The metamodel-independent syntax proposed in this section enables modelling frameworks to load non-conformant models by binding models to a generic metamodel. The metamodel-independent syntax has been integrated with Concordance \cite{rose10concordance} to facilitate the reporting of conformance problems during metamodel installation, and underpins the implementation of the textual modelling notation presented in Sections~\ref{sec:notation}. The benefits and drawbacks of the metamodel-independent syntax in the context of user-driven co-evolution are explored in Chapter~\ref{Evaluation}. 
+Modelling frameworks implicitly enforce conformance, which presents challenges for managing co-evolution. In particular, detecting and reconciling conformance problems involves managing non-conformant models, which cannot be loaded by modelling frameworks and hence cannot be used with model editors or model management operations. The metamodel-independent syntax proposed in this section enables modelling frameworks to load non-conformant models, and has has been integrated with Concordance \cite{rose10concordance} to facilitate the reporting of conformance problems during metamodel installation. The metamodel-independent syntax, binding service and conformance checking service underpin the implementation of the textual modelling notation presented in the sequel. The benefits and drawbacks of the metamodel-independent syntax in the context of user-driven co-evolution are explored in Chapter~\ref{Evaluation}. 

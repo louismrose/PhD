@@ -1,61 +1,7 @@
-\BOOKMARK [0][-]{section*.1}{Contents}{}
-\BOOKMARK [0][-]{section*.2}{List of Figures}{}
-\BOOKMARK [0][-]{section*.3}{List of Tables}{}
-\BOOKMARK [0][-]{section*.4}{Listings}{}
-\BOOKMARK [0][-]{chapter*.6}{Author Declaration}{}
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}
-\BOOKMARK [1][-]{section.1.1}{Model-Driven Engineering}{chapter.1}
-\BOOKMARK [1][-]{section.1.2}{Software Evolution}{chapter.1}
-\BOOKMARK [1][-]{section.1.3}{Motivation: Software Evolution in MDE}{chapter.1}
-\BOOKMARK [1][-]{section.1.4}{Research Hypothesis}{chapter.1}
-\BOOKMARK [1][-]{section.1.5}{Research Method}{chapter.1}
-\BOOKMARK [1][-]{section.1.6}{Research Results}{chapter.1}
-\BOOKMARK [1][-]{section.1.7}{Thesis Structure}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Background: Model-Driven Engineering}{}
-\BOOKMARK [1][-]{section.2.1}{MDE Terminology and Principles}{chapter.2}
-\BOOKMARK [1][-]{section.2.2}{MDE Guidelines and Methods}{chapter.2}
-\BOOKMARK [1][-]{section.2.3}{MDE Tools}{chapter.2}
-\BOOKMARK [1][-]{section.2.4}{Research Relating to MDE}{chapter.2}
-\BOOKMARK [1][-]{section.2.5}{Benefits of and Current Challenges to MDE}{chapter.2}
-\BOOKMARK [1][-]{section.2.6}{Chapter Summary}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Review of Software Evolution}{}
-\BOOKMARK [1][-]{section.3.1}{Software Evolution Theory}{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{Software Evolution in Practice}{chapter.3}
-\BOOKMARK [1][-]{section.3.3}{Research Challenges}{chapter.3}
-\BOOKMARK [1][-]{section.3.4}{Chapter Summary}{chapter.3}
-\BOOKMARK [0][-]{chapter.4}{MDE and Evolution: Problem Analysis}{}
-\BOOKMARK [1][-]{section.4.1}{Locating Data}{chapter.4}
-\BOOKMARK [1][-]{section.4.2}{Analysing Existing Techniques}{chapter.4}
-\BOOKMARK [1][-]{section.4.3}{Requirements Identification}{chapter.4}
-\BOOKMARK [1][-]{section.4.4}{Chapter Summary}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{Design and Implementation}{}
 \BOOKMARK [1][-]{section.5.1}{Metamodel-Independent Syntax}{chapter.5}
 \BOOKMARK [1][-]{section.5.2}{Textual Modelling Notation}{chapter.5}
 \BOOKMARK [1][-]{section.5.3}{Analysis of Languages used for Migration}{chapter.5}
 \BOOKMARK [1][-]{section.5.4}{Epsilon Flock: A Model Migration Language}{chapter.5}
 \BOOKMARK [1][-]{section.5.5}{Chapter Summary}{chapter.5}
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}
-\BOOKMARK [1][-]{section.6.1}{Evaluating User-Driven Co-Evolution}{chapter.6}
-\BOOKMARK [1][-]{section.6.2}{Evaluating Conservative Copy}{chapter.6}
-\BOOKMARK [1][-]{section.6.3}{Evaluating Co-evolution Tools}{chapter.6}
-\BOOKMARK [1][-]{section.6.4}{Transformation Tools Contest}{chapter.6}
-\BOOKMARK [1][-]{section.6.5}{Limitations}{chapter.6}
-\BOOKMARK [1][-]{section.6.6}{Chapter Summary}{chapter.6}
-\BOOKMARK [0][-]{chapter.7}{Conclusions}{}
-\BOOKMARK [1][-]{section.7.1}{Research Contributions}{chapter.7}
-\BOOKMARK [1][-]{section.7.2}{Future Work}{chapter.7}
-\BOOKMARK [1][-]{section.7.3}{Closing Remarks}{chapter.7}
-\BOOKMARK [0][-]{appendix.A}{A Graphical Editor for Process-Oriented Programs}{}
-\BOOKMARK [1][-]{section.A.1}{Iteration 1: Processes and Channels}{appendix.A}
-\BOOKMARK [1][-]{section.A.2}{Iteration 2: Interoperability with GMF}{appendix.A}
-\BOOKMARK [1][-]{section.A.3}{Iteration 3: Shared Channels}{appendix.A}
-\BOOKMARK [1][-]{section.A.4}{Iteration 4: Connection Points}{appendix.A}
-\BOOKMARK [1][-]{section.A.5}{Iteration 5: Connection Point Types}{appendix.A}
-\BOOKMARK [1][-]{section.A.6}{Iteration 6: Nested Processes and Channels}{appendix.A}
-\BOOKMARK [1][-]{section.A.7}{Summary}{appendix.A}
-\BOOKMARK [0][-]{appendix.B}{Co-evolution Examples}{}
-\BOOKMARK [1][-]{section.B.1}{Newsgroups Examples}{appendix.B}
-\BOOKMARK [1][-]{section.B.2}{UML Example}{appendix.B}
-\BOOKMARK [1][-]{section.B.3}{GMF Examples}{appendix.B}
-\BOOKMARK [0][-]{appendix.C}{TTC Results}{}
-\BOOKMARK [0][-]{section*.206}{Bibliography}{}
+\BOOKMARK [0][-]{section*.42}{Bibliography}{}
