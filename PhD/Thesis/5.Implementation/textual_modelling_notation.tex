@@ -2,16 +2,62 @@
 
 \section{Textual Modelling Notation}
 \label{sec:notation}
-The analysis of co-evolution examples in Chapter~\ref{Analysis} highlighted two ways in which co-evolution is managed. In \emph{developer-driven} co-evolution, migration is specified by the metamodel developer in an executable format; while in \emph{user-driven co-evolution} migration is specified by the metamodel developer in prose or not at all. Performing user-driven co-evolution with modelling frameworks presents two key challenges that have not been explored by existing research. Firstly, user-driven co-evolution frequently involves editing the storage representation of the model, such as XMI. Model storage representations are typically not optimised for human use and hence user-driven co-evolution can be error-prone. Secondly, non-conformant model elements must be identified during user-driven co-evolution. When a multi-pass parser is used to load models, as is the case with EMF, not all conformance problems are reported at once, and user-driven co-evolution is an iterative process. In Section~\ref{sec:requirements_identification}, these challenges lead to the identification of the following requirement: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a sound and complete conformance report for the original model and evolved metamodel.}
+The analysis of co-evolution examples in Chapter~\ref{Analysis} highlighted two ways in which co-evolution is managed. In \emph{developer-driven} co-evolution, migration is specified by the metamodel developer in an executable format; while in \emph{user-driven co-evolution} migration is specified by the metamodel developer in prose or not at all. Performing user-driven co-evolution with modelling frameworks presents two key challenges that have not been explored by existing research. Firstly, user-driven co-evolution often involves editing the storage representation of the model, such as XMI. Model storage representations are typically not optimised for human use and hence user-driven co-evolution can be error-prone. Secondly, non-conformant model elements must be identified during user-driven co-evolution. When a multi-pass parser is used to load models, as is the case with EMF, not all conformance problems are reported at once, and user-driven co-evolution is an iterative process. In Section~\ref{sec:requirements_identification}, these challenges led to the identification of the following requirement: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a sound and complete conformance report for the original model and evolved metamodel.}
 
 The remainder of this section describes a textual notation for models, which has been implemented for EMF, and discusses the way in which the notation has been integrated with the metamodel independent syntax described in Section~\ref{sec:mmi_syntax} to produce conformance reports. 
 
+\subsection{Model Migration with XMI}
+The co-evolution example from Section~\ref{sec:mmi_syntax} is now used to illustrate the way in which model migration is performed by editing the underlying storage representation of a model, such as XMI (Section~\ref{subsec:mof}). Consider again the evolution of the families metamodel (Figure~\ref{}) and a model conforming to the original metamodel (Figure~\ref{}).
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[Original metamodel.]
+	{
+	    \label{fig:original_families_mm}
+	    \includegraphics[scale=0.9]{5.Implementation/images/families.pdf}
+	}
+	\subfigure[Evolved metamodel.]
+	{
+	    \label{fig:evolved_families_mm}
+	    \includegraphics[scale=0.9]{5.Implementation/images/families_evolved.pdf}
+	}
+	\caption{Evolution of a families metamodel, based on the metamodel in \cite{hutn}.}
+\label{fig:families_mms_repeated}
+\end{figure}
+
+\begin{figure}[htbp]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=10cm]{5.Implementation/images/family_model.png}
+  \end{center}
+  \caption[A family model]{A family model, which conforms to the metamodel in Figure~\ref{fig:original_families_mm_repeated}}
+  \label{fig:families_model_repeated}
+\end{figure}
+
+The model in Figure~\ref{fig:families_model_repeated} does not conform to the evolved metamodel (because it uses the \texttt{na\-tu\-ralCh\-il\-dr\-en} and \texttt{ad\-op\-t\-edCh\-il\-dr\-en} features, which are not defined for \texttt{Pe\-rs\-on}), and hence cannot be loaded by the modelling framework. Migration might be achieved by editing the underlying storage representation directly (i.e. manually manipulating XMI). Listing~\ref{} shows the XMI for the model in Figure~\ref{fig:families_model_repeated}.
+
+\begin{lstlisting}[caption=XMI for the family model in Figure~\ref{fig:families_model_repeated}, label=lst:xmi, language=XML]
+<?xml version="1.0" encoding="ASCII"?>
+<families:Family xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:families="families" xmi:id="_kE2LkAagEeC-FIOYrvUj0A" name="Smiths">
+  <naturalChildren xmi:id="_q8RWYAagEeC-FIOYrvUj0A" name="Paul"/>
+  <adoptedChildren xmi:id="_nj6TcAagEeC-FIOYrvUj0A" name="John"/>
+</families:Family>
+\end{lstlisting}
+
+XMI is a concrete syntax for models, which has been optimised for use by machines and not by humans \cite{hutn}. Models often contain information that is not relevant to the domain, such as the universally unique identifiers (xmi:id attributes) on lines 2, 3 and 4 of Listing~\ref{lst:xmi}. Furthermore, information is often omitted to reduce the size of the model on disk. For example, the model elements on lines 3 and 4 of Listing~\ref{lst:xmi} do not specify their type (\texttt{Pe\-rs\-on}) and this is inferred from the type of the \texttt{na\-tu\-ralCh\-il\-dr\-en} and \texttt{ad\-op\-t\-edCh\-il\-dr\-en} features. These issues affect the usability of XMI, and the evaluation presented in Section~\ref{sec:exemplar_user-driven_co-evo} further explores the suitability of XMI for user-driven co-evolution. The remainder of this section discusses the design and implementation of a syntax that provides an alternative to XMI.
+
+\subsection{Potential Alternatives to XMI}
+Two characteristics were considered when designing a notation that provides an alternative to representing models with XMI. Models can be represented textually or graphically (Section~\ref{subsec:modelling_languages}), and using a metamodel-specific or a metamodel-independent syntax (Section~\ref{sec:mmi_syntax}). The benefits and drawbacks of each option have been considered particularly with respect to their implications for user-driven co-evolution, and are now discussed.
+
+\paragraph{Metamodel-independent vs metamodel-specific} A metamodel-specific syntax is defined in terms from the metamodel, and is often more concise than a metamodel-independent syntax. A metamodel-specific (and textual) syntax for part of the evolved families metamodel (Figure~\ref{}) is shown in Listing~\ref{}. Notice that the syntax is defined in metamodel terms, such as \texttt{Fa\-mi\-ly} and \texttt{ch\-il\-dr\-en}. Consequently, the syntax definition can be affected by metamodel evolution, and hence cannot be used to load a model that does not conform to its metamodel. As the alternative syntax was to be used during user-driven co-evolution (to manipulate models that do not conform to their metamodel), a metamodel-independent representation was preferred to a metamodel-specific representation. 
+
+\paragraph{Textual vs graphical} For user-driven co-evolution, the usability of the notation is important because a metamodel user manipulates models with the notation to perform migration. The choice between a textual or graphical notation likely has a significant impact on usability, but it was not feasible to conduct a thorough user analysis given the time constraints of the thesis. Instead, a textual notation was selected (to reduce implementation effort). The textual notation was implemented such that the addition of an equivalent graphical notation could be added in future work. 
+
+Presently, several tools exist for representing models with textual, metamodel-specific syntaxes (such as the text-to-model transformation tools discussed in Section~\ref{subsubsec:model_transformation}), but no tools exist for representing models in a metamodel-independent syntax other than XMI. \cite{steel01hutn} describe the Distributed Systems Technology Centre's TokTok project, which provided a human-usable textual modelling notation, and is now inactive. The metamodel-independent representation described in \cite{muller05hutn} has been abandoned in favour of Sintaks\footnote{\url{http://www.kermeta.org/sintaks/}}, a tool for constructing metamodel-specific representations. However, the metamodel-independent representations described in \cite{steel01hutn,muller05hutn} were both based on an OMG standard, Human-Usable Textual Notation (HUTN) \cite{hutn}, which defines a textual modelling notation that aims to conform to human-usability criteria \cite{hutn}. As a metamodel-independent, textual concrete syntax, HUTN was seen as an ideal starting point for designing a textual modelling notation for use in user-driven co-evolution.
 
 \subsection{Human-Usable Textual Notation}
 \label{subsec:hutn}
-The OMG's Human-Usable Textual Notation (HUTN) \cite{hutn} defines a textual modelling notation, which aims to conform to human-usability criteria \cite{hutn}. There is no current reference implementation of HUTN: \cite{steel01hutn} describe the Distributed Systems Technology Centre's TokTok project (an implementation of the HUTN specification), which is now inactive (and the source code has vanished), whilst the implementation of HUTN described in \cite{muller05hutn} has been abandoned in favour of Sintaks\footnote{\url{http://www.kermeta.org/sintaks/}}, which operates on domain-specific concrete syntax.
-
-Model storage representations are often optimised for reducing storage space or increasing the speed of random access, rather than for human usability. By contrast, the HUTN specification states its primary design goal as human-usability and ``this is achieved through consideration of the successes and failures of common programming languages'' \cite[Section 2.2]{hutn}. The HUTN specification refers to two studies of programming language usability to justify design decisions, but, because no reference implementation exists, the specification does not evaluate the human-usability of the notation. As HUTN is optimised for human-usability, using HUTN rather than XMI for user-driven co-evolution might lead to increased developer productivity. This claim is explored in Chapter~\ref{Evaluation}.
+The HUTN specification states its primary design goal as human-usability and ``this is achieved through consideration of the successes and failures of common programming languages'' \cite[Section 2.2]{hutn}. The HUTN specification refers to two studies of programming language usability to justify design decisions, but, because no reference implementation exists, the OMG specification does not evaluate the human-usability of the notation. As HUTN is optimised for human-usability, using HUTN rather than XMI for user-driven co-evolution should lead to increased developer productivity. This claim is explored in Chapter~\ref{Evaluation}.
 
 Like the generic metamodel presented in Section~\ref{sec:mmi_syntax}, HUTN is a metamodel-independent syntax for 
 MOF. However, the HUTN specification focuses on concrete syntax, whereas the metamodel-independent syntax presented in Section~\ref{sec:mmi_syntax} focuses on abstract syntax. In this section, the key features of HUTN are introduced, and the sequel introduces a reference implementation of HUTN. To illustrate the notation, the MOF-based metamodel of families in Figure \ref{fig:example-mm} is used. The \texttt{nu\-cl\-e\-ar} attribute on the \texttt{Fa\-mi\-ly} class is used to indicate that the family ``comprises only a father, a mother, and children.'' \cite{nucleardef}.
