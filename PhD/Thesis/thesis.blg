@@ -117,7 +117,7 @@ Name 2 in "Starfield, M., and Smith, K.A., and Bleloch, A.L." has a comma at the
 while executing---line 1253 of file longname.bst
 You've used 175 entries,
             2472 wiz_defined-function locations,
-            1432 strings with 33340 characters,
+            1432 strings with 33342 characters,
 and the built_in function-call counts, 74577 in all, are:
 = -- 7404
 > -- 3162

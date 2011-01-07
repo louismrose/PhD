@@ -2,11 +2,11 @@
 
 \section{Epsilon Flock: A Model Migration Language}
 \label{sec:flock}
-Driven by the analysis presented above, a domain-specific language for model migration, Epsilon Flock (subsequently referred to as Flock), has been designed and implemented. Section~\ref{subsec:flock_design} discusses the principle tenets of Flock, which include user-defined migration rules and a novel algorithm for relating source and target model elements. In Section~\ref{subsec:flock_examples}, Flock is demonstrated via application to three examples of model migration. The work described in this section has been published in \cite{rose10flock}.
+Driven by the analysis presented above, a domain-specific language for model migration, Epsilon Flock (subsequently referred to as Flock), has been designed and implemented. Flock makes idiomatic a novel and complicated semantics for automatically copying model elements from original to migrated model and a domain-specific language was preferred to repurposing an existing language to capture the semantics with a compact and tailored syntax. Section~\ref{subsec:flock_design} discusses the principle tenets of Flock, which include user-defined migration rules and a novel algorithm for relating source and target model elements. In Section~\ref{subsec:flock_examples}, Flock is demonstrated via application to three examples of model migration. The work described in this section has been published in \cite{rose10flock}.
 
 \subsection{Design and Implementation}
 \label{subsec:flock_design}
-Flock has been designed to be a rule-based transformation language that mixes declarative and  imperative parts. Consequently, Flock should be familiar to developers who have used hybrid-style M2M transformation languages, such as ATL and ETL \cite{kolovos08etl}. Flock has a compact syntax. The way in which Flock relates source to target elements is novel; it is neither a new- nor an existing-target relationship. Instead, elements are copied conservatively, as described below.
+Flock has been designed to be a rule-based transformation language that mixes declarative and  imperative parts. Consequently, Flock should be familiar to developers who have used hybrid-style M2M transformation languages, such as ATL and ETL \cite{kolovos08etl}. Flock is syntactically efficient, but semantically complex. In particular, the way in which Flock relates source to target elements is novel; it is neither a new- nor an existing-target relationship. Instead, elements are copied conservatively, as described below.
 
 Like Epsilon HUTN (Section~\ref{subsec:epsilon_hutn}), Flock is built atop Epsilon. In particular, Flock uses EMC to provide interoperability with several modelling frameworks, and EOL for specifying the imperative part of user-defined migration rules.
 
@@ -57,6 +57,7 @@ The rule selection phase has the following behaviour:
 	\subitem $-$ Add the pair \texttt{<r,e>} to the set of selected rules.
 \end{itemize}
 
+Rules are ordered according to their position in the Flock source file. A rule that appears earlier (higher) in the source file has priority. Ordering rules according to generality is an alternative approach for distinguishing between applicable rules \cite{wallace05modular}. In model transformation, the generality of a rule might be assessed by considering its source type and guard. For Flock, the former approach was preferred, because it simplified implementation and is consistent with the way in which rules are selected in other languages of the Epsilon platform.
 
 \paragraph{Equivalence Establishment}
 The equivalence establishment phase creates an equivalent model element, \texttt{e'}, in M for every pair of rules and original model elements, \texttt{<r,e>}. The equivalent establishment phase produces a set of triples of the form \texttt{<r,e,e'>}, and has the following behaviour:
@@ -82,7 +83,7 @@ The final phase executes the imperative part of the user-defined migration rules
 
 \subsubsection{Conservative Copy}
 \label{subsubsec:conservative_copying}
-Flock contributes a novel algorithm, termed \emph{conservative copy}, that copies model elements from original to migrated model only when those model elements conform to the evolved metamodel. Conservative copy is a hybrid of the new- and existing-target source-target relationships that are commonly used in M2M transformation \cite{czarnecki06survey}.
+Flock contributes a novel algorithm, termed \emph{conservative copy}, that copies model elements from original to migrated model only when those model elements conform to the evolved metamodel. Conservative copy is a hybrid of the new- and existing-target source-target relationships that are commonly used in M2M transformation \cite{czarnecki06survey}, because some model elements are copied from source to target (as in an existing-target transformation), while some model elements must be copied explicitly (as in a new-target transformation).
 
 Conservative copy operates on an original model element, \texttt{e}, and its equivalent model element in the migrated model, \texttt{e'}, and has the following behaviour:
 
@@ -101,7 +102,7 @@ The definition of conformance varies over modelling frameworks. Typically, confo
 	\item The type of \texttt{v} must be the same as or a subtype of the type of \texttt{f}.
 \end{itemize}
 
-EMC provides drivers for several modelling frameworks, permitting management of models defined with EMF, the Metadata Repository (MDR), Z or XML. To support migration between metamodels defined in heterogenous modelling frameworks, EMC has been extended to include a conformance checking service; each EMC driver provides conformance checking semantics specific to its modelling framework. Specifically, EMC define Java interfaces for specifying the way in which model values are written to a model, and an additional, conformance-checking Java method has been added to the interface. When a Flock module is executed, conformance checking responsibilities are delegated to EMC drivers by calling the new method. 
+EMC provides drivers for several modelling frameworks, permitting management of models defined with EMF, the Metadata Repository (MDR), Z or XML. To support migration between metamodels defined in heterogenous modelling frameworks, EMC has been extended to support conformance checking; each EMC driver provides conformance checking semantics specific to its modelling framework. Specifically, EMC define Java interfaces for specifying the way in which model values are written to a model, and an additional, conformance checking Java method has been added to the interface. When a Flock module is executed, conformance checking responsibilities are delegated to EMC drivers by calling the new method. The conformance checking support in EMC is applicable to other areas of the Epsilon platform and, in particular, could be used to add some static type checking to the Epsilon languages, which are currently dynamically typed.
 
 In response to some types of metamodel evolution, some categories of model value must be converted before being copied from the original to the migrated model. Again, the need for and semantics of this conversion varies over modelling frameworks. For example, reference values typically require conversion before copying because, once copied, they must refer to elements of the migrated rather than the original model. In this case, the set of equivalences (\texttt{<r,e,e'>}) can be used to perform the conversion. In other cases, the target modelling framework must be used to perform the conversion, such as when EMF enumeration literals are copied.
 

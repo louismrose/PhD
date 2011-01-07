@@ -196,6 +196,14 @@ K.~Czarnecki and S.~Helsen.
 \newblock Feature-based survey of model transformation approaches.
 \newblock {\em IBM Systems Journal}, 45(3):621--646, 2006.
 
+\bibitem[{de Lara} \& Guerra 2010]{delara10generic}{$~$}
+J.~{de Lara} and E.~Guerra.
+\newblock Generic meta-modelling with concepts, templates and mixin layers.
+\newblock In D.C. Petriu, N.~Rouquette, and {\O}.~Haugen, editors, {\em Proc.
+  International Conference on Model Driven Engineering Languages and System
+  (MoDELS), Part I}, volume 6394 of {\em Lecture Notes in Computer Science},
+  pages 16--30. Springer, 2010.
+
 \bibitem[Deursen {\it et al.}\  2000]{deursen00dslbib}{$~$}
 A.~van Deursen, P.~Klint, and J.~Visser.
 \newblock {Domain-Specific Languages}: An annotated bibliography.
@@ -626,14 +634,6 @@ R.~L{\"a}mmel.
 \newblock Towards generic refactoring.
 \newblock In B.~Fischer and E.~Visser, editors, {\em Proc. ACM SIGPLAN Workshop
   on Rule-Based Programming}, pages 15--28. ACM, 2002.
-
-\bibitem[Lara \& Guerra 2010]{delara10generic}{$~$}
-J.~de~Lara and E.~Guerra.
-\newblock Generic meta-modelling with concepts, templates and mixin layers.
-\newblock In D.C. Petriu, N.~Rouquette, and {\O}.~Haugen, editors, {\em Proc.
-  International Conference on Model Driven Engineering Languages and System
-  (MoDELS), Part I}, volume 6394 of {\em Lecture Notes in Computer Science},
-  pages 16--30. Springer, 2010.
 
 \bibitem[Lehman 1969]{lehman69programming}{$~$}
 M.M. Lehman.
