@@ -17,7 +17,7 @@ Figure~\ref{fig:analysis_overview} summarises the objectives of this chapter. in
 \end{figure}
 
 
-\section{Locating Data}
+\section{Examples of Evolution from MDE Projects}
 \label{sec:locating_data}
 In Chapter~\ref{LiteratureReview}, three categories of evolutionary change were identified: model refactoring, synchronisation and co-evolution. Existing MDE projects were examined for examples of synchronisation and co-evolution and, due to time constraints, examples of model refactoring were not considered. The examples were used to provide requirements for developing structures and processes for evolutionary changes in the context of MDE. In this section, the requirements used to select example data are described, along with candidate and selected MDE projects. The section concludes with a discussion of further examples, which were obtained from joint research -- with colleagues in this department and at the University of Kent -- and from related work on the evolution of object-oriented programs.  
 
@@ -175,7 +175,7 @@ This section has described the identification of examples for analysing the way 
 
 The lack of examples of model synchronisation might indicate that model synchronisation is not an important evolutionary activity for MDE. An alternative explanation is that, in 2008, many projects were beginning to adopt MDE principles, but had not transitioned to a fully model-driven style of development. \cite{rios06mdd_maturity} propose a maturity model for MDE, which comprises 5 maturity levels. \cite{rios06mdd_maturity} suggest that MDE is adopted in an incremental manner and that model transformations are specified only after models are first used in an ad-hoc manner and MDE is applied to automate simple tasks. Regular, empirical assessment is necessary to investigate the adoption of MDE and the need to support evolutionary activities, such a model synchronisation. Due to the lack of examples of model synchronisation, the remainder of the thesis focuses on model-metamodel co-evolution.
 
-\section{Analysing Existing Techniques}
+\section{An Analysis of Existing Co-Evolution Techniques}
 \label{sec:analysing_existing_techniques}
 % Having described the selection of suitable data for the analysis, we will then outline the way in which we have applied existing techniques to the data, and introduce criteria against which the effectiveness of existing techniques will be measured. 
 The examples of co-evolution identified in the Section~\ref{sec:locating_data} were analysed to identify and compare existing techniques for managing co-evolution. This section discusses the results of analysing the examples; namely a deeper understanding of modelling framework characteristics that affect the management of co-evolution (Section~\ref{subsec:modelling_framework_characteristics}), and a categorisation of existing techniques for managing co-evolution (Sections~\ref{subsec:user-driven_co-evolution} and \ref{subsec:co-evolution_categorisation}) . The work presented here was published in \cite{rose09analysis,rose09enhanced}.
@@ -377,9 +377,8 @@ Existing techniques for performing developer-driven co-evolution have been compa
 Manual specification affords the metamodel developer more flexibility in the specification of the migration strategy, but, because languages that do not capture re-occurring model migration patterns are typically used, may require more effort. By contrast, inference approaches derive a migration strategy from a metamodel history and hence require less effort from the metamodel developer. However, an inference approach affords the metamodel developer less flexibility, and may restrict the metamodel evolution process because, for example, the order of metamodel changes affects the inference of a migration strategy. Operator-based approaches occupy the middle-ground: by restricting the way in which metamodel evolution is expressed, an operator-based approach can be used to infer a migration strategy. The metamodel developer selects appropriate operators that express both metamodel evolution and model migration. Operator-based approaches require a specialised metamodel editor, and it is not yet clear whether they can be applied when a metamodel is represented with a freeform (e.g. textual) rather than a structured (e.g. tree-based) syntax.
 
 
-\section{Requirements Identification}
+\section[Requirements for Identifying and Managing Co-Evolution][Requirements for Co-Evolution]{Requirements for Identifying and Managing Co-Evolution}
 \label{sec:requirements_identification}
-% The analysis of existing techniques will lead to requirements for our research. We will conclude the chapter by enumerating these requirements, refining the high-level research objectives from the literature review chapter into lower-level research objectives.
 
 The analysis presented throughout this chapter has highlighted a number of challenges for identifying and managing model-metamodel co-evolution. Several factors affect and restrict the way in which co-evolution is performed in practice. The way in which modelling frameworks are implemented affect the ways in which the impact analysis and propagation of metamodel changes can be performed. Existing co-evolution approaches are developer-driven rather than user-driven (i.e. assume that the metamodel developer will provide a migration strategy), which was not the case for several of the examples identified in Section~\ref{sec:locating_data}. Additionally, the languages used to specify model migration vary over existing co-evolution approaches, which inhibits the conceptual and practical re-use of model migration patterns. This section contributes requirements for structures and processes that seek to address these challenges.
 
