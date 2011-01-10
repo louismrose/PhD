@@ -1,0 +1,737 @@
+%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+
+\section[Model Management Operations for Epsilon HUTN][Model Management Operations for HUTN]{Model Management Operations for Epsilon HUTN}
+\label{sec:hutn_listings}
+The code listings in this section demonstrate the way in which Epsilon HUTN (Section~\ref{sec:notation}) is implemented, and are taken from Epsilon HUTN v0.8.0 (which was released in November 2010).
+
+\subsection{AST Model to Intermediate Model}
+The ETL transformation in Listing~\ref{lst:m2m_full} transforms a model that conforms to the AST metamodel (Figure~\ref{fig:ast_metamodel}) into a model that conforms to the metamodel-independent syntax (Section~\ref{sec:mmi_syntax}).
+
+\begin{lstlisting}[caption=Transforming AST models to intermediate models with ETL., label=lst:m2m_full, language=ETL]
+pre {
+	var EmfTool := new Native('org.eclipse.epsilon.emc.emf.tools.EmfTool');
+
+	var ast    := AntlrAst!Ast.allInstances().first();
+	var config := Config!Configuration.allInstances().first();
+	
+	var spec := Intermediate!Spec.allInstances().first();
+	
+	for (root in ast.roots) {
+		if (AntlrAst!NameNode.isType(root) and root.text.toLowerCase() = '@spec') {		
+			for (child in root.children) {		
+			
+				-- process @Spec.model package	
+				if (child.text.toLowerCase() = 'model') {
+					var modelFileAttribute := child.children.selectOne(n : AntlrAst!NameNode | n.text = 'file');
+					
+					if (modelFileAttribute.isDefined()) {
+						var modelFileValue := modelFileAttribute.children.selectOne(t : AntlrAst!TextualValueNode | true);
+						
+						if (modelFileValue.isDefined()) {
+							spec.modelFile = modelFileValue.getValue();	
+						}
+					}
+
+				-- process all other @Spec packages as metamodel specifications
+				} else {
+				
+					for (grandchild in child.children.select(n : AntlrAst!NameNode | n.text.toLowerCase() = 'nsuri')) {
+						for (valueNode in grandchild.children.select(t : AntlrAst!TextualValueNode | true)) {
+							var nsUri := new Intermediate!NsUri;
+							nsUri.value := valueNode.getValue();
+							nsUri.addTraceabilityInfo(valueNode.parent);
+							spec.nsUris.add(nsUri);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+rule NameNode2PackageObject
+	transform n : AntlrAst!NameNode
+	to p : Intermediate!PackageObject {
+	
+	guard : n.parent.isUndefined() and n.text.toLowerCase() <> '@spec'
+	
+	spec.objects.add(p);
+	
+	p.type := n.text;
+	p.addIdentifier(n, false);
+	p.addTraceabilityInfo(n);
+	
+	if (not spec.nsUris.isEmpty()) {
+		for (nsUri in spec.nsUris) {
+			var package := EmfTool.getEPackage(nsUri.value);
+			
+			if (package.isDefined()) {
+				p.metamodel.add(package);
+			}
+		}
+	}
+	
+	for (child in n.children.select(n : AntlrAst!NameNode | true)) {
+		p.classObjects.add(child.equivalent());
+	}
+	
+	-- Transform association blocks and infix associations
+	n.children.forAll(a : AntlrAst!AssociationInstanceNode | a.createReferences(p));
+}
+
+rule NameNode2ClassObject
+	transform n : AntlrAst!NameNode
+	to c : Intermediate!ClassObject {
+	
+	guard : n.isClass() and n.parent.text.toLowerCase() <> '@spec'
+	
+	createClassObject(c, n);
+}
+
+operation AntlrAst!AssociationInstanceNode createReferences(package : Intermediate!PackageObject) {
+
+	var slot : Intermediate!ReferenceSlot;	
+	var currentChildIsSource := true;
+	
+	for (ref in self.children) {
+		var cls := Intermediate!ClassObject.allInstances().selectOne(c|c.identifier = ref.children.first().text.stripQuotes());
+		
+		if (cls.isUndefined()) {
+			cls := createClassObject(ref);
+			package.classObjects.add(cls);
+		}
+		
+		if (currentChildIsSource) {
+			slot := cls.slots.selectOne(r : Intermediate!ReferenceSlot | r.feature = self.text);
+			
+			if (slot.isUndefined()) {
+				slot := new Intermediate!ReferenceSlot;
+				slot.feature := self.text;
+				cls.slots.add(slot);
+			}
+		
+		} else {
+			slot.values.add(cls.identifier);
+		}
+		
+		currentChildIsSource := not currentChildIsSource;
+	}
+}
+
+
+
+operation AntlrAst!Node isClass() : Boolean {
+	if (self.parent.isUndefined()) {
+		return false;
+	} else {
+		return ast.roots.includes(self.parent);
+	}
+}
+
+operation Intermediate!ModelElement addTraceabilityInfo(node : AntlrAst!Node) :  Intermediate!ModelElement {
+	self.line := node.line;
+	self.col  := node.column;
+	return self;
+}
+
+operation Intermediate!Object addIdentifier(node : AntlrAst!Node) {
+	self.addIdentifier(node, true);
+}
+
+operation Intermediate!Object addIdentifier(node : AntlrAst!Node, infer : Boolean) {
+	var identifierNode : AntlrAst!Node := node.children.select(t : AntlrAst!TextualValueNode | true).first();
+	
+	if (identifierNode.isDefined()) {
+		self.identifier := identifierNode.text.stripQuotes();
+	
+	} else if (infer) {
+		var nameSlot : Intermediate!AttributeSlot := self.slots.select(s: Intermediate!AttributeSlot | s.feature = self.getIdentifierAttributeName()).first();
+		
+		if (nameSlot.isDefined() and nameSlot.values.size() = 1) {
+			self.identifier := nameSlot.values.first();
+		} 
+	}
+}
+
+operation Intermediate!ClassObject inferAttributeValueFromIdentifier() {
+	if (self.identifier.isDefined() and self.getIdentifierAttributeName().isDefined() and not self.slots.exists(s : Intermediate!AttributeSlot | s.feature = self.getIdentifierAttributeName())) {
+		var slot := new Intermediate!AttributeSlot;
+		slot.feature := self.getIdentifierAttributeName();
+		slot.values.add(self.identifier);
+		self.slots.add(slot);
+	}
+}
+
+operation Intermediate!ClassObject getIdentifierAttributeName() : String {
+	var idRule : Config!IdentifierRule := config.rules.select(r : Config!IdentifierRule | r.classifier = self.type).first();
+
+	if (config.isDefined() and idRule.isDefined()) {
+		return idRule.attribute;
+	} 
+}
+
+operation Intermediate!ClassObject addDefaultValuesForAttributes() {
+	var classifierLevelAttributes := AntlrAst!ClassifierLevelAttributeNode.allInstances().select(cla | cla.children.first().text = self.type).collect(cla | cla.children.first());
+	
+	for (cla in classifierLevelAttributes) {
+		var attribute         := cla.children.first().text;
+		var defaultValues := cla.children.first().children.collect(node | node.text.stripQuotes());
+	
+		if (not self.slots.exists(s : Intermediate!AttributeSlot | s.feature = attribute)) {
+			self.slots.add(createSlotFor(defaultValues, attribute).addTraceabilityInfo(cla));
+		}
+	}
+	
+	var defaultValueRules := config.rules.select(r : Config!DefaultValueRule | r.classifier = self.type);
+	
+	for (defaultValueRule in defaultValueRules) {
+		if (not self.slots.exists(s : Intermediate!AttributeSlot | s.feature = defaultValueRule.attribute)) {
+			self.slots.add(createSlotFor(defaultValueRule.defaultValue, defaultValueRule.attribute));
+		}
+	}
+}
+
+-- Default Value Rules --
+operation createSlotFor(defaultValue : String, attribute : String) : Intermediate!Slot {
+	var defaultValues := new Sequence;
+	defaultValues.add(defaultValue);
+	
+	return createSlotFor(defaultValues, attribute);
+}
+
+operation createSlotFor(defaultValues : Collection, attribute : String) : Intermediate!Slot {
+	var slot : Intermediate!Slot := defaultValues.first().inferType().toSlot();
+
+	slot.feature := attribute;
+
+	defaultValues.forAll(value | slot.values.add(value.inferType()));
+	
+	return slot;
+}
+
+operation String inferType() : Any {
+	-- Boolean?
+	if (self = 'true') {
+		return true;
+		
+	} else if (self = 'false') {
+		return false;
+	
+	-- Int?
+	} else if (self.isInteger()) {
+		return self.asInteger();
+		
+	-- Real?
+	} else if (self.isReal()) {
+		return self.asFloat();
+	
+	-- String
+	} else {
+		return self;
+	}
+}
+
+operation String stripQuotes() : String {
+	var result : String := self;
+	
+	if (result.startsWith('"')) {
+		result := result.substring(1);
+	}
+	
+	if (result.endsWith('"')) {
+		result := result.substring(0, result.length() - 1);
+	}
+	
+	return result; 
+}
+
+operation Intermediate!ClassObject addAdjective(a : AntlrAst!AdjectiveNode) {
+	var slot := new Intermediate!AttributeSlot;
+	slot.feature := a.getFeature();
+	slot.values.add(a.getValue());
+	
+	slot.addTraceabilityInfo(a);
+	
+	self.slots.add(slot);
+}
+
+operation AntlrAst!AdjectiveNode getFeature() : String {
+	if (self.text.startsWith('~') or self.text.startsWith('#')) {
+		return self.text.substring(1);
+	
+	} else {
+		return self.text;
+	}
+}
+
+operation AntlrAst!AdjectiveNode getValue() : Boolean {
+	return not self.text.startsWith('~');
+}
+
+operation Intermediate!ClassObject addAttribute(n : AntlrAst!NameNode) {
+	var slot := self.findSlot(n.text);
+	
+	if (slot.isUndefined() or slot.isDifferentTypeTo(n.children.first().toSlot())) {
+		slot := n.children.first().toSlot();
+		slot.feature := n.text;
+	}
+	
+	if (Intermediate!ReferenceSlot.isType(slot)) {
+		for (valueNode in n.children) {
+			slot.values.add(valueNode.getValue());
+		}
+				
+	} else {
+		for (valueNode in n.children) {
+			if (valueNode.text.isDefined()) {
+				slot.values.add(valueNode.getValue());
+			}
+		}
+	}
+	
+	slot.addTraceabilityInfo(n);
+	self.slots.add(slot);
+}
+
+post {
+	Intermediate!AttributeSlot.all.forAll(s|s.coerceValues());
+}
+
+operation Intermediate!Slot isDifferentTypeTo(other : Intermediate!Slot) {
+	return self.eClass.name <> other.eClass.name;
+}
+
+-- Nulls --
+operation AntlrAst!NullNode toSlot() : Intermediate!Slot {
+	return new Intermediate!AttributeSlot;
+}
+
+-- Booleans --
+operation Boolean toSlot() : Intermediate!Slot {
+	return new Intermediate!AttributeSlot;
+}
+
+operation AntlrAst!TrueNode toSlot() : Intermediate!Slot {
+	return new Intermediate!AttributeSlot;
+}
+
+operation AntlrAst!TrueNode getValue() : Boolean {
+	return true;
+}
+
+operation AntlrAst!FalseNode toSlot() : Intermediate!Slot {
+	return new Intermediate!AttributeSlot;
+}
+
+operation AntlrAst!FalseNode getValue() : Boolean {
+	return false;
+}
+
+-- Strings --
+operation String toSlot() : Intermediate!Slot {
+	return new Intermediate!AttributeSlot;
+}
+
+operation AntlrAst!TextualValueNode toSlot() : Intermediate!Slot {
+	return new Intermediate!AttributeSlot;
+}
+
+operation AntlrAst!TextualValueNode getValue() : String {
+	return self.text.stripQuotes();
+}
+
+-- Numbers --
+operation Integer toSlot() : Intermediate!Slot {
+	return new Intermediate!AttributeSlot;
+}
+
+operation Real toSlot() : Intermediate!Slot {
+	return new Intermediate!AttributeSlot;
+}
+
+operation String isReal() : Boolean {
+	return '.'.isSubstringOf(self);
+}
+
+operation AntlrAst!NumericValueNode toSlot() : Intermediate!Slot {
+	return new Intermediate!AttributeSlot;
+}
+
+operation AntlrAst!NumericValueNode getValue() : Any {
+	if (self.text.isReal()) {
+		return self.text.asDouble();
+	} else {
+		return self.text.asInteger();
+	}
+}
+
+-- References
+operation AntlrAst!ReferenceNode toSlot() : Intermediate!Slot {
+	return new Intermediate!ReferenceSlot;
+}
+
+operation AntlrAst!ReferenceNode getValue() : Any {
+	var value = self.children.first().text.stripQuotes();
+	
+	if (value.isExternalObjectReference()) {
+	    var base = Intermediate!Spec.all.first.sourceFile;
+		value = EmfTool.resolveURI(value, base);
+	}
+	
+	return value;
+}
+
+operation String isExternalObjectReference() : Boolean {
+	return self.contains("#");
+}
+
+-- Containment and Enumerations --
+operation AntlrAst!NameNode toSlot() : Intermediate!Slot {
+	if (self.children.isEmpty()) {
+		return new Intermediate!AttributeSlot;
+		
+	} else {
+		return new Intermediate!ContainmentSlot;
+	}	
+}
+
+operation AntlrAst!NameNode getValue() : Any {
+	if (self.children.isEmpty()) {
+		return self.text;
+		
+	} else {
+		return createClassObject(self);
+	}
+}
+
+operation createClassObject(n : AntlrAst!Node) : Intermediate!ClassObject {
+	var c := new Intermediate!ClassObject;
+	createClassObject(c, n);
+	return c;
+}
+
+operation createClassObject(c : Intermediate!ClassObject, n : AntlrAst!Node) {
+	c.type := n.text;
+	c.addTraceabilityInfo(n);
+	
+	n.children.forAll(a : AntlrAst!AdjectiveNode | c.addAdjective(a));
+	n.children.forAll(n : AntlrAst!NameNode      | c.addAttribute(n));
+	
+	c.addIdentifier(n);
+	c.inferAttributeValueFromIdentifier();
+	c.addDefaultValuesForAttributes();
+}
+\end{lstlisting}
+
+\subsection{Intermediate Model Validation}
+The EVL constraints in Listing~\ref{lst:constraints_full} are executed on an intermediate model and a target model, and produce a set of consistency problems. Listing~\ref{lst:constraints_full} includes both the syntactic constraints of HUTN (e.g. all identifiers must be unique) and the conformance constraints defined for the metamodel-independent syntax in Section~\ref{sec:mmi_syntax}.
+
+\begin{lstlisting}[caption=Syntactic and Conformance Constraints in EVL., label=lst:constraints_full, language=EVL]
+pre {
+	var EmfTool := new Native('org.eclipse.epsilon.emc.emf.tools.EmfTool');
+}
+
+context Object {	
+	constraint IdentifiersMustBeUnique {
+		guard: self.identifier.isDefined()
+		check: self.identifier.isUniqueIdentifier()
+		message: 'Duplicate identifier: ' + self.identifier
+	}
+}
+
+context ClassObject {
+	constraint ClassifierMustExist {
+		guard: hasSpecificMetamodel()
+		check: self.hasEClass() or Metamodel!EClassifier.allInstances().select(c|c.name = self.type).size() = 1
+		message: 'Unrecognised classifier: ' + self.type
+	}
+	
+	constraint ClassifierMustBeClass {
+		guard: self.satisfies('ClassifierMustExist')
+		check: self.hasEClass()
+		message: 'Cannot instantiate the enumeration or data type: ' + self.type
+	}
+	
+	constraint ClassMustNotBeAbstract {
+		guard: self.satisfies('ClassifierMustBeClass')
+		check: not self.toClass().isAbstract()
+		message: 'Cannot instantiate the abstract class: ' + self.type
+	}
+	
+	constraint ClassMustSpecifyRequiredReferences {
+		guard: self.satisfies('ClassMustNotBeAbstract')
+		check: self.getAllReferencesThatRequireAValueButDontHaveOne().isEmpty() 
+		message: self.identifier + ' must specify a value for the following reference features: ' + self.getAllReferencesThatRequireAValueButDontHaveOne().collect(f|f.name).toString()
+		
+		fix {
+			title : 'Infer empty instances'
+			do {
+				for (reference in self.getAllReferencesThatRequireAValueButDontHaveOne()) {
+					-- An instance can be inferred if no values are required	
+					if (reference.aValueCanBeInferred()) {
+						var instance := new Intermediate!ClassObject;
+						instance.type := reference.eType.name;
+						
+						var slot := new Intermediate!ContainmentSlot;
+						slot.feature := reference.name;
+						slot.values.add(instance);
+						
+						self.slots.add(slot);
+					}
+				}
+			}
+		}
+	}
+}
+
+context Slot {
+	constraint FeatureMustExist {
+		guard: hasSpecificMetamodel() and self.owner.isTypeOf(ClassObject) and self.owner.toClass().isDefined() and self.feature.isDefined() 
+		check: self.owner.toClass().eAllStructuralFeatures.select(c|c.name = self.feature).size() = 1
+		message: 'Unrecognised feature: ' + self.feature
+	}
+	
+	constraint FeatureMustBeChangeable {
+		guard: self.satisfies('FeatureMustExist')
+		check: self.getEStructuralFeature().changeable
+		message: 'Feature ' + self.getEStructuralFeature().name + ' is not changeable'
+	}
+	
+	constraint MustBeTypeCompatibleWithFeature {
+		guard: self.satisfies('FeatureMustExist')
+		check: self.typeCompatibleWith(self.getEStructuralFeature())
+		message: 'Expected ' + self.getEStructuralFeature().eType.name + ' for: ' + self.feature
+	}
+	
+	constraint SingleValuedFeatureCannotTakeMultipleValues {
+		guard: self.satisfies('FeatureMustExist')
+		check: self.getEStructuralFeature().isMany() or self.values.size = 1
+		message: 'Multiple values not permitted for: ' + self.feature
+	}
+}
+
+context ReferenceSlot {
+	constraint FeatureMustBeReference {
+		guard: self.satisfies('MustBeTypeCompatibleWithFeature')
+		check: not self.getEStructuralFeature().isContainment
+		message: 'A reference value was specified for the containment feature ' +
+		         self.owner.type + '#' + self.feature + '.'
+	}
+
+	constraint ReferencedIdentifiersMustExist {
+		guard: self.satisfies('FeatureMustBeReference')
+		check: self.values.forAll(i|i.isRecognisedIdentifier())
+		message: self.values.selectOne(i|not i.isRecognisedIdentifier()).getMessage()
+				 
+	}
+}
+
+context ContainmentSlot {
+	constraint FeatureMustBeContainment {
+		guard: self.satisfies('MustBeTypeCompatibleWithFeature')
+		check: self.getEStructuralFeature().isContainment
+		message: 'A contained object was specified for the non-containment feature ' +
+		         self.owner.type + '#' + self.feature + '.'
+	}
+}
+
+operation hasSpecificMetamodel() : Boolean {
+	return Spec.allInstances().at(0).nsUris.notEmpty();
+}
+
+operation String isUniqueIdentifier() : Boolean {
+	return ClassObject.allInstances().select(c|c.identifier = self).size() = 1;
+}
+
+operation String isRecognisedIdentifier() : Boolean {
+	if ('#'.isSubstringOf(self)) {	
+		return self.canLocateExternalModel() and self.canLocateExternalModelElement();
+
+	} else {
+		return self.isUniqueIdentifier();
+	}
+}
+
+operation String getMessage() : String {
+	if ('#'.isSubstringOf(self)) {
+		if (not self.canLocateExternalModel()) {
+			return 'Model not found: ' + self.split('#').first();
+		}
+		
+		return 'Model element not found: ' + self.split('#').last();
+	
+	} else {
+		return 'Unrecognised identifier: ' + self;
+	}
+}
+
+operation String canLocateExternalModel() : Boolean {
+	return EmfTool.resourceExists(self.split('#').first());
+}
+
+operation String canLocateExternalModelElement() : Boolean {
+	return EmfTool.modelElementExists(self);
+}
+
+operation String toClass() : Metamodel!EClass {
+	if ('#'.isSubstringOf(self)) {
+		-- External object reference, locate in external model
+
+		var object := EmfTool.getEObject(self);
+		
+		if (object.isDefined()) {
+			return object.eClass();
+		}
+	
+	} else {
+		-- Internal object reference, located in current model
+
+		var object := ClassObject.allInstances().selectOne(c|c.identifier = self);
+	
+		if (object.isDefined()) {
+			return object.toClass();
+		}
+	}
+}
+
+operation ClassObject toClass() : Metamodel!EClass {
+	return self.getEClass();
+} 
+
+operation Metamodel!EClass getAllClassObjects() : Collection(ClassObject) {
+	return ClassObject.all.select(c|c.hasEClass() and c.getEClass().name = self.name);
+}
+
+operation Metamodel!EClass getAllFeaturesThatRequireAValue() : Sequence(EReference) {
+	return self.eAllStructuralFeatures.select(f|f.lowerBound > 0 and f.changeable and not f.transient);
+}
+
+operation Metamodel!EClass getAllReferencesThatRequireAValue() : Sequence(EReference) {
+	return self.eAllReferences.select(f|f.lowerBound > 0 and f.changeable and not f.transient);
+}
+
+operation Metamodel!EReference hasOppositeReferencing(classObject : ClassObject) : Boolean {
+	if (self.eOpposite.isDefined()) {
+		for (class in self.eType.getAllClassObjects()) {
+			var slot := class.findSlot(self.eOpposite.name);
+			
+			if (slot.isDefined()) {
+				if (slot.isKindOf(ReferenceSlot) and slot.values.includes(classObject.identifier)) {
+					return true;
+					
+				} else if (slot.classObjects.includes(classObject)) {
+					return true;
+				}
+			
+			} 
+		}
+	}
+	
+	return false;
+}
+
+operation ClassObject getAllReferencesThatRequireAValueButDontHaveOne() : Sequence(EReference) {
+    return self.toClass().getAllReferencesThatRequireAValue().reject(r|self.slots.exists(s|s.feature = r.name) or r.hasOppositeReferencing(self));
+}
+
+operation Metamodel!EReference aValueCanBeInferred() : Boolean {
+	return self.isContainment and self.eType.getAllFeaturesThatRequireAValue().isEmpty();
+}
+
+
+operation Sequence toString() : String {
+	var result : String := '';
+
+	for (element in self) {
+		result := result + element.toString();
+		if (hasMore) { result := result + ', '; }
+	}
+	
+	return result;
+}
+\end{lstlisting}
+
+
+\subsection{Intermediate Model to Target Model}
+The EGL template in Listing~\ref{lst:generate_full} is used to generate an ETL transformation between intermediate models and target models.
+
+\begin{lstlisting}[caption=EGL template that generates an intermediate model to target model transformation (in ETL)., label=lst:generate_full, language=EGL]
+pre {
+	var EmfTool := new Native('org.eclipse.epsilon.emc.emf.tools.EmfTool');
+}
+
+[% if (not PackageObject.all.isEmpty()) { %]
+	[% for (class in getAllEClassesUsed()) { %]
+	rule Object2[%=class.name%]
+	  transform o : Intermediate!ClassObject
+	  to t : Model!`[%=class.name%]` {
+		
+		guard: o.type = '[%=class.name%]'
+		
+	[% for (attribute in class.eAllAttributes) { %]
+		if (o.findSlot('[%=attribute.name%]').isDefined()) {
+			[% if (attribute.isMany()) { %]
+				for (value in o.findSlot('[%=attribute.name%]').values) {
+					t.`[%=attribute.name%]`.add(value);
+
+						t.`[%=attribute.name%]`.add(value);
+
+				}
+			[% } else { %]
+
+					t.`[%=attribute.name%]` := o.findSlot('[%=attribute.name%]').values.first;
+			[% } %]
+		}
+	[% } %]
+	
+	[% for (reference in class.eAllReferences) { %]
+		if (o.findSlot('[%=reference.name%]').isDefined()) {
+			[% if (reference.isMany()) { %]
+				for (object in o.findSlot('[%=reference.name%]').getEObjects()) {
+					t.`[%=reference.name%]`.add(object);
+				}
+			[% } else { %]
+				t.`[%=reference.name%]` := o.findSlot('[%=reference.name%]').getEObjects().first();
+			[% } %]
+		}
+	[% } %]
+	}
+	[% } %]
+[% } %]
+
+operation ReferenceSlot getEObjects() : Sequence {
+	return self.values.collect(i:String | i.getEObject(self));
+}
+
+operation ContainmentSlot getEObjects() : Sequence {
+	return self.classObjects.collect(o:Intermediate!ClassObject | o.equivalent());
+}
+
+operation String getEObject(slot : ReferenceSlot) : Any {
+	if ('#'.isSubstringOf(self)) {
+		-- External object reference, locate in external model
+		return EmfTool.getEObject(self);
+	
+	} else {
+		-- Internal object reference, located in current model
+		return slot.getClassObjects().selectOne(c|c.identifier = self).equivalent();
+	}
+}
+
+
+[%
+  operation getAllEClassesUsed() : Sequence {
+	var types := new Set;
+	var classes := new Sequence;
+
+	for (classObject in ClassObject.all) {
+		if (types.excludes(classObject.type)) {
+			types.add(classObject.type);
+			classes.add(classObject.getEClass());
+		}
+	}
+	
+	return classes;
+  }
+%]
+\end{lstlisting}

@@ -44,17 +44,20 @@
 \BOOKMARK [1][-]{section.7.1}{Contributions of the Thesis Research}{chapter.7}
 \BOOKMARK [1][-]{section.7.2}{Future Work}{chapter.7}
 \BOOKMARK [1][-]{section.7.3}{Closing Remarks}{chapter.7}
-\BOOKMARK [0][-]{appendix.A}{A Graphical Editor for Process-Oriented Programs}{}
-\BOOKMARK [1][-]{section.A.1}{Iteration 1: Processes and Channels}{appendix.A}
-\BOOKMARK [1][-]{section.A.2}{Iteration 2: Interoperability with GMF}{appendix.A}
-\BOOKMARK [1][-]{section.A.3}{Iteration 3: Shared Channels}{appendix.A}
-\BOOKMARK [1][-]{section.A.4}{Iteration 4: Connection Points}{appendix.A}
-\BOOKMARK [1][-]{section.A.5}{Iteration 5: Connection Point Types}{appendix.A}
-\BOOKMARK [1][-]{section.A.6}{Iteration 6: Nested Processes and Channels}{appendix.A}
-\BOOKMARK [1][-]{section.A.7}{Summary}{appendix.A}
-\BOOKMARK [0][-]{appendix.B}{Co-evolution Examples}{}
-\BOOKMARK [1][-]{section.B.1}{Newsgroups Examples}{appendix.B}
-\BOOKMARK [1][-]{section.B.2}{UML Example}{appendix.B}
-\BOOKMARK [1][-]{section.B.3}{GMF Examples}{appendix.B}
-\BOOKMARK [0][-]{appendix.C}{TTC Results}{}
+\BOOKMARK [0][-]{appendix.A}{Code Listings}{}
+\BOOKMARK [1][-]{section.A.1}{Migrating Petri Nets with Ecore2Ecore}{appendix.A}
+\BOOKMARK [1][-]{section.A.2}{Model Management Operations for Epsilon HUTN}{appendix.A}
+\BOOKMARK [0][-]{appendix.B}{A Graphical Editor for Process-Oriented Programs}{}
+\BOOKMARK [1][-]{section.B.1}{Iteration 1: Processes and Channels}{appendix.B}
+\BOOKMARK [1][-]{section.B.2}{Iteration 2: Interoperability with GMF}{appendix.B}
+\BOOKMARK [1][-]{section.B.3}{Iteration 3: Shared Channels}{appendix.B}
+\BOOKMARK [1][-]{section.B.4}{Iteration 4: Connection Points}{appendix.B}
+\BOOKMARK [1][-]{section.B.5}{Iteration 5: Connection Point Types}{appendix.B}
+\BOOKMARK [1][-]{section.B.6}{Iteration 6: Nested Processes and Channels}{appendix.B}
+\BOOKMARK [1][-]{section.B.7}{Summary}{appendix.B}
+\BOOKMARK [0][-]{appendix.C}{Co-evolution Examples}{}
+\BOOKMARK [1][-]{section.C.1}{Newsgroups Examples}{appendix.C}
+\BOOKMARK [1][-]{section.C.2}{UML Example}{appendix.C}
+\BOOKMARK [1][-]{section.C.3}{GMF Examples}{appendix.C}
+\BOOKMARK [0][-]{appendix.D}{TTC Results}{}
 \BOOKMARK [0][-]{section*.209}{Bibliography}{}

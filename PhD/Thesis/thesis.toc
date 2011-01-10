@@ -170,15 +170,15 @@
 \contentsline {paragraph}{Intermediate Model to Target Model}{122}{section*.96}
 \contentsline {subsubsection}{Compliance to OMG HUTN}{124}{section*.97}
 \contentsline {subsection}{\numberline {5.2.5}Migration with Epsilon HUTN}{126}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Summary}{127}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.6}Summary}{128}{subsection.5.2.6}
 \contentsline {section}{\numberline {5.3}An Analysis of Languages used for Model Migration}{128}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Co-Evolution Example}{128}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Existing Model Migration Languages}{129}{subsection.5.3.2}
 \contentsline {subsubsection}{Manual Specification with M2M Transformation}{129}{section*.98}
-\contentsline {subsubsection}{Manual Specification with a Metamodel Mapping}{130}{section*.99}
+\contentsline {subsubsection}{Manual Specification with a Metamodel Mapping}{131}{section*.99}
 \contentsline {subsubsection}{Operator-based Co-evolution with COPE}{132}{section*.100}
 \contentsline {subsection}{\numberline {5.3.3}Requirements Identification}{133}{subsection.5.3.3}
-\contentsline {subsubsection}{Source-Target Relationship Requirements}{133}{section*.101}
+\contentsline {subsubsection}{Source-Target Relationship Requirements}{134}{section*.101}
 \contentsline {subsubsection}{Model Representation Requirements}{134}{section*.102}
 \contentsline {section}{\numberline {5.4}Epsilon Flock: A Model Migration Language}{135}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Design and Implementation}{135}{subsection.5.4.1}
@@ -188,14 +188,14 @@
 \contentsline {paragraph}{Rule Selection}{136}{section*.106}
 \contentsline {paragraph}{Equivalence Establishment}{137}{section*.107}
 \contentsline {paragraph}{Rule Execution}{137}{section*.108}
-\contentsline {subsubsection}{Conservative Copy}{137}{section*.109}
+\contentsline {subsubsection}{Conservative Copy}{138}{section*.109}
 \contentsline {subsubsection}{Development and User Tools}{139}{section*.110}
 \contentsline {subsection}{\numberline {5.4.2}Examples of Flock Migration}{139}{subsection.5.4.2}
 \contentsline {subsubsection}{Process-Oriented Migration in Flock}{139}{section*.111}
-\contentsline {subsubsection}{Petri Nets Migration in Flock}{144}{section*.112}
-\contentsline {subsubsection}{UML Class Diagram Migration in Flock}{144}{section*.113}
-\contentsline {subsubsection}{Summary}{147}{section*.114}
-\contentsline {section}{\numberline {5.5}Chapter Summary}{147}{section.5.5}
+\contentsline {subsubsection}{Petri Nets Migration in Flock}{141}{section*.112}
+\contentsline {subsubsection}{UML Class Diagram Migration in Flock}{141}{section*.113}
+\contentsline {subsubsection}{Summary}{148}{section*.114}
+\contentsline {section}{\numberline {5.5}Chapter Summary}{148}{section.5.5}
 \contentsline {chapter}{\chapternumberline {6}Evaluation}{151}{chapter.6}
 \contentsline {section}{\numberline {6.1}Evaluating User-Driven Co-Evolution}{152}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Challenges for Performing User-Driven Co-Evolution}{153}{subsection.6.1.1}
@@ -328,22 +328,28 @@
 \contentsline {subsection}{\numberline {7.2.4}Higher-Order Migration}{227}{subsection.7.2.4}
 \contentsline {subsection}{\numberline {7.2.5}Genericity}{227}{subsection.7.2.5}
 \contentsline {section}{\numberline {7.3}Closing Remarks}{227}{section.7.3}
-\contentsline {appendix}{\chapternumberline {A}A Graphical Editor for Process-Oriented Programs}{229}{appendix.A}
-\contentsline {section}{\numberline {A.1}Iteration 1: Processes and Channels}{230}{section.A.1}
-\contentsline {section}{\numberline {A.2}Iteration 2: Interoperability with GMF}{231}{section.A.2}
-\contentsline {section}{\numberline {A.3}Iteration 3: Shared Channels}{233}{section.A.3}
-\contentsline {section}{\numberline {A.4}Iteration 4: Connection Points}{235}{section.A.4}
-\contentsline {section}{\numberline {A.5}Iteration 5: Connection Point Types}{239}{section.A.5}
-\contentsline {section}{\numberline {A.6}Iteration 6: Nested Processes and Channels}{242}{section.A.6}
-\contentsline {section}{\numberline {A.7}Summary}{244}{section.A.7}
-\contentsline {appendix}{\chapternumberline {B}Co-evolution Examples}{245}{appendix.B}
-\contentsline {section}{\numberline {B.1}Newsgroups Examples}{245}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}Extract Person}{245}{subsection.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}Resolve Replies}{248}{subsection.B.1.2}
-\contentsline {section}{\numberline {B.2}UML Example}{250}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Activity Diagrams}{250}{subsection.B.2.1}
-\contentsline {section}{\numberline {B.3}GMF Examples}{256}{section.B.3}
-\contentsline {subsection}{\numberline {B.3.1}GMF Graph}{257}{subsection.B.3.1}
-\contentsline {subsection}{\numberline {B.3.2}GMF Generator}{271}{subsection.B.3.2}
-\contentsline {appendix}{\chapternumberline {C}TTC Results}{301}{appendix.C}
-\contentsline {chapter}{Bibliography}{307}{section*.209}
+\contentsline {appendix}{\chapternumberline {A}Code Listings}{229}{appendix.A}
+\contentsline {section}{\numberline {A.1}Migrating Petri Nets with Ecore2Ecore}{229}{section.A.1}
+\contentsline {section}{\numberline {A.2}Model Management Operations for Epsilon HUTN}{234}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}AST Model to Intermediate Model}{235}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Intermediate Model Validation}{244}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Intermediate Model to Target Model}{250}{subsection.A.2.3}
+\contentsline {appendix}{\chapternumberline {B}A Graphical Editor for Process-Oriented Programs}{253}{appendix.B}
+\contentsline {section}{\numberline {B.1}Iteration 1: Processes and Channels}{254}{section.B.1}
+\contentsline {section}{\numberline {B.2}Iteration 2: Interoperability with GMF}{255}{section.B.2}
+\contentsline {section}{\numberline {B.3}Iteration 3: Shared Channels}{257}{section.B.3}
+\contentsline {section}{\numberline {B.4}Iteration 4: Connection Points}{259}{section.B.4}
+\contentsline {section}{\numberline {B.5}Iteration 5: Connection Point Types}{263}{section.B.5}
+\contentsline {section}{\numberline {B.6}Iteration 6: Nested Processes and Channels}{266}{section.B.6}
+\contentsline {section}{\numberline {B.7}Summary}{268}{section.B.7}
+\contentsline {appendix}{\chapternumberline {C}Co-evolution Examples}{269}{appendix.C}
+\contentsline {section}{\numberline {C.1}Newsgroups Examples}{269}{section.C.1}
+\contentsline {subsection}{\numberline {C.1.1}Extract Person}{269}{subsection.C.1.1}
+\contentsline {subsection}{\numberline {C.1.2}Resolve Replies}{272}{subsection.C.1.2}
+\contentsline {section}{\numberline {C.2}UML Example}{274}{section.C.2}
+\contentsline {subsection}{\numberline {C.2.1}Activity Diagrams}{274}{subsection.C.2.1}
+\contentsline {section}{\numberline {C.3}GMF Examples}{280}{section.C.3}
+\contentsline {subsection}{\numberline {C.3.1}GMF Graph}{281}{subsection.C.3.1}
+\contentsline {subsection}{\numberline {C.3.2}GMF Generator}{295}{subsection.C.3.2}
+\contentsline {appendix}{\chapternumberline {D}TTC Results}{325}{appendix.D}
+\contentsline {chapter}{Bibliography}{331}{section*.209}

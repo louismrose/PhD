@@ -7,7 +7,7 @@
 \addvspace {10pt}
 \contentsline {table}{\numberline {5.1}{\ignorespaces The relationship between the thesis requirements and the proposed structures.}}{98}{table.5.1}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Compliance of Epsilon HUTN to OMG HUTN}}{125}{table.5.2}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Properties of model migration approaches}}{148}{table.5.3}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Properties of model migration approaches}}{149}{table.5.3}
 \addvspace {10pt}
 \contentsline {table}{\numberline {6.1}{\ignorespaces Model operation frequency (analysis examples).}}{178}{table.6.1}
 \contentsline {table}{\numberline {6.2}{\ignorespaces Model operation frequency (evaluation examples).}}{178}{table.6.2}
@@ -18,12 +18,13 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {C.1}{\ignorespaces Correctness scores}}{302}{table.C.1}
-\contentsline {table}{\numberline {C.2}{\ignorespaces Conciseness scores}}{302}{table.C.2}
-\contentsline {table}{\numberline {C.3}{\ignorespaces Clarity scores}}{303}{table.C.3}
-\contentsline {table}{\numberline {C.4}{\ignorespaces Appropriateness scores}}{303}{table.C.4}
-\contentsline {table}{\numberline {C.5}{\ignorespaces Tool maturity scores}}{304}{table.C.5}
-\contentsline {table}{\numberline {C.6}{\ignorespaces Reproducibility scores}}{304}{table.C.6}
-\contentsline {table}{\numberline {C.7}{\ignorespaces Extensions scores}}{305}{table.C.7}
-\contentsline {table}{\numberline {C.8}{\ignorespaces Total (equally weighted) scores}}{305}{table.C.8}
-\contentsline {table}{\numberline {C.9}{\ignorespaces Total (weighted) scores}}{306}{table.C.9}
+\addvspace {10pt}
+\contentsline {table}{\numberline {D.1}{\ignorespaces Correctness scores}}{326}{table.D.1}
+\contentsline {table}{\numberline {D.2}{\ignorespaces Conciseness scores}}{326}{table.D.2}
+\contentsline {table}{\numberline {D.3}{\ignorespaces Clarity scores}}{327}{table.D.3}
+\contentsline {table}{\numberline {D.4}{\ignorespaces Appropriateness scores}}{327}{table.D.4}
+\contentsline {table}{\numberline {D.5}{\ignorespaces Tool maturity scores}}{328}{table.D.5}
+\contentsline {table}{\numberline {D.6}{\ignorespaces Reproducibility scores}}{328}{table.D.6}
+\contentsline {table}{\numberline {D.7}{\ignorespaces Extensions scores}}{329}{table.D.7}
+\contentsline {table}{\numberline {D.8}{\ignorespaces Total (equally weighted) scores}}{329}{table.D.8}
+\contentsline {table}{\numberline {D.9}{\ignorespaces Total (weighted) scores}}{330}{table.D.9}
