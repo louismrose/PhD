@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  10 JAN 2011 14:52
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  12 JAN 2011 12:24
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -683,37 +683,37 @@ Overfull \hbox (3.31522pt too wide) detected at line 5
 
 [7]
 Overfull \hbox (1.91605pt too wide) detected at line 199
- \OT1/cmr/bx/n/10.95 151
+ \OT1/cmr/bx/n/10.95 149
  []
 
 
 Overfull \hbox (1.91605pt too wide) detected at line 315
- \OT1/cmr/bx/n/10.95 221
+ \OT1/cmr/bx/n/10.95 219
  []
 
 
 Overfull \hbox (1.91605pt too wide) detected at line 331
- \OT1/cmr/bx/n/10.95 229
+ \OT1/cmr/bx/n/10.95 227
  []
 
 
 Overfull \hbox (1.91605pt too wide) detected at line 337
- \OT1/cmr/bx/n/10.95 253
+ \OT1/cmr/bx/n/10.95 251
  []
 
 
 Overfull \hbox (1.91605pt too wide) detected at line 345
- \OT1/cmr/bx/n/10.95 269
+ \OT1/cmr/bx/n/10.95 267
  []
 
 
 Overfull \hbox (1.91605pt too wide) detected at line 354
- \OT1/cmr/bx/n/10.95 325
+ \OT1/cmr/bx/n/10.95 323
  []
 
 
 Overfull \hbox (1.91605pt too wide) detected at line 355
- \OT1/cmr/bx/n/10.95 331
+ \OT1/cmr/bx/n/10.95 329
  []
 
 ) (./0.FrontMatter/lists.tex [8] (./thesis.lof [9
@@ -750,56 +750,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--9
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
 
 
 Class memoir Warning: The \it font command is deprecated. 
 (memoir)              Use \textit{...} or {\itshape... } instead on input line 
-29.
+30.
 
 
-Overfull \hbox (23.71187pt too wide) in paragraph at lines 29--29
-\OT1/cmr/m/n/10.95 ume 5095 of LNCS, pages 1-16. Springer, 2008, [[]]. 
- []
-
-
-Overfull \hbox (3.91412pt too wide) in paragraph at lines 29--29
+Overfull \hbox (3.91412pt too wide) in paragraph at lines 30--30
 []\OT1/cmr/bx/n/10.95 Enhanced Au-toma-tion for Man-ag-ing Model and Meta-
  []
 
 
-Overfull \hbox (11.1198pt too wide) in paragraph at lines 29--29
-\OT1/cmr/bx/n/10.95 model In-con-sis-tency\OT1/cmr/m/n/10.95 , Louis M. Rose an
-d Dim-itrios S. Kolovos
+Overfull \hbox (0.76132pt too wide) in paragraph at lines 30--30
+\OT1/cmr/m/it/10.95 tional Con-fer-ence on Au-to-mated Soft-ware En-gi-neer-ing
+ (ASE)\OT1/cmr/m/n/10.95 ,
  []
 
 [17]
-Overfull \hbox (8.32747pt too wide) in paragraph at lines 29--29
-[]\OT1/cmr/bx/n/10.95 Model Mi-gra-tion Case\OT1/cmr/m/n/10.95 , Louis M. Rose,
- Dim-itrios S. Kolovos,
- []
-
-
-Overfull \hbox (2.21408pt too wide) in paragraph at lines 29--29
-[]\OT1/cmr/bx/n/10.95 Migrating Ac-tiv-ity Di-a-grams with Ep-silon Flock\OT1/c
-mr/m/n/10.95 , Louis
- []
-
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
-
-Overfull \hbox (25.53688pt too wide) in paragraph at lines 29--29
-\OT1/cmr/m/n/10.95 ume 6394 of LNCS, pages 6175. Springer, 2010, [[]]. 
- []
-
-[18]))
+ [18]))
 \openout2 = `1.Introduction/introduction.aux'.
 
  (./1.Introduction/introduction.tex
@@ -832,17 +811,11 @@ Underfull \vbox (badness 2495) has occurred while \output is active []
 File: 1.Introduction/images/method.pdf Graphic file (type pdf)
 
 <use 1.Introduction/images/method.pdf> [6 <./1.Introduction/images/method.pdf>]
-) (./1.Introduction/results.tex
-Overfull \hbox (20.48587pt too wide) in paragraph at lines 6--7
-\OT1/cmr/m/n/10.95 This the-sis pro-poses novel struc-tures and pro-cesses for 
-man-ag-ing model-metamodel
- []
-
-[7]) (./1.Introduction/structure.tex [8])) [9]
+) (./1.Introduction/results.tex [7]) (./1.Introduction/structure.tex [8]))
+[9]
 \openout2 = `2.Background/background.aux'.
 
- (./2.Background/background.tex
-[10
+ (./2.Background/background.tex [10
 
 
 
@@ -851,106 +824,55 @@ man-ag-ing model-metamodel
 File: 2.Background/images/jackson_model.png Graphic file (type png)
 
 <use 2.Background/images/jackson_model.png> [12 <./2.Background/images/jackson_
-model.png>] [13] [14] [15]
-<2.Background/images/mof.png, id=1021, 928.46875pt x 589.20125pt>
+model.png>] [13] [14]
+<2.Background/images/mof.png, id=1017, 928.46875pt x 589.20125pt>
 File: 2.Background/images/mof.png Graphic file (type png)
 
-<use 2.Background/images/mof.png> [16 <./2.Background/images/mof.png (PNG copy)
->] [17
+<use 2.Background/images/mof.png> [15 <./2.Background/images/mof.png (PNG copy)
+>] [16
 
 
-]
-Overfull \hbox (42.3618pt too wide) in paragraph at lines 97--98
-[]\OT1/cmr/m/n/10.95 M2M trans-for-ma-tions are of-ten spec-i-fied as a set of 
-\OT1/cmr/m/it/10.95 rules \OT1/cmr/m/n/10.95 [[]].
- []
-
-
-Overfull \hbox (70.92625pt too wide) in paragraph at lines 99--100
-\OT1/cmr/m/n/10.95 Trans-for-ma-tion Lan-guage (ETL) [[]] and VI-A-TRA [[]].
- []
-
-
-Overfull \hbox (27.09828pt too wide) in paragraph at lines 103--104
-\OT1/cmr/m/n/10.95 trans-for-ma-tion than pure im-per-a-tive or declar-a-tive l
-an-guages [[]]. 
- []
-
-[18] <2.Background/images/StateMachines.pdf, id=1071, 218.8175pt x 58.2175pt>
+] [17]
+<2.Background/images/StateMachines.pdf, id=1067, 218.8175pt x 58.2175pt>
 File: 2.Background/images/StateMachines.pdf Graphic file (type pdf)
 
 <use 2.Background/images/StateMachines.pdf>
-<2.Background/images/OO.pdf, id=1072, 386.44376pt x 65.24374pt>
+<2.Background/images/OO.pdf, id=1068, 386.44376pt x 65.24374pt>
 File: 2.Background/images/OO.pdf Graphic file (type pdf)
 
-<use 2.Background/images/OO.pdf>
+<use 2.Background/images/OO.pdf> [18 <./2.Background/images/StateMachines.pdf> 
+<./2.Background/images/OO.pdf>]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 126.
- [19 <./2.Background/images/StateMachines.pdf> <./2.Background/images/OO.pdf>]
-Overfull \hbox (34.80447pt too wide) in paragraph at lines 151--152
-\OT1/cmr/m/n/10.95 [[]] and the Ep-silon Gen-er-a-tion Lan-guage (EGL) [[]]. 
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 132.
+ [19]
+Overfull \hbox (0.98811pt too wide) in paragraph at lines 176--177
+\OT1/cmr/m/n/10.95 the in-put, \OT1/pcr/m/n/10.95 lift[stationary up down stopp
+ing emergency]\OT1/cmr/m/n/10.95 , the pa-
  []
 
 [20]
-Overfull \hbox (15.10147pt too wide) in paragraph at lines 176--177
-\OT1/cmr/m/n/10.95 the in-put, \OT1/pcr/m/n/10.95 lift[stationary up down stopp
-ing emergency]\OT1/cmr/m/n/10.95 , the parser
- []
-
-
-Overfull \hbox (11.08646pt too wide) in paragraph at lines 176--177
-\OT1/pcr/m/n/10.95 State\OT1/cmr/m/n/10.95 s with the \OT1/pcr/m/n/10.95 name\O
-T1/cmr/m/n/10.95 s, \OT1/pcr/m/n/10.95 stationary\OT1/cmr/m/n/10.95 , \OT1/pcr/
-m/n/10.95 up\OT1/cmr/m/n/10.95 , \OT1/pcr/m/n/10.95 down\OT1/cmr/m/n/10.95 , \O
-T1/pcr/m/n/10.95 stopping\OT1/cmr/m/n/10.95 , and \OT1/pcr/m/n/10.95 emergency\
-OT1/cmr/m/n/10.95 . 
- []
-
-[21]
 Overfull \hbox (1.29004pt too wide) in paragraph at lines 203--204
 []\OT1/cmr/m/n/10.95 [[]] ob-serves that in-con-sis-tency de-tec-tion is in-her
 -ently pattern-
  []
 
-[22]) (./2.Background/methods.tex [23]
-<2.Background/images/PIMs_and_PSMs.png, id=1264, 613.29124pt x 37.13875pt>
+[21]) (./2.Background/methods.tex [22]
+<2.Background/images/PIMs_and_PSMs.png, id=1260, 613.29124pt x 37.13875pt>
 File: 2.Background/images/PIMs_and_PSMs.png Graphic file (type png)
 
-<use 2.Background/images/PIMs_and_PSMs.png>
-<2.Background/images/mda-pyramid.png, id=1268, 541.02126pt x 263.98625pt>
+<use 2.Background/images/PIMs_and_PSMs.png> [23 <./2.Background/images/PIMs_and
+_PSMs.png (PNG copy)>]
+<2.Background/images/mda-pyramid.png, id=1272, 541.02126pt x 263.98625pt>
 File: 2.Background/images/mda-pyramid.png Graphic file (type png)
 
-<use 2.Background/images/mda-pyramid.png> [24 <./2.Background/images/PIMs_and_P
-SMs.png (PNG copy)>]
-Overfull \hbox (7.6775pt too wide) in paragraph at lines 48--49
-[]\OT1/cmr/m/n/10.95 Translationists must en-code be-haviour in their PIMs [[]]
-,
- []
-
-[25 <./2.Background/images/mda-pyramid.png (PNG copy)>]
+<use 2.Background/images/mda-pyramid.png> [24 <./2.Background/images/mda-pyrami
+d.png (PNG copy)>]
 Overfull \hbox (0.9787pt too wide) in paragraph at lines 50--51
 \OT1/cmr/m/n/10.95 code is struc-tured is driven by the model. By con-trast, [[
 ],
  []
 
-
-Overfull \hbox (24.52802pt too wide) in paragraph at lines 84--85
-\OT1/cmr/m/n/10.95 [[]] and Mi-crosoft's Soft-ware Fac-to-ries [[]].
- []
-
-
-Overfull \hbox (29.01328pt too wide) in paragraph at lines 87--88
-\OT1/cmr/m/n/10.95 Model-Driven Soft-ware De-vel-op-ment is the term given to M
-DE by [[]].
- []
-
-
-Overfull \hbox (0.28052pt too wide) in paragraph at lines 87--88
-\OT1/cmr/m/n/10.95 The style of MDE that [[]] de-scribes, \OT1/cmr/m/it/10.95 a
-rchitecture-centric model-
- []
-
-[26] [27]
+[25] [26]
 Overfull \hbox (3.8417pt too wide) in paragraph at lines 112--113
 []\OT1/cmr/m/n/10.95 The Soft-ware Fac-to-ries method [[]] pre-scribes a bottom
 -
@@ -962,46 +884,22 @@ Overfull \hbox (1.19873pt too wide) in paragraph at lines 116--117
 use of domain-specific
  []
 
-[28]) (./2.Background/tools.tex
-Overfull \hbox (33.04678pt too wide) in paragraph at lines 9--10
-\OT1/cmr/m/n/10.95 en-vi-ron-ments that this sec-tion does not dis-cuss, such a
-s ATL [[]]
- []
-
-
-Overfull \hbox (2.75438pt too wide) in paragraph at lines 9--10
-\OT1/cmr/m/n/10.95 and VI-A-TRA [[]] for M2M trans-for-ma-tion, oAW[] for model
-
- []
-
-
-Overfull \hbox (2.76382pt too wide) in paragraph at lines 9--10
-\OT1/cmr/m/n/10.95 trans-for-ma-tion and val-i-da-tion, MOF-Script [[]] for M2T
- trans-
- []
-
-[29]
-Overfull \hbox (30.47664pt too wide) in paragraph at lines 13--14
-\OT1/cmr/m/n/10.95 modelling lan-guage, Ecore, that im-ple-ments the MOF 2.0 sp
-ec-i-fi-ca-tion [[]].
- []
-
-
-<2.Background/images/emf_model_editor.png, id=1355, 870.25125pt x 607.26875pt>
+[27]) (./2.Background/tools.tex [28]
+<2.Background/images/emf_model_editor.png, id=1348, 870.25125pt x 607.26875pt>
 File: 2.Background/images/emf_model_editor.png Graphic file (type png)
 
-<use 2.Background/images/emf_model_editor.png> [30 <./2.Background/images/emf_m
+<use 2.Background/images/emf_model_editor.png> [29 <./2.Background/images/emf_m
 odel_editor.png>]
-<2.Background/images/emf_metamodel_tree.png, id=1368, 817.0525pt x 734.745pt>
+<2.Background/images/emf_metamodel_tree.png, id=1361, 817.0525pt x 734.745pt>
 File: 2.Background/images/emf_metamodel_tree.png Graphic file (type png)
 
 <use 2.Background/images/emf_metamodel_tree.png>
-<2.Background/images/emf_metamodel_diagrammatic.png, id=1369, 817.0525pt x 734.
+<2.Background/images/emf_metamodel_diagrammatic.png, id=1362, 817.0525pt x 734.
 745pt>
 File: 2.Background/images/emf_metamodel_diagrammatic.png Graphic file (type png
 )
  <use 2.Background/images/emf_metamodel_diagrammatic.png>
-<2.Background/images/emf_metamodel_textual.png, id=1370, 817.0525pt x 734.745pt
+<2.Background/images/emf_metamodel_textual.png, id=1363, 817.0525pt x 734.745pt
 >
 File: 2.Background/images/emf_metamodel_textual.png Graphic file (type png)
  <use 2.Background/images/emf_metamodel_textual.png>
@@ -1010,8 +908,8 @@ Overfull \hbox (1.59717pt too wide) in paragraph at lines 57--58
 ed with EMF. Fig-ure []2.11[]
  []
 
-[31 <./2.Background/images/emf_metamodel_tree.png>]
-<2.Background/images/gmf_model_editor.png, id=1384, 870.25125pt x 615.29875pt>
+[30 <./2.Background/images/emf_metamodel_tree.png>]
+<2.Background/images/gmf_model_editor.png, id=1376, 870.25125pt x 615.29875pt>
 File: 2.Background/images/gmf_model_editor.png Graphic file (type png)
 
 <use 2.Background/images/gmf_model_editor.png>
@@ -1020,56 +918,28 @@ Overfull \hbox (2.69212pt too wide) in paragraph at lines 74--75
 -bil-ity, Ep-silon is metamodel-
  []
 
-[32 <./2.Background/images/emf_metamodel_diagrammatic.png>] [33 <./2.Background
+[31 <./2.Background/images/emf_metamodel_diagrammatic.png>] [32 <./2.Background
 /images/emf_metamodel_textual.png> <./2.Background/images/gmf_model_editor.png>
-] <2.Background/images/epsilon.png, id=1402, 455.7025pt x 297.11pt>
+] <2.Background/images/epsilon.png, id=1395, 455.7025pt x 297.11pt>
 File: 2.Background/images/epsilon.png Graphic file (type png)
 
-<use 2.Background/images/epsilon.png> [34 <./2.Background/images/epsilon.png (P
-NG copy)>]) (./2.Background/related.tex [35] [36]
-Overfull \hbox (22.93646pt too wide) in paragraph at lines 26--27
-[]\OT1/cmr/m/n/10.95 The high-level lan-guages that Ward dis-cusses are domain-
-specific. [[]]
- []
-
-[37]) (./2.Background/benefits_and_challenges.tex
-Overfull \hbox (9.16245pt too wide) in paragraph at lines 11--12
-\OT1/cmr/bx/n/10.95 Tool in-ter-op-er-abil-ity[] \OT1/cmr/m/n/10.95 MOF, the st
-an-dard meta-mod-elling lan-guage for MDE,
- []
-
-[38] [39]
-Overfull \hbox (21.21591pt too wide) in paragraph at lines 29--30
-\OT1/cmr/m/n/10.95 re-struc-tur-ing code, up-dat-ing doc-u-men-ta-tion and re-g
-res-sion test-ing [[]].
- []
-
-)) [40] [41]
+<use 2.Background/images/epsilon.png> [33 <./2.Background/images/epsilon.png (P
+NG copy)>]) (./2.Background/related.tex [34] [35] [36])
+(./2.Background/benefits_and_challenges.tex [37] [38])) [39] [40]
 \openout2 = `3.LiteratureReview/literature_review.aux'.
 
- (./3.LiteratureReview/literature_review.tex [42
+
+(./3.LiteratureReview/literature_review.tex [41
 
 
 
-] [43]
-Overfull \hbox (73.3704pt too wide) in paragraph at lines 25--26
-\OT1/cmr/m/n/10.95 Software evo-lu-tion is man-aged us-ing var-i-ous de-vel-op-
-ment ac-tiv-i-ties. [[]]
- []
+] [42] [43]
+Underfull \vbox (badness 2961) has occurred while \output is active []
 
-[44] [45]
-Overfull \hbox (6.90994pt too wide) in paragraph at lines 44--45
-\OT1/cmr/m/n/10.95 the in-ter-nal qual-ity of a sys-tem (per-fec-tive soft-ware
- evo-lu-tion). [[]]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [46]
-Overfull \hbox (70.03473pt too wide) in paragraph at lines 55--56
-\OT1/cmr/m/n/10.95 creas-ingly trace-abil-ity is used for arte-facts other than
- re-quire-ments [[]].
+ [44]
+Overfull \hbox (3.63506pt too wide) in paragraph at lines 55--56
+\OT1/cmr/m/n/10.95 creas-ingly used for arte-facts other than re-quire-ments [[
+]].
  []
 
 
@@ -1079,18 +949,13 @@ mi-nol-ogy. This the-sis adopts
  []
 
 
-<3.LiteratureReview/images/traceability_links.pdf, id=1598, 354.98764pt x 291.2
+<3.LiteratureReview/images/traceability_links.pdf, id=1587, 354.98764pt x 291.2
 8514pt>
 File: 3.LiteratureReview/images/traceability_links.pdf Graphic file (type pdf)
  <use 3.LiteratureReview/images/traceability_links.pdf>
-Overfull \hbox (47.44702pt too wide) in paragraph at lines 72--73
-\OT1/cmr/m/n/10.95 not per-form au-to-matic up-dates, while [[], []]
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
+ [45]
 Overfull \hbox (3.39174pt too wide) in paragraph at lines 74--75
 \OT1/cmr/m/n/10.95 well suited to the evo-lu-tion of [trace-abil-ity] arte-fact
 s'' [[],
@@ -1099,68 +964,46 @@ s'' [[],
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48 <./3.LiteratureReview/images/traceability_links.pdf>]
-Overfull \hbox (25.83801pt too wide) in paragraph at lines 92--93
-\OT1/cmr/m/n/10.95 multi-dimensional ar-rays) from the FOR-TRAN lan-guage spec-
-i-fi-ca-tion [[]]
- []
-
-[49]
+ [46 <./3.LiteratureReview/images/traceability_links.pdf>] [47]
 Overfull \hbox (1.7463pt too wide) in paragraph at lines 97--98
 []\OT1/cmr/m/n/10.95 Lisp makes id-iomatic some of the For-tran List Pro-cess-i
 ng Lan-guage (FLPL)
  []
 
-
-Overfull \hbox (37.46019pt too wide) in paragraph at lines 109--110
-\OT1/cmr/m/n/10.95 re-la-tional database sys-tems (e.g. in [[], []]),
+[48] [49]
+Overfull \hbox (0.19505pt too wide) in paragraph at lines 127--128
+[]\OT1/cmr/m/n/10.95 As noted in [[]], the evo-lu-tion-ary tax-onomies de-scrib
+ed
  []
 
-[50] [51]
-Overfull \hbox (19.41835pt too wide) in paragraph at lines 127--128
-[]\OT1/cmr/m/n/10.95 As noted in [[]], the ap-proaches de-scribed in [[],
- []
-
-
-Overfull \hbox (54.2991pt too wide) in paragraph at lines 132--133
-\OT1/cmr/m/n/10.95 mon for sup-port-ing re-la-tional database schema evo-lu-tio
-n (e.g. [[],
- []
-
-[52]
+[50]
 Overfull \hbox (1.64783pt too wide) in paragraph at lines 142--143
 \OT1/cmr/m/n/10.95 typ-i-cal ar-chi-tec-ture of a re-la-tional database man-age
 -ment sys-tem. They demon-
  []
 
-[53]
-Overfull \hbox (20.4525pt too wide) in paragraph at lines 155--156
-[]\OT1/cmr/m/n/10.95 [[]] recog-nise and seek to ad-dress the chal-lenge of gra
-mmar-
- []
-
-[54] [55] [56]
-<3.LiteratureReview/images/emf_refactor_lhs.pdf, id=1806, 298.83914pt x 92.4245
+[51] [52] [53] [54]
+<3.LiteratureReview/images/emf_refactor_lhs.pdf, id=1794, 298.83914pt x 92.4245
 pt>
 File: 3.LiteratureReview/images/emf_refactor_lhs.pdf Graphic file (type pdf)
  <use 3.LiteratureReview/images/emf_refactor_lhs.pdf>
-<3.LiteratureReview/images/emf_refactor_rhs.pdf, id=1807, 296.52852pt x 173.295
+<3.LiteratureReview/images/emf_refactor_rhs.pdf, id=1795, 296.52852pt x 173.295
 93pt>
 File: 3.LiteratureReview/images/emf_refactor_rhs.pdf Graphic file (type pdf)
- <use 3.LiteratureReview/images/emf_refactor_rhs.pdf> [57] [58 <./3.LiteratureR
+ <use 3.LiteratureReview/images/emf_refactor_rhs.pdf> [55] [56 <./3.LiteratureR
 eview/images/emf_refactor_lhs.pdf> <./3.LiteratureReview/images/emf_refactor_rh
 s.pdf>]
-Overfull \hbox (11.85945pt too wide) in paragraph at lines 219--220
-\OT1/cmr/m/n/10.95 directional trans-for-ma-tions (which [[]] de-scribe as trac
-eability-
+Overfull \hbox (0.20988pt too wide) in paragraph at lines 219--220
+\OT1/cmr/m/n/10.95 io-nal trans-for-ma-tions (termed traceability-by-design by 
+[[]])
  []
 
 
-<3.LiteratureReview/images/retransformation.pdf, id=1911, 156.30023pt x 149.370
+<3.LiteratureReview/images/retransformation.pdf, id=1900, 156.30023pt x 149.370
 65pt>
 File: 3.LiteratureReview/images/retransformation.pdf Graphic file (type pdf)
  <use 3.LiteratureReview/images/retransformation.pdf>
-<3.LiteratureReview/images/live_transformation.pdf, id=1912, 160.91989pt x 149.
+<3.LiteratureReview/images/live_transformation.pdf, id=1901, 160.91989pt x 149.
 37065pt>
 File: 3.LiteratureReview/images/live_transformation.pdf Graphic file (type pdf)
 
@@ -1170,72 +1013,31 @@ Underfull \hbox (badness 1708) in paragraph at lines 235--235
 on. Taken from
  []
 
-[59 <./3.LiteratureReview/images/retransformation.pdf> <./3.LiteratureReview/im
+[57 <./3.LiteratureReview/images/retransformation.pdf> <./3.LiteratureReview/im
 ages/live_transformation.pdf>]
 Underfull \vbox (badness 1596) has occurred while \output is active []
 
- [60]
-<3.LiteratureReview/images/impact_analysis_pattern.pdf, id=2016, 446.71843pt x 
+ [58]
+<3.LiteratureReview/images/impact_analysis_pattern.pdf, id=2005, 446.71843pt x 
 457.50133pt>
 File: 3.LiteratureReview/images/impact_analysis_pattern.pdf Graphic file (type 
 pdf)
  <use 3.LiteratureReview/images/impact_analysis_pattern.pdf>
-[61 <./3.LiteratureReview/images/impact_analysis_pattern.pdf>]
-Overfull \hbox (23.93488pt too wide) in paragraph at lines 263--264
-\OT1/cmr/m/n/10.95 refac-tor-ing func-tion-al-ity of the Eclipse Java De-vel-op
--ment Tools [[]],
- []
-
-
-Overfull \hbox (1.0191pt too wide) in paragraph at lines 263--264
-\OT1/cmr/m/n/10.95 for ex-am-ple, prop-a-gates changes be-tween classes us-ing 
-a cache of the workspace
- []
-
-
+[59 <./3.LiteratureReview/images/impact_analysis_pattern.pdf>]
 Underfull \vbox (badness 1596) has occurred while \output is active []
 
- [62]
-Overfull \hbox (81.86858pt too wide) in paragraph at lines 280--281
-\OT1/cmr/m/n/10.95 por-tant for for-mu-lat-ing the re-quire-ments for co-evolut
-ion tools. [[]]
- []
-
-
+ [60]
 Overfull \hbox (8.60158pt too wide) in paragraph at lines 283--284
 \OT1/cmr/m/n/10.95 meta-model changes made [[], [],
  []
 
-
-Overfull \hbox (66.94044pt too wide) in paragraph at lines 283--284
-\OT1/cmr/m/n/10.95 guided by a de-vel-oper (\OT1/cmr/m/it/10.95 break-ing and n
-on-resolvable \OT1/cmr/m/n/10.95 change). [[]]
- []
-
-[63]
-Overfull \hbox (76.88025pt too wide) in paragraph at lines 285--286
-\OT1/cmr/m/n/10.95 cause au-to-mated co-evolution ap-proaches are built atop th
-em. [[]]
- []
-
-
-<3.LiteratureReview/images/CoEvoProcess.png, id=2119, 424.58624pt x 340.27126pt
+[61]
+<3.LiteratureReview/images/CoEvoProcess.png, id=2108, 424.58624pt x 340.27126pt
 >
 File: 3.LiteratureReview/images/CoEvoProcess.png Graphic file (type png)
- <use 3.LiteratureReview/images/CoEvoProcess.png>
-Overfull \hbox (39.46776pt too wide) in paragraph at lines 303--304
-\OT1/cmr/m/n/10.95 ing the mi-gra-tion strat-egy (the penul-ti-mate phase in Fi
-g-ure []3.5[]). [[]]
- []
-
-[64]
-Overfull \hbox (5.29779pt too wide) in paragraph at lines 305--306
-\OT1/cmr/m/n/10.95 such, it is not clear whether the ap-proach can be used in g
-en-eral. [[]]
- []
-
-[65 <./3.LiteratureReview/images/CoEvoProcess.png>]
-<3.LiteratureReview/images/transformation-chain.png, id=2154, 1215.54124pt x 10
+ <use 3.LiteratureReview/images/CoEvoProcess.png> [62] [63 <./3.LiteratureRevie
+w/images/CoEvoProcess.png>]
+<3.LiteratureReview/images/transformation-chain.png, id=2143, 1215.54124pt x 10
 38.88126pt>
 File: 3.LiteratureReview/images/transformation-chain.png Graphic file (type png
 )
@@ -1245,29 +1047,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 318--318
  from
  []
 
-[66 <./3.LiteratureReview/images/transformation-chain.png (PNG copy)>]
-Overfull \hbox (60.36276pt too wide) in paragraph at lines 327--328
-\OT1/cmr/m/n/10.95 works to bet-ter sup-port co-evolution is nec-es-sary. For e
-x-am-ple, EMF [[]]
- []
-
-
-Overfull \hbox (24.44179pt too wide) in paragraph at lines 336--337
-\OT1/cmr/m/n/10.95 mo-ti-va-tion of most model syn-chro-ni-sa-tion re-search. H
-ow-ever, [[]]
- []
-
-
-Overfull \hbox (0.50394pt too wide) in paragraph at lines 336--337
-\OT1/cmr/m/n/10.95 of a sys-tem via mod-u-lar-i-sa-tion. Build-ing on the work 
-by [[]],
- []
-
-
-Overfull \vbox (11.56252pt too high) has occurred while \output is active []
-
-
-[67]
+[64 <./3.LiteratureReview/images/transformation-chain.png (PNG copy)>] [65]
 Overfull \hbox (3.96175pt too wide) in paragraph at lines 338--339
 \OT1/cmr/bx/n/10.95 Model-metamodel co-evolution chal-lenges[] \OT1/cmr/m/n/10.
 95 To bet-ter un-der-stand model-
@@ -1278,48 +1058,33 @@ Overfull \hbox (2.42015pt too wide) in paragraph at lines 338--339
 \OT1/cmr/m/n/10.95 change are re-quired. [[]] re-port an em-pir-i-cal study
  []
 
-[68]
-Overfull \hbox (66.1652pt too wide) in paragraph at lines 346--347
-\OT1/cmr/m/n/10.95 refac-tor-ing ([[], [], [], []]).
- []
-
-
-Overfull \hbox (36.7206pt too wide) in paragraph at lines 346--347
-\OT1/cmr/m/n/10.95 tion in MDE ([[], [], [],
- []
-
-
-Overfull \hbox (3.82951pt too wide) in paragraph at lines 346--347
-\OT1/cmr/m/n/10.95 in ex-ist-ing projects, and, with the ex-cep-tion of [[]],
- []
-
-) [69]
+[66]) [67]
 \openout2 = `4.Analysis/analysis.aux'.
 
- (./4.Analysis/analysis.tex [70
+ (./4.Analysis/analysis.tex [68
 
 
 
 ]
-<4.Analysis/overview.pdf, id=2225, 648.4225pt x 143.53625pt>
+<4.Analysis/overview.pdf, id=2208, 648.4225pt x 143.53625pt>
 File: 4.Analysis/overview.pdf Graphic file (type pdf)
 
 <use 4.Analysis/overview.pdf>
 Underfull \vbox (badness 5446) has occurred while \output is active []
 
- [71 <./4.Analysis/overview.pdf>]
+ [69 <./4.Analysis/overview.pdf>]
 Overfull \hbox (5.39803pt too wide) in paragraph at lines 25--26
 \OT1/cmr/m/n/10.95 The suit-abil-ity of each MDE project for analysing co-evolu
 tion and for analysing
  []
 
-[72]
+[70]
 Overfull \hbox (9.07832pt too wide) in paragraph at lines 90--91
 \OT1/cmr/m/n/10.95 drew Wat-son, ref-er-ences the de-vel-op-ment of two MDE pro
 jects in [[]].
  []
 
-[73] [74] [75] [76]
+[71] [72] [73] [74]
 Overfull \hbox (11.96625pt too wide) in paragraph at lines 127--128
 []\OT1/cmr/m/n/10.95 To ex-plore their rel-e-vance to MDE, the refac-tor-ings d
 e-scribed in [[]]
@@ -1331,14 +1096,14 @@ Overfull \hbox (3.34653pt too wide) in paragraph at lines 131--132
 for ex-am-ple, be-tween bi-directional
  []
 
-<4.Analysis/exemplar_refactoring.pdf, id=2298, 405.515pt x 221.82875pt>
+<4.Analysis/exemplar_refactoring.pdf, id=2281, 405.515pt x 221.82875pt>
 File: 4.Analysis/exemplar_refactoring.pdf Graphic file (type pdf)
 
-<use 4.Analysis/exemplar_refactoring.pdf> [77]
+<use 4.Analysis/exemplar_refactoring.pdf> [75]
 Underfull \vbox (badness 6252) has occurred while \output is active []
 
- [78 <./4.Analysis/exemplar_refactoring.pdf>] [79]
-<4.Analysis/images/co-evo_activities.pdf, id=2357, 845.1575pt x 597.23125pt>
+ [76 <./4.Analysis/exemplar_refactoring.pdf>] [77]
+<4.Analysis/images/co-evo_activities.pdf, id=2339, 845.1575pt x 597.23125pt>
 File: 4.Analysis/images/co-evo_activities.pdf Graphic file (type pdf)
 
 <use 4.Analysis/images/co-evo_activities.pdf>
@@ -1350,11 +1115,11 @@ n is ei-ther \OT1/cmr/m/it/10.95 developer-
 
 Underfull \vbox (badness 1360) has occurred while \output is active []
 
- [80]
+ [78]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [81 <./4.Analysis/images/co-evo_activities.pdf>] [82]
-<6.Evaluation/images/user_driven/emf_process.pdf, id=2409, 845.1575pt x 597.231
+ [79 <./4.Analysis/images/co-evo_activities.pdf>] [80]
+<6.Evaluation/images/user_driven/emf_process.pdf, id=2392, 845.1575pt x 597.231
 25pt>
 File: 6.Evaluation/images/user_driven/emf_process.pdf Graphic file (type pdf)
  <use 6.Evaluation/images/user_driven/emf_process.pdf>
@@ -1363,42 +1128,42 @@ Underfull \hbox (badness 3128) in paragraph at lines 230--232
 on-strates user-driven co-
  []
 
-[83 <./6.Evaluation/images/user_driven/emf_process.pdf>]
+[81 <./6.Evaluation/images/user_driven/emf_process.pdf>]
 Overfull \hbox (8.77249pt too wide) in paragraph at lines 247--248
 []\OT1/cmr/m/n/10.95 As noted in Sec-tion []4.2.2[], ex-ist-ing co-evolution re
 -search fo-cuses on developer-
  []
 
-[84] [85]
+[82] [83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [86]
+ [84]
 Overfull \hbox (27.91954pt too wide) in paragraph at lines 293--294
 \OT1/cmr/m/n/10.95 port the spec-i-fi-ca-tion of cus-tom model mi-gra-tion stra
 te-gies, and [[]]
  []
 
-[87]
+[85]
 Overfull \hbox (40.72372pt too wide) in paragraph at lines 305--306
 \OT1/cmr/m/n/10.95 the Ep-silon FPTC tool (sum-marised in Sec-tion []4.1[] and 
 de-scribed in [[]]).
  []
 
-<4.Analysis/fptc_before.pdf, id=2494, 239.89626pt x 114.4275pt>
+<4.Analysis/fptc_before.pdf, id=2477, 239.89626pt x 114.4275pt>
 File: 4.Analysis/fptc_before.pdf Graphic file (type pdf)
 
 <use 4.Analysis/fptc_before.pdf>
-<4.Analysis/fptc_after.pdf, id=2495, 339.2675pt x 121.45375pt>
+<4.Analysis/fptc_after.pdf, id=2478, 339.2675pt x 121.45375pt>
 File: 4.Analysis/fptc_after.pdf Graphic file (type pdf)
 
 <use 4.Analysis/fptc_after.pdf>
 Underfull \vbox (badness 1097) has occurred while \output is active []
 
- [88]
-[89 <./4.Analysis/fptc_before.pdf> <./4.Analysis/fptc_after.pdf>]
+ [86]
+[87 <./4.Analysis/fptc_before.pdf> <./4.Analysis/fptc_after.pdf>]
 Underfull \vbox (badness 1596) has occurred while \output is active []
 
- [90]
+ [88]
 Overfull \hbox (5.85483pt too wide) in paragraph at lines 353--354
 []\OT1/pcr/m/n/10.95 successors \OT1/cmr/m/n/10.95 evolved to \OT1/pcr/m/n/10.9
 5 incomingConnections\OT1/cmr/m/n/10.95 , and \OT1/pcr/m/n/10.95 predecessors
@@ -1416,10 +1181,10 @@ Overfull \hbox (0.34706pt too wide) in paragraph at lines 367--368
 evolution have been
  []
 
-<4.Analysis/spectrum.png, id=2601, 602.25pt x 301.125pt>
+<4.Analysis/spectrum.png, id=2584, 602.25pt x 301.125pt>
 File: 4.Analysis/spectrum.png Graphic file (type png)
 
-<use 4.Analysis/spectrum.png> [91] [92 <./4.Analysis/spectrum.png>]
+<use 4.Analysis/spectrum.png> [89] [90 <./4.Analysis/spectrum.png>]
 Overfull \hbox (0.21825pt too wide) in paragraph at lines 389--390
 \OT1/cmr/m/n/10.95 man-ag-ing co-evolution. Be-cause mod-elling frame-works typ
 -i-cally en-force model
@@ -1434,7 +1199,7 @@ e edit-ing of non-conformant
 
 Underfull \vbox (badness 2961) has occurred while \output is active []
 
- [93]
+ [91]
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no † in font cmr10!
 
@@ -1445,49 +1210,49 @@ Overfull \hbox (45.21222pt too wide) in paragraph at lines 414--415
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [94])
-[95]
+ [92])
+[93]
 \openout2 = `5.Implementation/implementation.aux'.
 
- (./5.Implementation/implementation.tex [96
+ (./5.Implementation/implementation.tex [94
 
 
 
 ]
-<5.Implementation/overview.pdf, id=2653, 703.62875pt x 162.6075pt>
+<5.Implementation/overview.pdf, id=2636, 703.62875pt x 162.6075pt>
 File: 5.Implementation/overview.pdf Graphic file (type pdf)
 
 <use 5.Implementation/overview.pdf>
-<5.Implementation/images/implementation_structure.pdf, id=2657, 1027.84pt x 770
+<5.Implementation/images/implementation_structure.pdf, id=2640, 1027.84pt x 770
 .88pt>
 File: 5.Implementation/images/implementation_structure.pdf Graphic file (type p
 df)
  <use 5.Implementation/images/implementation_structure.pdf>
-(./5.Implementation/mmi_syntax.tex [97 <./5.Implementation/overview.pdf>]
-[98 <./5.Implementation/images/implementation_structure.pdf>]
-<5.Implementation/images/families.pdf, id=2700, 277.035pt x 157.58875pt>
+(./5.Implementation/mmi_syntax.tex [95 <./5.Implementation/overview.pdf>]
+[96 <./5.Implementation/images/implementation_structure.pdf>]
+<5.Implementation/images/families.pdf, id=2682, 277.035pt x 157.58875pt>
 File: 5.Implementation/images/families.pdf Graphic file (type pdf)
 
 <use 5.Implementation/images/families.pdf>
-<5.Implementation/images/families_evolved.pdf, id=2701, 277.035pt x 147.55125pt
+<5.Implementation/images/families_evolved.pdf, id=2683, 277.035pt x 147.55125pt
 >
 File: 5.Implementation/images/families_evolved.pdf Graphic file (type pdf)
  <use 5.Implementation/images/families_evolved.pdf>
 Underfull \vbox (badness 1968) has occurred while \output is active []
 
- [99 <./5.Implementation/images/families.pdf> <./5.Implementation/images/famili
+ [97 <./5.Implementation/images/families.pdf> <./5.Implementation/images/famili
 es_evolved.pdf>]
-<5.Implementation/images/family_model.png, id=2823, 537.00626pt x 299.1175pt>
+<5.Implementation/images/family_model.png, id=2806, 537.00626pt x 299.1175pt>
 File: 5.Implementation/images/family_model.png Graphic file (type png)
 
 <use 5.Implementation/images/family_model.png>
-<5.Implementation/images/successful_binding.pdf, id=2831, 262.9825pt x 181.6787
+<5.Implementation/images/successful_binding.pdf, id=2814, 262.9825pt x 181.6787
 6pt>
 File: 5.Implementation/images/successful_binding.pdf Graphic file (type pdf)
- <use 5.Implementation/images/successful_binding.pdf> [100 <./5.Implementation/
-images/family_model.png>] [101 <./5.Implementation/images/successful_binding.pd
-f>]
-<5.Implementation/images/slot_model_design.pdf, id=2861, 372.39125pt x 64.24pt>
+ <use 5.Implementation/images/successful_binding.pdf> [98 <./5.Implementation/i
+mages/family_model.png>] [99 <./5.Implementation/images/successful_binding.pdf>
+]
+<5.Implementation/images/slot_model_design.pdf, id=2844, 372.39125pt x 64.24pt>
 File: 5.Implementation/images/slot_model_design.pdf Graphic file (type pdf)
 <use 5.Implementation/images/slot_model_design.pdf>
 Overfull \hbox (15.58879pt too wide) in paragraph at lines 86--87
@@ -1507,13 +1272,13 @@ Overfull \hbox (13.74861pt too wide) in paragraph at lines 86--87
 in-spired by [[]]
  []
 
-[102 <./5.Implementation/images/slot_model_design.pdf>]
-<5.Implementation/images/mmi_workflow.pdf, id=2924, 1027.84pt x 770.88pt>
+[100 <./5.Implementation/images/slot_model_design.pdf>]
+<5.Implementation/images/mmi_workflow.pdf, id=2907, 1027.84pt x 770.88pt>
 File: 5.Implementation/images/mmi_workflow.pdf Graphic file (type pdf)
 
-<use 5.Implementation/images/mmi_workflow.pdf> [103 <./5.Implementation/images/
+<use 5.Implementation/images/mmi_workflow.pdf> [101 <./5.Implementation/images/
 mmi_workflow.pdf>]
-<5.Implementation/images/generic_binding.pdf, id=2962, 457.71pt x 293.095pt>
+<5.Implementation/images/generic_binding.pdf, id=2944, 457.71pt x 293.095pt>
 File: 5.Implementation/images/generic_binding.pdf Graphic file (type pdf)
 
 <use 5.Implementation/images/generic_binding.pdf>
@@ -1522,18 +1287,18 @@ Overfull \hbox (11.41875pt too wide) in paragraph at lines 141--142
 a-ble with the metamodel-
  []
 
-<5.Implementation/images/minimal_mof.pdf, id=2971, 369.38pt x 145.54375pt>
+<5.Implementation/images/minimal_mof.pdf, id=2953, 369.38pt x 145.54375pt>
 File: 5.Implementation/images/minimal_mof.pdf Graphic file (type pdf)
 
 <use 5.Implementation/images/minimal_mof.pdf>
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 164.
- [104] [105 <./5.Implementation/images/generic_binding.pdf>] [106 <./5.Implemen
+ [102] [103 <./5.Implementation/images/generic_binding.pdf>] [104 <./5.Implemen
 tation/images/minimal_mof.pdf>]
-<5.Implementation/images/slot_model_complete.pdf, id=3065, 452.69125pt x 154.57
+<5.Implementation/images/slot_model_complete.pdf, id=3048, 452.69125pt x 154.57
 75pt>
 File: 5.Implementation/images/slot_model_complete.pdf Graphic file (type pdf)
- <use 5.Implementation/images/slot_model_complete.pdf> [107 <./5.Implementation
+ <use 5.Implementation/images/slot_model_complete.pdf> [105 <./5.Implementation
 /images/slot_model_complete.pdf>]
 (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
@@ -1543,10 +1308,10 @@ Overfull \hbox (3.96994pt too wide) in paragraph at lines 198--199
 on-for-mance con-straints (Fig-ure []5.11[])
  []
 
-[108] [109]) (./5.Implementation/textual_modelling_notation.tex
+[106] [107]) (./5.Implementation/textual_modelling_notation.tex
 Missing character: There is no ∆ in font cmr10!
 Missing character: There is no í in font cmr10!
- [110]
+ [108]
 File: 5.Implementation/images/families.pdf Graphic file (type pdf)
 
 <use 5.Implementation/images/families.pdf>
@@ -1561,8 +1326,8 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-) [111]
-[112]
+) [109]
+[110]
 Overfull \hbox (15.19048pt too wide) in paragraph at lines 65--66
 []\OT1/cmr/m/n/10.95 Currently, sev-eral tools ex-ist for rep-re-sent-ing mod-e
 ls with tex-tual, metamodel-
@@ -1579,15 +1344,15 @@ Overfull \hbox (27.63148pt too wide) in paragraph at lines 65--66
 (HUTN) [[]],
  []
 
-[113] [114] [115] [116] [117]
-<5.Implementation/images/ast_metamodel.pdf, id=3389, 297.11pt x 143.53625pt>
+[111] [112] [113] [114] [115]
+<5.Implementation/images/ast_metamodel.pdf, id=3372, 297.11pt x 143.53625pt>
 File: 5.Implementation/images/ast_metamodel.pdf Graphic file (type pdf)
 
 <use 5.Implementation/images/ast_metamodel.pdf>
 Underfull \vbox (badness 8075) has occurred while \output is active []
 
- [118 <./5.Implementation/images/ast_metamodel.pdf>]
-<5.Implementation/hutn_workflow.png, id=3434, 760.8425pt x 195.73125pt>
+ [116 <./5.Implementation/images/ast_metamodel.pdf>]
+<5.Implementation/hutn_workflow.png, id=3417, 760.8425pt x 195.73125pt>
 File: 5.Implementation/hutn_workflow.png Graphic file (type png)
 
 <use 5.Implementation/hutn_workflow.png>
@@ -1603,20 +1368,20 @@ mr/m/n/10.95 . The ver-sion of the metamodel-independent
  []
 
 
-<5.Implementation/images/slot_model_final.pdf, id=3438, 571.13374pt x 235.88126
+<5.Implementation/images/slot_model_final.pdf, id=3421, 571.13374pt x 235.88126
 pt>
 File: 5.Implementation/images/slot_model_final.pdf Graphic file (type pdf)
- <use 5.Implementation/images/slot_model_final.pdf> [119 <./5.Implementation/hu
+ <use 5.Implementation/images/slot_model_final.pdf> [117 <./5.Implementation/hu
 tn_workflow.png (PNG copy)>]
 Overfull \hbox (52.91675pt too wide) in paragraph at lines 241--242
 \OT1/cmr/bx/n/10.95 AST Model to In-ter-me-di-ate Model[] \OT1/cmr/m/n/10.95 Ep
 -silon HUTN uses ETL [[]]
  []
 
-[120 <./5.Implementation/images/slot_model_final.pdf>] [121] [122]
+[118 <./5.Implementation/images/slot_model_final.pdf>] [119] [120]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 319.
- [123]
+ [121]
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no † in font cmr10!
 Missing character: There is no ¬ in font cmr10!
@@ -2038,31 +1803,31 @@ Missing character: There is no † in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no † in font cmr10!
 
-[124] [125]
-<6.Evaluation/images/user_driven/hutn_process.pdf, id=3680, 845.1575pt x 597.23
+[122] [123]
+<6.Evaluation/images/user_driven/hutn_process.pdf, id=3663, 845.1575pt x 597.23
 125pt>
 File: 6.Evaluation/images/user_driven/hutn_process.pdf Graphic file (type pdf)
- <use 6.Evaluation/images/user_driven/hutn_process.pdf> [126 <./6.Evaluation/im
+ <use 6.Evaluation/images/user_driven/hutn_process.pdf> [124 <./6.Evaluation/im
 ages/user_driven/hutn_process.pdf>]
-<5.Implementation/hutn_conformance_reporting.png, id=3717, 682.55pt x 118.4425p
+<5.Implementation/hutn_conformance_reporting.png, id=3700, 682.55pt x 118.4425p
 t>
 File: 5.Implementation/hutn_conformance_reporting.png Graphic file (type png)
  <use 5.Implementation/hutn_conformance_reporting.png>)
 (./5.Implementation/analysis_of_languages_used_for_migration.tex
 Underfull \vbox (badness 3803) has occurred while \output is active []
 
- [127 <./5.Implementation/hutn_conformance_reporting.png (PNG copy)>]
+ [125 <./5.Implementation/hutn_conformance_reporting.png (PNG copy)>]
 Overfull \hbox (44.5777pt too wide) in paragraph at lines 9--10
 \OT1/cmr/m/n/10.95 tion lan-guages. The ex-am-ple is also used in co-evolution 
 lit-er-a-ture [[],
  []
 
 
-<5.Implementation/images/petri_nets_before.pdf, id=3750, 233.87375pt x 143.5362
+<5.Implementation/images/petri_nets_before.pdf, id=3732, 233.87375pt x 143.5362
 5pt>
 File: 5.Implementation/images/petri_nets_before.pdf Graphic file (type pdf)
  <use 5.Implementation/images/petri_nets_before.pdf>
-<5.Implementation/images/petri_nets_after.pdf, id=3751, 336.25626pt x 258.9675p
+<5.Implementation/images/petri_nets_after.pdf, id=3733, 336.25626pt x 258.9675p
 t>
 File: 5.Implementation/images/petri_nets_after.pdf Graphic file (type pdf)
  <use 5.Implementation/images/petri_nets_after.pdf>
@@ -2079,7 +1844,7 @@ r of \OT1/pcr/m/n/10.95 src \OT1/cmr/m/n/10.95 or \OT1/pcr/m/n/10.95 dst Transi
 tion\OT1/cmr/m/n/10.95 s. Sim-i-larly, a \OT1/pcr/m/n/10.95 Transition
  []
 
-[128] [129]
+[126] [127]
 Overfull \hbox (6.79547pt too wide) in paragraph at lines 85--86
 []\OT1/cmr/m/n/10.95 In model mi-gra-tion, source and tar-get meta-mod-els dif-
 fer, and hence existing-
@@ -2088,8 +1853,8 @@ fer, and hence existing-
 
 Underfull \vbox (badness 5862) has occurred while \output is active []
 
- [130]
-<5.Implementation/images/petri_nets_ecore2ecore.png, id=3808, 427.5975pt x 260.
+ [128]
+<5.Implementation/images/petri_nets_ecore2ecore.png, id=3791, 427.5975pt x 260.
 975pt>
 File: 5.Implementation/images/petri_nets_ecore2ecore.png Graphic file (type png
 )
@@ -2109,7 +1874,7 @@ LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <9> not available
 
 Underfull \vbox (badness 3623) has occurred while \output is active []
 
- [131]
+ [129]
 Missing character: There is no ¬ in font pcrr7t!
 Missing character: There is no † in font pcrr7t!
 
@@ -2130,7 +1895,7 @@ Overfull \hbox (118.40923pt too wide) in paragraph at lines 130--131
 -ing ex-ist-ing projects [[]].
  []
 
-[132] [133]
+[130] [131]
 Overfull \hbox (1.5857pt too wide) in paragraph at lines 173--174
 \OT1/cmr/m/n/10.95 such as deref-er-enc-ing URI frag-ments (List-ing []5.19[]) 
 and type con-ver-sion. Trans-
@@ -2142,10 +1907,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--179
  _ community&view =
  []
 
-[134]) (./5.Implementation/flock.tex [135]
-<5.Implementation/flock_abstract_syntax.pdf, id=3947, 462.72874pt x 142.5325pt>
+[132]) (./5.Implementation/flock.tex [133]
+<5.Implementation/flock_abstract_syntax.pdf, id=3930, 462.72874pt x 142.5325pt>
 File: 5.Implementation/flock_abstract_syntax.pdf Graphic file (type pdf)
-<use 5.Implementation/flock_abstract_syntax.pdf> [136]
+<use 5.Implementation/flock_abstract_syntax.pdf> [134]
 Overfull \hbox (5.71819pt too wide) in paragraph at lines 79--80
 []| $\OMS/cmsy/m/n/10.95 ^^@$ \OT1/cmr/m/n/10.95 Bind \OT1/pcr/m/n/10.95 e \OT1
 /cmr/m/n/10.95 and \OT1/pcr/m/n/10.95 e' \OT1/cmr/m/n/10.95 to EOL vari-ables n
@@ -2153,19 +1918,19 @@ amed \OT1/pcr/m/n/10.95 original \OT1/cmr/m/n/10.95 and \OT1/pcr/m/n/10.95 migr
 ated\OT1/cmr/m/n/10.95 ,
  []
 
-[137] [138]
-<5.Implementation/images/cc_eg_original.pdf, id=3983, 298.11375pt x 179.67125pt
+[135] [136]
+<5.Implementation/images/cc_eg_original.pdf, id=3966, 298.11375pt x 179.67125pt
 >
 File: 5.Implementation/images/cc_eg_original.pdf Graphic file (type pdf)
  <use 5.Implementation/images/cc_eg_original.pdf>
-<5.Implementation/images/cc_eg_evolved.pdf, id=3984, 296.10625pt x 260.975pt>
+<5.Implementation/images/cc_eg_evolved.pdf, id=3967, 296.10625pt x 260.975pt>
 File: 5.Implementation/images/cc_eg_evolved.pdf Graphic file (type pdf)
 
 <use 5.Implementation/images/cc_eg_evolved.pdf>
-<A.2.ProcessOriented/images/4_model.png, id=3991, 708.6475pt x 667.49374pt>
+<A.2.ProcessOriented/images/4_model.png, id=3974, 708.6475pt x 667.49374pt>
 File: A.2.ProcessOriented/images/4_model.png Graphic file (type png)
 
-<use A.2.ProcessOriented/images/4_model.png> [139]
+<use A.2.ProcessOriented/images/4_model.png> [137]
 LaTeX Font Info:    Try loading font information for OMS+pcr on input line 153.
 
 
@@ -2177,34 +1942,34 @@ LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10.95> not available
 
 Underfull \vbox (badness 1281) has occurred while \output is active []
 
- [140]
-[141] [142] [143 <./5.Implementation/images/petri_nets_before.pdf> <./5.Impleme
-ntation/images/petri_nets_after.pdf>] [144 <./5.Implementation/images/petri_net
+ [138]
+[139] [140] [141 <./5.Implementation/images/petri_nets_before.pdf> <./5.Impleme
+ntation/images/petri_nets_after.pdf>] [142 <./5.Implementation/images/petri_net
 s_ecore2ecore.png (PNG copy)> <./5.Implementation/flock_abstract_syntax.pdf>]
-[145 <./5.Implementation/images/cc_eg_original.pdf> <./5.Implementation/images/
-cc_eg_evolved.pdf>] [146 <./A.2.ProcessOriented/images/4_model.png>]
-<5.Implementation/images/uml_class_before.pdf, id=4392, 553.06625pt x 170.6375p
+[143 <./5.Implementation/images/cc_eg_original.pdf> <./5.Implementation/images/
+cc_eg_evolved.pdf>] [144 <./A.2.ProcessOriented/images/4_model.png>]
+<5.Implementation/images/uml_class_before.pdf, id=4374, 553.06625pt x 170.6375p
 t>
 File: 5.Implementation/images/uml_class_before.pdf Graphic file (type pdf)
  <use 5.Implementation/images/uml_class_before.pdf>
-<5.Implementation/images/uml_class_after.pdf, id=4393, 516.93124pt x 164.615pt>
+<5.Implementation/images/uml_class_after.pdf, id=4375, 516.93124pt x 164.615pt>
 File: 5.Implementation/images/uml_class_after.pdf Graphic file (type pdf)
-<use 5.Implementation/images/uml_class_after.pdf> [147 <./5.Implementation/imag
+<use 5.Implementation/images/uml_class_after.pdf> [145 <./5.Implementation/imag
 es/uml_class_before.pdf> <./5.Implementation/images/uml_class_after.pdf>])
-[148
+[146
 
 
 ]
 Underfull \vbox (badness 2119) has occurred while \output is active []
 
- [149])
-[150]
+ [147])
+[148]
 \openout2 = `6.Evaluation/evaluation.aux'.
 
  (./6.Evaluation/evaluation.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [151
+ [149
 
 
 
@@ -2214,8 +1979,8 @@ Overfull \hbox (3.52232pt too wide) in paragraph at lines 13--14
 n [[],
  []
 
-(./6.Evaluation/user_driven_example.tex [152] [153]
-<6.Evaluation/images/user_driven/po_final_editor.png, id=4653, 806.01125pt x 65
+(./6.Evaluation/user_driven_example.tex [150] [151]
+<6.Evaluation/images/user_driven/po_final_editor.png, id=4636, 806.01125pt x 65
 9.46375pt>
 File: 6.Evaluation/images/user_driven/po_final_editor.png Graphic file (type pn
 g)
@@ -2224,8 +1989,8 @@ Overfull \hbox (15.1122pt too wide) in paragraph at lines 31--32
  [][] 
  []
 
-[154]
-<6.Evaluation/images/user_driven/po_original_editor.png, id=4665, 697.60625pt x
+[152]
+<6.Evaluation/images/user_driven/po_original_editor.png, id=4648, 697.60625pt x
  574.145pt>
 File: 6.Evaluation/images/user_driven/po_original_editor.png Graphic file (type
  png)
@@ -2235,7 +2000,7 @@ Overfull \hbox (15.1122pt too wide) in paragraph at lines 47--48
  []
 
 
-<6.Evaluation/images/user_driven/po_evolved_editor.png, id=4669, 697.60625pt x 
+<6.Evaluation/images/user_driven/po_evolved_editor.png, id=4652, 697.60625pt x 
 574.145pt>
 File: 6.Evaluation/images/user_driven/po_evolved_editor.png Graphic file (type 
 png)
@@ -2244,24 +2009,24 @@ Overfull \hbox (15.1122pt too wide) in paragraph at lines 57--58
  [][] 
  []
 
-[155 <./6.Evaluation/images/user_driven/po_final_editor.png>]
-<6.Evaluation/images/user_driven/po_before.pdf, id=4677, 261.97874pt x 136.51pt
+[153 <./6.Evaluation/images/user_driven/po_final_editor.png>]
+<6.Evaluation/images/user_driven/po_before.pdf, id=4660, 261.97874pt x 136.51pt
 >
 File: 6.Evaluation/images/user_driven/po_before.pdf Graphic file (type pdf)
  <use 6.Evaluation/images/user_driven/po_before.pdf>
-<6.Evaluation/images/user_driven/po_after.pdf, id=4678, 383.4325pt x 170.6375pt
+<6.Evaluation/images/user_driven/po_after.pdf, id=4661, 383.4325pt x 170.6375pt
 >
 File: 6.Evaluation/images/user_driven/po_after.pdf Graphic file (type pdf)
  <use 6.Evaluation/images/user_driven/po_after.pdf>
 Underfull \vbox (badness 2213) has occurred while \output is active []
 
- [156 <./6.Evaluation/images/user_driven/po_original_editor.png>] [157 <./6.Eva
-luation/images/user_driven/po_evolved_editor.png>] [158 <./6.Evaluation/images/
+ [154 <./6.Evaluation/images/user_driven/po_original_editor.png>] [155 <./6.Eva
+luation/images/user_driven/po_evolved_editor.png>] [156 <./6.Evaluation/images/
 user_driven/po_before.pdf> <./6.Evaluation/images/user_driven/po_after.pdf>]
 File: 6.Evaluation/images/user_driven/emf_process.pdf Graphic file (type pdf)
 
 <use 6.Evaluation/images/user_driven/emf_process.pdf>
-<6.Evaluation/images/user_driven/po_original_xmi.png, id=4813, 630.355pt x 635.
+<6.Evaluation/images/user_driven/po_original_xmi.png, id=4795, 630.355pt x 635.
 37375pt>
 File: 6.Evaluation/images/user_driven/po_original_xmi.png Graphic file (type pn
 g)
@@ -2271,7 +2036,7 @@ Overfull \hbox (15.1122pt too wide) in paragraph at lines 110--111
  []
 
 
-<6.Evaluation/images/user_driven/po_migrated_xmi.png, id=4817, 708.6475pt x 667
+<6.Evaluation/images/user_driven/po_migrated_xmi.png, id=4799, 708.6475pt x 667
 .49374pt>
 File: 6.Evaluation/images/user_driven/po_migrated_xmi.png Graphic file (type pn
 g)
@@ -2280,19 +2045,19 @@ Overfull \hbox (15.1122pt too wide) in paragraph at lines 119--120
  [][] 
  []
 
-[159]
+[157]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 127.
 
 Underfull \vbox (badness 1082) detected at line 129
  []
 
-[160 <./6.Evaluation/images/user_driven/po_original_xmi.png (PNG copy)>]
-[161 <./6.Evaluation/images/user_driven/po_migrated_xmi.png>] [162]
+[158 <./6.Evaluation/images/user_driven/po_original_xmi.png (PNG copy)>]
+[159 <./6.Evaluation/images/user_driven/po_migrated_xmi.png>] [160]
 File: 6.Evaluation/images/user_driven/hutn_process.pdf Graphic file (type pdf)
 
 <use 6.Evaluation/images/user_driven/hutn_process.pdf>
-<6.Evaluation/images/user_driven/po_hutn.png, id=4855, 708.6475pt x 667.49374pt
+<6.Evaluation/images/user_driven/po_hutn.png, id=4838, 708.6475pt x 667.49374pt
 >
 File: 6.Evaluation/images/user_driven/po_hutn.png Graphic file (type png)
  <use 6.Evaluation/images/user_driven/po_hutn.png>
@@ -2301,7 +2066,7 @@ Overfull \hbox (15.1122pt too wide) in paragraph at lines 157--158
  []
 
 
-<6.Evaluation/images/user_driven/po_hutn_partial.png, id=4857, 708.6475pt x 667
+<6.Evaluation/images/user_driven/po_hutn_partial.png, id=4840, 708.6475pt x 667
 .49374pt>
 File: 6.Evaluation/images/user_driven/po_hutn_partial.png Graphic file (type pn
 g)
@@ -2310,17 +2075,17 @@ Overfull \hbox (15.1122pt too wide) in paragraph at lines 166--167
  [][] 
  []
 
-[163] [164 <./6.Evaluation/images/user_driven/po_hutn.png>]
+[161] [162 <./6.Evaluation/images/user_driven/po_hutn.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [165 <./6.Evaluation/images/user_driven/po_hutn_partial.png>] [166])
-(./6.Evaluation/quantitive.tex [167]
+ [163 <./6.Evaluation/images/user_driven/po_hutn_partial.png>] [164])
+(./6.Evaluation/quantitive.tex [165]
 Overfull \hbox (6.78522pt too wide) in paragraph at lines 9--10
 []\OT1/cmr/m/n/10.95 Conciseness might be mea-sured in many ways. For in-stance
 , [[]]
  []
 
-[168] [169]
+[166] [167]
 Underfull \hbox (badness 1342) in paragraph at lines 47--47
 [][] [][]\OT1/cmr/m/n/9 Communication with Ed Merks, Eclipse Mod-el-ing Project
  leader, 2009, avail-
@@ -2332,7 +2097,7 @@ Underfull \hbox (badness 2293) in paragraph at lines 47--47
 s / index . php ? t = tree&goto = 486690&S =
  []
 
-[170] [171] [172]
+[168] [169] [170]
 Overfull \hbox (1.61865pt too wide) in paragraph at lines 105--106
 []| \OT1/pcr/m/n/10.95 <element>.<feature>.addAll(<collection[]of[]values>) 
  []
@@ -2342,12 +2107,12 @@ Overfull \hbox (1.61865pt too wide) in paragraph at lines 128--129
 []| \OT1/pcr/m/n/10.95 <element>.<feature>.addAll(<collection[]of[]values>) 
  []
 
-[173]
+[171]
 File: 5.Implementation/images/petri_nets_before.pdf Graphic file (type pdf)
  <use 5.Implementation/images/petri_nets_before.pdf>
 File: 5.Implementation/images/petri_nets_after.pdf Graphic file (type pdf)
 
-<use 5.Implementation/images/petri_nets_after.pdf> [174] [175] [176]
+<use 5.Implementation/images/petri_nets_after.pdf> [172] [173] [174]
 Overfull \hbox (0.34706pt too wide) in paragraph at lines 329--330
 []\OT1/cmr/m/n/10.95 The com-par-i-son hy-poth-e-sis did not con-sider dif-fer-
 ences be-tween new-target
@@ -2356,8 +2121,8 @@ ences be-tween new-target
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [177]
-[178] [179]
+ [175]
+[176] [177]
 Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
@@ -2376,75 +2141,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 360--362
 
 Underfull \vbox (badness 1728) has occurred while \output is active []
 
- [180]
-<6.Evaluation/images/subtyping.pdf, id=5137, 291.0875pt x 193.72375pt>
+ [178]
+<6.Evaluation/images/subtyping.pdf, id=5120, 291.0875pt x 193.72375pt>
 File: 6.Evaluation/images/subtyping.pdf Graphic file (type pdf)
 
-<use 6.Evaluation/images/subtyping.pdf> [181 <./6.Evaluation/images/subtyping.p
-df>] [182] [183] [184]
-<6.Evaluation/images/change_ref_to_cont_before.pdf, id=5283, 247.92625pt x 118.
+<use 6.Evaluation/images/subtyping.pdf> [179 <./6.Evaluation/images/subtyping.p
+df>] [180] [181] [182]
+<6.Evaluation/images/change_ref_to_cont_before.pdf, id=5266, 247.92625pt x 118.
 4425pt>
 File: 6.Evaluation/images/change_ref_to_cont_before.pdf Graphic file (type pdf)
 
  <use 6.Evaluation/images/change_ref_to_cont_before.pdf>
-<6.Evaluation/images/change_ref_to_cont_after.pdf, id=5284, 356.33125pt x 62.23
+<6.Evaluation/images/change_ref_to_cont_after.pdf, id=5267, 356.33125pt x 62.23
 25pt>
 File: 6.Evaluation/images/change_ref_to_cont_after.pdf Graphic file (type pdf)
- <use 6.Evaluation/images/change_ref_to_cont_after.pdf> [185 <./6.Evaluation/im
+ <use 6.Evaluation/images/change_ref_to_cont_after.pdf> [183 <./6.Evaluation/im
 ages/change_ref_to_cont_before.pdf> <./6.Evaluation/images/change_ref_to_cont_a
 fter.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [186])
-(./6.Evaluation/collaborative_comparison.tex [187] [188]
+ [184])
+(./6.Evaluation/collaborative_comparison.tex [185] [186]
 File: 5.Implementation/images/petri_nets_before.pdf Graphic file (type pdf)
 
 <use 5.Implementation/images/petri_nets_before.pdf>
 File: 5.Implementation/images/petri_nets_after.pdf Graphic file (type pdf)
 
 <use 5.Implementation/images/petri_nets_after.pdf>
-<A.3.MigrationStrategies/images/gmf/graph_before.pdf, id=5444, 515.9275pt x 276
+<A.3.MigrationStrategies/images/gmf/graph_before.pdf, id=5426, 515.9275pt x 276
 .03125pt>
 File: A.3.MigrationStrategies/images/gmf/graph_before.pdf Graphic file (type pd
 f)
  <use A.3.MigrationStrategies/images/gmf/graph_before.pdf>
-<A.3.MigrationStrategies/images/gmf/graph_after.pdf, id=5445, 515.9275pt x 336.
+<A.3.MigrationStrategies/images/gmf/graph_after.pdf, id=5427, 515.9275pt x 336.
 25626pt>
 File: A.3.MigrationStrategies/images/gmf/graph_after.pdf Graphic file (type pdf
 )
- <use A.3.MigrationStrategies/images/gmf/graph_after.pdf> [189]
+ <use A.3.MigrationStrategies/images/gmf/graph_after.pdf> [187]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [190]
+ [188]
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
- [191 <./A.3.MigrationStrategies/images/gmf/graph_before.pdf> <./A.3.MigrationS
-trategies/images/gmf/graph_after.pdf>] [192] [193] [194]
+ [189 <./A.3.MigrationStrategies/images/gmf/graph_before.pdf> <./A.3.MigrationS
+trategies/images/gmf/graph_after.pdf>] [190] [191] [192]
 Overfull \hbox (12.29367pt too wide) in paragraph at lines 155--156
 \OT1/cmr/m/n/10.95 (op-er-a-tors and match heuris-tics, re-spec-tively) are ex-
 ten-si-ble. Flock and Ecore2E-
  []
 
-[195]
+[193]
 Overfull \hbox (4.10597pt too wide) in paragraph at lines 169--170
 \OT1/cmr/bx/n/10.95 Ecore2Ecore.[] \OT1/cmr/m/n/10.95 Map-ping mod-els can-not 
 be reused or ex-tended in Ecore2Ecore
  []
 
-[196] [197] [198]
-<6.Evaluation/images/migration_tool_performance.pdf, id=5761, 469.755pt x 391.4
+[194] [195] [196]
+<6.Evaluation/images/migration_tool_performance.pdf, id=5744, 469.755pt x 391.4
 625pt>
 File: 6.Evaluation/images/migration_tool_performance.pdf Graphic file (type pdf
 )
- <use 6.Evaluation/images/migration_tool_performance.pdf> [199 <./6.Evaluation/
-images/migration_tool_performance.pdf>] [200]
+ <use 6.Evaluation/images/migration_tool_performance.pdf> [197 <./6.Evaluation/
+images/migration_tool_performance.pdf>] [198]
 Overfull \hbox (5.78603pt too wide) in paragraph at lines 283--286
 \OT1/cmr/m/n/10.95 [[]] as \OT1/cmr/m/it/10.95 metamodel-specific \OT1/cmr/m/n/
 10.95 can-not be ex-pressed with
  []
 
-[201] [202]) (./6.Evaluation/ttc.tex [203]
-<6.Evaluation/images/activity.pdf, id=5823, 597.23125pt x 845.1575pt>
+[199] [200]) (./6.Evaluation/ttc.tex [201]
+<6.Evaluation/images/activity.pdf, id=5806, 597.23125pt x 845.1575pt>
 File: 6.Evaluation/images/activity.pdf Graphic file (type pdf)
 
 <use 6.Evaluation/images/activity.pdf>
@@ -2452,19 +2217,19 @@ Overfull \hbox (0.88582pt too wide) in paragraph at lines 22--23
  [][] 
  []
 
-[204] [205 <./6.Evaluation/images/activity.pdf>]
-<A.3.MigrationStrategies/images/uml/activity_diagrams_before.pdf, id=5955, 603.
+[202] [203 <./6.Evaluation/images/activity.pdf>]
+<A.3.MigrationStrategies/images/uml/activity_diagrams_before.pdf, id=5937, 603.
 25375pt x 372.39125pt>
 File: A.3.MigrationStrategies/images/uml/activity_diagrams_before.pdf Graphic f
 ile (type pdf)
 
 <use A.3.MigrationStrategies/images/uml/activity_diagrams_before.pdf>
-<A.3.MigrationStrategies/images/uml/activity_diagrams_after.pdf, id=5958, 464.7
+<A.3.MigrationStrategies/images/uml/activity_diagrams_after.pdf, id=5940, 464.7
 3625pt x 366.36874pt>
 File: A.3.MigrationStrategies/images/uml/activity_diagrams_after.pdf Graphic fi
 le (type pdf)
 
-<use A.3.MigrationStrategies/images/uml/activity_diagrams_after.pdf> [206 <./A.
+<use A.3.MigrationStrategies/images/uml/activity_diagrams_after.pdf> [204 <./A.
 3.MigrationStrategies/images/uml/activity_diagrams_before.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 66--66
 [][] [][][]$\OT1/pcr/m/n/9 http : / / planet-[]research20 . org / ttc2010 / ind
@@ -2477,22 +2242,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--66
 0$[] \OT1/cmr/m/n/9 (reg-is-tra-
  []
 
-[207 <./A.3.MigrationStrategies/images/uml/activity_diagrams_after.pdf>]
-<6.Evaluation/images/ttc/core_before.pdf, id=6302, 543.02875pt x 108.405pt>
+[205 <./A.3.MigrationStrategies/images/uml/activity_diagrams_after.pdf>]
+<6.Evaluation/images/ttc/core_before.pdf, id=6285, 543.02875pt x 108.405pt>
 File: 6.Evaluation/images/ttc/core_before.pdf Graphic file (type pdf)
 
 <use 6.Evaluation/images/ttc/core_before.pdf>
-<6.Evaluation/images/ttc/core_after.pdf, id=6303, 524.96124pt x 108.405pt>
+<6.Evaluation/images/ttc/core_after.pdf, id=6286, 524.96124pt x 108.405pt>
 File: 6.Evaluation/images/ttc/core_after.pdf Graphic file (type pdf)
 
 <use 6.Evaluation/images/ttc/core_after.pdf>
 File: 6.Evaluation/images/ttc/core_before.pdf Graphic file (type pdf)
 
 <use 6.Evaluation/images/ttc/core_before.pdf>
-<6.Evaluation/images/ttc/ext_after.pdf, id=6305, 311.1625pt x 105.39375pt>
+<6.Evaluation/images/ttc/ext_after.pdf, id=6288, 311.1625pt x 105.39375pt>
 File: 6.Evaluation/images/ttc/ext_after.pdf Graphic file (type pdf)
 
-<use 6.Evaluation/images/ttc/ext_after.pdf> [208 <./6.Evaluation/images/ttc/cor
+<use 6.Evaluation/images/ttc/ext_after.pdf> [206 <./6.Evaluation/images/ttc/cor
 e_before.pdf> <./6.Evaluation/images/ttc/core_after.pdf>]
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no † in font cmr10!
@@ -2508,7 +2273,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--117
 topicid =
  []
 
-[209 <./6.Evaluation/images/ttc/ext_after.pdf>]
+[207 <./6.Evaluation/images/ttc/ext_after.pdf>]
 Overfull \hbox (10.05243pt too wide) in paragraph at lines 135--136
 \OT1/cmr/m/n/10.95 con-tained \OT1/pcr/m/n/10.95 Pseudostates\OT1/cmr/m/n/10.95
  s and \OT1/pcr/m/n/10.95 Transition\OT1/cmr/m/n/10.95 s, but none of the \OT1/
@@ -2521,13 +2286,13 @@ Overfull \hbox (10.13367pt too wide) in paragraph at lines 135--136
  Flock code for chang-ing \OT1/pcr/m/n/10.95 ActionState\OT1/cmr/m/n/10.95 s
  []
 
-[210]
+[208]
 Overfull \hbox (16.33868pt too wide) in paragraph at lines 149--150
 \OT1/pcr/m/n/10.95 InitialNode\OT1/cmr/m/n/10.95 . List-ing []6.13[] shows the 
 Flock code used to change \OT1/pcr/m/n/10.95 Pseudostate\OT1/cmr/m/n/10.95 s
  []
 
-[211] [212]
+[209] [210]
 Overfull \hbox (18.41435pt too wide) in paragraph at lines 208--209
 []\OT1/cmr/m/n/10.95 Listing []6.18[] shows the Flock source code used to mi-gr
 ate \OT1/pcr/m/n/10.95 ObjectFlowStates
@@ -2545,7 +2310,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--230
 topicid =
  []
 
-[213] [214] [215] [216]
+[211] [212] [213] [214]
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no † in font cmr10!
 
@@ -2554,11 +2319,11 @@ Overfull \hbox (2.74794pt too wide) in paragraph at lines 300--301
  core task were de-scribed in Sec-tion []6.4.1[],
  []
 
-[217]) (./6.Evaluation/limitations.tex) [218] [219]) [220]
+[215]) (./6.Evaluation/limitations.tex) [216] [217]) [218]
 \openout2 = `7.Conclusion/conclusion.aux'.
 
 
-(./7.Conclusion/conclusion.tex [221
+(./7.Conclusion/conclusion.tex [219
 
 
 
@@ -2573,7 +2338,7 @@ Overfull \hbox (3.9207pt too wide) in paragraph at lines 16--17
 \OT1/cmr/m/n/10.95 tended in sev-eral pa-pers, in-clud-ing [[], []]. 
  []
 
-[222]
+[220]
 Overfull \hbox (19.08554pt too wide) in paragraph at lines 23--24
 \OT1/cmr/m/n/10.95 Contemporary MDE mod-elling frame-works can-not be used to l
 oad non-conformant
@@ -2585,7 +2350,7 @@ Overfull \hbox (16.82574pt too wide) in paragraph at lines 23--24
  metamodel-independent
  []
 
-[223] [224]) (./7.Conclusion/future_work.tex [225] [226])) [227] [228]
+[221] [222]) (./7.Conclusion/future_work.tex [223] [224])) [225] [226]
 \openout2 = `A.0.Listings/listings.aux'.
 
 
@@ -2595,23 +2360,29 @@ Overfull \hbox (9.26208pt too wide) in paragraph at lines 5--6
 way in which the Ecore2Ecore
  []
 
-[229
+[227
 
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [230]
+ [228]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [231]
-[232]
+ [229]
+[230]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [233])
-(./A.0.Listings/hutn_listings.tex [234]
+ [231])
+(./A.0.Listings/hutn_listings.tex [232]
 Underfull \vbox (badness 1484) has occurred while \output is active []
+
+ [233]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [234]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [235]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2632,18 +2403,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [241]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [242]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [243]
 Overfull \hbox (8.68422pt too wide) in paragraph at lines 427--428
 \OT1/cmr/m/n/10.95 unique) and the con-for-mance con-straints de-fined for the 
 metamodel-independent
  []
 
-[244]
+[242]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [243]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [244]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [245]
@@ -2653,17 +2424,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [247]
+[248]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [248]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [249]
+ [249]))
 [250]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [251]))
-[252]
 \openout2 = `A.2.ProcessOriented/process_oriented.aux'.
 
  (./A.2.ProcessOriented/process_oriented.tex
@@ -2680,17 +2445,17 @@ Overfull \hbox (1.74474pt too wide) in paragraph at lines 8--9
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [253
+ [251
 
 
 
 ]
-<A.2.ProcessOriented/images/1_mm.pdf, id=7646, 257.96375pt x 91.34125pt>
+<A.2.ProcessOriented/images/1_mm.pdf, id=7628, 257.96375pt x 91.34125pt>
 File: A.2.ProcessOriented/images/1_mm.pdf Graphic file (type pdf)
 
-<use A.2.ProcessOriented/images/1_mm.pdf> [254 <./A.2.ProcessOriented/images/1_
+<use A.2.ProcessOriented/images/1_mm.pdf> [252 <./A.2.ProcessOriented/images/1_
 mm.pdf>]
-<A.2.ProcessOriented/images/2_mm.pdf, id=7699, 257.96375pt x 164.615pt>
+<A.2.ProcessOriented/images/2_mm.pdf, id=7681, 257.96375pt x 164.615pt>
 File: A.2.ProcessOriented/images/2_mm.pdf Graphic file (type pdf)
 
 <use A.2.ProcessOriented/images/2_mm.pdf>
@@ -2699,64 +2464,64 @@ Overfull \hbox (38.58084pt too wide) in paragraph at lines 60--61
  \OT1/cmr/m/n/10.95 meta-class was an-no-tated with ``@gmf.diagram''
  []
 
-[255 <./A.2.ProcessOriented/images/2_mm.pdf>]
-<A.2.ProcessOriented/images/2_model.png, id=7760, 708.6475pt x 667.49374pt>
+[253 <./A.2.ProcessOriented/images/2_mm.pdf>]
+<A.2.ProcessOriented/images/2_model.png, id=7743, 708.6475pt x 667.49374pt>
 File: A.2.ProcessOriented/images/2_model.png Graphic file (type png)
 
-<use A.2.ProcessOriented/images/2_model.png> [256 <./A.2.ProcessOriented/images
+<use A.2.ProcessOriented/images/2_model.png> [254 <./A.2.ProcessOriented/images
 /2_model.png>]
-<A.2.ProcessOriented/images/3_mm.pdf, id=7776, 270.00874pt x 164.615pt>
+<A.2.ProcessOriented/images/3_mm.pdf, id=7759, 270.00874pt x 164.615pt>
 File: A.2.ProcessOriented/images/3_mm.pdf Graphic file (type pdf)
 
 <use A.2.ProcessOriented/images/3_mm.pdf>
-<A.2.ProcessOriented/images/3_pre.png, id=7779, 712.6625pt x 666.49pt>
+<A.2.ProcessOriented/images/3_pre.png, id=7762, 712.6625pt x 666.49pt>
 File: A.2.ProcessOriented/images/3_pre.png Graphic file (type png)
 
 <use A.2.ProcessOriented/images/3_pre.png>
-<A.2.ProcessOriented/images/3_post.png, id=7780, 712.6625pt x 666.49pt>
+<A.2.ProcessOriented/images/3_post.png, id=7763, 712.6625pt x 666.49pt>
 File: A.2.ProcessOriented/images/3_post.png Graphic file (type png)
 
-<use A.2.ProcessOriented/images/3_post.png> [257 <./A.2.ProcessOriented/images/
-3_mm.pdf>] [258 <./A.2.ProcessOriented/images/3_pre.png> <./A.2.ProcessOriented
+<use A.2.ProcessOriented/images/3_post.png> [255 <./A.2.ProcessOriented/images/
+3_mm.pdf>] [256 <./A.2.ProcessOriented/images/3_pre.png> <./A.2.ProcessOriented
 /images/3_post.png>]
-<A.2.ProcessOriented/images/4_mm.pdf, id=7835, 278.03876pt x 266.9975pt>
+<A.2.ProcessOriented/images/4_mm.pdf, id=7818, 278.03876pt x 266.9975pt>
 File: A.2.ProcessOriented/images/4_mm.pdf Graphic file (type pdf)
 
-<use A.2.ProcessOriented/images/4_mm.pdf> [259
+<use A.2.ProcessOriented/images/4_mm.pdf> [257
 
  <./A.2.ProcessOriented/images/4_mm.pdf>]
 File: A.2.ProcessOriented/images/4_model.png Graphic file (type png)
  <use A.2.ProcessOriented/images/4_model.png>
-<A.2.ProcessOriented/images/4_pre.png, id=7903, 712.6625pt x 666.49pt>
+<A.2.ProcessOriented/images/4_pre.png, id=7885, 712.6625pt x 666.49pt>
 File: A.2.ProcessOriented/images/4_pre.png Graphic file (type png)
 
 <use A.2.ProcessOriented/images/4_pre.png>
-<A.2.ProcessOriented/images/4_post.png, id=7904, 712.6625pt x 666.49pt>
+<A.2.ProcessOriented/images/4_post.png, id=7886, 712.6625pt x 666.49pt>
 File: A.2.ProcessOriented/images/4_post.png Graphic file (type png)
 
-<use A.2.ProcessOriented/images/4_post.png> [260] [261] [262 <./A.2.ProcessOrie
+<use A.2.ProcessOriented/images/4_post.png> [258] [259] [260 <./A.2.ProcessOrie
 nted/images/4_pre.png> <./A.2.ProcessOriented/images/4_post.png>]
-<A.2.ProcessOriented/images/5_mm.pdf, id=7945, 278.03876pt x 374.39874pt>
+<A.2.ProcessOriented/images/5_mm.pdf, id=7928, 278.03876pt x 374.39874pt>
 File: A.2.ProcessOriented/images/5_mm.pdf Graphic file (type pdf)
 
-<use A.2.ProcessOriented/images/5_mm.pdf> [263
+<use A.2.ProcessOriented/images/5_mm.pdf> [261
 
  <./A.2.ProcessOriented/images/5_mm.pdf>]
-<A.2.ProcessOriented/images/5_pre.png, id=8023, 712.6625pt x 666.49pt>
+<A.2.ProcessOriented/images/5_pre.png, id=8006, 712.6625pt x 666.49pt>
 File: A.2.ProcessOriented/images/5_pre.png Graphic file (type png)
 
 <use A.2.ProcessOriented/images/5_pre.png>
-<A.2.ProcessOriented/images/5_post.png, id=8024, 712.6625pt x 666.49pt>
+<A.2.ProcessOriented/images/5_post.png, id=8007, 712.6625pt x 666.49pt>
 File: A.2.ProcessOriented/images/5_post.png Graphic file (type png)
 
-<use A.2.ProcessOriented/images/5_post.png> [264] [265 <./A.2.ProcessOriented/i
+<use A.2.ProcessOriented/images/5_post.png> [262] [263 <./A.2.ProcessOriented/i
 mages/5_pre.png> <./A.2.ProcessOriented/images/5_post.png>]
-<A.2.ProcessOriented/images/6_mm.pdf, id=8077, 357.335pt x 394.47375pt>
+<A.2.ProcessOriented/images/6_mm.pdf, id=8059, 357.335pt x 394.47375pt>
 File: A.2.ProcessOriented/images/6_mm.pdf Graphic file (type pdf)
 
-<use A.2.ProcessOriented/images/6_mm.pdf> [266 <./A.2.ProcessOriented/images/6_
+<use A.2.ProcessOriented/images/6_mm.pdf> [264 <./A.2.ProcessOriented/images/6_
 mm.pdf>]
-<A.2.ProcessOriented/images/6_model.png, id=8157, 806.01125pt x 659.46375pt>
+<A.2.ProcessOriented/images/6_model.png, id=8139, 806.01125pt x 659.46375pt>
 File: A.2.ProcessOriented/images/6_model.png Graphic file (type png)
 
 <use A.2.ProcessOriented/images/6_model.png>
@@ -2767,41 +2532,41 @@ Overfull \hbox (34.00464pt too wide) in paragraph at lines 332--333
 )
 Underfull \vbox (badness 3536) has occurred while \output is active []
 
- [267]
-[268 <./A.2.ProcessOriented/images/6_model.png>]
+ [265]
+[266 <./A.2.ProcessOriented/images/6_model.png>]
 \openout2 = `A.3.MigrationStrategies/migration_strategies.aux'.
 
 
 (./A.3.MigrationStrategies/migration_strategies.tex
-(./A.3.MigrationStrategies/commands.tex) [269
+(./A.3.MigrationStrategies/commands.tex) [267
 
 
 
 ]
-<A.3.MigrationStrategies/images/newsgroups/extract_person_before.pdf, id=8218, 
+<A.3.MigrationStrategies/images/newsgroups/extract_person_before.pdf, id=8201, 
 244.915pt x 112.42pt>
 File: A.3.MigrationStrategies/images/newsgroups/extract_person_before.pdf Graph
 ic file (type pdf)
 
 <use A.3.MigrationStrategies/images/newsgroups/extract_person_before.pdf>
-<A.3.MigrationStrategies/images/newsgroups/extract_person_after.pdf, id=8219, 3
+<A.3.MigrationStrategies/images/newsgroups/extract_person_after.pdf, id=8202, 3
 69.38pt x 100.375pt>
 File: A.3.MigrationStrategies/images/newsgroups/extract_person_after.pdf Graphi
 c file (type pdf)
 
 <use A.3.MigrationStrategies/images/newsgroups/extract_person_after.pdf>
-(./A.3.MigrationStrategies/code/newsgroups/extract_person.atl [270 <./A.3.Migra
+(./A.3.MigrationStrategies/code/newsgroups/extract_person.atl [268 <./A.3.Migra
 tionStrategies/images/newsgroups/extract_person_before.pdf> <./A.3.MigrationStr
 ategies/images/newsgroups/extract_person_after.pdf>])
 (./A.3.MigrationStrategies/code/newsgroups/extract_person.cope)
-(./A.3.MigrationStrategies/code/newsgroups/extract_person.flock [271])
-<A.3.MigrationStrategies/images/newsgroups/resolve_replies_before.pdf, id=8366,
+(./A.3.MigrationStrategies/code/newsgroups/extract_person.flock [269])
+<A.3.MigrationStrategies/images/newsgroups/resolve_replies_before.pdf, id=8348,
  369.38pt x 100.375pt>
 File: A.3.MigrationStrategies/images/newsgroups/resolve_replies_before.pdf Grap
 hic file (type pdf)
 
 <use A.3.MigrationStrategies/images/newsgroups/resolve_replies_before.pdf>
-<A.3.MigrationStrategies/images/newsgroups/resolve_replies_after.pdf, id=8367, 
+<A.3.MigrationStrategies/images/newsgroups/resolve_replies_after.pdf, id=8349, 
 385.44pt x 140.525pt>
 File: A.3.MigrationStrategies/images/newsgroups/resolve_replies_after.pdf Graph
 ic file (type pdf)
@@ -2812,11 +2577,11 @@ Overfull \hbox (9.7373pt too wide) in paragraph at lines 34--35
 r-enc-ing the \OT1/pcr/m/n/10.95 inReplyTo
  []
 
-(./A.3.MigrationStrategies/code/newsgroups/resolve_replies.atl [272 <./A.3.Migr
+(./A.3.MigrationStrategies/code/newsgroups/resolve_replies.atl [270 <./A.3.Migr
 ationStrategies/images/newsgroups/resolve_replies_before.pdf> <./A.3.MigrationS
 trategies/images/newsgroups/resolve_replies_after.pdf>])
 (./A.3.MigrationStrategies/code/newsgroups/resolve_replies.cope)
-(./A.3.MigrationStrategies/code/newsgroups/resolve_replies.flock) [273]
+(./A.3.MigrationStrategies/code/newsgroups/resolve_replies.flock) [271]
 File: A.3.MigrationStrategies/images/uml/activity_diagrams_before.pdf Graphic f
 ile (type pdf)
 
@@ -2835,19 +2600,19 @@ Overfull \hbox (4.12152pt too wide) in paragraph at lines 54--55
 re-typ-ing \OT1/pcr/m/n/10.95 Pseudeostate\OT1/cmr/m/n/10.95 s. 
  []
 
-(./A.3.MigrationStrategies/code/uml/activity_diagrams.atl [274] [275]
+(./A.3.MigrationStrategies/code/uml/activity_diagrams.atl [272] [273]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [276]
+ [274]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [277])
-(./A.3.MigrationStrategies/code/uml/activity_diagrams.cope [278])
+ [275])
+(./A.3.MigrationStrategies/code/uml/activity_diagrams.cope [276])
 (./A.3.MigrationStrategies/code/uml/activity_diagrams.flock
 Underfull \vbox (badness 2057) has occurred while \output is active []
 
- [279])
-[280]
+ [277])
+[278]
 File: A.3.MigrationStrategies/images/gmf/graph_before.pdf Graphic file (type pd
 f)
  <use A.3.MigrationStrategies/images/gmf/graph_before.pdf>
@@ -2855,7 +2620,13 @@ File: A.3.MigrationStrategies/images/gmf/graph_after.pdf Graphic file (type pdf
 )
 
 <use A.3.MigrationStrategies/images/gmf/graph_after.pdf>
-(./A.3.MigrationStrategies/code/gmf/graph.atl [281] [282]
+(./A.3.MigrationStrategies/code/gmf/graph.atl [279] [280]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [281]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [282]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [283]
@@ -2879,16 +2650,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [289]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [290]
+ [290])
+(./A.3.MigrationStrategies/code/gmf/graph.cope [291])
+(./A.3.MigrationStrategies/code/gmf/graph.flock [292])
+(./A.3.MigrationStrategies/code/gmf/gen.atl [293]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [291]
+ [294]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [292])
-(./A.3.MigrationStrategies/code/gmf/graph.cope [293])
-(./A.3.MigrationStrategies/code/gmf/graph.flock [294])
-(./A.3.MigrationStrategies/code/gmf/gen.atl [295]
+ [295]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [296]
@@ -2954,65 +2725,59 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [316]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [317]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [318]
+ [317])
+(./A.3.MigrationStrategies/code/gmf/gen.cope [318]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [319])
-(./A.3.MigrationStrategies/code/gmf/gen.cope [320]
+(./A.3.MigrationStrategies/code/gmf/gen.flock [320]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [321])
-(./A.3.MigrationStrategies/code/gmf/gen.flock [322]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [323]))
-[324]
+ [321]))
+[322]
 \openout2 = `A.4.TTCScores/ttc_scores.aux'.
 
- (./A.4.TTCScores/ttc_scores.tex [325
+ (./A.4.TTCScores/ttc_scores.tex [323
 
 
 
-] [326] [327] [328] [329] [330])
+] [324] [325] [326] [327] [328])
 (./thesis.bbl
 bibitemlist
-[331
+[329
 
 
 
 
 
-] [332] [333] [334] [335] [336]
+] [330] [331] [332] [333] [334]
 Underfull \hbox (badness 1348) in paragraph at lines 438--445
 []$ []$ \OT1/cmr/m/n/10.95 M. Her-rmanns-do-er-fer, D. Ratiu, and
  []
 
-[337]
+[335]
 Underfull \hbox (badness 1314) in paragraph at lines 499--504
 []$ []$ \OT1/cmr/m/n/10.95 Y. Kataoka, M.D. Ernst, W.G. Gris-wold, and
  []
 
-[338] [339] [340] [341] [342]
+[336] [337] [338] [339] [340]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
- [343]
+ [341]
 Missing character: There is no ‚ in font cmti10!
 Missing character: There is no Ä in font cmti10!
 Missing character: There is no ì in font cmti10!
- [344]
+ [342]
 Underfull \hbox (badness 1297) in paragraph at lines 944--951
 []$ []$ \OT1/cmr/m/n/10.95 L.M. Rose, A. Etien, D. M^^Sendez, D.S. Kolovos,
  []
 
-[345]
+[343]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [346] [347]) [348]
+ [344] [345]) [346]
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
@@ -3034,13 +2799,13 @@ Missing character: There is no ô in font cmr10!
 (./A.3.MigrationStrategies/migration_strategies.aux)
 (./A.4.TTCScores/ttc_scores.aux)) ) 
 Here is how much of TeX's memory you used:
- 16395 strings out of 493886
- 269469 string characters out of 1151098
- 473671 words of memory out of 3000000
+ 16393 strings out of 493886
+ 269453 string characters out of 1151098
+ 473667 words of memory out of 3000000
  14349 multiletter control sequences out of 10000+50000
  18975 words of font info for 65 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 40i,12n,53p,2145b,1708s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,12n,53p,2051b,1708s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2008/texmf-dist/fonts/en
 c/dvips/base/8r.enc}</usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/
 cmbx10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pf
@@ -3068,9 +2833,9 @@ fb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb
 al/texlive/2008/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texli
 ve/2008/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2008
 /texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on thesis.pdf (366 pages, 7964268 bytes).
+Output written on thesis.pdf (364 pages, 7960926 bytes).
 PDF statistics:
- 11949 PDF objects out of 12825 (max. 8388607)
- 4817 named destinations out of 5155 (max. 131072)
+ 11932 PDF objects out of 12825 (max. 8388607)
+ 4815 named destinations out of 5155 (max. 131072)
  1029 words of extra memory for PDF output out of 10000 (max. 10000000)
 

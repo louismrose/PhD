@@ -12,7 +12,7 @@ While there are many definitions of the term model, a common notion is that a mo
 
 \cite{ackoff62scientific} defines \emph{analogous} models as those which share some characteristics and can be used in place of their object system. An aeroplane toy that can fly is an analogous model of an aeroplane. In computer science, models can be used to construct a computer system. A model of an object system, say the lending service of a library, might be used to decide the way in which data is stored on disk, or the way in which a program is to be structured.
 
-\cite{jackson95software} proposes that the models constructed in computer science are analogous to two systems: the object system (e.g. the library lending service in the real-world) and the computer system (e.g. the combination of software and hardware used to implement a library lending service). A model can be used to think about both the real system and the computer system. Figure~\ref{fig:jackson_model} illustrates this notion further. According to \cite{jackson95software}, a model is both the description of the domain (object system) and the machine (computer system). Computer scientists switch between \emph{designations} when using a model to think about the object system or to think about the software system.
+\cite{jackson95software} proposes that the models constructed in computer science are analogous to two systems: the object system (e.g. the library lending service in the real-world) and the computer system (e.g. the software and hardware used to implement a library lending service). A model can be used to think about both the real system and the computer system. Figure~\ref{fig:jackson_model} illustrates this notion further. According to \cite{jackson95software}, a model is both the description of the domain (object system) and the machine (computer system). Computer scientists switch between \emph{designations} when using a model to think about the object system or to think about the software system.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -94,13 +94,13 @@ Endogenous, existing-target transformations are a special case of transformation
 
 \paragraph{Model-to-Model (M2M) Transformation} M2M transformation is used to derive models from others. By automating the derivation of models from others, M2M transformation has the potential to reduce the cost of engineering large and complex systems that can be represented as a set of interdependent models \cite{sendall03heart}. 
 
-M2M transformations are often specified as a set of \emph{rules} \cite{czarnecki06survey}. Each rule specifies the way in which a specific set of elements in the source model is transformed to an equivalent set of elements in the target model \cite[pg.44]{kolovos09thesis}.
+M2M transformations are often specified as a set of \emph{transformation rules} \cite{czarnecki06survey}. Each rule specifies the way in which a specific set of elements in the source model is transformed to an equivalent set of elements in the target model \cite[pg.44]{kolovos09thesis}.
 
-Many M2M transformation languages have been proposed, such as the Atlas Transformation Language (ATL) \cite{jouault05transforming}, the Epsilon Transformation Language (ETL) \cite{kolovos08etl} and VIATRA \cite{VIATRA}. Queries/Views/Transformations (QVT) \cite{qvt} is a standard for M2M transformation. M2M transformation languages can be categorised according to their \emph{style}, which is either declarative, imperative or hybrid.
+Many M2M transformation languages have been proposed, such as the Atlas Transformation Language (ATL) \cite{jouault05transforming}, VIsual Automated model TRAnsformations (VIATRA) \cite{VIATRA} and the Epsilon Transformation Language (ETL) \cite{kolovos08etl}. Qu\-er\-ies/Vi\-ews/Tra\-nsfo\-rma\-ti\-ons (QVT) \cite{qvt} is a standard for M2M transformation. M2M transformation languages can be categorised according to their \emph{style}, which is either declarative, imperative or hybrid.
 
 Declarative M2M transformation languages only provide constructs for mapping source to target model elements and, as such, are not computationally complete. Consequently, the scheduling of rules can be \emph{implicit} (determined by the execution engine of the transformation language). By contrast, imperative M2M transformation languages are computationally complete, but often require rule scheduling to be \emph{explicit} (specified by the user). Hybrid M2M transformation languages combine declarative and imperative parts, are computationally complete, and provide a mixture of implicit and explicit rule scheduling.
 
-Declarative M2M transformation languages cannot be used to solve some categories of transformation problem \cite{patrascoiu04embedding}. Imperative M2M transformation languages are argued to be difficult to write and maintain \cite[pg.45]{kolovos09thesis}. Consequently, hybrid languages, such as ATL, are presently believed by many to be more suitable for specifying model transformation than pure imperative or declarative languages \cite{kolovos08etl}.
+Declarative M2M transformation languages cannot be used to solve some categories of transformation problem \cite{patrascoiu04embedding}. Imperative M2M transformation languages are argued to be difficult to write and maintain \cite[pg.45]{kolovos09thesis}. Consequently, \cite{kolovos08etl} observes that hybrid languages, such as ATL, are presently believed to be more suitable for specifying model transformation than pure imperative or declarative languages.
 
 An exemplar M2M transformation, written in the hybrid M2M transformation language ETL, is shown in Listing~\ref{lst:exemplar_m2m}. The source of the transformation is a state machine model, conforming to the metamodel shown in Figure~\ref{fig:state_machine_mm}. The target of the transformation an object-oriented model, conforming to the metamodel shown in Figure~\ref{fig:object_oriented_mm}. The transformation in Listing~\ref{lst:exemplar_m2m} comprises two rules.
 
@@ -122,6 +122,12 @@ An exemplar M2M transformation, written in the hybrid M2M transformation languag
   \label{fig:object_oriented_mm}
 \end{figure}
 
+The first rule (lines 1-7) is named \texttt{Machine2Package} (line 1) and transforms \emph{Machine}s (line 2) into \emph{Package}s (line 3). The body of the first rule (lines 5-6) specifies the way in which a \texttt{Package}, \texttt{p}, can be derived from a \texttt{Machine}, \texttt{m}. Specifically, the \texttt{name} of \texttt{p} is derived from the \texttt{id} of \texttt{m} (line 5), and the \texttt{contents} of \texttt{p} are derived from the \texttt{states} of \texttt{m} (line 6). 
+
+The second rule (lines 9-16) transforms \texttt{State}s (line 10) to \texttt{Class}es (line 11). Additionally, line 13 contains a \emph{guard} to specify that the rule is only to be applied to \texttt{State}s whose \texttt{isFinal} property is \texttt{false}.
+
+When executed, the transformation rules will be scheduled \textbf{implicitly} by the execution engine, and invoked once for each \texttt{Machine} and \texttt{State} in the source. On line 6 of Listing~\ref{lst:exemplar_m2m}, the built-in \texttt{equivalent()} operation is used to produce a set of \texttt{Class}es from a set of \texttt{State}s by invoking the relevant transformation rule. This is an example of \textbf{explicit} rule scheduling, in which the user defines when a rule will be called.
+
 \begin{lstlisting}[caption={[M2M transformation in ETL]M2M transformation in the Epsilon Transformation Language \cite{kolovos08etl}}, label=lst:exemplar_m2m, language=ETL]
 rule Machine2Package
 	transform m : StateMachine!Machine
@@ -141,14 +147,8 @@ rule State2Class
 }
 \end{lstlisting}
 
-The first rule (lines 1-7) is named \texttt{Machine2Package} (line 1) and transforms \emph{Machine}s (line 2) into \emph{Package}s (line 3). The body of the first rule (lines 5-6) specifies the way in which a \texttt{Package}, \texttt{p}, can be derived from a \texttt{Machine}, \texttt{m}. Specifically, the \texttt{name} of \texttt{p} is derived from the \texttt{id} of \texttt{m} (line 5), and the \texttt{contents} of \texttt{p} are derived from the \texttt{states} of \texttt{m} (line 6). 
 
-The second rule (lines 9-16) transforms \texttt{State}s (line 10) to \texttt{Class}es (line 11). Additionally, line 13 contains a \emph{guard} to specify that the rule is only to be applied to \texttt{State}s whose \texttt{isFinal} property is \texttt{false}.
-
-When executed, the transformation rules will be scheduled \textbf{implicitly} by the execution engine, and invoked once for each \texttt{Machine} and \texttt{State} in the source. On line 6 of Listing~\ref{lst:exemplar_m2m}, the built-in \texttt{equivalent()} operation is used to produce a set of \texttt{Class}es from a set of \texttt{State}s by invoking the relevant transformation rule. This is an example of \textbf{explicit} rule scheduling, in which the user defines when a rule will be called.
-
-
-\paragraph{Model-to-Text (M2T) Transformation} M2T transformation is used for model serialisation (enabling model interchange), code and documentation generation, and model visualisation and exploration.  In 2005, the Object Management Group (OMG)\footnote{\url{http://www.omg.org}} recognised the lack of a standardised M2T transformation with its M2T Language Request for Proposals\footnote{\url{http://www.omg.org/docs/ad/04-04-07.pdf}}. In response, various M2T languages have been developed, including JET\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=jet}}, XPand\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=xpand}}, MOFScript \cite{oldevik05toward} and the Epsilon Generation Language (EGL) \cite{rose08egl}.
+\paragraph{Model-to-Text (M2T) Transformation} M2T transformation is used for model serialisation (enabling model interchange), code and documentation generation, and model visualisation and exploration.  In 2005, the Object Management Group (OMG)\footnote{\url{http://www.omg.org}} recognised the lack of a standardised M2T transformation with its M2T Language Request for Proposals\footnote{\url{http://www.omg.org/docs/ad/04-04-07.pdf}}. In response, various M2T languages were developed including MOFScript \cite{oldevik05toward}, the Epsilon Generation Language (EGL) \cite{rose08egl}, JET\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=jet}} and XPand\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=xpand}}.
 
 Because M2T transformation is used to produce unstructured rather than structured artefacts, M2T transformation has different requirements to M2M transformation. For instance, M2T transformation languages often provide mechanisms for specifying sections of text that will be completed manually and must not be overwritten by the transformation engine.
 
@@ -173,7 +173,11 @@ In EGL, dynamic sections are contained within \texttt{[\%} and \texttt{\%]}. \em
 
 Xtext\footnote{\url{http://www.eclipse.org/Xtext/}} and EMFtext \cite{heidenreich09derivation} are contemporary examples of T2M tools that, given a grammar and a target metamodel, will automatically generate a parser that transforms text to a model.
 
-An exemplar T2M transformation, written in EMFtext, is shown in Listing~\ref{lst:exemplar_t2m}. From the transformation shown in Listing~\ref{lst:exemplar_t2m}, EMFtext can be used to generate a parser that, when executed, will produce state machine models. For the input, \texttt{lift[stationary up down stopping emergency]}, the parser will produce a model containing one \texttt{Machine} with \texttt{lift} as its \texttt{id}, and five \texttt{State}s with the \texttt{name}s, \texttt{stationary}, \texttt{up}, \texttt{down}, \texttt{stopping}, and \texttt{emergency}.
+An exemplar T2M transformation, written in EMFtext, is shown in Listing~\ref{lst:exemplar_t2m}. From the transformation shown in Listing~\ref{lst:exemplar_t2m}, EMFtext can be used to generate a parser that, when executed, will produce state machine models. For the input, \texttt{lift[stationary up down stopping emergency]}, the pa\-rser will produce a model containing one \texttt{Machine} with \texttt{lift} as its \texttt{id}, and five \texttt{State}s with the \texttt{name}s, \texttt{stationary}, \texttt{up}, \texttt{down}, \texttt{stopping}, and \texttt{em\-er\-ge\-ncy}.
+
+Lines 1-2 of Listing~\ref{lst:exemplar_t2m} define the name of the parser and target metamodel. Line 3 indicates that parser should first seek to construct a \texttt{Machine} from the source text. Lines 5-9 define rules for the lexer, including a rule for recognising \texttt{IDENTIFIER}s (represented as alphabetic characters).
+
+Lines 11-14 of Listing~\ref{lst:exemplar_t2m} are key to the transformation. Line 11 specifies that a \texttt{Machine} is constructed whenever an \texttt{IDENTIFIER} is followed by a \texttt{LBRACKET} and eventually a \texttt{RBRACKET}. When constructing a \texttt{Machine}, the first time an \texttt{IDENTIFIER} is encountered, it is stored in the \texttt{id} attribute of the \texttt{Machine}. The \texttt{states*} statement on line 12 indicates that, before matching a \texttt{RBRACKET}, the parser is permitted to transform subsequent text to a \texttt{State} (according to the rule on line 13) and store the resulting \texttt{State} in the \texttt{states} reference of the \texttt{Machine}. The asterisks in \texttt{states*} indicates that any number of \texttt{State}s can be constructed and stored in the \texttt{states} reference.
 
 \begin{lstlisting}[caption=T2M transformation in EMFtext, label=lst:exemplar_t2m, language=EMFtext]
 SYNTAXDEF statemachine
@@ -191,10 +195,6 @@ RULES {
 	State ::= name[IDENTIFIER] ;
 }
 \end{lstlisting}
-
-Lines 1-2 of Listing~\ref{lst:exemplar_t2m} define the name of the parser and target metamodel. Line 3 indicates that parser should first seek to construct a \texttt{Machine} from the source text. Lines 5-9 define rules for the lexer, including a rule for recognising \texttt{IDENTIFIER}s (represented as alphabetic characters).  
-
-Lines 11-14 of Listing~\ref{lst:exemplar_t2m} are key to the transformation. Line 11 specifies that a \texttt{Machine} is constructed whenever an \texttt{IDENTIFIER} is followed by a \texttt{LBRACKET} and eventually a \texttt{RBRACKET}. When constructing a \texttt{Machine}, the first time an \texttt{IDENTIFIER} is encountered, it is stored in the \texttt{id} attribute of the \texttt{Machine}. The \texttt{states*} statement on line 12 indicates that, before matching a \texttt{RBRACKET}, the parser is permitted to transform subsequent text to a \texttt{State} (according to the rule on line 13) and store the resulting \texttt{State} in the \texttt{states} reference of the \texttt{Machine}. The asterisks in \texttt{states*} indicates that any number of \texttt{State}s can be constructed and stored in the \texttt{states} reference.
 
 \subsubsection{Model Validation}
 \label{subsubsec:model_validation}
