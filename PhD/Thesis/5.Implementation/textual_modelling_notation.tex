@@ -62,7 +62,9 @@ name = "A" | ... | "z"
 
 \paragraph{Textual vs graphical} For user-driven co-evolution, the usability of the modelling notation is important because a metamodel user manipulates models with the notation to perform migration. The choice between a textual or graphical notation likely has a significant impact on usability, but it was not feasible to conduct a thorough user analysis given the time constraints of the thesis. Instead, a textual notation was selected to reduce implementation effort, and implemented to facilitate the addition of an equivalent graphical notation in future work. In particular, the concrete and abstract syntax definitions of the notation were kept separate to simplify the addition of an alternative concrete syntax in the future.
 
-Currently, several tools exist for representing models with textual, metamodel-specific syntaxes (such as the text-to-model transformation tools discussed in Section~\ref{subsubsec:model_transformation}), but no tools exist for representing models in a metamodel-independent syntax other than XMI. \cite{steel01hutn} describe the Distributed Systems Technology Centre's TokTok project, which provided a metamodel-independent textual modelling notation, and is now inactive. The metamodel-independent representation described in \cite{muller05hutn} has been abandoned in favour of Sintaks\footnote{\url{http://www.kermeta.org/sintaks/}}, a tool for constructing metamodel-specific representations. However, the metamodel-independent representations described in \cite{steel01hutn,muller05hutn} were based on an OMG standard, Human-Usable Textual Notation (HUTN) \cite{hutn}, which defines a textual modelling notation that aims to conform to human-usability criteria \cite{hutn}. As a metamodel-independent, textual concrete syntax, HUTN was seen as an ideal starting point for designing a textual modelling notation for user-driven co-evolution. OMG HUTN is described in the sequel.
+Currently, several tools exist for representing models with textual and metamodel-specific syntaxes (such as the text-to-model transformation tools discussed in Section~\ref{subsubsec:model_transformation}), but no tools exist for representing models in a metamodel-independent syntax other than XMI. \cite{steel01hutn} describe the Distributed Systems Technology Centre's TokTok project, which provided a metamodel-independent textual modelling notation, and is now inactive. \cite{muller05hutn} describe a me\-ta\-mo\-del-inde\-pe\-nd\-ent representation, which they have since abandoned in favour of Sintaks\footnote{\url{http://www.kermeta.org/sintaks/}}, a tool for constructing metamodel-specific representations.
+
+\cite{steel01hutn,muller05hutn} based their me\-ta\-mo\-del-independent representations on an OMG standard, Human-Usable Textual Notation (HUTN), which defines a textual modelling notation that aims to conform to human-usability criteria \cite{hutn}. As a me\-ta\-mo\-del-inde\-pe\-nd\-ent and textual concrete syntax, HUTN was seen as an ideal starting point for designing a textual modelling notation for user-driven co-evolution. OMG HUTN is described in the sequel.
 
 \subsection{OMG Human-Usable Textual Notation}
 \label{subsec:hutn}
@@ -109,11 +111,11 @@ FamilyPackage "families" {
 
 
 \subsubsection{Keywords and Adjectives}
-In general, a metamodel-independent syntax (such as OMG HUTN) will not be as concise as a metamodel-specific concrete syntax. However, OMG HUTN does define optional syntactic shortcuts to make model specifications more compact. The OMG HUTN specification aims to make the syntactic shortcuts intuitive \cite[pg2-4]{hutn}.
+In general, a metamodel-independent syntax (such as OMG HUTN) is more verbose than a metamodel-specific concrete syntax. However, OMG HUTN defines optional syntactic shortcuts to make model specifications more concise, and aims to make the syntactic shortcuts intuitive \cite[pg2-4]{hutn}.
 
 Two of the syntactic shortcuts relate to Boolean-valued attributes and are now discussed; a complete list of syntactic shortcuts is given in \cite{hutn}. OMG HUTN permits the use of an attribute name to represent the value \texttt{true}, or the attribute name prefixed with a tilde to represent the value \texttt{false}). When used in the body of the object, this style of Boolean-valued attribute represents a \emph{keyword}. A keyword used to prefix an object declaration is called an \emph{adjective}. Listing \ref{lst:boolean} shows the use of both an attribute keyword (\texttt{\textasciitilde nuclear} on line 6) and adjective (\texttt{\textasciitilde migrant} on line 2), and states that \texttt{The Sm\-it\-hs} are \texttt{mi\-gr\-a\-nt} and that \texttt{The Do\-es} are not \texttt{nu\-cl\-e\-ar}.
 
-\begin{lstlisting}[caption={[Using keywords and adjectives in HUTN]Using keywords and adjectives in HUTN, taken from \cite{rose08hutn}}, label=lst:boolean, language=HutnFamilies]
+\begin{lstlisting}[caption={[Keywords and adjectives in HUTN]Keywords and adjectives in HUTN, taken from \cite{rose08hutn}}, label=lst:boolean, language=HutnFamilies]
 FamilyPackage "families" {
     migrant Family "The Smiths" {}
 
@@ -149,7 +151,7 @@ FamilyPackage "families" {
 \subsubsection{Alternative Reference Syntax}
 In addition to the syntax defined in Listings \ref{lst:containment} and \ref{lst:non-contained}, OMG HUTN defines two alternative syntactic constructs for specifying the value of references. For example, Listing \ref{lst:assocblock} demonstrates the use of a reference block for defining \texttt{The Does} as friends with both \texttt{The Smiths} and \texttt{The Bloggs}.
 
-\begin{lstlisting}[caption={[Using a reference block in HUTN]Using a reference block in HUTN, taken from \cite{rose08hutn}}, label=lst:assocblock, language=HutnFamilies]
+\begin{lstlisting}[caption={[A reference block in HUTN]A reference block in HUTN, taken from \cite{rose08hutn}}, label=lst:assocblock, language=HutnFamilies]
 FamilyPackage "families" {
     Family "The Smiths" {}
     Family "The Does" {}
@@ -164,7 +166,7 @@ FamilyPackage "families" {
 
 Listing \ref{lst:associnfix} illustrates a further alternative syntax for references, which employs an infix notation. 
 
-\begin{lstlisting}[caption={[Using an infix reference in HUTN]Using an infix reference in HUTN, taken from \cite{rose08hutn}}, label=lst:associnfix, language=HutnFamilies]
+\begin{lstlisting}[caption={[An infix reference in HUTN]An infix reference in HUTN, taken from \cite{rose08hutn}}, label=lst:associnfix, language=HutnFamilies]
 FamilyPackage "families" {
     Family "The Smiths" {}
     Family "The Does" {}
@@ -214,7 +216,7 @@ For the reasons outlined above, Epsilon HUTN is implemented using two model-to-m
   \label{fig:architecture}
 \end{figure}
 
-The modular architecture in Figure~\ref{fig:architecture} facilitates the re-use of the metamodel-independent syntax and conformance checking service described in Section~\ref{sec:mmi_syntax}, and hence reduced implementation effort. A small modification was made to the metamodel-independent syntax to facilitate the implementation of Epsilon HUTN: an additional metaclass, \texttt{Pa\-ck\-a\-geOb\-je\-ct}, was added to the metamodel-independent syntax. In OMG HUTN, packages are used to segregate a model such that different parts of a OMG HUTN document can refer to different metamodels. Consequently, a \texttt{Pa\-ck\-a\-geOb\-je\-ct} has a type (i.e. the metamodel to which its contents refer), an optional identifier (used for inter-package references) and contains any number of \texttt{Ob\-je\-ct}s. To avoid confusion with \texttt{Pa\-ck\-a\-geOb\-je\-ct}, the \texttt{Ob\-je\-ct} class in the metamodel-independent syntax was renamed to \texttt{Cl\-a\-ssOb\-je\-ct}. The version of the metamodel-independent syntax used with Epsilon HUTN is shown in Figure~\ref{fig:mmi_syntax_hutn}.
+The modular architecture in Figure~\ref{fig:architecture} facilitated the re-use of the me\-ta\-mo\-del-inde\-pe\-nd\-ent syntax and conformance checking service described in Section~\ref{sec:mmi_syntax}, and hence reduced implementation effort. A small modification was made to the metamodel-independent syntax to facilitate the implementation of Epsilon HUTN: an additional metaclass, \texttt{Pa\-ck\-a\-geOb\-je\-ct}, was added to the metamodel-independent syntax. In OMG HUTN, packages are used to segregate a model such that different parts of a OMG HUTN document can refer to different metamodels. Consequently, a \texttt{Pa\-ck\-a\-geOb\-je\-ct} has a type (i.e. the metamodel to which its contents refer), an optional identifier (used for inter-package references) and contains any number of \texttt{Ob\-je\-ct}s. To avoid confusion with \texttt{Pa\-ck\-a\-geOb\-je\-ct}, the \texttt{Ob\-je\-ct} class in the metamodel-independent syntax was renamed to \texttt{Cl\-a\-ssOb\-je\-ct}. The version of the me\-ta\-mo\-del-inde\-pe\-nd\-ent syntax used with Epsilon HUTN is shown in Figure~\ref{fig:mmi_syntax_hutn}.
 
 \begin{figure}[htbp]
   \centering
@@ -223,7 +225,7 @@ The modular architecture in Figure~\ref{fig:architecture} facilitates the re-use
   \label{fig:mmi_syntax_hutn}
 \end{figure}
 
-Each phase of the architecture in Figure~\ref{fig:architecture} is now discussed in detail. Note that, in this section, instances of the metamodel-independent syntax producing during the execution of the HUTN workflow are termed an \textit{intermediate model}.
+Each module of the architecture in Figure~\ref{fig:architecture} is now discussed in detail. Note that, in this section, instances of the metamodel-independent syntax producing during the execution of the HUTN workflow are termed an \textit{intermediate model}.
 
 \paragraph{Parsing the HUTN Source}
 A parser for OMG HUTN was constructed using ANTLR \cite{parr07antlr}, a parser generator tool. ANTLR produces a parser from an annotated EBNF grammar definition. Part of the grammar definition used by Epsilon HUTN is shown in Listing~\ref{lst:hutn_grammar} and is used to generate parser rules that process the body of \texttt{Cl\-a\-ssOb\-je\-ct}s. The \texttt{attr} rule on line 4, for example, matches any number of comma separated attribute values or the \texttt{null} keyword.
@@ -238,7 +240,7 @@ attr = attr_value { COMMA attr_value } | NULL
 \end{lstlisting}
 
 \paragraph{AST Model to Intermediate Model}
-Epsilon HUTN uses ETL \cite{kolovos08etl} for specifying M2M transformation. One of the transformation rules from Epsilon HUTN is shown in Listing \ref{lst:m2m}; the complete transformation is presented in Listing~\ref{lst:m2m_full}. In Listing~\ref{lst:m2m}, the rule (starting on line 1) transforms a \texttt{No\-de} with type \texttt{na\-me} (which could represent a \texttt{P\-ac\-ka\-geOb\-je\-ct} or a \texttt{Cl\-a\-ssOb\-je\-ct}) to a \texttt{P\-ac\-ka\-geOb\-je\-ct} in the intermediate model. The guard (line 5) specifies that a name node will only be transformed to a \texttt{P\-ac\-ka\-geOb\-je\-ct} if the node has no parent (i.e. it is a top-level node, and hence a package rather than a class). The body of the rule states that the type, line number and column number of the package are determined from the text, line and column attributes of the \texttt{No\-de} object. On line 11, a \texttt{Co\-nt\-ai\-nm\-e\-ntSl\-ot} is instantiated to hold the children of this \texttt{P\-ac\-ka\-geOb\-je\-ct}. The children of the \texttt{No\-de} object are transformed to the intermediate model (using a method built into ETL, \texttt{eq\-ui\-va\-lent()}), and added to the \texttt{Co\-nt\-ai\-nm\-e\-ntSl\-ot}.
+For M2M transformation, Epsilon HUTN uses ETL \cite{kolovos08etl}. One of the transformation rules from Epsilon HUTN is shown in Listing \ref{lst:m2m}; the complete transformation is presented in Listing~\ref{lst:m2m_full}. In Listing~\ref{lst:m2m}, the rule (starting on line 1) transforms a \texttt{No\-de} with type \texttt{na\-me} (which could represent a \texttt{P\-ac\-ka\-geOb\-je\-ct} or a \texttt{Cl\-a\-ssOb\-je\-ct}) to a \texttt{P\-ac\-ka\-geOb\-je\-ct} in the intermediate model. The guard (line 5) specifies that a name node will only be transformed to a \texttt{P\-ac\-ka\-geOb\-je\-ct} if the node has no parent (i.e. it is a top-level node, and hence a package rather than a class). The body of the rule states that the type, line number and column number of the package are determined from the text, line and column attributes of the \texttt{No\-de} object. On line 11, a \texttt{Co\-nt\-ai\-nm\-e\-ntSl\-ot} is instantiated to hold the children of this \texttt{P\-ac\-ka\-geOb\-je\-ct}. The children of the \texttt{No\-de} object are transformed to the intermediate model (using a method built into ETL, \texttt{eq\-ui\-va\-lent()}), and added to the \texttt{Co\-nt\-ai\-nm\-e\-ntSl\-ot}.
 
 \begin{lstlisting}[caption=Transforming Nodes to PackageObjects with ETL., label=lst:m2m, language=ETL]
 rule NameNode2PackageObject
@@ -299,7 +301,7 @@ rule Object2[%=class.name%]
 
 To illustrate the way in which Epsilon HUTN generates a target model from an intermediate model, the M2T transformation in Listing~\ref{lst:generate} is applied to the the families metamodel in Figure~\ref{fig:original_families_mm_repeated}. The M2T transformation generates the two M2M transformation rules in Listing~\ref{lst:hutn_generated_transformation}. The rules produce instances of \texttt{Fa\-mi\-ly} and \texttt{Pe\-rs\-on} from instances of \texttt{Cl\-a\-ssOb\-je\-ct} in the intermediate model. The body of each rule copies the values from the slots of the \texttt{Cl\-as\-sOb\-je\-ct} to the \texttt{Fa\-mi\-ly} or \texttt{Pe\-rs\-on} in the target model. Lines 7-9, for example, copy the value of the name \texttt{Sl\-ot} (if one is specified) to the target \texttt{Fa\-mi\-ly}.
 
-\begin{lstlisting}[caption=The M2M transformation generated for the Families metamodel, label=lst:hutn_generated_transformation, language=ETL]
+\begin{lstlisting}[caption=The M2M transformation generated for the Families metamodel, label=lst:hutn_generated_transformation, language=ETL, float=tb]
 rule Object2Family
   transform o : Intermediate!ClassObject
   to t : Model!Family {

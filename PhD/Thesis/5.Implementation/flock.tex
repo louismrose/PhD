@@ -14,7 +14,7 @@ Like Epsilon HUTN (Section~\ref{subsec:epsilon_hutn}), Flock is built atop Epsil
 \label{subsubsec:abstract_syntax}
 As illustrated by Figure~\ref{fig:abstract_syntax}, Flock migration strategies are organised into modules (\texttt{Fl\-ockMo\-du\-le}). Flock modules inherit from EOL modules (\texttt{Eo\-lMod\-ule}) and hence provide language constructs for specifying user-defined operations and for re-using modules. Flock modules comprise any number of rules (\texttt{Ru\-le}). Each rule has an original metamodel type (\texttt{or\-ig\-in\-alTy\-pe}) and can optionally specify a \texttt{gu\-ard}, which is either an EOL statement or a block of EOL statements. \texttt{Mi\-gr\-ateRu\-le}s must specify an evolved metamodel type (\texttt{ev\-ol\-vedTy\-pe}) and/or a \texttt{bo\-dy} comprising a block of EOL statements.
 
-\begin{figure}
+\begin{figure}[htb]
   \centering
   \includegraphics[scale=0.75]{5.Implementation/flock_abstract_syntax.pdf}
   \caption{The abstract syntax of Flock.}
@@ -76,7 +76,7 @@ The final phase executes the imperative part of the user-defined migration rules
 
 \begin{itemize}
 	\item For each triple \texttt{<r,e,e'>} produced by the equivalence establishment phase:
-	\subitem $-$ Bind \texttt{e} and \texttt{e'} to EOL variables named \texttt{original} and \texttt{migrated}, respectively.
+	\subitem $-$ Bind \texttt{e} and \texttt{e'} to new EOL variables named \texttt{or\-ig\-in\-al} and \texttt{mi\-gr\-at\-ed}, respectively.
 	\subitem $-$ Execute the body of \texttt{r} with EOL.
 \end{itemize}
 
@@ -118,7 +118,7 @@ Flock is now demonstrated using three examples of model migration. The first exa
 \subsubsection{Process-Oriented Migration in Flock}
 The first example considers the evolution of a process-oriented metamodel, introduced in \ref{sec:other_examples} and described in . The process-oriented metamodel was developed to explore the feasibility of a graphical model editor for representing programs written in process-oriented programming languages, such as occam-$\pi$ \cite{occam_pi}.
 
-\begin{figure}
+\begin{figure}[htb]
 	\centering
 	\subfigure[Original metamodel.]
 	{
@@ -180,7 +180,13 @@ migrate Transition {
 \subsubsection{UML Class Diagram Migration in Flock}
 Figure~\ref{fig:uml_mms} illustrates a subset of the changes made between UML 1.5 and UML 2.0. Only class diagrams are considered, and features that did not change are omitted. In Figure~\ref{fig:original_uml_mm}, association ends and attributes are specified separately. In Figure~\ref{fig:evolved_uml_mm}, the \texttt{Pr\-op\-er\-ty} class is used instead. The Flock migration strategy (Listing~\ref{lst:flock-uml}) for Figure~\ref{fig:uml_mms} is now discussed.
 
-\begin{lstlisting}[caption=UML model migration in Flock, label=lst:flock-uml, language=Flock]
+Firstly, \texttt{At\-tr\-ib\-ut\-e}s and \texttt{As\-so\-ci\-at\-i\-onEn\-d}s are migrated to be \texttt{Pr\-o\-pe\-rt\-ies} (lines 14 to 18, and 25 to 29). In particular, the \texttt{As\-so\-ci\-at\-i\-on\#na\-vi\-ga\-b\-leEn\-ds} reference replaces the \texttt{As\-so\-ci\-at\-i\-onE\-nd\#isN\-av\-ig\-ab\-le} attribute; following migration, each navigable \texttt{As\-so\-ci\-at\-i\-onE\-nd} must be referenced via the \texttt{na\-vi\-ga\-bl\-eEn\-ds} feature of its \texttt{As\-so\-ci\-at\-ion} (lines 26-28).
+
+In UML 2.0, \texttt{St\-ru\-ct\-ur\-alFe\-at\-ur\-e\#o\-wn\-er\-Sc\-op\-e} has been replaced by \texttt{\#i\-sS\-ta\-ti\-c} (lines 15-17 and 20-22). The UML 2.0 specification states that the UML 1.5 values \texttt{Sc\-op\-eKi\-nd\#cl\-as\-si\-fi\-er} and \texttt{\#i\-ns\-ta\-nce} should be migrated to true and to false, respectively. 
+
+The UML 1.5 \texttt{St\-ru\-ct\-ur\-alFe\-at\-ur\-e\#t\-ar\-g\-et\-Sc\-op\-e} feature is no longer supported in UML 2.0, and no migration path is provided. Consequently, line 14 deletes any model element whose \texttt{t\-ar\-g\-et\-Sc\-op\-e} is not the default value.
+
+\begin{lstlisting}[caption=UML model migration in Flock, label=lst:flock-uml, language=Flock, float=tb]
 migrate Association {
 	migrated.memberEnds := original.connections.equivalent();
 }
@@ -213,7 +219,7 @@ migrate AssociationEnd to Property {
 \end{lstlisting}
 
 \begin{landscape}	
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\subfigure[Original, UML 1.5 metamodel.]
 	{
@@ -229,12 +235,6 @@ migrate AssociationEnd to Property {
 \label{fig:uml_mms}
 \end{figure}
 \end{landscape}	
-
-Firstly, \texttt{At\-tr\-ib\-ut\-e}s and \texttt{As\-so\-ci\-at\-i\-onEn\-d}s are migrated to be \texttt{Pr\-o\-pe\-rt\-ies} (lines 14 to 18, and 25 to 29). In particular, the \texttt{As\-so\-ci\-at\-i\-on\#na\-vi\-ga\-b\-leEn\-ds} reference replaces the \texttt{As\-so\-ci\-at\-i\-onE\-nd\#isN\-av\-ig\-ab\-le} attribute; following migration, each navigable \texttt{As\-so\-ci\-at\-i\-onE\-nd} must be referenced via the \texttt{na\-vi\-ga\-bl\-eEn\-ds} feature of its \texttt{As\-so\-ci\-at\-ion} (lines 26-28).
-
-In UML 2.0, \texttt{St\-ru\-ct\-ur\-alFe\-at\-ur\-e\#o\-wn\-er\-Sc\-op\-e} has been replaced by \texttt{\#i\-sS\-ta\-ti\-c} (lines 15-17 and 20-22). The UML 2.0 specification states that the UML 1.5 values \texttt{Sc\-op\-eKi\-nd\#cl\-as\-si\-fi\-er} and \texttt{\#i\-ns\-ta\-nce} should be migrated to true and to false, respectively. 
-
-The UML 1.5 \texttt{St\-ru\-ct\-ur\-alFe\-at\-ur\-e\#t\-ar\-g\-et\-Sc\-op\-e} feature is no longer supported in UML 2.0, and no migration path is provided. Consequently, line 14 deletes any model element whose \texttt{t\-ar\-g\-et\-Sc\-op\-e} is not the default value.
 
 Finally, \texttt{C\-la\-ss\#fe\-at\-ur\-es} has been split to form \texttt{C\-la\-ss\#op\-er\-at\-io\-ns} and \texttt{\#at\-tr\-ib\-ut\-es}. Lines 7 and 8 partition features on the original \texttt{Cl\-a\-ss} into \texttt{Op\-er\-at\-io\-n}s and \texttt{Pr\-op\-er\-ty}s. \texttt{Cl\-as\-s\#a\-ss\-oc\-ia\-ti\-on\-s} has been removed in UML 2.0, and \texttt{As\-so\-ci\-at\-i\-onEn\-d}s are instead stored in \texttt{Cl\-a\-ss\#at\-tr\-ib\-ut\-es} (line 9).
 

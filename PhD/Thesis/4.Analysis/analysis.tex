@@ -22,7 +22,7 @@ Figure~\ref{fig:analysis_overview} summarises the objectives of this chapter. in
 In Chapter~\ref{LiteratureReview}, three categories of evolutionary change were identified: model refactoring, synchronisation and co-evolution. Existing MDE projects were examined for examples of synchronisation and co-evolution and, due to time constraints, examples of model refactoring were not considered. The examples were used to provide requirements for developing structures and processes for evolutionary changes in the context of MDE. In this section, the requirements used to select example data are described, along with candidate and selected MDE projects. The section concludes with a discussion of further examples, which were obtained from joint research -- with colleagues in this department and at the University of Kent -- and from related work on the evolution of object-oriented programs.  
 
 \subsection{Requirements}
-The suitability of each MDE project for analysing co-evolution and for analysing model synchronisation was determined using a set of requirements. The requirements were partitioned into: common requirements (needed to analyse both model synchronisation and co-evolution), requirements for studying model co-evolution, and requirements for studying synchronisation. Candidate MDE projects were evaluated against these requirements, and several were selected for further analysis.
+The suitability of each MDE project for analysing co-evolution and for an\-al\-ys\-i\-ng model synchronisation was determined using a set of requirements. The requirements were partitioned into: common requirements (needed to analyse both model synchronisation and co-evolution), requirements for studying model co-evolution, and requirements for studying synchronisation. Candidate MDE projects were evaluated against these requirements, and several were selected for further analysis.
 
 \subsubsection{Common requirements}
 Every project needs to use MDE (requirement R1), as the analysis investigated evolution in the context of MDE. Metamodelling and model transformation are two fundamental activities in MDE, as discussed in Section~\ref{sec:mde_terms}, and, as such, a project was deemed as using MDE when evidence of both metamodelling and model transformation was encountered.
@@ -54,10 +54,10 @@ Eight candidate projects were considered for the analysis presented in this chap
 	\centering
 	\begin{tabular}{|c||c|c|c||c|c|c||c|c|c|c|}
 		\hline
-		\multirow{3}{*}{Name} & \multicolumn{10}{|c|}{Requirements} \\
-		\cline{2-11}
-		          & \multicolumn{3}{|c||}{Common} & \multicolumn{3}{|c||}{Co-evolution} & \multicolumn{4}{|c|}{Synchronisation} \\
-		\cline{2-11}
+		\multirow{3}{*}{Name} & \multicolumn{9}{|c|}{Requirements} \\
+		\cline{2-10}
+		          & \multicolumn{3}{|c||}{Common} & \multicolumn{3}{|c||}{Co-evolution} & \multicolumn{3}{|c|}{Synchronisation} \\
+		\cline{2-10}
 		          & R1 & R2 & R3 & R4 & R5 & O1 & R6 & R7 & O2 \\
 		\hline                                         
 		GSN       & x  &    &    & x  &    &    &    &    &    \\
@@ -87,11 +87,12 @@ The Goal Structuring Notation (GSN) \cite{kelly99thesis} is a notation for speci
 
 \subsubsection{OMG MDE Projects}
 \label{par:omg}
-The Object Management Group (OMG)\footnote{\url{http://www.omg.org}} oversees the development of model-driven technologies. The Vice President and Technical Director of OMG, Andrew Watson, references the development of two MDE projects in \cite{watson08mdahistory}. Personal correspondence with Watson ascertained that source code is available for one of the projects, but there is no version history. \textbf{Suitability for study:} Unsuitable.
+The Object Management Group (OMG)\footnote{\url{http://www.omg.org}} oversees the development of model-driven technologies. Andrew Watson, the Vice President and Technical Director of OMG, discusses the development of two MDE projects in \cite{watson08mdahistory}. Personal correspondence with Watson ascertained that source code is available for one of the projects, but there is no version history. \textbf{Suitability for study:} Unsuitable.
+
 
 \subsubsection{Zoos}
 \label{par:zoos}
-A zoo is a collection of metamodels, authored in a common metamodelling language. Two zoos were considered (the Atlantic Zoo and the AtlantEcore Zoo\footnote{Both have since moved to: \url{http://www.emn.fr/z-info/atlanmod/index.php/Zoos}}), but neither contained significant metamodel changes. Those changes that were recorded involved only renaming of meta-classes (trivial to migrate) or additive changes, which do not affect conformance and therefore require no migration. \textbf{Suitability for study:} Unsuitable.
+A zoo is a collection of metamodels, authored in a common metamodelling language. Two zoos were considered (the Atlantic Zoo and the AtlantEcore Zoo\footnote{Both have moved to: \url{http://www.emn.fr/z-info/atlanmod/index.php/Zoos}}), but neither contained significant metamodel changes. Those changes that were recorded involved only renaming of meta-classes (trivial to migrate) or additive changes, which do not affect conformance and therefore require no migration. \textbf{Suitability for study:} Unsuitable.
 
 \subsubsection{MDT}
 The Eclipse Model Development Tools (MDT)\footnote{\url{http://www.eclipse.org/mdt}} provides implementations of industry-standard metamodels, such as UML2 \cite{uml212} and OCL \cite{ocl2}. Like the metamodel zoos, the version history for the MDT metamodels contained no significant changes. \textbf{Suitability for study:} Unsuitable.
@@ -124,7 +125,7 @@ Object-oriented programming and metamodelling have some commonalities. In object
 
 \emph{Refactoring} is the process of improving the structure of existing code while maintaining its external behaviour. When used as a noun, a refactoring is one such improvement. As discussed in Chapter~\ref{LiteratureReview}, refactoring of object-oriented systems has been widely studied, perhaps must notably in \cite{fowler99refactoring}, which provides a catalogue of refactorings for object-oriented systems. For each refactoring, Fowler gives advice and instructions for its application.
 
-To explore their relevance to MDE, the refactorings described in \cite{fowler99refactoring} were applied to metamodels. Some were found to be relevant to metamodels, and could potential occur during MDE. Many were found to be irrelevant, belonging to one of the following three categories:
+To explore their relevance to MDE, the refactorings in \cite{fowler99refactoring} have been applied to metamodels. Some have been found to be relevant to metamodels, and could potential occur during MDE. Many have been found to be irrelevant, belonging to one of the following three categories:
 
 \begin{enumerate}
 	\item \textbf{Operational refactorings} focus on restructuring behaviour (method bodies). Most modelling frameworks do not support the specification of behaviour in models.
@@ -195,7 +196,7 @@ In MDE development environments, \emph{models and metamodels are separated}. Met
 	\label{fig:co-evo_activities}
 \end{figure}
 
-Because of model and metamodel separation, co-evolution is either \emph{developer-driven} (the metamodel developer devises an executable migration strategy, which is distributed to the metamodel user with the evolved metamodel) or \emph{user-driven} (the metamodel developer provides no migration strategy). In either case, model migration occurs on the machine of the metamodel user, after and independent of metamodel evolution.
+Due to model and metamodel separation, co-evolution is either \emph{developer-driven} (the metamodel developer devises an executable migration strategy, which is distributed to the metamodel user with the evolved metamodel) or \emph{user-driven} (the metamodel developer provides no migration strategy). In either case, model migration occurs on the machine of the metamodel user, after and independent of metamodel evolution.
 
 
 \subsubsection{Implicit Conformance}
@@ -214,17 +215,17 @@ In user-driven co-evolution, the metamodel user performs migration by loading th
 
 In some cases, the metamodel user will not be provided with any migration strategy (executable or otherwise) from the metamodel developer. To perform migration, the metamodel user must determine which (if any) model elements no longer conform to the evolved metamodel, and then decide how best to change non-conformant elements to re-establish conformance.
 
-\subsubsection{User-driven co-evolution in EMF}
-EMF provides structures and processes for loading, storing and editing models and metamodels. When a model no longer conforms to its metamodel, however, the model cannot be load, cannot be used with EMF's model editors, and cannot be used with model management operations. Therefore, model migration must be performed manually, typically by editing the underlying storage representation of the model.
- 
-A typical workflow for performing user-driven co-evolution with EMF is shown in Figure~\ref{fig:emf_process_analysis}. (The workflow in Figure~\ref{fig:emf_process_analysis} assumes a graphical model editor, such as those generated by GMF, but any editor built atop EMF will exhibit the same behaviour). When the user attempts to load a model, EMF automatically checks the conformance of the model with respect to its metamodel. When the model does not conform to its metamodel, EMF reports (some of the) conformance errors, loading fails and the model is not displayed in the graphical editor. To re-establish conformance, the user must edit by hand the underlying storage representation of the model, XMI. After saving the reconciled XMI to disk, the user attempts to load the model in the graphical editor again. If the user makes a mistake in reconciling the XMI, loading will fail again and further conformance errors will be reported. Even if the user makes no mistakes in reconciling the XMI, further conformance errors might be reported because EMF uses a multi-pass XMI parser and cannot report all categories of conformance problem in one pass of the XMI. If further conformance problems are reported, the user continues to reconcile the XMI by hand. Otherwise, migration is complete and the model is displayed in the graphical editor. 
-
 \begin{figure}[htbp]
 	\centering
 		\includegraphics*[viewport=80 280 600 550,height=5.75cm]{6.Evaluation/images/user_driven/emf_process.pdf}
 	\caption{User-driven co-evolution with EMF}
 	\label{fig:emf_process_analysis}
 \end{figure}
+
+\subsubsection{User-driven co-evolution in EMF}
+EMF provides structures and processes for loading, storing and editing models and metamodels. When a model no longer conforms to its metamodel, however, the model cannot be load, cannot be used with EMF's model editors, and cannot be used with model management operations. Therefore, model migration must be performed manually, typically by editing the underlying storage representation of the model.
+
+A typical workflow for performing user-driven co-evolution with EMF is shown in Figure~\ref{fig:emf_process_analysis}. (The workflow in Figure~\ref{fig:emf_process_analysis} assumes a graphical model editor, such as those generated by GMF, but any editor built atop EMF will exhibit the same behaviour). When the user attempts to load a model, EMF automatically checks the conformance of the model with respect to its metamodel. When the model does not conform to its metamodel, EMF reports (some of the) conformance errors, loading fails and the model is not displayed in the graphical editor. To re-establish conformance, the user must edit by hand the underlying storage representation of the model, XMI. After saving the reconciled XMI to disk, the user attempts to load the model in the graphical editor again. If the user makes a mistake in reconciling the XMI, loading will fail again and further conformance errors will be reported. Even if the user makes no mistakes in reconciling the XMI, further conformance errors might be reported because EMF uses a multi-pass XMI parser and cannot report all categories of conformance problem in one pass of the XMI. If further conformance problems are reported, the user continues to reconcile the XMI by hand. Otherwise, migration is complete and the model is displayed in the graphical editor. 
 
 \begin{framed}
 \textbf{Scenario}
@@ -244,7 +245,7 @@ It is worth noting that the above scenario describes a metamodel with only one u
 \label{subsec:co-evolution_categorisation}
 In developer-driven co-evolution, the metamodel developer provides an executable migration strategy along with the evolved metamodel. Model migration might be scheduled automatically by the modelling framework (for example when a model is loaded) or by the metamodel user.
 
-As noted in Section~\ref{subsec:user-driven_co-evolution}, existing co-evolution research focuses on developer-driven rather than user-driven co-evolution. Several developer-driven co-evolution approaches were reviewed in Section~\ref{LitReview:ModelCoEvo}. To compare and categorise existing developer-driven co-evolution approaches, the approaches were applied -- by the author -- to the co-evolution examples identified in Section~\ref{sec:locating_data}. From this analysis and from the literature review conducted in Section~\ref{LitReview:ModelCoEvo}, three categories of developer-driven co-evolution approach were identified: \emph{manual specification}, \emph{operator-based} and \emph{inference}. This categorisation has been published in \cite{rose09analysis}. Each category is now discussed.
+As noted in Section~\ref{subsec:user-driven_co-evolution}, co-evolution research focuses on developer-driven rather than user-driven co-evolution. Several developer-driven co-evolution approaches were reviewed in Section~\ref{LitReview:ModelCoEvo}. To compare and categorise existing developer-driven co-evolution approaches, the approaches have been applied by the author to the co-evolution examples identified in Section~\ref{sec:locating_data}. From this analysis and from the literature review conducted in Section~\ref{LitReview:ModelCoEvo}, three categories of developer-driven co-evolution approach were identified: \emph{manual specification}, \emph{operator-based} and \emph{inference}. The categorisation has been published in \cite{rose09analysis}. Each category is now discussed.
 
 \subsubsection{Manual Specification}
 In \emph{manual specification}, the migration strategy is encoded manually by the metamodel developer, typically using a general purpose programming language (e.g. Java) or one of the model-to-model transformation languages described in Section~\ref{subsubsec:model_transformation}. The migration strategy can manipulate instances of the metamodel in any way permitted by the modelling framework. Manual specification approaches have been used to manage migration in GMF (Section~\ref{subsec:emf}) and in the Eclipse MDT UML2 project, which were outlined in Section~\ref{sec:locating_data}. Compared to operator-based and inference techniques (below), manual specification permits the metamodel developer the most control over model migration.
@@ -290,7 +291,7 @@ To perform metamodel evolution using co-evolutionary operators, the library of c
 \subsubsection{Inference}
 \label{subsec:inference}
 \label{subsec:metamodel_matching}
-In \emph{inference} approaches, a migration strategy is derived from the evolved metamodel and the \emph{metamodel history}. Inference approaches can be further categorised according to the type of metamodel history used. \emph{Differencing} approaches compare and match the original and evolved metamodels, while \emph{change recording} approaches use a record of primitive changes made to the original metamodel to produce the evolved metamodel. The analysis of the evolved metamodel and the metamodel history yields a \emph{difference model} \cite{cicchetti08automating}, a representation of the changes between original and evolved metamodel. The difference model is used to infer a migration strategy, typically by using a higher-order model-to-model transformation\footnote{A model-to-model transformation that consumes or produces a model-to-model transformation is termed a higher-order model transformation.} to produce a model-to-model transformation from the difference model. \cite{cicchetti08automating} and \cite{garces09managing} describe differencing-based inference approaches. There exist no pure change recording approaches, although COPE \cite{herrmannsdoerfer09cope} uses change recording to support the specification of custom model migration strategies, and \cite{mendez10towards} suggest that change recording approach might be used to manage metamodel-transformation co-evolution.
+In \emph{inference} approaches, a migration strategy is derived from the evolved metamodel and the \emph{metamodel history}. Inference approaches can be further categorised according to the type of metamodel history used. \emph{Differencing} approaches compare and match the original and evolved metamodels, while \emph{change recording} approaches use a record of primitive changes made to the original metamodel to produce the evolved metamodel. The analysis of the evolved metamodel and the metamodel history yields a \emph{difference model} \cite{cicchetti08automating}, a representation of the changes between original and evolved metamodel. The difference model is used to infer a migration strategy, typically by using a higher-order model-to-model transformation\footnote{A model-to-model transformation that consumes or produces a model-to-model transformation is termed a higher-order model transformation.} to produce a model-to-model transformation from the difference model. \cite{cicchetti08automating} and \cite{garces09managing} describe differencing-based inference approaches. There exist no pure change recording approaches, although COPE \cite{herrmannsdoerfer09cope} uses change recording for the specification of custom model migration strategies, and \cite{mendez10towards} suggest that a change recording approach might be used to manage metamodel-transformation co-evolution.
 
 Compared to manual specification and operator-based co-evolution approaches, inference approaches require the least amount of effort from the metamodel developer who needs only to evolve the metamodel and provide a metamodel history. However, for some types of metamodel change, there is more than one feasible model migration strategy. For example, when a metaclass is deleted, one feasible migration strategy is to delete all instances of the deleted metaclass. Alternatively, the type of each instance of the deleted metaclass could be changed to another metaclass that specifies equivalent structural features.
 
@@ -302,7 +303,7 @@ The two types of inference approach -- differencing and change recording -- are 
 
 \paragraph{Example}
 \label{subsubsec:example}
-The following example was observed during the development of the Epsilon FPTC tool (summarised in Section~\ref{sec:locating_data} and described in \cite{paige08fptc}). The source code is available from EpsilonLabs\footnote{\url{http://sourceforge.net/projects/epsilonlabs/}}. Figure~\ref{fig:mm_before} illustrates the original metamodel in which a \texttt{System} comprises any number of \texttt{Block}s. A \texttt{Block} has a name, and any number of \texttt{successor} \texttt{Block}s; \texttt{predecessors} is the inverse of the \texttt{successors} reference.
+The following example was observed during the development of the Epsilon FPTC tool (described in \cite{paige08fptc} and summarised in Section~\ref{sec:locating_data}). The source code is available from EpsilonLabs\footnote{\url{http://sourceforge.net/projects/epsilonlabs/}}. Figure~\ref{fig:mm_before} illustrates the original metamodel in which a \texttt{System} comprises any number of \texttt{Block}s. A \texttt{Block} has a name, and any number of \texttt{successor} \texttt{Block}s; \texttt{predecessors} is the inverse of the \texttt{successors} reference.
 
 \begin{figure}[htbp]
 	\centering
@@ -350,8 +351,8 @@ In differencing approaches, the original and evolved metamodels are compared to 
 To illustrate this problem further, consider again the metamodel evolution described above. A comparison of the original (Figure~\ref{fig:mm_before}) and evolved (Figure~\ref{fig:mm_after}) metamodels shows that the references named \texttt{successors} and \texttt{predecessors} no longer exist on \texttt{Block}. However, two other references, named \texttt{out\-go\-ingCon\-nect\-ions} and \texttt{incomingConnections}, are now present on \texttt{Block}. A differencing approach might deduce (correctly, in this case) that the two new references are evolutions of the old references. However, no differencing approach is able to determine which mapping is correct from the following two possibilities:
 
 \begin{itemize}
-	\item \texttt{successors} evolved to \texttt{incomingConnections}, and \texttt{predecessors} evolved to \texttt{outgoingConnections}.
-	\item \texttt{successors} evolved to \texttt{outgoingConnections}, and \texttt{predecessors} evolved to \texttt{incomingConnections}.
+	\item \texttt{successors} evolved to \texttt{incomingConnections}; \texttt{predecessors} evolved to \texttt{outgoingConnections}.
+	\item \texttt{successors} evolved to \texttt{outgoingConnections}; \texttt{predecessors} evolved to \texttt{incomingConnections}.
 \end{itemize}
 
 The choice between these two possibilities can only made by the metamodel developer, who knows that \texttt{successors} (\texttt{predecessors}) is semantically equivalent to \texttt{outgoingConnections} (\texttt{incomingConnections}). As shown by this example, fully automatic differencing approaches cannot always infer a migration strategy that will capture the semantics desired by the metamodel developer.
@@ -399,7 +400,7 @@ When a metamodel change will affect conformance in only a small number of models
 
 Because modelling frameworks typically cannot be used to load models that do not conform to their metamodel, user-driven co-evolution involves editing the storage representation of a model. As discussed above, model storage representations are typically not optimised for human use and hence user-driven co-evolution can be error-prone and time consuming. When a multi-pass parser is used to load models (as is the case with EMF), user-driven co-evolution is an iterative process, because not all conformance errors are reported at once.
 
-Therefore, the following requirement was derived: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a conformance report for the original model and evolved metamodel.}
+Therefore, the following requirement was derived: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-co\-nf\-or\-ma\-nt models without directly manipulating the underlying storage representation and provides a conformance report for the original model and evolved metamodel.}
 
 
 \subsection{Developer-driven co-evolution}
@@ -409,9 +410,9 @@ Of the three categories of developer-driven co-evolution technique identified in
 
 Given the variations in existing model migration strategy languages and the influence of those languages on developer-driven co-evolution, the following requirement was derived: \emph{This thesis must compare and evaluate existing languages for specifying model migration strategies.}
 
-As discussed in Section~\ref{subsec:co-evolution_categorisation}, existing manual specification techniques do not provide model migration strategy languages that capture patterns specific to model migration. Developers must re-invent solutions to commonly occurring model migration patterns, such as copying an element from the original to the migrated model. In some cases, manual specification techniques require the developer to implement, in addition to a migration strategy, infrastructure features for loading and storing models and for interfacing with the metamodel user. 
+As discussed in Section~\ref{subsec:co-evolution_categorisation}, existing manual specification techniques do not provide model migration strategy languages that capture patterns specific to model migration. Developers must re-invent solutions to commonly occurring model migration patterns, such as copying an element from the original to the migrated model. In some cases, manual specification techniques require the developer to implement, in addition to a migration strategy, mechanisms for loading and storing models and for interfacing with the metamodel user. 
 
-Devising a domain-specific languages or DSL (discussed in Chapter~\ref{LiteratureReview}) is one mechanism for capturing re-occurring patterns. Executable DSLs are often used for performing model management in contemporary model-driven development environments. DSLs are provided by model-to-model (M2M) transformation tools such as ATL \cite{jouault05transforming}, VIATRA \cite{VIATRA}, workflow architectures such as oAW\footnote{\url{http://www.eclipse.org/workinggroups/oaw/}}, and model-to-text (M2T) transformation tools such as MOFScript \cite{oldevik05toward}.
+Devising a domain-specific languages or DSL (discussed in Chapter~\ref{LiteratureReview}) is one approach to capturing re-occurring patterns, and executable DSLs are widely used for specifying and performing model management in contemporary model-driven development environments. Contemporary model management tools provide many executable DSLs for model transformation, validation, merging, weaving, and many other model management tasks (Section~\ref{sec:mde}).
 
 Given the apparent appropriateness of a domain-specific language for specifying model migration and that no common language for specifying migration has yet been devised, the following requirement was derived: \emph{This thesis must implement and evaluate a domain-specific language for specifying and executing model migration strategies, comparing it to existing languages for specifying model migration strategies.}
 

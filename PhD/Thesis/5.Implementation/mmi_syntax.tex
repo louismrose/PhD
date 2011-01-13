@@ -83,7 +83,7 @@ A metamodel-independent syntax has been chosen because it makes fewer assumption
 
 \subsection{Proposed Solution: A Metamodel-Independent Syntax}
 \label{subsec:binding}
-This section discusses the design and implementation of a metamodel-independent syntax, and of the binding and conformance checking services that are used to load non-conformant models. As discussed below, the design of the metamodel-independent syntax and conformance checking service is inspired by \cite{uml212} and \cite{paige07metamodel}, respectively. As such, the primary contribution of this section is the implementation and integration of the syntax and services with EMF. In addition, the syntax and services have been designed to be re-usable, and hence have been used to simplify the implementation of a textual modelling notation (Section~\ref{sec:notation}) and a model migration language (Section~\ref{sec:flock}).
+This section discusses the design and implementation of a metamodel-ind\-ep\-en\-de\-nt syntax, and of the binding and conformance checking services that are used to load non-conformant models. As discussed below, the metamodel-independent syntax and conformance checking service are inspired by UML \cite{uml22} and \cite{paige07metamodel}, respectively. As such, the primary contribution of this section is the implementation and integration of the syntax and services with EMF. In addition, the syntax and services have been designed to be re-usable, and hence have been used to simplify the implementation of a textual modelling notation (Section~\ref{sec:notation}) and a model migration language (Section~\ref{sec:flock}).
 
 \subsubsection{Design}
 A high-level design for the way in which the metamodel-independent syntax, binding service and conformance checking service load models is shown in Figure~\ref{fig:mmi_workflow}. The \textbf{binding service} parses XMI (the canonical storage representation of models, Section~\ref{subsec:mof}) and produces a model that conforms to the \textbf{metamodel-independent syntax}. The \textbf{conformance checking service} is used to explicitly check the conformance of a model conforming to the metamodel-independent syntax.
@@ -138,7 +138,7 @@ Applying the metamodel-independent binding service to the families model (Figure
 
 \paragraph{Conformance checking service} Conformance is a type of inter-model consistency, between a model and its metamodel (Section~\ref{subsec:modelling_languages}), and, in MDE, inter-model consistency is often validated using a set of constraints (Section~\ref{subsubsec:model_validation}). Furthermore, \cite{paige07metamodel} demonstrates that conformance can be specified as a set of constraints between a model and its metamodel. As such, the conformance checking service has been designed as the set of constraints between models and metamodels in Figure~\ref{fig:conformance_checking_constraints}.
 
-The conformance checking service must be interoperable with the metamodel-independent syntax and, hence, the constraints are specified in terms of \texttt{Ob\-je\-ct}s and \texttt{Sl\-ot}s. Clearly, to check conformance the constraints must refer to a (specific) metamodel, and the constraints are also specified in terms of concepts from the MOF metamodelling language (Section~\ref{subsec:mof}), such as \texttt{Class} and \texttt{Property}. Figure~\ref{fig:minimal_mof} shows a minimal version of the MOF metamodel.
+The conformance checking service must be interoperable with the me\-ta\-mo\-del-ind\-ep\-en\-de\-nt syntax and, hence, the constraints are specified in terms of \texttt{Ob\-je\-ct}s and \texttt{Sl\-ot}s. Clearly, to check conformance the constraints must refer to a (specific) metamodel, and the constraints are also specified in terms of concepts from the MOF metamodelling language (Section~\ref{subsec:mof}), such as \texttt{Class} and \texttt{Property}. Figure~\ref{fig:minimal_mof} shows a minimal version of the MOF metamodel.
 
 \begin{figure}[p]
   \centering
@@ -195,9 +195,11 @@ private void processAttributes(Attributes atts) {
 }
 \end{lstlisting}
 
-\paragraph{Conformance checking service} The conformance constraints (Figure~\ref{fig:conformance_checking_constraints}) were implemented with EVL (Section~\ref{subsubsec:model_validation}), a language tailored for model verification and hence suitable for rapid prototyping of consistency constraints. Listing~\ref{lst:conformance_constraint} shows the EVL constraint that checks whether each \texttt{Ob\-je\-ct}'s \texttt{ty\-pe} is a non-abstract class (constraint 1 in Figure~\ref{fig:conformance_checking_constraints}). The \texttt{ch\-e\-ck} part (line 3) verifies that a particular \texttt{Ob\-je\-ct} (referenced via the \texttt{se\-lf} keyword) refers to a metamodel type that is not abstract. If the check fails, the message (line 4) is automatically added to a set of unsatisfied constraints. The \texttt{toCl\-a\-ss} operation (lines 8-10) is used to determine the metamodel class (an instance of \texttt{EClass}) to which the \texttt{type} attribute (a \texttt{St\-ri\-ng}) of an \texttt{Ob\-je\-ct} refers. The conformance checking service returns a report of unsatisfied constraints.
+\paragraph{Conformance checking service} EVL (Section~\ref{subsubsec:model_validation}), a language tailored for model verification and hence suitable for rapid prototyping of consistency constraints, was used to implement the conformance constraints (Figure~\ref{fig:conformance_checking_constraints}). Listing~\ref{lst:conformance_constraint} shows the EVL constraint that checks whether each \texttt{Ob\-je\-ct}'s \texttt{ty\-pe} is a non-abstract class (constraint 1 in Figure~\ref{fig:conformance_checking_constraints}). The \texttt{ch\-e\-ck} part (line 3) verifies that a particular \texttt{Ob\-je\-ct} (referenced via the \texttt{se\-lf} keyword) refers to a metamodel type that is not abstract. If the check fails, the message (line 4) is automatically added to a set of unsatisfied constraints. The \texttt{toCl\-a\-ss} operation (lines 8-10) is used to determine the metamodel class (an instance of \texttt{EClass}) to which the \texttt{type} attribute (a \texttt{St\-ri\-ng}) of an \texttt{Ob\-je\-ct} refers. The conformance checking service returns a report of unsatisfied constraints.
 
-\begin{lstlisting}[caption=A constraint (in EVL) to check that only concrete metamodel types are instantiated., label=lst:conformance_constraint, language=EVL]
+Type-compatibility checks have been implemented by delegating to the type-checking methods provided by EMF. The EVL constraints call the \texttt{isTy\-peCo\-mp\-at\-ib\-leWi\-th} method on the \texttt{Sl\-ot} class. Each subclass of \texttt{Sl\-ot} provides an implementation of \texttt{isTy\-peCo\-mp\-at\-ib\-leWi\-th}, which delegates to EMF to perform type-checking.
+
+\begin{lstlisting}[caption=A constraint (in EVL) to check that only concrete metamodel types are instantiated., label=lst:conformance_constraint, language=EVL, float=tb]
 context Object {
 	constraint ClassMustNotBeAbstract {
 		check: not self.toClass().isAbstract()
@@ -209,8 +211,6 @@ operation Object toClass() : EClass {
 	return Metamodel!EClass.all.selectOne(c|c.name == self.type);
 }
 \end{lstlisting}
-
-Type-compatibility checks have been implemented by delegating to the type-checking methods provided by EMF. The EVL constraints call the \texttt{isTy\-peCo\-mp\-at\-ib\-leWi\-th} method on the \texttt{Sl\-ot} class. Each subclass of \texttt{Sl\-ot} provides an implementation of \texttt{isTy\-peCo\-mp\-at\-ib\-leWi\-th}, which delegates to EMF to perform type-checking.
 
 % Conformance constraints vary over modelling languages. For example, Ecore, the modelling language of EMF, is similar to but not the same as MOF. Metamodel features defined in Ecore can be marked as transient (not stored to disk) or unchangeable (read-only). Consequently in EMF, conformance constraints are required to restrict the feature value of slots to only non-transient, changeable features.
 
