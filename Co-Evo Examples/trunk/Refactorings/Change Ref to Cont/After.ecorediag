@@ -12,7 +12,7 @@
       <styles xmi:type="notation:SortingStyle" xmi:id="_eG-CoawYEd6h0LCC_-Od1Q"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_eG-CoqwYEd6h0LCC_-Od1Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_eG8NcawYEd6h0LCC_-Od1Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_eG8NcawYEd6h0LCC_-Od1Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="After.ecore#//System"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eG8NcqwYEd6h0LCC_-Od1Q" x="36" y="18"/>
   </children>
@@ -28,7 +28,7 @@
       <styles xmi:type="notation:SortingStyle" xmi:id="_eG_QwqwYEd6h0LCC_-Od1Q"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_eG_Qw6wYEd6h0LCC_-Od1Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_eG-CpKwYEd6h0LCC_-Od1Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_eG-CpKwYEd6h0LCC_-Od1Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="After.ecore#//Signature"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eG-CpawYEd6h0LCC_-Od1Q" x="207" y="18"/>
   </children>
@@ -48,7 +48,7 @@
       <styles xmi:type="notation:SortingStyle" xmi:id="_eHC7J6wYEd6h0LCC_-Od1Q"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_eHC7KKwYEd6h0LCC_-Od1Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_eG_QxawYEd6h0LCC_-Od1Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_eG_QxawYEd6h0LCC_-Od1Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="After.ecore#//Port"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eG_QxqwYEd6h0LCC_-Od1Q" x="387" y="18"/>
   </children>
