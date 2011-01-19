@@ -186,6 +186,8 @@ In UML 2.0, \texttt{St\-ru\-ct\-ur\-alFe\-at\-ur\-e\#o\-wn\-er\-Sc\-op\-e} has b
 
 The UML 1.5 \texttt{St\-ru\-ct\-ur\-alFe\-at\-ur\-e\#t\-ar\-g\-et\-Sc\-op\-e} feature is no longer supported in UML 2.0, and no migration path is provided. Consequently, line 14 deletes any model element whose \texttt{t\-ar\-g\-et\-Sc\-op\-e} is not the default value.
 
+Finally, \texttt{C\-la\-ss\#fe\-at\-ur\-es} has been split to form \texttt{C\-la\-ss\#op\-er\-at\-io\-ns} and \texttt{\#at\-tr\-ib\-ut\-es}. Lines 7 and 8 partition features on the original \texttt{Cl\-a\-ss} into \texttt{Op\-er\-at\-io\-n}s and \texttt{Pr\-op\-er\-ty}s. \texttt{Cl\-as\-s\#a\-ss\-oc\-ia\-ti\-on\-s} has been removed in UML 2.0, and \texttt{As\-so\-ci\-at\-i\-onEn\-d}s are instead stored in \texttt{Cl\-a\-ss\#at\-tr\-ib\-ut\-es} (line 9).
+
 \begin{lstlisting}[caption=UML model migration in Flock, label=lst:flock-uml, language=Flock, float=tb]
 migrate Association {
 	migrated.memberEnds := original.connections.equivalent();
@@ -236,15 +238,13 @@ migrate AssociationEnd to Property {
 \end{figure}
 \end{landscape}	
 
-Finally, \texttt{C\-la\-ss\#fe\-at\-ur\-es} has been split to form \texttt{C\-la\-ss\#op\-er\-at\-io\-ns} and \texttt{\#at\-tr\-ib\-ut\-es}. Lines 7 and 8 partition features on the original \texttt{Cl\-a\-ss} into \texttt{Op\-er\-at\-io\-n}s and \texttt{Pr\-op\-er\-ty}s. \texttt{Cl\-as\-s\#a\-ss\-oc\-ia\-ti\-on\-s} has been removed in UML 2.0, and \texttt{As\-so\-ci\-at\-i\-onEn\-d}s are instead stored in \texttt{Cl\-a\-ss\#at\-tr\-ib\-ut\-es} (line 9).
-
 
 \subsubsection{Summary}
 Table~\ref{tab:differences} illustrates several characterising differences between Flock and the pre-existing languages presented in Section~\ref{sec:analyis_of_languages_used_for_migration}. Due to its conservative copying algorithm, Flock is the only language to provide both automatic copying and unsetting. The evaluation presented in Section~\ref{sec:quantitive} explores the extent to which automatic copying and unsetting affect the conciseness of migration strategies.
 
 All of the approaches considered in Section~\ref{sec:analyis_of_languages_used_for_migration} support EMF. Both Flock and ATL support further modelling technologies, such as MDR and XML. However, ATL does not automatically copy model elements that have not been affected by metamodel changes. Therefore, migration between models of different technologies with ATL requires extra statements in the migration strategy to ensure that the conformance constraints of the target technology are satisfied. Because it delegates conformance checking to an EMC driver, Flock requires no such checks.
 
-\begin{table}[b]
+\begin{table}[tbp]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline

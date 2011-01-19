@@ -55,7 +55,7 @@ Model migration can be specified using M2M transformation. For example, the Petr
 
 Model transformation in ATL is specified using \texttt{rule}s, which transform source model elements (specified using the \texttt{fr\-om} keyword) to target model elements (specified using \texttt{to} keyword). For example, the \texttt{Nets} rule on line 1 of Listing~\ref{lst:atl} transforms an instance of \texttt{Net} from the original (source) model to an instance of \texttt{Net} in the evolved (target) model. The source model element (the variable \texttt{o} in the \texttt{Net} rule) is used to populate the target model element (the variable \texttt{m}). ATL allows rules to be specified as \emph{lazy} (not scheduled automatically and applied only when called by other rules).
 
-\begin{lstlisting}[caption={[Fragment of the Petri nets model migration in ATL]Fragment of the Petri nets model migration in ATL, taken from \cite{rose10flock}}, label=lst:atl, language=ATL]
+\begin{lstlisting}[float=tbp, caption={[Fragment of the Petri nets model migration in ATL]Fragment of the Petri nets model migration in ATL, taken from \cite{rose10flock}}, label=lst:atl, language=ATL]
 rule Nets {
 	from o : Before!Net
 	to m : After!Net ( places <- o.places, transitions <- o.transitions )
@@ -99,7 +99,7 @@ Model migration can be undertaken using the model loading mechanisms of EMF \cit
 
 The mappings are used by the EMF XMI parser to determine the metamodel types to which pieces of the XMI will be bound. When a type or feature is not bound, the user must specify a custom migration strategy in Java. For the Petri nets metamodel, the \texttt{src} and \texttt{dst} features of \texttt{Place} and \texttt{Transition} are not bound, because migration is more complicated than a one-to-one mapping.
 
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, flexiblecolumns=true, numbers=left, nolol=true, caption=Java method for deserialising a reference., label=lst:java, language=Java, tabsize=2]
+\begin{lstlisting}[float=tbp, caption=Java method for deserialising a reference., label=lst:java, language=Java]
 private Collection<Place> toCollectionOfPlaces
 (String value, Resource resource) {
 
@@ -131,11 +131,7 @@ Clearly, the development of an operator-based approach must start by identifying
 
 To perform metamodel evolution using an operator-based approach, the library of co-evolutionary operators must be integrated with tools for editing metamodels. COPE provides integration with the EMF tree-based metamodel editor. Operators may be applied to an EMF metamodel, and COPE tracks their application. Once metamodel evolution is complete, a migration strategy can be generated automatically from the record of changes maintained by COPEs. The migration strategy is distributed along with the updated metamodel, and metamodel users choose when to execute the migration strategy on their models.
 
-To be effective, operator-based approaches must provide a rich yet navigable library of co-evolutionary operators (Section~\ref{subsec:co-evolution_categorisation}). COPE allows model migration strategies to be specified manually when no co-evolutionary operator is appropriate. COPE employs a fundamentally different approach to M2M transformation and Ecore2Ecore, using an existing-target transformation. As discussed above, existing-target transformations cannot be used for specifying model migration strategies as the source (original) and target (evolved) metamodels differ. However, models can be structured independently of their metamodel using a metamodel-independent syntax (such as the one introduced in Section~\ref{sec:mmi_syntax}).
-
-Listing~\ref{lst:cope} shows the COPE model migration strategy for the Petri net example given above\footnote{In Listing~\ref{lst:cope}, some of the concrete syntax has been changed in the interest of readability.}. Most notably, slots for features that no longer exist must be explicitly \texttt{unset}. In Listing~\ref{lst:cope}, slots are \texttt{unset} on four occasions (on lines 2, 9, 18 and 19), once for each feature that is in the original metamodel but not in the evolved metamodel. These features are: \texttt{src} and \texttt{dst} of \texttt{Transition} and of \texttt{Place}. Failing to \texttt{unset} slots that do not conform with the evolved metamodel causes migration to fail with an error.
-
-\begin{lstlisting}[caption=Petri nets model migration in COPE, label=lst:cope, language=COPE]
+\begin{lstlisting}[float=tbp, caption=Petri nets model migration in COPE, label=lst:cope, language=COPE]
 for (transition in petrinets.Transition.allInstances) {
   for (source in transition.unset('src')) {
     def arc = petrinets.PTArc.newInstance()
@@ -157,6 +153,10 @@ for (place in petrinets.Place.allInstances) {
   place.unset('dst')
 }
 \end{lstlisting}
+
+To be effective, operator-based approaches must provide a rich yet navigable library of co-evolutionary operators (Section~\ref{subsec:co-evolution_categorisation}). COPE allows model migration strategies to be specified manually when no co-evolutionary operator is appropriate. COPE employs a fundamentally different approach to M2M transformation and Ecore2Ecore, using an existing-target transformation. As discussed above, existing-target transformations cannot be used for specifying model migration strategies as the source (original) and target (evolved) metamodels differ. However, models can be structured independently of their metamodel using a metamodel-independent syntax (such as the one introduced in Section~\ref{sec:mmi_syntax}).
+
+Listing~\ref{lst:cope} shows the COPE model migration strategy for the Petri net example given above\footnote{In Listing~\ref{lst:cope}, some of the concrete syntax has been changed in the interest of readability.}. Most notably, slots for features that no longer exist must be explicitly \texttt{unset}. In Listing~\ref{lst:cope}, slots are \texttt{unset} on four occasions (on lines 2, 9, 18 and 19), once for each feature that is in the original metamodel but not in the evolved metamodel. These features are: \texttt{src} and \texttt{dst} of \texttt{Transition} and of \texttt{Place}. Failing to \texttt{unset} slots that do not conform with the evolved metamodel causes migration to fail with an error.
 
 \subsection{Requirements Identification}
 \label{subsec:analysis}
