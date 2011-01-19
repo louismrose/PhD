@@ -123,10 +123,12 @@ The conformance problems were fixed by editing the XMI shown in Figure~\ref{fig:
 
 Reconciling the conformance problems by editing the XMI required considerable knowledge of the XMI specification. For example, the \texttt{xsi:type} attribute is used to specify the type of the connection point model elements. In fact, it must be included for those model elements. However, for the other model elements in Figure~\ref{fig:po_migrated_xmi} the \texttt{xsi:type} attribute is not necessary, and is omitted. When and how to use the \texttt{xsi:type} attribute is discussed further in the sidebar, in the XMI specification \cite{xmi}, and in \cite{steinberg09emf}. EMF abstracts away from XMI, and typically users do not interact directly with XMI. Therefore, it may be reasonable to assume that EMF users might not be familiar with XMI, and implementation details such as the \texttt{xsi:type} attribute.
 
-\begin{framed}
-\textbf{The \texttt{xsi:type} attribute} \\
-In XMI, each model element must indicate the metaclass that it instantiates. Typically, the \texttt{xsi:type} attribute is used for this purpose. For example, the model element on line 4 of Figure~\ref{fig:po_migrated_xmi} instantiates the metaclass named \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nPo\-i\-nt}. To reduce the size of models on disk, the XMI specification allows type information to be omitted when it can be inferred. For example, line 9 of Figure~\ref{fig:po_migrated_xmi} defines a model element that is contained in the \texttt{ch\-an\-ne\-ls} reference of a \texttt{Pr\-o\-ce\-ss}. Because the \texttt{ch\-an\-ne\-ls} reference can contain only one type of model element (\texttt{Ch\-an\-n\-el}), the \texttt{xsi:type} attribute can be omitted, and the type information is inferred from the metamodel.
-\end{framed}
+\begin{figure*}[tbp]
+	\begin{framed}
+	\textbf{The \texttt{xsi:type} attribute} \\
+	In XMI, each model element must indicate the metaclass that it instantiates. Typically, the \texttt{xsi:type} attribute is used for this purpose. For example, the model element on line 4 of Figure~\ref{fig:po_migrated_xmi} instantiates the metaclass named \texttt{Wr\-i\-ti\-ngCo\-nn\-ec\-ti\-o\-nPo\-i\-nt}. To reduce the size of models on disk, the XMI specification allows type information to be omitted when it can be inferred. For example, line 9 of Figure~\ref{fig:po_migrated_xmi} defines a model element that is contained in the \texttt{ch\-an\-ne\-ls} reference of a \texttt{Pr\-o\-ce\-ss}. Because the \texttt{ch\-an\-ne\-ls} reference can contain only one type of model element (\texttt{Ch\-an\-n\-el}), the \texttt{xsi:type} attribute can be omitted, and the type information is inferred from the metamodel.
+	\end{framed}
+\end{figure*}
 
 % For every instance of \texttt{Ch\-an\-n\-el} that referenced a \texttt{Co\-nn\-ec\-ti\-o\-nPo\-i\-nt}, the following message was produced: ``Unresolved reference `\texttt{<ID>}' '' where \texttt{<ID>} was the identifier of the referenced \texttt{Co\-nn\-ec\-ti\-o\-nPo\-i\-nt}.
 

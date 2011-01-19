@@ -132,7 +132,7 @@ The Flock migration strategy was developed in an iterative and incremental manne
 The remainder of this section presents the Flock solution in an incremental manner. The code listings in this section show only those rules relevant to the iteration being discussed.
 
 \subsubsection{Actions, Transitions and Final States}
-Development of the migration strategy began by executing an empty Flock migration strategy on the original model. Because Flock automatically copies model elements that have not been affected by evolution, the resulting model contained \texttt{Pseudostates}s and \texttt{Transition}s, but none of the \texttt{ActionState}s from the original model. In UML 2.2 activities, \texttt{OpaqueAction}s replace \texttt{ActionState}s. Listing~\ref{lst:actions} shows the Flock code for changing \texttt{ActionState}s to corresponding \texttt{OpaqueAction}s.
+Development of the migration strategy began by executing an empty Flock migration strategy on the original model. Because Flock automatically copies model elements that have not been affected by evolution, the resulting model contained \texttt{Ps\-eu\-do\-st\-at\-e}s and \texttt{Tr\-an\-si\-ti\-on}s, but none of the \texttt{Ac\-ti\-onSt\-a\-te}s from the original model. In UML 2.2 activities, \texttt{Op\-aq\-ueAc\-ti\-on}s replace \texttt{Ac\-ti\-onSt\-a\-te}s. Listing~\ref{lst:actions} shows the Flock code for changing \texttt{Ac\-ti\-onSt\-a\-te}s to corresponding \texttt{Op\-aq\-ueAc\-ti\-on}s.
 
 \begin{lstlisting}[caption=Migrating Actions, label=lst:actions, language=Flock]
 migrate ActionState to OpaqueAction
@@ -146,7 +146,7 @@ migrate Transition to ControlFlow
 \end{lstlisting}
 
 \subsubsection{Pseudostates}
-Development continued by selected further types of state that were not present in the migrated model, such as \texttt{Pseudostates}s, which are not used in UML 2.2 activities. Instead, UML 2.2 activities use specialised \texttt{Node}s, such as \texttt{InitialNode}. Listing~\ref{lst:pseudostates} shows the Flock code used to change \texttt{Pseudostate}s to corresponding \texttt{Node}s.
+Development continued by selected further types of state that were not present in the migrated model, such as \texttt{Ps\-eu\-do\-st\-at\-es}s, which are not used in UML 2.2 activities. Instead, UML 2.2 activities use specialised \texttt{No\-de}s, such as \texttt{In\-it\-ialNo\-de}. Listing~\ref{lst:pseudostates} shows the Flock code used to change \texttt{Ps\-eu\-do\-st\-a\-te}s to corresponding \texttt{No\-de}s.
 
 \begin{lstlisting}[caption=Migrating Pseudostates, label=lst:pseudostates, language=Flock]
 migrate Pseudostate to InitialNode  when: original.kind = Original!PseudostateKind#initial
@@ -156,7 +156,7 @@ migrate Pseudostate to JoinNode     when: original.kind = Original!PseudostateKi
 \end{lstlisting}
 
 \subsubsection{Activities}
-In UML 2.2, \texttt{Activity}s no longer inherit from state machines. As such, some of the features defined by \texttt{Activity} have been renamed. Specifically, \texttt{tr\-an\-si\-ti\-o\-ns} has become \texttt{edges} and \texttt{paritions} has become \texttt{group}. Furthermore, the states (or nodes in UML 2.2 parlance) of an \texttt{Activity} are now contained in a feature called \texttt{nodes}, rather than in the \texttt{subvertex} feature of a composite state accessed via the \texttt{top} feature of \texttt{Activity}. The Flock migration rule shown in Listing~\ref{lst:activities} captured these changes.
+In UML 2.2, \texttt{Ac\-ti\-vi\-ty}s no longer inherit from state machines. As such, some of the features defined by \texttt{Ac\-ti\-vi\-ty} have been renamed. Specifically, \texttt{tr\-an\-si\-ti\-o\-ns} has become \texttt{ed\-g\-es} and \texttt{par\-ti\-ti\-o\-ns} has become \texttt{gr\-o\-sup}. Furthermore, the states (or nodes in UML 2.2 parlance) of an \texttt{Ac\-ti\-vi\-ty} are now contained in a feature called \texttt{nodes}, rather than in the \texttt{su\-bv\-er\-t\-ex} feature of a composite state accessed via the \texttt{top} feature of \texttt{Ac\-ti\-vi\-ty}. The Flock migration rule shown in Listing~\ref{lst:activities} captured these changes.
 
 \begin{lstlisting}[caption=Migrating ActivityGraphs, label=lst:activities, language=Flock]
 migrate ActivityGraph to Activity {
@@ -166,9 +166,9 @@ migrate ActivityGraph to Activity {
 }
 \end{lstlisting}
 
-Note that the rule in Listing~\ref{lst:activities} used the built-in \texttt{equivalent} operation to find migrated model elements from original model elements. As discussed in Section~\ref{sec:flock}, the \texttt{equivalent} operation invokes other migration rules where necessary and caches results to improve performance.
+Note that the rule in Listing~\ref{lst:activities} used the built-in \texttt{eq\-ui\-va\-le\-nt} operation to find migrated model elements from original model elements. As discussed in Section~\ref{sec:flock}, the \texttt{equ\-iv\-al\-e\-nt} operation invokes other migration rules where necessary and caches results to improve performance.
 
-Next, a similar rule for migrating \texttt{Guard}s was added. In UML 1.4, the the \texttt{guard} feature of \texttt{Transition} references a \texttt{Guard}, which in turn references an \texttt{Ex\-pr\-es\-si\-on} via its \texttt{expression} feature. In UML 2.2, the \texttt{guard} feature of \texttt{Transition} references an \texttt{OpaqueExpression} directly. Listing~\ref{lst:guards} captures this in Flock.
+Next, a similar rule for migrating \texttt{Gu\-ar\-d}s was added. In UML 1.4, the the \texttt{gu\-a\-rd} feature of \texttt{Tr\-an\-si\-ti\-on} references a \texttt{Gu\-a\-rd}, which in turn references an \texttt{Ex\-pr\-es\-si\-on} via its \texttt{ex\-pr\-es\-si\-on} feature. In UML 2.2, the \texttt{gu\-a\-rd} feature of \texttt{Tr\-an\-si\-ti\-on} references an \texttt{Op\-aq\-ueEx\-pr\-es\-si\-on} directly. Listing~\ref{lst:guards} captures this in Flock.
 
 \begin{lstlisting}[caption=Migrating Guards, label=lst:guards, language=Flock]
 migrate Guard to OpaqueExpression {
@@ -179,7 +179,7 @@ migrate Guard to OpaqueExpression {
 
 
 \subsubsection{Partitions}
-In UML 1.4 activity diagrams, \texttt{Partition} specifies a single containment reference for its \texttt{contents}. In UML 2.2 activity diagrams, partitions have been renamed to \texttt{ActivityPartition}s and specify two containment features for their contents, \texttt{edges} and \texttt{nodes}. Listing~\ref{lst:partitions} shows the rule used to migrate \texttt{Partition}s to \texttt{ActivityPartition}s in Flock. The body of the rule shown in Listing~\ref{lst:partitions} uses the \emph{collect} operation to segregate the \texttt{contents} feature of the original model element into two parts.
+In UML 1.4 activity diagrams, \texttt{Pa\-rt\-it\-i\-on} specifies a single containment reference for its \texttt{co\-nt\-en\-ts}. In UML 2.2 activity diagrams, partitions have been renamed to \texttt{ActivityPartition}s and specify two containment features for their contents, \texttt{ed\-g\-es} and \texttt{no\-d\-es}. Listing~\ref{lst:partitions} shows the rule used to migrate \texttt{Pa\-rt\-it\-i\-on}s to \texttt{Ac\-ti\-vi\-tyPa\-rt\-it\-i\-on}s in Flock. The body of the rule shown in Listing~\ref{lst:partitions} uses the \emph{collect} operation to segregate the \texttt{co\-nt\-en\-ts} feature of the original model element into two parts.
 
 \begin{lstlisting}[caption=Migrating Partitions, label=lst:partitions, language=Flock]
 migrate Partition to ActivityPartition {
@@ -190,9 +190,9 @@ migrate Partition to ActivityPartition {
 
 
 \subsubsection{ObjectFlows}
-Finally, two rules were written for migrating model elements relating to object flows. In UML 1.4 activity diagrams, object flows are specified using \texttt{ObjectFlowState}, a subtype of \texttt{St\-at\-eVe\-rt\-ex}. In UML 2.2 activity diagrams, object flows are modelled using a subtype of \texttt{ObjectNode}. In UML 2.2 flows that connect to and from \texttt{ObjectNode}s must be represented with \texttt{ObjectFlow}s rather than \texttt{ControlFlow}s.
+Finally, two rules were written for migrating model elements relating to object flows. In UML 1.4 activity diagrams, object flows are specified using \texttt{Ob\-je\-ctFl\-owSt\-a\-te}, a subtype of \texttt{St\-at\-eVe\-rt\-ex}. In UML 2.2 activity diagrams, object flows are modelled using a subtype of \texttt{ObjectNode}. In UML 2.2 flows that connect to and from \texttt{Ob\-je\-ctNo\-de}s must be represented with \texttt{Ob\-je\-ctFl\-ow}s rather than \texttt{Co\-nt\-rolFl\-ow}s.
 
-Listing~\ref{lst:objectflows} shows the Flock rule used to migrate \texttt{Transiton}s to \texttt{Ob\-je\-ctFl\-ow}s. The rule applies for \texttt{Transition}s whose source or target \texttt{St\-at\-eVe\-rt\-ex} is of type \texttt{Ob\-je\-ctFl\-owSt\-ate}.
+Listing~\ref{lst:objectflows} shows the Flock rule used to migrate \texttt{Tr\-an\-si\-ti\-on}s to \texttt{Ob\-je\-ctFl\-ow}s. The rule applies for \texttt{Tr\-an\-si\-ti\-on}s whose source or target \texttt{St\-at\-eVe\-rt\-ex} is of type \texttt{Ob\-je\-ctFl\-owSt\-ate}.
 
 \begin{lstlisting}[caption=Migrating ObjectFlows, label=lst:objectflows, language=Flock]
 migrate ObjectFlowState to ActivityParameterNode
@@ -203,9 +203,9 @@ migrate Transition to ObjectFlow when: original.source.isTypeOf(ObjectFlowState)
 In addition to the core task, the Flock solution also approached two of the three extensions described in the case (Section~\ref{subsec:ttc_case}). The solutions to the extensions are now discussed.
 
 \subsubsection{Alternative ObjectFlowState Migration Semantics}
-The first extension required submissions to consider an alternative migration semantics for \texttt{ObjectFlowState}, in which a single \texttt{ObjectFlow} replaces each \texttt{ObjectFlowState} and any connected \texttt{Transition}s.
+The first extension required submissions to consider an alternative migration semantics for \texttt{Ob\-je\-ctFl\-owSt\-a\-te}, in which a single \texttt{Ob\-je\-ctFl\-ow} replaces each \texttt{Ob\-je\-ctFl\-owSt\-a\-te} and any connected \texttt{Tr\-an\-si\-ti\-on}s.
 
-Listing~\ref{lst:objectflows2} shows the Flock source code used to migrate \texttt{ObjectFlowStates} (and connecting \texttt{Transitions}) to a single \texttt{ObjectFlow}. This rule was used instead of the two rules defined in Listing~\ref{lst:objectflows}. In the body of the rule shown in Listing~\ref{lst:objectflows2}, the \texttt{source} of the \texttt{Transition} is copied directly to the \texttt{source} of the \texttt{ObjectFlow}. The \texttt{target} of the \texttt{ObjectFlow} is set to the target of the first outgoing \texttt{Transition} from the \texttt{ObjectFlowState}. 
+Listing~\ref{lst:objectflows2} shows the Flock source code used to migrate \texttt{Ob\-je\-ctFl\-owSt\-at\-es} (and connecting \texttt{Tr\-an\-si\-ti\-on}s) to a single \texttt{Ob\-je\-ctFl\-ow}. This rule was used instead of the two rules defined in Listing~\ref{lst:objectflows}. In the body of the rule shown in Listing~\ref{lst:objectflows2}, the \texttt{so\-ur\-ce} of the \texttt{Tr\-an\-si\-ti\-on} is copied directly to the \texttt{so\-u\-rce} of the \texttt{Ob\-je\-ctFl\-ow}. The \texttt{ta\-rg\-et} of the \texttt{Ob\-je\-ctFl\-ow} is set to the target of the first outgoing \texttt{Tr\-an\-si\-ti\-on} from the \texttt{Ob\-je\-ctFl\-owSt\-a\-te}. 
 
 \begin{lstlisting}[caption=Migrating ObjectFlowStates to a single ObjectFlow, label=lst:objectflows2, language=Flock]
 migrate Transition to ObjectFlow when: original.target.isTypeOf(ObjectFlowState) {
@@ -214,7 +214,7 @@ migrate Transition to ObjectFlow when: original.target.isTypeOf(ObjectFlowState)
 }
 \end{lstlisting}
 
-Because, in this alternative semantics, \texttt{ObjectFlowState}s are represented as edges rather than nodes, the partition migration rule was changed such that \texttt{ObjectFlowState}s were not copied to the \texttt{nodes} feature of \texttt{Partition}s. To filter out the \texttt{ObjectFlowState}s, line 3 of Listing~\ref{lst:partitions} was changed to include a reject statement, as shown on line 3 of Listing~\ref{lst:partitions2}.
+Because, in this alternative semantics, \texttt{Ob\-je\-ctFl\-owSt\-a\-te}s are represented as edges rather than nodes, the partition migration rule was changed such that \texttt{Ob\-je\-ctFl\-owSt\-a\-te}s were not copied to the \texttt{no\-des} feature of \texttt{Pa\-rt\-it\-i\-on}s. To filter out the \texttt{Ob\-je\-ctFl\-owSt\-a\-te}s, line 3 of Listing~\ref{lst:partitions} was changed to include a reject statement, as shown on line 3 of Listing~\ref{lst:partitions2}.
 
 \begin{lstlisting}[caption=Migrating Partitions without ObjectFlowStates, label=lst:partitions2, language=Flock]
 migrate Partition to ActivityPartition {
