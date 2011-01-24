@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
-<Newsgroup xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="extractperson">
-  <articles articleId="1" subject="Foo" inReplyTo="" date="01/01/09">
+<Newsgroup xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="extractperson" xmi:id="_Yosq8agZEd6ETPSeFGa3CA">
+  <articles xmi:id="_aJz4YKgZEd6ETPSeFGa3CA" articleId="1" subject="Foo" inReplyTo="" date="01/01/09">
     <sender name="Joe Bloggs" email="joe.blogs@example.com"/>
     <newsgroups>org.foo</newsgroups>
   </articles>
-  <articles articleId="2" subject="Bar" inReplyTo="" date="01/01/09">
+  <articles xmi:id="_m5-YMKgZEd6ETPSeFGa3CA" articleId="2" subject="Bar" inReplyTo="" date="01/01/09">
     <sender name="John Doe" email="john.doe@example.com"/>
     <newsgroups>org.foo</newsgroups>
     <newsgroups>org.bar</newsgroups>
   </articles>
-  <articles articleId="3" subject="Baz" inReplyTo="" date="01/01/09">
+  <articles xmi:id="_vihiYKgZEd6ETPSeFGa3CA" articleId="3" subject="Baz" inReplyTo="" date="01/01/09">
     <sender name="Jane Doe" email="jane.doe@example.com"/>
     <newsgroups>org.foo</newsgroups>
     <newsgroups>org.bar</newsgroups>

@@ -1,8 +1,8 @@
 delete ConnectionPoint when: not (original.isReading() xor original.isWriting())
 
-migrate ConnectionPoint to ReadingConnectionPoint when: original.isReading()
+retype ConnectionPoint to ReadingConnectionPoint when: original.isReading()
 
-migrate ConnectionPoint to WritingConnectionPoint when: original.isWriting()
+retype ConnectionPoint to WritingConnectionPoint when: original.isWriting()
 
 
 operation Original!ConnectionPoint isReading() : Boolean {

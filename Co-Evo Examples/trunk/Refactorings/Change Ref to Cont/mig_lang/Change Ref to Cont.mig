@@ -1,12 +1,9 @@
-migrate Signature {
+delete Port
+
+migrate Signature ignoring ports {
 	for (port in original.ports) {
-		if (migrated.ports.excludes(port.equivalent())) {
-			-- TODO clone?
-			var clone := new Migrated!Port;
-			clone.name := port.name;
-			migrated.ports.add(clone);
-		}
+		var clone := new Migrated!Port;
+		clone.name := port.name;
+		migrated.ports.add(clone);
 	}
 }
-
-delete Port when: not Original!Signature.all.exists(s|s.ports.includes(original))

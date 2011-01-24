@@ -1,10 +1,5 @@
-migrate GenLinkLabel { // TODO: migrate GenLinkLabel ignoring notationViewFactoryClassName
-	migrated.notationViewFactoryClassName := null;
-}
-
-migrate GenLink { // TODO: migrate GenLink ignoring notationViewFactoryClassName
-	migrated.notationViewFactoryClassName := null;
-}
+migrate GenLinkLabel ignoring notationViewFactoryClassName
+migrate GenLink ignoring notationViewFactoryClassName
 
 migrate GenEditorGenerator {
 	migrated.contextMenus.add(new Migrated!GenContextMenu);

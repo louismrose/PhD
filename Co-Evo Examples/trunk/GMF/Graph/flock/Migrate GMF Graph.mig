@@ -4,28 +4,18 @@ migrate FigureGallery {
 	}
 }
 
--- TODO : extend Flock to reduce this duplication. The following elements all descend from DiagramElement
-migrate Compartment {
-	migrated.figure := original.figure.equivalent().~descriptor;
-}
-
-migrate Connection {
+migrate DiagramElement {
 	migrated.figure := original.figure.equivalent().~descriptor;
 }
 
 migrate DiagramLabel {
-	migrated.figure   := original.figure.equivalent().~descriptor;
 	migrated.accessor := original.figure.equivalent().~accessor;
-}
-
-migrate Node {
-	migrated.figure := original.figure.equivalent().~descriptor;
 }
 
 operation Migrated!Figure createDescriptor() : Migrated!FigureDescriptor {
 	var descriptor := new Migrated!FigureDescriptor;
 	
-	descriptor.name := self.name;
+	descriptor.name := self.name + 'Descriptor';
 	descriptor.actualFigure := self;
 	
 	self.~descriptor := descriptor;

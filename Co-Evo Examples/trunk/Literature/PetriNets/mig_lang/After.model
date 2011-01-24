@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
-<lit_petriNets:Net xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lit_petriNets="lit_petriNets">
-  <places name="Start" out="//@arcs.0"/>
-  <places name="Mid 1" in="//@arcs.1" out="//@arcs.3"/>
-  <places name="Mid 2" in="//@arcs.2" out="//@arcs.4"/>
-  <places name="End" in="//@arcs.5"/>
-  <transitions name="Split" in="//@arcs.0" out="//@arcs.1 //@arcs.2"/>
-  <transitions name="Join" in="//@arcs.3 //@arcs.4" out="//@arcs.5"/>
-  <arcs xsi:type="lit_petriNets:PTArc" src="//@places.0" dst="//@transitions.0"/>
-  <arcs xsi:type="lit_petriNets:TPArc" src="//@transitions.0" dst="//@places.1"/>
-  <arcs xsi:type="lit_petriNets:TPArc" src="//@transitions.0" dst="//@places.2"/>
-  <arcs xsi:type="lit_petriNets:PTArc" src="//@places.1" dst="//@transitions.1"/>
-  <arcs xsi:type="lit_petriNets:PTArc" src="//@places.2" dst="//@transitions.1"/>
-  <arcs xsi:type="lit_petriNets:TPArc" src="//@transitions.1" dst="//@places.3"/>
+<lit_petriNets:Net xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lit_petriNets="lit_petriNets" xmi:id="_452goIvqEd6BVtJzMeIVYw">
+  <places xmi:id="_6Dcl8IvqEd6BVtJzMeIVYw" out="//@arcs.0" name="Start"/>
+  <places xmi:id="_99dkcIvqEd6BVtJzMeIVYw" in="//@arcs.1" out="//@arcs.3" name="Mid 1"/>
+  <places xmi:id="_-OUq8IvqEd6BVtJzMeIVYw" in="//@arcs.2" out="//@arcs.4" name="Mid 2"/>
+  <places xmi:id="_B0Rd8IvrEd6BVtJzMeIVYw" in="//@arcs.5" name="End"/>
+  <transitions xmi:id="_9DOw0IvqEd6BVtJzMeIVYw" name="Split" in="//@arcs.0" out="//@arcs.1 //@arcs.2"/>
+  <transitions xmi:id="_AInNYIvrEd6BVtJzMeIVYw" name="Join" in="//@arcs.3 //@arcs.4" out="//@arcs.5"/>
+  <arcs xsi:type="lit_petriNets:PTArc" src="_6Dcl8IvqEd6BVtJzMeIVYw" dst="_9DOw0IvqEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:TPArc" src="_9DOw0IvqEd6BVtJzMeIVYw" dst="_99dkcIvqEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:TPArc" src="_9DOw0IvqEd6BVtJzMeIVYw" dst="_-OUq8IvqEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:PTArc" src="_99dkcIvqEd6BVtJzMeIVYw" dst="_AInNYIvrEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:PTArc" src="_-OUq8IvqEd6BVtJzMeIVYw" dst="_AInNYIvrEd6BVtJzMeIVYw"/>
+  <arcs xsi:type="lit_petriNets:TPArc" src="_AInNYIvrEd6BVtJzMeIVYw" dst="_B0Rd8IvrEd6BVtJzMeIVYw"/>
 </lit_petriNets:Net>

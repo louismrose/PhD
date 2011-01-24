@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
-<po_split:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:po_split="po_split">
+<po_split:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:po_split="po_split">
   <connectionPoints xsi:type="po_split:ReadingConnectionPoint" name="a_reader?"/>
   <connectionPoints xsi:type="po_split:WritingConnectionPoint" name="a_writer!"/>
   <connectionPoints xsi:type="po_split:ReadingConnectionPoint" name="both?!"/>
   <connectionPoints xsi:type="po_split:WritingConnectionPoint" name="both?!"/>
   <channels name="a" reader="//@connectionPoints.0" writer="//@connectionPoints.1"/>
   <channels name="b" reader="//@connectionPoints.2" writer="//@connectionPoints.2"/>
-</po_split:System>
+</po_split:Program>

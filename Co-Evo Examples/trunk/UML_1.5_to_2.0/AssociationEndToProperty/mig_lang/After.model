@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="ASCII"?>
-<uml_15_to_20_associationEndToProperty:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml_15_to_20_associationEndToProperty="uml_15_to_20_associationEndToProperty">
-  <classes>
-    <ownedAttributes isStatic="true"/>
-    <ownedAttributes association="//@associations.0"/>
-    <ownedOperations/>
+<uml_15_to_20_associationEndToProperty:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml_15_to_20_associationEndToProperty="uml_15_to_20_associationEndToProperty" xmi:id="_X5rh8P7CEd6uDZMXsgfb_A">
+  <classes xmi:id="_ZUZzgP7CEd6uDZMXsgfb_A">
+    <attributes isStatic="true"/>
+    <attributes association="_a-dhkP7CEd6uDZMXsgfb_A"/>
+    <operations/>
   </classes>
-  <classes>
-    <ownedAttributes association="//@associations.0"/>
-    <ownedOperations/>
+  <classes xmi:id="_abW0gP7CEd6uDZMXsgfb_A">
+    <attributes association="_a-dhkP7CEd6uDZMXsgfb_A"/>
+    <operations/>
   </classes>
-  <classes/>
-  <associations memberEnds="//@classes.0/@ownedAttributes.1 //@classes.1/@ownedAttributes.0" navigableEnds="//@classes.1/@ownedAttributes.0"/>
+  <classes xmi:id="_-ScOgP9wEd61--vHHW-Waw"/>
+  <associations xmi:id="_a-dhkP7CEd6uDZMXsgfb_A" memberEnds="//@classes.0/@attributes.1 //@classes.1/@attributes.0"/>
 </uml_15_to_20_associationEndToProperty:Model>

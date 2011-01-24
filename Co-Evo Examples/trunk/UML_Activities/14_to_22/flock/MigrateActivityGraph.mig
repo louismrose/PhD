@@ -1,33 +1,38 @@
-migrate Model to Package {
+retype Model to Package
+migrate Model {
 	migrated.packagedElement := original.ownedElement.equivalent();
 }
 
-migrate ActivityGraph to Activity {
+retype ActivityGraph to Activity
+migrate ActivityGraph {
 	migrated.node := original.top.subvertex.equivalent();
 	migrated.edge := original.transitions.equivalent();
 }
 
-migrate Partition to ActivityPartition {
+retype Partition to ActivityPartition
+migrate Partition {
 	migrated.edges := original.contents.collect(e : Transition | e.equivalent());
 	migrated.nodes := original.contents.reject(ofs : ObjectFlowState | true).collect(n : StateVertex | n.equivalent());	
 }
 
-migrate ActionState to OpaqueAction
+retype ActionState to OpaqueAction
 
-migrate Pseudostate to InitialNode  when: original.kind.toString() = 'pk_initial'
-migrate Pseudostate to DecisionNode when: original.kind.toString() = 'pk_junction'
-migrate Pseudostate to ForkNode     when: original.kind.toString() = 'pk_fork'
-migrate Pseudostate to JoinNode     when: original.kind.toString() = 'pk_join'
+retype Pseudostate to InitialNode  when: original.kind.toString() = 'pk_initial'
+retype Pseudostate to DecisionNode when: original.kind.toString() = 'pk_junction'
+retype Pseudostate to ForkNode     when: original.kind.toString() = 'pk_fork'
+retype Pseudostate to JoinNode     when: original.kind.toString() = 'pk_join'
 
-migrate FinalState to ActivityFinalNode
+retype FinalState to ActivityFinalNode
 
-migrate Transition to ObjectFlow when: original.target.isTypeOf(ObjectFlowState) {
+retype Transition to ObjectFlow when: original.target.isTypeOf(ObjectFlowState)
+migrate Transition when: original.target.isTypeOf(ObjectFlowState) {
 	migrated.source := original.source.equivalent();
 	migrated.target := original.target.outgoing.first.target.equivalent();
 }
 
-migrate Transition to ControlFlow
+retype Transition to ControlFlow
 
-migrate Guard to OpaqueExpression {
+retype Guard to OpaqueExpression
+migrate Guard {
 	migrated.body.add(original.expression.body);
 }

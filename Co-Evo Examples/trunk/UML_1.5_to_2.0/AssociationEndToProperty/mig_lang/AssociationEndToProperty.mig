@@ -13,19 +13,16 @@ migrate Class {
 
 delete StructuralFeature when: original.targetScope = ScopeKind#classifier
 
-migrate Attribute to Property {
+retype Attribute to Property
+retype AssociationEnd to Property
+
+migrate StructuralFeature {
 	if (original.ownerScope = ScopeKind#classifier) {
 		migrated.isStatic = true;		
 	}
 }
 
-migrate Operation {
-	if (original.ownerScope = ScopeKind#classifier) {
-		migrated.isStatic = true;
-	}
-}
-
-migrate AssociationEnd to Property {
+migrate AssociationEnd {
 	if (original.isNavigable) {
 		original.association.equivalent().navigableEnds.add(migrated);
 	}
