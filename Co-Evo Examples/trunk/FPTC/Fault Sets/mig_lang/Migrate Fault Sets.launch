@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
 <stringAttribute key="bad_container_name" value="/Co-Evo Examples/FPTC/Fault Set/mig_lang"/>
 <intAttribute key="migratedModel" value="0"/>
 <listAttribute key="models">
 <listEntry value="#&#10;#Thu Aug 06 11:05:14 BST 2009&#10;isMetamodelFileBased=true&#10;name=Migrated&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/FPTC/Fault Sets/mig_lang/After.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/FPTC/Fault Sets/After.ecore&#10;"/>
-<listEntry value="#&#10;#Thu Aug 06 11:05:00 BST 2009&#10;isMetamodelFileBased=true&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;metamodelUri=&#10;type=EMF&#10;modelFile=/Co-Evo Examples/FPTC/Fault Sets/Before.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/FPTC/Fault Sets/Before.ecore&#10;"/>
+<listEntry value="#&#10;#Tue Apr 05 16:12:47 BST 2011&#10;isMetamodelFileBased=true&#10;name=Original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=platform\:/resource/Co-Evo%20Examples/FPTC/Fault%20Sets/Before.ecore&#10;metamodelUri=&#10;modelUri=platform\:/resource/Co-Evo%20Examples/FPTC/Fault%20Sets/Before.model&#10;type=EMF&#10;modelFile=/Co-Evo Examples/FPTC/Fault Sets/Before.model&#10;expand=true&#10;metamodelFile=/Co-Evo Examples/FPTC/Fault Sets/Before.ecore&#10;"/>
 </listAttribute>
 <intAttribute key="originalModel" value="1"/>
 <stringAttribute key="source" value="/Co-Evo Examples/FPTC/Fault Sets/mig_lang/Fault Sets.mig"/>
