@@ -2,11 +2,11 @@
 
 \section{Epsilon Flock: A Model Migration Language}
 \label{sec:flock}
-Driven by the analysis presented above, a domain-specific language for model migration, Epsilon Flock (subsequently referred to as Flock), has been designed and implemented. Flock makes idiomatic a novel and complicated semantics for automatically copying model elements from original to migrated model and a domain-specific language was preferred to repurposing an existing language to capture the semantics with a compact and tailored syntax. Section~\ref{subsec:flock_design} discusses the principle tenets of Flock, which include user-defined migration rules and a novel algorithm for relating source and target model elements. In Section~\ref{subsec:flock_examples}, Flock is demonstrated via application to three examples of model migration. The work described in this section has been published in \cite{rose10flock}.
+Driven by the analysis presented above, a domain-specific language for model migration, Epsilon Flock (subsequently referred to as Flock), has been designed and implemented. Flock makes idiomatic a novel and complicated semantics for automatically copying model elements from original to migrated model and a domain-specific language was preferred to repurposing an existing language to capture the semantics with a compact and tailored syntax. Section~\ref{subsec:flock_design} discusses the principle tenets of Flock, which include user-defined migration rules and a novel algorithm for relating source and target model elements. In Section~\ref{subsec:flock_examples}, Flock is demonstrated via application to three examples of model migration. Finally, Section~\ref{subsec:flock_guide} provides an overview of the ways in which a metamodel developer can use Flock to develop, test and distribute migration strategies. The work described in this section has been published in \cite{rose10flock}.
 
 \subsection{Design and Implementation}
 \label{subsec:flock_design}
-Flock has been designed to be a rule-based transformation language that mixes declarative and  imperative parts. Consequently, Flock should be familiar to developers who have used hybrid-style M2M transformation languages, such as ATL and ETL \cite{kolovos08etl}. Flock is syntactically efficient, but semantically complex. In particular, the way in which Flock relates source to target elements is novel; it is neither a new- nor an existing-target relationship. Instead, elements are copied conservatively, as described below.
+Flock has been designed to be a rule-based transformation language that mixes declarative and imperative parts. Consequently, Flock should be familiar to developers who have used hybrid-style M2M transformation languages, such as ATL and ETL \cite{kolovos08etl}. Flock is syntactically efficient, but semantically complex. In particular, the way in which Flock relates source to target elements is novel; it is neither a new- nor an existing-target relationship. Instead, elements are copied conservatively, as described below.
 
 Like Epsilon HUTN (Section~\ref{subsec:epsilon_hutn}), Flock is built atop Epsilon. In particular, Flock uses EMC to provide interoperability with several modelling frameworks, and EOL for specifying the imperative part of user-defined migration rules.
 
@@ -106,10 +106,10 @@ EMC provides drivers for several modelling frameworks, permitting management of 
 
 In response to some types of metamodel evolution, some categories of model value must be converted before being copied from the original to the migrated model. Again, the need for and semantics of this conversion varies over modelling frameworks. For example, reference values typically require conversion before copying because, once copied, they must refer to elements of the migrated rather than the original model. In this case, the set of equivalences (\texttt{<r,e,e'>}) can be used to perform the conversion. In other cases, the target modelling framework must be used to perform the conversion, such as when EMF enumeration literals are copied.
 
- 
-\subsubsection{Development and User Tools}
-As discussed in Section~\ref{sec:analysing_existing_techniques}, models and metamodels are typically kept separate. Flock migration strategies can be distributed by the metamodel developer in two ways. An extension point defined by Flock provides a generic user interface for migration strategy execution. Alternatively, metamodel developers can integrate model migration with other tools by accessing \texttt{FlockModule} programmatically. The latter approach facilities interoperability with, for example, model and source code management systems, and was used to provide a workflow architecture for the Epsilon languages in \cite{kolovos09thesis}.
-
+% \subsubsection{Partial Migration}
+% Existing co-evolution tools consume and produce conformant models (Section~\ref{sec:subsec:modelling_framework_characteristics}), and hence tools cannot typically be combined to decompose model migration. By re-using the metamodel-independent syntax (Section~\ref{sec:mmi_syntax}), Flock can consume and produce non-conformant models, and hence can be used in combination with other co-evolution tools that support non-conformant models.
+% 
+% To integrate Flock with the metamodel-independent syntax, an additional driver was added to EMC. The additional driver allows a model to be loaded, manipulated and stored in a manner that is not constrained by the structures and rules defined by its metamodel. Epsilon HUTN (Section~\ref{subsec:epsilon_hutn}) and Flock can be used together to perform migration, because both are interoperable with the metamodel-independent syntax. For example, migration can be performed by executing a Flock migration strategy to automatically produce a partially migrated (non-conformant) model. Subsequently, Epsilon HUTN can then be used to manually reconcile any remaining non-conformant model elements to produce a migrated (conformant) model. Decomposing model migration facilitates collaborative and incremental co-evolution.
 
 \subsection{Examples of Flock Migration}
 \label{subsec:flock_examples}
@@ -239,7 +239,109 @@ migrate AssociationEnd to Property {
 \end{landscape}	
 
 
-\subsubsection{Summary}
+\subsection{Developing Migration Strategies with Epsilon Flock}
+\label{subsec:flock_guide}
+The design and implementation of Flock and example migration strategies were presented in Sections~\ref{subsec:flock_design} and \ref{subsec:flock_examples} respectively. This section summarises the way in which Flock is integrated with Epsilon and Eclipse, and in particular discusses using Flock's development tools to construct and distribute migration strategies. Further information on developing migration strategies with Epsilon Flock can be found on the documentation section of Epsilon website\footnote{\url{http://www.eclipse.org/gmt/epsilon/doc/}} and, in particular, in the Epsilon book\footnote{\url{http://www.eclipse.org/gmt/epsilon/doc/book/}}.
+
+\paragraph{Installation} Flock is distributed as part of Epsilon, and hence can installed via the Eclipse update manager, using the Epsilon update site. Detailed and up-to-date installation instructions are available from the Epsilon website\footnote{\url{http://www.eclipse.org/gmt/epsilon/download/}}. Once installed, Epsilon provides additional views, editors and wizards for specifying and executing model management operations, such as model migration with Flock.
+
+\paragraph{Creating and editing migration strategies} New Flock migration strategies can be created from the \emph{File $>$ New File $>$ Other\ldots} menu by selecting \emph{Epsilon $>$ Epsilon Flock Migration Strategy}, as shown in Figure~\ref{fig:flock_new_migration_strategy}. The resulting file will be automatically opened with the Flock editor, which provides syntax highlighting and automatic error detection. In addition, the Flock editor is integrated with the Eclipse outline view, shown in the right-hand side of Figure~\ref{fig:flock_editor_and_outline_view}, which can be used to navigate between rules and operations in the current migration strategy.
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[height=9cm]{5.Implementation/images/flock_programmers_guide/new_migration_strategy.png}
+	\caption{Creating a new migration strategy with Flock.}
+	\label{fig:flock_new_migration_strategy}
+\end{figure}
+
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/editor.png}
+	\caption{The Flock editor (left) and outline view (right).}
+	\label{fig:flock_editor_and_outline_view}
+\end{figure}
+
+
+\paragraph{Executing migration strategies} Flock migration strategies can be executed from the \emph{Run $>$ Run Configurations\ldots} menu item, by selecting the Flock Migration Strategy category and clicking New, as shown in Figure~\ref{fig:flock_new_launch_config}. Next, the location of the Flock migration strategy and original and migrated models must be specified. The \emph{Source} tab (Figure~\ref{fig:flock_new_launch_config_source}) is used to specify the location of the Flock migration strategy to be executed, via the  \emph{Browse Workspace\ldots} button. The \emph{Models} tab (Figure~\ref{fig:flock_new_launch_config_models}) is used to specify the location of the original and evolved models. First, the add buttons are used to configure each model's properties, specifying, for example, an identifier, the location of the model and the location of its metamodel. Once the models' properties have been configured, drop down boxes are used to specify the role (\emph{Original} or \emph{Migrated}) of each model, as shown at the bottom of   Figure~\ref{fig:flock_new_launch_config_models}. After the locations of the migration strategy and models have been specified, the migration strategy is executed by clicking the \emph{Run} button.
+
+More than two models can be specified when executing a Flock migration strategy. Although only one model can play the role of \emph{Original} or \emph{Migrated} model, extra models can be used to guide migration. For example, a migration strategy might query a third model to determine whether or not a migrate rule should be executed. More generally, an inference co-evolution approach (Section~\ref{subsec:inference}) could be implemented with Flock by using migration strategies in conjunction with a model of the metamodel differences. 
+
+During the execution of a migration strategy, Flock constructs a migrated model in the location specified in the launch configuration (described above). The migrated model can be opened with the editors provided by the modelling framework. For example, an EMF model can be opened with a model editor generated by EMF, or with Epsilon's Exeed editor\footnote{\url{http://www.eclipse.org/gmt/epsilon/doc/exeed/}}; and an XML model can be opened with Eclipse's XML editor. Runtime errors are displayed in the Eclipse error log view, and textual output (e.g. the result of evaluating \texttt{pr\-in\-t\-ln()} statements) in the Eclipse console view.
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/new_launch_config.png}
+	\caption{Creating a new run configuration for a Flock migration strategy.}
+	\label{fig:flock_new_launch_config}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/new_launch_config_source.png}
+	\caption{Configuring the source file for a Flock run configuration.}
+	\label{fig:flock_new_launch_config_source}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/new_launch_config_models.png}
+	\caption{Configuring models for a Flock run configuration.}
+	\label{fig:flock_new_launch_config_models}
+\end{figure}
+
+\paragraph{Distributing migration strategies} Metamodels and models are typically kept separate (Section~\ref{subsec:modelling_framework_characteristics}). EMF metamodels, for example, are typically packaged in Eclipse plug-ins and distributed to metamodel users. To facilitate the distribution of migration strategies to metamodel users, Flock provides a mechanism for including Flock migration strategies as part of an EMF metamodel plug-in. More specifically, Flock defines an Eclipse \emph{extension point}. To distribute a migration strategy to metamodel users, the metamodel developer creates an \emph{extension} (an instance of the Flock extension point) and specifies the location of the Flock migration strategy, the original metamodel and the evolved metamodel, as show in Figure~\ref{fig:flock_extension}. When metamodel users install a plug-in that contains a Flock extension, Flock provides a menu that can be used to invoke migration strategies, as shown in Figure~\ref{fig:flock_extension_execution}. Note that the metamodel developer can provide a file extension (when specifying the Flock extension) for which the \emph{Flock} menu will be displayed.
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[height=4cm]{5.Implementation/images/flock_programmers_guide/extension_execution.png}
+	\caption{Executing a migration strategy from a metamodel plug-in.}
+	\label{fig:flock_extension_execution}
+\end{figure}
+
+Metamodel developers can also elect to build their own interface for invoking migration strategies, and delegate responsibility for executing migration strategies to the Flock execution engine. To this end, the \texttt{FlockModule} class (Section~\ref{subsec:flock_design}) provides a fa\c{c}ade \cite[pg185]{gamma95patterns} for the Flock execution engine, and an example use is shown in Listing~\ref{lst:flock_module_usage}. This approach to distributing migration strategies requires more effort from the metamodel developer (who must integrate the code in Listing~\ref{lst:flock_module_usage} with the development tools of the metamodel user), but is more flexible (and could be used, for example, to integrate model migration with model or source code management repositories).
+
+\begin{landscape}
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[height=12cm]{5.Implementation/images/flock_programmers_guide/extension.png}
+	\caption{Distributing a migration strategy as part of a metamodel plug-in via a Flock extension.}
+	\label{fig:flock_extension}
+\end{figure}
+\end{landscape}
+
+\begin{lstlisting}[caption=Executing a Flock migration strategy programmatically in Java., label=lst:flock_module_usage, language=Java, float=tb]
+private static void migrate(File strategy,
+	                                   File originalModelFile,
+                                     File migratedModelFile)
+  throws Exception {
+	
+	final IFlockModule migrator = new FlockModule();
+	
+	final EmfModelFactory factory = EmfModelFactory.getInstance()
+	final IModel original = factory.loadEmfModel("Original", originalModelFile, "originalMetamodelUri");
+	final IModel migrated = factory.loadEmfModel("Original", migratedModelFile, "evolvedMetamodelUri");
+	
+	if (migrator.parse(strategy) &&
+	     migrator.getParseProblems().isEmpty()) {		
+		
+		final FlockResult result = migrator.execute(original, migrated);
+	
+		result.printWarnings(System.err);
+		
+	} else {
+		for (ParseProblem problem : migrator.getParseProblems()) {
+			System.err.println(problem);
+		}
+	}
+}
+\end{lstlisting}
+
+% \paragraph{Partial migration} Flock includes an additional model driver for EMC that facilitates the management of non-conformant models (Section~\ref{subsec:flock_design}). Therefore, Flock migration strategies can consume or produce non-conformant models. 
+
+\subsection{Summary}
+Requirements for a language tailored to model migration were described in Section~\ref{sec:analyis_of_languages_used_for_migration}. This section has presented Epsilon Flock, a language that seeks to fulfil those requirements. The way in which Flock has been designed and implemented has been discussed, with a particular focus on the novel source-target relationship, conservative copy (Section~\ref{subsec:flock_design}). Several examples of migration strategies constructed in Flock have been presented (Section~\ref{subsec:flock_examples}). Further examples are given in Appendix~\ref{CoevolutionExamples}. Finally, the way in which metamodel developers can use the Flock development tools to construct and distribute migration strategies was discussed (Section~\ref{subsec:flock_guide}).
+
 Table~\ref{tab:differences} illustrates several characterising differences between Flock and the pre-existing languages presented in Section~\ref{sec:analyis_of_languages_used_for_migration}. Due to its conservative copying algorithm, Flock is the only language to provide both automatic copying and unsetting. The evaluation presented in Section~\ref{sec:quantitive} explores the extent to which automatic copying and unsetting affect the conciseness of migration strategies.
 
 All of the approaches considered in Section~\ref{sec:analyis_of_languages_used_for_migration} support EMF. Both Flock and ATL support further modelling technologies, such as MDR and XML. However, ATL does not automatically copy model elements that have not been affected by metamodel changes. Therefore, migration between models of different technologies with ATL requires extra statements in the migration strategy to ensure that the conformance constraints of the target technology are satisfied. Because it delegates conformance checking to an EMC driver, Flock requires no such checks.
