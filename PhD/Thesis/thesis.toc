@@ -149,7 +149,7 @@
 \contentsline {paragraph}{Metamodel-independent syntax}{105}{section*.81}
 \contentsline {paragraph}{Binding service}{105}{section*.82}
 \contentsline {paragraph}{Conformance checking service}{106}{section*.83}
-\contentsline {subsection}{\numberline {5.1.5}Structures Built atop the Metamodel-Independent Syntax}{107}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.5}Applications of the Metamodel-Independent Syntax}{107}{subsection.5.1.5}
 \contentsline {subsubsection}{Summary}{108}{section*.84}
 \contentsline {section}{\numberline {5.2}Epsilon HUTN: A Textual Modelling Notation}{108}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Model Migration with XMI}{109}{subsection.5.2.1}
@@ -303,7 +303,7 @@
 \contentsline {subsection}{\numberline {6.4.3}Comparison with other solutions}{218}{subsection.6.4.3}
 \contentsline {subsubsection}{Opposition Statements}{218}{section*.194}
 \contentsline {subsubsection}{Scoring}{219}{section*.195}
-\contentsline {paragraph}{Correctness}{219}{section*.196}
+\contentsline {paragraph}{Correctness}{220}{section*.196}
 \contentsline {paragraph}{Conciseness}{220}{section*.197}
 \contentsline {paragraph}{Clarity}{220}{section*.198}
 \contentsline {paragraph}{Appropriateness}{220}{section*.199}
@@ -314,7 +314,7 @@
 \contentsline {section}{\numberline {6.5}Limitations of the Proposed Structures and Processes}{222}{section.6.5}
 \contentsline {paragraph}{Generality}{222}{section*.203}
 \contentsline {paragraph}{Reproducibility}{222}{section*.204}
-\contentsline {paragraph}{Formal semantics}{222}{section*.205}
+\contentsline {paragraph}{Formal semantics}{223}{section*.205}
 \contentsline {section}{\numberline {6.6}Chapter Summary}{223}{section.6.6}
 \contentsline {chapter}{\chapternumberline {7}Conclusions}{225}{chapter.7}
 \contentsline {section}{\numberline {7.1}Contributions of the Thesis Research}{226}{section.7.1}

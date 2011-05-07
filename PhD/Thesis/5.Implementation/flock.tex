@@ -8,7 +8,7 @@ Driven by the analysis presented above, a domain-specific language for model mig
 \label{subsec:flock_design}
 Flock has been designed to be a rule-based transformation language that mixes declarative and imperative parts. Consequently, Flock should be familiar to developers who have used hybrid-style M2M transformation languages, such as ATL and ETL \cite{kolovos08etl}. Flock is syntactically efficient, but semantically complex. In particular, the way in which Flock relates source to target elements is novel; it is neither a new- nor an existing-target relationship. Instead, elements are copied conservatively, as described below.
 
-Like Epsilon HUTN (Section~\ref{subsec:epsilon_hutn}), Flock is built atop Epsilon. In particular, Flock uses EMC to provide interoperability with several modelling frameworks, and EOL for specifying the imperative part of user-defined migration rules.
+Like Epsilon HUTN (Section~\ref{subsec:epsilon_hutn}), Flock reuses parts of Epsilon. In particular, Flock reuses EMC to provide interoperability with several modelling frameworks, and EOL for specifying the imperative part of user-defined migration rules.
 
 \subsubsection{Abstract Syntax}
 \label{subsubsec:abstract_syntax}
