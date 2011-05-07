@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  27 OCT 2010 15:20
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.20)  7 MAY 2011 13:20
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -117,11 +117,6 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 2--14
 
 Overfull \hbox (5.24995pt too wide) in paragraph at lines 2--14
 \OT1/cmtt/m/n/10 ,
- []
-
-
-Overfull \hbox (68.2494pt too wide) in paragraph at lines 2--14
-\OT1/cmtt/m/n/10 lineskip=3pt,
  []
 
 

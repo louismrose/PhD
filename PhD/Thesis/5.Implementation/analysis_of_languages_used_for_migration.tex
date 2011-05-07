@@ -10,7 +10,7 @@ This section uses the Petri net metamodel evolution to compare model migration l
 
 In Figure~\ref{fig:original_mm}, a Petri \texttt{Net} is defined to comprise \texttt{Pl\-a\-ce}s and \texttt{Tr\-an\-si\-ti\-on}s. A \texttt{Pl\-a\-ce} has any number of \texttt{src} or \texttt{dst} \texttt{Tr\-an\-si\-ti\-on}s. Similarly, a \texttt{Tr\-an\-si\-ti\-on} has at least one \texttt{src} and \texttt{dst} \texttt{Pl\-a\-ce}. The metamodel is to be evolved to support weighted connections between \texttt{Pl\-a\-ce}s and \texttt{Tr\-an\-si\-ti\-on}s and between \texttt{Tr\-an\-si\-ti\-on}s and \texttt{Pl\-a\-ce}s, as shown in Figure~\ref{fig:evolved_mm}. \texttt{Pl\-a\-ce}s are connected to \texttt{Tr\-an\-si\-ti\-on}s via instances of \texttt{PTArc}. Likewise, \texttt{Tr\-an\-si\-ti\-on}s are connected to \texttt{Pl\-a\-ce}s via \texttt{TPArc}. Both \texttt{PTArc} and \texttt{TPArc} inherit from \texttt{Arc}, and therefore can be used to specify a \texttt{we\-ig\-ht}.
 
-\begin{figure}[htb]
+\begin{figure}[tbp]
 	\centering
 	\subfigure[Original metamodel.]
 	{
@@ -55,7 +55,7 @@ Model migration can be specified using M2M transformation. For example, the Petr
 
 Model transformation in ATL is specified using \texttt{rule}s, which transform source model elements (specified using the \texttt{fr\-om} keyword) to target model elements (specified using \texttt{to} keyword). For example, the \texttt{Nets} rule on line 1 of Listing~\ref{lst:atl} transforms an instance of \texttt{Net} from the original (source) model to an instance of \texttt{Net} in the evolved (target) model. The source model element (the variable \texttt{o} in the \texttt{Net} rule) is used to populate the target model element (the variable \texttt{m}). ATL allows rules to be specified as \emph{lazy} (not scheduled automatically and applied only when called by other rules).
 
-\begin{lstlisting}[float=tbp, caption={[Fragment of the Petri nets model migration in ATL]Fragment of the Petri nets model migration in ATL, taken from \cite{rose10flock}}, label=lst:atl, language=ATL]
+\begin{lstlisting}[float=tbp, caption={[Part of the Petri nets migration in ATL]Part of the Petri nets migration in ATL, from \cite{rose10flock}}, label=lst:atl, language=ATL]
 rule Nets {
 	from o : Before!Net
 	to m : After!Net ( places <- o.places, transitions <- o.transitions )
@@ -160,7 +160,7 @@ Listing~\ref{lst:cope} shows the COPE model migration strategy for the Petri net
 
 \subsection{Requirements Identification}
 \label{subsec:analysis}
-Requirements for a domain-specific for model migration were identified from the review of existing languages (Section~\ref{subsec:existing_migration_languages}). The derivation of the requirements is now summarised, by considering two orthogonal concerns: the source-target relationship of the language used for specifying migration strategies and the way in which models are represented during migration. %and the structures provided by the language for specifying and re-using migration strategies.
+Requirements for a domain-specific language for model migration were identified from the review of existing languages (Section~\ref{subsec:existing_migration_languages}). The derivation of the requirements is now summarised, by considering two orthogonal concerns: the source-target relationship of the language used for specifying migration strategies and the way in which models are represented during migration. %and the structures provided by the language for specifying and re-using migration strategies.
 
 
 \subsubsection{Source-Target Relationship Requirements}
