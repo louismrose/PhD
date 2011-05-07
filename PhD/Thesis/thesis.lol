@@ -19,15 +19,14 @@
 \contentsline {lstlisting}{\numberline {5.14}Higher-order transformation with EGL}{121}{lstlisting.5.14}
 \contentsline {lstlisting}{\numberline {5.15}The M2M transformation generated for the Families metamodel}{122}{lstlisting.5.15}
 \contentsline {lstlisting}{\numberline {5.16}OMG HUTN for people with mothers and fathers.}{125}{lstlisting.5.16}
-\contentsline {lstlisting}{\numberline {5.17}HUTN for people with parents.}{126}{lstlisting.5.17}
-\contentsline {lstlisting}{\numberline {5.18}Part of the Petri nets migration in ATL}{129}{lstlisting.5.18}
-\contentsline {lstlisting}{\numberline {5.19}Java method for deserialising a reference.}{131}{lstlisting.5.19}
-\contentsline {lstlisting}{\numberline {5.20}Petri nets model migration in COPE}{132}{lstlisting.5.20}
-\contentsline {lstlisting}{\numberline {5.21}Concrete syntax of migrate and delete rules.}{136}{lstlisting.5.21}
-\contentsline {lstlisting}{\numberline {5.22}Redefining equivalences for the Component model migration.}{139}{lstlisting.5.22}
+\contentsline {lstlisting}{\numberline {5.17}HUTN for people with parents.}{127}{lstlisting.5.17}
+\contentsline {lstlisting}{\numberline {5.18}Part of the Petri nets migration in ATL}{130}{lstlisting.5.18}
+\contentsline {lstlisting}{\numberline {5.19}Java method for deserialising a reference.}{132}{lstlisting.5.19}
+\contentsline {lstlisting}{\numberline {5.20}Petri nets model migration in COPE}{135}{lstlisting.5.20}
+\contentsline {lstlisting}{\numberline {5.21}Concrete syntax of migrate and delete rules.}{139}{lstlisting.5.21}
 \contentsline {lstlisting}{\numberline {5.23}Petri nets model migration in Flock}{142}{lstlisting.5.23}
-\contentsline {lstlisting}{\numberline {5.24}UML model migration in Flock}{144}{lstlisting.5.24}
-\contentsline {lstlisting}{\numberline {5.25}Executing a Flock migration strategy programmatically in Java.}{153}{lstlisting.5.25}
+\contentsline {lstlisting}{\numberline {5.22}Redefining equivalences for the Component model migration.}{143}{lstlisting.5.22}
+\contentsline {lstlisting}{\numberline {5.25}Executing a Flock migration strategy programmatically in Java.}{152}{lstlisting.5.25}
 \contentsline {lstlisting}{\numberline {6.1}Assignment operators in ATL}{176}{lstlisting.6.1}
 \contentsline {lstlisting}{\numberline {6.2}The Petri nets model migration in ATL}{179}{lstlisting.6.2}
 \contentsline {lstlisting}{\numberline {6.3}The Petri nets model migration in Groovy-for-COPE}{180}{lstlisting.6.3}

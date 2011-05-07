@@ -59,25 +59,25 @@
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Final version of the metamodel-independent syntax, in Ecore}}{118}{figure.5.17}
 \contentsline {figure}{\numberline {5.18}{\ignorespaces User-driven co-evolution with dedicated structures}}{125}{figure.5.18}
 \contentsline {figure}{\numberline {5.19}{\ignorespaces Conformance problem reporting in Epsilon HUTN.}}{125}{figure.5.19}
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Petri nets metamodel evolution}}{127}{figure.5.20}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{127}{figure.5.20}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{127}{figure.5.20}
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Mappings between the original and evolved Petri nets metamodels}}{130}{figure.5.21}
-\contentsline {figure}{\numberline {5.22}{\ignorespaces The abstract syntax of Flock.}}{135}{figure.5.22}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Petri nets metamodel evolution}}{128}{figure.5.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{128}{figure.5.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{128}{figure.5.20}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Mappings between the original and evolved Petri nets metamodels}}{131}{figure.5.21}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces The abstract syntax of Flock.}}{136}{figure.5.22}
 \contentsline {figure}{\numberline {5.23}{\ignorespaces Evolution of the Process-Oriented metamodel}}{140}{figure.5.23}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{140}{figure.5.23}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{140}{figure.5.23}
 \contentsline {figure}{\numberline {5.24}{\ignorespaces Process-Oriented model prior to migration}}{141}{figure.5.24}
-\contentsline {figure}{\numberline {5.25}{\ignorespaces UML metamodel evolution}}{145}{figure.5.25}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original, UML 1.5 metamodel.}}}{145}{figure.5.25}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved, UML 2.0 metamodel.}}}{145}{figure.5.25}
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Creating a new migration strategy with Flock.}}{147}{figure.5.26}
-\contentsline {figure}{\numberline {5.27}{\ignorespaces The Flock editor (left) and outline view (right).}}{147}{figure.5.27}
-\contentsline {figure}{\numberline {5.28}{\ignorespaces Creating a new run configuration for a Flock migration strategy.}}{148}{figure.5.28}
-\contentsline {figure}{\numberline {5.29}{\ignorespaces Configuring the source file for a Flock run configuration.}}{149}{figure.5.29}
-\contentsline {figure}{\numberline {5.30}{\ignorespaces Configuring models for a Flock run configuration.}}{149}{figure.5.30}
-\contentsline {figure}{\numberline {5.31}{\ignorespaces Executing a migration strategy from a metamodel plug-in.}}{150}{figure.5.31}
-\contentsline {figure}{\numberline {5.32}{\ignorespaces Distributing a migration strategy as part of a metamodel plug-in via a Flock extension.}}{151}{figure.5.32}
+\contentsline {figure}{\numberline {5.25}{\ignorespaces UML metamodel evolution}}{144}{figure.5.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original, UML 1.5 metamodel.}}}{144}{figure.5.25}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved, UML 2.0 metamodel.}}}{144}{figure.5.25}
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Creating a new migration strategy with Flock.}}{146}{figure.5.26}
+\contentsline {figure}{\numberline {5.27}{\ignorespaces The Flock editor (left) and outline view (right).}}{146}{figure.5.27}
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Creating a new run configuration for a Flock migration strategy.}}{147}{figure.5.28}
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Configuring the source file for a Flock run configuration.}}{148}{figure.5.29}
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Configuring models for a Flock run configuration.}}{148}{figure.5.30}
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Executing a migration strategy from a metamodel plug-in.}}{149}{figure.5.31}
+\contentsline {figure}{\numberline {5.32}{\ignorespaces Distributing a migration strategy as part of a metamodel plug-in via a Flock extension.}}{150}{figure.5.32}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Final version of the prototypical graphical model editor.}}{159}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces The graphical editor at the start of the iteration.}}{160}{figure.6.2}

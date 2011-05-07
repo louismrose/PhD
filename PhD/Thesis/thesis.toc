@@ -172,34 +172,34 @@
 \contentsline {subsection}{\numberline {5.2.5}Migration with Epsilon HUTN}{124}{subsection.5.2.5}
 \contentsline {subsection}{\numberline {5.2.6}Summary}{126}{subsection.5.2.6}
 \contentsline {section}{\numberline {5.3}An Analysis of Languages used for Model Migration}{126}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Co-Evolution Example}{127}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Languages Currently Used for Model Migration}{128}{subsection.5.3.2}
-\contentsline {subsubsection}{Manual Specification with M2M Transformation}{128}{section*.98}
-\contentsline {subsubsection}{Manual Specification with a Metamodel Mapping}{130}{section*.99}
-\contentsline {subsubsection}{Operator-based Co-evolution with COPE}{131}{section*.100}
-\contentsline {subsection}{\numberline {5.3.3}Requirements Identification}{133}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.1}Co-Evolution Example}{126}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Languages Currently Used for Model Migration}{127}{subsection.5.3.2}
+\contentsline {subsubsection}{Manual Specification with M2M Transformation}{127}{section*.98}
+\contentsline {subsubsection}{Manual Specification with a Metamodel Mapping}{129}{section*.99}
+\contentsline {subsubsection}{Operator-based Co-evolution with COPE}{130}{section*.100}
+\contentsline {subsection}{\numberline {5.3.3}Requirements Identification}{132}{subsection.5.3.3}
 \contentsline {subsubsection}{Source-Target Relationship Requirements}{133}{section*.101}
 \contentsline {subsubsection}{Model Representation Requirements}{133}{section*.102}
 \contentsline {section}{\numberline {5.4}Epsilon Flock: A Model Migration Language}{134}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Design and Implementation}{135}{subsection.5.4.1}
-\contentsline {subsubsection}{Abstract Syntax}{135}{section*.103}
+\contentsline {subsection}{\numberline {5.4.1}Design and Implementation}{134}{subsection.5.4.1}
+\contentsline {subsubsection}{Abstract Syntax}{134}{section*.103}
 \contentsline {subsubsection}{Concrete Syntax}{135}{section*.104}
-\contentsline {subsubsection}{Execution Semantics}{136}{section*.105}
+\contentsline {subsubsection}{Execution Semantics}{135}{section*.105}
 \contentsline {paragraph}{Rule Selection}{136}{section*.106}
-\contentsline {paragraph}{Equivalence Establishment}{137}{section*.107}
+\contentsline {paragraph}{Equivalence Establishment}{136}{section*.107}
 \contentsline {paragraph}{Rule Execution}{137}{section*.108}
 \contentsline {subsubsection}{Conservative Copy}{137}{section*.109}
-\contentsline {subsection}{\numberline {5.4.2}Examples of Flock Migration}{139}{subsection.5.4.2}
-\contentsline {subsubsection}{Process-Oriented Migration in Flock}{139}{section*.110}
+\contentsline {subsection}{\numberline {5.4.2}Examples of Flock Migration}{138}{subsection.5.4.2}
+\contentsline {subsubsection}{Process-Oriented Migration in Flock}{138}{section*.110}
 \contentsline {subsubsection}{Petri Nets Migration in Flock}{142}{section*.111}
 \contentsline {subsubsection}{UML Class Diagram Migration in Flock}{142}{section*.112}
-\contentsline {subsection}{\numberline {5.4.3}Developing Migration Strategies with Epsilon Flock}{146}{subsection.5.4.3}
-\contentsline {paragraph}{Installation}{146}{section*.113}
-\contentsline {paragraph}{Creating and editing migration strategies}{146}{section*.114}
-\contentsline {paragraph}{Executing migration strategies}{146}{section*.115}
-\contentsline {paragraph}{Distributing migration strategies}{148}{section*.116}
-\contentsline {subsection}{\numberline {5.4.4}Summary}{152}{subsection.5.4.4}
-\contentsline {section}{\numberline {5.5}Chapter Summary}{152}{section.5.5}
+\contentsline {subsection}{\numberline {5.4.3}Developing Migration Strategies with Epsilon Flock}{145}{subsection.5.4.3}
+\contentsline {paragraph}{Installation}{145}{section*.113}
+\contentsline {paragraph}{Creating and editing migration strategies}{145}{section*.114}
+\contentsline {paragraph}{Executing migration strategies}{145}{section*.115}
+\contentsline {paragraph}{Distributing migration strategies}{147}{section*.116}
+\contentsline {subsection}{\numberline {5.4.4}Summary}{151}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}Chapter Summary}{151}{section.5.5}
 \contentsline {chapter}{\chapternumberline {6}Evaluation}{155}{chapter.6}
 \contentsline {section}{\numberline {6.1}Evaluating User-Driven Co-Evolution}{156}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Challenges for Performing User-Driven Co-Evolution}{157}{subsection.6.1.1}
