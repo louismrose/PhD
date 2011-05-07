@@ -224,7 +224,7 @@ Migration strategies are easier to infer for some categories of metamodel change
 
 \paragraph{AML.} A complete migrating transformation could be generated for the Petri nets example, but not for the GMF Graph example. The latter contains examples of two complex changes that AML does not currently support\footnote{\url{http://www.eclipse.org/forums/index.php?t=rview&goto=526894}}. Successfully expressing the GMF Graph example in AML would require changes to at least one of AML's heuristics. However, AML provided an initial migration transformation that was completed by hand.
 
-In general, AML cannot be used to generate complete migration strategies for co-evolution examples that contain \emph{breaking and non-resolvable changes}, according to the categorisation proposed in \cite{gruschko07towards}. 
+In general, AML cannot be used to generate complete migration strategies for co-evolution examples that contain \emph{breaking and non-resolvable changes}, according to the categorisations discussed in Section~\ref{LitReview:ModelCoEvo}.
 
 \paragraph{COPE.} The expressiveness of COPE is defined by the set of operations available. The Petri net example was migrated using only built-in operations. The GMF Graph example was migrated using 76 built-in operations and 2 user-defined migration actions. Custom migration actions allow users to specify any migration strategy.
 
@@ -280,9 +280,7 @@ In situations where migration involves modelling technologies other than EMF, AM
 
 There are situations in which Ecore2Ecore or AML might be preferable to Flock and COPE. For large models, Ecore2Ecore and AML might execute migration significantly more quickly than Flock and COPE. Ecore2Ecore is the only tool that has no technical dependencies (other than a modelling framework). In situations where migration must be embedded in another tool, Ecore2Ecore offers a smaller footprint than other migration approaches. Compared to the other approaches considered in this paper, AML automatically generates migration strategies with the least guidance from the user.
 
-Despite these advantages, Ecore2Ecore and AML are unsuitable for some types of migration problem, because they are less expressive than Flock and COPE. Specifically, changes to the containment of model elements typically cannot be expressed with Ecore2Ecore and changes that are classified by %\cite{gruschko07towards} as \emph{breaking and non-resolvable}
-\cite{herrmannsdoerfer08automatability} as \emph{metamodel-specific}
-cannot be expressed with AML. Because of this, it is important to investigate metamodel changes before selecting a migration tool. Furthermore, it might be necessary to anticipate which types of metamodel change are likely to arise before selecting a migration tool. Investing in one tool to discover later that it is no longer suitable causes wasted effort.
+Despite these advantages, Ecore2Ecore and AML are unsuitable for some types of migration problem, because they are less expressive than Flock and COPE. Specifically, \cc changes to the containment of model elements typically cannot be expressed with Ecore2Ecore and changes that are classified as \emph{metamodel-specific} \cite{herrmannsdoerfer08automatability} cannot be expressed with AML. Because of this, it is important to investigate metamodel changes before selecting a migration tool. Furthermore, it might be necessary to anticipate which types of metamodel change are likely to arise before selecting a migration tool. Investing in one tool to discover later that it is no longer suitable causes wasted effort.
 
 \begin{table}[hbtp]
 	\centering

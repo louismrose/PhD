@@ -77,10 +77,10 @@
 \contentsline {subsection}{\numberline {3.2.4}Evolution of MDE Artefacts}{53}{subsection.3.2.4}
 \contentsline {subsubsection}{Model Refactoring}{54}{section*.34}
 \contentsline {subsubsection}{Model Synchronisation}{56}{section*.35}
-\contentsline {paragraph}{Incremental transformation}{57}{section*.36}
+\contentsline {paragraph}{Incremental transformation}{56}{section*.36}
 \contentsline {paragraph}{Towards automated model synchronisation}{58}{section*.37}
 \contentsline {paragraph}{Synchronisation of models with text and trace links}{60}{section*.38}
-\contentsline {subsubsection}{Model-metamodel Co-Evolution}{61}{section*.39}
+\contentsline {subsubsection}{Model-metamodel Co-Evolution}{60}{section*.39}
 \contentsline {paragraph}{Co-evolution theory}{61}{section*.40}
 \contentsline {paragraph}{Co-evolution patterns}{61}{section*.41}
 \contentsline {paragraph}{Co-evolution approaches}{62}{section*.42}
@@ -157,40 +157,40 @@
 \contentsline {paragraph}{Metamodel-independent vs metamodel-specific}{111}{section*.85}
 \contentsline {paragraph}{Textual vs graphical}{111}{section*.86}
 \contentsline {subsection}{\numberline {5.2.3}OMG Human-Usable Textual Notation}{112}{subsection.5.2.3}
-\contentsline {subsubsection}{Basic Notation}{112}{section*.87}
+\contentsline {subsubsection}{Basic Notation}{113}{section*.87}
 \contentsline {subsubsection}{Keywords and Adjectives}{114}{section*.88}
 \contentsline {subsubsection}{Alternative Reference Syntax}{114}{section*.89}
 \contentsline {subsubsection}{Customisation via Configuration}{115}{section*.90}
 \contentsline {subsection}{\numberline {5.2.4}Reference Implementation: Epsilon HUTN}{115}{subsection.5.2.4}
-\contentsline {subsubsection}{Design of Epsilon HUTN}{115}{section*.91}
+\contentsline {subsubsection}{Design of Epsilon HUTN}{116}{section*.91}
 \contentsline {subsubsection}{Implementation of Epsilon HUTN}{117}{section*.92}
 \contentsline {paragraph}{Parsing the HUTN Source}{118}{section*.93}
 \contentsline {paragraph}{AST Model to Intermediate Model}{119}{section*.94}
-\contentsline {paragraph}{Intermediate Model Validation}{119}{section*.95}
+\contentsline {paragraph}{Intermediate Model Validation}{120}{section*.95}
 \contentsline {paragraph}{Intermediate Model to Target Model}{120}{section*.96}
-\contentsline {subsubsection}{Compliance with OMG HUTN}{122}{section*.97}
+\contentsline {subsubsection}{Compliance with OMG HUTN}{123}{section*.97}
 \contentsline {subsection}{\numberline {5.2.5}Migration with Epsilon HUTN}{124}{subsection.5.2.5}
 \contentsline {subsection}{\numberline {5.2.6}Summary}{126}{subsection.5.2.6}
 \contentsline {section}{\numberline {5.3}An Analysis of Languages used for Model Migration}{126}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Co-Evolution Example}{126}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Languages Currently Used for Model Migration}{127}{subsection.5.3.2}
-\contentsline {subsubsection}{Manual Specification with M2M Transformation}{127}{section*.98}
-\contentsline {subsubsection}{Manual Specification with a Metamodel Mapping}{129}{section*.99}
-\contentsline {subsubsection}{Operator-based Co-evolution with COPE}{130}{section*.100}
+\contentsline {subsubsection}{Manual Specification with M2M Transformation}{128}{section*.98}
+\contentsline {subsubsection}{Manual Specification with a Metamodel Mapping}{130}{section*.99}
+\contentsline {subsubsection}{Operator-based Co-evolution with COPE}{131}{section*.100}
 \contentsline {subsection}{\numberline {5.3.3}Requirements Identification}{132}{subsection.5.3.3}
 \contentsline {subsubsection}{Source-Target Relationship Requirements}{133}{section*.101}
 \contentsline {subsubsection}{Model Representation Requirements}{133}{section*.102}
 \contentsline {section}{\numberline {5.4}Epsilon Flock: A Model Migration Language}{134}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Design and Implementation}{134}{subsection.5.4.1}
-\contentsline {subsubsection}{Abstract Syntax}{134}{section*.103}
+\contentsline {subsubsection}{Abstract Syntax}{135}{section*.103}
 \contentsline {subsubsection}{Concrete Syntax}{135}{section*.104}
-\contentsline {subsubsection}{Execution Semantics}{135}{section*.105}
+\contentsline {subsubsection}{Execution Semantics}{136}{section*.105}
 \contentsline {paragraph}{Rule Selection}{136}{section*.106}
-\contentsline {paragraph}{Equivalence Establishment}{136}{section*.107}
+\contentsline {paragraph}{Equivalence Establishment}{137}{section*.107}
 \contentsline {paragraph}{Rule Execution}{137}{section*.108}
 \contentsline {subsubsection}{Conservative Copy}{137}{section*.109}
 \contentsline {subsection}{\numberline {5.4.2}Examples of Flock Migration}{138}{subsection.5.4.2}
-\contentsline {subsubsection}{Process-Oriented Migration in Flock}{138}{section*.110}
+\contentsline {subsubsection}{Process-Oriented Migration in Flock}{139}{section*.110}
 \contentsline {subsubsection}{Petri Nets Migration in Flock}{142}{section*.111}
 \contentsline {subsubsection}{UML Class Diagram Migration in Flock}{142}{section*.112}
 \contentsline {subsection}{\numberline {5.4.3}Developing Migration Strategies with Epsilon Flock}{145}{subsection.5.4.3}
@@ -288,7 +288,7 @@
 \contentsline {section}{\numberline {6.4}Evaluating Co-Evolution Tools with an Example from UML}{207}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Model Migration Case}{208}{subsection.6.4.1}
 \contentsline {subsubsection}{Activity Diagrams in UML}{208}{section*.182}
-\contentsline {subsubsection}{Evolution of Activity Diagrams}{208}{section*.183}
+\contentsline {subsubsection}{Evolution of Activity Diagrams}{210}{section*.183}
 \contentsline {subsubsection}{Extension 1: Alternative Object Flow State Migration Semantics}{212}{section*.184}
 \contentsline {subsubsection}{Extension 2: Concrete Syntax}{213}{section*.185}
 \contentsline {subsubsection}{Extension 3: XMI}{213}{section*.186}

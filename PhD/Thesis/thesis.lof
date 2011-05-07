@@ -55,14 +55,14 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{110}{figure.5.13}
 \contentsline {figure}{\numberline {5.14}{\ignorespaces A family model}}{110}{figure.5.14}
 \contentsline {figure}{\numberline {5.15}{\ignorespaces A metamodel for abstract syntax trees, in Ecore}}{116}{figure.5.15}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces The architecture of Epsilon HUTN.}}{117}{figure.5.16}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces The architecture of Epsilon HUTN.}}{118}{figure.5.16}
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Final version of the metamodel-independent syntax, in Ecore}}{118}{figure.5.17}
 \contentsline {figure}{\numberline {5.18}{\ignorespaces User-driven co-evolution with dedicated structures}}{125}{figure.5.18}
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Conformance problem reporting in Epsilon HUTN.}}{125}{figure.5.19}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Conformance problem reporting in Epsilon HUTN.}}{126}{figure.5.19}
 \contentsline {figure}{\numberline {5.20}{\ignorespaces Petri nets metamodel evolution}}{128}{figure.5.20}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{128}{figure.5.20}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Evolved metamodel.}}}{128}{figure.5.20}
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Mappings between the original and evolved Petri nets metamodels}}{131}{figure.5.21}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Mappings between the original and evolved Petri nets metamodels}}{130}{figure.5.21}
 \contentsline {figure}{\numberline {5.22}{\ignorespaces The abstract syntax of Flock.}}{136}{figure.5.22}
 \contentsline {figure}{\numberline {5.23}{\ignorespaces Evolution of the Process-Oriented metamodel}}{140}{figure.5.23}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original metamodel.}}}{140}{figure.5.23}

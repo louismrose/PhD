@@ -9,18 +9,18 @@
 \contentsline {lstlisting}{\numberline {5.4}A metamodel-specific syntax for families in EBNF}{111}{lstlisting.5.4}
 \contentsline {lstlisting}{\numberline {5.5}Specifying attributes with HUTN}{113}{lstlisting.5.5}
 \contentsline {lstlisting}{\numberline {5.6}Specifying a containment reference with HUTN}{113}{lstlisting.5.6}
-\contentsline {lstlisting}{\numberline {5.7}Specifying a simple reference with HUTN}{113}{lstlisting.5.7}
+\contentsline {lstlisting}{\numberline {5.7}Specifying a simple reference with HUTN}{114}{lstlisting.5.7}
 \contentsline {lstlisting}{\numberline {5.8}Keywords and adjectives in HUTN}{114}{lstlisting.5.8}
-\contentsline {lstlisting}{\numberline {5.9}A reference block in HUTN}{114}{lstlisting.5.9}
+\contentsline {lstlisting}{\numberline {5.9}A reference block in HUTN}{115}{lstlisting.5.9}
 \contentsline {lstlisting}{\numberline {5.10}An infix reference in HUTN}{115}{lstlisting.5.10}
-\contentsline {lstlisting}{\numberline {5.11}An extract of the Epsilon HUTN grammar definition in EBNF}{118}{lstlisting.5.11}
+\contentsline {lstlisting}{\numberline {5.11}An extract of the Epsilon HUTN grammar definition in EBNF}{119}{lstlisting.5.11}
 \contentsline {lstlisting}{\numberline {5.12}Transforming Nodes to PackageObjects with ETL.}{119}{lstlisting.5.12}
-\contentsline {lstlisting}{\numberline {5.13}A constraint (in EVL) to check that all identifiers are unique.}{119}{lstlisting.5.13}
+\contentsline {lstlisting}{\numberline {5.13}A constraint (in EVL) to check that all identifiers are unique.}{120}{lstlisting.5.13}
 \contentsline {lstlisting}{\numberline {5.14}Higher-order transformation with EGL}{121}{lstlisting.5.14}
 \contentsline {lstlisting}{\numberline {5.15}The M2M transformation generated for the Families metamodel}{122}{lstlisting.5.15}
 \contentsline {lstlisting}{\numberline {5.16}OMG HUTN for people with mothers and fathers.}{125}{lstlisting.5.16}
 \contentsline {lstlisting}{\numberline {5.17}HUTN for people with parents.}{127}{lstlisting.5.17}
-\contentsline {lstlisting}{\numberline {5.18}Part of the Petri nets migration in ATL}{130}{lstlisting.5.18}
+\contentsline {lstlisting}{\numberline {5.18}Part of the Petri nets migration in ATL}{129}{lstlisting.5.18}
 \contentsline {lstlisting}{\numberline {5.19}Java method for deserialising a reference.}{132}{lstlisting.5.19}
 \contentsline {lstlisting}{\numberline {5.20}Petri nets model migration in COPE}{135}{lstlisting.5.20}
 \contentsline {lstlisting}{\numberline {5.21}Concrete syntax of migrate and delete rules.}{139}{lstlisting.5.21}
