@@ -29,7 +29,7 @@ Models can be unstructured (for example, sketches on a piece of paper) or struct
 \label{subsec:modelling_languages}
 In MDE, models are structured rather than unstructured \cite{kolovos09thesis}. A \emph{modelling language} is the set of syntactic and semantic constraints used to define the structure of a group of related models. In MDE, a modelling language is often specified as a model and, hence the term \emph{metamodel} is used in place of \emph{modelling language}.
 
-\emph{Conformance} is a relationship between a metamodel and a model. A model \emph{conforms to} a metamodel when the metamodel specifies every concept used in the model definition, and the model uses the metamodel concepts according to the rules specified by the metamodel. Conformance can be described by a set of constraints between models and metamodels \cite{paige07metamodel}. When all constraints are satisfied, a model conforms to a metamodel. For example, a conformance constraint might state that every object in the model has a corresponding non-abstract class in the metamodel.
+\emph{Conformance} is a relationship between a metamodel and a model. A model \emph{conforms to} a metamodel when the metamodel specifies every concept used in the model definition, and the model uses the metamodel concepts according to the rules specified by the metamodel \cite{bezivin05unification}. Conformance can be described by a set of constraints between models and metamodels \cite{paige07metamodel}. When all constraints are satisfied, a model conforms to a metamodel. For example, a conformance constraint might state that every object in the model has a corresponding non-abstract class in the metamodel.
 
 Metamodels facilitate model interchange and, therefore, interoperability between modelling tools.  For this reason, Evans recommends that software engineers ``use a well-documented shared language that can express the necessary domain information as a common medium of communication.'' \cite[pg377]{evans04domain}. To support this recommendation, Evans discusses the way in which chemists have collaborated to define a standardised language for describing chemical structures, Chemical Markup Language (CML)\footnote{\url{http://cml.sourceforge.net/}}. The standardisation of CML has facilitated interoperability between tools for specification, analysis and simulation.
 
@@ -45,7 +45,7 @@ Concrete \cc syntax, abstract syntax and semantics are used together to specify 
 
 \subsection{MOF: A metamodelling language}
 \label{subsec:mof}
-Software engineers using MDE can re-use existing -- and define new -- metamodels. To facilitate interoperability between MDE tools, the OMG has standardised a language for specifying metamodels, the Meta-Object Facility (MOF). Metamodels specified in MOF can be interchanged between MDE environments. Furthermore, modelling language tools are interoperable because MOF also standardises the way in which metamodels and their models are persisted to and from disk. For model and metamodel persistence, MOF prescribes XML Metadata Interchange (XMI), a dialect of XML optimised for loading, storing and exchanging models, and standardised by the OMG.
+Software engineers using MDE can re-use existing -- and define new -- metamodels. To facilitate interoperability between MDE tools, the Object Management Group (OMG)\footnote{\url{http://www.omg.org}} has standardised a language for specifying metamodels, the Meta-Object Facility (MOF). Metamodels specified in MOF can be interchanged between MDE environments. Furthermore, modelling language tools are interoperable because MOF also standardises the way in which metamodels and their models are persisted to and from disk. For model and metamodel persistence, MOF prescribes XML Metadata Interchange (XMI), a dialect of XML optimised for loading, storing and exchanging models, and standardised by the OMG.
 
 Because MOF is a modelling language for describing modelling languages, it is sometimes termed a metamodelling language. Part of the UML metamodel, defined in MOF, is shown in Figure~\ref{fig:mof}. As discussed in Section~\ref{sec:mde_tools}, different kinds of concrete syntax can be used for MOF. Figure~\ref{fig:mof}, for example, uses a concrete syntax similar to that of UML class diagrams. Specifically:
 
@@ -78,7 +78,7 @@ In MDE, models are \emph{managed} to produce software. The \cc term \emph{model 
 
 \subsubsection{Model Transformation}
 \label{subsubsec:model_transformation}
-Model transformation is a development activity in which software artefacts are derived from others, according to some well-defined specification. There \cc are three types of model transformations: those specified between modelling languages (model-to-model transformation), those specified between modelling languages and textual artefacts (model-to-text-transformation) and those specified between textual artefacts and modelling languages (text-to-model transformation) \cite{kleppe03mda,kolovos09thesis}. Each type of transformation has unique characteristics and tools, but share some common characteristics. The remainder of this section first introduces the commonalities and then discusses each type of transformation individually.
+Model transformation is a development activity in which software artefacts are derived from others, according to some well-defined specification. There \cc are three types of model transformations: those specified between modelling languages (model-to-model transformation), those specified between modelling languages and textual artefacts (model-to-text-transformation) and those specified between textual artefacts and modelling languages (text-to-model transformation) \cite{kleppe03mda}. Each type of transformation has unique characteristics and tools, but share some common characteristics. The remainder of this section first introduces the commonalities and then discusses each type of transformation individually.
 
 \paragraph{Common characteristics of model transformations}
 The input to a transformation is termed its \emph{source}, and the output its \emph{target}. In theory, a transformation can have more than one source and more than one target, but not all transformation languages support multiple sources and targets. Consequently, much of the model transformation literature considers single source and target transformations.
@@ -102,14 +102,14 @@ Declarative M2M transformation languages only provide constructs for mapping sou
 
 Declarative M2M transformation languages cannot be used to solve some categories of transformation problem \cite{patrascoiu04embedding}. Imperative M2M transformation languages are argued to be difficult to write and maintain \cite[pg.45]{kolovos09thesis}. Consequently, \cc hybrid languages, such as ATL, are presently believed to be more suitable for specifying model transformation than pure imperative or declarative languages \cite{kolovos08etl}.
 
-An exemplar M2M transformation, written in the hybrid M2M transformation language ETL, is shown in Listing~\ref{lst:exemplar_m2m}. The source of the transformation is a state machine model, conforming to the metamodel shown in Figure~\ref{fig:state_machine_mm}. The target of the transformation is an object-oriented model, conforming to the metamodel shown in Figure~\ref{fig:object_oriented_mm}. The transformation in Listing~\ref{lst:exemplar_m2m} comprises two rules.
+An example of an M2M transformation, written in the hybrid M2M transformation language ETL, is shown in Listing~\ref{lst:exemplar_m2m}. The source of the transformation is a state machine model, conforming to the metamodel shown in Figure~\ref{fig:state_machine_mm}. The target of the transformation is an object-oriented model, conforming to the metamodel shown in Figure~\ref{fig:object_oriented_mm}. The transformation in Listing~\ref{lst:exemplar_m2m} comprises two rules.
 
 \begin{figure}[htbp]
   \begin{center}
     \leavevmode
     \includegraphics[scale=0.9]{2.Background/images/StateMachines.pdf}
   \end{center}
-  \caption{Exemplar State Machine metamodel.}
+  \caption{A State Machine metamodel.}
   \label{fig:state_machine_mm}
 \end{figure}
 
@@ -118,7 +118,7 @@ An exemplar M2M transformation, written in the hybrid M2M transformation languag
     \leavevmode
     \includegraphics[scale=0.9]{2.Background/images/OO.pdf}
   \end{center}
-  \caption{Exemplar Object-Oriented metamodel.}
+  \caption{An Object-Oriented metamodel.}
   \label{fig:object_oriented_mm}
 \end{figure}
 
@@ -148,7 +148,7 @@ rule State2Class
 \end{lstlisting}
 
 
-\paragraph{Model-to-Text (M2T) Transformation} M2T transformation is used for model serialisation (enabling model interchange), code and documentation generation, and model visualisation and exploration.  In 2005, the Object Management Group (OMG)\footnote{\url{http://www.omg.org}} recognised the lack of a standardised M2T transformation with its M2T Language Request for Proposals\footnote{\url{http://www.omg.org/docs/ad/04-04-07.pdf}}. In response, various M2T languages were developed including MOFScript \cite{oldevik05toward}, the Epsilon Generation Language (EGL) \cite{rose08egl}, JET\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=jet}} and XPand\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=xpand}}.
+\paragraph{Model-to-Text (M2T) Transformation} M2T transformation is used for model serialisation (enabling model interchange), code and documentation generation, and model visualisation and exploration.  In 2005, the OMG recognised the lack of a standardised M2T transformation with its M2T Language Request for Proposals\footnote{\url{http://www.omg.org/docs/ad/04-04-07.pdf}}. In response, various M2T languages were developed including MOFScript \cite{oldevik05toward}, the Epsilon Generation Language (EGL) \cite{rose08egl}, JET\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=jet}} and XPand\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=xpand}}.
 
 Because M2T transformation is used to produce unstructured rather than structured artefacts, M2T transformation has different requirements to M2M transformation. For instance, M2T transformation languages often provide mechanisms for specifying sections of text that will be completed manually and must not be overwritten by the transformation engine.
 
@@ -171,15 +171,15 @@ In EGL, dynamic sections are contained within \texttt{[\%} and \texttt{\%]}. \em
 
 \paragraph{Text-to-Model (T2M) Transformation} T2M transformation is most often implemented as a parser that generates a model rather than object code. Parser generators such as ANTLR \cite{parr07antlr} can be used to produce a structured artefact (such as an abstract syntax tree) from text. T2M tools typically reuse \changed{``are typically built atop'' changed to ``typically reuse''} a parser generator, and post-process the structured artefacts to produce a model that can be managed with a particular modelling framework.
 
-Xtext\footnote{\url{http://www.eclipse.org/Xtext/}} and EMFtext \cite{heidenreich09derivation} are contemporary examples of T2M tools that, given a grammar and a target metamodel, will automatically generate a parser that transforms text to a model.
+Xtext\footnote{\url{http://www.eclipse.org/Xtext/}} and EMFText \cite{heidenreich09derivation} are contemporary examples of T2M tools that, given a grammar and a target metamodel, will automatically generate a parser that transforms text to a model.
 
-An exemplar T2M transformation, written in EMFtext, is shown in Listing~\ref{lst:exemplar_t2m}. From the transformation shown in Listing~\ref{lst:exemplar_t2m}, EMFtext can be used to generate a parser that, when executed, will produce state machine models. For the input, \texttt{lift[stationary up down stopping emergency]}, the pa\-rser will produce a model containing one \texttt{Machine} with \texttt{lift} as its \texttt{id}, and five \texttt{State}s with the \texttt{name}s, \texttt{stationary}, \texttt{up}, \texttt{down}, \texttt{stopping}, and \texttt{em\-er\-ge\-ncy}.
+An exemplar T2M transformation, written in EMFText, is shown in Listing~\ref{lst:exemplar_t2m}. From the transformation shown in Listing~\ref{lst:exemplar_t2m}, EMFText can be used to generate a parser that, when executed, will produce state machine models. For the input, \texttt{lift[stationary up down stopping emergency]}, the pa\-rser will produce a model containing one \texttt{Machine} with \texttt{lift} as its \texttt{id}, and five \texttt{State}s with the \texttt{name}s, \texttt{stationary}, \texttt{up}, \texttt{down}, \texttt{stopping}, and \texttt{em\-er\-ge\-ncy}.
 
 Lines 1-2 of Listing~\ref{lst:exemplar_t2m} define the name of the parser and target metamodel. Line 3 indicates that parser should first seek to construct a \texttt{Machine} from the source text. Lines 5-9 define rules for the lexer, including a rule for recognising \texttt{IDENTIFIER}s (represented as alphabetic characters).
 
 Lines 11-14 of Listing~\ref{lst:exemplar_t2m} are key to the transformation. Line 11 specifies that a \texttt{Machine} is constructed whenever an \texttt{IDENTIFIER} is followed by a \texttt{LBRACKET} and eventually a \texttt{RBRACKET}. When constructing a \texttt{Machine}, the first time an \texttt{IDENTIFIER} is encountered, it is stored in the \texttt{id} attribute of the \texttt{Machine}. The \texttt{states*} statement on line 12 indicates that, before matching a \texttt{RBRACKET}, the parser is permitted to transform subsequent text to a \texttt{State} (according to the rule on line 13) and store the resulting \texttt{State} in the \texttt{states} reference of the \texttt{Machine}. The asterisks in \texttt{states*} indicates that any number of \texttt{State}s can be constructed and stored in the \texttt{states} reference.
 
-\begin{lstlisting}[caption=T2M transformation in EMFtext, label=lst:exemplar_t2m, language=EMFtext]
+\begin{lstlisting}[caption=T2M transformation in EMFText, label=lst:exemplar_t2m, language=EMFText, escapechar={}]
 SYNTAXDEF statemachine
 FOR <statemachine>
 START Machine
@@ -198,7 +198,7 @@ RULES {
 
 \subsubsection{Model Validation}
 \label{subsubsec:model_validation}
-Model validation provides a mechanism for managing the integrity of the software developed using MDE. A model that omits information is said to be \emph{incomplete}, while related models that suggest differences in the underlying phenomena are said to be \emph{contradicting} \cite{kolovos09thesis}. Incompleteness and contradiction are two examples of \emph{inconsistency}. In MDE, inconsistency is detrimental, because, when artefacts are automatically derived from each other, the inconsistency of one artefact might be propagated to others. Model validation is used to detect, report and reconcile inconsistency throughout a MDE process.
+Model validation provides a mechanism for managing the integrity of the software developed using MDE. A model that omits information is said to be \emph{incomplete}, while related models that suggest differences in the underlying phenomena are said to be \emph{contradicting} \cite{kolovos09thesis}. Incompleteness and contradiction are two examples of \emph{inconsistency} \cite{elaasar03consistency}. In MDE, inconsistency is detrimental, because, when artefacts are automatically derived from each other, the inconsistency of one artefact might be propagated to others. Model validation is used to detect, report and reconcile inconsistency throughout a MDE process.
 
 Inconsistency detection is inherently pattern-based and, hence, higher-order languages are more suitable for model validation than so-called ``third-generation'' programming languages (such as Java) \cite{kolovos09thesis}. The Object Constraint Language (OCL) \cite{ocl2} is an OMG standard that can be used to specify consistency constraints on UML and MOF models. OCL cannot be used to specify inter-model constraints, unlike the xlinkit toolkit \cite{nentwich2003flexible} and the Epsilon Validation Language (EVL) \cite{kolovos08evl}.
 
@@ -216,7 +216,7 @@ context State {
 \end{lstlisting}
 
 \subsubsection{Further model management activities}
-In addition to model transformation and validation, further examples of model management activities include model comparison (e.g. \cite{kolovos09ecl}), in which a \emph{trace} of similar and different elements is produced from two or more models, and model merging or weaving (e.g. \cite{kolovos07eml}), in which two or more models are combined to produce a unified model.
+In addition to model transformation and validation, further examples of model management activities include model merging or weaving (e.g. Reuseware \cite{henriksson08reuseware}), in which two or more models are combined, and model comparison (e.g. EMF Compare \cite{brun08emfcompare}) in which a \emph{trace} of similar and different elements is produced from two or more models.
 
 Further activities, such as model versioning and tracing, might be regarded as model management but, in the context of this thesis, are considered as evolutionary activities and as such are discussed in Chapter~\ref{LiteratureReview}.
 

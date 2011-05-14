@@ -8,7 +8,7 @@ Driven by the analysis presented above, a domain-specific language for model mig
 \label{subsec:flock_design}
 Flock has been designed to be a rule-based transformation language that mixes declarative and imperative parts. Consequently, Flock should be familiar to developers who have used hybrid-style M2M transformation languages, such as ATL and ETL \cite{kolovos08etl}. Flock is syntactically efficient, but semantically complex. In particular, the way in which Flock relates source to target elements is novel; it is neither a new- nor an existing-target relationship. Instead, elements are copied conservatively, as described below.
 
-Like Epsilon HUTN (Section~\ref{subsec:epsilon_hutn}), Flock reuses parts of Epsilon. In particular, Flock reuses EMC to provide interoperability with several modelling frameworks, and EOL for specifying the imperative part of user-defined migration rules.
+Like Epsilon HUTN (Section~\ref{subsec:epsilon_hutn}), Flock reuses parts of Epsilon (Section~\ref{subsec:epsilon}). In particular, Flock reuses EMC to provide interoperability with several modelling frameworks, and EOL for specifying the imperative part of user-defined migration rules.
 
 \subsubsection{Abstract Syntax}
 \label{subsubsec:abstract_syntax}
@@ -97,9 +97,9 @@ Conservative copy operates on an original model element, \texttt{e}, and its equ
 The definition of conformance varies over modelling frameworks. Typically, conformance between a value, \texttt{v}, and a feature, \texttt{f}, specifies at least the following constraints:
 
 \begin{itemize}
+	\item The type of \texttt{v} must be the same as or a subtype of the type of \texttt{f}.
 	\item The size of \texttt{v} must be greater than or equal to the lowerbound of \texttt{f}.
 	\item The size of \texttt{v} must be less than or equal to the upperbound of \texttt{f}.
-	\item The type of \texttt{v} must be the same as or a subtype of the type of \texttt{f}.
 \end{itemize}
 
 EMC provides drivers for several modelling frameworks, permitting management of models defined with EMF, the Metadata Repository (MDR), Z or XML. To support migration between metamodels defined in heterogeneous modelling frameworks, EMC has been extended to support conformance checking; each EMC driver provides conformance checking semantics specific to its modelling framework. Specifically, EMC define Java interfaces for specifying the way in which model values are written to a model, and an additional, conformance checking Java method has been added to the interface. When a Flock module is executed, conformance checking responsibilities are delegated to EMC drivers by calling the new method. The conformance checking support in EMC is applicable to other areas of the Epsilon platform and, in particular, could be used to add some static type checking to the Epsilon languages, which are currently dynamically typed.
@@ -116,7 +116,7 @@ In response to some types of metamodel evolution, some categories of model value
 Flock is now demonstrated using three examples of model migration. The first example demonstrates the way in which a Flock module is executed and illustrates the semantics of conservative copy. The second describes the way in which the migration of the Petri net co-evolution example (Section~\ref{subsec:co-evo_example}) can be specified with Flock, and is included for direct comparison with the other languages discussed in Section~\ref{sec:analyis_of_languages_used_for_migration}. The final, larger example demonstrates all of the features of Flock, and is based on changes made to UML class diagrams between versions 1.5 and 2.0 of the UML specification.
 
 \subsubsection{Process-Oriented Migration in Flock}
-The first example considers the evolution of a process-oriented metamodel, introduced in \ref{sec:other_examples} and described in . The process-oriented metamodel was developed to explore the feasibility of a graphical model editor for representing programs written in process-oriented programming languages, such as occam-$\pi$ \cite{occam_pi}.
+The first example considers the evolution of a process-oriented metamodel, introduced in Section~\ref{sec:other_examples} and described in Appendix~\ref{ProcessOriented}. The process-oriented metamodel was developed to explore the feasibility of a graphical model editor for representing programs written in process-oriented programming languages, such as occam-$\pi$ \cite{occam_pi}.
 
 \begin{figure}[htb]
 	\centering

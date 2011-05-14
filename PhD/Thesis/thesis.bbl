@@ -144,6 +144,11 @@ W.J. Brown, R.C. Malveau, H.W. McCormick~III, and T.J. Mowbray.
 \newblock {\em Anti Patterns}.
 \newblock Wiley, New York, 1998.
 
+\bibitem[Brun \& Pierantonio 2008]{brun08emfcompare}{$~$}
+C.~Brun and A.~Pierantonio.
+\newblock Model differences in the {Eclipse Modelling Framework}.
+\newblock {\em Upgrade}, 9(2):29--34, 2008.
+
 \bibitem[Cervelle {\it et al.}\  2006]{cervelle06tatoo}{$~$}
 J.~Cervelle, R.~Forax, and G.~Roussel.
 \newblock Tatoo: an innovative parser generator.
@@ -266,6 +271,11 @@ N.~Edelweiss and \'{A}.F. Moreira.
 \newblock Temporal and versioning model for schema evolution in object-oriented
   databases.
 \newblock {\em Data \& Knowledge Engineering}, 53(2):99--128, 2005.
+
+\bibitem[Elaasar \& Briand 2004]{elaasar03consistency}{$~$}
+M.~Elaasar and L.C. Briand.
+\newblock An overview of {UML} consistency management.
+\newblock Technical Report SCE-04-18, Carleton University, August 2004.
 
 \bibitem[Elmasri \& Navathe 2006]{elmasri06database}{$~$}
 R.~Elmasri and S.B. Navathe.
@@ -410,6 +420,12 @@ F.~Heidenreich, J.~Johannes, S.~Karol, M.~Seifert, and C.~Wende.
   Applications (ECMDA-FA)}, volume 5562 of {\em Lecture Notes in Computer
   Science}, pages 114--129. Springer, 2009.
 
+\bibitem[Henriksson {\it et al.}\  2008]{henriksson08reuseware}{$~$}
+J.~Henriksson, F.~Heidenreich, J.~Johannes, S.~Zschaler, and U.~A{\ss}mann.
+\newblock Extending grammars and metamodels for reuse: the {Reuseware}
+  approach.
+\newblock {\em IET Software}, 2(3):165--184, 2008.
+
 \bibitem[Herrmannsdoerfer {\it et al.}\
   2008a]{herrmannsdoerfer08automatability}{$~$}
 M.~Herrmannsdoerfer, S.~Benz, and E.~Juergens.
@@ -531,21 +547,13 @@ P.~Klint, R.~L\"{a}mmel, and C.~Verhoef.
 \newblock {\em {ACM} Transactions on Software Engineering Methodology},
   14(3):331--380, 2003.
 
-\bibitem[Kolovos {\it et al.}\  2006a]{kolovos06eol}{$~$}
+\bibitem[Kolovos {\it et al.}\  2006]{kolovos06eol}{$~$}
 D.S. Kolovos, R.F. Paige, and F.A. Polack.
 \newblock {The Epsilon Object Language (EOL)}.
 \newblock In A.~Rensink and J.~Warmer, editors, {\em Proc. European Conference
   on Model-Driven Architecture - Foundations and Applications (ECMDA-FA)},
   volume 4066 of {\em Lecture Notes in Computer Science}, pages 128--142.
   Springer, 2006.
-
-\bibitem[Kolovos {\it et al.}\  2006b]{kolovos07eml}{$~$}
-D.S. Kolovos, R.F. Paige, and F.A.C. Polack.
-\newblock Merging models with the {Epsilon Merging Language} ({EML}).
-\newblock In O.~Nierstrasz, J.~Whittle, D.~Harel, and G.~Reggio, editors, {\em
-  Proc. International Conference on Model Driven Engineering Languages and
-  Systems (MoDELS)}, volume 4199 of {\em Lecture Notes in Computer Science},
-  pages 215--229. Springer, 2006.
 
 \bibitem[Kolovos {\it et al.}\  2007]{kolovos07ewl}{$~$}
 D.S. Kolovos, R.F. Paige, F.A.C. Polack, and L.M. Rose.
@@ -586,16 +594,7 @@ D.S. Kolovos, L.M. Rose, S.~bin Abid, R.F. Paige, F.A.C. Polack, and
   (MoDELS), Part I}, volume 6394 of {\em Lecture Notes in Computer Science},
   pages 211--225. Springer, 2010.
 
-\bibitem[Kolovos 2009a]{kolovos09ecl}{$~$}
-D.S. Kolovos.
-\newblock Establishing correspondences between models with the {Epsilon
-  Comparison Language}.
-\newblock In R.F. Paige, A.~Hartman, and A.~Rensink, editors, {\em Proc.
-  European Conference on Model-Driven Architecture - Foundations and
-  Applications (ECMDA-FA)}, volume 5562 of {\em Lecture Notes in Computer
-  Science}, pages 146--157. Springer, 2009.
-
-\bibitem[Kolovos 2009b]{kolovos09thesis}{$~$}
+\bibitem[Kolovos 2009]{kolovos09thesis}{$~$}
 D.S. Kolovos.
 \newblock {\em An Extensible Platform for Specification of Integrated Languages
   for Model Management}.

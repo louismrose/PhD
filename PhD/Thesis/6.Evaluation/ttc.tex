@@ -24,7 +24,7 @@ Activity diagrams are used for modelling lower-level behaviours, emphasising seq
   \label{fig:activity}
 \end{figure}
 
-Between versions 1.4 and 2.2 of the UML specification, the metamodel for activity diagrams has changed significantly. The \cc sequel summarises most of the changes, and details can be found in the UML 1.4 \cite{uml14} and UML 2.2 \cite{uml22} specifications.
+Between versions 1.4 and 2.2 of the UML specification, the metamodel for activity diagrams has changed significantly. The \cc sequel summarises most of the changes, and further details can be found in the UML 1.4 \cite{uml14} and UML 2.2 \cite{uml22} specifications.
 
 \subsubsection{Evolution of Activity Diagrams}
 Figures~\ref{fig:uml14} and \ref{fig:uml22} are simplifications of the activity diagram metamodels from versions 1.4 and 2.2 of the UML specification, respectively. In the interest of clarity, some features and abstract classes have been removed from Figures~\ref{fig:uml14} and \ref{fig:uml22}.
@@ -47,7 +47,7 @@ Some differences between Figures~\ref{fig:uml14} and \ref{fig:uml22} are: activi
 
 To facilitate the comparison of solutions, the model shown in Figure~\ref{fig:activity} was used. Solutions migrated the activity diagram shown in Figure~\ref{fig:activity} -- which conforms to UML 1.4 -- to conform to UML 2.2. The UML 1.4 model, the migrated UML 2.2 model, and the UML 1.4 and 2.2 metamodels are available from\footnote{\url{http://www.cs.york.ac.uk/~louis/ttc/}}.
 
-Submissions were evaluated using the following four criteria, which were decided in advance by the author and the workshop organisers:
+Submissions were evaluated using the following criteria, which were decided in advance by the author and the workshop organisers:
 
 \begin{itemize}
 	\item \textbf{Correctness}: Does the transformation produce a model equivalent to the migrated UML 2.2. model included in the case resources?
@@ -63,7 +63,7 @@ To further distinguish between solutions, three extensions to the core task were
 
 \subsubsection{Extension 1: Alternative Object Flow State Migration Semantics}
 \label{sub:object_flow_states}
-Following the submission of the case to the competition, discussion on the TTC forums\footnote{\url{http://planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewgroup&groupid=4&Itemid=150} (registration required)} revealed an ambiguity in the UML 2.2 specification indicating that the migration semantics for the ObjectFlowState UML 1.4 concept are not clear from the UML 2.2 specification. The case was revised to incorporate both the original semantics (suggested by the author and described above) and an alternative semantics (suggested by a workshop participant via the TTC forums) for migrating ObjectFlowStates. The alternative semantics are now described.
+Following the submission of the case to the competition, discussion on the TTC forums\footnote{\url{http://planet-research20.org/ttc2010/index.php?option=com_community&view=groups&task=viewgroup&groupid=4&Itemid=150} (registration required)} revealed an ambiguity in the UML 2.2 specification indicating that the migration semantics for the ObjectFlowState UML 1.4 concept are not clear from the UML 2.2 specification. The case was revised to incorporate both the original semantics (suggested by the author and described above) and an alternative semantics (suggested by a workshop participant via the TTC forums) for migrating \texttt{Ob\-je\-ctFl\-owSt\-a\-t\-es}. The alternative semantics are now described.
 
 \textbf{In the core task} described above, instances of \texttt{Ob\-je\-ctFl\-owSt\-a\-te} were migrated to instances of \texttt{Ob\-je\-ctNo\-de}. Any instances of \texttt{Tr\-an\-si\-ti\-on} that had an \texttt{Ob\-je\-ctFl\-owSt\-a\-te} as their source or target were migrated to instances of \texttt{Ob\-je\-ctFl\-ow}. Figure~\ref{fig:ofs_to_node} shows an example application of this migration semantics. Structures such as the one shown in Figure~\ref{fig:ofs_to_node_before} are migrated to an equivalent structure shown in Figure~\ref{fig:ofs_to_node_after}. The \texttt{Tr\-an\-si\-ti\-on}s, \texttt{t1} and \texttt{t2}, are migrated to instances of \texttt{Ob\-je\-ctFl\-ow}. Likewise, the instance of \texttt{Ob\-je\-ctFl\-owSt\-a\-te}, \texttt{s2}, is migrated to an instance of \texttt{Ob\-je\-ctNo\-de}.
 
@@ -146,7 +146,7 @@ migrate Transition to ControlFlow
 \end{lstlisting}
 
 \subsubsection{Pseudostates}
-Development continued by selected further types of state that were not present in the migrated model, such as \texttt{Ps\-eu\-do\-st\-at\-es}s, which are not used in UML 2.2 activities. Instead, UML 2.2 activities use specialised \texttt{No\-de}s, such as \texttt{In\-it\-ialNo\-de}. Listing~\ref{lst:pseudostates} shows the Flock code used to change \texttt{Ps\-eu\-do\-st\-a\-te}s to corresponding \texttt{No\-de}s.
+Development continued by selecting further types of state that were not present in the migrated model, such as \texttt{Ps\-eu\-do\-st\-at\-es}s, which are not used in UML 2.2 activities. Instead, UML 2.2 activities use specialised \texttt{No\-de}s, such as \texttt{In\-it\-ialNo\-de}. Listing~\ref{lst:pseudostates} shows the Flock code used to change \texttt{Ps\-eu\-do\-st\-a\-te}s to corresponding \texttt{No\-de}s.
 
 \begin{lstlisting}[caption=Migrating Pseudostates, label=lst:pseudostates, language=Flock]
 migrate Pseudostate to InitialNode  when: original.kind = Original!PseudostateKind#initial
@@ -156,7 +156,7 @@ migrate Pseudostate to JoinNode     when: original.kind = Original!PseudostateKi
 \end{lstlisting}
 
 \subsubsection{Activities}
-In UML 2.2, \texttt{Ac\-ti\-vi\-ty}s no longer inherit from state machines. As such, some of the features defined by \texttt{Ac\-ti\-vi\-ty} have been renamed. Specifically, \texttt{tr\-an\-si\-ti\-o\-ns} has become \texttt{ed\-g\-es} and \texttt{par\-ti\-ti\-o\-ns} has become \texttt{gr\-o\-sup}. Furthermore, the states (or nodes in UML 2.2 parlance) of an \texttt{Ac\-ti\-vi\-ty} are now contained in a feature called \texttt{nodes}, rather than in the \texttt{su\-bv\-er\-t\-ex} feature of a composite state accessed via the \texttt{top} feature of \texttt{Ac\-ti\-vi\-ty}. The Flock migration rule shown in Listing~\ref{lst:activities} captured these changes.
+In UML 2.2, \texttt{Ac\-ti\-vi\-ty}s no longer inherit from state machines. As such, some of the features defined by \texttt{Ac\-ti\-vi\-ty} have been renamed. Specifically, \texttt{tr\-an\-si\-ti\-o\-ns} has become \texttt{ed\-g\-es} and \texttt{par\-ti\-ti\-o\-ns} has become \texttt{gr\-o\-u\-ps}. Furthermore, the states (or nodes in UML 2.2 parlance) of an \texttt{Ac\-ti\-vi\-ty} are now contained in a feature called \texttt{nodes}, rather than in the \texttt{su\-bv\-er\-t\-ex} feature of a composite state accessed via the \texttt{top} feature of \texttt{Ac\-ti\-vi\-ty}. The Flock migration rule shown in Listing~\ref{lst:activities} captured these changes.
 
 \begin{lstlisting}[caption=Migrating ActivityGraphs, label=lst:activities, language=Flock]
 migrate ActivityGraph to Activity {

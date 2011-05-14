@@ -4,7 +4,7 @@
 \label{sec:notation}
 The analysis of co-evolution examples in Chapter~\ref{Analysis} highlighted two ways in which co-evolution is managed. In \emph{developer-driven} co-evolution, migration is specified by the metamodel developer in an executable format; while in \emph{user-driven co-evolution} migration is specified by the metamodel developer in prose or not at all. Performing user-driven co-evolution with modelling frameworks presents two key challenges that have not been explored by existing research. Firstly, user-driven co-evolution often involves editing the storage representation of the model, such as XMI. Model storage representations are typically not optimised for human use and hence user-driven co-evolution can be error-prone. Secondly, non-conformant model elements must be identified during user-driven co-evolution. When a multi-pass parser is used to load models, as is the case with EMF, not all conformance problems are reported at once, and user-driven co-evolution is an iterative process. In Section~\ref{sec:requirements_identification}, these challenges led to the identification of the following requirement: \emph{This thesis must demonstrate a user-driven co-evolution process that enables the editing of non-conformant models without directly manipulating the underlying storage representation and provides a sound and complete conformance report for the original model and evolved metamodel.}
 
-Section~\ref{subsec:migration_with_xmi} illustrates some of the challenges to performing model migration with XMI, and Section~\ref{subsec:alternatives_to_xmi} discusses potential alternatives to XMI for user-driven co-evolution. Section~\ref{subsec:hutn} describes an OMG standard modelling notation that is optimised for human-usability, and Section~\ref{subsec:epsilon_hutn} presents a reference implementation of the OMG standard that is interoperable with EMF. Finally, Section~\ref{subsec:migration_with_hutn} demonstrates the way in which the reference implementation of the notation has been integrated with the metamodel independent syntax described in Section~\ref{sec:mmi_syntax} to produce conformance reports. 
+Section~\ref{subsec:migration_with_xmi} illustrates some of the challenges to performing model migration with XMI, and Section~\ref{subsec:alternatives_to_xmi} discusses potential alternatives to XMI for user-driven co-evolution. Section~\ref{subsec:hutn} describes an OMG standard modelling notation that is optimised for human-usability, and Section~\ref{subsec:epsilon_hutn} presents a reference implementation of the OMG standard that is interoperable with EMF. Finally, Section~\ref{subsec:migration_with_hutn} demonstrates the way in which the reference implementation of the notation has been integrated with the metamodel independent syntax described in Section~\ref{sec:mmi_syntax} to produce conformance reports. The work presented in this section has been published in \cite{rose08hutn}.
 
 \subsection{Model Migration with XMI}
 \label{subsec:migration_with_xmi}
@@ -55,8 +55,8 @@ Two characteristics were considered when designing a notation that provides an a
 
 \begin{lstlisting}[caption=A metamodel-specific syntax for families in EBNF, label=lst:mms_syntax, language=EBNF]
 family = name ":" naturalChildren "(" adoptedChildren ")"
-naturalChildren = name { "," name }
-adoptedChildren = name { "," name }
+naturalChildren = name { "," naturalChildren }
+adoptedChildren = name { "," adoptedChildren }
 name = "A" | ... | "z"
 \end{lstlisting}
 
@@ -113,7 +113,7 @@ FamilyPackage "families" {
 \subsubsection{Keywords and Adjectives}
 In general, a metamodel-independent syntax (such as OMG HUTN) is more verbose than a metamodel-specific concrete syntax. However, OMG HUTN defines optional syntactic shortcuts to make model specifications more concise, and aims to make the syntactic shortcuts intuitive \cite[pg2-4]{hutn}.
 
-Two of the syntactic shortcuts relate to Boolean-valued attributes and are now discussed; a complete list of syntactic shortcuts is provided in the OMG HUTN specification \cite{hutn}. OMG HUTN permits the use of an attribute name to represent the value \texttt{true}, or the attribute name prefixed with a tilde to represent the value \texttt{false}). When used in the body of the object, this style of Boolean-valued attribute represents a \emph{keyword}. A keyword used to prefix an object declaration is called an \emph{adjective}. Listing \ref{lst:boolean} shows the use of both an attribute keyword (\texttt{\textasciitilde nuclear} on line 6) and adjective (\texttt{\textasciitilde migrant} on line 2), and states that \texttt{The Sm\-it\-hs} are \texttt{mi\-gr\-a\-nt} and that \texttt{The Do\-es} are not \texttt{nu\-cl\-e\-ar}.
+Two of the syntactic shortcuts relate to Boolean-valued attributes and are now discussed; a complete list of syntactic shortcuts is provided in the OMG HUTN specification \cite{hutn}. OMG HUTN permits the use of an attribute name to represent the value \texttt{true}, or the attribute name prefixed with a tilde to represent the value \texttt{false}). When used in the body of the object, this style of Boolean-valued attribute represents a \emph{keyword}. A keyword used to prefix an object declaration is called an \emph{adjective}. Listing \ref{lst:boolean} shows the use of both an attribute keyword (\texttt{\textasciitilde nuclear} on line 6) and adjective (\texttt{migrant} on line 2), and states that \texttt{The Sm\-it\-hs} are \texttt{mi\-gr\-a\-nt} and that \texttt{The Do\-es} are not \texttt{nu\-cl\-e\-ar}.
 
 \begin{lstlisting}[caption={[Keywords and adjectives in HUTN]Keywords and adjectives in HUTN, taken from \cite{rose08hutn}}, label=lst:boolean, language=HutnFamilies]
 FamilyPackage "families" {
@@ -234,11 +234,11 @@ Epsilon HUTN uses a simple, bespoke Java post-processor to construct instances o
 cls_contents = feature | adjective
 feature = NAME ASSIGNMENT feature_contents
 feature_contents = attr | refs | containments
-attr = attr_value { COMMA attr_value } | NULL
+attr = attr_value { COMMA attr } | NULL
 \end{lstlisting}
 
 \paragraph{AST Model to Intermediate Model}
-For M2M transformation, Epsilon HUTN uses ETL \cite{kolovos08etl}. One of the transformation rules from Epsilon HUTN is shown in Listing \ref{lst:m2m}; the complete transformation is presented in Listing~\ref{lst:m2m_full}. In Listing~\ref{lst:m2m}, the rule (starting on line 1) transforms a \texttt{No\-de} with type \texttt{na\-me} (which could represent a \texttt{P\-ac\-ka\-geOb\-je\-ct} or a \texttt{Cl\-a\-ssOb\-je\-ct}) to a \texttt{P\-ac\-ka\-geOb\-je\-ct} in the intermediate model. The guard (line 5) specifies that a name node will only be transformed to a \texttt{P\-ac\-ka\-geOb\-je\-ct} if the node has no parent (i.e. it is a top-level node, and hence a package rather than a class). The body of the rule states that the type, line number and column number of the package are determined from the text, line and column attributes of the \texttt{No\-de} object. On line 11, a \texttt{Co\-nt\-ai\-nm\-e\-ntSl\-ot} is instantiated to hold the children of this \texttt{P\-ac\-ka\-geOb\-je\-ct}. The children of the \texttt{No\-de} object are transformed to the intermediate model (using a method built into ETL, \texttt{eq\-ui\-va\-lent()}), and added to the \texttt{Co\-nt\-ai\-nm\-e\-ntSl\-ot}.
+For M2M transformation, Epsilon HUTN uses ETL \cite{kolovos08etl}. One of the transformation rules from Epsilon HUTN is shown in Listing \ref{lst:m2m}; the complete transformation is presented in Listing~\ref{lst:m2m_full}. In Listing~\ref{lst:m2m}, the rule (starting on line 1) transforms a \texttt{No\-de} with type \texttt{na\-me} (which could represent a \texttt{P\-ac\-ka\-geOb\-je\-ct} or a \texttt{Cl\-a\-ssOb\-je\-ct}) to a \texttt{P\-ac\-ka\-geOb\-je\-ct} in the intermediate model. The guard (line 5) specifies that a name node will only be transformed to a \texttt{P\-ac\-ka\-geOb\-je\-ct} if the node has no parent (i.e. it is a top-level node, and hence a package rather than a class). The body of the rule states that the type, line number and column number of the package are determined from the text, line and column attributes of the \texttt{No\-de} object. On line 11, the children of the \texttt{No\-de} object are transformed to the intermediate model (using a method built into ETL, \texttt{eq\-ui\-va\-lent()}), and added to the \texttt{ob\-je\-c\-ts} reference of the \texttt{P\-ac\-ka\-geOb\-je\-ct}.
 
 \begin{lstlisting}[caption=Transforming Nodes to PackageObjects with ETL., label=lst:m2m, language=ETL]
 rule NameNode2PackageObject
@@ -251,13 +251,7 @@ rule NameNode2PackageObject
     p.line := n.line;
     p.col  := n.column;
 
-    var slot := new Intermediate!ContainmentSlot;
-    for (child in n.children) {
-        slot.objects.add(child.equivalent());
-    }
-    if (slot.objects.notEmpty()) {
-        p.slots.add(slot);
-    }
+    p.objects.addAll(n.children.equivalent());
 }
 \end{lstlisting}
 
@@ -362,10 +356,10 @@ Epsilon HUTN is a reference implementation of the OMG HUTN standard. There are, 
 		\hline                                                                                   
 		Data values                                 & Yes                       & \\
 		\hline                                                     
-		\multirow{2}{*}{Inline configuration (6.9)} & \multirow{2}{*}{No}       & A configuration model \\
+		\multirow{2}{*}{Inline configuration}       & \multirow{2}{*}{No}       & A configuration model \\
 		                                            &                           & is used instead. \\
 		\hline
-		\multirow{3}{*}{Configuration rules (5)}    & \multirow{3}{*}{Partial}  & Not yet supported:      \\
+		\multirow{3}{*}{Configuration rules}        & \multirow{3}{*}{Partial}  & Not yet supported:      \\
 		                                            &                           & parametric attributes,  \\
 		                                            &                           & enumeration adjectives. \\
 		\hline
