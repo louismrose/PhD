@@ -12,7 +12,7 @@
       <styles xmi:type="notation:SortingStyle" xmi:id="_hsz793IEEd6PBICOQyoX7A"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_hsz7-HIEEd6PBICOQyoX7A"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_hsyt0XIEEd6PBICOQyoX7A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_hsyt0XIEEd6PBICOQyoX7A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Before.ecore#//System"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hsyt0nIEEd6PBICOQyoX7A" x="27" y="108"/>
   </children>
@@ -40,7 +40,7 @@
       <styles xmi:type="notation:SortingStyle" xmi:id="_hs1KFnIEEd6PBICOQyoX7A"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_hs1KF3IEEd6PBICOQyoX7A"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_hs0jAXIEEd6PBICOQyoX7A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_hs0jAXIEEd6PBICOQyoX7A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Before.ecore#//Block"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hs0jAnIEEd6PBICOQyoX7A" x="198" y="108"/>
   </children>
