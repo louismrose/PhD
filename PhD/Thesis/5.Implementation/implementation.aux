@@ -270,6 +270,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Examples of Flock Migration}{140}{subsection.5.4.2}}
 \newlabel{subsec:flock_examples}{{\M@TitleReference {5.4.2}{Examples of Flock Migration}}{140}{Examples of Flock Migration\relax }{subsection.5.4.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Process-Oriented Migration in Flock}{140}{section*.110}}
+\newlabel{subsec:po_flock_example}{{\M@TitleReference {5.4.2}{Process-Oriented Migration in Flock}}{140}{Process-Oriented Migration in Flock\relax }{section*.110}{}}
 \newlabel{lst:flock_concrete_syntax}{{\M@TitleReference {5.21}{Concrete Syntax}}{141}{Concrete syntax of migrate and delete rules}{lstlisting.5.21}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.21}Concrete syntax of migrate and delete rules.}{141}{lstlisting.5.21}}
 \newlabel{fig:cc_eg_original}{{\M@TitleReference {5.23(a)}{Process-Oriented Migration in Flock}}{142}{Subfigure 5 5.23(a)\relax }{subfigure.5.23.1}{}}
@@ -296,43 +297,83 @@
 \newlabel{fig:uml_mms}{{\M@TitleReference {5.25}{UML metamodel evolution}}{146}{UML metamodel evolution\relax }{figure.5.25}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Original, UML 1.5 metamodel.}}}{146}{figure.5.25}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Evolved, UML 2.0 metamodel.}}}{146}{figure.5.25}}
+\citation{kolovos06eol}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Developing Migration Strategies with Epsilon Flock}{147}{subsection.5.4.3}}
 \newlabel{subsec:flock_guide}{{\M@TitleReference {5.4.3}{Developing Migration Strategies with Epsilon Flock}}{147}{Developing Migration Strategies with Epsilon Flock\relax }{subsection.5.4.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Installation}{147}{section*.113}}
-\@writefile{toc}{\contentsline {paragraph}{Creating and editing migration strategies}{147}{section*.114}}
-\@writefile{toc}{\contentsline {paragraph}{Executing migration strategies}{147}{section*.115}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.26}{\ignorespaces Creating a new migration strategy with Flock.}}{148}{figure.5.26}}
-\newlabel{fig:flock_new_migration_strategy}{{\M@TitleReference {5.26}{Creating a new migration strategy with Flock.}}{148}{Creating a new migration strategy with Flock}{figure.5.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.27}{\ignorespaces The Flock editor (left) and outline view (right).}}{148}{figure.5.27}}
-\newlabel{fig:flock_editor_and_outline_view}{{\M@TitleReference {5.27}{The Flock editor (left) and outline view (right).}}{148}{The Flock editor (left) and outline view (right)}{figure.5.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.28}{\ignorespaces Creating a new run configuration for a Flock migration strategy.}}{149}{figure.5.28}}
-\newlabel{fig:flock_new_launch_config}{{\M@TitleReference {5.28}{Creating a new run configuration for a Flock migration strategy.}}{149}{Creating a new run configuration for a Flock migration strategy}{figure.5.28}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distributing migration strategies}{149}{section*.116}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.29}{\ignorespaces Configuring the source file for a Flock run configuration.}}{150}{figure.5.29}}
-\newlabel{fig:flock_new_launch_config_source}{{\M@TitleReference {5.29}{Configuring the source file for a Flock run configuration.}}{150}{Configuring the source file for a Flock run configuration}{figure.5.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.30}{\ignorespaces Configuring models for a Flock run configuration.}}{150}{figure.5.30}}
-\newlabel{fig:flock_new_launch_config_models}{{\M@TitleReference {5.30}{Configuring models for a Flock run configuration.}}{150}{Configuring models for a Flock run configuration}{figure.5.30}{}}
-\citation{gamma95patterns}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.31}{\ignorespaces Executing a migration strategy from a metamodel plug-in.}}{151}{figure.5.31}}
-\newlabel{fig:flock_extension_execution}{{\M@TitleReference {5.31}{Executing a migration strategy from a metamodel plug-in.}}{151}{Executing a migration strategy from a metamodel plug-in}{figure.5.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.32}{\ignorespaces Distributing a migration strategy as part of a metamodel plug-in via a Flock extension.}}{152}{figure.5.32}}
-\newlabel{fig:flock_extension}{{\M@TitleReference {5.32}{Distributing a migration strategy as part of a metamodel plug-in via a Flock extension.}}{152}{Distributing a migration strategy as part of a metamodel plug-in via a Flock extension}{figure.5.32}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Properties of model migration approaches}}{153}{table.5.3}}
-\newlabel{tab:differences}{{\M@TitleReference {5.3}{Properties of model migration approaches}}{153}{Properties of model migration approaches\relax }{table.5.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Summary}{153}{subsection.5.4.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Chapter Summary}{153}{section.5.5}}
+\@writefile{toc}{\contentsline {subsubsection}{EOL for Migration Strategies}{147}{section*.113}}
+\@writefile{toc}{\contentsline {paragraph}{The \texttt  {Any} type}{147}{section*.114}}
+\@writefile{toc}{\contentsline {paragraph}{Built-in types}{147}{section*.115}}
+\newlabel{lst:extract_subclass}{{\M@TitleReference {5.25}{The \texttt  {Any} type}}{147}{Using a non-null check to guard a migration rule\relax }{lstlisting.5.25}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.25}Using a non-null check to guard a migration rule}{147}{lstlisting.5.25}}
+\newlabel{lst:split_author}{{\M@TitleReference {5.26}{Built-in types}}{148}{Using primitive and collection values\relax }{lstlisting.5.26}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.26}Using primitive and collection values}{148}{lstlisting.5.26}}
+\newlabel{lst:split_partition}{{\M@TitleReference {5.27}{Built-in types}}{148}{Using higher-order operations on collections\relax }{lstlisting.5.27}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.27}Using higher-order operations on collections}{148}{lstlisting.5.27}}
+\@writefile{toc}{\contentsline {paragraph}{Collection types}{148}{section*.116}}
+\newlabel{fig:mother_original}{{\M@TitleReference {5.26(a)}{Metamodel types}}{149}{Subfigure 5 5.26(a)\relax }{subfigure.5.26.1}{}}
+\newlabel{sub@fig:mother_original}{{(a)}{149}{Subfigure 5 5.26(a)\relax }{subfigure.5.26.1}{}}
+\newlabel{fig:mother_evolved}{{\M@TitleReference {5.26(b)}{Metamodel types}}{149}{Subfigure 5 5.26(b)\relax }{subfigure.5.26.2}{}}
+\newlabel{sub@fig:mother_evolved}{{(b)}{149}{Subfigure 5 5.26(b)\relax }{subfigure.5.26.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.26}{\ignorespaces Evolution of a unidirectional to a bidirectional reference.}}{149}{figure.5.26}}
+\newlabel{fig:mother_mms}{{\M@TitleReference {5.26}{Evolution of a unidirectional to a bidirectional reference.}}{149}{Evolution of a unidirectional to a bidirectional reference}{figure.5.26}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Original metamodel.}}}{149}{figure.5.26}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Evolved metamodel.}}}{149}{figure.5.26}}
+\newlabel{lst:using_metamodel_types}{{\M@TitleReference {5.28}{Metamodel types}}{149}{Using metamodel types\relax }{lstlisting.5.28}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.28}Using metamodel types}{149}{lstlisting.5.28}}
+\@writefile{toc}{\contentsline {paragraph}{Metamodel types}{149}{section*.117}}
+\newlabel{lst:creating_new_model_elements}{{\M@TitleReference {5.29}{Instantiation with \texttt  {new}}}{150}{Creating new model elements\relax }{lstlisting.5.29}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.29}Creating new model elements}{150}{lstlisting.5.29}}
+\@writefile{toc}{\contentsline {paragraph}{Instantiation with \texttt  {new}}{150}{section*.118}}
+\@writefile{toc}{\contentsline {paragraph}{Control flow}{150}{section*.119}}
+\@writefile{toc}{\contentsline {paragraph}{Custom operations}{150}{section*.120}}
+\@writefile{toc}{\contentsline {paragraph}{User input}{150}{section*.121}}
+\newlabel{lst:contextless_operation}{{\M@TitleReference {5.30}{Custom operations}}{151}{Using a context-less custom operation\relax }{lstlisting.5.30}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.30}Using a context-less custom operation}{151}{lstlisting.5.30}}
+\newlabel{lst:context_operation}{{\M@TitleReference {5.31}{Custom operations}}{151}{Using a custom operation in the context of a metamodel type\relax }{lstlisting.5.31}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.31}Using a custom operation in the context of a metamodel type}{151}{lstlisting.5.31}}
+\newlabel{lst:user_input}{{\M@TitleReference {5.32}{User input}}{152}{Prompting for user input at runtime\relax }{lstlisting.5.32}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.32}Prompting for user input at runtime}{152}{lstlisting.5.32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.27}{\ignorespaces Epsilon graphical-user interface for selecting between values at runtime.}}{152}{figure.5.27}}
+\newlabel{fig:user_input}{{\M@TitleReference {5.27}{Epsilon graphical-user interface for selecting between values at runtime.}}{152}{Epsilon graphical-user interface for selecting between values at runtime}{figure.5.27}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Specifying Migration Strategies with Epsilon Flock}{152}{section*.122}}
+\newlabel{lst:changing_and_unsetting_values}{{\M@TitleReference {5.33}{Changing feature values}}{153}{Changing and unsetting conservatively copied feature values\relax }{lstlisting.5.33}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.33}Changing and unsetting conservatively copied feature values}{153}{lstlisting.5.33}}
+\@writefile{toc}{\contentsline {paragraph}{Changing feature values}{153}{section*.123}}
+\@writefile{toc}{\contentsline {paragraph}{Casting feature values}{153}{section*.124}}
+\newlabel{lst:casting_values}{{\M@TitleReference {5.34}{Casting feature values}}{154}{Casting feature values\relax }{lstlisting.5.34}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.34}Casting feature values}{154}{lstlisting.5.34}}
+\newlabel{lst:equivalent}{{\M@TitleReference {5.35}{Migrating reference values}}{154}{Using \texttt {equivalent()} to access migrated model elements\relax }{lstlisting.5.35}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.35}Using \texttt  {equivalent()} to access migrated model elements}{154}{lstlisting.5.35}}
+\@writefile{toc}{\contentsline {paragraph}{Migrating reference values}{154}{section*.125}}
+\@writefile{toc}{\contentsline {paragraph}{Creating model elements}{154}{section*.126}}
+\citation{uml212}
+\newlabel{lst:delete_rule}{{\M@TitleReference {5.36}{Deleting model elements}}{155}{Preventing the conservative copy of original model elements\relax }{lstlisting.5.36}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.36}Preventing the conservative copy of original model elements}{155}{lstlisting.5.36}}
+\newlabel{lst:retype}{{\M@TitleReference {5.37}{Changing the type of model elements}}{155}{Redefining equivalences for the Component model migration}{lstlisting.5.37}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.37}Redefining equivalences for the Component model migration.}{155}{lstlisting.5.37}}
+\@writefile{toc}{\contentsline {paragraph}{Deleting model elements}{155}{section*.127}}
+\@writefile{toc}{\contentsline {paragraph}{Changing the type of model elements}{155}{section*.128}}
+\@writefile{toc}{\contentsline {subsubsection}{Migration Strategies for Metamodels that use Inheritance}{156}{section*.129}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.28}{\ignorespaces A metamodel that uses inheritance.}}{156}{figure.5.28}}
+\newlabel{fig:inheritance}{{\M@TitleReference {5.28}{A metamodel that uses inheritance.}}{156}{A metamodel that uses inheritance}{figure.5.28}{}}
+\newlabel{lst:rule_order_considerations}{{\M@TitleReference {5.38}{Migration Strategies for Metamodels that use Inheritance}}{157}{A migration strategy for the metamodel evolution described in Figure~\ref {fig:inheritance}\relax }{lstlisting.5.38}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.38}A migration strategy for the metamodel evolution described in Figure\nobreakspace  {}\ref  {fig:inheritance}}{157}{lstlisting.5.38}}
+\newlabel{lst:rule_order_considerations_reduced}{{\M@TitleReference {5.39}{Migration Strategies for Metamodels that use Inheritance}}{158}{Using a custom operation to reduce duplication in the migration strategy in Listing~\ref {lst:rule_order_considerations}\relax }{lstlisting.5.39}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.39}Using a custom operation to reduce duplication in the migration strategy in Listing\nobreakspace  {}\ref  {lst:rule_order_considerations}}{158}{lstlisting.5.39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Summary}{158}{subsection.5.4.4}}
 \citation{rose10concordance}
-\newlabel{lst:flock_module_usage}{{\M@TitleReference {5.25}{Distributing migration strategies}}{154}{Executing a Flock migration strategy programmatically in Java}{lstlisting.5.25}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.25}Executing a Flock migration strategy programmatically in Java.}{154}{lstlisting.5.25}}
 \citation{hutn}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Properties of model migration approaches}}{159}{table.5.3}}
+\newlabel{tab:differences}{{\M@TitleReference {5.3}{Properties of model migration approaches}}{159}{Properties of model migration approaches\relax }{table.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Chapter Summary}{159}{section.5.5}}
 \@setckpt{5.Implementation/implementation}{
-\setcounter{page}{156}
+\setcounter{page}{161}
 \setcounter{equation}{0}
 \setcounter{enumi}{2}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{14}
+\setcounter{footnote}{11}
 \setcounter{mpfootnote}{0}
 \setcounter{@memmarkcntra}{0}
 \setcounter{storedpagenumber}{1}
@@ -371,18 +412,18 @@
 \setcounter{cmsm@mctr}{0}
 \setcounter{bsm@mctr}{0}
 \setcounter{workm@mctr}{0}
-\setcounter{sheetsequence}{174}
-\setcounter{lastsheet}{372}
-\setcounter{lastpage}{354}
-\setcounter{figure}{32}
+\setcounter{sheetsequence}{181}
+\setcounter{lastsheet}{378}
+\setcounter{lastpage}{358}
+\setcounter{figure}{28}
 \setcounter{lofdepth}{1}
 \setcounter{table}{3}
 \setcounter{lotdepth}{1}
-\setcounter{lstnumber}{25}
+\setcounter{lstnumber}{21}
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}
 \setcounter{Item}{19}
 \setcounter{memhycontfloat}{0}
-\setcounter{lstlisting}{25}
+\setcounter{lstlisting}{39}
 \setcounter{section@level}{1}
 }

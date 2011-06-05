@@ -2,7 +2,7 @@
 
 \section{Epsilon Flock: A Model Migration Language}
 \label{sec:flock}
-Driven by the analysis presented above, a domain-specific language for model migration, Epsilon Flock (subsequently referred to as Flock), has been designed and implemented. Flock makes idiomatic a novel and complicated semantics for automatically copying model elements from original to migrated model and a domain-specific language was preferred to repurposing an existing language to capture the semantics with a compact and tailored syntax. Section~\ref{subsec:flock_design} discusses the principle tenets of Flock, which include user-defined migration rules and a novel algorithm for relating source and target model elements. In Section~\ref{subsec:flock_examples}, Flock is demonstrated via application to three examples of model migration. Finally, Section~\ref{subsec:flock_guide} provides an overview of the ways in which a metamodel developer can use Flock to develop, test and distribute migration strategies. The work described in this section has been published in \cite{rose10flock}.
+Driven by the analysis presented above, a domain-specific language for model migration, Epsilon Flock (subsequently referred to as Flock), has been designed and implemented. Flock makes idiomatic a novel and complicated semantics for automatically copying model elements from original to migrated model and a domain-specific language was preferred to repurposing an existing language to capture the semantics with a compact and tailored syntax. Section~\ref{subsec:flock_design} discusses the principle tenets of Flock, which include user-defined migration rules and a novel algorithm for relating source and target model elements. In Section~\ref{subsec:flock_examples}, Flock is demonstrated via application to three examples of model migration. Finally, Section~\ref{subsec:flock_guide} provides patterns and guidelines for using the model migration language provided by Flock to specify migration strategies. The work described in this section has been published in \cite{rose10flock}, except for Section~\ref{subsec:flock_guide} which provides new material.
 
 \subsection{Design and Implementation}
 \label{subsec:flock_design}
@@ -116,6 +116,7 @@ In response to some types of metamodel evolution, some categories of model value
 Flock is now demonstrated using three examples of model migration. The first example demonstrates the way in which a Flock module is executed and illustrates the semantics of conservative copy. The second describes the way in which the migration of the Petri net co-evolution example (Section~\ref{subsec:co-evo_example}) can be specified with Flock, and is included for direct comparison with the other languages discussed in Section~\ref{sec:analyis_of_languages_used_for_migration}. The final, larger example demonstrates all of the features of Flock, and is based on changes made to UML class diagrams between versions 1.5 and 2.0 of the UML specification.
 
 \subsubsection{Process-Oriented Migration in Flock}
+\label{subsec:po_flock_example}
 The first example considers the evolution of a process-oriented metamodel, introduced in Section~\ref{sec:other_examples} and described in Appendix~\ref{ProcessOriented}. The process-oriented metamodel was developed to explore the feasibility of a graphical model editor for representing programs written in process-oriented programming languages, such as occam-$\pi$ \cite{occam_pi}.
 
 \begin{figure}[htb]
@@ -241,106 +242,373 @@ migrate AssociationEnd to Property {
 
 \subsection{Developing Migration Strategies with Epsilon Flock}
 \label{subsec:flock_guide}
-The design and implementation of Flock and example migration strategies were presented in Sections~\ref{subsec:flock_design} and \ref{subsec:flock_examples} respectively. This section summarises the way in which Flock is integrated with Epsilon and Eclipse, and in particular discusses using Flock's development tools to construct and distribute migration strategies. Further information on developing migration strategies with Epsilon Flock can be found on the documentation section of Epsilon website\footnote{\url{http://www.eclipse.org/gmt/epsilon/doc/}} and, in particular, in the Epsilon book\footnote{\url{http://www.eclipse.org/gmt/epsilon/doc/book/}}.
+To \added{This section is new.} demonstrate the way in which Flock can be used to specify migration strategies, this section provides a guide to the model migration language provided by Flock. In particular, the main features of EOL (the core language of Epsilon, which provides a foundation for Flock) are summarised, and then the way in which Flock can be used to specify model migration strategies in response to common types of metamodel evolution is discussed. Finally, guidelines are presented for specifying Flock migration strategies when the original and evolved metamodels use type inheritance, because the implementation of conservative copy provided by Flock affects the way in which such migration strategies are specified.
 
-\paragraph{Installation} Flock is distributed as part of Epsilon, and hence can installed via the Eclipse update manager, using the Epsilon update site. Detailed and up-to-date installation instructions are available from the Epsilon website\footnote{\url{http://www.eclipse.org/gmt/epsilon/download/}}. Once installed, Epsilon provides additional views, editors and wizards for specifying and executing model management operations, such as model migration with Flock.
+\subsubsection{EOL for Migration Strategies}
+As discussed in Section~\ref{subsec:flock_design}, EOL is used to specify the guards and bodies of Flock rules. EOL is dynamically and strongly typed, and is a pure object-oriented language: primitives, collections and model elements are objects. The fundamental properties of EOL and its core functionality are now summarised.
 
-\paragraph{Creating and editing migration strategies} New Flock migration strategies can be created from the \emph{File $>$ New File $>$ Other\ldots} menu by selecting \emph{Epsilon $>$ Epsilon Flock Migration Strategy}, as shown in Figure~\ref{fig:flock_new_migration_strategy}. The resulting file will be automatically opened with the Flock editor, which provides syntax highlighting and automatic error detection. In addition, the Flock editor is integrated with the Eclipse outline view, shown in the right-hand side of Figure~\ref{fig:flock_editor_and_outline_view}, which can be used to navigate between rules and operations in the current migration strategy.
+\paragraph{The \texttt{Any} type} The universal (top) type in EOL is called \texttt{Any}, and defines operations for performing null checks (\texttt{isDe\-fi\-n\-ed} and \texttt{isUn\-de\-fi\-n\-ed}), for type-checking (\texttt{isTy\-peOf} and \texttt{isKi\-ndOf}) and for printing to the standard output stream (\texttt{pr\-i\-nt} and \texttt{pr\-in\-t\-ln}). In Flock, null and type checks are most often used in the guard of a migrate rule. For example, Listing~\ref{lst:extract_subclass} shows a fragment of a migration strategy that makes explicit that \texttt{La\-bo\-urIt\-em}s are a special type of \texttt{JobIt\-em} because they always reference an employee. Consequently, migration involves retyping only those \texttt{JobIt\-em}s that have a non-null value for the feature \texttt{em\-pl\-oy\-ee} (i.e. \texttt{em\-pl\-oy\-ee.isDe\-fi\-n\-ed()} evaluates to \texttt{tr\-ue}).
 
-\begin{figure}[tbp]
-	\centering
-		\includegraphics[height=9cm]{5.Implementation/images/flock_programmers_guide/new_migration_strategy.png}
-	\caption{Creating a new migration strategy with Flock.}
-	\label{fig:flock_new_migration_strategy}
-\end{figure}
+\begin{lstlisting}[caption=Using a non-null check to guard a migration rule,  label=lst:extract_subclass, language=Flock, float=b]
+migrate JobItem to LabourItem when: original.employee.isDefined()
+\end{lstlisting}
 
+\paragraph{Built-in types} EOL provides four primitive types (\texttt{St\-ri\-ng}, \texttt{In\-te\-g\-er}, \texttt{Re\-al} and \texttt{Bo\-ol\-e\-an}) and four collection types (\texttt{Bag}, \texttt{Se\-qu\-en\-ce}, \texttt{Set} and \texttt{Or\-de\-re\-dSet}). The built-in types provide many operations for manipulating primitive and collection values \cite{kolovos06eol}. For example, Listing~\ref{lst:split_author} demonstrates the way in which the \texttt{St\-ri\-ng} and \texttt{Se\-qu\-en\-ce} types can be used to extract an author's name and email address from text of the form \texttt{"Joe Bloggs" <joe.bloggs@example.com>}. On line 2, the \texttt{St\-ri\-ng\#sp\-l\-it} operation is used to divide the original string into two parts (i.e. a \texttt{Se\-qu\-en\-ce}). On lines 4 and 5 the \texttt{Co\-ll\-ec\-ti\-on\#fi\-r\-st} and \texttt{Co\-ll\-ec\-ti\-on\#la\-st} operations are used to access each part of the original string, and the \texttt{St\-ri\-ng\#tr\-im} operation is used to remove superfluous prefix and suffix characters from the substrings.
 
-\begin{figure}[tbp]
-	\centering
-		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/editor.png}
-	\caption{The Flock editor (left) and outline view (right).}
-	\label{fig:flock_editor_and_outline_view}
-\end{figure}
-
-
-\paragraph{Executing migration strategies} Flock migration strategies can be executed from the \emph{Run $>$ Run Configurations\ldots} menu item, by selecting the Flock Migration Strategy category and clicking New, as shown in Figure~\ref{fig:flock_new_launch_config}. Next, the location of the Flock migration strategy and original and migrated models must be specified. The \emph{Source} tab (Figure~\ref{fig:flock_new_launch_config_source}) is used to specify the location of the Flock migration strategy to be executed, via the  \emph{Browse Workspace\ldots} button. The \emph{Models} tab (Figure~\ref{fig:flock_new_launch_config_models}) is used to specify the location of the original and evolved models. First, the add buttons are used to configure each model's properties, specifying, for example, an identifier, the location of the model and the location of its metamodel. Once the models' properties have been configured, drop down boxes are used to specify the role (\emph{Original} or \emph{Migrated}) of each model, as shown at the bottom of   Figure~\ref{fig:flock_new_launch_config_models}. After the locations of the migration strategy and models have been specified, the migration strategy is executed by clicking the \emph{Run} button.
-
-More than two models can be specified when executing a Flock migration strategy. Although only one model can play the role of \emph{Original} or \emph{Migrated} model, extra models can be used to guide migration. For example, a migration strategy might query a third model to determine whether or not a migrate rule should be executed. More generally, an inference co-evolution approach (Section~\ref{subsec:inference}) could be implemented with Flock by using migration strategies in conjunction with a model of the metamodel differences. 
-
-During the execution of a migration strategy, Flock constructs a migrated model in the location specified in the launch configuration (described above). The migrated model can be opened with the editors provided by the modelling framework. For example, an EMF model can be opened with a model editor generated by EMF, or with Epsilon's Exeed editor\footnote{\url{http://www.eclipse.org/gmt/epsilon/doc/exeed/}}; and an XML model can be opened with Eclipse's XML editor. Runtime errors are displayed in the Eclipse error log view, and textual output (e.g. the result of evaluating \texttt{pr\-in\-t\-ln()} statements) in the Eclipse console view.
-
-\begin{figure}[tbp]
-	\centering
-		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/new_launch_config.png}
-	\caption{Creating a new run configuration for a Flock migration strategy.}
-	\label{fig:flock_new_launch_config}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
-		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/new_launch_config_source.png}
-	\caption{Configuring the source file for a Flock run configuration.}
-	\label{fig:flock_new_launch_config_source}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
-		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/new_launch_config_models.png}
-	\caption{Configuring models for a Flock run configuration.}
-	\label{fig:flock_new_launch_config_models}
-\end{figure}
-
-\paragraph{Distributing migration strategies} Metamodels and models are typically kept separate (Section~\ref{subsec:modelling_framework_characteristics}). EMF metamodels, for example, are typically packaged in Eclipse plug-ins and distributed to metamodel users. To facilitate the distribution of migration strategies to metamodel users, Flock provides a mechanism for including Flock migration strategies as part of an EMF metamodel plug-in. More specifically, Flock defines an Eclipse \emph{extension point}. To distribute a migration strategy to metamodel users, the metamodel developer creates an \emph{extension} (an instance of the Flock extension point) and specifies the location of the Flock migration strategy, the original metamodel and the evolved metamodel, as show in Figure~\ref{fig:flock_extension}. When metamodel users install a plug-in that contains a Flock extension, Flock provides a menu that can be used to invoke migration strategies, as shown in Figure~\ref{fig:flock_extension_execution}. Note that the metamodel developer can provide a file extension (when specifying the Flock extension) for which the \emph{Flock} menu will be displayed.
-
-\begin{figure}[tbp]
-	\centering
-		\includegraphics[height=4cm]{5.Implementation/images/flock_programmers_guide/extension_execution.png}
-	\caption{Executing a migration strategy from a metamodel plug-in.}
-	\label{fig:flock_extension_execution}
-\end{figure}
-
-Metamodel developers can also elect to build their own interface for invoking migration strategies, and delegate responsibility for executing migration strategies to the Flock execution engine. To this end, the \texttt{FlockModule} class (Section~\ref{subsec:flock_design}) provides a fa\c{c}ade \cite[pg185]{gamma95patterns} for the Flock execution engine, and an example use is shown in Listing~\ref{lst:flock_module_usage}. This approach to distributing migration strategies requires more effort from the metamodel developer (who must integrate the code in Listing~\ref{lst:flock_module_usage} with the development tools of the metamodel user), but is more flexible (and could be used, for example, to integrate model migration with model or source code management repositories).
-
-\begin{landscape}
-\begin{figure}[tbp]
-	\centering
-		\includegraphics[height=11.5cm]{5.Implementation/images/flock_programmers_guide/extension.png}
-	\caption{Distributing a migration strategy as part of a metamodel plug-in via a Flock extension.}
-	\label{fig:flock_extension}
-\end{figure}
-\end{landscape}
-
-\begin{lstlisting}[caption=Executing a Flock migration strategy programmatically in Java., label=lst:flock_module_usage, language=Java, float=tb]
-private static void migrate(File strategy,
-	                                   File originalModelFile,
-                                     File migratedModelFile)
-  throws Exception {
+\begin{lstlisting}[caption=Using primitive and collection values,  label=lst:split_author, language=Flock, float=tb]
+migrate Article {
+	var authorParts : Sequence := original.author.split('<');
 	
-	final IFlockModule migrator = new FlockModule();
+	migrated.authorName  := authorParts.first.trim('"', '"');
+	migrated.authorEmail := authorParts.last.trim('<', '>');
 	
-	final EmfModelFactory factory = EmfModelFactory.getInstance()
-	final IModel original = factory.loadEmfModel("Original", originalModelFile, "originalMetamodelUri");
-	final IModel migrated = factory.loadEmfModel("Original", migratedModelFile, "evolvedMetamodelUri");
-	
-	if (migrator.parse(strategy) &&
-	     migrator.getParseProblems().isEmpty()) {		
-		
-		final FlockResult result = migrator.execute(original, migrated);
-	
-		result.printWarnings(System.err);
-		
-	} else {
-		for (ParseProblem problem : migrator.getParseProblems()) {
-			System.err.println(problem);
-		}
+}
+\end{lstlisting}
+
+Variable declarations are also demonstrated in Listing~\ref{lst:split_author}. Line 2 declares the \texttt{au\-th\-orPa\-r\-ts} variable, sets its type to \texttt{Se\-qu\-en\-ce}, and sets its initial value. Variable declarations can omit the type (in which case \texttt{Any} is used) and the initialisation (in which case \texttt{nu\-ll} is used). Variables are scoped to their enclosing context (denoted with brackets: \texttt{\{\}}). In Flock, a variable is local to either a migration rule or an operation, and the user cannot define global variables.
+
+\begin{lstlisting}[caption=Using higher-order operations on collections,  label=lst:split_partition, language=Flock, float=tb]
+migrate Partition {
+	migrated.edges := original.contents.collect(e : Transition | e.equivalent());
+	migrated.nodes := original.contents.reject(ofs : ObjectFlowState | true).collect(n : StateVertex | n.equivalent());	
+}
+\end{lstlisting}
+
+\paragraph{Collection types} The collection types in EOL provide higher-order operations, such as \texttt{se\-le\-ct} and \texttt{re\-je\-ct} (which filter a collection); \texttt{co\-ll\-e\-ct} (which applies a function to every element of a collection); and \texttt{ex\-is\-ts} (which returns true iff at least one member of the collection satisfies the specified predicate). The higher-order operations have no side-effects: they do not modify the collection on which they are called. In Flock, the \texttt{select} and \texttt{collect} operators are most often used to partition values for migration in response to splitting a feature. For example, Listing~\ref{lst:split_partition} presents a fragment of a migration strategy for UML activity diagrams, which is discussed in full in Section~\ref{sec:ttc}. Briefly, the \texttt{Partition} metaclass has evolved such that the \texttt{contents} feature has been split into two features (\texttt{edges} and \texttt{nodes}). Migration involves dividing the elements of the \texttt{contents} into the new features. The \texttt{co\-ll\-e\-ct} operator is used to apply the built-in \texttt{eq\-ui\-va\-le\-nt()} operator to every \texttt{Tr\-an\-si\-ti\-on} (line 2) and to every \texttt{St\-a\-teVe\-rt\-ex}  (line 3) in a collection. Note that on line 3, the \texttt{re\-je\-ct} operator is used to filter out instances of \texttt{Ob\-je\-ctFl\-owSt\-a\-te} from a collection. The higher-order operations are sometimes chained together as shown on line 3.
+
+\paragraph{Metamodel types} EOL programs can access metamodel types using the syntax \texttt{Mo\-d\-elNa\-me!Me\-ta\-mo\-d\-elTy\-pe}. Flock migration strategies are typically executed on two models (the original and migrated models), and conventionally the two models are called \texttt{Original} and \texttt{Migrated}. EOL provides metamodel type operations for accessing all instances of a type (\texttt{allIn\-st\-an\-c\-es}) and for checking whether a type can be instantiated (\texttt{isIn\-st\-at\-ia\-b\-le}). In Flock, metamodel types are sometimes used to navigate between model elements for which there exists no direct reference. For example, consider the metamodel evolution in Figure~\ref{fig:mother_mms}. The \texttt{ch\-il\-dr\-en} reference has been evolved to become bidirectional. Migration involves setting the value of a \texttt{mo\-th\-er} reference for every \texttt{Person}. Searching the \texttt{ch\-il\-dr\-en} reference for every \texttt{Pe\-rs\-on} in the model can be achieved using the \texttt{all} property (a syntactic shortcut for the \texttt{allInstances} operation) on the \texttt{Or\-ig\-i\-nal!Per\-s\-on} metamodel type (Listing~\ref{lst:using_metamodel_types}). (Note that \texttt{se\-le\-ctOne(x)} is a syntactic shortcut for \texttt{sel\-ect(x).ran\-dom()}).
+
+\begin{figure}[tb]
+	\centering
+	\subfigure[Original metamodel.]
+	{
+	    \label{fig:mother_original}
+	    \includegraphics[scale=1]{5.Implementation/images/flock_programmers_guide/mother.pdf}
+	}
+	\subfigure[Evolved metamodel.]
+	{
+	    \label{fig:mother_evolved}
+	    \includegraphics[scale=1]{5.Implementation/images/flock_programmers_guide/mother2.pdf}
+	}
+	\caption{Evolution of a unidirectional to a bidirectional reference.}
+\label{fig:mother_mms}
+\end{figure}
+
+\begin{lstlisting}[caption=Using metamodel types, label=lst:using_metamodel_types, language=Flock, float=tb]
+migrate Person {
+	migrated.mother := Original!Person.all
+	                          .selectOne(p|p.gender = "f" and
+	                                           p.children.includes(original))
+	                          .equivalent();
+}
+\end{lstlisting}
+
+\paragraph{Instantiation with \texttt{new}} Like the primitive and collection types, metamodel types can be instantiated using the \texttt{new} keyword. Model elements can be deleted (completely removed from a model) using the \texttt{delete} keyword. Flock migration strategies conventionally have read-only access to the \texttt{Original} model and read-write access to \texttt{Migrated} model, and hence model elements are typically only created in -- and deleted from -- the \texttt{Migrated} model. Listing~\ref{lst:creating_new_model_elements} demonstrates using the \texttt{new} keyword to create elements in the \texttt{Migrated} model. Specifically, one instance of \texttt{Connection} is created for every member of the \texttt{successor} reference for each \texttt{Block}. 
+
+\begin{lstlisting}[caption=Creating new model elements, label=lst:creating_new_model_elements, language=Flock, float=tb]
+migrate Block {
+	for (successor in original.successors) {
+		var connection    := new Migrated!Connection;
+		connection.source := migrated;
+		connection.target := successor.equivalent();
+
+		migrated.outgoing.add(connection);
 	}
 }
 \end{lstlisting}
 
-% \paragraph{Partial migration} Flock includes an additional model driver for EMC that facilitates the management of non-conformant models (Section~\ref{subsec:flock_design}). Therefore, Flock migration strategies can consume or produce non-conformant models. 
+\paragraph{Control flow} Listing~\ref{lst:creating_new_model_elements} also demonstrates the use of the \texttt{for} construct for iterating over collection values. Additionally, EOL provides the \texttt{if} and \texttt{while} constructs for controlling the execution path of a program.
+
+% TODO References to Epsilon Book
+
+\paragraph{Custom operations} Logic can be re-used and existing types enhanced via custom operations. For example, the migrate rule in Listing~\ref{lst:creating_new_model_elements} can also be written using an operation to create instances of \texttt{Co\-nn\-ec\-ti\-on} (Listing~\ref{lst:contextless_operation}). The \texttt{connect} operation can be re-used by other migrate rules.
+
+\begin{lstlisting}[caption=Using a context-less custom operation, label=lst:contextless_operation, language=Flock, float=tb]
+migrate Block {
+	for (successor in original.successors) {
+		var connection := connect(migrated, successor.equivalent());
+		migrated.outgoing.add(connection);
+	}
+}
+
+operation connect(source : Migrated!Block, target : Migrated!Block) : Connection {
+	var connection    := new Migrated!Connection;
+	connection.source := source;
+	connection.target := target;
+	return connection;
+}
+\end{lstlisting}
+
+The \texttt{co\-nn\-ect} operation in Listing~\ref{lst:contextless_operation} is \emph{context-less}: it is not called using dot notation. An existing type can be specified when defining an operation, and then the operation is invoked using dot notation. For example, the \texttt{co\-nn\-e\-ct} operation could be rewritten in the context of the \texttt{Mi\-gr\-at\-ed!Bl\-o\-ck} type (Listing~\ref{lst:context_operation}). Compared to the context-less version, the custom operation is now invoked directly on the \texttt{mi\-gr\-at\-ed} object using dot notation. Note that the \texttt{self} built-in variable can be used to refer to the object on which the custom operation is invoked (line 10).
+
+\begin{lstlisting}[caption=Using a custom operation in the context of a metamodel type, label=lst:context_operation, language=Flock, float=tb]
+migrate Block {
+	for (successor in original.successors) {
+		var connection := migrated.connectTo(successor.equivalent());
+		migrated.outgoing.add(connection);
+	}
+}
+
+operation Migrated!Block connectTo(target : Migrated!Block) : Connection {
+	var connection    := new Migrated!Connection;
+	connection.source := self;
+	connection.target := target;
+	return connection;
+}
+\end{lstlisting}
+
+\paragraph{User input} Finally, EOL provides a mechanism for obtaining values from the user at runtime. The \texttt{Sy\-st\-em} built-in variable provides access to a user input library via its \texttt{getUs\-er} operation. In Flock, user input can be used, for example, to resolve ambiguities during migration. For example, Listing~\ref{lst:user_input} demonstrates the way in which the \texttt{ch\-oo\-se} operation prompts the user to select between two possible interest rates for an account type (line 7). Epsilon provides several implementations of the user input interface for use in different contexts. For example, when running a migration strategy in Eclipse, a user is prompted with a graphical user interface (Figure~\ref{fig:user_input}). If a migration strategy is applied in a batch environment, the user might elect to specify input via Epsilon's command line interface for user input.
+
+\begin{lstlisting}[caption=Prompting for user input at runtime, label=lst:user_input, language=Flock, float=tb]
+migrate Account {
+	if (migrated.type.interestRate <> original.interestRate) {
+		var message := 'Which is the correct interest rate for ' + migrated.type.name + ' accounts?';
+		var choices := Sequence{migrated.type.interestRate, original.interestRate};
+		var defaultChoice := original.interestRate;
+		
+		var chosen := System.getUserInput().choose(message, choices, defaultChoice);
+	
+		// Do something with the interest rate selected by the user
+	}
+}
+\end{lstlisting}
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[scale=0.5]{5.Implementation/images/user_input.png}
+	\caption{Epsilon graphical-user interface for selecting between values at runtime.}
+	\label{fig:user_input}
+\end{figure}
+
+
+\subsubsection{Specifying Migration Strategies with Epsilon Flock}
+Some common patterns for specifying migration strategies with Epsilon Flock are now presented. In particular, this section suggests migration strategy patterns that can used in response to some common types of metamodel evolution. The way in which rules are scheduled by the Flock engine and, in particular, the way in which elements are conservatively copied (Section~\ref{subsubsec:conservative_copying}) by the Flock engine influences the way in which migration is specified with Flock.
+
+Recall that conservative copy automatically copies from the original to the migrated model only those elements that conform to the both the original and evolved metamodels. For example, model elements will not be automatically copied when their type does not exist in -- or cannot be instantiated according to -- the evolved metamodel. When a model element is conservatively copied from original to migrated model, its feature values are also conservatively copied. Like model elements, feature values that do not conform to the evolved metamodel are not automatically copied. The semantics of conservative copy is demonstrated with an example in Section~\ref{subsec:flock_examples}.
+
+\paragraph{Changing feature values} The Flock engine executes migrate rules after conservative copy has been used to populate the migrated model. Consequently, migrate rules can be used to change -- or even to delete -- feature values that were set in the migrated model during conservative copying. Listing~\ref{lst:changing_and_unsetting_values} demonstrates how to change a single-valued feature value (line 3), how to refer to the original value when changing a feature value (line 4) and how to add a value to a multi-valued feature value (line 5). Feature values are unset by either assigning null to the feature (single-valued features) as shown on line 8, or by calling the \texttt{Collection\#clear} operation (multi-valued features) as shown on line 9.
+
+\begin{lstlisting}[caption=Changing and unsetting conservatively copied feature values, label=lst:changing_and_unsetting_values, language=Flock, float=tb]
+migrate Person {
+	-- Changing model values
+	migrated.name := 'Joe Bloggs';
+	migrated.age := original.age + 1;
+	migrated.luckyNumbers.add(42);
+	
+	-- Unsetting model values
+	migrated.address := null;
+	migrated.lotteryNumbers.clear();
+}
+\end{lstlisting}
+
+\paragraph{Casting feature values} When the type of a feature has been changed during metamodel evolution, it is sometimes necessary to explicitly convert a value from one type to another (such as from a \texttt{String} to an \texttt{Integer}). In EOL, primitive types can be cast using the built-in operations starting with \texttt{as} and \texttt{is}. Listing~\ref{lst:casting_values} demonstrates the use of the \texttt{isInteger} operation to check whether casting a \texttt{String} to an \texttt{Integer} will succeed (line 2), and the \texttt{asInteger} operation to perform the cast (line 3).
+
+\begin{lstlisting}[caption=Casting feature values, label=lst:casting_values, language=Flock, float=tb]
+migrate Person {
+	if (original.id.isInteger()) {
+		migrated.id := original.id.asInteger();
+	} else {
+		('Warning: no id has been set for ' + migrated.name).println();
+	}
+}
+\end{lstlisting}
+
+\paragraph{Migrating reference values} Flock provides the \texttt{eq\-ui\-va\-le\-nt()} operation, which returns an element in the migrated model (or null) when invoked on an element of the original model, and can be used to migrate reference values. For example, invoking \texttt{eq\-ui\-va\-le\-nt()} on the built-in \texttt{or\-ig\-in\-al} variable will always return the value of the built-in \texttt{mi\-gr\-at\-ed} variable. Recall the migration rule in Listing~\ref{lst:equivalent}, which was first introduced when describing the \texttt{new} keyword in EOL. The rule in Listing~\ref{lst:equivalent} iterates over a reference value in the original model, \texttt{or\-ig\-in\-al.su\-cc\-es\-so\-rs} (line 2). The body of the loop has access to an element of the original model via the \texttt{su\-cc\-es\-s\-or} variable, and creates an instance of the \texttt{Co\-nn\-ec\-ti\-on} type in the migrated model. Assigning the value of the \texttt{su\-cc\-es\-s\-or} variable (an element of the original model) to the \texttt{co\-nn\-ec\-ti\-on} (an element of the migrated model) will result in inter-model reference from the migrated model to the original model, which is typically incorrect in the context of model migration. Instead, the \texttt{eq\-ui\-va\-le\-nt()} operation is called on the \texttt{su\-cc\-es\-s\-or} to locate the element of the migrated model that corresponds to \texttt{su\-cc\-es\-s\-or}, which is an element of the original model (line 5).
+
+\begin{lstlisting}[caption=Using \texttt{equivalent()} to access migrated model elements, label=lst:equivalent, language=Flock, float=tb]
+migrate Block {
+	for (successor in original.successors) {
+		var connection := new Migrated!Connection;
+		connection.source := migrated;
+		connection.target := successor.equivalent();
+
+		migrated.outgoing.add(connection);
+	}
+}
+\end{lstlisting}
+
+\paragraph{Creating model elements} When metamodel evolution has introduced new classes, migration often involves creating new model elements. With Flock, new model elements are created in the body of a migrate rule, because their values are either derived from data in the original model, or because they must be associated with another element of the migrated model. Listing~\ref{lst:equivalent} demonstrates the use of the \texttt{new} keyword to create an element in the migrated model (line 3). In this case, the newly created \texttt{Co\-nn\-ec\-ti\-on} is associated with the \texttt{Bl\-o\-ck} that is being migrated (line 4). 
+
+\paragraph{Deleting model elements} Model migration sometimes involves deleting model elements, such as when metamodel evolution has restricted the set of conformant model elements. (For example, the UML 2.1.2 \cite{uml212} disallows a type of \texttt{St\-ru\-ct\-ur\-alFe\-at\-u\-re} that was permitted in previous versions of the UML specification). In Flock, a \texttt{delete} rule can be used to prevent an element of the original model from being conservatively copied to the migrated model. Listing~\ref{lst:delete_rule} demonstrates the use of a \texttt{de\-le\-te} rule to ensure that instances of \texttt{Bl\-o\-ck} with the name \texttt{Foo} are not automatically copied from original to migrated model.
+
+\begin{lstlisting}[caption=Preventing the conservative copy of original model elements, label=lst:delete_rule, language=Flock, float=tb]
+delete Block when: original.name = 'Foo';
+\end{lstlisting}
+
+\paragraph{Changing the type of model elements} Migration sometimes involves changing the type of existing model elements, such as when a metamodel class has been renamed or split. In Flock, a migrate rule optionally specifies a \texttt{to} part, which is used (during conservative copy) to determine the target type of an original model element. Listing~\ref{lst:retype} demonstrates\footnote{The migrate rules in Listing~\ref{lst:retype} were first presented in Section~\ref{subsec:po_flock_example} and are taken from the Flock migration strategy for the process-oriented example described in Appendix~\ref{ProcessOriented}).} the use of two migrate rules to change the type of instances of \texttt{ConnectionPoint} to either \texttt{Re\-ad\-i\-ngCo\-nn\-ec\-ti\-onPo\-i\-nt} or \texttt{Wr\-it\-i\-ngCo\-nn\-ec\-ti\-onPo\-i\-nt}. As discussed in Section~\ref{subsubsec:execution_semantics}, rules are prioritised from top to bottom in the Flock source file. Therefore, instances of \texttt{Co\-nn\-ec\-ti\-onPo\-i\-nt} that satisfy the guards of both rules in Listing~\ref{lst:retype} are retyped to \texttt{Re\-ad\-i\-ngCo\-nn\-ec\-ti\-onPo\-i\-nt} rather than \texttt{Wr\-it\-i\-ngCo\-nn\-ec\-ti\-onPo\-i\-nt}, because the rule on line 1 takes precedence over the rule on line 2.
+
+\begin{lstlisting}[float=tbp, caption=Redefining equivalences for the Component model migration., label=lst:retype, language=Flock]
+migrate ConnectionPoint to ReadingConnectionPoint when: original.outgoing.isDefined()
+migrate ConnectionPoint to WritingConnectionPoint when: original.incoming.isDefined()
+\end{lstlisting}
+
+
+\subsubsection{Migration Strategies for Metamodels that use Inheritance}
+In addition to the Flock migration strategy patterns described above, users of Flock must consider one further facet of conservative copy that affect the way in which migration strategies with Flock should be specified. Specifically, conservative copy determines the target type of a model element by locating the first applicable migrate rule (from top to bottom in the source file). This has implications for the way in which migrate rules should be ordered, particularly when migrating models that conform to metamodel that use inheritance. The extent to which this implementation detail affects the efficacy of Flock is evaluated in Section~\ref{subsec:quantitive_results}. Here, the way in which migration strategies should be specified in response to the current implementation of conservative copy in Flock is discussed.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.75]{6.Evaluation/images/subtyping.pdf}
+  \caption{A metamodel that uses inheritance.}
+  \label{fig:inheritance}
+\end{figure}
+
+Consider the metamodel in Figure~\ref{fig:inheritance}, which uses inheritance and is based on the GMF metamodel evolution described in Section~\ref{subsec:gmf_graph}. Suppose that, during metamodel evolution, the type of the \texttt{fi\-gu\-re} and \texttt{ac\-ce\-ss\-or} attributes is changed from string to integer, and migration involves deriving the migrated value for these features from the length of the original strings. Listing~\ref{lst:rule_order_considerations} demonstrates one way to specify this migration strategy with Flock. Note that, for the reasons given below, there is no rule specified on the \texttt{Di\-ag\-r\-amEl\-em\-e\-nt} type, and that the rule for the \texttt{Di\-ag\-r\-amLa\-b\-el} type is placed above the rule for the supertype of \texttt{Di\-ag\-r\-amLa\-b\-el}, \texttt{No\-de}.
+
+\begin{lstlisting}[float=tbp, caption=A migration strategy for the metamodel evolution described in Figure~\ref{fig:inheritance}, label=lst:rule_order_considerations, language=Flock, tabsize=2]
+migrate Compartment {
+	migrated.figure := original.figure.length();
+}
+
+migrate Connection {
+	migrated.figure := original.figure.length();
+}
+
+migrate DiagramLabel {
+	migrated.figure   := original.figure.length();
+	migrated.accessor := original.accessor.length();
+}
+
+migrate Node {
+  migrated.figure := original.figure.length();
+}
+\end{lstlisting}
+
+Recall that the first applicable migrate rule is used to determine the target type. This has two implications for specifying the migration strategy with Epsilon Flock. Firstly, a migrate rule must not be specified for abstract types (such as \texttt{Di\-ag\-r\-amEl\-em\-e\-nt}) unless a concrete target type is specified via the to part of the migrate rule. Hence, a separate migration rule must be specified for each subtype of \texttt{Di\-ag\-r\-amEl\-em\-e\-nt}.
+
+Secondly, a migrate rule is applicable for every model element that instantiates its original type or, crucially, a subtype of its original type. Hence, a migrate rule specified for the \texttt{Node} type will also be applicable for instances of \texttt{Di\-ag\-ra\-mLa\-b\-el}. Consequently, the migrate rule for the \texttt{Di\-ag\-ra\-mLa\-b\-el} type must be placed above the the migrate rule for the \texttt{Node} type in the Flock source file. Otherwise, the \texttt{No\-de} rule will be applied to all instances of \texttt{No\-de} and \texttt{Di\-ag\-ra\-mLa\-b\-el}, and the migrate rule specific to \texttt{Di\-ag\-ra\-mLa\-b\-el} will never be applied.
+
+The Flock migration strategy in Listing~\ref{lst:rule_order_considerations} exhibits some duplication due to the way in which migrate rules must be ordered for the current implementation of conservative copy in Flock. To reduce the duplication, a custom operation can be used to encapsulate the repeated migration logic, as demonstrated in Listing~\ref{lst:rule_order_considerations_reduced}. Custom operations were described above, when discussing the core functionality of EOL.
+
+\begin{lstlisting}[float=tbp, caption=Using a custom operation to reduce duplication in the migration strategy in Listing~\ref{lst:rule_order_considerations}, label=lst:rule_order_considerations_reduced, language=Flock, tabsize=2]
+migrate Compartment {
+	migrated.migrateFigureFrom(original);
+}
+
+migrate Connection {
+	migrated.migrateFigureFrom(original);
+}
+
+migrate DiagramLabel {
+	migrated.migrateFigureFrom(original);
+	migrated.accessor := original.accessor.length();
+}
+
+migrate Node {
+	migrated.migrateFigureFrom(original);
+}
+
+operation Migrated!DiagramElement migrateFigureFrom(o : Original!DiagramElement) {
+	self.figure := o.figure.length();
+}
+\end{lstlisting}
+
+In summary, there are three guidelines to consider when using Flock to specify migration strategies for metamodels that use inheritance. Firstly, do not specify migrate rules for abstract types (unless a concrete type is specified via the to part of the migrate rule). Secondly, place rules for more specific types above rules for less specific types in the Flock source file. Finally, use custom operations to reduce duplication between rules that migrate parts of the same type hierarchy.
+
+Using the guidelines and patterns described above, Flock can be used to specify migration strategies in response to metamodel evolution. Further examples of Flock migration strategies that use the patterns and guidelines described in this section can be found in Sections~\ref{sec:quantitive} and \ref{sec:ttc}, and in Appendices~\ref{ProcessOriented} and~\ref{CoevolutionExamples}.
+
+% TODO: decide whether to combine the following "user guide" into the "language guide"
+ 
+% The design and implementation of Flock and example migration strategies were presented in Sections~\ref{subsec:flock_design} and \ref{subsec:flock_examples} respectively. This section summarises the way in which Flock is integrated with Epsilon and Eclipse, and in particular discusses using Flock's development tools to construct and distribute migration strategies. Further information on developing migration strategies with Epsilon Flock can be found on the documentation section of Epsilon website\footnote{\url{http://www.eclipse.org/gmt/epsilon/doc/}} and, in particular, in the Epsilon book\footnote{\url{http://www.eclipse.org/gmt/epsilon/doc/book/}}.
+% 
+% \paragraph{Installation} Flock is distributed as part of Epsilon, and hence can installed via the Eclipse update manager, using the Epsilon update site. Detailed and up-to-date installation instructions are available from the Epsilon website\footnote{\url{http://www.eclipse.org/gmt/epsilon/download/}}. Once installed, Epsilon provides additional views, editors and wizards for specifying and executing model management operations, such as model migration with Flock.
+% 
+% \paragraph{Creating and editing migration strategies} New Flock migration strategies can be created from the \emph{File $>$ New File $>$ Other\ldots} menu by selecting \emph{Epsilon $>$ Epsilon Flock Migration Strategy}, as shown in Figure~\ref{fig:flock_new_migration_strategy}. The resulting file will be automatically opened with the Flock editor, which provides syntax highlighting and automatic error detection. In addition, the Flock editor is integrated with the Eclipse outline view, shown in the right-hand side of Figure~\ref{fig:flock_editor_and_outline_view}, which can be used to navigate between rules and operations in the current migration strategy.
+% 
+% \begin{figure}[tbp]
+% 	\centering
+% 		\includegraphics[height=9cm]{5.Implementation/images/flock_programmers_guide/new_migration_strategy.png}
+% 	\caption{Creating a new migration strategy with Flock.}
+% 	\label{fig:flock_new_migration_strategy}
+% \end{figure}
+% 
+% 
+% \begin{figure}[tbp]
+% 	\centering
+% 		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/editor.png}
+% 	\caption{The Flock editor (left) and outline view (right).}
+% 	\label{fig:flock_editor_and_outline_view}
+% \end{figure}
+% 
+% 
+% \paragraph{Executing migration strategies} Flock migration strategies can be executed from the \emph{Run $>$ Run Configurations\ldots} menu item, by selecting the Flock Migration Strategy category and clicking New, as shown in Figure~\ref{fig:flock_new_launch_config}. Next, the location of the Flock migration strategy and original and migrated models must be specified. The \emph{Source} tab (Figure~\ref{fig:flock_new_launch_config_source}) is used to specify the location of the Flock migration strategy to be executed, via the  \emph{Browse Workspace\ldots} button. The \emph{Models} tab (Figure~\ref{fig:flock_new_launch_config_models}) is used to specify the location of the original and evolved models. First, the add buttons are used to configure each model's properties, specifying, for example, an identifier, the location of the model and the location of its metamodel. Once the models' properties have been configured, drop down boxes are used to specify the role (\emph{Original} or \emph{Migrated}) of each model, as shown at the bottom of   Figure~\ref{fig:flock_new_launch_config_models}. After the locations of the migration strategy and models have been specified, the migration strategy is executed by clicking the \emph{Run} button.
+% 
+% More than two models can be specified when executing a Flock migration strategy. Although only one model can play the role of \emph{Original} or \emph{Migrated} model, extra models can be used to guide migration. For example, a migration strategy might query a third model to determine whether or not a migrate rule should be executed. More generally, an inference co-evolution approach (Section~\ref{subsec:inference}) could be implemented with Flock by using migration strategies in conjunction with a model of the metamodel differences. 
+% 
+% During the execution of a migration strategy, Flock constructs a migrated model in the location specified in the launch configuration (described above). The migrated model can be opened with the editors provided by the modelling framework. For example, an EMF model can be opened with a model editor generated by EMF, or with Epsilon's Exeed editor\footnote{\url{http://www.eclipse.org/gmt/epsilon/doc/exeed/}}; and an XML model can be opened with Eclipse's XML editor. Runtime errors are displayed in the Eclipse error log view, and textual output (e.g. the result of evaluating \texttt{pr\-in\-t\-ln()} statements) in the Eclipse console view.
+% 
+% \begin{figure}[tbp]
+% 	\centering
+% 		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/new_launch_config.png}
+% 	\caption{Creating a new run configuration for a Flock migration strategy.}
+% 	\label{fig:flock_new_launch_config}
+% \end{figure}
+% 
+% \begin{figure}[tbp]
+% 	\centering
+% 		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/new_launch_config_source.png}
+% 	\caption{Configuring the source file for a Flock run configuration.}
+% 	\label{fig:flock_new_launch_config_source}
+% \end{figure}
+% 
+% \begin{figure}[tbp]
+% 	\centering
+% 		\includegraphics[height=8.5cm]{5.Implementation/images/flock_programmers_guide/new_launch_config_models.png}
+% 	\caption{Configuring models for a Flock run configuration.}
+% 	\label{fig:flock_new_launch_config_models}
+% \end{figure}
+% 
+% \paragraph{Distributing migration strategies} Metamodels and models are typically kept separate (Section~\ref{subsec:modelling_framework_characteristics}). EMF metamodels, for example, are typically packaged in Eclipse plug-ins and distributed to metamodel users. To facilitate the distribution of migration strategies to metamodel users, Flock provides a mechanism for including Flock migration strategies as part of an EMF metamodel plug-in. More specifically, Flock defines an Eclipse \emph{extension point}. To distribute a migration strategy to metamodel users, the metamodel developer creates an \emph{extension} (an instance of the Flock extension point) and specifies the location of the Flock migration strategy, the original metamodel and the evolved metamodel, as show in Figure~\ref{fig:flock_extension}. When metamodel users install a plug-in that contains a Flock extension, Flock provides a menu that can be used to invoke migration strategies, as shown in Figure~\ref{fig:flock_extension_execution}. Note that the metamodel developer can provide a file extension (when specifying the Flock extension) for which the \emph{Flock} menu will be displayed.
+% 
+% \begin{figure}[tbp]
+% 	\centering
+% 		\includegraphics[height=4cm]{5.Implementation/images/flock_programmers_guide/extension_execution.png}
+% 	\caption{Executing a migration strategy from a metamodel plug-in.}
+% 	\label{fig:flock_extension_execution}
+% \end{figure}
+% 
+% Metamodel developers can also elect to build their own interface for invoking migration strategies, and delegate responsibility for executing migration strategies to the Flock execution engine. To this end, the \texttt{FlockModule} class (Section~\ref{subsec:flock_design}) provides a fa\c{c}ade \cite[pg185]{gamma95patterns} for the Flock execution engine, and an example use is shown in Listing~\ref{lst:flock_module_usage}. This approach to distributing migration strategies requires more effort from the metamodel developer (who must integrate the code in Listing~\ref{lst:flock_module_usage} with the development tools of the metamodel user), but is more flexible (and could be used, for example, to integrate model migration with model or source code management repositories).
+% 
+% \begin{landscape}
+% \begin{figure}[tbp]
+% 	\centering
+% 		\includegraphics[height=11.5cm]{5.Implementation/images/flock_programmers_guide/extension.png}
+% 	\caption{Distributing a migration strategy as part of a metamodel plug-in via a Flock extension.}
+% 	\label{fig:flock_extension}
+% \end{figure}
+% \end{landscape}
+% 
+% \begin{lstlisting}[caption=Executing a Flock migration strategy programmatically in Java., label=lst:flock_module_usage, language=Java, float=tb]
+% private static void migrate(File strategy,
+% 	                                   File originalModelFile,
+%                                      File migratedModelFile)
+%   throws Exception {
+% 	
+% 	final IFlockModule migrator = new FlockModule();
+% 	
+% 	final EmfModelFactory factory = EmfModelFactory.getInstance()
+% 	final IModel original = factory.loadEmfModel("Original", originalModelFile, "originalMetamodelUri");
+% 	final IModel migrated = factory.loadEmfModel("Original", migratedModelFile, "evolvedMetamodelUri");
+% 	
+% 	if (migrator.parse(strategy) &&
+% 	     migrator.getParseProblems().isEmpty()) {		
+% 		
+% 		final FlockResult result = migrator.execute(original, migrated);
+% 	
+% 		result.printWarnings(System.err);
+% 		
+% 	} else {
+% 		for (ParseProblem problem : migrator.getParseProblems()) {
+% 			System.err.println(problem);
+% 		}
+% 	}
+% }
+% \end{lstlisting}
+% 
+% % \paragraph{Partial migration} Flock includes an additional model driver for EMC that facilitates the management of non-conformant models (Section~\ref{subsec:flock_design}). Therefore, Flock migration strategies can consume or produce non-conformant models. 
 
 \subsection{Summary}
-Requirements for a language tailored to model migration were described in Section~\ref{sec:analyis_of_languages_used_for_migration}. This section has presented Epsilon Flock, a language that seeks to fulfil those requirements. The way in which Flock has been designed and implemented has been discussed, with a particular focus on the novel source-target relationship, conservative copy (Section~\ref{subsec:flock_design}). Several examples of migration strategies constructed in Flock have been presented (Section~\ref{subsec:flock_examples}). Further examples are given in Appendix~\ref{CoevolutionExamples}. Finally, the way in which metamodel developers can use the Flock development tools to construct and distribute migration strategies was discussed (Section~\ref{subsec:flock_guide}).
+Requirements for a language tailored to model migration were described in Section~\ref{sec:analyis_of_languages_used_for_migration}. This section has presented Epsilon Flock, a language that seeks to fulfil those requirements. The way in which Flock has been designed and implemented has been discussed, with a particular focus on the novel source-target relationship, conservative copy (Section~\ref{subsec:flock_design}). Several examples of migration strategies constructed in Flock have been presented (Section~\ref{subsec:flock_examples}). Further examples are given in Appendix~\ref{CoevolutionExamples}. Finally, the way in which metamodel developers can use the model migration language provided by Flock to specify migration strategies was discussed (Section~\ref{subsec:flock_guide}).
 
 Table~\ref{tab:differences} illustrates several characterising differences between Flock and the pre-existing languages presented in Section~\ref{sec:analyis_of_languages_used_for_migration}. Due to its conservative copying algorithm, Flock is the only language to provide both automatic copying and unsetting. The evaluation presented in Section~\ref{sec:quantitive} explores the extent to which automatic copying and unsetting affect the conciseness of migration strategies.
 

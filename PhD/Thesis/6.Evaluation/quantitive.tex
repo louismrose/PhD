@@ -371,7 +371,7 @@ Two conclusions can be drawn from investigating the results of the comparison. F
 \subsubsection{Limitation 1: Duplication when migrating subtypes}
 For the GMF Graph example (Table~\ref{tab:model_operations_results}), conservative copy requires more model operations than existing-target. Investigation of this result revealed a limitation of the conservative copy implementation provided by Flock, which is now described and illustrated using a simplified fragment of the GMF Graph co-evolution example.
 
-Figure~\ref{fig:subtyping} shows part of the GMF Graph metamodel prior to evolution, which has been simplified for illustrative purposes. In the real metamodel, the \texttt{figure} and \texttt{accessor} features are references to other metamodel classes, rather than attributes. When the metamodel evolved, the types of the \texttt{figure} and \texttt{accessor} features were changed. Here, let us assume that their types were changed from string to integer. The real metamodel changes are described in Section~\ref{subsec:gmf_graph}.
+Figure~\ref{fig:subtyping} shows\footnote{Note that this metamodel was also used to discuss specifying migration strategies with Flock in Section~\ref{subsec:flock_guide}.} part of the GMF Graph metamodel prior to evolution, which has been simplified for illustrative purposes. In the real metamodel, the \texttt{figure} and \texttt{accessor} features are references to other metamodel classes, rather than attributes. When the metamodel evolved, the types of the \texttt{figure} and \texttt{accessor} features were changed. Here, let us assume that their types were changed from string to integer. The real metamodel changes are described in Section~\ref{subsec:gmf_graph}.
 
 
 \begin{figure}[htbp]
