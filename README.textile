@@ -1,5 +1,3 @@
 h1. My Doctoral Research
 
-This repository contains several resources from my doctoral (PhD) research, including
-the thesis, a large proportion of the data used for analysis and evaluation, and a 
-(hacked together) implementation of a measurement tool used for evaluation.
+This repository contains several resources from my doctoral (PhD) research, including the thesis, a large proportion of the data used for analysis and evaluation, and a (hacked together) implementation of a measurement tool used for evaluation.
