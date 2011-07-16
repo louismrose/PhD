@@ -1,4 +1,4 @@
-%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+%!TEX root = ../thesis.tex
 
 \chapter{MDE and Evolution: Problem Analysis}
 \label{Analysis}
@@ -87,7 +87,7 @@ The Goal Structuring Notation (GSN) \cite{kelly99thesis} is a notation for speci
 
 \subsubsection{OMG MDE Projects}
 \label{par:omg}
-The Object Management Group (OMG)\footnote{\url{http://www.omg.org}} oversees the development of model-driven technologies. Andrew Watson, the Vice President and Technical Director of OMG, has discussed the development of two MDE projects \cite{watson08mdahistory}. Personal correspondence with Watson ascertained that source code is available for one of the projects, but there is no version history. \textbf{Suitability for study:} Unsuitable.
+The Object Management Group (OMG)\footnote{\url{http://www.omg.org}} oversees the development of model-driven technologies. Andrew Watson, the Vice President and Technical Director of OMG, oversaw the development of two MDE projects \cite{watson08mdahistory}. Personal correspondence with Watson ascertained that source code is available for one of the projects, but there is no version history. \textbf{Suitability for study:} Unsuitable.
 
 
 \subsubsection{Zoos}
@@ -129,7 +129,7 @@ To explore their relevance to MDE, Fowler's refactorings have been applied to me
 
 \begin{enumerate}
 	\item \textbf{Operational refactorings} focus on restructuring behaviour (method bodies). Most modelling frameworks do not support the specification of behaviour in models.
-	\item \textbf{Navigational refactorings} convert, for example, between bi-directional and uni-directional associations. These changes are often non-breaking in modelling frameworks, which typically infer values for the inverse of a reference when required.
+	\item \textbf{Navigational refactorings} affect navigational constructs are specified, such as changing between bi- and uni-directional associations. These changes are often non-breaking in modelling frameworks, which typically infer values for the inverse of a reference when required.
 	\item \textbf{Domain-specific refactorings} manage issues not relevant to metamodels, such as casting, defensive return values, and assertions.
 \end{enumerate}
 
@@ -148,7 +148,7 @@ Figure \ref{fig:refactoring} illustrates a refactoring that changes a reference 
 
 Before applying the refactoring, each customer may be associated with more than one order. After the refactoring, each customer should be associated with only one order. Fowler indicates that every customer associated with more than one order should be duplicated, such that one customer object exists for each order. Therefore, the migration strategy in Listing \ref{lst:refactoring} is deduced. Using this process, migration strategies were deduced for each of the refactorings that were applicable to metamodels and affected conformance.
 
-\begin{lstlisting}[caption=Pseudo code migration strategy for the refactoring in Figure~\ref{fig:refactoring}., label=lst:refactoring]
+\begin{lstlisting}[caption={[Migration strategy for the refactoring in Figure~\ref{fig:refactoring}]Pseudo code migration strategy for the refactoring in Figure~\ref{fig:refactoring}}, label=lst:refactoring]
 for every customer, c
   for every order, o, associated with c
     create a new customer, d
@@ -174,7 +174,7 @@ The majority of the changes made in both of these projects relate to changing re
 \subsection{Summary}
 This section has described the identification of examples for analysing the way in which evolution is identified and managed in the context of MDE. Example data was sought from existing MDE projects, a related domain (refactoring of object-oriented systems) and collaborative work on MDE projects (with Sampson and Barber). Eight MDE projects were located, three of which satisfied the requirements for a study of co-evolutionary changes in the context of model-driven engineering. One of the three projects, GMF, was reserved for the evaluation presented in Chapter~\ref{Evaluation}. Refactorings of object-oriented programming supplemented the data available from the existing MDE projects. Collaboration with Sampson and Barber yielded further examples of co-evolution.
 
-The lack of examples of model synchronisation might indicate that model synchronisation is not an important evolutionary activity for MDE. An alternative explanation is that, in 2008, many projects were beginning to adopt MDE principles, but had not transitioned to a fully model-driven style of development. A \cc five-level maturity model for MDE has been proposed \cite{rios06mdd_maturity}. Rios et al. suggest that MDE is adopted in an incremental manner and that model transformations are specified only after models are first used in an ad-hoc manner and MDE is applied to automate simple tasks. Regular, empirical assessment is necessary to investigate the adoption of MDE and the need to support evolutionary activities, such as model synchronisation. Due to the lack of examples of model synchronisation, the remainder of the thesis focuses on model-metamodel co-evolution.
+The lack of examples of model synchronisation might indicate that model synchronisation is not an important evolutionary activity for MDE. An alternative explanation is that, in 2008, many projects were beginning to adopt MDE principles, but had not transitioned to a fully model-driven style of development. It has been suggested that MDE is adopted in an incremental manner and that model transformations are specified only after models are first used in an ad-hoc manner and MDE is applied to automate simple tasks \cite{rios06mdd_maturity}. Regular, empirical assessment is necessary to investigate the adoption of MDE and the need to support evolutionary activities, such as model synchronisation. Due to the lack of examples of model synchronisation, the remainder of the thesis focuses on model-metamodel co-evolution.
 
 \section{An Analysis of Existing Co-Evolution Techniques}
 \label{sec:analysing_existing_techniques}

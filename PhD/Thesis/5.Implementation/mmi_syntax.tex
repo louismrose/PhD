@@ -1,8 +1,4 @@
-%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
-
-% TODO - present MM independent syntax. Make clear that it is an ABSTRACT syntax.
-
-% TODO - Consider discussing the number of revisions of say, UML (and other metamodels), in Chapter 2. This will allow the reader to get a sense of the scale of the problem.
+%!TEX root = ../thesis.tex
 
 \section{A Metamodel-Independent Syntax}
 \label{sec:mmi_syntax}
@@ -22,7 +18,7 @@ This section describes the way in which existing modelling frameworks load and s
 	    \label{fig:evolved_families_mm}
 	    \includegraphics[scale=0.9]{5.Implementation/images/families_evolved.pdf}
 	}
-	\caption{Evolution of a families metamodel, based on the metamodel in \cite{hutn}.}
+	\caption[Evolution of a families metamodel]{Evolution of a families metamodel, based on the metamodel in \cite{hutn}.}
 \label{fig:families_mms}
 \end{figure}
 
@@ -129,9 +125,10 @@ COPE (Section~\ref{subsec:operator-based_co-evolution}) is underpinned by a meta
 \begin{figure}[p]
   \centering
   \includegraphics[width=12cm]{5.Implementation/images/generic_binding.pdf}
-  \caption{Result of binding the families model with the metamodel-independent syntax}
+  \caption[Metamodel-independent binding of the families metamodel]{Result of binding the families model with the metamodel-independent syntax}
   \label{fig:generic_binding}
 \end{figure}
+
 
 Applying the metamodel-independent binding service to the families model (Figure~\ref{fig:families_model}) produces three instances of \texttt{Ob\-je\-ct}, illustrated as a UML object diagram in Figure~\ref{fig:generic_binding}. For clarity, instances of \texttt{Ob\-je\-ct} are shaded, and instances of \texttt{Sl\-ot} are unshaded. The first \texttt{Ob\-je\-ct} represents the \texttt{Fa\-mi\-ly} model element and has three slots. Two of the slots are used to reference the \texttt{Pe\-rs\-on} model elements via the \texttt{na\-tu\-r\-alCh\-il\-dr\-en} and \texttt{ad\-op\-t\-edCh\-il\-dr\-en} references. 
 
@@ -172,7 +169,7 @@ Reference implementations of the metamodel-independent syntax, the binding servi
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=12cm]{5.Implementation/images/slot_model_complete.pdf}
-  \caption{Implemented version of the metamodel-independent syntax, in Ecore}
+  \caption[Implemented version of the metamodel-independent syntax]{Implemented version of the metamodel-independent syntax, in Ecore}
   \label{fig:mmi_syntax_impl}
 \end{figure}
 
@@ -199,7 +196,7 @@ private void processAttributes(Attributes atts) {
 
 Type-compatibility checks have been implemented by delegating to the type-checking methods provided by EMF. The EVL constraints call the \texttt{isTy\-peCo\-mp\-at\-ib\-leWi\-th} method on the \texttt{Sl\-ot} class. Each subclass of \texttt{Sl\-ot} provides an implementation of \texttt{isTy\-peCo\-mp\-at\-ib\-leWi\-th}, which delegates to EMF to perform type-checking.
 
-\begin{lstlisting}[caption=A constraint (in EVL) to check that only concrete metamodel types are instantiated., label=lst:conformance_constraint, language=EVL, float=tb]
+\begin{lstlisting}[caption={[Consistency constraint for instantiating a metamodel type]A constraint (in EVL) to check that only concrete metamodel types are instantiated}, label=lst:conformance_constraint, language=EVL, float=tb]
 context Object {
 	constraint ClassMustNotBeAbstract {
 		check: not self.toClass().isAbstract()

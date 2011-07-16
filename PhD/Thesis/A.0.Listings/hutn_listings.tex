@@ -1,4 +1,4 @@
-%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+%!TEX root = ../thesis.tex
 
 \section[Model Management Operations for Epsilon HUTN][Model Management Operations for HUTN]{Model Management Operations for Epsilon HUTN}
 \label{sec:hutn_listings}
@@ -424,7 +424,7 @@ operation createClassObject(c : Intermediate!ClassObject, n : AntlrAst!Node) {
 \end{lstlisting}
 
 \subsection{Intermediate Model Validation}
-The EVL constraints in Listing~\ref{lst:constraints_full} are executed on an intermediate model and a target model, and produce a set of consistency problems. Listing~\ref{lst:constraints_full} includes both the syntactic constraints of HUTN (e.g. all identifiers must be unique) and the conformance constraints defined for the metamodel-independent syntax in Section~\ref{sec:mmi_syntax}.
+The EVL constraints in Listing~\ref{lst:constraints_full} are executed on an intermediate model and a target model, and produce a set of consistency problems. Listing~\ref{lst:constraints_full} includes the syntactic constraints of HUTN (e.g. all identifiers must be unique) and the conformance constraints defined for the metamodel-independent syntax in Section~\ref{sec:mmi_syntax}.
 
 \begin{lstlisting}[caption=Syntactic and Conformance Constraints in EVL., label=lst:constraints_full, language=EVL]
 pre {
@@ -655,7 +655,7 @@ operation Sequence toString() : String {
 \subsection{Intermediate Model to Target Model}
 The EGL template in Listing~\ref{lst:generate_full} is used to generate an ETL transformation between intermediate models and target models.
 
-\begin{lstlisting}[caption=EGL template that generates an intermediate model to target model transformation (in ETL)., label=lst:generate_full, language=EGL]
+\begin{lstlisting}[caption={[Generating the intermediate to target model transformation]EGL template that generates an intermediate model to target model transformation (in ETL)}, label=lst:generate_full, language=EGL]
 pre {
 	var EmfTool := new Native('org.eclipse.epsilon.emc.emf.tools.EmfTool');
 }

@@ -1,4 +1,4 @@
-%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+%!TEX root = ../thesis.tex
 \chapter{Co-evolution Examples}
 \label{CoevolutionExamples}
 
@@ -18,22 +18,22 @@ The metamodel and transformations were developed in an iterative and incremental
 \subsection{Extract Person}
 At the start of the second iteration, the newsgroups metamodel, show in Figure~\ref{fig:newsgroups_extract_person_original_mm}, captured two domain concepts, newsgroups and articles. The iteration involved separating the domain concepts of authors and articles. At the start of the iteration, the \texttt{Ar\-ti\-c\-le} class defined a string attribute called \texttt{se\-nd\-er} as shown in Figure~\ref{fig:newsgroups_extract_person_original_mm}. To make it easier to recognise when several articles were written by the same person, the \texttt{Pe\-rs\-on} class was introduced, and the \texttt{se\-nd\-er} attribute was replaced with a reference to the \texttt{Pe\-rs\-on} class as shown in Figure~\ref{fig:newsgroups_extract_person_evolved_mm}.
 
-\mmfigure{newsgroups}{extract_person}{Newsgroups metamodel during the Extract Person iteration}
+\mmfigurescaled{newsgroups}{extract_person}{Newsgroups metamodel during the Extract Person iteration}{0.9}
 
 Existing models were migrated by deriving a \texttt{Pe\-rs\-on} object from the \texttt{se\-nd\-er} feature of each \texttt{Ar\-ti\-c\-le}. The values of the \texttt{se\-nd\-er} feature used one of two forms: \texttt{username@domain.com (Full Name)} or \texttt{"Full Name" username@domain.com}.
 
 Listings~\ref{lst:newsgroups_extract_person_atl}, \ref{lst:newsgroups_extract_person_cope} and~\ref{lst:newsgroups_extract_person_flock} show the model migration strategy in ATL, COPE and Flock respectively. The \texttt{toEmail()} and \texttt{toName()} operations are used to extract names and email addresses, are defined without using any model operations, and are omitted from the listings below.
 
-\miglistings{newsgroups}{extract_person}{The Newsgroup Extract Person model migration}
+\miglistings{newsgroups}{extract_person}{The Newsgroup Extract Person migration}
 
 \subsection{Resolve Replies}
 The Resolve Replies iteration made explicit the lineage of each article by moving replies to an article such that they were contained in the original article. At the start of the iteration (Figure~\ref{fig:newsgroups_resolve_replies_original_mm}), each \texttt{Article} was assigned a unique identifier in the \texttt{articleId} feature. The \texttt{inReplyTo} feature was specified for \texttt{Article}s written in reply to others. At the end of the iteration, the \texttt{inReplyTo} attribute was replaced with a reference of type \texttt{Article}. The \texttt{inReplyTo} attribute was renamed to \texttt{inReplyToId} (and, in a future iteration, was removed from the metamodel).
 
 \mmfigure{newsgroups}{resolve_replies}{Newsgroups metamodel during the Resolve Replies iteration}
 
-Listings~\ref{lst:newsgroups_resolve_replies_atl}, \ref{lst:newsgroups_resolve_replies_cope} and~\ref{lst:newsgroups_resolve_replies_flock} show the model migration strategy in ATL, COPE and Flock respectively. Migration involved dereferencing the \texttt{inReplyTo} value to determine a parent \texttt{Article}, and then setting the \texttt{inReplyTo} reference to the parent \texttt{Article}.
+Listings~\ref{lst:newsgroups_resolve_replies_atl}, \ref{lst:newsgroups_resolve_replies_cope} and~\ref{lst:newsgroups_resolve_replies_flock} show the model migration strategy in ATL, COPE and Flock respectively. Migration involved dereferencing the \texttt{inRe\-p\-lyTo} value to determine a parent \texttt{Article}, and then setting the \texttt{inReplyTo} reference to the parent \texttt{Article}.
 
-\miglistings{newsgroups}{resolve_replies}{The Newsgroup Resolve Replies model migration}
+\miglistings{newsgroups}{resolve_replies}{The Newsgroup Resolve Replies migration}
 
 
 \section{UML Example}
@@ -53,7 +53,7 @@ Some differences between Figures~\ref{fig:uml_activity_diagrams_original_mm} and
 
 Listings~\ref{lst:uml_activity_diagrams_atl}, \ref{lst:uml_activity_diagrams_cope} and~\ref{lst:uml_activity_diagrams_flock} show the model migration strategy in ATL, COPE and Flock respectively. Migration mostly involved restructuring data by storing values in features of a different name, and retyping \texttt{Pseudeostate}s.
 
-\miglistings{uml}{activity_diagrams}{UML activity diagram model migration}
+\miglistings{uml}{activity_diagrams}{UML activity diagram migration}
 
 
 
@@ -76,7 +76,7 @@ During the development of GMF 2.0, the Graph metamodel from GMF 1.0 was evolved 
 
 Listings~\ref{lst:gmf_graph_atl}, \ref{lst:gmf_graph_cope} and~\ref{lst:gmf_graph_flock} show the model migration strategy in ATL, COPE and Flock respectively. Migration involved creating proxy objects for the \texttt{Fi\-gu\-reG\-al\-le\-ry\#de\-sc\-ri\-pt\-ors} and \texttt{Fi\-gu\-reDe\-sc\-ri\-pt\-or\#ac\-ce\-ss\-ors} features, and moving values to those proxy objects.
 
-\miglistings{gmf}{graph}{GMF Graph model migration}
+\miglistings{gmf}{graph}{GMF Graph migration}
 
 
 \subsection{GMF Generator}
@@ -84,4 +84,4 @@ During the development of GMF v2.2, the Generator metamodel evolved to make expl
 
 Listings~\ref{lst:gmf_gen_atl}, \ref{lst:gmf_gen_atl} and~\ref{lst:gmf_gen_atl} show the model migration strategy in ATL, COPE and Flock respectively. Migration involved populating \texttt{Co\-nt\-e\-xtMe\-nu}s from existing diagram elements, and creating \texttt{Pa\-rs\-er}s for built-in and user-defined languages.
 
-\miglistings{gmf}{gen}{GMF Generator model migration}
+\miglistings{gmf}{gen}{GMF Generator migration}

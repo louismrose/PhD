@@ -1,4 +1,4 @@
-%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+%!TEX root = ../thesis.tex
 
 \section[Evaluating Epsilon Flock and other Co-evolution Tools][Evaluating Flock and other Co-evolution Tools]{Evaluating Epsilon Flock and other Co-evolution Tools}
 \label{sec:collaborative_comparison}
@@ -152,7 +152,7 @@ means that incorrect migrations can be easily fixed. COPE stores a history of \e
 
 
 \subsubsection{Extensibility}
-The fundamental constructs used for specifying migration in COPE and AML (operators and match heuristics, respectively) are extensible. Flock and Ecore2E\-core use a more imperative (than declarative) approach, and as such do not provide extensible constructs.
+The fundamental constructs used for specifying migration in COPE and AML (operators and match heuristics, respectively) are extensible. Flock and Ec\-o\-re2Ec\-o\-re use a more imperative (than declarative) approach, and as such do not provide extensible constructs.
 
 \paragraph{AML.} An AML user can specify additional matching heuristics. This requires understanding of AML's domain-specific language for manipulating the data structures from which migrating transformations are generated.
 
@@ -166,7 +166,7 @@ Each migration tool captures patterns that commonly occur in model migration. Th
 
 \paragraph{COPE.} An operation in COPE represents a commonly occurring pattern in metamodel migration. Each operation captures the metamodel evolution and model migration steps. Custom operations can be written and re-used.
 
-\paragraph{Ecore2Ecore.} Mapping models cannot be reused or extended in Ecore2Ecore but as the custom model parser is specified in Java, developers can decompose it into reusable parts some of which can potentially be reused in other migrations.
+\paragraph{Ecore2Ecore.} Mapping models cannot be reused or extended in Ec\-o\-re2Ec\-o\-re but as the custom model parser is specified in Java, developers can decompose it into reusable parts some of which can potentially be reused in other migrations.
 
 \paragraph{Flock.} A migration strategy encoded in Flock is modularised according to the classes whose instances need migration. There is support to reuse code within a strategy by means of operations with parameters and across strategies by means of imports. Re-use in Flock captures only migration patterns, and not the higher level co-evolution patterns captured in COPE or AML.
 

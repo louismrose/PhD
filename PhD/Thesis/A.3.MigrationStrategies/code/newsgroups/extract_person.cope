@@ -1,9 +1,7 @@
 toPerson = { str ->
   def person = personClass.newInstance();
-
 $\highlight$  person.email = str.toEmail()
 $\highlight$  person.name  = str.toName()
-
   return person
 }
 

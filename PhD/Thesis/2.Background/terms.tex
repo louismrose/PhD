@@ -1,4 +1,4 @@
-%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+%!TEX root = ../thesis.tex
 
 \section{MDE Terminology and Principles}
 \label{sec:mde_terms}
@@ -45,7 +45,7 @@ Concrete \cc syntax, abstract syntax and semantics are used together to specify 
 
 \subsection{MOF: A metamodelling language}
 \label{subsec:mof}
-Software engineers using MDE can re-use existing -- and define new -- metamodels. To facilitate interoperability between MDE tools, the Object Management Group (OMG)\footnote{\url{http://www.omg.org}} has standardised a language for specifying metamodels, the Meta-Object Facility (MOF). Metamodels specified in MOF can be interchanged between MDE environments. Furthermore, modelling language tools are interoperable because MOF also standardises the way in which metamodels and their models are persisted to and from disk. For model and metamodel persistence, MOF prescribes XML Metadata Interchange (XMI), a dialect of XML optimised for loading, storing and exchanging models, and standardised by the OMG.
+Software engineers using MDE can re-use existing -- and define new -- metamodels. To facilitate interoperability between MDE tools, the Object Management Group (OMG)\footnote{\url{http://www.omg.org}} has standardised a language for specifying metamodels, the Meta-Object Facility (MOF). Contemporary MDE tools are interoperable because MOF standardises the way in which models are represented with a further OMG standard, XML Metadata Interchange (XMI), a dialect of XML optimised for loading, storing and exchanging models.
 
 Because MOF is a modelling language for describing modelling languages, it is sometimes termed a metamodelling language. Part of the UML metamodel, defined in MOF, is shown in Figure~\ref{fig:mof}. As discussed in Section~\ref{sec:mde_tools}, different kinds of concrete syntax can be used for MOF. Figure~\ref{fig:mof}, for example, uses a concrete syntax similar to that of UML class diagrams. Specifically:
 
@@ -200,7 +200,7 @@ RULES {
 \label{subsubsec:model_validation}
 Model validation provides a mechanism for managing the integrity of the software developed using MDE. A model that omits information is said to be \emph{incomplete}, while related models that suggest differences in the underlying phenomena are said to be \emph{contradicting} \cite{kolovos09thesis}. Incompleteness and contradiction are two examples of \emph{inconsistency} \cite{elaasar03consistency}. In MDE, inconsistency is detrimental, because, when artefacts are automatically derived from each other, the inconsistency of one artefact might be propagated to others. Model validation is used to detect, report and reconcile inconsistency throughout a MDE process.
 
-Inconsistency detection is inherently pattern-based and, hence, higher-order languages are more suitable for model validation than so-called ``third-generation'' programming languages (such as Java) \cite{kolovos09thesis}. The Object Constraint Language (OCL) \cite{ocl2} is an OMG standard that can be used to specify consistency constraints on UML and MOF models. OCL cannot be used to specify inter-model constraints, unlike the xlinkit toolkit \cite{nentwich2003flexible} and the Epsilon Validation Language (EVL) \cite{kolovos08evl}.
+Inconsistency detection is inherently pattern-based and, hence, higher-order languages are more suitable for model validation than so-called ``third-generation'' programming languages (such as Java) \cite{kolovos09thesis}. The Object Constraint Language (OCL) \cite{ocl2} is an OMG standard that can be used to specify consistency constraints on UML and MOF models. OCL cannot express inter-model constraints, unlike the Epsilon Validation Language (EVL) \cite{kolovos08evl} and the xlinkit toolkit \cite{nentwich2003flexible}.
 
 An exemplar model validation constraint, written in EVL, is shown in Listing~\ref{lst:exemplar_validation}. The constraint validates state machine models that conform to the metamodel shown in Figure~\ref{fig:state_machine_mm}. The constraint shown in Listing~\ref{lst:exemplar_validation} is defined for \texttt{State}s (line 1), and checks that there exists some transition whose source or target is the current state (line 4). When the check part (line 4) is not satisfied, the message part (line 6) is displayed. When executed, the EVL constraint will be invoked once for every \texttt{State} in the model. The keyword \texttt{self} is used to refer to the particular \texttt{State} on which the constraint is currently being invoked.
 

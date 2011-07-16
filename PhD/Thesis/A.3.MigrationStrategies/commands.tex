@@ -6,12 +6,30 @@
 		\subfigure[Original metamodel.]
 		{
 		    \label{fig:#1_#2_original_mm}
-		    \includegraphics[scale=0.66]{A.3.MigrationStrategies/images/#1/#2_before.pdf}
+		    \includegraphics[width=12.5cm]{A.3.MigrationStrategies/images/#1/#2_before.pdf}
 		}
 		\subfigure[Evolved metamodel.]
 		{
 		    \label{fig:#1_#2_evolved_mm}
-		    \includegraphics[scale=0.66]{A.3.MigrationStrategies/images/#1/#2_after.pdf}
+		    \includegraphics[width=12.5cm]{A.3.MigrationStrategies/images/#1/#2_after.pdf}
+		}
+		\caption{#3}
+	\label{fig:#1_#2}
+	\end{figure}
+}
+
+\newcommand{\mmfigurescaled}[4]{
+	\begin{figure}
+		\centering
+		\subfigure[Original metamodel.]
+		{
+		    \label{fig:#1_#2_original_mm}
+		    \includegraphics[scale=#4]{A.3.MigrationStrategies/images/#1/#2_before.pdf}
+		}
+		\subfigure[Evolved metamodel.]
+		{
+		    \label{fig:#1_#2_evolved_mm}
+		    \includegraphics[scale=#4]{A.3.MigrationStrategies/images/#1/#2_after.pdf}
 		}
 		\caption{#3}
 	\label{fig:#1_#2}

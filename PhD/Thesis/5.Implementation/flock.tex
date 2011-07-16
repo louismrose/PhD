@@ -1,4 +1,4 @@
-%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+%!TEX root = ../thesis.tex
 
 \section{Epsilon Flock: A Model Migration Language}
 \label{sec:flock}
@@ -376,7 +376,7 @@ migrate Account {
 \begin{figure}[tbp]
 	\centering
 		\includegraphics[scale=0.5]{5.Implementation/images/user_input.png}
-	\caption{Epsilon graphical-user interface for selecting between values at runtime.}
+	\caption[Epsilon GUI for selecting a value at runtime]{Epsilon graphical user interface for selecting between values at runtime.}
 	\label{fig:user_input}
 \end{figure}
 
@@ -449,13 +449,13 @@ In addition to the Flock migration strategy patterns described above, users of F
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.75]{6.Evaluation/images/subtyping.pdf}
-  \caption{A metamodel that uses inheritance.}
+  \caption{A metamodel that uses inheritance}
   \label{fig:inheritance}
 \end{figure}
 
 Consider the metamodel in Figure~\ref{fig:inheritance}, which uses inheritance and is based on the GMF metamodel evolution described in Section~\ref{subsec:gmf_graph}. Suppose that, during metamodel evolution, the type of the \texttt{fi\-gu\-re} and \texttt{ac\-ce\-ss\-or} attributes is changed from string to integer, and migration involves deriving the migrated value for these features from the length of the original strings. Listing~\ref{lst:rule_order_considerations} demonstrates one way to specify this migration strategy with Flock. Note that, for the reasons given below, there is no rule specified on the \texttt{Di\-ag\-r\-amEl\-em\-e\-nt} type, and that the rule for the \texttt{Di\-ag\-r\-amLa\-b\-el} type is placed above the rule for the supertype of \texttt{Di\-ag\-r\-amLa\-b\-el}, \texttt{No\-de}.
 
-\begin{lstlisting}[float=tbp, caption=A migration strategy for the metamodel evolution described in Figure~\ref{fig:inheritance}, label=lst:rule_order_considerations, language=Flock, tabsize=2]
+\begin{lstlisting}[float=tbp, caption={[A migration strategy for the evolution in Figure~\ref{fig:inheritance}]A migration strategy for the metamodel evolution described in Figure~\ref{fig:inheritance}}, label=lst:rule_order_considerations, language=Flock, tabsize=2]
 migrate Compartment {
 	migrated.figure := original.figure.length();
 }
@@ -480,7 +480,7 @@ Secondly, a migrate rule is applicable for every model element that instantiates
 
 The Flock migration strategy in Listing~\ref{lst:rule_order_considerations} exhibits some duplication due to the way in which migrate rules must be ordered for the current implementation of conservative copy in Flock. To reduce the duplication, a custom operation can be used to encapsulate the repeated migration logic, as demonstrated in Listing~\ref{lst:rule_order_considerations_reduced}. Custom operations were described above, when discussing the core functionality of EOL.
 
-\begin{lstlisting}[float=tbp, caption=Using a custom operation to reduce duplication in the migration strategy in Listing~\ref{lst:rule_order_considerations}, label=lst:rule_order_considerations_reduced, language=Flock, tabsize=2]
+\begin{lstlisting}[float=tbp, caption={[Using an operation to reduce the duplication in Listing~\ref{lst:rule_order_considerations}]Using a custom operation to reduce duplication in the migration strategy in Listing~\ref{lst:rule_order_considerations}}, label=lst:rule_order_considerations_reduced, language=Flock, tabsize=2]
 migrate Compartment {
 	migrated.migrateFigureFrom(original);
 }

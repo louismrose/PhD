@@ -22,7 +22,7 @@ The co-evolution example from Section~\ref{sec:mmi_syntax} is re-used in this se
 	    \label{fig:evolved_families_mm_repeated}
 	    \includegraphics[scale=0.9]{5.Implementation/images/families_evolved.pdf}
 	}
-	\caption[Evolution of a families metamodel, based on the metamodel in \cite{hutn}]{Reproduction of Figure~\ref{fig:families_mms}: Evolution of a families metamodel, based on the metamodel in \cite{hutn}.}
+	\caption[Evolution of a families metamodel]{Reproduction of Figure~\ref{fig:families_mms}: Evolution of a families metamodel, based on the metamodel in \cite{hutn}.}
 \label{fig:families_mms_repeated}
 \end{figure}
 
@@ -258,7 +258,7 @@ rule NameNode2PackageObject
 \paragraph{Intermediate Model Validation}
 An advantage of the two-stage transformation is that contextual analysis can be specified in an abstract manner -- that is, without having to express the traversal of the AST. This gives clarity and minimises the amount of code required to define syntactic constraints.
 
-\begin{lstlisting}[caption=A constraint (in EVL) to check that all identifiers are unique., label=lst:constraint, language=EVL]
+\begin{lstlisting}[caption={[Consistency constraint for checking the uniqueness of identifiers]A constraint (in EVL) to check that all identifiers are unique}, label=lst:constraint, language=EVL]
 context ClassObject {
     constraint IdentifiersMustBeUnique {
         guard: self.id.isDefined()

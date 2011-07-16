@@ -1,4 +1,4 @@
-%!TEX root = /Users/louis/Documents/PhD/Deliverables/Thesis/thesis.tex
+%!TEX root = ../thesis.tex
 
 \section{Evaluating Conservative Copy}
 \label{sec:quantitive}
@@ -42,7 +42,7 @@ For interoperability with the three reference implementations used in the compar
 \subsubsection{Reference Implementations Used in the Comparison}
 A formal semantics has not been specified for new-target, existing-target and conservative copy, and therefore the comparison reported in this section was performed using a reference implementation of each source-target relationship. Reference implementations for new- and existing-target were selected from the implementations used by existing approaches to model migration and compared to the implementation of conservative copy provided by Flock.
 
-\paragraph{New-target} As far as the author is aware, the Atlas Transformation Language (ATL) is the only new-target M2M transformation language that has been used for model migration. Higher-order \cc transformations specified with ATL have been used to perform model migration \cite{cicchetti08automating,garces09managing}. As such, ATL was used in the evaluation as the reference implementation of new-target.
+\paragraph{New-target} As far as the author is aware, the Atlas Transformation Language (ATL) is the only new-target M2M transformation language that has been used for model migration. Existing new-target model migration approaches \cite{cicchetti08automating,garces09managing} use higher-order transformations specified in ATL. As such, ATL was used in the evaluation as the reference implementation of new-target.
 
 \paragraph{Existing-target} Two approaches to migration use existing-target transformations. In COPE \cite{herrmannsdoerfer09cope}, migration strategies can be hand-written in Groovy when no co-evolutionary operator is applicable. COPE provides six Groovy functions for interacting with model elements, such as \texttt{set}, for changing the value of a feature, and \texttt{unset}, for removing all values from a feature. In this section, the term \emph{Groovy-for-COPE} is used to refer to the combination of the Groovy programming language and the functions provided by COPE for use in hand-written migration strategies. In Ecore2Ecore \cite{hussey06advanced}, migration is performed when the original model is loaded, effectively an existing-target approach. For the comparison performed in this section, Groovy-for-COPE was preferred to Ecore2Ecore because the latter is not as expressive\footnote{Communication with Ed Merks, Eclipse Modeling Project leader, 2009, available at \url{http://www.eclipse.org/forums/index.php?t=tree&goto=486690&S=b1fdb2853760c9ce6b6b48d3a01b9aac}} and cannot be used for migration in the co-evolution examples considered here.
 
