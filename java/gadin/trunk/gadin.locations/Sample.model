@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:storyworld="storyworld">
-  <storyworld:Location name="Island" entryRequirement="#/1"/>
-  <storyworld:Skill name="swim"/>
-  <storyworld:Location name="Lighthouse"/>
-  <storyworld:Location name="House" entryRequirement="#/4"/>
-  <storyworld:Skill name="fly"/>
-</xmi:XMI>

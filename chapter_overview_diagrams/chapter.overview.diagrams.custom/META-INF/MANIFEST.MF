@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Custom
-Bundle-SymbolicName: chapter.overview.diagrams.custom
-Bundle-Version: 1.0.0.qualifier
-Export-Package: overview.diagram.custom.layouts
-Require-Bundle: org.eclipse.draw2d

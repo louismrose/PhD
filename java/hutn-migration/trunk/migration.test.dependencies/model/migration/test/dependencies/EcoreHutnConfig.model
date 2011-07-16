@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<hutnConfig:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hutnConfig="http://www.eclipse.org/gmt/epsilon/hutnConfig" xmi:id="_Ledw4J9SEd2XyY9BY14fdg">
-  <rules xsi:type="hutnConfig:IdentifierRule" xmi:id="_MSsDIJ9SEd2XyY9BY14fdg" classifier="EPackage" attribute="name"/>
-  <rules xsi:type="hutnConfig:IdentifierRule" xmi:id="_OL_uIJ9SEd2XyY9BY14fdg" classifier="EClass" attribute="name"/>
-  <rules xsi:type="hutnConfig:IdentifierRule" xmi:id="_kEImoJ90Ed2XyY9BY14fdg" classifier="EAttribute" attribute="name"/>
-  <rules xsi:type="hutnConfig:IdentifierRule" xmi:id="_8c0BsJ90Ed2XyY9BY14fdg" classifier="EReference" attribute="name"/>
-</hutnConfig:Configuration>

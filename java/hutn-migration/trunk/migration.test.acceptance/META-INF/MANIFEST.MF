@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Acceptance Plug-in
-Bundle-SymbolicName: migration.test.acceptance
-Bundle-Version: 1.0.0
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: migration.test.dependencies,
- org.eclipse.epsilon.emc.emf

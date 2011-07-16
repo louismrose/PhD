@@ -1,9 +1,0 @@
-# Fdb version 2
-["latex"] 0 "thesis_structure.tex" "thesis_structure.dvi" "thesis_structure" 
-  "thesis_structure.tex" 1242294738 1037 1e6d1468fb014308d022d8112deb8824 ""
-["pdflatex"] 1242294741 "thesis_structure.tex" "thesis_structure.pdf" "thesis_structure" 
-  "e.g., `I\hbox'" 0 -1 0 ""
-  "e.g., `\hobx'" 0 -1 0 ""
-  "job aborted, no legal \end found" 0 -1 0 ""
-  "thesis_structure.aux" 1242294741 8 a94a2480d3289e625eea47cd1b285758 ""
-  "thesis_structure.tex" 1242294738 1037 1e6d1468fb014308d022d8112deb8824 ""
