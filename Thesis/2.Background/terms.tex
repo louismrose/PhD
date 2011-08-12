@@ -83,20 +83,20 @@ Model transformation is a development activity in which software artefacts are d
 \paragraph{Common characteristics of model transformations}
 The input to a transformation is termed its \emph{source}, and the output its \emph{target}. In theory, a transformation can have more than one source and more than one target, but not all transformation languages support multiple sources and targets. Consequently, much of the model transformation literature considers single source and target transformations.
 
-The \cc similarities and differences of different model transformation languages have been categorised and compared by, for example, using a feature model \cite{czarnecki06survey}. Two features peculiar to model transformation are relevant to the research presented in this thesis, and are now discussed. 
+The \cc similarities and differences of different model transformation languages have been categorised and compared using a feature model \cite{czarnecki06survey}. Two features peculiar to model transformation are relevant to the research presented in this thesis, and are now discussed. 
 
-\subparagraph{Source-target relationship} A \emph{new-target} transformation creates the target model afresh on each invocation, while an \emph{existing-target} transformation updates an existing model. Existing target transformations are used for partial (incremental) transformation and for preserving parts of the target model that are not derived from the source model.
+\subparagraph{Source-target relationship} A \emph{new-target} transformation creates afresh the target model on each invocation, while an \emph{existing-target} transformation updates an existing model. Existing target transformations are used for partial (incremental) transformation and for preserving parts of the target model that are not derived from the source model.
 
-\subparagraph{Domain language} Transformations specified between a source and a target model that conform to the same metamodel are termed \emph{endogenous} or \emph{rephrasings}, while transformations specified between a source and a target model that conform to different metamodels are termed \emph{exogenous} or \emph{translations}.
+\subparagraph{Domain language} Transformations specified between source and target models that conform to the same metamodel are termed \emph{endogenous} or \emph{rephrasings}, while transformations specified between a source and a target model that conform to different metamodels are termed \emph{exogenous} or \emph{translations}.
 
 Endogenous, existing-target transformations are a special case of transformation and are termed \emph{refactorings}. Refactorings have been studied in the context of software evolution and are discussed more thoroughly in Chapter~\ref{LiteratureReview}.
 
 
 \paragraph{Model-to-Model (M2M) Transformation} M2M transformation is used to derive models from others. By automating the derivation of models from others, M2M transformation has the potential to reduce the cost of engineering large and complex systems that can be represented as a set of interdependent models \cite{sendall03heart}. 
 
-M2M transformations are often specified as a set of \emph{transformation rules} \cite{czarnecki06survey}. Each rule specifies the way in which a specific set of elements in the source model is transformed to an equivalent set of elements in the target model \cite[pg.44]{kolovos09thesis}.
+M2M transformations are most often specified using a set of \emph{transformation rules} \cite{czarnecki06survey}. Each rule specifies the way in which a specific set of elements in the source model is transformed to an equivalent set of elements in the target model \cite[pg.44]{kolovos09thesis}.
 
-Many M2M transformation languages have been proposed, such as the Atlas Transformation Language (ATL) \cite{jouault05transforming}, VIsual Automated model TRAnsformations (VIATRA) \cite{VIATRA} and the Epsilon Transformation Language (ETL) \cite{kolovos08etl}. Qu\-er\-ies/Vi\-ews/Tra\-nsfo\-rma\-ti\-ons (QVT) \cite{qvt} is a standard for M2M transformation. M2M transformation languages can be categorised according to their \emph{style}, which is either declarative, imperative or hybrid.
+Many M2M transformation languages have been proposed, such as the Atlas Transformation Language (ATL) \cite{jouault05transforming}, VIsual Automated model TRAnsformations (VIATRA) \cite{VIATRA} and the Epsilon Transformation Language (ETL) \cite{kolovos08etl}. There also exists a standard for M2M transformation, Qu\-er\-ies/Vi\-ews/Tra\-nsfo\-rma\-ti\-ons (QVT) \cite{qvt}. M2M transformation languages can be categorised according to their \emph{style}, which is either declarative, imperative or hybrid.
 
 Declarative M2M transformation languages only provide constructs for mapping source to target model elements and, as such, are not computationally complete. Consequently, the scheduling of rules can be \emph{implicit} (determined by the execution engine of the transformation language). By contrast, imperative M2M transformation languages are computationally complete, but often require rule scheduling to be \emph{explicit} (specified by the user). Hybrid M2M transformation languages combine declarative and imperative parts, are computationally complete, and provide a mixture of implicit and explicit rule scheduling.
 
@@ -148,7 +148,7 @@ rule State2Class
 \end{lstlisting}
 
 
-\paragraph{Model-to-Text (M2T) Transformation} M2T transformation is used for model serialisation (enabling model interchange), code and documentation generation, and model visualisation and exploration.  In 2005, the OMG recognised the lack of a standardised M2T transformation with its M2T Language Request for Proposals\footnote{\url{http://www.omg.org/docs/ad/04-04-07.pdf}}. In response, various M2T languages were developed including MOFScript \cite{oldevik05toward}, the Epsilon Generation Language (EGL) \cite{rose08egl}, JET\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=jet}} and XPand\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=xpand}}.
+\paragraph{Model-to-Text (M2T) Transformation} M2T transformation is used for model serialisation (enabling model interchange), code and documentation generation, and model visualisation and exploration.  In 2005, the OMG recognised the lack of a standardised M2T transformation with its M2T Language Request for Proposals\footnote{\url{http://www.omg.org/docs/ad/04-04-07.pdf}}. In response, various M2T languages were developed including JET\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=jet}}, XPand\footnote{\url{http://www.eclipse.org/modeling/m2t/?project=xpand}}, MOFScript \cite{oldevik05toward}, the Epsilon Generation Language (EGL) \cite{rose08egl}.
 
 Because M2T transformation is used to produce unstructured rather than structured artefacts, M2T transformation has different requirements to M2M transformation. For instance, M2T transformation languages often provide mechanisms for specifying sections of text that will be completed manually and must not be overwritten by the transformation engine.
 
@@ -216,7 +216,7 @@ context State {
 \end{lstlisting}
 
 \subsubsection{Further model management activities}
-In addition to model transformation and validation, further examples of model management activities include model merging or weaving (e.g. Reuseware \cite{henriksson08reuseware}), in which two or more models are combined, and model comparison (e.g. EMF Compare \cite{brun08emfcompare}) in which a \emph{trace} of similar and different elements is produced from two or more models.
+In addition to model transformation and validation, further examples of model management activities include model merging or weaving -- in which two or more models are combined (e.g. Reuseware \cite{henriksson08reuseware}) -- and model comparison in which a \emph{trace} of similar and different elements is produced from two or more models (e.g. EMF Compare \cite{brun08emfcompare}).
 
 Further activities, such as model versioning and tracing, might be regarded as model management but, in the context of this thesis, are considered as evolutionary activities and as such are discussed in Chapter~\ref{LiteratureReview}.
 

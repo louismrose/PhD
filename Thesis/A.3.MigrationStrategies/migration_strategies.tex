@@ -7,7 +7,7 @@
 
 This appendix describes the co-evolution examples used for evaluation in Chapter~\ref{Evaluation}. The examples were taken from real-world MDE projects and are distinct from the examples used for analysis in Chapter~\ref{Analysis}.
 
-Below, each section details examples from one project, describing metamodel changes and model migration strategies. Each model migration strategy is presented in the three model migration languages used for evaluating conservative copy in Section~\ref{sec:quantitive}, and lines that contain \emph{a model operation} (a statement that changes the migrated model) are highlighted. Section~\ref{sec:quantitive} describes model operations and the three model migration languages in more detail.
+Below, each section details examples from one project, describes metamodel changes and presents model migration strategies. Each model migration strategy is presented in the three model migration languages used for evaluating conservative copy in Section~\ref{sec:quantitive}, and lines that contain \emph{a model operation} (a statement that changes the migrated model) are highlighted. Section~\ref{sec:quantitive} describes model operations and the three model migration languages in more detail.
 
 
 \section{Newsgroups Examples}
@@ -20,7 +20,7 @@ At the start of the second iteration, the newsgroups metamodel, show in Figure~\
 
 \mmfigurescaled{newsgroups}{extract_person}{Newsgroups metamodel during the Extract Person iteration}{0.9}
 
-Existing models were migrated by deriving a \texttt{Pe\-rs\-on} object from the \texttt{se\-nd\-er} feature of each \texttt{Ar\-ti\-c\-le}. The values of the \texttt{se\-nd\-er} feature used one of two forms: \texttt{username@domain.com (Full Name)} or \texttt{"Full Name" username@domain.com}.
+Existing models were migrated by deriving a \texttt{Pe\-rs\-on} object from the \texttt{se\-nd\-er} feature of each \texttt{Ar\-ti\-c\-le}. The values of the \texttt{se\-nd\-er} feature used one of two forms: \texttt{abc@example.com (Full Name)} or \texttt{"Full Name" abc@example.com}.
 
 Listings~\ref{lst:newsgroups_extract_person_atl}, \ref{lst:newsgroups_extract_person_cope} and~\ref{lst:newsgroups_extract_person_flock} show the model migration strategy in ATL, COPE and Flock respectively. The \texttt{toEmail()} and \texttt{toName()} operations are used to extract names and email addresses, are defined without using any model operations, and are omitted from the listings below.
 
