@@ -231,7 +231,7 @@
 \contentsline {subsection}{\numberline {6.2.1}Styles of Source-Target Relationship}{165}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Artefacts}{166}{subsection.6.2.2}
 \contentsline {subsubsection}{Co-evolution Examples}{166}{section*.135}
-\contentsline {subsubsection}{Reference Implementations Used in the Comparison}{167}{section*.136}
+\contentsline {subsubsection}{Reference Implementations Used in the Comparison}{166}{section*.136}
 \contentsline {paragraph}{New-target}{167}{section*.137}
 \contentsline {paragraph}{Existing-target}{167}{section*.138}
 \contentsline {subsection}{\numberline {6.2.3}Method}{167}{subsection.6.2.3}
@@ -314,13 +314,13 @@
 \contentsline {subsubsection}{Alternative ObjectFlowState Migration Semantics}{207}{section*.205}
 \contentsline {subsubsection}{XMI}{208}{section*.206}
 \contentsline {subsection}{\numberline {6.4.3}Comparison with other solutions}{208}{subsection.6.4.3}
-\contentsline {subsubsection}{Opposition Statements}{209}{section*.207}
+\contentsline {subsubsection}{Opposition Statements}{208}{section*.207}
 \contentsline {subsubsection}{Scoring}{209}{section*.208}
-\contentsline {paragraph}{Correctness}{209}{section*.209}
+\contentsline {paragraph}{Correctness}{210}{section*.209}
 \contentsline {paragraph}{Conciseness}{210}{section*.210}
 \contentsline {paragraph}{Clarity}{210}{section*.211}
 \contentsline {paragraph}{Appropriateness}{210}{section*.212}
-\contentsline {paragraph}{Tool maturity}{211}{section*.213}
+\contentsline {paragraph}{Tool maturity}{210}{section*.213}
 \contentsline {paragraph}{Reproducibility}{211}{section*.214}
 \contentsline {paragraph}{Extensions}{211}{section*.215}
 \contentsline {subsection}{\numberline {6.4.4}Summary}{211}{subsection.6.4.4}

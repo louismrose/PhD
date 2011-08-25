@@ -47,7 +47,7 @@
 \contentsline {lstlisting}{\numberline {6.3}The Petri nets model migration in Groovy-for-COPE}{173}{lstlisting.6.3}
 \contentsline {lstlisting}{\numberline {6.4}Petri nets model migration in Flock}{173}{lstlisting.6.4}
 \contentsline {lstlisting}{\numberline {6.5}An extract of the GMF Graph model migration in ATL}{176}{lstlisting.6.5}
-\contentsline {lstlisting}{\numberline {6.6}Simplified GMF Graph model migration in ATL}{179}{lstlisting.6.6}
+\contentsline {lstlisting}{\numberline {6.6}Simplified GMF Graph model migration in ATL}{178}{lstlisting.6.6}
 \contentsline {lstlisting}{\numberline {6.7}Simplified GMF Graph model migration in COPE}{179}{lstlisting.6.7}
 \contentsline {lstlisting}{\numberline {6.8}Simplified GMF Graph model migration in Flock}{180}{lstlisting.6.8}
 \contentsline {lstlisting}{\numberline {6.9}Migration for Change Reference to Containment in ATL}{181}{lstlisting.6.9}
@@ -57,10 +57,10 @@
 \contentsline {lstlisting}{\numberline {6.13}Migrating Pseudostates}{205}{lstlisting.6.13}
 \contentsline {lstlisting}{\numberline {6.14}Migrating ActivityGraphs}{206}{lstlisting.6.14}
 \contentsline {lstlisting}{\numberline {6.15}Migrating Guards}{206}{lstlisting.6.15}
-\contentsline {lstlisting}{\numberline {6.16}Migrating Partitions}{207}{lstlisting.6.16}
+\contentsline {lstlisting}{\numberline {6.16}Migrating Partitions}{206}{lstlisting.6.16}
 \contentsline {lstlisting}{\numberline {6.17}Migrating ObjectFlows}{207}{lstlisting.6.17}
 \contentsline {lstlisting}{\numberline {6.18}Migrating ObjectFlowStates to a single ObjectFlow}{207}{lstlisting.6.18}
-\contentsline {lstlisting}{\numberline {6.19}Migrating Partitions without ObjectFlowStates}{208}{lstlisting.6.19}
+\contentsline {lstlisting}{\numberline {6.19}Migrating Partitions without ObjectFlowStates}{207}{lstlisting.6.19}
 \contentsline {lstlisting}{\numberline {A.3}Transforming AST models to intermediate models with ETL.}{228}{lstlisting.A.3}
 \contentsline {lstlisting}{\numberline {A.4}Syntactic and Conformance Constraints in EVL.}{238}{lstlisting.A.4}
 \contentsline {lstlisting}{\numberline {A.5}Generating the intermediate to target model transformation}{243}{lstlisting.A.5}
